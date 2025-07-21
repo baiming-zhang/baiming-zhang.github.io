@@ -1,248 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baiming Zhang's GitHub Desktop</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
-            line-height: 1.6;
-        }
-        .header {
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        nav {
-            background-color: #0d47a1;
-            padding: 15px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 500;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #bbdefb;
-        }
-        .profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 40px 0;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        .profile-photo {
-            width: 147px;
-            height: 206px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 5px;
-            color: #0d47a1;
-        }
-        h2 {
-            font-size: 1.8em;
-            color: #1a73e8;
-            margin-top: 30px;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-        }
-        h3 {
-            font-size: 1.4em;
-            color: #2162b8; /* 天蓝色 */
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 15px;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #d32f2f;
-        }
-        .timeline-item {
-            margin-bottom: 25px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* 添加底部阴影 */
-            width: 100%; /* 确保footer宽度为100% */
-        }
-        footer a {
-            color: #bbdefb;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .contact-btn {
-            display: inline-block;
-            background-color: #1a73e8;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-        .contact-btn:hover {
-            background-color: #0d47a1;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            nav a {
-                margin: 0 10px;
-                font-size: 14px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>🚀 Welcome to Baiming Zhang's Homepage!</h1>
-        </div>
-    </header>
-    <nav>
-        <div class="container">
-            <a href="#home">Home</a>
-            <a href="#Publications">Publications</a>
-            <a href="#academic">Academic Experience</a>
-            <a href="#awards">Awards & Honors</a>
-            <a href="#boasts">Boasts</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="profile" id="home">
-            <img src="photo.jpg" alt="Baiming Zhang" class="profile-photo">
-            <h2>Baiming Zhang</h2>
-            <p>I'm a <span class="highlight">🎓 junior undergraduate</span> majoring in Engineering Mechanics at School of Aeronautics and Astronautics. 
-            <p>I'm studying in Zhejiang University (ZJU) <span class="highlight">🚀 (Chu Kochen Honors College)</span> with a GPA of <span class="highlight">3.93/4.0</span> up to June 29, 2025.</p>
-            <p>I'm currently conducting research in <span class="highlight">🔬 Quantum Computational Fluid Dynamics</span>.</p>
-            <p>My current mentor is Shiying Xiong. Visit his homepage <a href="https://shiyingxiong.github.io/" target="_blank">here</a>.</p>
-        </div>
-        <div class="section" id="Publications">
-            <h2>📰 Publications</h2>
-            <p>At present, I have not yet published any papers. However, I am actively working on drafting the primary authorship of one paper, while also conceptualizing another that will also carry my primary authorship.</p>
-            <ul>
-                <li><strong>1 Drafting:</strong> Working on a paper as the primary author.</li>
-                <li><strong>1 Conceptualizing:</strong> Developing ideas for another paper with primary authorship.</li>
-            </ul>
-            <p>I am excited about these projects and look forward to sharing more updates in the future.</p>
-        </div>
-        <div class="section" id="academic">
-            <h2>📚 Academic and Research Experience</h2>
-            <div class="timeline-item">
-                <h3>1. ⚛️ Quantum States and Devices Research</h3>
-                <ul>
-                    <li>
-                        <span class="highlight">🌟 October 2023 - June 2024:</span> <br>
-                        Under the guidance of Professor Dawei Wang, Dr. Xingqi Xu and Dr. Jiefei Wang, I engaged in quantum optics research focusing on Rydberg atoms and topological insulators.
-                    </li>
-                    <li>
-                        <span class="highlight">🧲 June 2024 - December 2024:</span> <br>
-                        I explored magnetic field precision measurement and transitioned into studying Fock states and the 4D Quantum Hall Effect.
-                    </li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>2. 🌊 Fluid Mechanics and Quantum Computing</h3>
-                <ul>
-                    <li>
-                        <p><span class="highlight">   📚 January 2025 - April 2025:</span><br>
-                        Under Professor Shiying Xiong's mentorship, I shifted my focus to fluid dynamics and quantum computing within my major. I also contributed to book writing related to my advisor's research.</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>3. 🧠 Machine Learning and Quantum Hamilton Neural Networks (QHNN)</h3>
-                <ul>
-                    <li>
-                        <span class="highlight">   🤖 April 2025 - June 2025:</span> <br>
-                        I delved into neural networks, including Physics-Informed Neural Networks (PINN), Hamilton Neural Networks (HNN), and smaller networks like Taylor-Net.
-                    </li>
-                    <li>
-                        <span class="highlight">   💡 June 2025 - Present:</span> <br>
-                        Leveraging my quantum computing background and neural network expertise, I've been developing an original project called Quantum Hamiltonian Neural Networks (QHNN).
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="section" id="awards">
-            <h2>🏅 Awards and Honors</h2>
-            <ol>
-                <li>
-                    <span class="highlight">🥇 International College Student Engineering Mechanics Competition</span> <br>
-                    <strong>World Gold Medal (Top 0.1%)</strong>
-                </li>
-                <li>
-                    <span class="highlight">🏆 Chinese National College Student Zhou Peiyuan Mechanics Competition</span> <br>
-                    <strong>First Prize (Top 1%)</strong>
-                </li>
-                <li>
-                    <span class="highlight">📜 Government Scholarship</span> <br>
-                    <strong>(Top 10%)</strong>
-                </li>
-            </ol>
-        </div>
-        <div class="section" id="boasts">
-            <h2>😊 Boasts</h2>
-            <ol>
-                <li>
-                    <span class="highlight">🎉 Featured on Zhejiang University's School of Aeronautics and Astronautics official website</span> as the first student in our school's history to win the <strong>World Champion Gold Medal</strong> at the International College Student Engineering Mechanics Competition.
-                </li>
-                <li>
-                    <span class="highlight">💡 Pursuing a breakthrough in cutting-edge quantum neural networks!</span> If you share this interest, I'd be delighted to connect with you. Feel free to reach out via email with any suggestions or inquiries.
-                </li>
-            </ol>
-        </div>
-    </div>
-    <footer id="contact">
-        <div class="container">
-            <p>© 2025 Baiming Zhang. All rights reserved.</p>
-            <p>Contact with me: <a href="mailto:baimingzhang@zju.edu.cn">baimingzhang@zju.edu.cn</a> | <a href="https://github.com/baiming-zhang">GitHub</a></p>
-        </div>
-    </footer>
-</body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Baiming Zhang | ZJU Quantum CFD</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Baiming Zhang<br />
+						Homepage</h1>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Baiming Zhang</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="#publications">Publications</a></li>
+							<li><a href="#experience">Experience</a></li>
+							<li><a href="#awards">Awards</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/baiming-zhang" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:baimingzhang@zju.edu.cn" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+						<article class="post featured">
+							<div class="row gtr-uniform">
+								<!-- 左侧头像 -->
+								<div class="col-4 col-12-small">
+									<span class="image fit">
+										<img src="images/photo.jpg" alt="Baiming Zhang" style="width: 200px; height: auto; border-radius: 4px;" />
+									</span>
+								</div>
+								<!-- 右侧文字 -->
+								<div class="col-8 col-12-small">
+									<header class="major">
+										<p>
+											Hello! Welcome to visit my website!<br />
+											My name is Baiming Zhang.<br />
+											I'm a junior undergraduate in Engineering Mechanics at <br /><strong>Zhejiang University</strong>
+											(Chu Kochen Honors College).<br />
+											Research focus: <strong>Computational Fluid Dynamics & Mechine learning</strong><br />
+											GPA: <strong>3.93 / 4.0</strong> | Last updated: 29 June 2025
+										</p>
+										<!-- <p>
+											I am developing an original project that fuses quantum computing with Hamiltonian Neural Networks to advance CFD simulations.
+										</p> -->
+									</header>
+									<ul class="actions special">
+										<li>
+											<a href="https://shiyingxiong.github.io/" class="button large" target="_blank">
+												My Mentor: Prof. Shiying Xiong
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</article>
+
+						<!-- Posts -->
+							<section class="posts">
+
+								<!-- Publications -->
+								<article id="publications">
+									<header>
+										<span class="date">Current</span>
+										<h2><a href="#">Publications & Preprints</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/work.jpg" alt="" /></a>
+									<ul class="small" style="text-align: left; padding-left: 0;">
+										<li><strong>Drafting:</strong> 1 paper as primary author</li>
+										<li><strong>Conceptualizing:</strong> 1 additional paper as primary author</li>
+									</ul>
+									<ul class="actions special">
+										<li><a href="https://orcid.org/0009-0006-9003-781X" class="button" target="_blank">ORCID</a></li>
+									</ul>
+								</article>
+
+								<!-- Experience -->
+								<article id="experience">
+									<header>
+										<span class="date">Oct 2023 – Present</span>
+										<h2><a href="#">Research Experience</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/raman.png" alt="" /></a>
+									<ul class="small" style="text-align: left; padding-left: 0;">
+										<li><strong>Quantum States & Devices Research</strong><br />
+											Under Prof. Dawei Wang & Dr. Xingqi Xu <br />
+											Rydberg atoms, 4D Quantum Hall Effect, Raman Effect, Fock state, SERF, EIT,   <br />(Oct 2023 – Dec 2024)</li>
+										<li><strong>Fluid Mechanics & Quantum Computing</strong><br />
+											Under Prof. Shiying Xiong <br />(Jan 2025 – Apr 2025)</li>
+										<li><strong>Machine Learning & QHNN</strong><br />
+											PINN, HNN, Taylor-Net → QHNN <br />(Apr 2025 – Present)</li>
+									</ul>
+									<!-- <ul class="actions special">
+										<li><a href="https://github.com/baiming-zhang/Courses-in-ZJU" class="button" target="_blank">Course Repos</a></li>
+									</ul> -->
+								</article>
+
+								<!-- Awards -->
+								<article id="awards">
+									<header>
+										<span class="date">2024 – 2025</span>
+										<h2><a href="#">Awards & Honors</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/award.jpg" alt="" /></a>
+									<ul class="small" style="text-align: left; padding-left: 0;">
+										<li><strong>🥇 International College Student Engineering Mechanics Competition</strong> — World Gold Medal (Top 0.1%) Featured on Zhejiang University's School of AAS official website as the first student in our school's history to win this Gold Medal!</li>
+										<li><strong>🏆 Chinese National Zhou Peiyuan Mechanics Competition</strong> — First Prize (Top 1%)</li>
+										<li><strong>📜 Government Scholarship</strong> — Top 10%</li>
+									</ul>
+									<ul class="actions special">
+										<li><a href="https://mp.weixin.qq.com/s/mXQsr_QHG3Pt2Un6cXbGkw" class="button">Featured on ZJU SAA Website</a></li>
+									</ul>
+								</article>
+
+								<!-- Boasts -->
+								<article>
+									<header>
+										<span class="date">Highlights</span>
+										<h2><a href="#">Boasts</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/boast.jpg" alt="" /></a>
+									<ul class="small" style="text-align: left; padding-left: 0;">
+										<li>Competed across diverse disciplines—including mechanical engineering innovation contests, electrical smart-car races, and the physics-focused IYPT—to broaden my horizons and deepen my interdisciplinary insight.</li>
+										<li>Served as a volunteer coordinator for the 2024 International Symposium on Quantum Computing and Quantum Optics, ensuring seamless logistics and fostering vibrant scientific exchange among global participants.</li>
+										<li>Actively pursuing breakthroughs in <strong>quantum neural networks</strong> — open to collaboration!</li>
+									</ul>
+									<ul class="actions special">
+										<li><a href="mailto:baimingzhang@zju.edu.cn" class="button">Get in Touch</a></li>
+									</ul>
+								</article>
+							</section>
+
+						<!-- Footer -->
+							<!-- <footer>
+								<div class="pagination">
+									<a href="#" class="page active">1</a>
+									<a href="#" class="next">Next</a>
+								</div>
+							</footer> -->
+
+					</div>
+
+				<!-- Footer -->
+					<!-- <footer id="contact">
+						<section>
+							<form method="post" action="mailto:baimingzhang@zju.edu.cn" enctype="text/plain">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Affiliation</h3>
+								<p>School of Aeronautics and Astronautics<br />
+								Zhejiang University, Hangzhou, China</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:baimingzhang@zju.edu.cn">baimingzhang@zju.edu.cn</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/baiming-zhang" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://orcid.org/0009-0006-9003-781X" class="icon solid alt fa-id-badge"><span class="label">ORCID</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer> -->
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; 2025 Baiming Zhang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
