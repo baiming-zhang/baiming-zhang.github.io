@@ -2996,6 +2996,16 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 768px) {
+			.col-4.col-12-small .image.fit img {
+				margin: 0 auto; /* 水平居中 */
+				display: block; /* 确保图片以块级元素显示 */
+				width: 100%; /* 根据父容器自适应宽度 */
+				height: auto; /* 保持图片比例 */
+				border-radius: 4px; /* 保持圆角效果 */
+			}
+		}
+
 	header.major .date:before, header.major .date:after {
 		border-top-color: #eeeeee;
 	}
