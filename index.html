@@ -2,43 +2,373 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LTHBZJCJWX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LTHBZJCJWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LTHBZJCJWX');
+  </script>
 
-  gtag('config', 'G-LTHBZJCJWX');
-</script>
   <meta charset="UTF-8">
   <title>Baiming</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" type="image/png" href="icon.jpg">
-  <style>h2 {font-weight: 800;}</style>
-  <style>body {zoom: 1.1;}</style>
+
+  <style>
+    h2 {
+      font-weight: 800;
+    }
+
+    body {
+      zoom: 1.1;
+    }
+
+    .page-wrap {
+      width: 100%;
+      max-width: 900px;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .inner-table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .header-table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: -6px;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-info {
+      padding: 2.5%;
+      width: 65%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .profile-cell {
+      padding: 2.5%;
+      width: 35%;
+      max-width: 35%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .profile-photo {
+      width: 80%;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    .name-title {
+      text-align: left;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+
+    .chinese-name {
+      font-size: 20px;
+      color: #888;
+    }
+
+    .contact-links {
+      text-align: center;
+      margin-top: 18px;
+      line-height: 1.8;
+    }
+
+    .contact-links img {
+      height: 15px;
+      vertical-align: -2px;
+      margin-right: 0;
+    }
+
+    .section-cell {
+      padding: 16px;
+      width: 100%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .projects-table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0 10px;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .project-row {
+      display: flex;
+      align-items: center;
+    }
+
+    .project-image-cell {
+      padding: 16px;
+      width: 20%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .project-image {
+      width: 160px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .project-text-cell {
+      padding: 20px;
+      width: 80%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .footer-text {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+
+    @media screen and (max-width: 760px) {
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        zoom: 1;
+        margin: 0;
+        padding: 0 14px;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .page-wrap {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .header-table {
+        margin-left: 0;
+      }
+
+      .header-row {
+        display: block;
+      }
+
+      .header-info,
+      .profile-cell {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 18px 4px 8px 4px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .profile-cell {
+        display: block;
+        padding-top: 22px;
+        padding-bottom: 4px;
+      }
+
+      .profile-photo {
+        width: 46%;
+        max-width: 190px;
+        min-width: 130px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .name-title {
+        text-align: center;
+        font-size: 28px;
+        line-height: 1.15;
+        margin-top: 4px;
+        margin-bottom: 16px;
+      }
+
+      .chinese-name {
+        display: block;
+        font-size: 18px;
+        margin-top: 6px;
+      }
+
+      .header-info p:not(.name-title):not(.contact-links) {
+        text-align: left !important;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+
+      .header-info .name-title {
+        text-align: center !important;
+      }
+
+      .header-info .contact-links {
+        display: block;
+        width: 100%;
+        text-align: center !important;
+        margin: 16px auto 0 auto;
+        line-height: 2.0;
+      }
+
+      .header-info .contact-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2px 3px;
+        white-space: nowrap;
+      }
+
+      .section-cell {
+        padding: 14px 4px;
+      }
+
+      .section-cell h2 {
+        font-size: 22px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .projects-table,
+      .projects-table tbody,
+      .project-row {
+        display: block;
+        width: 100% !important;
+      }
+
+      .projects-table {
+        border-spacing: 0;
+      }
+
+      .project-row {
+        padding: 10px 0 18px 0;
+        margin-bottom: 18px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .project-image-cell,
+      .project-text-cell {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 8px 4px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .project-image-cell {
+        display: none !important;
+      }
+
+      .project-image {
+        display: none !important;
+      }
+
+      .project-text-cell {
+        text-align: left;
+      }
+
+      .project-text-cell .papertitle,
+      .project-text-cell em {
+        display: block;
+        text-align: left;
+      }
+
+      .project-text-cell p {
+        display: none;
+      }
+
+      ul {
+        padding-left: 20px !important;
+      }
+
+      li {
+        margin-bottom: 12px;
+      }
+
+      .footer-text {
+        font-size: 12px;
+        line-height: 1.5;
+        padding-bottom: 18px;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      body {
+        padding: 0 12px;
+        font-size: 14.5px;
+      }
+
+      .name-title {
+        font-size: 25px;
+      }
+
+      .chinese-name {
+        font-size: 17px;
+      }
+
+      .profile-photo {
+        width: 52%;
+      }
+
+      .contact-links {
+        font-size: 14px;
+      }
+
+      .project-image {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table class="page-wrap">
     <tbody>
-
-      <!-- ================== HEADER ================== -->
       <tr>
         <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:-6px;">
+
+          <!-- ================== HEADER ================== -->
+          <table class="header-table">
             <tbody>
-              <tr>
-                <td style="padding:2.5%;width:65%;vertical-align:middle;text-align:left;">
-                  <p style="text-align:left;font-size:32px;font-weight:700;line-height:1.0;margin-bottom:20px;">
-                    Baiming Zhang 
-                    <span style="font-size:20px;color:#888;">（张柏铭）</span>
-                  </p>
+              <tr class="header-row">
+                <td class="header-info">
+                  <p class="name-title">
+                    <span>Baiming Zhang</span>
+                    <span class="chinese-name">张柏铭</span>
                   </p>
 
                   <p style="text-align:left;">
                     I'm a junior undergraduate in Engineering Mechanics at Zhejiang University, affiliated with the Chu Kochen Honors College.
-                    My research interests include scientific machine learning, neural operators, computational fluid dynamics, and PDE-related learning frameworks. 
+                    My research interests include scientific machine learning, neural operators, computational fluid dynamics, and PDE-related learning frameworks.
                     I am currently working under the guidance of <a href="https://shiyingxiong.github.io/">Prof. Shiying Xiong</a>.
                   </p>
 
@@ -53,58 +383,54 @@
                     Rydberg atoms, Raman effects, EIT, and related theoretical modeling.
                   </p>
 
-                  <p style="text-align:center;margin-top:18px;">
-
+                  <p class="contact-links">
                     <a href="mailto:baimingzhang@zju.edu.cn">
                       <img src="images/gmail.svg"
-                          style="height:15px;vertical-align:-2px;margin-right:0px;
-                          filter: invert(34%) sepia(94%) saturate(2273%) hue-rotate(342deg) brightness(94%) contrast(98%);">
+                           style="filter: invert(34%) sepia(94%) saturate(2273%) hue-rotate(342deg) brightness(94%) contrast(98%);"
+                           alt="Email icon">
                       Email
                     </a>
                     &nbsp;/&nbsp;
 
                     <a href="data/CV_Baiming_Zhang.pdf">
                       <img src="images/readdotcv.svg"
-                          style="height:15px;vertical-align:-2px;margin-right:0px;
-                          filter: invert(49%) sepia(63%) saturate(441%) hue-rotate(130deg) brightness(92%) contrast(90%);">
+                           style="filter: invert(49%) sepia(63%) saturate(441%) hue-rotate(130deg) brightness(92%) contrast(90%);"
+                           alt="CV icon">
                       CV
                     </a>
                     &nbsp;/&nbsp;
 
                     <a href="https://github.com/baiming-zhang">
                       <img src="images/github.svg"
-                          style="height:15px;vertical-align:-2px;margin-right:0px;
-                          filter: invert(9%) sepia(6%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(95%);">
+                           style="filter: invert(9%) sepia(6%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(95%);"
+                           alt="GitHub icon">
                       Github
                     </a>
                     &nbsp;/&nbsp;
 
                     <a href="https://orcid.org/0009-0006-9003-781X">
                       <img src="images/orcid.svg"
-                          style="height:15px;vertical-align:-2px;margin-right:0px;
-                          filter: invert(73%) sepia(38%) saturate(747%) hue-rotate(36deg) brightness(95%) contrast(90%);">
+                           style="filter: invert(73%) sepia(38%) saturate(747%) hue-rotate(36deg) brightness(95%) contrast(90%);"
+                           alt="ORCID icon">
                       ORCID
                     </a>
-
                   </p>
                 </td>
 
-                <td style="padding:2.5%;width:35%;max-width:35%;vertical-align:middle;text-align:left;">
+                <td class="profile-cell">
                   <img src="images/my pic.jpeg"
                        alt="Baiming Zhang profile photo"
-                       style="width:80%;max-width:100%;object-fit:cover;border-radius:0;">
+                       class="profile-photo">
                 </td>
               </tr>
             </tbody>
           </table>
 
-
-          
           <!-- ================== PUBLICATIONS ================== -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table class="inner-table">
             <tbody>
               <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle;text-align:left;">
+                <td class="section-cell">
                   <h2 style="text-align:left;">Publications</h2>
                   <p style="text-align:left;color:#666;">
                     Coming soon!
@@ -114,13 +440,11 @@
             </tbody>
           </table>
 
-
-
           <!-- ================== RESEARCH ================== -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table class="inner-table">
             <tbody>
               <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle;text-align:left;">
+                <td class="section-cell">
                   <h2 style="text-align:left;">Ongoing Research</h2>
                   <p style="text-align:left;">
                     My research focuses on machine learning methods for physical systems,
@@ -135,14 +459,13 @@
           </table>
 
           <!-- ================== PROJECTS ================== -->
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table class="projects-table">
             <tbody>
-
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle;text-align:left;">
-                  <img src="images/redball.png" width="160" alt="LGNO project image">
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="images/redball.png" class="project-image" alt="LGNO project image">
                 </td>
-                <td style="padding:20px;width:80%;vertical-align:middle;text-align:left;">
+                <td class="project-text-cell">
                   <span class="papertitle"><strong>Lightweight Local Neural Operator Learning for PDEs</strong></span>
                   <br>
                   <em>Independent first-author work, manuscript in preparation</em>
@@ -156,11 +479,11 @@
                 </td>
               </tr>
 
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle;text-align:left;">
-                  <img src="images/collision.png" width="160" alt="ISF project image">
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="images/collision.png" class="project-image" alt="ISF project image">
                 </td>
-                <td style="padding:20px;width:80%;vertical-align:middle;text-align:left;">
+                <td class="project-text-cell">
                   <span class="papertitle"><strong>Neural Learning for Incompressible Schrödinger Flow</strong></span>
                   <br>
                   <em>Second author, manuscript in preparation</em>
@@ -172,11 +495,11 @@
                 </td>
               </tr>
 
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle;text-align:left;">
-                  <img src="images/Houdini.png" width="160" alt="SSS project image">
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="images/Houdini.png" class="project-image" alt="SSS project image">
                 </td>
-                <td style="padding:20px;width:80%;vertical-align:middle;text-align:left;">
+                <td class="project-text-cell">
                   <span class="papertitle"><strong>Reduced-Order Fluid Modeling with Energy Minimization and Implicit Neural Fields</strong></span>
                   <br>
                   <em>Concept-stage first-author project</em>
@@ -188,17 +511,16 @@
                   </p>
                 </td>
               </tr>
-
             </tbody>
           </table>
 
           <!-- ================== EXPERIENCE ================== -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table class="inner-table">
             <tbody>
               <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle;text-align:left;">
+                <td class="section-cell">
                   <h2 style="text-align:left;">Research Experience</h2>
-                  <ul style="text-align:left; padding-left:18px; margin-top:10;">
+                  <ul style="text-align:left; padding-left:18px; margin-top:10px;">
                     <li style="margin-bottom:10px;">
                       Machine Learning in Fluid and PDE Systems<br>
                       Under Prof. <a href="https://shiyingxiong.github.io/">Shiying Xiong</a>.<br>
@@ -206,9 +528,8 @@
                       Scientific machine learning, neural operators, PDE learning, and physically informed modeling.
                     </li>
 
-
                     <li style="margin-bottom:10px;">
-                      Quantum States & Devices Research<br>
+                      Quantum States &amp; Devices Research<br>
                       Under Prof. <a href="https://person.zju.edu.cn/en/0017098">Dawei Wang</a> and Dr. Xingqi Xu.<br>
                       Oct 2023 – Dec 2024<br>
                       Rydberg atoms, Raman effect, EIT, Fock states, and related quantum topics.
@@ -220,13 +541,13 @@
           </table>
 
           <!-- ================== AWARDS ================== -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table class="inner-table">
             <tbody>
               <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle;text-align:left;">
+                <td class="section-cell">
                   <h2 style="text-align:left;">Awards</h2>
-                  <ul style="text-align:left; padding-left:18px; margin-top:10;">
-                    <li>International College Student Engineering Mechanics Competition — </strong>World Gold Medal!</strong> (Top 0.1%)</li>
+                  <ul style="text-align:left; padding-left:18px; margin-top:10px;">
+                    <li>International College Student Engineering Mechanics Competition — <strong>World Gold Medal!</strong> (Top 0.1%)</li>
                     <li>Chinese National Zhou Peiyuan Mechanics Competition — First Prize</li>
                     <li>Mathematics Competition for College Students — First Prize</li>
                     <li>Government Scholarship</li>
@@ -237,10 +558,10 @@
           </table>
 
           <!-- ================== MISC ================== -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table class="inner-table">
             <tbody>
               <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle;text-align:left;">
+                <td class="section-cell">
                   <h2 style="text-align:left;">Collaboration</h2>
                   <p style="text-align:left;">
                     I am open to any academic collaboration related to scientific
@@ -253,13 +574,13 @@
           </table>
 
           <!-- ================== FOOTER ================== -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <table class="inner-table">
             <tbody>
               <tr>
                 <td style="padding:0px">
                   <br>
-                  <p style="text-align:center;font-size:13px;color:#999;">
-                     Last updated: 2026.4.19 | Thanks to <a href="https://jonbarron.info">Jon Barron</a> for the website template. 
+                  <p class="footer-text">
+                    Last updated: 2026.4.19 | Thanks to <a href="https://jonbarron.info">Jon Barron</a> for the website template.
                   </p>
                 </td>
               </tr>
