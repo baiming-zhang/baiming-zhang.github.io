@@ -1,1 +1,1 @@
-Welcome to baiming zhang's homepage!
+Welcome to Baiming Zhang's homepage!
