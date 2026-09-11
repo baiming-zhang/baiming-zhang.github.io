@@ -220,36 +220,6 @@
       margin-bottom: 0;
     }
 
-    #awards .award-featured {
-      list-style: none;
-      margin-bottom: 24px;
-    }
-
-    .award-image {
-      display: block;
-      width: auto;
-      max-width: min(100%, 520px);
-      max-height: 300px;
-      margin: 0 auto 12px;
-      object-fit: contain;
-    }
-
-    .award-item-text {
-      display: block;
-      position: relative;
-    }
-
-    .award-item-text::before {
-      position: absolute;
-      top: 0.72em;
-      left: -15px;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: currentColor;
-      content: "";
-    }
-
     .projects-table {
       width: 100%;
       border: 0;
@@ -881,15 +851,27 @@
               <tr>
                 <td class="section-cell">
                   <h2 style="text-align:left;">Awards</h2>
+                  <table class="projects-table">
+                    <tbody>
+                      <tr class="project-row">
+                        <td class="project-image-cell">
+                          <img src="images/award-gold.jpg" class="project-image" alt="World Gold Medal award ceremony" loading="lazy">
+                        </td>
+                        <td class="project-text-cell">
+                          International College Student Engineering Mechanics Competition, <strong>World Gold Medal!</strong> (Top 0.1%), Apr 2025
+                        </td>
+                      </tr>
+                      <tr class="project-row">
+                        <td class="project-image-cell">
+                          <img src="images/award-101.png" class="project-image" alt="Excellent oral presentation at the Mechanics 101 Plan undergraduate academic forum" loading="lazy">
+                        </td>
+                        <td class="project-text-cell">
+                          <strong>Excellent Oral Presentation Award</strong>, Undergraduate Academic Forum of the Ministry of Education Mechanics “101 Plan”, May 2026
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                   <ul style="text-align:left; padding-left:18px; margin-top:10px;">
-                    <li class="award-featured">
-                      <img src="images/award-gold.jpg" class="award-image" alt="World Gold Medal award ceremony" loading="lazy">
-                      <span class="award-item-text">International College Student Engineering Mechanics Competition, <strong>World Gold Medal!</strong> (Top 0.1%), Apr 2025</span>
-                    </li>
-                    <li class="award-featured">
-                      <img src="images/award-101.jpg" class="award-image" alt="Excellent oral presentation at the Mechanics 101 Plan undergraduate academic forum" loading="lazy">
-                      <span class="award-item-text">Excellent Oral Presentation Award, Undergraduate Academic Forum of the Ministry of Education Mechanics “101 Plan”, May 2026</span>
-                    </li>
                     <li>Chinese National Zhou Peiyuan Mechanics Competition, First Prize, Nov 2025</li>
                     <li>Mathematics Competition for College Students, First Prize, Nov 2023</li>
                     <li>Zhejiang Provincial Government Scholarship, 2023–2024 and 2024–2025</li>
