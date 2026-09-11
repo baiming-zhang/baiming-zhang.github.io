@@ -237,6 +237,25 @@
       margin-bottom: -12px;
     }
 
+    #awards .section-cell {
+      padding-bottom: 4px;
+    }
+
+    #awards .section-cell h2 {
+      margin-bottom: 0;
+    }
+
+    .projects-table.awards-projects {
+      border-spacing: 0 2px;
+      margin-top: -4px;
+    }
+
+    .awards-projects .project-image-cell,
+    .awards-projects .project-text-cell {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
     .project-row {
       display: flex;
       align-items: center;
@@ -497,6 +516,24 @@
 
       .project-text-cell {
         text-align: left;
+      }
+
+      .awards-projects .project-row {
+        padding-top: 4px;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+      }
+
+      .awards-projects .project-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .awards-projects .project-image-cell {
+        padding-bottom: 4px;
+      }
+
+      .awards-projects .project-text-cell {
+        padding-top: 2px;
       }
 
       .project-text-cell .papertitle,
@@ -856,14 +893,14 @@
             </tbody>
           </table>
 
-          <table class="projects-table">
+          <table class="projects-table awards-projects">
             <tbody>
               <tr class="project-row">
                 <td class="project-image-cell">
                   <img src="images/award-101.png" class="project-image" alt="Excellent oral presentation at the Mechanics 101 Plan undergraduate academic forum" loading="lazy">
                 </td>
                 <td class="project-text-cell">
-                  <strong>Excellent Oral Presentation Award</strong>, Undergraduate Academic Forum of the Ministry of Education Mechanics “101 Plan”, May 2026
+                  <strong>Excellent Oral Presentation Award</strong>, Mechanics “101 Plan” Undergraduate Academic Forum, May 2026
                 </td>
               </tr>
               <tr class="project-row">
