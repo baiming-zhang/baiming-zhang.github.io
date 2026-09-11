@@ -16,12 +16,107 @@
   <link rel="icon" type="image/png" href="/images/cat.jpg">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     h2 {
       font-weight: 800;
     }
 
     body {
       zoom: 1.15;
+    }
+
+    .site-shell {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      width: calc(100% - 28px);
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .site-content {
+      flex: 1 1 auto;
+      width: 100%;
+      min-width: 0;
+      max-width: 1000px;
+    }
+
+    .section-anchor {
+      scroll-margin-top: 28px;
+    }
+
+    .side-nav {
+      position: sticky;
+      top: 28px;
+      flex: 0 0 176px;
+      box-sizing: border-box;
+      margin-top: 30px;
+      padding: 18px 12px 14px 15px;
+      overflow: hidden;
+      border-left: 2px solid #dbe5f1;
+      border-radius: 0 12px 12px 0;
+      background: linear-gradient(145deg, rgba(244, 248, 252, 0.96), rgba(255, 255, 255, 0.98));
+      box-shadow: 0 8px 24px rgba(24, 54, 93, 0.07);
+    }
+
+    .side-nav-title {
+      margin: 0 0 10px 9px;
+      color: #7a8797;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .side-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .side-nav a {
+      position: relative;
+      display: block;
+      padding: 7px 9px 7px 18px;
+      border-radius: 7px;
+      color: #536273;
+      font-size: 12px;
+      line-height: 1.25;
+      transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+    }
+
+    .side-nav a::before {
+      position: absolute;
+      top: 50%;
+      left: 7px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #9eb3ca;
+      content: "";
+      transform: translateY(-50%);
+      transition: background-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .side-nav a:hover,
+    .side-nav a:focus {
+      color: #17365d;
+      background: #edf3f9;
+      transform: translateX(2px);
+    }
+
+    .side-nav a.active {
+      color: #17365d;
+      font-weight: 700;
+      background: #eaf1f8;
+    }
+
+    .side-nav a.active::before {
+      background: #b33b4a;
+      box-shadow: 0 0 0 3px rgba(179, 59, 74, 0.12);
     }
 
     .page-wrap {
@@ -166,6 +261,67 @@
       color: #999;
     }
 
+    @media screen and (max-width: 1100px) {
+      .site-shell {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .site-content {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .section-anchor {
+        scroll-margin-top: 66px;
+      }
+
+      .side-nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: block;
+        width: 100%;
+        margin: 0 0 8px;
+        padding: 8px 10px;
+        border: 0;
+        border-bottom: 1px solid #dbe5f1;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 5px 18px rgba(24, 54, 93, 0.07);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .side-nav-title {
+        display: none;
+      }
+
+      .side-nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .side-nav-links::-webkit-scrollbar {
+        display: none;
+      }
+
+      .side-nav a {
+        flex: 0 0 auto;
+        padding: 7px 10px 7px 19px;
+        white-space: nowrap;
+      }
+
+      .side-nav a:hover,
+      .side-nav a:focus {
+        transform: none;
+      }
+    }
+
     @media screen and (max-width: 760px) {
       html {
         -webkit-text-size-adjust: 100%;
@@ -182,6 +338,13 @@
       .page-wrap {
         width: 100%;
         max-width: 100%;
+      }
+
+      .side-nav {
+        width: calc(100% + 28px);
+        margin-left: -14px;
+        padding-right: 14px;
+        padding-left: 14px;
       }
 
       .header-table {
@@ -364,18 +527,52 @@
         max-width: min(88vw, 260px);
         max-height: 210px;
       }
+
+      .side-nav {
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        padding-right: 12px;
+        padding-left: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .side-nav a,
+      .side-nav a::before {
+        transition: none;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="site-shell">
+    <nav class="side-nav" aria-label="Page sections">
+      <p class="side-nav-title">Contents</p>
+      <div class="side-nav-links">
+        <a href="#about" class="active" aria-current="true">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#ongoing-research">Ongoing Research</a>
+        <a href="#funding">Funding</a>
+        <a href="#research-experience">Research Experience</a>
+        <a href="#awards">Awards</a>
+        <a href="#other-experience">Other Experience</a>
+        <a href="#collaboration">Collaboration</a>
+      </div>
+    </nav>
+
+    <main class="site-content">
   <table class="page-wrap">
     <tbody>
       <tr>
         <td style="padding:0px">
 
           <!-- ================== HEADER ================== -->
-          <table class="header-table">
+          <table class="header-table section-anchor" id="about">
             <tbody>
               <tr class="header-row">
                 <td class="header-info">
@@ -449,7 +646,7 @@
           </table>
 
           <!-- ================== PUBLICATIONS ================== -->
-          <table class="inner-table">
+          <table class="inner-table section-anchor" id="publications">
             <tbody>
               <tr>
                 <td class="section-cell">
@@ -519,7 +716,7 @@
           </table>
 
           <!-- ================== RESEARCH ================== -->
-          <table class="inner-table">
+          <table class="inner-table section-anchor" id="ongoing-research">
             <tbody>
               <tr>
                 <td class="section-cell">
@@ -560,7 +757,7 @@
           </table>
 
           <!-- ================== FUNDING ================== -->
-          <table class="inner-table">
+          <table class="inner-table section-anchor" id="funding">
             <tbody>
               <tr>
                 <td class="section-cell">
@@ -603,7 +800,7 @@
           </table>
 
           <!-- ================== EXPERIENCE ================== -->
-          <table class="inner-table">
+          <table class="inner-table section-anchor" id="research-experience">
             <tbody>
               <tr>
                 <td class="section-cell">
@@ -629,7 +826,7 @@
           </table>
 
           <!-- ================== AWARDS ================== -->
-          <table class="inner-table">
+          <table class="inner-table section-anchor" id="awards">
             <tbody>
               <tr>
                 <td class="section-cell">
@@ -649,7 +846,7 @@
           </table>
 
           <!-- ================== OTHER EXPERIENCE ================== -->
-          <table class="inner-table">
+          <table class="inner-table section-anchor" id="other-experience">
             <tbody>
               <tr>
                 <td class="section-cell">
@@ -666,7 +863,7 @@
           </table>
 
           <!-- ================== MISC ================== -->
-          <table class="inner-table">
+          <table class="inner-table section-anchor" id="collaboration">
             <tbody>
               <tr>
                 <td class="section-cell">
@@ -699,5 +896,56 @@
       </tr>
     </tbody>
   </table>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var navLinks = Array.from(document.querySelectorAll('.side-nav a'));
+      var navScroller = document.querySelector('.side-nav-links');
+      var sections = navLinks
+        .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+        .filter(Boolean);
+
+      function setActiveSection(id) {
+        var activeLink = null;
+        navLinks.forEach(function (link) {
+          var isActive = link.getAttribute('href') === '#' + id;
+          link.classList.toggle('active', isActive);
+          if (isActive) {
+            activeLink = link;
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+
+        if (activeLink && window.innerWidth <= 1100) {
+          var targetLeft = activeLink.offsetLeft - (navScroller.clientWidth - activeLink.offsetWidth) / 2;
+          navScroller.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+        }
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        var visible = entries
+          .filter(function (entry) { return entry.isIntersecting; })
+          .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+
+        if (visible.length) {
+          setActiveSection(visible[0].target.id);
+        }
+      }, {
+        rootMargin: '-18% 0px -68% 0px',
+        threshold: 0
+      });
+
+      sections.forEach(function (section) { observer.observe(section); });
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          setActiveSection(link.getAttribute('href').slice(1));
+        });
+      });
+    });
+  </script>
 </body>
 </html>
