@@ -323,6 +323,11 @@
       filter: brightness(1.18);
     }
 
+    .climate-video {
+      -webkit-clip-path: ellipse(33.9% 41.6% at 49.4% 50.5%);
+      clip-path: ellipse(33.9% 41.6% at 49.4% 50.5%);
+    }
+
     .project-text-cell {
       padding: 20px;
       width: 80%;
@@ -888,7 +893,7 @@
 
               <tr class="project-row">
                 <td class="project-image-cell">
-                  <video class="project-image" autoplay muted loop playsinline preload="metadata"
+                  <video class="project-image climate-video" autoplay muted loop playsinline preload="metadata"
                     poster="images/climate-vortex-poster.png?v=20260929d"
                     aria-label="Illustrative global vortex and climate dynamics animation">
                     <source src="images/climate-vortex.mp4?v=20260929d" type="video/mp4">
