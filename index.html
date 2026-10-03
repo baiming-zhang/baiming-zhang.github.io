@@ -30,10 +30,10 @@
 
     .site-shell {
       display: flex;
-      align-items: flex-start;
-      gap: 24px;
+      align-items: stretch;
+      gap: 34px;
       width: calc(100% - 28px);
-      max-width: 1240px;
+      max-width: 1320px;
       margin: 0 auto;
     }
 
@@ -50,74 +50,77 @@
 
     .side-nav {
       position: sticky;
-      top: 28px;
-      flex: 0 0 176px;
+      top: 0;
+      flex: 0 0 210px;
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      height: 86vh;
+      min-height: 620px;
       box-sizing: border-box;
-      margin-top: 30px;
-      padding: 18px 12px 14px 15px;
+      margin: 0;
+      padding: 28px 18px 28px 24px;
       overflow: hidden;
-      border-left: 2px solid #dbe5f1;
-      border-radius: 0 12px 12px 0;
-      background: linear-gradient(145deg, rgba(244, 248, 252, 0.96), rgba(255, 255, 255, 0.98));
-      box-shadow: 0 8px 24px rgba(24, 54, 93, 0.07);
-      transform: translateX(-16px);
-    }
-
-    .side-nav-title {
-      margin: 0 0 10px 9px;
-      color: #7a8797;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+      border-right: 1px solid #e7e7e3;
+      background: linear-gradient(180deg, #fafaf8 0%, #ffffff 55%, #f7f7f4 100%);
+      box-shadow: 12px 0 34px rgba(20, 20, 18, 0.035);
+      transform: translateX(-24px);
     }
 
     .side-nav-links {
       display: flex;
+      flex: 1 1 auto;
       flex-direction: column;
-      gap: 2px;
+      justify-content: center;
+      gap: clamp(17px, 2.8vh, 30px);
+      transform: translateY(-3px);
     }
 
     .side-nav a {
       position: relative;
       display: block;
-      padding: 7px 9px 7px 18px;
-      border-radius: 7px;
-      color: #536273;
-      font-size: 12px;
-      line-height: 1.25;
-      transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+      padding: 9px 10px 9px 24px;
+      border-radius: 9px;
+      color: #686864;
+      font-size: 12.5px;
+      line-height: 1.3;
+      transform: scale(1);
+      transform-origin: left center;
+      transition: color 220ms ease, background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
     }
 
     .side-nav a::before {
       position: absolute;
       top: 50%;
-      left: 7px;
-      width: 4px;
-      height: 4px;
+      left: 9px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
-      background: #9eb3ca;
+      background: #bebeb8;
       content: "";
       transform: translateY(-50%);
-      transition: background-color 160ms ease, box-shadow 160ms ease;
+      transition: background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
     }
 
     .side-nav a:hover,
     .side-nav a:focus {
-      color: #17365d;
-      background: #edf3f9;
-      transform: translateX(2px);
+      color: #20201e;
+      background: rgba(239, 239, 235, 0.9);
+      transform: translateX(3px) scale(1.035);
     }
 
     .side-nav a.active {
-      color: #17365d;
-      font-weight: 700;
-      background: #eaf1f8;
+      color: #171715;
+      font-weight: 800;
+      background: linear-gradient(90deg, rgba(232, 232, 227, 0.96), rgba(247, 247, 244, 0.72));
+      box-shadow: 0 5px 18px rgba(20, 20, 18, 0.055);
+      transform: translateX(4px) scale(1.13);
     }
 
     .side-nav a.active::before {
-      background: #b33b4a;
-      box-shadow: 0 0 0 3px rgba(179, 59, 74, 0.12);
+      background: #2f2f2c;
+      box-shadow: 0 0 0 3px rgba(47, 47, 44, 0.10);
+      transform: translateY(-50%) scale(1.16);
     }
 
     .page-wrap {
@@ -381,25 +384,25 @@
         margin: 0 0 8px;
         padding: 8px 10px;
         border: 0;
-        border-bottom: 1px solid #dbe5f1;
+        border-bottom: 1px solid #e7e7e3;
         border-radius: 0;
         background: rgba(255, 255, 255, 0.94);
-        box-shadow: 0 5px 18px rgba(24, 54, 93, 0.07);
+        box-shadow: 0 5px 18px rgba(20, 20, 18, 0.045);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         transform: none;
-      }
-
-      .side-nav-title {
-        display: none;
+        min-height: 0;
+        height: auto;
       }
 
       .side-nav-links {
         display: flex;
+        flex: none;
         flex-direction: row;
         gap: 3px;
         overflow-x: auto;
         scrollbar-width: none;
+        transform: none;
       }
 
       .side-nav-links::-webkit-scrollbar {
@@ -415,6 +418,10 @@
       .side-nav a:hover,
       .side-nav a:focus {
         transform: none;
+      }
+
+      .side-nav a.active {
+        transform: scale(1.07);
       }
     }
 
@@ -682,7 +689,6 @@
 <body>
   <div class="site-shell">
     <nav class="side-nav" aria-label="Page sections">
-      <p class="side-nav-title">Contents</p>
       <div class="side-nav-links">
         <a href="#about" class="active" aria-current="true">About</a>
         <a href="#news">News</a>
@@ -1154,25 +1160,43 @@
         }
       }
 
-      var observer = new IntersectionObserver(function (entries) {
-        var visible = entries
-          .filter(function (entry) { return entry.isIntersecting; })
-          .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      var ticking = false;
 
-        if (visible.length) {
-          setActiveSection(visible[0].target.id);
+      function updateActiveSection() {
+        var readingLine = window.innerHeight * (window.innerWidth <= 1100 ? 0.22 : 0.34);
+        var current = sections[0];
+
+        sections.forEach(function (section) {
+          if (section.getBoundingClientRect().top <= readingLine) {
+            current = section;
+          }
+        });
+
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+          current = sections[sections.length - 1];
         }
-      }, {
-        rootMargin: '-18% 0px -68% 0px',
-        threshold: 0
-      });
 
-      sections.forEach(function (section) { observer.observe(section); });
+        if (current) {
+          setActiveSection(current.id);
+        }
+        ticking = false;
+      }
+
+      function requestActiveSectionUpdate() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateActiveSection);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', requestActiveSectionUpdate, { passive: true });
+      window.addEventListener('resize', requestActiveSectionUpdate);
       navLinks.forEach(function (link) {
         link.addEventListener('click', function () {
           setActiveSection(link.getAttribute('href').slice(1));
         });
       });
+      updateActiveSection();
     });
   </script>
 </body>
