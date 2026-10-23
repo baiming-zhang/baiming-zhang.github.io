@@ -1,0 +1,310 @@
+{
+  "updated": "2026-10-24 07:53 北京时间",
+  "tasks": [
+    {
+      "id": "R01",
+      "phase": "第1周",
+      "title": "Connecting rod 几何生成",
+      "due": "2026-10-22",
+      "status": "已完成",
+      "deliverables": "参数化脚本、参数范围、几何样例",
+      "review": "几何有差异且有效，剔除自交及不合理尺寸",
+      "dependencies": "无",
+      "start": "2026-10-21",
+      "issues": "无问题",
+      "page": "R01.html",
+      "results": [
+        {
+          "label": "三维网格与参数",
+          "url": "viewers/meshes.html"
+        },
+        {
+          "label": "参数化脚本",
+          "url": "source/tools/build_rod_v2_cad.py"
+        },
+        {
+          "label": "样例参数与质量",
+          "url": "data/parameters-and-quality.csv"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "phase": "第1周",
+      "title": "Connecting rod 仿真代码",
+      "due": "2026-10-23",
+      "status": "进行中",
+      "deliverables": "合理工况、材料、边界条件与求解脚本",
+      "review": "核对单位、约束和载荷，单个案例可复现",
+      "dependencies": "R01",
+      "start": "2026-10-22",
+      "issues": "无问题",
+      "page": "R02.html",
+      "results": [
+        {
+          "label": "Cal三维结果对比",
+          "url": "viewers/cal-comparison.html"
+        },
+        {
+          "label": "FEn求解器快照",
+          "url": "source/rod_fenicsx_solver_snapshot.py"
+        },
+        {
+          "label": "材料与来源",
+          "url": "data/material-reference.json"
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "phase": "第1周",
+      "title": "Mesh 与求解参数核对",
+      "due": "2026-10-24",
+      "status": "进行中",
+      "deliverables": "网格质量、网格细化与求解参数检查",
+      "review": "检查收敛、位移/应力分布及载荷反力平衡",
+      "dependencies": "R02",
+      "start": "2026-10-23",
+      "issues": "",
+      "page": "R03.html",
+      "results": [
+        {
+          "label": "粗细Cal与平均显示",
+          "url": "viewers/cal-comparison.html"
+        },
+        {
+          "label": "2048点差异",
+          "url": "data/common-2048-point-differences.csv"
+        },
+        {
+          "label": "原始与平均云图",
+          "url": "assets/averaging.webp"
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "phase": "第1周",
+      "title": "小批量试跑与数据质控",
+      "due": "2026-10-25",
+      "status": "未开始",
+      "deliverables": "建议先试跑 20–50 个几何",
+      "review": "确认几何、mesh、解和样本编号一一对应，记录失败原因",
+      "dependencies": "R03",
+      "start": "2026-10-24",
+      "issues": "",
+      "page": "R04.html",
+      "results": []
+    },
+    {
+      "id": "R05",
+      "phase": "第1周",
+      "title": "Connecting rod 批量数据",
+      "due": "2026-10-27",
+      "status": "未开始",
+      "deliverables": "初期目标约 1000 个有效样本",
+      "review": "保存几何参数、mesh、工况和场数据，汇总有效/失败数量",
+      "dependencies": "R04",
+      "start": "2026-10-25",
+      "issues": "",
+      "page": "R05.html",
+      "results": []
+    },
+    {
+      "id": "R06",
+      "phase": "第1周",
+      "title": "TS3 / MGN 数据接口",
+      "due": "2026-10-25",
+      "status": "未开始",
+      "deliverables": "两个模型的数据加载与输入输出定义",
+      "review": "核对坐标、连通性、边界特征、标签和归一化",
+      "dependencies": "R03",
+      "start": "2026-10-24",
+      "issues": "",
+      "page": "R06.html",
+      "results": []
+    },
+    {
+      "id": "R07",
+      "phase": "第1周",
+      "title": "TS3 小规模 overfitting",
+      "due": "2026-10-27",
+      "status": "未开始",
+      "deliverables": "训练曲线、预测/真值/误差图、checkpoint",
+      "review": "建议固定 8–32 个样本，记录训练集误差并判断能否拟合",
+      "dependencies": "R04、R06",
+      "start": "2026-10-25",
+      "issues": "",
+      "page": "R07.html",
+      "results": []
+    },
+    {
+      "id": "R08",
+      "phase": "第1周",
+      "title": "MGN 小规模 overfitting",
+      "due": "2026-10-27",
+      "status": "未开始",
+      "deliverables": "训练曲线、预测/真值/误差图、checkpoint",
+      "review": "使用与 TS3 相同样本和目标场，统一误差口径",
+      "dependencies": "R04、R06",
+      "start": "2026-10-25",
+      "issues": "",
+      "page": "R08.html",
+      "results": []
+    },
+    {
+      "id": "M01",
+      "phase": "第1周",
+      "title": "Connecting rod checkpoint",
+      "due": "2026-10-27",
+      "status": "未开始",
+      "deliverables": "合理工况 simulation dataset + 两模型拟合结果",
+      "review": "人工 review 仿真与模型结果，汇总数据规模和遗留问题",
+      "dependencies": "R05、R07、R08",
+      "start": "2026-10-27",
+      "issues": "",
+      "page": "M01.html",
+      "results": []
+    },
+    {
+      "id": "C01",
+      "phase": "第2周",
+      "title": "COPV 几何生成",
+      "due": "2026-10-29",
+      "status": "未开始",
+      "deliverables": "参数化脚本、参数范围、几何样例",
+      "review": "检查筒体/封头等几何连接及厚度定义，说明简化假设",
+      "dependencies": "M01",
+      "start": "2026-10-28",
+      "issues": "",
+      "page": "C01.html",
+      "results": []
+    },
+    {
+      "id": "C02",
+      "phase": "第2周",
+      "title": "COPV 仿真代码",
+      "due": "2026-10-30",
+      "status": "未开始",
+      "deliverables": "材料、内压、约束与求解脚本",
+      "review": "明确复合材料/铺层的建模方式，核对单位及边界条件",
+      "dependencies": "C01",
+      "start": "2026-10-29",
+      "issues": "",
+      "page": "C02.html",
+      "results": []
+    },
+    {
+      "id": "C03",
+      "phase": "第2周",
+      "title": "COPV mesh 与参数核对",
+      "due": "2026-10-31",
+      "status": "未开始",
+      "deliverables": "网格质量、网格细化与参数检查",
+      "review": "检查收敛、变形/应力及合理参考解或趋势",
+      "dependencies": "C02",
+      "start": "2026-10-30",
+      "issues": "",
+      "page": "C03.html",
+      "results": []
+    },
+    {
+      "id": "C04",
+      "phase": "第2周",
+      "title": "COPV 小批量试跑",
+      "due": "2026-11-01",
+      "status": "未开始",
+      "deliverables": "建议先试跑 20–50 个几何",
+      "review": "核对数据字段和样本对应关系，确认后启动批量任务",
+      "dependencies": "C03",
+      "start": "2026-10-31",
+      "issues": "",
+      "page": "C04.html",
+      "results": []
+    },
+    {
+      "id": "C05",
+      "phase": "第2周",
+      "title": "COPV 批量数据",
+      "due": "2026-11-03",
+      "status": "未开始",
+      "deliverables": "初期目标约 1000 个有效样本",
+      "review": "汇总有效/失败数量，保留可复现配置和完整场数据",
+      "dependencies": "C04",
+      "start": "2026-11-01",
+      "issues": "",
+      "page": "C05.html",
+      "results": []
+    },
+    {
+      "id": "M02",
+      "phase": "第2周",
+      "title": "COPV 数据 checkpoint",
+      "due": "2026-11-03",
+      "status": "未开始",
+      "deliverables": "COPV 数据集与质控可视化",
+      "review": "人工 review 工况、mesh、求解参数和批量数据质量",
+      "dependencies": "C05",
+      "start": "2026-11-03",
+      "issues": "",
+      "page": "M02.html",
+      "results": []
+    },
+    {
+      "id": "C06",
+      "phase": "第3周",
+      "title": "COPV 两模型 overfitting",
+      "due": "2026-11-06",
+      "status": "未开始",
+      "deliverables": "TS3 / MGN 曲线、误差图与 checkpoint",
+      "review": "固定同一小样本子集，记录两模型拟合表现与失败现象",
+      "dependencies": "M02、R06",
+      "start": "2026-11-04",
+      "issues": "",
+      "page": "C06.html",
+      "results": []
+    },
+    {
+      "id": "E01",
+      "phase": "第2–3周",
+      "title": "模型结构探索",
+      "due": "2026-11-08",
+      "status": "未开始",
+      "deliverables": "少量有针对性的结构/特征改动及对比结果",
+      "review": "先确认 baseline 能拟合，每次改变一个主要因素并人工 review",
+      "dependencies": "M01，COPV 对比依赖 C06",
+      "start": "2026-10-28",
+      "issues": "",
+      "page": "E01.html",
+      "results": []
+    },
+    {
+      "id": "F01",
+      "phase": "第3周",
+      "title": "结果整理与复现检查",
+      "due": "2026-11-10",
+      "status": "未开始",
+      "deliverables": "数据说明、配置、模型结果与精简群汇报",
+      "review": "多放可视化，重点讲有效方法，失败方法简述并保留内部记录",
+      "dependencies": "C06、E01",
+      "start": "2026-11-09",
+      "issues": "",
+      "page": "F01.html",
+      "results": []
+    },
+    {
+      "id": "M03",
+      "phase": "第3周",
+      "title": "三周最终 checkpoint",
+      "due": "2026-11-10",
+      "status": "未开始",
+      "deliverables": "两类数据集、两模型结果和下一步建议",
+      "review": "确认交付链接完整，模型结构及结论已由执行人 review",
+      "dependencies": "F01",
+      "start": "2026-11-10",
+      "issues": "",
+      "page": "M03.html",
+      "results": []
+    }
+  ]
+}

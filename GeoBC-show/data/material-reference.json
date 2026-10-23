@@ -1,0 +1,55 @@
+{
+  "E_MPa": 115100.0,
+  "nu": 0.28,
+  "density_tonne_mm3": 4.43e-09,
+  "plastic_true_stress_vs_equivalent_plastic_strain": [
+    [
+      781.6,
+      0.0
+    ],
+    [
+      888.021113223284,
+      0.00010917814710578993
+    ],
+    [
+      934.7927919200695,
+      0.0018691890578575489
+    ],
+    [
+      958.2434,
+      0.00951460622563769
+    ]
+  ],
+  "source_url": "https://ntrs.nasa.gov/api/citations/20160008952/downloads/20160008952.pdf",
+  "source_sha256": "e63a98da22dce5946bf50a4997b2377aadd5cc49983706292985c3f2086586de",
+  "source_pages": {
+    "PDF_page": 35,
+    "printed_page": 31,
+    "table": "II",
+    "material_pedigree_PDF_page": 7
+  },
+  "temperature_C": 20,
+  "source_strain_rate_s_1": 0.001,
+  "source_engineering_points": [
+    {
+      "stress_MPa": 881.1,
+      "total_engineering_strain": 0.007855082536924414,
+      "offset": 0.0002
+    },
+    {
+      "stress_MPa": 925.5,
+      "total_engineering_strain": 0.010040834057341443,
+      "offset": 0.002
+    },
+    {
+      "stress_MPa": 941.3,
+      "total_engineering_strain": 0.018,
+      "offset": null
+    }
+  ],
+  "visually_reviewed": true,
+  "plastic_strain_data_limit": 0.00951460622563769,
+  "approximation": "Piecewise isotropic rate-independent J2 summary-point approximation, not a digitized full curve or certified rod material. PL781.6MPa used as approximate initial yield; TableII combines different tests. Source plate is textured/orthotropic; isotropic reduction is declared.",
+  "inherited_assumptions": "nu=.28 and density4430kg/m3 retained assumptions; neither inferred from TableII.",
+  "limitations": "20C quasistatic reference only; no validated high-rate, temperature, cyclic Bauschinger, damage/fracture/fatigue behavior. Beyond last tabulated plastic strain is unsupported and flagged, never accepted silently."
+}
