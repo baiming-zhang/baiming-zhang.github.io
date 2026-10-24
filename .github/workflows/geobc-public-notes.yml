@@ -1,0 +1,51 @@
+name: Update public GeoBC task notes
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: Task ID
+        required: true
+        default: R01
+      nickname:
+        description: Reviewer nickname
+        required: true
+      summary:
+        description: Public summary text
+        required: true
+      review:
+        description: Public review text
+        required: true
+  issues:
+    types: [opened, edited, reopened]
+permissions:
+  contents: write
+  pages: write
+jobs:
+  apply-note:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, '[GeoBC note] ')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate plain text note and update only the notes JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'GeoBC public review'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python GeoBC-show/scripts/apply_public_note.py
+            git add -- GeoBC-show/data/task-notes.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update public GeoBC task notes'
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
+      - name: Request GitHub Pages rebuild
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method POST repos/${{ github.repository }}/pages/builds
