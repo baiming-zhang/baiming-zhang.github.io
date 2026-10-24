@@ -1,0 +1,443 @@
+{
+  "cases": [
+    {
+      "id": "rodv2_0004",
+      "mesh": "../assets/models/rodv2_0004.json.gz"
+    },
+    {
+      "id": "rodv2_0014",
+      "mesh": "../assets/models/rodv2_0014.json.gz"
+    },
+    {
+      "id": "rodv2_0001",
+      "mesh": "../assets/models/rodv2_0001.json.gz"
+    },
+    {
+      "id": "rodv2_0006",
+      "mesh": "../assets/models/rodv2_0006.json.gz"
+    },
+    {
+      "id": "rodv2_0011",
+      "mesh": "../assets/models/rodv2_0011.json.gz"
+    },
+    {
+      "id": "rodv2_0018",
+      "mesh": "../assets/models/rodv2_0018.json.gz"
+    },
+    {
+      "id": "rodv2_0017",
+      "mesh": "../assets/models/rodv2_0017.json.gz"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "rated_firing_compression",
+      "label": "额定爆发压缩"
+    },
+    {
+      "id": "rated_inertial_tension",
+      "label": "额定惯性拉伸"
+    },
+    {
+      "id": "combined_bending",
+      "label": "组合弯曲"
+    },
+    {
+      "id": "overpressure",
+      "label": "超压"
+    },
+    {
+      "id": "overspeed",
+      "label": "超速"
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "rodv2_0018__rated_firing_compression",
+      "case_id": "rodv2_0018",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0018__rated_inertial_tension",
+      "case_id": "rodv2_0018",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0018__rated_inertial_tension.json.gz",
+      "max_U_mm": 0.16750646903152963,
+      "max_VM_MPa": 304.77638964567234,
+      "residual": 1.985959603990421e-07
+    },
+    {
+      "sample_id": "rodv2_0018__combined_bending",
+      "case_id": "rodv2_0018",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0018__combined_bending.json.gz",
+      "max_U_mm": 1.1053471762232936,
+      "max_VM_MPa": 128.15202311834517,
+      "residual": 1.9784719325061627e-07
+    },
+    {
+      "sample_id": "rodv2_0018__overpressure",
+      "case_id": "rodv2_0018",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0018__overspeed",
+      "case_id": "rodv2_0018",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0018__overspeed.json.gz",
+      "max_U_mm": 0.37686655701076976,
+      "max_VM_MPa": 684.1871113195356,
+      "residual": 1.981145903122737e-07
+    },
+    {
+      "sample_id": "rodv2_0017__rated_firing_compression",
+      "case_id": "rodv2_0017",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0017__rated_inertial_tension",
+      "case_id": "rodv2_0017",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0017__rated_inertial_tension.json.gz",
+      "max_U_mm": 0.16168732868368832,
+      "max_VM_MPa": 211.08756741121653,
+      "residual": 1.9980549945649778e-07
+    },
+    {
+      "sample_id": "rodv2_0017__combined_bending",
+      "case_id": "rodv2_0017",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0017__combined_bending.json.gz",
+      "max_U_mm": 7.95574249522965,
+      "max_VM_MPa": 458.2753229061722,
+      "residual": 1.999603604724618e-07
+    },
+    {
+      "sample_id": "rodv2_0017__overpressure",
+      "case_id": "rodv2_0017",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0017__overspeed",
+      "case_id": "rodv2_0017",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0017__overspeed.json.gz",
+      "max_U_mm": 0.3640912612339718,
+      "max_VM_MPa": 474.5861756347111,
+      "residual": 1.9933133787523142e-07
+    },
+    {
+      "sample_id": "rodv2_0006__rated_firing_compression",
+      "case_id": "rodv2_0006",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0006__rated_inertial_tension",
+      "case_id": "rodv2_0006",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0006__rated_inertial_tension.json.gz",
+      "max_U_mm": 0.17132086257170948,
+      "max_VM_MPa": 268.63181548612283,
+      "residual": 1.9966424250912e-07
+    },
+    {
+      "sample_id": "rodv2_0006__combined_bending",
+      "case_id": "rodv2_0006",
+      "scenario": "combined_bending",
+      "outcome": "reused",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0006__combined_bending.json.gz",
+      "max_U_mm": 4.426358799100078,
+      "max_VM_MPa": 304.04098931888063,
+      "residual": 1.9954832425809376e-07
+    },
+    {
+      "sample_id": "rodv2_0006__overpressure",
+      "case_id": "rodv2_0006",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0006__overspeed",
+      "case_id": "rodv2_0006",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0006__overspeed.json.gz",
+      "max_U_mm": 0.38566959279682306,
+      "max_VM_MPa": 603.6556471605148,
+      "residual": 1.976880714534119e-07
+    },
+    {
+      "sample_id": "rodv2_0014__rated_firing_compression",
+      "case_id": "rodv2_0014",
+      "scenario": "rated_firing_compression",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0014__rated_firing_compression.json.gz",
+      "max_U_mm": 0.13393207685982653,
+      "max_VM_MPa": 291.10834446730934,
+      "residual": 1.990809338642965e-07
+    },
+    {
+      "sample_id": "rodv2_0014__rated_inertial_tension",
+      "case_id": "rodv2_0014",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0014__rated_inertial_tension.json.gz",
+      "max_U_mm": 0.13470017023809494,
+      "max_VM_MPa": 322.1987297598277,
+      "residual": 1.998080909148288e-07
+    },
+    {
+      "sample_id": "rodv2_0014__combined_bending",
+      "case_id": "rodv2_0014",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0014__combined_bending.json.gz",
+      "max_U_mm": 0.8383231733207109,
+      "max_VM_MPa": 187.89253119685716,
+      "residual": 1.969031098624283e-07
+    },
+    {
+      "sample_id": "rodv2_0014__overpressure",
+      "case_id": "rodv2_0014",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0014__overspeed",
+      "case_id": "rodv2_0014",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0014__overspeed.json.gz",
+      "max_U_mm": 0.3026001751444664,
+      "max_VM_MPa": 723.0512964501735,
+      "residual": 1.987306629059982e-07
+    },
+    {
+      "sample_id": "rodv2_0011__rated_firing_compression",
+      "case_id": "rodv2_0011",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0011__rated_inertial_tension",
+      "case_id": "rodv2_0011",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0011__rated_inertial_tension.json.gz",
+      "max_U_mm": 0.15224700737919117,
+      "max_VM_MPa": 297.59622941045075,
+      "residual": 1.9896223642995142e-07
+    },
+    {
+      "sample_id": "rodv2_0011__combined_bending",
+      "case_id": "rodv2_0011",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0011__combined_bending.json.gz",
+      "max_U_mm": 1.6226370595855049,
+      "max_VM_MPa": 132.91458794890355,
+      "residual": 1.9948966725227897e-07
+    },
+    {
+      "sample_id": "rodv2_0011__overpressure",
+      "case_id": "rodv2_0011",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0011__overspeed",
+      "case_id": "rodv2_0011",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0011__overspeed.json.gz",
+      "max_U_mm": 0.34240724033448616,
+      "max_VM_MPa": 668.4264771832269,
+      "residual": 1.971765899032468e-07
+    },
+    {
+      "sample_id": "rodv2_0004__rated_firing_compression",
+      "case_id": "rodv2_0004",
+      "scenario": "rated_firing_compression",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0004__rated_firing_compression.json.gz",
+      "max_U_mm": 0.14516006468556802,
+      "max_VM_MPa": 277.191678677875,
+      "residual": 1.988203476436209e-07
+    },
+    {
+      "sample_id": "rodv2_0004__rated_inertial_tension",
+      "case_id": "rodv2_0004",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0004__rated_inertial_tension.json.gz",
+      "max_U_mm": 0.11293455812909386,
+      "max_VM_MPa": 272.5618122768667,
+      "residual": 1.9996828418339354e-07
+    },
+    {
+      "sample_id": "rodv2_0004__combined_bending",
+      "case_id": "rodv2_0004",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0004__combined_bending.json.gz",
+      "max_U_mm": 0.8908048486521474,
+      "max_VM_MPa": 220.1756870349854,
+      "residual": 1.9856500462707336e-07
+    },
+    {
+      "sample_id": "rodv2_0004__overpressure",
+      "case_id": "rodv2_0004",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0004__overspeed",
+      "case_id": "rodv2_0004",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0004__overspeed.json.gz",
+      "max_U_mm": 0.25412015117656495,
+      "max_VM_MPa": 612.1578631150347,
+      "residual": 1.9989044198351636e-07
+    },
+    {
+      "sample_id": "rodv2_0001__rated_firing_compression",
+      "case_id": "rodv2_0001",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0001__rated_inertial_tension",
+      "case_id": "rodv2_0001",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0001__rated_inertial_tension.json.gz",
+      "max_U_mm": 0.1719840060480248,
+      "max_VM_MPa": 449.87727826853035,
+      "residual": 1.9896238906350165e-07
+    },
+    {
+      "sample_id": "rodv2_0001__combined_bending",
+      "case_id": "rodv2_0001",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "asset": "../assets/r04-fields/rodv2_0001__combined_bending.json.gz",
+      "max_U_mm": 0.940773052989231,
+      "max_VM_MPa": 167.1688163444395,
+      "residual": 1.962021346171407e-07
+    },
+    {
+      "sample_id": "rodv2_0001__overpressure",
+      "case_id": "rodv2_0001",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    },
+    {
+      "sample_id": "rodv2_0001__overspeed",
+      "case_id": "rodv2_0001",
+      "scenario": "overspeed",
+      "outcome": "failed",
+      "failure_category": "yield_scope_guard",
+      "asset": null,
+      "max_U_mm": null,
+      "max_VM_MPa": null,
+      "residual": null
+    }
+  ],
+  "field_note": "displacement uses native nodal U; displayed stress is four-GP RMS per cell averaged to adjacent surface nodes for visualization only",
+  "error_note": "error mode reports nonlinear solve residual or the recorded failure category; it is not an error against ground truth"
+}
