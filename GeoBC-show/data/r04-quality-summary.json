@@ -1,0 +1,605 @@
+{
+  "task": "R04",
+  "phase": "complete",
+  "generated_at_utc": "2026-10-24T05:08:57.354513+00:00",
+  "generated_at_beijing": "2026-10-24 13:08 中国标准时间",
+  "batch": {
+    "elapsed_seconds": 11743.373280763626,
+    "elapsed_human": "3小时15分43秒"
+  },
+  "counts": {
+    "population_geometries": 20,
+    "qualified_fine_meshes": 7,
+    "mesh_gate_rejections": 13,
+    "planned_samples": 35,
+    "newly_solved_samples": 21,
+    "reused_samples": 1,
+    "accepted_total": 22,
+    "failed_samples": 13,
+    "acceptance_rate": 0.6285714285714286
+  },
+  "failure_breakdown": {
+    "petsc_cuda_nonconvergence": 12,
+    "yield_scope_guard": 1,
+    "other": 0
+  },
+  "observed": {
+    "max_mapping_error_mm": 1.7311050825277995e-13,
+    "max_final_residual_relative": 1.9996828418339354e-07,
+    "min_deformation_J": 0.9981980517349353,
+    "numeric_arrays_checked": 210
+  },
+  "scenarios": [
+    {
+      "id": "rated_firing_compression",
+      "label": "额定爆发压缩",
+      "attempted": 7,
+      "accepted": 2,
+      "failed": 5,
+      "median_new_solve_seconds": 297.62251019477844
+    },
+    {
+      "id": "rated_inertial_tension",
+      "label": "额定惯性拉伸",
+      "attempted": 7,
+      "accepted": 7,
+      "failed": 0,
+      "median_new_solve_seconds": 301.81441140174866
+    },
+    {
+      "id": "combined_bending",
+      "label": "组合弯曲",
+      "attempted": 7,
+      "accepted": 7,
+      "failed": 0,
+      "median_new_solve_seconds": 529.9990903139114
+    },
+    {
+      "id": "overpressure",
+      "label": "超压",
+      "attempted": 7,
+      "accepted": 0,
+      "failed": 7,
+      "median_new_solve_seconds": null
+    },
+    {
+      "id": "overspeed",
+      "label": "超速",
+      "attempted": 7,
+      "accepted": 6,
+      "failed": 1,
+      "median_new_solve_seconds": 304.61641216278076
+    }
+  ],
+  "geometries": [
+    {
+      "case_id": "rodv2_0004",
+      "nodes": 264323,
+      "elements": 148010,
+      "min_surface_SICN": 0.05235400892466544,
+      "min_volume_SICN": 0.05749708906876764,
+      "relative_volume_error": 0.0003475454370243103,
+      "accepted_samples": 4,
+      "max_U_range_mm": [
+        0.11293455812909386,
+        0.8908048486521474
+      ],
+      "max_VM_range_MPa": [
+        220.1756870349854,
+        612.1578631150347
+      ]
+    },
+    {
+      "case_id": "rodv2_0014",
+      "nodes": 230381,
+      "elements": 131109,
+      "min_surface_SICN": 0.08731260978957783,
+      "min_volume_SICN": 0.10183964631472782,
+      "relative_volume_error": 0.00031355374238339895,
+      "accepted_samples": 4,
+      "max_U_range_mm": [
+        0.13393207685982653,
+        0.8383231733207109
+      ],
+      "max_VM_range_MPa": [
+        187.89253119685716,
+        723.0512964501735
+      ]
+    },
+    {
+      "case_id": "rodv2_0001",
+      "nodes": 403963,
+      "elements": 232739,
+      "min_surface_SICN": 0.11321473658468581,
+      "min_volume_SICN": 0.11065318574962868,
+      "relative_volume_error": 0.0004679129177639352,
+      "accepted_samples": 2,
+      "max_U_range_mm": [
+        0.1719840060480248,
+        0.940773052989231
+      ],
+      "max_VM_range_MPa": [
+        167.1688163444395,
+        449.87727826853035
+      ]
+    },
+    {
+      "case_id": "rodv2_0006",
+      "nodes": 223582,
+      "elements": 123040,
+      "min_surface_SICN": 0.09076915604245489,
+      "min_volume_SICN": 0.08315196100637984,
+      "relative_volume_error": 0.0003843913876175886,
+      "accepted_samples": 3,
+      "max_U_range_mm": [
+        0.17132086257170948,
+        0.38566959279682306
+      ],
+      "max_VM_range_MPa": [
+        268.63181548612283,
+        603.6556471605148
+      ]
+    },
+    {
+      "case_id": "rodv2_0011",
+      "nodes": 255026,
+      "elements": 139044,
+      "min_surface_SICN": 0.09765277073848416,
+      "min_volume_SICN": 0.07909816059027573,
+      "relative_volume_error": 0.00030303290518962633,
+      "accepted_samples": 3,
+      "max_U_range_mm": [
+        0.15224700737919117,
+        1.6226370595855049
+      ],
+      "max_VM_range_MPa": [
+        132.91458794890355,
+        668.4264771832269
+      ]
+    },
+    {
+      "case_id": "rodv2_0018",
+      "nodes": 187935,
+      "elements": 98286,
+      "min_surface_SICN": 0.08785296038270889,
+      "min_volume_SICN": 0.06619155974042298,
+      "relative_volume_error": 0.00038347109843339666,
+      "accepted_samples": 3,
+      "max_U_range_mm": [
+        0.16750646903152963,
+        1.1053471762232936
+      ],
+      "max_VM_range_MPa": [
+        128.15202311834517,
+        684.1871113195356
+      ]
+    },
+    {
+      "case_id": "rodv2_0017",
+      "nodes": 215580,
+      "elements": 117384,
+      "min_surface_SICN": 0.09074802033227526,
+      "min_volume_SICN": 0.08715124059350975,
+      "relative_volume_error": 0.0005011270893122699,
+      "accepted_samples": 3,
+      "max_U_range_mm": [
+        0.16168732868368832,
+        7.95574249522965
+      ],
+      "max_VM_range_MPa": [
+        211.08756741121653,
+        474.5861756347111
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "rodv2_0018__rated_firing_compression",
+      "geometry_case_id": "rodv2_0018",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 325.12047481536865,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0018__rated_inertial_tension",
+      "geometry_case_id": "rodv2_0018",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 259.6143116950989,
+      "max_U_mm": 0.16750646903152963,
+      "max_GP_von_Mises_MPa": 304.77638964567234,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0018__combined_bending",
+      "geometry_case_id": "rodv2_0018",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 424.2867844104767,
+      "max_U_mm": 1.1053471762232936,
+      "max_GP_von_Mises_MPa": 128.15202311834517,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0018__overpressure",
+      "geometry_case_id": "rodv2_0018",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 245.12753176689148,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0018__overspeed",
+      "geometry_case_id": "rodv2_0018",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 261.61614084243774,
+      "max_U_mm": 0.37686655701076976,
+      "max_GP_von_Mises_MPa": 684.1871113195356,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0017__rated_firing_compression",
+      "geometry_case_id": "rodv2_0017",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 155.05258584022522,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0017__rated_inertial_tension",
+      "geometry_case_id": "rodv2_0017",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 298.2963619232178,
+      "max_U_mm": 0.16168732868368832,
+      "max_GP_von_Mises_MPa": 211.08756741121653,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0017__combined_bending",
+      "geometry_case_id": "rodv2_0017",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 685.8870666027069,
+      "max_U_mm": 7.95574249522965,
+      "max_GP_von_Mises_MPa": 458.2753229061722,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0017__overpressure",
+      "geometry_case_id": "rodv2_0017",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 115.03798747062683,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0017__overspeed",
+      "geometry_case_id": "rodv2_0017",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 305.58509731292725,
+      "max_U_mm": 0.3640912612339718,
+      "max_GP_von_Mises_MPa": 474.5861756347111,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0006__rated_firing_compression",
+      "geometry_case_id": "rodv2_0006",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 185.05711579322815,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0006__rated_inertial_tension",
+      "geometry_case_id": "rodv2_0006",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 326.1589081287384,
+      "max_U_mm": 0.17132086257170948,
+      "max_GP_von_Mises_MPa": 268.63181548612283,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0006__combined_bending",
+      "geometry_case_id": "rodv2_0006",
+      "scenario": "combined_bending",
+      "outcome": "reused",
+      "failure_category": null,
+      "seconds": 1371.9114730358124,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": false
+    },
+    {
+      "sample_id": "rodv2_0006__overpressure",
+      "geometry_case_id": "rodv2_0006",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 175.0630214214325,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0006__overspeed",
+      "geometry_case_id": "rodv2_0006",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 324.68943214416504,
+      "max_U_mm": 0.38566959279682306,
+      "max_GP_von_Mises_MPa": 603.6556471605148,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0014__rated_firing_compression",
+      "geometry_case_id": "rodv2_0014",
+      "scenario": "rated_firing_compression",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 279.4221279621124,
+      "max_U_mm": 0.13393207685982653,
+      "max_GP_von_Mises_MPa": 291.10834446730934,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0014__rated_inertial_tension",
+      "geometry_case_id": "rodv2_0014",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 278.961660861969,
+      "max_U_mm": 0.13470017023809494,
+      "max_GP_von_Mises_MPa": 322.1987297598277,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0014__combined_bending",
+      "geometry_case_id": "rodv2_0014",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 439.95644664764404,
+      "max_U_mm": 0.8383231733207109,
+      "max_GP_von_Mises_MPa": 187.89253119685716,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0014__overpressure",
+      "geometry_case_id": "rodv2_0014",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 225.06899213790894,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0014__overspeed",
+      "geometry_case_id": "rodv2_0014",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 270.4346327781677,
+      "max_U_mm": 0.3026001751444664,
+      "max_GP_von_Mises_MPa": 723.0512964501735,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0011__rated_firing_compression",
+      "geometry_case_id": "rodv2_0011",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 230.07507944107056,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0011__rated_inertial_tension",
+      "geometry_case_id": "rodv2_0011",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 342.9954218864441,
+      "max_U_mm": 0.15224700737919117,
+      "max_GP_von_Mises_MPa": 297.59622941045075,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0011__combined_bending",
+      "geometry_case_id": "rodv2_0011",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 576.2129695415497,
+      "max_U_mm": 1.6226370595855049,
+      "max_GP_von_Mises_MPa": 132.91458794890355,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0011__overpressure",
+      "geometry_case_id": "rodv2_0011",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 205.07105588912964,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0011__overspeed",
+      "geometry_case_id": "rodv2_0011",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 343.791378736496,
+      "max_U_mm": 0.34240724033448616,
+      "max_GP_von_Mises_MPa": 668.4264771832269,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0004__rated_firing_compression",
+      "geometry_case_id": "rodv2_0004",
+      "scenario": "rated_firing_compression",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 315.82289242744446,
+      "max_U_mm": 0.14516006468556802,
+      "max_GP_von_Mises_MPa": 277.191678677875,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0004__rated_inertial_tension",
+      "geometry_case_id": "rodv2_0004",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 301.81441140174866,
+      "max_U_mm": 0.11293455812909386,
+      "max_GP_von_Mises_MPa": 272.5618122768667,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0004__combined_bending",
+      "geometry_case_id": "rodv2_0004",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 483.7852110862732,
+      "max_U_mm": 0.8908048486521474,
+      "max_GP_von_Mises_MPa": 220.1756870349854,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0004__overpressure",
+      "geometry_case_id": "rodv2_0004",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 245.1072015762329,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0004__overspeed",
+      "geometry_case_id": "rodv2_0004",
+      "scenario": "overspeed",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 303.6477270126343,
+      "max_U_mm": 0.25412015117656495,
+      "max_GP_von_Mises_MPa": 612.1578631150347,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0001__rated_firing_compression",
+      "geometry_case_id": "rodv2_0001",
+      "scenario": "rated_firing_compression",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 525.2175226211548,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0001__rated_inertial_tension",
+      "geometry_case_id": "rodv2_0001",
+      "scenario": "rated_inertial_tension",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 499.3947422504425,
+      "max_U_mm": 0.1719840060480248,
+      "max_GP_von_Mises_MPa": 449.87727826853035,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0001__combined_bending",
+      "geometry_case_id": "rodv2_0001",
+      "scenario": "combined_bending",
+      "outcome": "accepted",
+      "failure_category": null,
+      "seconds": 798.5108301639557,
+      "max_U_mm": 0.940773052989231,
+      "max_GP_von_Mises_MPa": 167.1688163444395,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0001__overpressure",
+      "geometry_case_id": "rodv2_0001",
+      "scenario": "overpressure",
+      "outcome": "failed",
+      "failure_category": "petsc_cuda_nonconvergence",
+      "seconds": 350.14088892936707,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    },
+    {
+      "sample_id": "rodv2_0001__overspeed",
+      "geometry_case_id": "rodv2_0001",
+      "scenario": "overspeed",
+      "outcome": "failed",
+      "failure_category": "yield_scope_guard",
+      "seconds": 400.15001940727234,
+      "max_U_mm": null,
+      "max_GP_von_Mises_MPa": null,
+      "batch_consumed": true
+    }
+  ],
+  "qc_checks": {
+    "batch_terminal_set_complete": true,
+    "terminal_sets_disjoint": true,
+    "accepted_geometry_set_matches": true,
+    "rejected_never_solved": true,
+    "completed_reviews_present": true,
+    "completed_identity_gates": true,
+    "completed_ten_states": true,
+    "completed_cuda_backend": true,
+    "completed_arrays_finite": true,
+    "completed_hashes_match": true,
+    "completed_positive_jacobian": true,
+    "reuse_verified": true,
+    "failed_have_no_accepted_output": true,
+    "all_passed": true
+  },
+  "scope": {
+    "fine_mesh_only": true,
+    "calculix_used": false,
+    "failed_samples_retried": false,
+    "rejected_meshes_solved": false,
+    "constitutive_limit": "virgin elastic branch; fail closed on yield"
+  }
+}

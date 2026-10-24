@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24 09:39 北京时间",
+  "updated": "2026-10-24 13:09 北京时间",
   "tasks": [
     {
       "id": "R01",
@@ -95,17 +95,25 @@
       "phase": "第1周",
       "title": "小批量试跑与数据质控",
       "due": "2026-10-25",
-      "status": "进行中",
-      "deliverables": "建议先试跑 20–50 个几何",
-      "review": "确认几何、mesh、解和样本编号一一对应，记录失败原因",
+      "status": "已完成",
+      "deliverables": "35例GPU FEn小批量结果、质控汇总和逐样本清单",
+      "review": "核对几何、细网格、解和样本编号；记录收敛失败与适用范围",
       "dependencies": "R03",
       "start": "2026-10-24",
-      "issues": "固定20个几何：7个合格细网格进入35个GPU FEn峰值加载样本；13个网格门槛失败保持隔离",
+      "issues": "22/35接受（21新算+1复用）；12例PETSc CUDA迭代不收敛，1例触发屈服范围保护；13个隔离网格未求解",
       "page": "R04.html",
       "results": [
         {
-          "label": "R04 GPU FEn队列说明",
-          "url": "R04.html"
+          "label": "R04 GPU FEn质控看板",
+          "url": "viewers/r04-quality.html"
+        },
+        {
+          "label": "质控汇总JSON",
+          "url": "data/r04-quality-summary.json"
+        },
+        {
+          "label": "35例样本清单CSV",
+          "url": "data/r04-sample-manifest.csv"
         },
         {
           "label": "R03网格门槛与隔离记录",
