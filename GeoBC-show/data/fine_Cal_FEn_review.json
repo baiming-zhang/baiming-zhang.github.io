@@ -1,0 +1,81 @@
+{
+  "scope": "Completed FEn 20-state path versus preserved fine Cal full-load snapshot only",
+  "fine_direct": {
+    "native_U_relative_L2": 1.0614353632967835e-07,
+    "native_U_vector_RMSE_mm": 1.846752987680929e-07,
+    "native_U_max_difference_mm": 5.112678317586794e-07,
+    "GP_tensor_reference_volume_relative_L2": 1.5802614845466285e-07,
+    "GP_VM_reference_volume_relative_L2": 1.523689179680173e-07,
+    "GP_coordinate_matching_max_mm": 2.287365529990307e-13
+  },
+  "FEn_equilibrium": {
+    "free_residual_relative": 1.861973222961219e-07,
+    "force_balance_relative": 1.1628042441807773e-14,
+    "moment_balance_deformed_relative": 1.1291213974344067e-14,
+    "radial_violation_mm": 2.6063734503978253e-11,
+    "mean_tangent_mm": 2.1337964362810882e-20,
+    "mean_axial_mm": 9.337544838221214e-20,
+    "passed": true
+  },
+  "stress_ROI": {
+    "shank": {
+      "Cal_RMS_MPa": 88.71467650224236,
+      "FEn_RMS_MPa": 88.71467661981265,
+      "relative_difference": 1.3252632324878277e-09
+    },
+    "small_shoulder": {
+      "Cal_RMS_MPa": 44.320781319895985,
+      "FEn_RMS_MPa": 44.320781634007425,
+      "relative_difference": 7.087227027469112e-09
+    },
+    "big_shoulder": {
+      "Cal_RMS_MPa": 54.141534074927904,
+      "FEn_RMS_MPa": 54.14153421665048,
+      "relative_difference": 2.617631222889827e-09
+    }
+  },
+  "common_physical_probes": {
+    "count": 2048,
+    "relative_L2": 6.193918913068087e-08,
+    "vector_RMSE_mm": 1.162138311039363e-07,
+    "max_difference_mm": 6.214537944019284e-07,
+    "mapping_max_mm": 1.425519446324506e-13
+  },
+  "FEn_summary": {
+    "seconds": 1371.9114730358124,
+    "nodes": 223582,
+    "elements": 123040,
+    "max_U_mm": 4.426358799100078,
+    "max_GP_von_Mises_MPa": 304.04098931888063,
+    "max_PEEQ": 0.0,
+    "all_accepted_states_below_initial_yield": true,
+    "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+    "fields_sha256": "63431c672961a13b642c2fc6e616c5df9307381edf0dced00155795693180457",
+    "same_native_curved_mesh": true,
+    "no_dataset_replacement": true,
+    "backend": "cuda",
+    "linear_solver": "iterative",
+    "assembly_device": "cpu",
+    "linear_algebra_device": "cuda",
+    "cuda_review": {
+      "petsc_cuda_package": true,
+      "probe_vector_type": "seqcuda",
+      "probe_matrix_type": "seqaijcusparse",
+      "probe_norm": 2.8284271247461903
+    },
+    "total_ksp_iterations": 115635
+  },
+  "FEn_full_load_seconds": 707.1732542514801,
+  "FEn_unload_max_U_mm": 1.1107565323816912e-08,
+  "FEn_accepted_states": 20,
+  "FEn_all_states_PEEQ_zero": true,
+  "Cal_full_unload_complete": false,
+  "three_way_all_state_acceptance": false,
+  "no_alignment": true,
+  "no_dataset_replacement": true,
+  "mesh_difference_is_not_true_error": true,
+  "inputs_sha256": "bfa90f2a8828e0c732330ff5459f83cee21bd95e171b6e1be64fffbc60b008bb",
+  "FEn_fields_sha256": "63431c672961a13b642c2fc6e616c5df9307381edf0dced00155795693180457",
+  "Cal_snapshot_sha256": "bac7a7ad1c16f19ac5e6908915a809cf2eab2cb2870a97c721b7b6e3eb06d929",
+  "peak_solver_consistency_checks_passed": true
+}

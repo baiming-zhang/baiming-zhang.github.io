@@ -1,9 +1,29 @@
 {
-  "snapshot_time": "2026-10-24 07:55 北京时间",
-  "phase": "newton",
-  "accepted_states": 11,
-  "current_load_factor": 0.8,
-  "elapsed_seconds": 807.8426251411438,
-  "full_load_accepted": true,
-  "complete_20_states": false
+  "phase": "complete_peak_review_passed_Cal_unload_incomplete",
+  "accepted_states": 20,
+  "summary": {
+    "seconds": 1371.9114730358124,
+    "nodes": 223582,
+    "elements": 123040,
+    "max_U_mm": 4.426358799100078,
+    "max_GP_von_Mises_MPa": 304.04098931888063,
+    "max_PEEQ": 0.0,
+    "all_accepted_states_below_initial_yield": true,
+    "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+    "fields_sha256": "63431c672961a13b642c2fc6e616c5df9307381edf0dced00155795693180457",
+    "same_native_curved_mesh": true,
+    "no_dataset_replacement": true,
+    "backend": "cuda",
+    "linear_solver": "iterative",
+    "assembly_device": "cpu",
+    "linear_algebra_device": "cuda",
+    "cuda_review": {
+      "petsc_cuda_package": true,
+      "probe_vector_type": "seqcuda",
+      "probe_matrix_type": "seqaijcusparse",
+      "probe_norm": 2.8284271247461903
+    },
+    "total_ksp_iterations": 115635
+  },
+  "review": "fine_Cal_FEn_review.json"
 }
