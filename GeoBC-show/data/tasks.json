@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24 07:53 北京时间",
+  "updated": "2026-10-24 08:58 北京时间",
   "tasks": [
     {
       "id": "R01",
@@ -33,17 +33,21 @@
       "phase": "第1周",
       "title": "Connecting rod 仿真代码",
       "due": "2026-10-23",
-      "status": "进行中",
+      "status": "已完成",
       "deliverables": "合理工况、材料、边界条件与求解脚本",
       "review": "核对单位、约束和载荷，单个案例可复现",
       "dependencies": "R01",
       "start": "2026-10-22",
-      "issues": "无问题",
+      "issues": "0006未屈服分支验证通过；细Cal完整卸载不属于本次完成判据",
       "page": "R02.html",
       "results": [
         {
-          "label": "Cal三维结果对比",
+          "label": "粗Cal / 细Cal / GPU FEn消融",
           "url": "viewers/cal-comparison.html"
+        },
+        {
+          "label": "GPU FEn复核指标",
+          "url": "data/fine_Cal_FEn_review.json"
         },
         {
           "label": "FEn求解器快照",
@@ -60,20 +64,24 @@
       "phase": "第1周",
       "title": "Mesh 与求解参数核对",
       "due": "2026-10-24",
-      "status": "进行中",
+      "status": "已完成",
       "deliverables": "网格质量、网格细化与求解参数检查",
       "review": "检查收敛、位移/应力分布及载荷反力平衡",
       "dependencies": "R02",
       "start": "2026-10-23",
-      "issues": "",
+      "issues": "7例网格通过、13例隔离并记录；局部峰值收敛与通用塑性不在本次验收范围",
       "page": "R03.html",
       "results": [
         {
-          "label": "粗细Cal与平均显示",
+          "label": "三方消融与显示平均",
           "url": "viewers/cal-comparison.html"
         },
         {
-          "label": "2048点差异",
+          "label": "GPU FEn复核指标",
+          "url": "data/fine_Cal_FEn_review.json"
+        },
+        {
+          "label": "2048点网格差异",
           "url": "data/common-2048-point-differences.csv"
         },
         {
