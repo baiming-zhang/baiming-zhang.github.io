@@ -12,7 +12,7 @@ window.FEBoundaryOverlay=class {
       button.onclick=()=>{this[key]=!this[key];button.setAttribute('aria-pressed',String(this[key]));this.redraw();};toolbar.append(button);this[key+'Button']=button;
     }
     this.info=document.createElement('details');this.info.className='fe-bc-info';this.info.hidden=true;
-    this.info.innerHTML='<summary>工况 / 约束说明</summary><div class="fe-bc-cards"></div><p>蓝色：约束；橙色：表面压力 / 节点力；紫红色：惯性体载荷（如有）。标记透视显示，箭头长度示意；显示开关不改变工况。</p>';
+    this.info.innerHTML='<summary>工况 / 约束说明</summary><div class="fe-bc-cards"></div><p>蓝色：约束；橙色：表面压力 / 节点力；紫红色：惯性体载荷（如有）。三维实体标记透视显示，箭头长度示意；显示开关不改变工况。</p>';
     toolbar.after(this.info);
     const params=new URLSearchParams(location.search);this.bc=params.get('bc')==='1'||!!options.initial;this.loads=params.get('loads')==='1'||!!options.initial;
     this.bcButton.setAttribute('aria-pressed',String(this.bc));this.loadsButton.setAttribute('aria-pressed',String(this.loads));
@@ -51,7 +51,7 @@ precision highp float;in vec3 ref;uniform bool uMask;uniform vec2 uDirection;uni
     if(!this.gl||!baseProgram||!this.canvas.clientHeight||!this.canvas.clientWidth)return;
     this.initGL();const g=this.gl,p=this.overlayProgram;let drawings='',cards=[];const unique=new Set();
     this.svg.setAttribute('viewBox',`0 0 ${this.canvas.clientWidth} ${this.canvas.clientHeight}`);
-    let defs='<defs><marker id="fe-pressure-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#e05b18"/></marker><marker id="fe-body-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#bb285b"/></marker>';
+    let defs='<defs>';
     g.useProgram(p);g.disable(g.DEPTH_TEST);g.depthMask(false);g.enable(g.BLEND);g.blendFunc(g.SRC_ALPHA,g.ONE_MINUS_SRC_ALPHA);g.enable(g.SCISSOR_TEST);
     for(let fi=0;fi<frames.length;fi++) {
       const f=frames[fi],d=this.data(f.id);if(!d)continue;const s=d.samples[f.sample];if(!s)continue;
@@ -69,20 +69,13 @@ precision highp float;in vec3 ref;uniform bool uMask;uniform vec2 uDirection;uni
       const sx=this.canvas.width/this.canvas.clientWidth,sy=this.canvas.height/this.canvas.clientHeight,left=v.x/sx,top=(this.canvas.height-v.y-v.h)/sy,w=v.w/sx,h=v.h/sy;
       defs+=`<clipPath id="fe-bc-clip-${fi}"><rect x="${left}" y="${top}" width="${w}" height="${h}"/></clipPath>`;
       drawings+=`<g clip-path="url(#fe-bc-clip-${fi})">`;
-      for(const item of s.glyphs) {
-        if(item.kind==='constraint'?!this.bc:!this.loads)continue;
-        const at=this.project(f,item.p,item.u),length=f.radius*(item.kind==='constraint'?.065:.13);
-        if(item.kind==='constraint') {
-          const end=this.project(f,item.p.map((x,i)=>x+item.d[i]*length),item.u),dx=end.x-at.x,dy=end.y-at.y,mag=Math.hypot(dx,dy),tx=mag>1?-dy/mag*3:3,ty=mag>1?dx/mag*3:0;
-          drawings+=`<path d="M${at.x} ${at.y}L${end.x} ${end.y} M${end.x-tx} ${end.y-ty}L${end.x+tx} ${end.y+ty}" stroke="white" stroke-width="4" fill="none"/><path d="M${at.x} ${at.y}L${end.x} ${end.y} M${end.x-tx} ${end.y-ty}L${end.x+tx} ${end.y+ty}" stroke="#256ac0" stroke-width="1.5" fill="none"/><circle cx="${at.x}" cy="${at.y}" r="2.4" fill="#256ac0"/>`;
-        } else {
-          const start=item.kind==='pressure'?this.project(f,item.p.map((x,i)=>x-item.d[i]*length),item.u):at;
-          const end=item.kind==='pressure'?at:this.project(f,item.p.map((x,i)=>x+item.d[i]*length),item.u);
-          const color=item.kind==='body'?'#bb285b':'#e05b18',marker=item.kind==='body'?'fe-body-head':'fe-pressure-head';
-          if(Math.hypot(end.x-start.x,end.y-start.y)<2)drawings+=`<circle cx="${at.x}" cy="${at.y}" r="2" fill="${color}"/>`;
-          else drawings+=`<path d="M${start.x} ${start.y}L${end.x} ${end.y}" stroke="white" stroke-width="4"/><path d="M${start.x} ${start.y}L${end.x} ${end.y}" stroke="${color}" stroke-width="1.6" marker-end="url(#${marker})"/>`;
-        }
-      }
+      if(!this.spatial)this.spatial=new FESpatialGlyphs(g);
+      const glyphs=s.glyphs.filter(item=>item.kind==='constraint'?this.bc:this.loads).map(item=>({
+        p:item.p,u:item.u,d:item.d,shape:item.kind==='constraint'?'support':'arrow',
+        length:f.radius*(item.kind==='constraint'?.065:.13),shift:item.kind==='pressure'?-1:0,
+        color:item.kind==='constraint'?[.12,.65,1.]:item.kind==='body'?[.93,.18,.48]:[1.,.36,.035]
+      }));
+      this.spatial.draw(f,glyphs);
       let lines=[];
       if(this.bc)lines.push(d.kind==='rod'?'径向 uᵣ=0；〈uθ〉A=〈uz〉A=0':d.kind==='axisym'?'底端 uz=0；ur 自由，上端自由':'nᵢ·Uᵢ=0 + 两条均值线性方程');
       if(this.loads)lines.push(d.kind==='rod'?`销孔 p₀=${this.fmt(s.p0_MPa)} MPa；紫红色为惯性体载荷`:d.kind==='axisym'?'内压 1 MPa；无闭口端合力':'构造节点力（数值核对输入）');

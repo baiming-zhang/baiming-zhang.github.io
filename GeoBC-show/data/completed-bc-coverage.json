@@ -19,40 +19,40 @@
       "task": "R02",
       "status": "covered",
       "scope": "粗 Cal、细 Cal、细 Cal 平均显示、GPU FEn 四栏；另覆盖独立曲边单元核对试件。",
-      "viewer": "viewers/cal-comparison.html?bc=1&loads=1",
-      "extra": "viewers/bc-inspector.html?case=r02-reference-patch"
+      "viewer": "viewers/cal-comparison.html?bc=1&loads=1&v=completed-bc-3d-3",
+      "extra": "viewers/bc-inspector.html?case=r02-reference-patch&v=completed-bc-3d-3"
     },
     {
       "task": "R03",
       "status": "covered",
       "scope": "与 R02 共用的完整/嵌入四栏结果视图均有开关。网格本身不虚构工况。",
-      "viewer": "viewers/cal-embed.html?bc=1&loads=1"
+      "viewer": "viewers/cal-embed.html?bc=1&loads=1&v=completed-bc-3d-3"
     },
     {
       "task": "R04",
       "status": "covered",
       "scope": "7 个几何 × 5 类工况；22 个接受/复用结果与 13 个未接受输入明确区分，全部可切换查看。",
-      "viewer": "viewers/r04-compare.html?bc=1&loads=1"
+      "viewer": "viewers/r04-compare.html?bc=1&loads=1&v=completed-bc-3d-3"
     },
     {
       "task": "C01",
       "status": "covered_historical_only",
       "scope": "18 实体构造及 15 个参数几何不附会求解 BC。历史 v1 基准的内压/底端轴向约束已单独可视化。",
-      "viewer": "viewers/bc-inspector.html?case=c01-smoke",
+      "viewer": "viewers/bc-inspector.html?case=c01-smoke&v=completed-bc-3d-3",
       "extra": "C02.html"
     },
     {
       "task": "C02",
       "status": "already_covered_verified",
       "scope": "已复核现有三点定位、受压内壁与上下端等效合力开关。",
-      "viewer": "viewers/copv-c02.html"
+      "viewer": "viewers/copv-c02.html?v=completed-bc-3d-3"
     }
   ],
   "data_index": "assets/fe-bc/index.json",
   "no_FE_recomputed": true,
   "validation": {
-    "checked_at": "2026-10-25T13:43:30.565643+08:00",
-    "syntax_checked_scripts": 9,
+    "checked_at": "2026-10-25T14:00:04.130013+08:00",
+    "syntax_checked_scripts": 11,
     "exported_case_datasets": 10,
     "r04_inputs": 35,
     "r04_accepted_or_reused": 22,
@@ -65,14 +65,24 @@
       "R04 quality matrix: all 35 exact case/scenario links; one navigation checked",
       "C01 historical axisymmetric smoke: original node/element scope, pressure and axial support",
       "R02 curved reference patch: ten actual directional constraints and manufactured nodal forces",
-      "completed task coverage page: all six task entries"
+      "completed task coverage page: all six task entries",
+      "3D glyphs: R04 rotation before/after, four-panel Cal/FEn, historical C01",
+      "COPV 3D pressure/cap loads and support axes; final state 19 at zero pressure has no load arrows; no WebGL warnings"
     ],
     "webgl_console_errors_in_checked_R04_view": 0,
     "reference_images": [
       "assets/fe-bc/reference-01-cal.jpg",
       "assets/fe-bc/reference-02-r04.jpg",
       "assets/fe-bc/reference-03-c01-smoke.jpg",
-      "assets/fe-bc/reference-04-r04-tension.jpg"
-    ]
+      "assets/fe-bc/reference-04-r04-tension.jpg",
+      "assets/fe-bc/reference-05-3d-arrows.jpg",
+      "assets/fe-bc/reference-06-3d-rotated.jpg",
+      "assets/fe-bc/reference-07-copv-3d.jpg"
+    ],
+    "glyph_renderer": "WebGL2 instanced 3D triangle meshes: cylindrical shaft, conical head, cylindrical support and spherical node",
+    "arrow_outlines": false,
+    "arrow_sprites": false,
+    "glyph_coordinate_system": "same model coordinates/camera and nodal deformation as the result mesh",
+    "glyph_depth": "separate x-ray depth layer with mutual glyph occlusion"
   }
 }
