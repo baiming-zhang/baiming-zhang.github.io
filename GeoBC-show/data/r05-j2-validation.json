@@ -1219,9 +1219,8 @@
   },
   "remaining_hybrid_arc_driver": {
     "pid": 39776,
-    "stage": "explicit_range_tail_recovery",
-    "updated_unix": 1792924471.8226023,
-    "sample_id": "normal_rodv2_0159__compression_skew",
+    "stage": "complete",
+    "updated_unix": 1792926257.1110976,
     "sample_ids": [
       "normal_rodv2_0154__compression_skew",
       "normal_rodv2_0159__compression_skew"
@@ -1341,14 +1340,20 @@
   },
   "mode_tail_driver": {
     "pid": 32656,
-    "stage": "waiting_for_remaining_recovery",
-    "updated_unix": 1792924688.637406,
-    "upstream_pid": 39776,
+    "stage": "validated_recovery_running",
+    "updated_unix": 1792926332.0149078,
+    "sample_ids": [
+      "normal_rodv2_0053__compression_skew",
+      "normal_rodv2_0096__gas_inertia_30deg",
+      "normal_rodv2_0079__compression_skew",
+      "normal_rodv2_0154__compression_skew",
+      "normal_rodv2_0159__compression_skew"
+    ],
     "solver_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483"
   },
   "mode_tail_manifest": {
-    "state": "validation_pending",
-    "production_enabled": false,
+    "state": "validated",
+    "production_enabled": true,
     "profile": "mode_tail_v3",
     "PEEQ_limit": 0.1,
     "source_policy": "Original CCX constant Cauchy958.2434MPa tail, original four points unchanged; not damage/fracture calibration",
@@ -1363,7 +1368,9 @@
     "gates_sha256": {
       "ccx_constant_tail_investigation/material_point_review.json": "f83701e08e532726602bc3a372d9b715c4e05ba90b20b7f323937b6785e1ae9c",
       "ccx_constant_tail_investigation/ufl_quadrature_review.json": "6d9fbc0dc36fdc6befa972490e80842b7945ba383530a2552a16131844bc4190",
-      "ccx_constant_tail_investigation/curved_tet10_assembly_review.json": "b1457f696fe895d42726b2334854f96d01ea23401527134259a208ef78cf9d95"
+      "ccx_constant_tail_investigation/curved_tet10_assembly_review.json": "b1457f696fe895d42726b2334854f96d01ea23401527134259a208ef78cf9d95",
+      "plastic_tet10_mode_plane_tail/cross_solver_review.json": "7901b79080e9695f45957e9a6745e1eec6c1736bf1096463371008b0d6d94356",
+      "elastic_rod_0028_mode_plane_tail/cross_solver_review.json": "7db55e3ad3f6c2e1d52498f5c3f31dcd1b4f861f24170a583f06087f1a919d9d"
     },
     "core_sha256": {
       "geobc/rod_finite_j2_r05.py": "7f3cb61ec2308e351e22906bfadb4ed941f6f981897296a784b88af8240f0d8b",
@@ -1378,7 +1385,59 @@
       "material_data_range_passed=True,max_yield_consistency_residual_MPa=",
       "with frozen piecewise Cauchy hardening;"
     ],
-    "created_unix": 1792923889.8024635
+    "created_unix": 1792923889.8024635,
+    "validated_unix": 1792926303.009078,
+    "acceptance_scope": "Mode-tail profile isolated until compatible main capability loaded"
+  },
+  "mode_tail_contract_review": {
+    "passed": true,
+    "legacy_0095_full_field_reverified": true,
+    "legacy_manifest_unchanged": true,
+    "arc_v2_policy_witness_compatible": true,
+    "arc_v2_manifest_unchanged": true,
+    "new_profile_metadata_unit_checks": [
+      "material_range_limit_PEEQ",
+      "tail_validation_manifest_sha256",
+      "tail_solver_sha256",
+      "tail_profile",
+      "wrong_provenance_module"
+    ],
+    "scope": "Synthetic policy witnesses are not dataset results; no new sample count",
+    "created_unix": 1792926303.1936202
+  },
+  "mode_tail_plastic_regression": {
+    "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+    "U_relative_L2": 2.1407323280160933e-07,
+    "GP_tensor_relative_L2": 1.0476606673017043e-07,
+    "PEEQ_absolute_error": 4.82356342368373e-12,
+    "CCX_max_PEEQ": 8.967564e-05,
+    "FEn_max_PEEQ": 8.967563517643658e-05,
+    "all_20_states_U_max_relative": 2.1407323280160933e-07,
+    "all_20_states_max_PEEQ_absolute_error": 4.82356342368373e-12,
+    "GP_match_mm": 2.0032143250599133e-15,
+    "material_range_passed": true,
+    "unload_displacement_norm_mm": 0.001388061508938317,
+    "passed": true,
+    "solver_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+    "arc_module_sha256": "6d817262839d0c7bc42aee0f76a711436c1096c614c38fba19260b50b7d4dd1a",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "numerical_mode_roots": 230,
+    "positive_and_negative_amplitudes_used": true,
+    "all_original_targets_mode_row_removed": true
+  },
+  "mode_tail_full_rod_regression": {
+    "passed": true,
+    "relative_L2": {
+      "U_peak_mm": 2.726607160436197e-12,
+      "GP_Cauchy_stress_MPa": 1.8686508813708326e-12,
+      "GP_von_Mises_MPa": 8.083749354630676e-13
+    },
+    "solver_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+    "arc_module_sha256": "6d817262839d0c7bc42aee0f76a711436c1096c614c38fba19260b50b7d4dd1a",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "numerical_mode_roots": 9,
+    "original_mode_row_removed": true,
+    "scope": "Bounded-tail signed numerical-mode regression; original physical constraints restored; no new dataset count"
   },
   "mode_tail_main_capability_loaded": false,
   "mode_tail_isolated_pending_count": 0,
@@ -1390,14 +1449,30 @@
       "old_PEEQ_zero_proven": true,
       "reassembled_trial_PEEQ_zero": true,
       "min_J": 0.9970724621739734,
-      "free_residual_relative": 2.999193480287108e-10,
+      "free_residual_relative": 2.999193480287117e-10,
       "source_state_sha256": "c3b3954372bc2091ec86f92c252228edf7623dd4078045dd8dbb3103f9d07e30",
       "source_history_sha256": "afc5a845f7e71acdf1360e2ada641a5027834edb0824b823cff45e5be7f0da1e",
       "geometry_sha256": "9634872cdc2a1f12c5c84ae02b3697478429829c5fc598d25902962ae67b78b0",
       "load_sha256": "7bebd5f2e87de0702dabe28f5dca7f61a9c35162dd194d2a558744b44283d25e",
       "global_linear_solve": false,
       "scope": "Earlier accepted virgin reference for own-geometry numerical mode only; not current plastic tangent, stability or critical-load proof; no dataset count",
-      "created_unix": 1792924586.5377328
+      "created_unix": 1792926309.8861463
+    },
+    {
+      "passed": true,
+      "sample_id": "normal_rodv2_0159__compression_skew",
+      "reference_load_factor": 0.8,
+      "old_PEEQ_zero_proven": true,
+      "reassembled_trial_PEEQ_zero": true,
+      "min_J": 0.9976872695053314,
+      "free_residual_relative": 1.8943611889509477e-10,
+      "source_state_sha256": "0d766818cf40c26629406d153d3b519425765c2f6e0da1d98476fa5ac7d4ffa3",
+      "source_history_sha256": "e525a581c81078d4574aedfb58967493d62f3d636c879aae974ccf1a12165db1",
+      "geometry_sha256": "c7d7b4093a032002f36f93bcefb6c4b5e1f627f3e0de3ae3e4ac33fd3745f340",
+      "load_sha256": "055b2cdaf91d7a3052cacf395f3ae1c5144a383fb2f61802aef1ef437f734620",
+      "global_linear_solve": false,
+      "scope": "Earlier accepted virgin reference for own-geometry numerical mode only; not current plastic tangent, stability or critical-load proof; no dataset count",
+      "created_unix": 1792926325.4339004
     }
   ],
   "frozen_ccx_preparations": [
@@ -2501,24 +2576,19 @@
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
-        "time_unix": 1792922676.4041305,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
       "solver_status": {
         "phase": "numerical_mode_plane",
-        "pid": 19896,
-        "elapsed_seconds": 234.99438619613647,
+        "pid": 21927,
+        "elapsed_seconds": 58.43195819854736,
         "step": 7,
         "original_target": 0.8,
-        "numerical_load": 0.7157329493519662,
-        "amplitude_mm": -18.125,
-        "iteration": 5,
-        "free_residual_relative": 6.960015089878478e-10,
-        "numerical_constraint_mm": 3.552713678800501e-15
+        "numerical_load": 0.7004792653271017,
+        "amplitude_mm": -0.25,
+        "iteration": 0,
+        "free_residual_relative": 4.333383360553061,
+        "numerical_constraint_mm": -4.440892098500626e-16
       }
     },
     {
@@ -2878,16 +2948,21 @@
     },
     {
       "sample_id": "normal_rodv2_0135__compression_skew",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
+        "time_unix": 1792926223.213555,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
       "solver_status": {
         "phase": "newton",
         "pid": 21724,
-        "elapsed_seconds": 31.67758798599243,
-        "step": 3,
-        "load_factor": 0.4,
-        "iteration": 0,
-        "free_residual_relative": 0.2500000000001578
+        "elapsed_seconds": 146.89178490638733,
+        "step": 7,
+        "load_factor": 0.8,
+        "iteration": 28,
+        "free_residual_relative": 178.40591720015564
       }
     },
     {
@@ -2993,18 +3068,23 @@
     },
     {
       "sample_id": "normal_rodv2_0159__compression_skew",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792926256.667448,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
         "phase": "numerical_arc",
         "pid": 20774,
-        "elapsed_seconds": 1629.1223134994507,
+        "elapsed_seconds": 1776.5001480579376,
         "step": 9,
         "original_target": 1.0,
-        "numerical_load": 0.4749981606802582,
-        "arc_iteration": 15,
-        "free_residual_relative": 2.067787147236977e-09,
-        "arc_constraint": 1.6134267449277968e-18
+        "numerical_load": 0.4749913287133903,
+        "arc_iteration": 34,
+        "free_residual_relative": 2.0659795944913934e-09,
+        "arc_constraint": -1.2158857122586453e-16
       }
     },
     {
@@ -3869,7 +3949,7 @@
         "time_unix": 1792922676.4041305,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
@@ -3966,13 +4046,17 @@
       "started_unix": 1792924471.9735677,
       "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
       "method": "原CCX有界尾段／真切向弧长与交点细化",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 1.0,
-      "numerical_trial_load_factor": 0.4749981606802582,
-      "elapsed_seconds": 1629.1223134994507,
-      "last_relative_residual": 2.067787147236977e-09,
-      "failure": null,
+      "numerical_trial_load_factor": 0.4749913287133903,
+      "elapsed_seconds": 1776.5001480579376,
+      "last_relative_residual": 2.0659795944913934e-09,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792926256.667448,
+        "no_accepted_full_case": true
+      },
       "archived": false
     },
     {
@@ -4036,12 +4120,30 @@
       "started_unix": 1792926067.3504026,
       "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
       "method": "优先完整牛顿步／有限试探回溯",
-      "state": "running",
-      "last_accepted_load_factor": 0.3,
-      "attempted_load_factor": 0.4,
+      "state": "failed",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
       "numerical_trial_load_factor": null,
-      "elapsed_seconds": 31.67758798599243,
-      "last_relative_residual": 0.2500000000001578,
+      "elapsed_seconds": 146.89178490638733,
+      "last_relative_residual": 178.40591720015564,
+      "failure": {
+        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
+        "time_unix": 1792926223.213555,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "started_unix": 1792926332.0356507,
+      "solver_source_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+      "method": "独立有界CCX尾段／模态幅值数值分支",
+      "state": "running",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.7004792653271017,
+      "elapsed_seconds": 58.43195819854736,
+      "last_relative_residual": 4.333383360553061,
       "failure": null,
       "archived": false
     }
