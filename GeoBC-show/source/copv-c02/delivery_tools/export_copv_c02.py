@@ -56,9 +56,11 @@ def main():
     assert s['solver_sha256'] == digest(ROOT / 'fenicsx/solver_executed_snapshot.py')
     assert s['mesh_sha256'] == digest(ROOT / 'mesh_h6_netgen/mesh.npz')
     asset = SITE / 'assets/copv-c02'
+    for name in ['bc-loads.json','bc-load-surfaces.json.gz']:
+        copy(ROOT / 'visualization' / name, asset / name)
     for name in ['manifest.json', 'surface.json.gz', 'section.json.gz']:
         assert (asset / name).is_file(), name
-    for name in ['reference-01-U.jpg','reference-02-fiber-section.jpg','reference-03-metal-section.jpg']:
+    for name in ['reference-01-U.jpg','reference-02-fiber-section.jpg','reference-03-metal-section.jpg','reference-04-bc-loads.jpg']:
         if (ROOT / name).is_file(): copy(ROOT / name, asset / name)
 
     evidence = {'schema': 'copv-c02-evidence-v1', 'detailed_3D': s,
@@ -78,7 +80,7 @@ def main():
         'tools/mesh_copv_c02_partition.py', 'tools/prepare_copv_c02_surface.py',
         'tools/prepare_copv_c02_reference.py', 'tools/copv_fenicsx_axisymmetric.py',
         'tools/prepare_copv_c02_patch.py', 'tools/copv_fenicsx_patch.py',
-        'tools/export_copv_c02_viewer.py', 'configs/copv_c02_structural_v1.json',
+        'tools/export_copv_c02_viewer.py', 'tools/export_copv_c02_bc.py', 'configs/copv_c02_structural_v1.json',
         'configs/copv_material_candidates.json']
     for name in source_dependencies(seed): copy(REPO / name, bundle / name)
     for name in ['geobc', 'tools']: (bundle / name / '__init__.py').write_text('', encoding='utf-8')
@@ -88,7 +90,7 @@ def main():
         'reference/skfem/solution.json', 'patch/input.npz', 'patch/patch.inp',
         'patch/patch.dat', 'patch/fenicsx_review.json', 'patch/calculix_review.json',
         'fenicsx/summary.json', 'fenicsx/peak_algebra.json', 'fenicsx/linearity.json',
-        'fenicsx/load_unload_states.json', 'fenicsx/ksp_view.txt', 'fenicsx/petsc_options.json', 'fenicsx/residual_refinement.json', 'fenicsx/solver_executed_snapshot.py']:
+        'fenicsx/load_unload_states.json', 'fenicsx/ksp_view.txt', 'fenicsx/petsc_options.json', 'fenicsx/residual_refinement.json', 'fenicsx/solver_executed_snapshot.py', 'visualization/bc-loads.json']:
         copy(ROOT / name, bundle / 'evidence' / name)
     for name in ['compare_copv_c02_reference.py', 'export_copv_c02.py']:
         copy(WS / 'notes' / name, bundle / 'delivery_tools' / name)
@@ -117,6 +119,15 @@ python -m tools.mesh_copv_c02_partition --partition evidence/mesh/structural_par
 python -m tools.copv_fenicsx_structural --mesh mesh_h6_netgen/mesh.npz --review mesh_h6_netgen/mesh_review.json --contract configs/copv_c02_structural_v1.json --output fenicsx
 ```
 Set PETSC_OPTIONS='-use_gpu_aware_mpi 0', OPENBLAS_NUM_THREADS=4 and OMP_NUM_THREADS=4 for this single-rank run. The download includes the repaired partition, source and small verification evidence; the volume mesh and large raw GP arrays are generated locally, not embedded in the website download. The exact executed solver is retained in evidence/fenicsx/solver_executed_snapshot.py and matches solver_sha256. The delivered tools/copv_fenicsx_structural.py only corrects a stale displacement-description string in report metadata; numerical code and saved fields are unchanged. CLI help on the reference and patch scripts gives their independent reproduction steps.
+
+The live viewer has independent boundary-condition and load visibility buttons. A/B/C mark the actual saved lower-port nodes: A locks Ux/Uy/Uz, B locks Uy/Uz, C locks Uz in global coordinates. This is a numerical 3-2-1 gauge, not a fixed end face, wall or hinge. Orange highlights all 57,544 selected wetted facets; direction arrows are a 28-facet sample. Magenta highlights the actual annular end faces and displays the two equivalent cap resultants. Markers are shown through the model and follow the displayed displacement; arrow lengths are schematic. Loads and gauge reactions scale with the selected elastic state, and zero load has no force arrows. Visibility buttons do not change the solved boundary conditions. No FEM calculation was rerun for this display addition.
+
+Re-export these locations after the mesh/solution commands above:
+```
+python -m tools.prepare_copv_c02_surface --mesh mesh_h6_netgen/mesh.npz --output surface
+python -m tools.export_copv_c02_bc --root . --output visualization
+```
+The export verifies the mesh hash, six saved constraint components, selected facet counts and the integrated pressure/cap resultant against the accepted C02 evidence.
 '''
     (bundle / 'README.md').write_text(readme, encoding='utf-8')
     hashes = {str(p.relative_to(bundle)).replace('\\','/'): digest(p) for p in bundle.rglob('*') if p.is_file() and p.name != 'SHA256.json'}
@@ -126,7 +137,7 @@ Set PETSC_OPTIONS='-use_gpu_aware_mpi 0', OPENBLAS_NUM_THREADS=4 and OMP_NUM_THR
         for p in bundle.rglob('*'):
             if p.is_file(): z.write(p, p.relative_to(bundle))
 
-    summary = f"C02 已完成：详细装配的 12 个承力分区，P1 位移、{s['dofs']:,} 自由度；1 MPa 内压与闭口端合力，峰值位移 {s['max_U_mm']:.4f} mm。采用完整三维正交各向异性铺层，可查看位移、金属应力、纤维应力及剖面，源码与核对记录可复现。"
+    summary = f"C02 已完成：详细装配的 12 个承力分区，P1 位移、{s['dofs']:,} 自由度；1 MPa 内压与闭口端合力，峰值位移 {s['max_U_mm']:.4f} mm。支持位移/应力剖面，以及边界条件和载荷的独立显示开关；源码与核对记录可复现。"
     review = f"参考 R02 的材料/载荷合同及原始场核对方法：独立轴对称模型位移差 {ref['U_relative_L2']:.3e}、原始 GP 应力差 {ref['raw_GP_stress_volume_weighted_relative_Frobenius']:.3e}；另有 CalculiX 三维旋转铺层补丁核对。详细模型真残差 {s['true_relative_residual']:.3e}。CPU 组装，CUDA FGMRES/GAMG，最粗层为小型 CPU SVD；理想粘结、直边几何及 P1 弹性基准的范围见详情，网格及 P1/P2 收敛留给 C03。"
     links = [{'label': a, 'url': b} for a,b in [
         ('三维结果与剖面', 'viewers/copv-c02.html'), ('核对指标与计算范围', 'data/copv-c02-review.json'),
@@ -148,9 +159,12 @@ Set PETSC_OPTIONS='-use_gpu_aware_mpi 0', OPENBLAS_NUM_THREADS=4 and OMP_NUM_THR
     title = 'C02：详细 COPV 三维正交各向异性 GPU 求解与独立核对'
     if not any(u['task']=='C02' and u['title']==title for u in updates['updates']):
         updates['updates'].append(dict(task='C02', date=stamp.strftime('%Y-%m-%d'), title=title, summary=summary, review=review, links=links))
+    bc_title='C02：新增实际边界条件与载荷显示开关'
+    if not any(u['task']=='C02' and u['title']==bc_title for u in updates['updates']):
+        updates['updates'].append(dict(task='C02',date=stamp.strftime('%Y-%m-%d'),title=bc_title,summary='三点 3–2–1 约束、完整受压面、压力方向采样与上下端口等效合力可独立显示，随状态更新数值。',review='位置取自已执行网格和保存的实际约束 DOF；墙面/铰链未设置。显示开关不改变求解工况，未重跑 FE。',links=[dict(label='打开三维结果',url='viewers/copv-c02.html'),dict(label='边界与载荷位置数据',url='assets/copv-c02/bc-loads.json')]))
     write(SITE / 'data/updates.json', updates)
 
-    body = f'''<section id="copv-c02-method"><h2>材料、载荷与求解范围</h2>
+    body = f'''<section id="copv-c02-method"><h2>边界条件 / 载荷可视化</h2><p>在查看器打开“边界条件”可显示下端 A/B/C 三点及各自锁定的全局位移分量；打开“载荷”可透视高亮真实受压面与环形端面，并显示压力方向及上下端合力。可配合剖面查看。箭头长度仅示意方向，载荷数值随状态变化；显示开关不改变求解工况。本例没有墙面或铰链支承。<a href="assets/copv-c02/bc-loads.json">实际节点、分量与载荷数据</a> · <a href="assets/copv-c02/reference-04-bc-loads.jpg">BC 与载荷参考图</a>。</p><h2>材料、载荷与求解范围</h2>
 <p>计算 12 个承力实体：Al 6061-T6 内衬、环氧粘接层、四个碳纤维/环氧铺层分组、两个极区补强、Ti-6Al-4V boss 与 316L 接口套。六个密封/挡圈实体只在 C01 构造中展示。承力界面为共享网格的理想粘结。</p>
 <p>单位 mm–N–MPa；内压 1 MPa 是代码基准。内湿壁与端口内肩承受压力，上下端口另各施加一次 pπr² 闭口端合力，分别 326.8513 N 和 213.8246 N。三点 3–2–1 约束只去除六个刚体模态。解析圆孔端面积与直边网格之间保留 0.181476 N 的轴向余量，约为 pπR² 的 5.777×10⁻⁶，由数值定位约束反力平衡；这不是实际安装反力。离散端面积闭合属于 C03 的检查项。</p>
 <p>AS4/3501-6 使用完整九个三维弹性常数，按原始积分点的局部纤维/横向/法向基旋转；铺层角从内到外为 +55/−55/−55/+55°，上下极区为 +25/−25°。这是研究用方向场。碳材料与 Al 弹性参数引用 NASA 文献；Ti 的 E 沿用 R02，ν=0.28 为建模假设；钢 E=200 GPa 引用材料表，ν=0.30 为假设；胶层 E=3 GPa、ν=0.35 均为数值假设。完整数值与来源见材料合同。</p>
@@ -163,7 +177,7 @@ Set PETSC_OPTIONS='-use_gpu_aware_mpi 0', OPENBLAS_NUM_THREADS=4 and OMP_NUM_THR
 </tbody></table><p>上述 CalculiX 与 skfem 核对属于两个明确的验证试件，没有声称完成另一套详细装配全规模 CalculiX 计算。详细三维模型峰值解耗时 {s['peak_solve_seconds']:.1f} 秒，本次通过的运行共 {s['total_seconds']:.1f} 秒；不包含此前被拒绝的构造、网格和预条件器尝试。</p>
 <h2>场与载卸载状态如何解释</h2><p>原始单元/积分点的全局及局部应力、位置和积分权重以 float64 保存在本地。网页应力色为各单元原始 GP 的体积加权均值，不跨材料或铺层平均；切面位移在 FE 域中按 P1 插值。金属显示 von Mises，复合层显示纤维方向应力。</p><p>详细模型的 20 个状态按线弹性解精确比例生成，另从零初值独立求解半载与零载验证；小型轴对称参考模型实际执行了 20 次求解。这些结果不表示塑性回线、密封压缩、接触开闭、损伤或爆破强度。局部应力峰值及网格/几何/P1-P2 收敛由 C03 处理。</p><p>少量参考视图：<a href="assets/copv-c02/reference-01-U.jpg">位移全景</a> · <a href="assets/copv-c02/reference-02-fiber-section.jpg">纤维应力剖面</a> · <a href="assets/copv-c02/reference-03-metal-section.jpg">金属应力剖面</a>。</p></section>'''
     page = (SITE / 'C02.html').read_text(encoding='utf-8')
-    stage = '<section class="delivery-stage" aria-label="可视化交付物"><iframe src="viewers/copv-c02.html" title="COPV 三维位移与材料应力" loading="eager" style="width:100%;border:0"></iframe></section>'
+    stage = '<section class="delivery-stage" aria-label="可视化交付物"><iframe src="viewers/copv-c02.html?v=c02-bc-1" title="COPV 三维位移、边界条件与载荷" loading="eager" style="width:100%;border:0"></iframe></section>'
     page = re.sub(r'<section class="delivery-stage".*?</section>', lambda _:stage, page, count=1, flags=re.S)
     for key,value in [('public-summary',summary),('public-review',review),('task-issues',t['issues'])]:
         page = re.sub(f'(<p id="{key}">).*?(</p>)', lambda m:m[1]+html.escape(value)+m[2], page, count=1)

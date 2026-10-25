@@ -22,3 +22,12 @@ python -m tools.mesh_copv_c02_partition --partition evidence/mesh/structural_par
 python -m tools.copv_fenicsx_structural --mesh mesh_h6_netgen/mesh.npz --review mesh_h6_netgen/mesh_review.json --contract configs/copv_c02_structural_v1.json --output fenicsx
 ```
 Set PETSC_OPTIONS='-use_gpu_aware_mpi 0', OPENBLAS_NUM_THREADS=4 and OMP_NUM_THREADS=4 for this single-rank run. The download includes the repaired partition, source and small verification evidence; the volume mesh and large raw GP arrays are generated locally, not embedded in the website download. The exact executed solver is retained in evidence/fenicsx/solver_executed_snapshot.py and matches solver_sha256. The delivered tools/copv_fenicsx_structural.py only corrects a stale displacement-description string in report metadata; numerical code and saved fields are unchanged. CLI help on the reference and patch scripts gives their independent reproduction steps.
+
+The live viewer has independent boundary-condition and load visibility buttons. A/B/C mark the actual saved lower-port nodes: A locks Ux/Uy/Uz, B locks Uy/Uz, C locks Uz in global coordinates. This is a numerical 3-2-1 gauge, not a fixed end face, wall or hinge. Orange highlights all 57,544 selected wetted facets; direction arrows are a 28-facet sample. Magenta highlights the actual annular end faces and displays the two equivalent cap resultants. Markers are shown through the model and follow the displayed displacement; arrow lengths are schematic. Loads and gauge reactions scale with the selected elastic state, and zero load has no force arrows. Visibility buttons do not change the solved boundary conditions. No FEM calculation was rerun for this display addition.
+
+Re-export these locations after the mesh/solution commands above:
+```
+python -m tools.prepare_copv_c02_surface --mesh mesh_h6_netgen/mesh.npz --output surface
+python -m tools.export_copv_c02_bc --root . --output visualization
+```
+The export verifies the mesh hash, six saved constraint components, selected facet counts and the integrated pressure/cap resultant against the accepted C02 evidence.

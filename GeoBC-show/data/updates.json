@@ -279,6 +279,23 @@
           "url": "data/copv-c02-load-states.json"
         }
       ]
+    },
+    {
+      "task": "C02",
+      "date": "2026-10-25",
+      "title": "C02：新增实际边界条件与载荷显示开关",
+      "summary": "三点 3–2–1 约束、完整受压面、压力方向采样与上下端口等效合力可独立显示，随状态更新数值。",
+      "review": "位置取自已执行网格和保存的实际约束 DOF；墙面/铰链未设置。显示开关不改变求解工况，未重跑 FE。",
+      "links": [
+        {
+          "label": "打开三维结果",
+          "url": "viewers/copv-c02.html"
+        },
+        {
+          "label": "边界与载荷位置数据",
+          "url": "assets/copv-c02/bc-loads.json"
+        }
+      ]
     }
   ]
 }
