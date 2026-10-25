@@ -174,6 +174,20 @@
           "url": "data/r04-sample-manifest.csv"
         }
       ]
+    },
+    {
+      "id": "R05-recovery-comparison-20261025",
+      "date": "2026-10-25",
+      "task": "R05",
+      "title": "失败原因对照与千例有效结果恢复",
+      "summary": "原队列中断后恢复。保留成功结果与全部失败记录，建立GPU求解＋CPU直接恢复双队列；目标为1000个有效结果。",
+      "review": "0032相同网格/载荷/本构下CPU直接解完成10个状态，原CG及FGMRES未收敛。资源不足不再消耗未启动样本；对照细节随R05更新。",
+      "links": [
+        {
+          "label": "R05求解与对照",
+          "url": "R05.html#r05-validation"
+        }
+      ]
     }
   ]
 }
