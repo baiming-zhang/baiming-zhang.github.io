@@ -1,0 +1,1008 @@
+{
+  "task": "R04",
+  "reference_geometry": "rodv2_0006",
+  "load_scenarios": [
+    {
+      "id": "rated_firing_compression",
+      "label": "额定爆发压缩",
+      "scenario": {
+        "id": "rated_firing_compression",
+        "theta_deg": 30,
+        "net_pressure_MPa": 4,
+        "rpm": 3000,
+        "width_skew": 0
+      },
+      "small_pin_force_kN": [
+        18.471562898888727,
+        0.07785337142035217
+      ],
+      "body_force_kN": [
+        -1.5939550447218769,
+        -0.7801471706511448
+      ],
+      "support_reaction_resultant_kN": [
+        -16.877607854166854,
+        0.7022937992307927
+      ],
+      "pin_pressure_coefficient_MPa": 37.24041952469647,
+      "body_moment_about_big_center_Nmm": [
+        -8.949841507569639e-05,
+        0.0001036955477351359,
+        15990.44738538843
+      ],
+      "force_source_sha256": "51a945bcd0946f1eead7f4254a357246862c5ce9ebdb36394966451428541597",
+      "image": "assets/r04-loads/rated_firing_compression.png"
+    },
+    {
+      "id": "rated_inertial_tension",
+      "label": "额定惯性拉伸",
+      "scenario": {
+        "id": "rated_inertial_tension",
+        "theta_deg": 360,
+        "net_pressure_MPa": 0,
+        "rpm": 6000,
+        "width_skew": 0
+      },
+      "small_pin_force_kN": [
+        -8.490028977466626,
+        4.6370596637851863e-08
+      ],
+      "body_force_kN": [
+        -7.872802525293169,
+        9.030661485714307e-09
+      ],
+      "support_reaction_resultant_kN": [
+        16.362831502759796,
+        -5.540125812356617e-08
+      ],
+      "pin_pressure_coefficient_MPa": 17.1165983137344,
+      "body_moment_about_big_center_Nmm": [
+        8.836584254172386e-05,
+        0.0007829934473087552,
+        0.009524142272055836
+      ],
+      "force_source_sha256": "04063713ab43168703d99e5635502b2b916fcdf106810171514e57eeedf98aeb",
+      "image": "assets/r04-loads/rated_inertial_tension.png"
+    },
+    {
+      "id": "combined_bending",
+      "label": "组合弯曲",
+      "scenario": {
+        "id": "combined_bending",
+        "theta_deg": 60,
+        "net_pressure_MPa": 1.5,
+        "rpm": 4500,
+        "width_skew": 0.3
+      },
+      "small_pin_force_kN": [
+        5.986387110810184,
+        0.17609344523593312
+      ],
+      "body_force_kN": [
+        -1.5118656232851795,
+        -2.714879139910906
+      ],
+      "support_reaction_resultant_kN": [
+        -4.474521487525004,
+        2.5387856946749725
+      ],
+      "pin_pressure_coefficient_MPa": 12.074232667831055,
+      "body_moment_about_big_center_Nmm": [
+        -0.00037001908454393356,
+        -6.982867125598577e-05,
+        36168.15713417989
+      ],
+      "force_source_sha256": "b65bc3ace3d2c59dbf9bb0ba01446956aeeecd3a283c1fab2324cb2d6e9b9d31",
+      "image": "assets/r04-loads/combined_bending.png"
+    },
+    {
+      "id": "overpressure",
+      "label": "超压",
+      "scenario": {
+        "id": "overpressure",
+        "theta_deg": 15,
+        "net_pressure_MPa": 6,
+        "rpm": 4500,
+        "width_skew": 0
+      },
+      "small_pin_force_kN": [
+        25.64888664874162,
+        0.10213369932622564
+      ],
+      "body_force_kN": [
+        -4.210016938562097,
+        -0.9369326550239708
+      ],
+      "support_reaction_resultant_kN": [
+        -21.43886971017952,
+        0.8347989556977452
+      ],
+      "pin_pressure_coefficient_MPa": 51.71053425882921,
+      "body_moment_about_big_center_Nmm": [
+        -7.988228724672974e-05,
+        0.0003552529760959197,
+        20977.42866565386
+      ],
+      "force_source_sha256": "9c3d9768a94c71715c07096194945fb169cc8caf477dcdea641c3a61757c33f7",
+      "image": "assets/r04-loads/overpressure.png"
+    },
+    {
+      "id": "overspeed",
+      "label": "超速",
+      "scenario": {
+        "id": "overspeed",
+        "theta_deg": 360,
+        "net_pressure_MPa": 0,
+        "rpm": 9000,
+        "width_skew": 0
+      },
+      "small_pin_force_kN": [
+        -19.10256519929991,
+        1.0433384248643864e-07
+      ],
+      "body_force_kN": [
+        -17.713805681909612,
+        2.031898841900221e-08
+      ],
+      "support_reaction_resultant_kN": [
+        36.81637088120953,
+        -1.2465283090544086e-07
+      ],
+      "pin_pressure_coefficient_MPa": 38.51234620590241,
+      "body_moment_about_big_center_Nmm": [
+        0.00019882314572308973,
+        0.0017617352608041426,
+        0.02142932012265647
+      ],
+      "force_source_sha256": "0a497c0f1ed81922e0a12638af00b3c8d8513e5df843f2a82de87a2084f07e19",
+      "image": "assets/r04-loads/overspeed.png"
+    }
+  ],
+  "overpressure_failures": [
+    {
+      "case_id": "rodv2_0004",
+      "reason": -10,
+      "failed_load_factor": 0.8,
+      "failed_newton_iteration": 1,
+      "accepted_states": 7,
+      "last_accepted_factor": 0.7,
+      "last_accepted_VM_MPa": 265.0524701532417,
+      "last_accepted_min_J": 0.9984160706748684,
+      "free_residual_before_failed_linear": 0.00011029351504648435,
+      "ksp_iterations": 399,
+      "failed_linear_residual": 3.9680359635345126,
+      "failed_linear_target": 0.00016655085045466997,
+      "last_schur_condition": 1.000000264145365,
+      "min_surface_SICN": 0.05235400892466544,
+      "min_volume_SICN": 0.05749708906876764,
+      "geometry_sha256": "3b40a1931caf928f151999de74c9d8c0901eb1bdfbe5b1fa8dc92504ee3b1098",
+      "last_history": [
+        {
+          "step": 0,
+          "load_factor": 0.1,
+          "iterations": 2,
+          "min_J": 0.9997738032244872,
+          "max_von_Mises_MPa": 37.88573439644233,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.8727597516074311e-07,
+          "mean_constraint_mm": [
+            4.170244126853565e-21,
+            -7.950266523155332e-23
+          ],
+          "elapsed_seconds": 33.43182873725891
+        },
+        {
+          "step": 1,
+          "load_factor": 0.2,
+          "iterations": 2,
+          "min_J": 0.999547580315319,
+          "max_von_Mises_MPa": 75.76464724659762,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9298291397507048e-07,
+          "mean_constraint_mm": [
+            -1.0082941295701387e-20,
+            -2.931265375911382e-22
+          ],
+          "elapsed_seconds": 65.33512115478516
+        },
+        {
+          "step": 2,
+          "load_factor": 0.3,
+          "iterations": 2,
+          "min_J": 0.9993213306256055,
+          "max_von_Mises_MPa": 113.63663001840379,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.8918088814746938e-07,
+          "mean_constraint_mm": [
+            -1.0081048096687948e-20,
+            1.0746567162334103e-21
+          ],
+          "elapsed_seconds": 97.94681191444397
+        },
+        {
+          "step": 3,
+          "load_factor": 0.4,
+          "iterations": 2,
+          "min_J": 0.9990950555770003,
+          "max_von_Mises_MPa": 151.50156967037893,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9708202385875204e-07,
+          "mean_constraint_mm": [
+            2.983397665328426e-20,
+            -1.0738131866288315e-21
+          ],
+          "elapsed_seconds": 130.61289954185486
+        },
+        {
+          "step": 4,
+          "load_factor": 0.5,
+          "iterations": 2,
+          "min_J": 0.998868754251785,
+          "max_von_Mises_MPa": 189.35926005754737,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9425148090266793e-07,
+          "mean_constraint_mm": [
+            -3.052783409170979e-21,
+            3.7790126285130913e-22
+          ],
+          "elapsed_seconds": 161.39730215072632
+        },
+        {
+          "step": 5,
+          "load_factor": 0.6,
+          "iterations": 2,
+          "min_J": 0.9986424247311019,
+          "max_von_Mises_MPa": 227.20965013601776,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9648740671141847e-07,
+          "mean_constraint_mm": [
+            -4.396954708712929e-22,
+            5.744436607181731e-22
+          ],
+          "elapsed_seconds": 189.7150011062622
+        },
+        {
+          "step": 6,
+          "load_factor": 0.7,
+          "iterations": 2,
+          "min_J": 0.9984160706748684,
+          "max_von_Mises_MPa": 265.0524701532417,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.930805632534208e-07,
+          "mean_constraint_mm": [
+            -2.842448998777865e-20,
+            1.2652944068682225e-21
+          ],
+          "elapsed_seconds": 218.23766946792603
+        }
+      ]
+    },
+    {
+      "case_id": "rodv2_0014",
+      "reason": -10,
+      "failed_load_factor": 0.8,
+      "failed_newton_iteration": 1,
+      "accepted_states": 7,
+      "last_accepted_factor": 0.7,
+      "last_accepted_VM_MPa": 272.65473022758823,
+      "last_accepted_min_J": 0.9983931512394827,
+      "free_residual_before_failed_linear": 0.00019684616744789242,
+      "ksp_iterations": 354,
+      "failed_linear_residual": 2.6639663617602407,
+      "failed_linear_target": 0.00016464993159852594,
+      "last_schur_condition": 1.000000489118559,
+      "min_surface_SICN": 0.08731260978957783,
+      "min_volume_SICN": 0.10183964631472782,
+      "geometry_sha256": "fc262271deb50146f1bf625800a723a23f7247290ac134da1a7875fa5f4770cb",
+      "last_history": [
+        {
+          "step": 0,
+          "load_factor": 0.1,
+          "iterations": 2,
+          "min_J": 0.9997706455966886,
+          "max_von_Mises_MPa": 38.94955906935848,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9859818133588455e-07,
+          "mean_constraint_mm": [
+            6.294204121166938e-22,
+            3.0494665193263565e-22
+          ],
+          "elapsed_seconds": 30.470725536346436
+        },
+        {
+          "step": 1,
+          "load_factor": 0.2,
+          "iterations": 2,
+          "min_J": 0.9995412262253305,
+          "max_von_Mises_MPa": 77.8994598949335,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9445437055511288e-07,
+          "mean_constraint_mm": [
+            2.4253362111388927e-22,
+            -4.679457499084626e-22
+          ],
+          "elapsed_seconds": 59.72874355316162
+        },
+        {
+          "step": 2,
+          "load_factor": 0.3,
+          "iterations": 2,
+          "min_J": 0.9993117418277184,
+          "max_von_Mises_MPa": 116.84971119716849,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.8297392117643785e-07,
+          "mean_constraint_mm": [
+            7.807079463470801e-22,
+            6.351551566880932e-22
+          ],
+          "elapsed_seconds": 89.0524685382843
+        },
+        {
+          "step": 3,
+          "load_factor": 0.4,
+          "iterations": 2,
+          "min_J": 0.999082192453898,
+          "max_von_Mises_MPa": 155.80030079067896,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9618031254714537e-07,
+          "mean_constraint_mm": [
+            -2.1635216745389618e-20,
+            -7.1575249664662015e-22
+          ],
+          "elapsed_seconds": 118.53214764595032
+        },
+        {
+          "step": 4,
+          "load_factor": 0.5,
+          "iterations": 2,
+          "min_J": 0.998852578011587,
+          "max_von_Mises_MPa": 194.7512431071663,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.8080408650132585e-07,
+          "mean_constraint_mm": [
+            -2.221093811656931e-20,
+            -2.67775639921912e-21
+          ],
+          "elapsed_seconds": 144.69693899154663
+        },
+        {
+          "step": 5,
+          "load_factor": 0.6,
+          "iterations": 2,
+          "min_J": 0.9986228985035951,
+          "max_von_Mises_MPa": 233.7025674358792,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9679715969747558e-07,
+          "mean_constraint_mm": [
+            3.425237723011496e-21,
+            4.811781490061312e-22
+          ],
+          "elapsed_seconds": 172.69859719276428
+        },
+        {
+          "step": 6,
+          "load_factor": 0.7,
+          "iterations": 2,
+          "min_J": 0.9983931512394827,
+          "max_von_Mises_MPa": 272.65473022758823,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.7935182461861521e-07,
+          "mean_constraint_mm": [
+            2.1934916589611244e-20,
+            -1.8429123106934826e-21
+          ],
+          "elapsed_seconds": 200.92603158950806
+        }
+      ]
+    },
+    {
+      "case_id": "rodv2_0001",
+      "reason": -10,
+      "failed_load_factor": 0.7,
+      "failed_newton_iteration": 1,
+      "accepted_states": 6,
+      "last_accepted_factor": 0.6,
+      "last_accepted_VM_MPa": 317.7365567749336,
+      "last_accepted_min_J": 0.9981467070551755,
+      "free_residual_before_failed_linear": 0.00032208195695431375,
+      "ksp_iterations": 513,
+      "failed_linear_residual": 0.928854376456487,
+      "failed_linear_target": 0.00012638877604221376,
+      "last_schur_condition": 1.0000006085752582,
+      "min_surface_SICN": 0.11321473658468581,
+      "min_volume_SICN": 0.11065318574962868,
+      "geometry_sha256": "766a54db6a7688c2405a337e885fc165b908f3d289a8e8494cc8043f1701feca",
+      "last_history": [
+        {
+          "step": 0,
+          "load_factor": 0.1,
+          "iterations": 2,
+          "min_J": 0.9996913652012044,
+          "max_von_Mises_MPa": 52.93483581379408,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.87371951591016e-07,
+          "mean_constraint_mm": [
+            3.994413143795037e-22,
+            -4.336165817674026e-22
+          ],
+          "elapsed_seconds": 55.70379829406738
+        },
+        {
+          "step": 1,
+          "load_factor": 0.2,
+          "iterations": 2,
+          "min_J": 0.9993826313641612,
+          "max_von_Mises_MPa": 105.8781181377401,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.859850461086353e-07,
+          "mean_constraint_mm": [
+            -3.849161756747945e-21,
+            1.1241911379154881e-21
+          ],
+          "elapsed_seconds": 108.44951105117798
+        },
+        {
+          "step": 2,
+          "load_factor": 0.3,
+          "iterations": 2,
+          "min_J": 0.9990737985400434,
+          "max_von_Mises_MPa": 158.8298836982472,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.911381672552763e-07,
+          "mean_constraint_mm": [
+            -6.75418949768979e-21,
+            1.6059873398792688e-21
+          ],
+          "elapsed_seconds": 159.19668650627136
+        },
+        {
+          "step": 3,
+          "load_factor": 0.4,
+          "iterations": 2,
+          "min_J": 0.9987648667266715,
+          "max_von_Mises_MPa": 211.79020024202876,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.7361602326479768e-07,
+          "mean_constraint_mm": [
+            1.0603351254437735e-20,
+            2.248382275830976e-22
+          ],
+          "elapsed_seconds": 206.3041067123413
+        },
+        {
+          "step": 4,
+          "load_factor": 0.5,
+          "iterations": 2,
+          "min_J": 0.9984558360167101,
+          "max_von_Mises_MPa": 264.7591026785279,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.8552687050602685e-07,
+          "mean_constraint_mm": [
+            2.1061451121828376e-21,
+            -1.284789871903415e-22
+          ],
+          "elapsed_seconds": 254.90841674804688
+        },
+        {
+          "step": 5,
+          "load_factor": 0.6,
+          "iterations": 2,
+          "min_J": 0.9981467070551755,
+          "max_von_Mises_MPa": 317.7365567749336,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.955402311391483e-07,
+          "mean_constraint_mm": [
+            6.536312417119152e-21,
+            -5.7815544235653675e-21
+          ],
+          "elapsed_seconds": 304.62803387641907
+        }
+      ]
+    },
+    {
+      "case_id": "rodv2_0006",
+      "reason": -10,
+      "failed_load_factor": 0.4,
+      "failed_newton_iteration": 2,
+      "accepted_states": 3,
+      "last_accepted_factor": 0.3,
+      "last_accepted_VM_MPa": 121.97252126759903,
+      "last_accepted_min_J": 0.9992766433360791,
+      "free_residual_before_failed_linear": 2.2317044760328398e-07,
+      "ksp_iterations": 220,
+      "failed_linear_residual": 0.3285153218814551,
+      "failed_linear_target": 0.0001060497416267338,
+      "last_schur_condition": 1.0000012051505498,
+      "min_surface_SICN": 0.09076915604245489,
+      "min_volume_SICN": 0.08315196100637984,
+      "geometry_sha256": "34d0c4edb199a9f2c75832fe24b9e5ad532029e48e8f290b2f745ca8c29d4e1c",
+      "last_history": [
+        {
+          "step": 0,
+          "load_factor": 0.1,
+          "iterations": 3,
+          "min_J": 0.9997585953648827,
+          "max_von_Mises_MPa": 40.64305509020434,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9665020157239495e-07,
+          "mean_constraint_mm": [
+            2.4086723844184916e-21,
+            -2.7005987797465995e-22
+          ],
+          "elapsed_seconds": 45.04272651672363
+        },
+        {
+          "step": 1,
+          "load_factor": 0.2,
+          "iterations": 3,
+          "min_J": 0.9995174739684672,
+          "max_von_Mises_MPa": 81.30050885100266,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.976054683133181e-07,
+          "mean_constraint_mm": [
+            3.560445390426773e-21,
+            2.2069166989748924e-22
+          ],
+          "elapsed_seconds": 88.23596787452698
+        },
+        {
+          "step": 2,
+          "load_factor": 0.3,
+          "iterations": 3,
+          "min_J": 0.9992766433360791,
+          "max_von_Mises_MPa": 121.97252126759903,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.764392062219228e-07,
+          "mean_constraint_mm": [
+            2.6702066748086888e-21,
+            -7.813251561437157e-22
+          ],
+          "elapsed_seconds": 134.60994410514832
+        }
+      ]
+    },
+    {
+      "case_id": "rodv2_0011",
+      "reason": -10,
+      "failed_load_factor": 0.6,
+      "failed_newton_iteration": 1,
+      "accepted_states": 5,
+      "last_accepted_factor": 0.5,
+      "last_accepted_VM_MPa": 200.11265255727977,
+      "last_accepted_min_J": 0.9988171783713772,
+      "free_residual_before_failed_linear": 0.00021179856537247238,
+      "ksp_iterations": 412,
+      "failed_linear_residual": 6.571237020876294,
+      "failed_linear_target": 0.00015294242501014038,
+      "last_schur_condition": 1.000000625603032,
+      "min_surface_SICN": 0.09765277073848416,
+      "min_volume_SICN": 0.07909816059027573,
+      "geometry_sha256": "0794d9a8a5368ba2b5201cc4f0248c18170c5dbf800845a9c67e1f56ee37c252",
+      "last_history": [
+        {
+          "step": 0,
+          "load_factor": 0.1,
+          "iterations": 2,
+          "min_J": 0.999763448630363,
+          "max_von_Mises_MPa": 40.00455258736548,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.956335532659804e-07,
+          "mean_constraint_mm": [
+            4.417536531903065e-21,
+            1.1773514795922595e-22
+          ],
+          "elapsed_seconds": 37.83093214035034
+        },
+        {
+          "step": 1,
+          "load_factor": 0.2,
+          "iterations": 2,
+          "min_J": 0.9995268939287656,
+          "max_von_Mises_MPa": 80.01804024652118,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.6620598445015232e-07,
+          "mean_constraint_mm": [
+            -6.085272500207584e-21,
+            1.8662907096403438e-23
+          ],
+          "elapsed_seconds": 72.15655136108398
+        },
+        {
+          "step": 2,
+          "load_factor": 0.3,
+          "iterations": 2,
+          "min_J": 0.9992903329539894,
+          "max_von_Mises_MPa": 120.040508558272,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9050240042972416e-07,
+          "mean_constraint_mm": [
+            1.057700263922292e-20,
+            -2.6485444751704455e-22
+          ],
+          "elapsed_seconds": 106.29070448875427
+        },
+        {
+          "step": 3,
+          "load_factor": 0.4,
+          "iterations": 2,
+          "min_J": 0.9990537620724307,
+          "max_von_Mises_MPa": 160.07202949001484,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9704426418595315e-07,
+          "mean_constraint_mm": [
+            -1.763226716253536e-20,
+            -9.0415828635129e-22
+          ],
+          "elapsed_seconds": 140.54288578033447
+        },
+        {
+          "step": 4,
+          "load_factor": 0.5,
+          "iterations": 2,
+          "min_J": 0.9988171783713772,
+          "max_von_Mises_MPa": 200.11265255727977,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.989275685273609e-07,
+          "mean_constraint_mm": [
+            -9.075755337480574e-21,
+            -7.890041787351837e-22
+          ],
+          "elapsed_seconds": 173.99720239639282
+        }
+      ]
+    },
+    {
+      "case_id": "rodv2_0018",
+      "reason": -10,
+      "failed_load_factor": 0.7,
+      "failed_newton_iteration": 1,
+      "accepted_states": 6,
+      "last_accepted_factor": 0.6,
+      "last_accepted_VM_MPa": 262.06688238452375,
+      "last_accepted_min_J": 0.9980521770419157,
+      "free_residual_before_failed_linear": 0.0003946529009552133,
+      "ksp_iterations": 436,
+      "failed_linear_residual": 27.213206235508974,
+      "failed_linear_target": 0.00020414853878062867,
+      "last_schur_condition": 1.0000008218959178,
+      "min_surface_SICN": 0.08785296038270889,
+      "min_volume_SICN": 0.06619155974042298,
+      "geometry_sha256": "d85d4216f8e75a3f9a103628613207d6026e4e6f55caad35a799281484c1d29d",
+      "last_history": [
+        {
+          "step": 0,
+          "load_factor": 0.1,
+          "iterations": 3,
+          "min_J": 0.999675571753045,
+          "max_von_Mises_MPa": 43.63728921784213,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9603929714499128e-07,
+          "mean_constraint_mm": [
+            1.6246808960112012e-22,
+            -3.3516399235794446e-22
+          ],
+          "elapsed_seconds": 39.21232008934021
+        },
+        {
+          "step": 1,
+          "load_factor": 0.2,
+          "iterations": 3,
+          "min_J": 0.9993510570341774,
+          "max_von_Mises_MPa": 87.2903987701543,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.933417262870282e-07,
+          "mean_constraint_mm": [
+            3.0476457931356185e-21,
+            4.604703125498439e-22
+          ],
+          "elapsed_seconds": 78.25227332115173
+        },
+        {
+          "step": 2,
+          "load_factor": 0.3,
+          "iterations": 3,
+          "min_J": 0.9990264572749243,
+          "max_von_Mises_MPa": 130.95949334010461,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.994951344731727e-07,
+          "mean_constraint_mm": [
+            -4.293995098474548e-21,
+            -1.4720451207009538e-22
+          ],
+          "elapsed_seconds": 114.90566754341125
+        },
+        {
+          "step": 3,
+          "load_factor": 0.4,
+          "iterations": 3,
+          "min_J": 0.9987017742455307,
+          "max_von_Mises_MPa": 174.6448024947606,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.8389618551630613e-07,
+          "mean_constraint_mm": [
+            7.35031194133607e-21,
+            1.0462469452915871e-22
+          ],
+          "elapsed_seconds": 150.30070853233337
+        },
+        {
+          "step": 4,
+          "load_factor": 0.5,
+          "iterations": 3,
+          "min_J": 0.9983770103082575,
+          "max_von_Mises_MPa": 218.3466954023209,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.7546747952635203e-07,
+          "mean_constraint_mm": [
+            -1.8987545230054504e-20,
+            6.245039906004046e-23
+          ],
+          "elapsed_seconds": 185.54398465156555
+        },
+        {
+          "step": 5,
+          "load_factor": 0.6,
+          "iterations": 3,
+          "min_J": 0.9980521770419157,
+          "max_von_Mises_MPa": 262.06688238452375,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9040103016033973e-07,
+          "mean_constraint_mm": [
+            9.36336459086006e-21,
+            1.7534774385429546e-21
+          ],
+          "elapsed_seconds": 222.0393524169922
+        }
+      ]
+    },
+    {
+      "case_id": "rodv2_0017",
+      "reason": -10,
+      "failed_load_factor": 0.3,
+      "failed_newton_iteration": 1,
+      "accepted_states": 2,
+      "last_accepted_factor": 0.2,
+      "last_accepted_VM_MPa": 67.97912626367771,
+      "last_accepted_min_J": 0.9996161144791972,
+      "free_residual_before_failed_linear": 0.0004239524018543296,
+      "ksp_iterations": 593,
+      "failed_linear_residual": 1.388013116009089,
+      "failed_linear_target": 8.560044129165272e-05,
+      "last_schur_condition": 1.0000003375313402,
+      "min_surface_SICN": 0.09074802033227526,
+      "min_volume_SICN": 0.08715124059350975,
+      "geometry_sha256": "1c32e3f9f84458e951a1a9120557a7853639b26c0b04655bac44992ca8c514a9",
+      "last_history": [
+        {
+          "step": 0,
+          "load_factor": 0.1,
+          "iterations": 3,
+          "min_J": 0.9998080619550573,
+          "max_von_Mises_MPa": 33.98621080473524,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9297753001391899e-07,
+          "mean_constraint_mm": [
+            -2.213984706769623e-21,
+            -1.7809846396423145e-22
+          ],
+          "elapsed_seconds": 43.66956090927124
+        },
+        {
+          "step": 1,
+          "load_factor": 0.2,
+          "iterations": 3,
+          "min_J": 0.9996161144791972,
+          "max_von_Mises_MPa": 67.97912626367771,
+          "PEEQ": 0.0,
+          "free_residual_relative": 1.9253993050384692e-07,
+          "mean_constraint_mm": [
+            7.567305593271365e-21,
+            -4.300847604998305e-22
+          ],
+          "elapsed_seconds": 85.86381244659424
+        }
+      ]
+    }
+  ],
+  "independent_direct_diagnostic": {
+    "phase": "complete",
+    "scope": "Independent R04 same-mesh 40% target-load diagnostic; original seven failures remain unchanged.",
+    "status": {
+      "phase": "complete_pending_cross_solver_review",
+      "pid": 1975,
+      "elapsed_seconds": 199.2383749485016
+    },
+    "equilibrated_tangent": {
+      "ksp_type": "preonly",
+      "pc_type": "cholesky",
+      "reason": 4,
+      "iterations": 1,
+      "matrix_type": "seqaij",
+      "vector_type": "seq",
+      "bordered_inertia_negative_zero_positive": [
+        3,
+        0,
+        666851
+      ],
+      "constrained_tangent_negative_directions": 1,
+      "bordered_true_residual": 0.0,
+      "diagnostic_only": true,
+      "load_factor": 0.4,
+      "equilibrated_state": true,
+      "free_residual_relative": 1.0320412169358593e-07,
+      "interpretation": "Two negative bordered directions are introduced by the two exact constraints; only nneg minus two belongs to the admissible tangent."
+    },
+    "summary": {
+      "seconds": 199.02416157722473,
+      "nodes": 223582,
+      "elements": 123040,
+      "max_U_mm": 0.12818541825759155,
+      "max_GP_von_Mises_MPa": 162.65923498736367,
+      "max_PEEQ": 0.0,
+      "diagnostic_only": true,
+      "applied_load_factor": 0.4,
+      "all_accepted_states_below_initial_yield": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "fields_sha256": "3522f96e3fb37e85ca9aa5e16a3b7f079943b947a692f4533f1ae3bda1a2deb0",
+      "same_native_curved_mesh": true,
+      "no_dataset_replacement": true,
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "assembly_device": "cpu",
+      "linear_algebra_device": "cpu",
+      "cuda_review": {
+        "petsc_cuda_package": true
+      },
+      "total_ksp_iterations": 9,
+      "path_mode": "load",
+      "accepted_states": 4,
+      "saved_states": "all"
+    },
+    "history": [
+      {
+        "step": 0,
+        "load_factor": 0.1,
+        "iterations": 3,
+        "min_J": 0.9997585953747807,
+        "max_von_Mises_MPa": 40.6430587940247,
+        "PEEQ": 0.0,
+        "free_residual_relative": 9.401862399316049e-11,
+        "mean_constraint_mm": [
+          1.886447616713563e-21,
+          -1.206027000971979e-23
+        ],
+        "elapsed_seconds": 59.2649450302124
+      },
+      {
+        "step": 1,
+        "load_factor": 0.2,
+        "iterations": 2,
+        "min_J": 0.9995174739375677,
+        "max_von_Mises_MPa": 81.30051202981491,
+        "PEEQ": 0.0,
+        "free_residual_relative": 1.3214253479232846e-07,
+        "mean_constraint_mm": [
+          -9.452298545361914e-22,
+          -1.9612027866273302e-22
+        ],
+        "elapsed_seconds": 97.35391807556152
+      },
+      {
+        "step": 2,
+        "load_factor": 0.3,
+        "iterations": 2,
+        "min_J": 0.9992766434820608,
+        "max_von_Mises_MPa": 121.97253634737919,
+        "PEEQ": 0.0,
+        "free_residual_relative": 1.0784630848738876e-07,
+        "mean_constraint_mm": [
+          3.992031897025511e-21,
+          1.30746852441822e-23
+        ],
+        "elapsed_seconds": 139.75829529762268
+      },
+      {
+        "step": 3,
+        "load_factor": 0.4,
+        "iterations": 2,
+        "min_J": 0.9990361124025852,
+        "max_von_Mises_MPa": 162.65923498736367,
+        "PEEQ": 0.0,
+        "free_residual_relative": 1.0320412169358593e-07,
+        "mean_constraint_mm": [
+          5.753085706524538e-21,
+          -1.2601291468099742e-21
+        ],
+        "elapsed_seconds": 175.57647228240967
+      }
+    ],
+    "tangent_modes": {
+      "load_factor": 0.4,
+      "reference": "Independent same-mesh symmetric-indefinite equilibrium",
+      "bordered_inertia_negative_zero_positive": [
+        3,
+        0,
+        666851
+      ],
+      "negative_admissible_directions": 1,
+      "eigenvalues_N_per_mm": [
+        -0.00020035975094309286,
+        0.0069155446727959344,
+        0.013949964003683767,
+        0.03306967137306478,
+        0.2495592607127296,
+        0.26280178142094185
+      ],
+      "relative_eigen_residuals": [
+        6.16051029242476e-07,
+        2.441866304774349e-08,
+        8.557127435206262e-09,
+        9.523012125578028e-09,
+        1.1155595168706518e-09,
+        1.1884513701728364e-09
+      ],
+      "stiffness_infinity_norm_N_per_mm": 11031238.87998763,
+      "definition": "Q K Q plus beta on the two constraint-row directions; six eigenvalues closest to zero, original reduced Euclidean DOF norm.",
+      "max_mean_constraint_of_modes": 7.465839787632393e-21,
+      "native_component_squared_norm_fraction": [
+        0.007267512834479672,
+        2.4120906754012415e-06,
+        0.9927300750748477
+      ]
+    },
+    "linear_inertia_path": [
+      {
+        "step": 0,
+        "newton_iteration": 0,
+        "constrained_tangent_negative_directions": 0
+      },
+      {
+        "step": 0,
+        "newton_iteration": 1,
+        "constrained_tangent_negative_directions": 0
+      },
+      {
+        "step": 0,
+        "newton_iteration": 2,
+        "constrained_tangent_negative_directions": 0
+      },
+      {
+        "step": 1,
+        "newton_iteration": 0,
+        "constrained_tangent_negative_directions": 0
+      },
+      {
+        "step": 1,
+        "newton_iteration": 1,
+        "constrained_tangent_negative_directions": 0
+      },
+      {
+        "step": 2,
+        "newton_iteration": 0,
+        "constrained_tangent_negative_directions": 0
+      },
+      {
+        "step": 2,
+        "newton_iteration": 1,
+        "constrained_tangent_negative_directions": 0
+      },
+      {
+        "step": 3,
+        "newton_iteration": 0,
+        "constrained_tangent_negative_directions": 0
+      },
+      {
+        "step": 3,
+        "newton_iteration": 1,
+        "constrained_tangent_negative_directions": 1
+      }
+    ]
+  },
+  "material_yield_guard_MPa": 781.6,
+  "solver_sha256": "7446421972c870811d3c8738436653dee85da0953121044647bc22da6a464690",
+  "sources": [
+    "https://petsc.org/release/manualpages/KSP/KSPConvergedReason/",
+    "https://petsc.org/release/manualpages/KSP/KSPCG/",
+    "https://petsc.org/release/manualpages/Mat/MatGetInertia/"
+  ]
+}
