@@ -1987,9 +1987,8 @@
   ],
   "ccx_followup_driver": {
     "pid": 14420,
-    "stage": "untried_standard_continuation",
-    "updated_unix": 1792931140.4121819,
-    "sample_id": "normal_rodv2_0051__compression_skew",
+    "stage": "complete",
+    "updated_unix": 1792932350.8831365,
     "sample_ids": [
       "normal_rodv2_0135__compression_skew",
       "normal_rodv2_0051__compression_skew"
@@ -2066,9 +2065,18 @@
   },
   "original_cpu_followup_driver": {
     "pid": 45500,
-    "stage": "waiting_for_after_ccx_recovery",
-    "updated_unix": 1792930427.914565,
-    "upstream_pid": 14420
+    "stage": "explicit_range_tail_recovery",
+    "updated_unix": 1792933126.3395045,
+    "sample_id": "normal_rodv2_0135__compression",
+    "sample_ids": [
+      "normal_rodv2_0135__compression"
+    ]
+  },
+  "adaptive_ccx_seed_driver": {
+    "pid": 6688,
+    "stage": "waiting_for_original_cpu_chain",
+    "updated_unix": 1792933411.0455916,
+    "upstream_pid": 45500
   },
   "ccx_printout_residual_reviews": [
     {
@@ -3100,18 +3108,23 @@
     },
     {
       "sample_id": "normal_rodv2_0051__compression_skew",
-      "state": "running",
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_intersection",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
+        "time_unix": 1792932348.774187,
+        "no_accepted_full_case": true
+      },
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
         "phase": "numerical_arc",
-        "pid": 24012,
-        "elapsed_seconds": 85.16562962532043,
+        "pid": 24206,
+        "elapsed_seconds": 936.0508365631104,
         "step": 7,
         "original_target": 0.8,
-        "numerical_load": 0.7334748768535687,
-        "arc_iteration": 6,
-        "free_residual_relative": 3.238767464755345e-10,
-        "arc_constraint": -3.5865407865820487e-16
+        "numerical_load": -0.43617895564150116,
+        "arc_iteration": 2,
+        "free_residual_relative": 1.6407762330396496e-09,
+        "arc_constraint": -1.237953475488737e-16
       }
     },
     {
@@ -3569,6 +3582,22 @@
         "phase": "complete_pending_cross_solver_review",
         "pid": 21529,
         "elapsed_seconds": 76.9495997428894
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0135__compression",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
+      "solver_status": {
+        "phase": "numerical_arc",
+        "pid": 24790,
+        "elapsed_seconds": 431.9169783592224,
+        "step": 9,
+        "original_target": 1.0,
+        "numerical_load": 0.44237653713838937,
+        "arc_iteration": 14,
+        "free_residual_relative": 2.0167602970848696e-09,
+        "arc_constraint": 3.769770953732099e-16
       }
     },
     {
@@ -5155,12 +5184,66 @@
       "started_unix": 1792931140.537297,
       "solver_source_sha256": "0a716fd36501129884b98e6f38ee86a4c1e3ea5752b10440f5f34f2bb3de21bb",
       "method": "冻结历史／真切向弧长与原载荷交点细化",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.8,
-      "numerical_trial_load_factor": 0.7334748768535687,
-      "elapsed_seconds": 85.16562962532043,
-      "last_relative_residual": 3.238767464755345e-10,
+      "numerical_trial_load_factor": 0.7281128398396775,
+      "elapsed_seconds": 257.14915108680725,
+      "last_relative_residual": 8.040767670123251e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792931405.7168024,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0051__compression_skew",
+      "started_unix": 1792931405.7810895,
+      "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
+      "method": "原CCX有界尾段／真切向弧长与交点细化",
+      "state": "failed",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": -0.43617895564150116,
+      "elapsed_seconds": 936.0508365631104,
+      "last_relative_residual": 1.6407762330396496e-09,
+      "failure": {
+        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
+        "time_unix": 1792932348.774187,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0135__compression",
+      "started_unix": 1792932351.2705302,
+      "solver_source_sha256": "0a716fd36501129884b98e6f38ee86a4c1e3ea5752b10440f5f34f2bb3de21bb",
+      "method": "冻结历史／真切向弧长与原载荷交点细化",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.8047822108344757,
+      "elapsed_seconds": 769.1936047077179,
+      "last_relative_residual": 6.090120726357491e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792933128.6107225,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0135__compression",
+      "started_unix": 1792933126.5360525,
+      "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
+      "method": "原CCX有界尾段／真切向弧长与交点细化",
+      "state": "running",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.44237653713838937,
+      "elapsed_seconds": 431.9169783592224,
+      "last_relative_residual": 2.0167602970848696e-09,
       "failure": null,
       "archived": false
     }
