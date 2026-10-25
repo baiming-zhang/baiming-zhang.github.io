@@ -246,6 +246,39 @@
           "url": "source/copv-detailed-v2/README.md"
         }
       ]
+    },
+    {
+      "task": "C02",
+      "date": "2026-10-25",
+      "title": "C02：详细 COPV 三维正交各向异性 GPU 求解与独立核对",
+      "summary": "C02 已完成：详细装配的 12 个承力分区，P1 位移、582,705 自由度；1 MPa 内压与闭口端合力，完整三维正交各向异性铺层。可查看位移、金属应力、纤维方向应力及剖面，源码与核对记录可复现。",
+      "review": "参考 R02 的材料/载荷合同及原始场核对方法：独立轴对称模型位移差 4.724e-10、原始 GP 应力差 2.916e-09；另有 CalculiX 三维旋转铺层补丁核对。详细模型真残差 1.018e-10。CPU 组装，CUDA FGMRES/GAMG，最粗层为小型 CPU SVD；理想粘结、直边几何及 P1 弹性基准的范围见详情，网格及 P1/P2 收敛留给 C03。",
+      "links": [
+        {
+          "label": "三维结果与剖面",
+          "url": "viewers/copv-c02.html"
+        },
+        {
+          "label": "核对指标与计算范围",
+          "url": "data/copv-c02-review.json"
+        },
+        {
+          "label": "材料 / 载荷 / 约束合同",
+          "url": "data/copv-c02-material-load-contract.json"
+        },
+        {
+          "label": "求解与验证源码 ZIP",
+          "url": "data/copv-c02-source-evidence.zip"
+        },
+        {
+          "label": "复现与结果解释",
+          "url": "source/copv-c02/README.md"
+        },
+        {
+          "label": "20 个弹性载卸载状态",
+          "url": "data/copv-c02-load-states.json"
+        }
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25 09:22 北京时间",
+  "updated": "2026-10-25 11:37 北京时间",
   "tasks": [
     {
       "id": "R01",
@@ -222,7 +222,7 @@
       "review": "检查筒体/封头等几何连接及厚度定义，说明简化假设",
       "dependencies": "M01",
       "start": "2026-10-28",
-      "issues": "详细基准装配与参考视图待人工审核；新 boss/密封/铺层尚未进行正式 FE。原15参数样例与GPU接入结果保留为v1。",
+      "issues": "用户已确认 C01 完成。详细构造的承力分区、材料及求解结果见 C02；原 v1 参数样例与接入验证保留。",
       "page": "C01.html",
       "results": [
         {
@@ -264,14 +264,41 @@
       "phase": "第2周",
       "title": "COPV 仿真代码",
       "due": "2026-10-30",
-      "status": "未开始",
+      "status": "已完成",
       "deliverables": "材料、内压、约束与求解脚本",
       "review": "明确复合材料/铺层的建模方式，核对单位及边界条件",
       "dependencies": "C01",
       "start": "2026-10-29",
-      "issues": "",
+      "issues": "弹性基准、材料方向、载荷闭合及求解核对通过；密封接触/损伤/额定压力不属于本阶段，网格收敛由 C03 完成。",
       "page": "C02.html",
-      "results": []
+      "results": [
+        {
+          "label": "三维结果与剖面",
+          "url": "viewers/copv-c02.html"
+        },
+        {
+          "label": "核对指标与计算范围",
+          "url": "data/copv-c02-review.json"
+        },
+        {
+          "label": "材料 / 载荷 / 约束合同",
+          "url": "data/copv-c02-material-load-contract.json"
+        },
+        {
+          "label": "求解与验证源码 ZIP",
+          "url": "data/copv-c02-source-evidence.zip"
+        },
+        {
+          "label": "复现与结果解释",
+          "url": "source/copv-c02/README.md"
+        },
+        {
+          "label": "20 个弹性载卸载状态",
+          "url": "data/copv-c02-load-states.json"
+        }
+      ],
+      "actual_start": "2026-10-25",
+      "completed": "2026-10-25"
     },
     {
       "id": "C03",

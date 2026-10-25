@@ -1,0 +1,276 @@
+{
+  "case": "reported",
+  "status": "independent_axisymmetric_vessel_validation_not_production",
+  "production_ready": false,
+  "manifest": {
+    "parameters_mm": {
+      "inner_radius_mm": 100.0,
+      "straight_length_mm": 400.0,
+      "dome_depth_mm": 60.0,
+      "boss_bore_radius_mm": 15.0,
+      "neck_length_mm": 20.0,
+      "liner_thickness_mm": 1.0,
+      "overwrap_thickness_mm": 3.0
+    },
+    "meridian_segment_elements": [
+      2,
+      24,
+      16,
+      24,
+      2
+    ],
+    "liner_elements": 1,
+    "wrap_per_ply": 1
+  },
+  "n_nodes": 1507,
+  "n_quad9": 340,
+  "seconds": 0.23382689990103245,
+  "pressure_MPa": 1.0,
+  "wrap_ply_angles_degrees": [
+    55.0,
+    -55.0,
+    -55.0,
+    55.0
+  ],
+  "material_provenance": {
+    "candidate_id": "al6061_as4_3501_6_reported_elastic_benchmark",
+    "material_json_path": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\configs\\copv_material_candidates.json",
+    "material_json_sha256": "c3c62a3ce01b0f71a56fbe3d5df0c56d3e8c593a874f811ceb4feead6858f2e2",
+    "units": {
+      "elastic_moduli": "MPa",
+      "poisson_ratios": "dimensionless",
+      "original_as4_moduli": "Msi",
+      "Msi_to_MPa": 6894.757293168
+    },
+    "constants_MPa": {
+      "1": {
+        "E1": 69000.0,
+        "E2": 69000.0,
+        "E3": 69000.0,
+        "G12": 25939.84962406015,
+        "G13": 25939.84962406015,
+        "G23": 25939.84962406015,
+        "nu12": 0.33,
+        "nu13": 0.33,
+        "nu23": 0.33
+      },
+      "2": {
+        "E1": 114452.9710665888,
+        "E2": 10342.135939752,
+        "E3": 10342.135939752,
+        "G12": 5998.43884505616,
+        "G13": 5998.43884505616,
+        "G23": 3792.1165112424,
+        "nu12": 0.33,
+        "nu13": 0.33,
+        "nu23": 0.47
+      }
+    },
+    "sources": {
+      "liner": {
+        "title": "The Design & Development of the Ocean Color Instrument",
+        "ntrs_id": "20180003005",
+        "url": "https://ntrs.nasa.gov/api/citations/20180003005/downloads/20180003005.pdf?attachment=true",
+        "file": "NASA_20180003005_OCI.pdf",
+        "pdf_page_1based": 5,
+        "printed_page": 5,
+        "table": "Table 4 - Structural Component Material Properties",
+        "evidence": "First-party NASA engineering paper, table visually inspected. These are engineering analysis input values, not a certified 6061 material lot datasheet.",
+        "local_file": "../../data/copv/source/NASA_20180003005_OCI.pdf",
+        "sha256": "cf6f448d2954f3355fe913faf34f654af29f6a88286a306a63abd0602d059be1",
+        "bytes": 1893073,
+        "table_visual_review": true,
+        "actual_sha256": "cf6f448d2954f3355fe913faf34f654af29f6a88286a306a63abd0602d059be1",
+        "sha256_verified": true
+      },
+      "overwrap": {
+        "title": "Comparison of the Compressive Strengths for Stitched and Toughened Composite Systems",
+        "report": "NASA-TM-109108",
+        "author": "James R. Reeder",
+        "date": "1994-04",
+        "url": "https://ntrs.nasa.gov/api/citations/19940028433/downloads/19940028433.pdf",
+        "file": "NASA_TM_109108.pdf",
+        "pdf_page_1based": 29,
+        "printed_page": 27,
+        "table": "Table 1",
+        "evidence": "Original NASA technical report inspected as PDF; Table 1 reproduces properties from reference [26], not new measurements of every engineering constant.",
+        "upstream_reference": "Gipple, K., DTRC-SME-90/74, October 1990; cited on PDF page 28, printed page 26; upstream report not independently retrieved.",
+        "local_file": "../../data/copv/source/NASA_TM_109108.pdf",
+        "sha256": "7fe95ab453161762a7aa89a2b0e888e82ce34972681e5617a010d09467007d82",
+        "bytes": 8644985,
+        "table_visual_review": true,
+        "actual_sha256": "7fe95ab453161762a7aa89a2b0e888e82ce34972681e5617a010d09467007d82",
+        "sha256_verified": true
+      }
+    },
+    "status": "Reported elastic benchmark inputs, not certified material lots; pure-hoop axis assumption is numerical verification only"
+  },
+  "frame_checks": {
+    "min_offset_normal_cosine": 0.9999971371425073,
+    "min_material_frame_det": 0.9999999999999996
+  },
+  "max_abs_utheta_mm": 0.0006540348793217564,
+  "max_abs_ur_mm": 0.05786966704419615,
+  "min_meridian_quadrature_Jacobian": 1.3677672374454481,
+  "diagnostics": {
+    "reduced_relative_residual": 1.6370163947015384e-11,
+    "end_extension_mm": 0.399542553497208,
+    "n_reduced_dofs": 4499,
+    "strain_energy_Nmm": 8278.411862338862,
+    "external_work_Nmm": 16556.823724570575,
+    "constraint_reaction_work_Nmm": 1.0714741482532151e-07,
+    "top_axial_jump_mm": 0.0,
+    "gauge_utheta_mm": 0.0,
+    "axial_force_balance_N": 3.0906593195823007e-07,
+    "axial_torque_balance_Nmm": 6.137605259184476e-06,
+    "end_radial_displacement_prescribed": false,
+    "analytic_U_used_as_BC": false,
+    "node_association": "Exact original meridian node rows; vectors in cylindrical r/theta/z",
+    "GP_association": "Original Quad9 cell then Basis GP; volume weights already include 2*pi*r",
+    "pressure_work_Nmm": 16274.403735626325,
+    "cap_work_Nmm": 282.4199889442506,
+    "pressure_area_mm2": 333359.8285149904,
+    "cap_resultant_N": 706.8583470577034,
+    "cap_area_mm2": {
+      "bottom": 427.2566008882116,
+      "top": 427.2566008882116
+    },
+    "half_axial_load_N": 31415.926535897943,
+    "expected_half_axial_load_N": 31415.926535897932,
+    "half_body_axial_load_relative_error": 4.440892098500626e-16,
+    "midsection_stress_integral": {
+      "axial_force_N": 31415.92227402755,
+      "expected_N": 31415.926535897932,
+      "relative_error": 1.3565954759542365e-07
+    },
+    "boundary_work_energy_relative_error": 6.4716010328425e-12,
+    "cap_work_vs_force_extension_relative_error": 2.220446049250313e-16
+  },
+  "physical_ply_statistics": {
+    "0": {
+      "volume_mm3": 335666.3986359923,
+      "stress_local_weighted_mean_MPa": [
+        21.56840238551385,
+        21.89064753077994,
+        -0.7229638141165858,
+        -3.2250084052576718e-15,
+        1.859283904822403e-12,
+        -0.012114952277445468
+      ],
+      "stress_local_weighted_RMS_MPa": [
+        27.135868831547334,
+        26.469647672330744,
+        1.1053856462018883,
+        0.011936733518197911,
+        1.0333525418549774,
+        0.05064536968918263
+      ],
+      "stress_tensor_weighted_RMS_MPa": 37.952082319640475,
+      "stress_tensor_weighted_p50_MPa": 34.46415080685843,
+      "stress_tensor_weighted_p95_MPa": 65.23778110019022,
+      "strain_energy_Nmm": 3104.3611635499765,
+      "association": "Each physical GP ply retained separately; no material/interface averaging"
+    },
+    "1": {
+      "volume_mm3": 254777.2486297971,
+      "stress_local_weighted_mean_MPa": [
+        25.04741779282011,
+        2.721001268675355,
+        -0.3996122827943777,
+        3.1678275782367907e-13,
+        -2.321172518491895e-13,
+        0.059990715767134536
+      ],
+      "stress_local_weighted_RMS_MPa": [
+        28.602255905167837,
+        2.7939201596166963,
+        0.8934517861932058,
+        1.0859418556508957,
+        0.6653606569843803,
+        2.702178542564571
+      ],
+      "stress_tensor_weighted_RMS_MPa": 29.0609837342871,
+      "stress_tensor_weighted_p50_MPa": 31.98556371292987,
+      "stress_tensor_weighted_p95_MPa": 33.69559391548853,
+      "strain_energy_Nmm": 1195.813427481738,
+      "association": "Each physical GP ply retained separately; no material/interface averaging"
+    },
+    "2": {
+      "volume_mm3": 257372.2054750573,
+      "stress_local_weighted_mean_MPa": [
+        24.86673695974695,
+        2.742380358279702,
+        -0.25908301435084885,
+        -4.64413688525173e-13,
+        -3.5944676476138507e-13,
+        -0.07418492647337949
+      ],
+      "stress_local_weighted_RMS_MPa": [
+        29.693841466890518,
+        2.889087030103834,
+        0.6764290597746272,
+        0.8517123476191288,
+        0.6916465128933518,
+        2.3681565831203173
+      ],
+      "stress_tensor_weighted_RMS_MPa": 30.069128854181482,
+      "stress_tensor_weighted_p50_MPa": 31.72654094050333,
+      "stress_tensor_weighted_p95_MPa": 38.553189786613956,
+      "strain_energy_Nmm": 1221.7893093557177,
+      "association": "Each physical GP ply retained separately; no material/interface averaging"
+    },
+    "3": {
+      "volume_mm3": 259967.16232031572,
+      "stress_local_weighted_mean_MPa": [
+        24.654507309725258,
+        2.7591578190131374,
+        -0.14002369213554888,
+        -4.985755032889837e-13,
+        -2.9114440832129305e-13,
+        -0.09107502928300949
+      ],
+      "stress_local_weighted_RMS_MPa": [
+        31.3793197661135,
+        3.184620666716068,
+        0.4396642373791314,
+        0.7891853890320116,
+        0.30213685275734015,
+        2.097126054743132
+      ],
+      "stress_tensor_weighted_RMS_MPa": 31.705218786622215,
+      "stress_tensor_weighted_p50_MPa": 31.472591760316895,
+      "stress_tensor_weighted_p95_MPa": 45.37085801267631,
+      "strain_energy_Nmm": 1314.3136110919304,
+      "association": "Each physical GP ply retained separately; no material/interface averaging"
+    },
+    "4": {
+      "volume_mm3": 262562.1191655765,
+      "stress_local_weighted_mean_MPa": [
+        24.428989147150972,
+        2.7697523656147793,
+        -0.042151423071775676,
+        3.817984845635284e-13,
+        -3.220375896633833e-13,
+        0.11019073751901463
+      ],
+      "stress_local_weighted_RMS_MPa": [
+        33.199222609273555,
+        3.6823115892715563,
+        0.2397922766410139,
+        0.157562386223094,
+        0.45130954201014223,
+        1.924451629544052
+      ],
+      "stress_tensor_weighted_RMS_MPa": 33.5211775061968,
+      "stress_tensor_weighted_p50_MPa": 31.227536073757673,
+      "stress_tensor_weighted_p95_MPa": 53.53557315056837,
+      "strain_energy_Nmm": 1442.134350773908,
+      "association": "Each physical GP ply retained separately; no material/interface averaging"
+    }
+  },
+  "limitations": [
+    "Exact revolution of P2 meridian differs slightly from 3D P2 circumference approximation",
+    "Axisymmetric three-component prototype; no nonaxisymmetric BC or defect representation",
+    "Reported numerical plies and sliding end resultants, not manufactured COPV certification"
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "status": "source_candidates_only_not_frozen",
+  "production_ready": false,
+  "pressure_MPa": null,
+  "production_layup": null,
+  "sources": {
+    "nasa_as4": {
+      "title": "Comparison of the Compressive Strengths for Stitched and Toughened Composite Systems",
+      "report": "NASA-TM-109108",
+      "author": "James R. Reeder",
+      "date": "1994-04",
+      "url": "https://ntrs.nasa.gov/api/citations/19940028433/downloads/19940028433.pdf",
+      "file": "NASA_TM_109108.pdf",
+      "pdf_page_1based": 29,
+      "printed_page": 27,
+      "table": "Table 1",
+      "evidence": "Original NASA technical report inspected as PDF; Table 1 reproduces properties from reference [26], not new measurements of every engineering constant.",
+      "upstream_reference": "Gipple, K., DTRC-SME-90/74, October 1990; cited on PDF page 28, printed page 26; upstream report not independently retrieved.",
+      "local_file": "../../data/copv/source/NASA_TM_109108.pdf",
+      "sha256": "7fe95ab453161762a7aa89a2b0e888e82ce34972681e5617a010d09467007d82",
+      "bytes": 8644985,
+      "table_visual_review": true
+    },
+    "nasa_al": {
+      "title": "The Design & Development of the Ocean Color Instrument",
+      "ntrs_id": "20180003005",
+      "url": "https://ntrs.nasa.gov/api/citations/20180003005/downloads/20180003005.pdf?attachment=true",
+      "file": "NASA_20180003005_OCI.pdf",
+      "pdf_page_1based": 5,
+      "printed_page": 5,
+      "table": "Table 4 - Structural Component Material Properties",
+      "evidence": "First-party NASA engineering paper, table visually inspected. These are engineering analysis input values, not a certified 6061 material lot datasheet.",
+      "local_file": "../../data/copv/source/NASA_20180003005_OCI.pdf",
+      "sha256": "cf6f448d2954f3355fe913faf34f654af29f6a88286a306a63abd0602d059be1",
+      "bytes": 1893073,
+      "table_visual_review": true
+    },
+    "nasa_copv": {
+      "title": "A Compilation of Composite Overwrapped Pressure Vessel Research (2015-2021)",
+      "report": "NASA/CR-20230012105",
+      "author": "William Schonberg",
+      "date": "2023-08",
+      "url": "https://ntrs.nasa.gov/api/citations/20230012105/downloads/8-16-23%2020230012105.pdf",
+      "file": "NASA_CR_20230012105.pdf",
+      "pdf_page_1based": 23,
+      "printed_page": 15,
+      "table": "Table 2, Phase A column",
+      "evidence": "NASA contractor technical compilation; vessel construction identities are reported from underlying impact tests. This is not a complete elastic characterization. Table footnote c identifies liner strength values as MatWeb; those strength numbers are deliberately not imported.",
+      "local_file": "../../data/copv/source/NASA_CR_20230012105.pdf",
+      "sha256": "e0f43e7685b06610a09cc2e7aa382788902493254e8a2a14b96cbeab902fc38b",
+      "bytes": 2860181,
+      "table_visual_review": true
+    }
+  },
+  "units": {
+    "elastic_moduli": "MPa",
+    "poisson_ratios": "dimensionless",
+    "original_as4_moduli": "Msi",
+    "Msi_to_MPa": 6894.757293168
+  },
+  "convention": {
+    "nu_ij": "minus transverse strain in j divided by axial strain in i under uniaxial stress in i",
+    "strain_voigt_order": [
+      "11",
+      "22",
+      "33",
+      "23",
+      "13",
+      "12"
+    ],
+    "shear": "engineering gamma=2*epsilon_ij",
+    "material_axes": "1=fiber; 2=in-plane transverse; 3=ply-normal. Must rotate into vessel frame/layup; meridian is not automatically fiber axis.",
+    "future_geometry_basis": "m=-unit tangent in increasing-z direction; c=+e_theta; n=outward; require det[m,c,n]=+1"
+  },
+  "elastic_control_candidate": {
+    "id": "al6061_as4_3501_6_reported_elastic_benchmark",
+    "use": "Code/reference elastic verification only; not a validated manufactured COPV",
+    "usable_as_numerical_elastic_input": true,
+    "liner": {
+      "grade": "Aluminum 6061-T6",
+      "model": "isotropic",
+      "source": "nasa_al",
+      "reported_E_GPa": 69.0,
+      "reported_nu": 0.33,
+      "elastic_3d_MPa": {
+        "E1": 69000.0,
+        "E2": 69000.0,
+        "E3": 69000.0,
+        "G12": 25939.84962406015,
+        "G13": 25939.84962406015,
+        "G23": 25939.84962406015,
+        "nu12": 0.33,
+        "nu13": 0.33,
+        "nu23": 0.33
+      },
+      "derived_properties": [
+        "E1=E2=E3=E",
+        "G12=G13=G23=E/(2*(1+nu))",
+        "all nu_ij=nu"
+      ],
+      "derivation_note": "Isotropic mathematical closure explicitly assumed; G is derived, not separately measured in Table 4.",
+      "test_temperature_C": null,
+      "temperature_note": "Not specified alongside this property table; not silently assigned to a certified temperature point.",
+      "cure_conditions": null,
+      "heat_treatment": "T6 designation; detailed processing/lot condition not given",
+      "checks": {
+        "passed": true,
+        "compliance_eigenvalues_1_per_MPa": [
+          4.927536231884053e-06,
+          1.9275362318840574e-05,
+          1.927536231884058e-05,
+          3.855072463768116e-05,
+          3.855072463768116e-05,
+          3.855072463768116e-05
+        ],
+        "reciprocal_poisson": {
+          "nu21": 0.33,
+          "nu31": 0.33,
+          "nu32": 0.33
+        },
+        "constitutive_validation_scope": "Algebraic SPD and reciprocity only; not a constitutive FE patch test."
+      }
+    },
+    "overwrap": {
+      "grade": "AS4/3501-6 carbon/epoxy lamina",
+      "model": "orthotropic_3d",
+      "source": "nasa_as4",
+      "reported_original": {
+        "E1": 16.6,
+        "E2": 1.5,
+        "E3": 1.5,
+        "G12": 0.87,
+        "G13": 0.87,
+        "G23": 0.55,
+        "nu12": 0.33,
+        "nu13": 0.33,
+        "nu23": 0.47
+      },
+      "elastic_3d_MPa": {
+        "E1": 114452.9710665888,
+        "E2": 10342.135939752,
+        "E3": 10342.135939752,
+        "G12": 5998.43884505616,
+        "G13": 5998.43884505616,
+        "G23": 3792.1165112424,
+        "nu12": 0.33,
+        "nu13": 0.33,
+        "nu23": 0.47
+      },
+      "test_temperature_C": null,
+      "cure_conditions": null,
+      "conditioning_note": "Table 1 has no explicit cure schedule or property-specific temperature. Report tests discuss ambient 77 F and hot/wet specimens, but that does not certify Table 1 at those conditions.",
+      "provenance_note": "Nine constants reported by the NASA benchmark table; E2=E3 etc are table entries. No additional transverse-isotropic closure imposed.",
+      "transverse_isotropy_note": "Do not replace reported G23 with E2/(2*(1+nu23)); the supplied rounded set is retained as orthotropic.",
+      "checks": {
+        "passed": true,
+        "compliance_eigenvalues_1_per_MPa": [
+          8.349619753962011e-06,
+          5.16342606936594e-05,
+          0.00014213698297561248,
+          0.0001667100433680653,
+          0.0001667100433680653,
+          0.0002637049776913033
+        ],
+        "reciprocal_poisson": {
+          "nu21": 0.029819277108433732,
+          "nu31": 0.029819277108433732,
+          "nu32": 0.47
+        },
+        "constitutive_validation_scope": "Algebraic SPD and reciprocity only; not a constitutive FE patch test."
+      }
+    }
+  },
+  "real_copv_material_candidate": {
+    "id": "t1000_lrf092_al6061_t6_phase_a",
+    "use": "Traceable real COPV construction candidate; insufficient elasticity data to launch material-specific FE",
+    "usable_as_numerical_elastic_input": false,
+    "source": "nasa_copv",
+    "liner": {
+      "grade": "Aluminum 6061-T6",
+      "elastic_reference_candidate": "elastic_control_candidate.liner",
+      "transfer_note": "Generic NASA 6061 elastic input may be considered in a clearly declared study; it does not characterize the actual Phase A liner batch.",
+      "actual_lot_elastic_data_verified": false
+    },
+    "overwrap": {
+      "fiber": "T1000 (do not silently relabel T1000G)",
+      "matrix": "LRF-092",
+      "elastic_3d_MPa": {
+        "E1": null,
+        "E2": null,
+        "E3": null,
+        "G12": null,
+        "G13": null,
+        "G23": null,
+        "nu12": null,
+        "nu13": null,
+        "nu23": null
+      },
+      "test_temperature_C": null,
+      "fiber_volume_fraction": null,
+      "cure_conditions": null,
+      "layup": null,
+      "closure_assumptions_applied": false,
+      "missing_data": [
+        "E1",
+        "E2",
+        "E3",
+        "G12",
+        "G13",
+        "G23",
+        "nu12",
+        "nu13",
+        "nu23",
+        "fiber volume fraction",
+        "cure/conditioning and test temperature",
+        "actual layup"
+      ]
+    },
+    "not_imported": [
+      "COPV tensile strengths are not stiffness constants",
+      "Fiber-only Young modulus is not cured UD composite modulus",
+      "MatWeb-derived liner strength numbers from compilation are not treated as first-party measurements"
+    ]
+  },
+  "next_freeze_requirements": [
+    "Review benchmark source/units and report-only status",
+    "Obtain material-specific missing 3D constants for real COPV candidate or explicitly approve a modeling closure as an assumption",
+    "Freeze layup and pressure separately",
+    "Constitutive rotation, energy and patch checks",
+    "Never silently fill missing constants from another carbon/epoxy material"
+  ]
+}

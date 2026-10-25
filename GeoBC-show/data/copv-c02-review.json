@@ -1,0 +1,240 @@
+{
+  "schema": "copv-c02-evidence-v1",
+  "detailed_3D": {
+    "status": "completed",
+    "case_id": "C02_detailed_baseline_1MPa",
+    "backend": "CPU FFCx assembly; PETSc CUDA FGMRES/GAMG on full displacement operator, unsmoothed aggregation and Jacobi/Chebyshev levels; small coarsest SVD on CPU, hierarchy recorded in KSP view",
+    "preconditioner": "full-gamg",
+    "dolfinx": "0.11.0",
+    "petsc": [
+      3,
+      25,
+      6
+    ],
+    "matrix_type": "seqaijcusparse",
+    "vector_type": "seqcuda",
+    "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+    "nodes": 194235,
+    "geometry_nodes": 1380976,
+    "cells": 914613,
+    "dofs": 582705,
+    "displacement_degree": 1,
+    "structural_parts": 12,
+    "display_only_seals": 6,
+    "pressure_MPa": 1.0,
+    "true_relative_residual": 1.0180967814903494e-10,
+    "peak_iterations": 1304,
+    "peak_reason": 2,
+    "peak_solve_seconds": 28.007922093998786,
+    "max_U_mm": 0.3558847333777512,
+    "strain_energy_Nmm": 7438.4258978844355,
+    "external_work_Nmm": 14876.851795636241,
+    "energy_work_relative_error": 8.915090887740007e-12,
+    "force_balance_N": [
+      -6.845099209673577e-10,
+      1.0282815723905436e-08,
+      1.0421348739519942e-07
+    ],
+    "moment_balance_Nmm": [
+      -5.0509272569394425e-06,
+      -8.595079541429129e-07,
+      3.08825256022799e-07
+    ],
+    "load_resultant_N": [
+      1.9024967712333307e-10,
+      -1.3517892361036843e-10,
+      0.18147637560862062
+    ],
+    "gauge_reactions_N": [
+      -8.747595980906908e-10,
+      2.2168781477205357e-08,
+      -0.09073762276581765,
+      -1.1750786829689552e-08,
+      -0.09073774685910174,
+      -9.017702138347516e-07
+    ],
+    "cap_forces_N": {
+      "upper": 326.85129967948205,
+      "lower": 213.8246499849553
+    },
+    "cap_areas_mm2": {
+      "top": 53.195862399658836,
+      "bottom": 43.409831109155924
+    },
+    "min_GP_Jacobian_mm3": 0.0007576650013307442,
+    "material_frame_det_max_error": 1.3322676295501878e-15,
+    "half_load_relative_error": 9.799148413044275e-10,
+    "zero_load_U_norm": 0.0,
+    "part_statistics": {
+      "1": {
+        "material": "aluminum",
+        "name": "金属气密内衬",
+        "max_GP_von_Mises_MPa": 121.31904417623282,
+        "max_abs_fiber_sigma11_MPa": 66.37051411765069,
+        "volume_mm3": 335073.5662344351
+      },
+      "2": {
+        "material": "adhesive",
+        "name": "环氧粘接层 0.15 mm",
+        "max_GP_von_Mises_MPa": 11.999915333668302,
+        "max_abs_fiber_sigma11_MPa": 13.907443760021788,
+        "volume_mm3": 49499.813948484465
+      },
+      "3": {
+        "material": "carbon",
+        "name": "包覆铺层 1 / +55°",
+        "max_GP_von_Mises_MPa": 50.52596707125578,
+        "max_abs_fiber_sigma11_MPa": 45.99379464658564,
+        "volume_mm3": 248940.3663322951
+      },
+      "4": {
+        "material": "carbon",
+        "name": "包覆铺层 2 / -55°",
+        "max_GP_von_Mises_MPa": 59.34754979164405,
+        "max_abs_fiber_sigma11_MPa": 57.79193082158726,
+        "volume_mm3": 251137.4190358348
+      },
+      "5": {
+        "material": "carbon",
+        "name": "包覆铺层 3 / -55°",
+        "max_GP_von_Mises_MPa": 65.77502111194433,
+        "max_abs_fiber_sigma11_MPa": 63.46440477780297,
+        "volume_mm3": 253313.55646593595
+      },
+      "6": {
+        "material": "carbon",
+        "name": "包覆铺层 4 / +55°",
+        "max_GP_von_Mises_MPa": 65.01480305590927,
+        "max_abs_fiber_sigma11_MPa": 63.80911629949355,
+        "volume_mm3": 255488.2042404518
+      },
+      "7": {
+        "material": "carbon",
+        "name": "上极区局部补强",
+        "max_GP_von_Mises_MPa": 182.04948816232994,
+        "max_abs_fiber_sigma11_MPa": 111.18053086429603,
+        "volume_mm3": 4273.077316903033
+      },
+      "8": {
+        "material": "carbon",
+        "name": "下极区局部补强",
+        "max_GP_von_Mises_MPa": 197.27133743274854,
+        "max_abs_fiber_sigma11_MPa": 115.08616450641213,
+        "volume_mm3": 4271.782176427214
+      },
+      "9": {
+        "material": "titanium",
+        "name": "上端充装口 · 嵌入法兰与车削 boss",
+        "max_GP_von_Mises_MPa": 25.401407680163626,
+        "max_abs_fiber_sigma11_MPa": 22.126610616009334,
+        "volume_mm3": 83493.10707185788
+      },
+      "10": {
+        "material": "titanium",
+        "name": "下端服务口 · 嵌入法兰与车削 boss",
+        "max_GP_von_Mises_MPa": 24.679470623245205,
+        "max_abs_fiber_sigma11_MPa": 20.843891913015998,
+        "volume_mm3": 80852.26006732885
+      },
+      "14": {
+        "material": "steel",
+        "name": "上端充装口 · 中空接口套 / 六角扳手位",
+        "max_GP_von_Mises_MPa": 8.673619022635316,
+        "max_abs_fiber_sigma11_MPa": 6.594910041701182,
+        "volume_mm3": 16166.006370053345
+      },
+      "18": {
+        "material": "steel",
+        "name": "下端服务口 · 中空接口套 / 六角扳手位",
+        "max_GP_von_Mises_MPa": 8.125356454661256,
+        "max_abs_fiber_sigma11_MPa": 5.38493380065556,
+        "volume_mm3": 14389.972160853926
+      }
+    },
+    "mesh_sha256": "09ec8d0aba2072d29ac2e76fb9b5d6b6a3400287e69b846b6b06fb0156e93e15",
+    "contract_sha256": "6f3da59471347baa454c052471b6025cfe0da34f937206e83ff5b46b07a48a21",
+    "solver_sha256": "1ba38288c0d3de789f0f592046a737fe5d6bd77dd4dc015a9e25e040296597cf",
+    "total_seconds": 118.5911991819994,
+    "limitations": [
+      "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+      "Straight-sided geometry, P1 displacement; curved mesh attempt rejected; convergence belongs to C03",
+      "von Mises for composites is a diagnostic, not a failure criterion",
+      "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+    ],
+    "metadata_correction": "Corrected a stale P2 limitation description to P1; numerical fields unchanged. solver_sha256 matches solver_executed_snapshot.py."
+  },
+  "independent_axisymmetric_specimen": {
+    "specimen": "same Quad9 geometry, actual orthotropic 3-component closed-end pressure, same axial master/gauge; independent skfem versus FEniCSx",
+    "U_relative_L2": 4.72380391628388e-10,
+    "U_max_abs_mm": 3.4012383881565356e-10,
+    "utheta_relative_L2": 3.034665432214514e-07,
+    "utheta_max_abs_error_mm": 1.0953437210524906e-10,
+    "raw_GP_stress_volume_weighted_relative_Frobenius": 2.915977177092281e-09,
+    "GP_xyz_max_match_error_mm": 1.1457157353758233e-13,
+    "voigt_physical_shear_multiplicity": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ],
+    "passed": true
+  },
+  "analytical_rotated_TET10_patch_FEniCSx": {
+    "U_relative_L2": 1.2387881082294569e-14,
+    "stress_relative_L2": 1.1256690234119142e-14,
+    "matrix_type": "seqaijcusparse",
+    "vector_type": "seqcuda",
+    "iterations": 26,
+    "passed": true
+  },
+  "analytical_rotated_TET10_patch_CalculiX": {
+    "U_relative_L2": 1.9434546184976584e-12,
+    "stress_relative_L2": 1.0299339642247364e-07,
+    "seconds": 0.10238210007082671,
+    "constant_rotated_orthotropic_stress_MPa": [
+      54.84702850459993,
+      25.086928716523456,
+      19.533073774095037,
+      -10.568565738831818,
+      -19.439646309786816,
+      28.69444258030712
+    ],
+    "load_force_balance_N": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "load_moment_balance_Nmm": [
+      0.0,
+      0.0,
+      -7.958078640513122e-12
+    ],
+    "passed": true
+  },
+  "independent_pressure_and_caps_closure": {
+    "pressure_boundary_facets": 57544,
+    "top_cap_facets": 256,
+    "bottom_cap_facets": 256,
+    "pressure_plus_caps_force_resultant_N": [
+      2.256195230643243e-11,
+      -2.200850612865679e-12,
+      0.18147637596413801
+    ],
+    "pressure_plus_caps_moment_resultant_Nmm": [
+      2.123636377859839e-09,
+      -2.2710189284680382e-09,
+      1.1221468199096307e-11
+    ],
+    "force_relative_to_p_pi_R2": 5.776572457819157e-06,
+    "moment_relative_to_p_pi_R2_L": 1.6495125190803892e-16,
+    "method": "Independent outward tetra face topology and exact planar triangle pressure area vectors; same idealized fluid boundary rule; caps each applied once",
+    "passed": true,
+    "exterior_faces": 155786,
+    "material_interface_faces": 430920,
+    "seconds": 2.5536136000882834
+  },
+  "comparison_scope": "CalculiX checks a rotated straight TET10 patch; skfem checks a geometry-matched axisymmetric vessel. Neither is a second full detailed-assembly solve.",
+  "stress_scope": "Raw original-cell GP tensors retained locally; public display uses per-cell GP volume means without cross-material averaging. Composite von Mises is not a failure criterion."
+}
