@@ -1,16 +1,16 @@
 {
   "task": "R05",
-  "updated_beijing": "2026-10-25T10:37:00.638752+08:00",
+  "updated_beijing": "2026-10-25T10:49:47.489981+08:00",
   "target": 1000,
-  "effective_success": 242,
+  "effective_success": 245,
   "worker_configuration": {
     "cuda_workers": 2,
     "cpu_workers": 1
   },
-  "temporary_cpu_slot_task": "Plastic-aware Newton validation and frozen 0053 retry",
+  "temporary_cpu_slot_task": "Frozen-history numerical continuation validation and 0053 recovery",
   "gpu_success": 122,
-  "cpu_success": 120,
-  "unresolved": 758,
+  "cpu_success": 123,
+  "unresolved": 755,
   "full_J2_recovered": 3,
   "stability_representatives": [
     {
@@ -55,24 +55,24 @@
     }
   ],
   "phase": "running",
-  "elapsed_recovery_seconds": 7913.425817728043,
+  "elapsed_recovery_seconds": 8680.277046918869,
   "active": {
-    "normal_rodv2_0073__tension": {
-      "method": "cuda_cg",
-      "worker_id": "cuda_cg_2",
-      "started_unix": 1792895738.3182704,
-      "phase": "solving"
-    },
-    "normal_rodv2_0073__compression": {
+    "normal_rodv2_0074__tension": {
       "method": "cuda_cg",
       "worker_id": "cuda_cg_1",
-      "started_unix": 1792895773.9927132,
+      "started_unix": 1792896429.291492,
       "phase": "solving"
     },
-    "normal_rodv2_0067__compression": {
+    "normal_rodv2_0074__compression": {
+      "method": "cuda_cg",
+      "worker_id": "cuda_cg_2",
+      "started_unix": 1792896429.527359,
+      "phase": "solving"
+    },
+    "normal_rodv2_0067__inertia_tdc": {
       "method": "cpu_direct",
       "worker_id": "cpu_direct_1",
-      "started_unix": 1792895799.0116637,
+      "started_unix": 1792896584.1170294,
       "phase": "solving"
     }
   },
@@ -6171,10 +6171,82 @@
       "max_PEEQ": 0.0,
       "full_J2_recovery": false,
       "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0067__compression",
+      "geometry_case_id": "rodv2_0067",
+      "group": "normal",
+      "split": "train",
+      "scenario": "compression",
+      "fields_sha256": "36baf6c167640ebe0ef1f6fccad6b36602438c95af7ce9bb51f636c238d6187a",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 122.93141317367554,
+      "max_U_mm": 0.05068358862544261,
+      "max_GP_von_Mises_MPa": 109.69020733580703,
+      "max_relative_residual": 3.0501079006833853e-10,
+      "min_J": 0.9993861855006093,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792895925.7611322,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0067__compression_skew",
+      "geometry_case_id": "rodv2_0067",
+      "group": "normal",
+      "split": "train",
+      "scenario": "compression_skew",
+      "fields_sha256": "b49a5df08d932c8545b133e1b4895a47e2929819cda6a9020ed64d045f7a095d",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 221.91786789894104,
+      "max_U_mm": 0.9017262195642917,
+      "max_GP_von_Mises_MPa": 312.9481860444587,
+      "max_relative_residual": 5.7793008735872e-10,
+      "min_J": 0.9985895199783348,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792896266.7305229,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0067__gas_inertia_30deg",
+      "geometry_case_id": "rodv2_0067",
+      "group": "normal",
+      "split": "train",
+      "scenario": "gas_inertia_30deg",
+      "fields_sha256": "e824b33dee0ae1d886c5c63f541da9279bcd774c653beca42845ab10c57234a7",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 152.9316120147705,
+      "max_U_mm": 0.1548196706836823,
+      "max_GP_von_Mises_MPa": 334.2662957593731,
+      "max_relative_residual": 2.3669145825883765e-09,
+      "min_J": 0.9981295047426435,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792896584.0259578,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
     }
   ],
-  "recent_30_min_completions": 37,
-  "eta_from_recent_throughput_beijing": "2026-10-25T20:51:36.314427+08:00",
+  "recent_30_min_completions": 24,
+  "eta_from_recent_throughput_beijing": "2026-10-26T02:33:32.489981+08:00",
   "eta_scope": "Extrapolation from the last 30 minutes of unique accepted IDs; unresolved constitutive/branch cases and changing mesh size may delay completion.",
   "full_J2_extension": {
     "elastic_path_comparison_0053": {
@@ -6376,6 +6448,46 @@
       "unload_displacement_norm_mm": 0.0013880615083843794,
       "passed": true
     },
+    "plastic_merit_full_rod_regression": {
+      "sample_id": "normal_rodv2_0028__compression",
+      "scope": "Existing accepted ID used only for full nonlinear elastic-rod regression; no new effective count",
+      "relative_L2": {
+        "U_peak_mm": 2.7302352305649335e-12,
+        "GP_Cauchy_stress_MPa": 2.0082180015592825e-12,
+        "GP_von_Mises_MPa": 8.977274806572377e-13
+      },
+      "reference_fields_sha256": "104ad4c9586a3724e05719188b5e772e91066cd26c83a94111353e23b3ea5fa7",
+      "solver_sha256": "868fe4b0297531740ea9f167e704f33c6b6c8be8e6a3853b776d1659120872e2",
+      "seconds": 79.19019508361816,
+      "passed": true
+    },
+    "homotopy_plastic_regression": {
+      "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+      "U_relative_L2": 2.1407094727144127e-07,
+      "GP_tensor_relative_L2": 1.0476502640127721e-07,
+      "PEEQ_absolute_error": 4.820296519250124e-12,
+      "CCX_max_PEEQ": 8.967564e-05,
+      "FEn_max_PEEQ": 8.967563517970348e-05,
+      "all_20_states_U_max_relative": 2.1407094727144127e-07,
+      "all_20_states_max_PEEQ_absolute_error": 4.820296519250124e-12,
+      "GP_match_mm": 2.0032143250599133e-15,
+      "material_range_passed": true,
+      "unload_displacement_norm_mm": 0.0013880615982180518,
+      "passed": true
+    },
+    "homotopy_full_rod_regression": {
+      "sample_id": "normal_rodv2_0028__compression",
+      "scope": "Existing accepted ID used only for full nonlinear elastic-rod regression; no new effective count",
+      "relative_L2": {
+        "U_peak_mm": 2.7058756381714874e-12,
+        "GP_Cauchy_stress_MPa": 1.7723603394464845e-12,
+        "GP_von_Mises_MPa": 7.420735802800757e-13
+      },
+      "reference_fields_sha256": "104ad4c9586a3724e05719188b5e772e91066cd26c83a94111353e23b3ea5fa7",
+      "solver_sha256": "57977e45712f5fde0b4bd74443e235f69cd4f3058f5732814fec1b2c38bcd032",
+      "seconds": 131.97640895843506,
+      "passed": true
+    },
     "target_cases": [
       {
         "sample_id": "normal_rodv2_0033__compression_skew",
@@ -6453,21 +6565,16 @@
       },
       {
         "sample_id": "normal_rodv2_0053__compression_skew",
-        "state": "failed",
-        "last_failure": {
-          "error": "RuntimeError('Newton step not admissible; no fallback physics')",
-          "time_unix": 1792895396.1250987,
-          "no_accepted_full_case": true
-        },
-        "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+        "state": "running",
+        "solver_module": "tools.rod_fenicsx_solver_r05_j2_homotopy",
         "solver_status": {
           "phase": "newton",
-          "pid": 4963,
-          "elapsed_seconds": 121.10090613365173,
-          "step": 7,
-          "load_factor": 0.8,
-          "iteration": 4,
-          "free_residual_relative": 3224.4587338682563
+          "pid": 6281,
+          "elapsed_seconds": 61.079259157180786,
+          "step": 4,
+          "load_factor": 0.5,
+          "iteration": 2,
+          "free_residual_relative": 0.015953745747569626
         }
       },
       {
@@ -6597,6 +6704,36 @@
           "time_unix": 1792895396.1250987,
           "no_accepted_full_case": true
         },
+        "archived": true
+      },
+      {
+        "sample_id": "normal_rodv2_0053__compression_skew",
+        "started_unix": 1792895901.637665,
+        "solver_source_sha256": "868fe4b0297531740ea9f167e704f33c6b6c8be8e6a3853b776d1659120872e2",
+        "method": "弹性全步／塑性残差回溯",
+        "state": "failed",
+        "last_accepted_load_factor": 0.7,
+        "attempted_load_factor": 0.8,
+        "elapsed_seconds": 349.06362295150757,
+        "last_relative_residual": 0.9330638403343778,
+        "failure": {
+          "error": "RuntimeError('Newton iteration limit; no unconverged label exported')",
+          "time_unix": 1792896259.9896908,
+          "no_accepted_full_case": true
+        },
+        "archived": true
+      },
+      {
+        "sample_id": "normal_rodv2_0053__compression_skew",
+        "started_unix": 1792896517.8928604,
+        "solver_source_sha256": "57977e45712f5fde0b4bd74443e235f69cd4f3058f5732814fec1b2c38bcd032",
+        "method": "冻结历史的数值载荷延续",
+        "state": "running",
+        "last_accepted_load_factor": 0.4,
+        "attempted_load_factor": 0.5,
+        "elapsed_seconds": 61.079259157180786,
+        "last_relative_residual": 0.015953745747569626,
+        "failure": null,
         "archived": false
       }
     ]
