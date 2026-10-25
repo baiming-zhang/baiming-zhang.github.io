@@ -282,9 +282,8 @@
   },
   "pc_source_validation_status": {
     "pid": 39588,
-    "stage": "validated_recovery_running",
-    "updated_unix": 1792905418.0340748,
-    "solver_sha256": "167a25beec8a763e6deea9619c6ef692787805e5c3d541c2fd2a06cc5840084b"
+    "stage": "complete",
+    "updated_unix": 1792909018.5761027
   },
   "pc_validation_manifest": {
     "state": "validated",
@@ -298,9 +297,11 @@
   },
   "pc_remaining_blocked_status": {
     "pid": 24896,
-    "stage": "waiting_for_final_validation_recovery",
-    "updated_unix": 1792905793.6521513,
-    "upstream_pid": 39588
+    "stage": "recovering",
+    "updated_unix": 1792909018.641453,
+    "sample_ids": [
+      "normal_rodv2_0096__gas_inertia_30deg"
+    ]
   },
   "trial_conditioning_driver": {
     "pid": 41168,
@@ -871,16 +872,19 @@
     },
     {
       "sample_id": "normal_rodv2_0079__compression_skew",
-      "state": "running",
+      "state": "time_bound",
+      "last_failure": {
+        "error": "1800-second recovery attempt budget reached; not a proof of no equilibrium"
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_pc_homotopy",
       "solver_status": {
         "phase": "newton",
         "pid": 12368,
-        "elapsed_seconds": 1394.704824924469,
+        "elapsed_seconds": 1793.9321258068085,
         "step": 9,
-        "load_factor": 0.9469095170497883,
-        "iteration": 7,
-        "free_residual_relative": 0.007921862426270866,
+        "load_factor": 0.9509462992280515,
+        "iteration": 0,
+        "free_residual_relative": 0.0006669592046743728,
         "numerical_root_tolerance": 2e-09
       }
     },
@@ -942,21 +946,17 @@
     },
     {
       "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
-        "time_unix": 1792905044.6776307,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_pc_homotopy",
       "solver_status": {
         "phase": "newton",
-        "pid": 11383,
-        "elapsed_seconds": 37.47569227218628,
-        "step": 5,
-        "load_factor": 0.6,
-        "iteration": 2,
-        "free_residual_relative": 1225.6455732942118
+        "pid": 13071,
+        "elapsed_seconds": 132.35618543624878,
+        "step": 4,
+        "load_factor": 0.5,
+        "iteration": 5,
+        "free_residual_relative": 1.8296428156078055e-05,
+        "numerical_root_tolerance": 2e-07
       }
     },
     {
@@ -1250,7 +1250,7 @@
         "time_unix": 1792905044.6776307,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
@@ -1285,11 +1285,26 @@
       "started_unix": 1792907218.313515,
       "solver_source_sha256": "167a25beec8a763e6deea9619c6ef692787805e5c3d541c2fd2a06cc5840084b",
       "method": "冻结历史／切线预测及单调校正",
-      "state": "running",
+      "state": "time_bound",
       "last_accepted_load_factor": 0.9,
-      "attempted_load_factor": 0.9469095170497883,
-      "elapsed_seconds": 1394.704824924469,
-      "last_relative_residual": 0.007921862426270866,
+      "attempted_load_factor": 0.9509462992280515,
+      "elapsed_seconds": 1793.9321258068085,
+      "last_relative_residual": 0.0006669592046743728,
+      "failure": {
+        "error": "1800-second recovery attempt budget reached; not a proof of no equilibrium"
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
+      "started_unix": 1792909018.7608945,
+      "solver_source_sha256": "167a25beec8a763e6deea9619c6ef692787805e5c3d541c2fd2a06cc5840084b",
+      "method": "冻结历史／切线预测及单调校正",
+      "state": "running",
+      "last_accepted_load_factor": 0.4,
+      "attempted_load_factor": 0.5,
+      "elapsed_seconds": 132.35618543624878,
+      "last_relative_residual": 1.8296428156078055e-05,
       "failure": null,
       "archived": false
     }
