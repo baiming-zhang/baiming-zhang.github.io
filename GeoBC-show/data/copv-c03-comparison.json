@@ -1,0 +1,418 @@
+{
+  "schema": "copv_c03_comparison_v1",
+  "probe_count": 2048,
+  "method": "2048 fixed material-stratified interior cell-centroid probes, volume-proportional cell sampling; affine tetra containment and P1/P2 shape functions; no nearest-node matching, extrapolation or rigid registration",
+  "cases": {
+    "h6_P1": {
+      "nodes": 194235,
+      "cells": 914613,
+      "dofs": 582705,
+      "displacement_degree": 1,
+      "max_U_mm": 0.3558847333777512,
+      "strain_energy_Nmm": 7438.4258978844355,
+      "true_relative_residual": 1.0180967814903494e-10,
+      "peak_solve_seconds": 28.007922093998786,
+      "total_seconds": 118.5911991819994,
+      "mapped_probes": 2048,
+      "probes_total": 2048,
+      "cap_convention": "circular"
+    },
+    "h4_P1": {
+      "nodes": 283759,
+      "cells": 1378773,
+      "dofs": 851277,
+      "displacement_degree": 1,
+      "max_U_mm": 0.3830109898924276,
+      "strain_energy_Nmm": 7782.952578944028,
+      "true_relative_residual": 1.0296839457990998e-10,
+      "peak_solve_seconds": 14.369418633999885,
+      "total_seconds": 79.80275410800095,
+      "mapped_probes": 2047,
+      "probes_total": 2048,
+      "cap_convention": "circular"
+    },
+    "h6_P2": {
+      "nodes": 1380976,
+      "cells": 914613,
+      "dofs": 4142928,
+      "displacement_degree": 2,
+      "max_U_mm": 0.40923838735525775,
+      "strain_energy_Nmm": 8108.554223183442,
+      "true_relative_residual": 1.4147788187621404e-10,
+      "peak_solve_seconds": 79.27450699699693,
+      "total_seconds": 210.75054929500038,
+      "mapped_probes": 2048,
+      "probes_total": 2048,
+      "cap_convention": "circular"
+    },
+    "h4_P2": {
+      "nodes": 2049168,
+      "cells": 1378773,
+      "dofs": 6147504,
+      "displacement_degree": 2,
+      "max_U_mm": 0.4090941958533781,
+      "strain_energy_Nmm": 8107.951319961925,
+      "true_relative_residual": 1.6222728498362919e-10,
+      "peak_solve_seconds": 92.12718055499863,
+      "total_seconds": 263.81060908499785,
+      "mapped_probes": 2047,
+      "probes_total": 2048,
+      "cap_convention": "circular"
+    },
+    "h6_P1_discrete": {
+      "nodes": 194235,
+      "cells": 914613,
+      "dofs": 582705,
+      "displacement_degree": 1,
+      "max_U_mm": 0.3558673808965421,
+      "strain_energy_Nmm": 7438.243489346411,
+      "true_relative_residual": 1.0064423384076088e-10,
+      "peak_solve_seconds": 11.80303892500524,
+      "total_seconds": 57.17700224500004,
+      "mapped_probes": 2048,
+      "probes_total": 2048,
+      "cap_convention": "discrete"
+    }
+  },
+  "comparisons": {
+    "P1_mesh": {
+      "reference": "h6_P1",
+      "candidate": "h4_P1",
+      "common_probes": 2047,
+      "unmapped_explicitly_excluded": 1,
+      "relative_probe_vector_L2": 0.06455261018268472,
+      "probe_vector_RMSE_mm": 0.014096295637696907,
+      "p95_vector_difference_mm": 0.027178342335056015,
+      "max_vector_difference_mm": 0.03379002309960757,
+      "volume_weighted_probe_stress_Frobenius_difference": 0.2413054651750596,
+      "energy_relative_change": 0.04631714905670825,
+      "node_max_U_relative_change": 0.07622202913066078,
+      "gauge_coordinate_max_difference_mm": 2.1272573774684137e-16,
+      "no_rigid_registration": true,
+      "by_part": {
+        "1": {
+          "mapped": 171,
+          "relative_U_L2": 0.06427304337978337
+        },
+        "2": {
+          "mapped": 171,
+          "relative_U_L2": 0.0689897776947603
+        },
+        "3": {
+          "mapped": 171,
+          "relative_U_L2": 0.06290917106190645
+        },
+        "4": {
+          "mapped": 171,
+          "relative_U_L2": 0.06625103899175969
+        },
+        "5": {
+          "mapped": 171,
+          "relative_U_L2": 0.06576852407966838
+        },
+        "6": {
+          "mapped": 171,
+          "relative_U_L2": 0.0639084824676718
+        },
+        "7": {
+          "mapped": 171,
+          "relative_U_L2": 0.07289424808649139
+        },
+        "8": {
+          "mapped": 170,
+          "relative_U_L2": 0.5950829804294038
+        },
+        "9": {
+          "mapped": 170,
+          "relative_U_L2": 0.05732388421685503
+        },
+        "10": {
+          "mapped": 170,
+          "relative_U_L2": 0.06895851304117102
+        },
+        "14": {
+          "mapped": 170,
+          "relative_U_L2": 0.05780409806338803
+        },
+        "18": {
+          "mapped": 170,
+          "relative_U_L2": 0.08600048819560457
+        }
+      }
+    },
+    "degree_on_h6": {
+      "reference": "h6_P1",
+      "candidate": "h6_P2",
+      "common_probes": 2048,
+      "unmapped_explicitly_excluded": 0,
+      "relative_probe_vector_L2": 0.1259666084885219,
+      "probe_vector_RMSE_mm": 0.027500552443156013,
+      "p95_vector_difference_mm": 0.051803191481126346,
+      "max_vector_difference_mm": 0.06463425633737055,
+      "volume_weighted_probe_stress_Frobenius_difference": 0.24929272183344747,
+      "energy_relative_change": 0.09009007207957787,
+      "node_max_U_relative_change": 0.14991835550550214,
+      "gauge_coordinate_max_difference_mm": 0.0,
+      "no_rigid_registration": true,
+      "by_part": {
+        "1": {
+          "mapped": 171,
+          "relative_U_L2": 0.12624457162916436
+        },
+        "2": {
+          "mapped": 171,
+          "relative_U_L2": 0.13572403791696755
+        },
+        "3": {
+          "mapped": 171,
+          "relative_U_L2": 0.12389581393113398
+        },
+        "4": {
+          "mapped": 171,
+          "relative_U_L2": 0.13138619015674935
+        },
+        "5": {
+          "mapped": 171,
+          "relative_U_L2": 0.12971024271976056
+        },
+        "6": {
+          "mapped": 171,
+          "relative_U_L2": 0.12642314179464825
+        },
+        "7": {
+          "mapped": 171,
+          "relative_U_L2": 0.1397260139064325
+        },
+        "8": {
+          "mapped": 171,
+          "relative_U_L2": 1.0587111750314708
+        },
+        "9": {
+          "mapped": 170,
+          "relative_U_L2": 0.11263750712233019
+        },
+        "10": {
+          "mapped": 170,
+          "relative_U_L2": 0.13602332666111702
+        },
+        "14": {
+          "mapped": 170,
+          "relative_U_L2": 0.11344733866545909
+        },
+        "18": {
+          "mapped": 170,
+          "relative_U_L2": 0.2125077340819096
+        }
+      },
+      "same_mesh_all_stored_nodes_relative_U_L2": 0.1233062743580161
+    },
+    "P2_mesh": {
+      "reference": "h6_P2",
+      "candidate": "h4_P2",
+      "common_probes": 2047,
+      "unmapped_explicitly_excluded": 1,
+      "relative_probe_vector_L2": 0.0016599041544951441,
+      "probe_vector_RMSE_mm": 0.0004062933810259292,
+      "p95_vector_difference_mm": 0.0007058953139123694,
+      "max_vector_difference_mm": 0.0008210868970994323,
+      "volume_weighted_probe_stress_Frobenius_difference": 0.010968377893990792,
+      "energy_relative_change": -7.435397296762236e-05,
+      "node_max_U_relative_change": -0.00035234109588666573,
+      "gauge_coordinate_max_difference_mm": 2.1272573774684137e-16,
+      "no_rigid_registration": true,
+      "by_part": {
+        "1": {
+          "mapped": 171,
+          "relative_U_L2": 0.0016512396082608472
+        },
+        "2": {
+          "mapped": 171,
+          "relative_U_L2": 0.0015906185445987997
+        },
+        "3": {
+          "mapped": 171,
+          "relative_U_L2": 0.0017065663173911592
+        },
+        "4": {
+          "mapped": 171,
+          "relative_U_L2": 0.0016884216936016133
+        },
+        "5": {
+          "mapped": 171,
+          "relative_U_L2": 0.001682441142713765
+        },
+        "6": {
+          "mapped": 171,
+          "relative_U_L2": 0.0016277908367173521
+        },
+        "7": {
+          "mapped": 171,
+          "relative_U_L2": 0.001460772821728939
+        },
+        "8": {
+          "mapped": 170,
+          "relative_U_L2": 0.005182614072288853
+        },
+        "9": {
+          "mapped": 170,
+          "relative_U_L2": 0.0016652967776620052
+        },
+        "10": {
+          "mapped": 170,
+          "relative_U_L2": 0.0038322828468841563
+        },
+        "14": {
+          "mapped": 170,
+          "relative_U_L2": 0.0018328547483604902
+        },
+        "18": {
+          "mapped": 170,
+          "relative_U_L2": 0.009243663449635757
+        }
+      }
+    },
+    "degree_on_h4": {
+      "reference": "h4_P1",
+      "candidate": "h4_P2",
+      "common_probes": 2047,
+      "unmapped_explicitly_excluded": 1,
+      "relative_probe_vector_L2": 0.05804018135062408,
+      "probe_vector_RMSE_mm": 0.013445450311029221,
+      "p95_vector_difference_mm": 0.02453824713401551,
+      "max_vector_difference_mm": 0.03136833954265902,
+      "volume_weighted_probe_stress_Frobenius_difference": 0.16955950501892475,
+      "energy_relative_change": 0.041757769653787635,
+      "node_max_U_relative_change": 0.06810041134400935,
+      "gauge_coordinate_max_difference_mm": 0.0,
+      "no_rigid_registration": true,
+      "by_part": {
+        "1": {
+          "mapped": 171,
+          "relative_U_L2": 0.058778184820536504
+        },
+        "2": {
+          "mapped": 171,
+          "relative_U_L2": 0.06297666188859133
+        },
+        "3": {
+          "mapped": 171,
+          "relative_U_L2": 0.05776753736597083
+        },
+        "4": {
+          "mapped": 171,
+          "relative_U_L2": 0.061495838270479684
+        },
+        "5": {
+          "mapped": 171,
+          "relative_U_L2": 0.0605413789831788
+        },
+        "6": {
+          "mapped": 171,
+          "relative_U_L2": 0.059223619171924716
+        },
+        "7": {
+          "mapped": 171,
+          "relative_U_L2": 0.06252067764681306
+        },
+        "8": {
+          "mapped": 170,
+          "relative_U_L2": 0.344244466624581
+        },
+        "9": {
+          "mapped": 170,
+          "relative_U_L2": 0.05244550031462728
+        },
+        "10": {
+          "mapped": 170,
+          "relative_U_L2": 0.07837766903895242
+        },
+        "14": {
+          "mapped": 170,
+          "relative_U_L2": 0.05284272736556389
+        },
+        "18": {
+          "mapped": 170,
+          "relative_U_L2": 0.13957491964593866
+        }
+      },
+      "same_mesh_all_stored_nodes_relative_U_L2": 0.05790194282198637
+    },
+    "cap_closure": {
+      "reference": "h6_P1",
+      "candidate": "h6_P1_discrete",
+      "common_probes": 2048,
+      "unmapped_explicitly_excluded": 0,
+      "relative_probe_vector_L2": 0.00011559923048476775,
+      "probe_vector_RMSE_mm": 2.523718577867808e-05,
+      "p95_vector_difference_mm": 4.047387191508453e-05,
+      "max_vector_difference_mm": 4.153955693751229e-05,
+      "volume_weighted_probe_stress_Frobenius_difference": 2.1488881576847138e-05,
+      "energy_relative_change": -2.452246490436405e-05,
+      "node_max_U_relative_change": -4.8758711969520974e-05,
+      "gauge_coordinate_max_difference_mm": 0.0,
+      "no_rigid_registration": true,
+      "by_part": {
+        "1": {
+          "mapped": 171,
+          "relative_U_L2": 0.00012082744363724761
+        },
+        "2": {
+          "mapped": 171,
+          "relative_U_L2": 0.00011834274913787153
+        },
+        "3": {
+          "mapped": 171,
+          "relative_U_L2": 0.00012265866485133847
+        },
+        "4": {
+          "mapped": 171,
+          "relative_U_L2": 0.00012207388506242742
+        },
+        "5": {
+          "mapped": 171,
+          "relative_U_L2": 0.0001234748087487136
+        },
+        "6": {
+          "mapped": 171,
+          "relative_U_L2": 0.00012042742678250444
+        },
+        "7": {
+          "mapped": 171,
+          "relative_U_L2": 0.00010692969257450048
+        },
+        "8": {
+          "mapped": 171,
+          "relative_U_L2": 0.0003811590279658177
+        },
+        "9": {
+          "mapped": 170,
+          "relative_U_L2": 0.00011215384722179543
+        },
+        "10": {
+          "mapped": 170,
+          "relative_U_L2": 0.0010703316516788527
+        },
+        "14": {
+          "mapped": 170,
+          "relative_U_L2": 0.00011670969724227582
+        },
+        "18": {
+          "mapped": 170,
+          "relative_U_L2": 0.00583532448033268
+        }
+      }
+    }
+  },
+  "GP_statistics": {
+    "h6_P1": "h6_P1_GP_statistics.json",
+    "h4_P1": "h4_P1_GP_statistics.json",
+    "h6_P2": "h6_P2_GP_statistics.json",
+    "h4_P2": "h4_P2_GP_statistics.json"
+  },
+  "limitations": [
+    "Probe norms are sampled differences, not exact global discretization errors",
+    "GP RMS is material-wise, from the actual solved degree and original quadrature",
+    "Sharp-corner raw peaks are diagnostic and not convergence certificates"
+  ],
+  "seconds": 9.060033499961719
+}

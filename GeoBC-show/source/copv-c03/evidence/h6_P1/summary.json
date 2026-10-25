@@ -1,0 +1,163 @@
+{
+  "status": "completed",
+  "case_id": "C02_detailed_baseline_1MPa",
+  "backend": "CPU FFCx assembly; PETSc CUDA FGMRES/GAMG on full displacement operator, unsmoothed aggregation and Jacobi/Chebyshev levels; small coarsest SVD on CPU, hierarchy recorded in KSP view",
+  "preconditioner": "full-gamg",
+  "dolfinx": "0.11.0",
+  "petsc": [
+    3,
+    25,
+    6
+  ],
+  "matrix_type": "seqaijcusparse",
+  "vector_type": "seqcuda",
+  "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+  "nodes": 194235,
+  "geometry_nodes": 1380976,
+  "cells": 914613,
+  "dofs": 582705,
+  "displacement_degree": 1,
+  "structural_parts": 12,
+  "display_only_seals": 6,
+  "pressure_MPa": 1.0,
+  "true_relative_residual": 1.0180967814903494e-10,
+  "peak_iterations": 1304,
+  "peak_reason": 2,
+  "peak_solve_seconds": 28.007922093998786,
+  "max_U_mm": 0.3558847333777512,
+  "strain_energy_Nmm": 7438.4258978844355,
+  "external_work_Nmm": 14876.851795636241,
+  "energy_work_relative_error": 8.915090887740007e-12,
+  "force_balance_N": [
+    -6.845099209673577e-10,
+    1.0282815723905436e-08,
+    1.0421348739519942e-07
+  ],
+  "moment_balance_Nmm": [
+    -5.0509272569394425e-06,
+    -8.595079541429129e-07,
+    3.08825256022799e-07
+  ],
+  "load_resultant_N": [
+    1.9024967712333307e-10,
+    -1.3517892361036843e-10,
+    0.18147637560862062
+  ],
+  "gauge_reactions_N": [
+    -8.747595980906908e-10,
+    2.2168781477205357e-08,
+    -0.09073762276581765,
+    -1.1750786829689552e-08,
+    -0.09073774685910174,
+    -9.017702138347516e-07
+  ],
+  "cap_forces_N": {
+    "upper": 326.85129967948205,
+    "lower": 213.8246499849553
+  },
+  "cap_areas_mm2": {
+    "top": 53.195862399658836,
+    "bottom": 43.409831109155924
+  },
+  "min_GP_Jacobian_mm3": 0.0007576650013307442,
+  "material_frame_det_max_error": 1.3322676295501878e-15,
+  "half_load_relative_error": 9.799148413044275e-10,
+  "zero_load_U_norm": 0.0,
+  "part_statistics": {
+    "1": {
+      "material": "aluminum",
+      "name": "\u91d1\u5c5e\u6c14\u5bc6\u5185\u886c",
+      "max_GP_von_Mises_MPa": 121.31904417623282,
+      "max_abs_fiber_sigma11_MPa": 66.37051411765069,
+      "volume_mm3": 335073.5662344351
+    },
+    "2": {
+      "material": "adhesive",
+      "name": "\u73af\u6c27\u7c98\u63a5\u5c42 0.15 mm",
+      "max_GP_von_Mises_MPa": 11.999915333668302,
+      "max_abs_fiber_sigma11_MPa": 13.907443760021788,
+      "volume_mm3": 49499.813948484465
+    },
+    "3": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 1 / +55\u00b0",
+      "max_GP_von_Mises_MPa": 50.52596707125578,
+      "max_abs_fiber_sigma11_MPa": 45.99379464658564,
+      "volume_mm3": 248940.3663322951
+    },
+    "4": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 2 / -55\u00b0",
+      "max_GP_von_Mises_MPa": 59.34754979164405,
+      "max_abs_fiber_sigma11_MPa": 57.79193082158726,
+      "volume_mm3": 251137.4190358348
+    },
+    "5": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 3 / -55\u00b0",
+      "max_GP_von_Mises_MPa": 65.77502111194433,
+      "max_abs_fiber_sigma11_MPa": 63.46440477780297,
+      "volume_mm3": 253313.55646593595
+    },
+    "6": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 4 / +55\u00b0",
+      "max_GP_von_Mises_MPa": 65.01480305590927,
+      "max_abs_fiber_sigma11_MPa": 63.80911629949355,
+      "volume_mm3": 255488.2042404518
+    },
+    "7": {
+      "material": "carbon",
+      "name": "\u4e0a\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+      "max_GP_von_Mises_MPa": 182.04948816232994,
+      "max_abs_fiber_sigma11_MPa": 111.18053086429603,
+      "volume_mm3": 4273.077316903033
+    },
+    "8": {
+      "material": "carbon",
+      "name": "\u4e0b\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+      "max_GP_von_Mises_MPa": 197.27133743274854,
+      "max_abs_fiber_sigma11_MPa": 115.08616450641213,
+      "volume_mm3": 4271.782176427214
+    },
+    "9": {
+      "material": "titanium",
+      "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+      "max_GP_von_Mises_MPa": 25.401407680163626,
+      "max_abs_fiber_sigma11_MPa": 22.126610616009334,
+      "volume_mm3": 83493.10707185788
+    },
+    "10": {
+      "material": "titanium",
+      "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+      "max_GP_von_Mises_MPa": 24.679470623245205,
+      "max_abs_fiber_sigma11_MPa": 20.843891913015998,
+      "volume_mm3": 80852.26006732885
+    },
+    "14": {
+      "material": "steel",
+      "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+      "max_GP_von_Mises_MPa": 8.673619022635316,
+      "max_abs_fiber_sigma11_MPa": 6.594910041701182,
+      "volume_mm3": 16166.006370053345
+    },
+    "18": {
+      "material": "steel",
+      "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+      "max_GP_von_Mises_MPa": 8.125356454661256,
+      "max_abs_fiber_sigma11_MPa": 5.38493380065556,
+      "volume_mm3": 14389.972160853926
+    }
+  },
+  "mesh_sha256": "09ec8d0aba2072d29ac2e76fb9b5d6b6a3400287e69b846b6b06fb0156e93e15",
+  "contract_sha256": "6f3da59471347baa454c052471b6025cfe0da34f937206e83ff5b46b07a48a21",
+  "solver_sha256": "1ba38288c0d3de789f0f592046a737fe5d6bd77dd4dc015a9e25e040296597cf",
+  "total_seconds": 118.5911991819994,
+  "limitations": [
+    "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+    "Straight-sided geometry, P1 displacement; curved mesh attempt rejected; convergence belongs to C03",
+    "von Mises for composites is a diagnostic, not a failure criterion",
+    "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+  ],
+  "metadata_correction": "Corrected a stale P2 limitation description to P1; numerical fields unchanged. solver_sha256 matches solver_executed_snapshot.py."
+}

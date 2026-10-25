@@ -1,0 +1,872 @@
+{
+  "schema": "copv_c03_cases_v1",
+  "cases": [
+    {
+      "id": "h6_P1",
+      "label": "h6 · P1",
+      "degree": 1,
+      "h_mm": 6,
+      "cap_convention": "circular",
+      "summary": {
+        "status": "completed",
+        "case_id": "C02_detailed_baseline_1MPa",
+        "backend": "CPU FFCx assembly; PETSc CUDA FGMRES/GAMG on full displacement operator, unsmoothed aggregation and Jacobi/Chebyshev levels; small coarsest SVD on CPU, hierarchy recorded in KSP view",
+        "preconditioner": "full-gamg",
+        "dolfinx": "0.11.0",
+        "petsc": [
+          3,
+          25,
+          6
+        ],
+        "matrix_type": "seqaijcusparse",
+        "vector_type": "seqcuda",
+        "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+        "nodes": 194235,
+        "geometry_nodes": 1380976,
+        "cells": 914613,
+        "dofs": 582705,
+        "displacement_degree": 1,
+        "structural_parts": 12,
+        "display_only_seals": 6,
+        "pressure_MPa": 1.0,
+        "true_relative_residual": 1.0180967814903494e-10,
+        "peak_iterations": 1304,
+        "peak_reason": 2,
+        "peak_solve_seconds": 28.007922093998786,
+        "max_U_mm": 0.3558847333777512,
+        "strain_energy_Nmm": 7438.4258978844355,
+        "external_work_Nmm": 14876.851795636241,
+        "energy_work_relative_error": 8.915090887740007e-12,
+        "force_balance_N": [
+          -6.845099209673577e-10,
+          1.0282815723905436e-08,
+          1.0421348739519942e-07
+        ],
+        "moment_balance_Nmm": [
+          -5.0509272569394425e-06,
+          -8.595079541429129e-07,
+          3.08825256022799e-07
+        ],
+        "load_resultant_N": [
+          1.9024967712333307e-10,
+          -1.3517892361036843e-10,
+          0.18147637560862062
+        ],
+        "gauge_reactions_N": [
+          -8.747595980906908e-10,
+          2.2168781477205357e-08,
+          -0.09073762276581765,
+          -1.1750786829689552e-08,
+          -0.09073774685910174,
+          -9.017702138347516e-07
+        ],
+        "cap_forces_N": {
+          "upper": 326.85129967948205,
+          "lower": 213.8246499849553
+        },
+        "cap_areas_mm2": {
+          "top": 53.195862399658836,
+          "bottom": 43.409831109155924
+        },
+        "min_GP_Jacobian_mm3": 0.0007576650013307442,
+        "material_frame_det_max_error": 1.3322676295501878e-15,
+        "half_load_relative_error": 9.799148413044275e-10,
+        "zero_load_U_norm": 0.0,
+        "part_statistics": {
+          "1": {
+            "material": "aluminum",
+            "name": "金属气密内衬",
+            "max_GP_von_Mises_MPa": 121.31904417623282,
+            "max_abs_fiber_sigma11_MPa": 66.37051411765069,
+            "volume_mm3": 335073.5662344351
+          },
+          "2": {
+            "material": "adhesive",
+            "name": "环氧粘接层 0.15 mm",
+            "max_GP_von_Mises_MPa": 11.999915333668302,
+            "max_abs_fiber_sigma11_MPa": 13.907443760021788,
+            "volume_mm3": 49499.813948484465
+          },
+          "3": {
+            "material": "carbon",
+            "name": "包覆铺层 1 / +55°",
+            "max_GP_von_Mises_MPa": 50.52596707125578,
+            "max_abs_fiber_sigma11_MPa": 45.99379464658564,
+            "volume_mm3": 248940.3663322951
+          },
+          "4": {
+            "material": "carbon",
+            "name": "包覆铺层 2 / -55°",
+            "max_GP_von_Mises_MPa": 59.34754979164405,
+            "max_abs_fiber_sigma11_MPa": 57.79193082158726,
+            "volume_mm3": 251137.4190358348
+          },
+          "5": {
+            "material": "carbon",
+            "name": "包覆铺层 3 / -55°",
+            "max_GP_von_Mises_MPa": 65.77502111194433,
+            "max_abs_fiber_sigma11_MPa": 63.46440477780297,
+            "volume_mm3": 253313.55646593595
+          },
+          "6": {
+            "material": "carbon",
+            "name": "包覆铺层 4 / +55°",
+            "max_GP_von_Mises_MPa": 65.01480305590927,
+            "max_abs_fiber_sigma11_MPa": 63.80911629949355,
+            "volume_mm3": 255488.2042404518
+          },
+          "7": {
+            "material": "carbon",
+            "name": "上极区局部补强",
+            "max_GP_von_Mises_MPa": 182.04948816232994,
+            "max_abs_fiber_sigma11_MPa": 111.18053086429603,
+            "volume_mm3": 4273.077316903033
+          },
+          "8": {
+            "material": "carbon",
+            "name": "下极区局部补强",
+            "max_GP_von_Mises_MPa": 197.27133743274854,
+            "max_abs_fiber_sigma11_MPa": 115.08616450641213,
+            "volume_mm3": 4271.782176427214
+          },
+          "9": {
+            "material": "titanium",
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 25.401407680163626,
+            "max_abs_fiber_sigma11_MPa": 22.126610616009334,
+            "volume_mm3": 83493.10707185788
+          },
+          "10": {
+            "material": "titanium",
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 24.679470623245205,
+            "max_abs_fiber_sigma11_MPa": 20.843891913015998,
+            "volume_mm3": 80852.26006732885
+          },
+          "14": {
+            "material": "steel",
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 8.673619022635316,
+            "max_abs_fiber_sigma11_MPa": 6.594910041701182,
+            "volume_mm3": 16166.006370053345
+          },
+          "18": {
+            "material": "steel",
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 8.125356454661256,
+            "max_abs_fiber_sigma11_MPa": 5.38493380065556,
+            "volume_mm3": 14389.972160853926
+          }
+        },
+        "mesh_sha256": "09ec8d0aba2072d29ac2e76fb9b5d6b6a3400287e69b846b6b06fb0156e93e15",
+        "contract_sha256": "6f3da59471347baa454c052471b6025cfe0da34f937206e83ff5b46b07a48a21",
+        "solver_sha256": "1ba38288c0d3de789f0f592046a737fe5d6bd77dd4dc015a9e25e040296597cf",
+        "total_seconds": 118.5911991819994,
+        "limitations": [
+          "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+          "Straight-sided geometry, P1 displacement; curved mesh attempt rejected; convergence belongs to C03",
+          "von Mises for composites is a diagnostic, not a failure criterion",
+          "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+        ],
+        "metadata_correction": "Corrected a stale P2 limitation description to P1; numerical fields unchanged. solver_sha256 matches solver_executed_snapshot.py.",
+        "research_only": true
+      },
+      "asset_root": "h6_P1"
+    },
+    {
+      "id": "h4_P1",
+      "label": "h4 · P1",
+      "degree": 1,
+      "h_mm": 4,
+      "cap_convention": "circular",
+      "summary": {
+        "status": "completed",
+        "case_id": "C03_detailed_mesh_order_closure",
+        "backend": "CPU FFCx assembly; PETSc CUDA FGMRES/GAMG on full displacement operator, unsmoothed aggregation and Jacobi/Chebyshev levels; small coarsest SVD on CPU, hierarchy recorded in KSP view",
+        "preconditioner": "full-gamg",
+        "dolfinx": "0.11.0",
+        "petsc": [
+          3,
+          25,
+          6
+        ],
+        "matrix_type": "seqaijcusparse",
+        "vector_type": "seqcuda",
+        "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+        "nodes": 283759,
+        "geometry_nodes": 2049168,
+        "cells": 1378773,
+        "dofs": 851277,
+        "displacement_degree": 1,
+        "cap_convention": "circular",
+        "raw_GP_saved": false,
+        "structural_parts": 12,
+        "display_only_seals": 6,
+        "pressure_MPa": 1.0,
+        "true_relative_residual": 1.0296839457990998e-10,
+        "peak_iterations": 1158,
+        "peak_reason": 2,
+        "peak_solve_seconds": 14.369418633999885,
+        "max_U_mm": 0.3830109898924276,
+        "strain_energy_Nmm": 7782.952578944028,
+        "external_work_Nmm": 15565.905158831069,
+        "energy_work_relative_error": 6.058198387393077e-11,
+        "force_balance_N": [
+          4.199664782600365e-10,
+          5.216413412334475e-09,
+          -1.049921525275721e-07
+        ],
+        "moment_balance_Nmm": [
+          1.4589495702055238e-07,
+          3.0620501878519564e-07,
+          4.163156191311361e-08
+        ],
+        "load_resultant_N": [
+          5.637387778811842e-11,
+          -1.8102075394210715e-11,
+          0.18147637599223665
+        ],
+        "gauge_reactions_N": [
+          3.635926004719181e-10,
+          6.392492313267439e-09,
+          -0.0907381888948946,
+          -1.1579768255387535e-09,
+          -0.09073814350551457,
+          -1.4858398000860973e-07
+        ],
+        "cap_forces_N": {
+          "upper": 326.85129967948205,
+          "lower": 213.8246499849553
+        },
+        "cap_areas_mm2": {
+          "top": 53.195862399659,
+          "bottom": 43.40983110915589
+        },
+        "min_GP_Jacobian_mm3": 0.0007054084854201447,
+        "material_frame_det_max_error": 1.3322676295501878e-15,
+        "half_load_relative_error": 2.2506462095687716e-10,
+        "zero_load_U_norm": 0.0,
+        "part_statistics": {
+          "1": {
+            "material": "aluminum",
+            "name": "金属气密内衬",
+            "max_GP_von_Mises_MPa": 139.70669390348525,
+            "max_abs_fiber_sigma11_MPa": 72.53886739055608,
+            "volume_mm3": 335037.6012534381
+          },
+          "2": {
+            "material": "adhesive",
+            "name": "环氧粘接层 0.15 mm",
+            "max_GP_von_Mises_MPa": 11.867749525656414,
+            "max_abs_fiber_sigma11_MPa": 16.932192392918473,
+            "volume_mm3": 49522.13961592451
+          },
+          "3": {
+            "material": "carbon",
+            "name": "包覆铺层 1 / +55°",
+            "max_GP_von_Mises_MPa": 49.470381641254875,
+            "max_abs_fiber_sigma11_MPa": 46.845753276935326,
+            "volume_mm3": 248922.40288886277
+          },
+          "4": {
+            "material": "carbon",
+            "name": "包覆铺层 2 / -55°",
+            "max_GP_von_Mises_MPa": 72.7956470726243,
+            "max_abs_fiber_sigma11_MPa": 68.72918203477761,
+            "volume_mm3": 251139.40330806485
+          },
+          "5": {
+            "material": "carbon",
+            "name": "包覆铺层 3 / -55°",
+            "max_GP_von_Mises_MPa": 76.94996519157412,
+            "max_abs_fiber_sigma11_MPa": 73.46081892954413,
+            "volume_mm3": 253321.5751795593
+          },
+          "6": {
+            "material": "carbon",
+            "name": "包覆铺层 4 / +55°",
+            "max_GP_von_Mises_MPa": 73.69797875393346,
+            "max_abs_fiber_sigma11_MPa": 73.77012098831457,
+            "volume_mm3": 255498.85911744376
+          },
+          "7": {
+            "material": "carbon",
+            "name": "上极区局部补强",
+            "max_GP_von_Mises_MPa": 100.676749212791,
+            "max_abs_fiber_sigma11_MPa": 96.75677037068495,
+            "volume_mm3": 4276.650237961278
+          },
+          "8": {
+            "material": "carbon",
+            "name": "下极区局部补强",
+            "max_GP_von_Mises_MPa": 103.89354654041729,
+            "max_abs_fiber_sigma11_MPa": 97.57614501319996,
+            "volume_mm3": 4276.478253320493
+          },
+          "9": {
+            "material": "titanium",
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 20.700478996122776,
+            "max_abs_fiber_sigma11_MPa": 21.232953160463182,
+            "volume_mm3": 83515.53144518849
+          },
+          "10": {
+            "material": "titanium",
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 21.69546403392268,
+            "max_abs_fiber_sigma11_MPa": 19.770182331228003,
+            "volume_mm3": 80877.78673663079
+          },
+          "14": {
+            "material": "steel",
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 8.625682877133421,
+            "max_abs_fiber_sigma11_MPa": 6.666527339188544,
+            "volume_mm3": 16166.193910795466
+          },
+          "18": {
+            "material": "steel",
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 6.685953351952725,
+            "max_abs_fiber_sigma11_MPa": 5.855860793803518,
+            "volume_mm3": 14390.38320380233
+          }
+        },
+        "mesh_sha256": "cd60090df56f3dd3b03edd2cc4221b7a6be85ba92066c613968e2c79f0686d88",
+        "contract_sha256": "f531aa86858d16ddd61f4e6c232b55e2ca5b3eb74c5ae79c70ab03bb7548e488",
+        "solver_sha256": "f19f891eb9922bcb70e4cfdabf9fb35881a531fe7ca7643ed6652ab5cec5d9ea",
+        "total_seconds": 79.80275410800095,
+        "limitations": [
+          "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+          "Straight-sided geometry, P1 displacement; curved mesh attempt rejected; convergence belongs to C03",
+          "von Mises for composites is a diagnostic, not a failure criterion",
+          "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+        ],
+        "research_only": true
+      },
+      "asset_root": "h4_P1"
+    },
+    {
+      "id": "h6_P2",
+      "label": "h6 · P2",
+      "degree": 2,
+      "h_mm": 6,
+      "cap_convention": "circular",
+      "summary": {
+        "status": "completed",
+        "case_id": "C03_detailed_mesh_order_closure",
+        "backend": "CPU FFCx assembly; CUDA P2 FGMRES/Jacobi-Chebyshev and exact P1 transfer; CUDA P1 GAMG coarse correction; tiny CPU SVD at final coarse level, explicit in KSP view",
+        "preconditioner": "p1-gamg",
+        "dolfinx": "0.11.0",
+        "petsc": [
+          3,
+          25,
+          6
+        ],
+        "matrix_type": "seqaijcusparse",
+        "vector_type": "seqcuda",
+        "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+        "nodes": 1380976,
+        "geometry_nodes": 1380976,
+        "cells": 914613,
+        "dofs": 4142928,
+        "displacement_degree": 2,
+        "cap_convention": "circular",
+        "raw_GP_saved": false,
+        "structural_parts": 12,
+        "display_only_seals": 6,
+        "pressure_MPa": 1.0,
+        "true_relative_residual": 1.4147788187621404e-10,
+        "peak_iterations": 2149,
+        "peak_reason": 2,
+        "peak_solve_seconds": 79.27450699699693,
+        "max_U_mm": 0.40923838735525775,
+        "strain_energy_Nmm": 8108.554223183442,
+        "external_work_Nmm": 16217.108446440121,
+        "energy_work_relative_error": 4.515943174965287e-12,
+        "force_balance_N": [
+          3.6512042278502577e-09,
+          6.434626059065307e-08,
+          1.8076389121657321e-07
+        ],
+        "moment_balance_Nmm": [
+          -9.543729898089165e-06,
+          1.1060464610412879e-05,
+          -7.407725999141776e-08
+        ],
+        "load_resultant_N": [
+          1.948182587474534e-10,
+          -1.1509326824921118e-10,
+          0.18147637561058408
+        ],
+        "gauge_reactions_N": [
+          3.4563859691028043e-09,
+          2.8039357440057255e-08,
+          -0.09073718516559871,
+          3.6421996418845026e-08,
+          -0.0907358509659564,
+          -3.1587151377351214e-06
+        ],
+        "cap_forces_N": {
+          "upper": 326.85129967948205,
+          "lower": 213.8246499849553
+        },
+        "cap_areas_mm2": {
+          "top": 53.195862399658836,
+          "bottom": 43.409831109155924
+        },
+        "min_GP_Jacobian_mm3": 0.0007576650013307442,
+        "material_frame_det_max_error": 1.3322676295501878e-15,
+        "half_load_relative_error": 2.6540810246798624e-09,
+        "zero_load_U_norm": 0.0,
+        "part_statistics": {
+          "1": {
+            "material": "aluminum",
+            "name": "金属气密内衬",
+            "max_GP_von_Mises_MPa": 110.40609873017236,
+            "max_abs_fiber_sigma11_MPa": 53.69530433126971,
+            "volume_mm3": 335073.5662344351
+          },
+          "2": {
+            "material": "adhesive",
+            "name": "环氧粘接层 0.15 mm",
+            "max_GP_von_Mises_MPa": 11.44367215482265,
+            "max_abs_fiber_sigma11_MPa": 7.072127887233155,
+            "volume_mm3": 49499.813948484465
+          },
+          "3": {
+            "material": "carbon",
+            "name": "包覆铺层 1 / +55°",
+            "max_GP_von_Mises_MPa": 37.14788295847508,
+            "max_abs_fiber_sigma11_MPa": 38.548397506281844,
+            "volume_mm3": 248940.3663322951
+          },
+          "4": {
+            "material": "carbon",
+            "name": "包覆铺层 2 / -55°",
+            "max_GP_von_Mises_MPa": 42.87981152763999,
+            "max_abs_fiber_sigma11_MPa": 45.10150157549714,
+            "volume_mm3": 251137.4190358348
+          },
+          "5": {
+            "material": "carbon",
+            "name": "包覆铺层 3 / -55°",
+            "max_GP_von_Mises_MPa": 52.034052675211555,
+            "max_abs_fiber_sigma11_MPa": 55.05097085629253,
+            "volume_mm3": 253313.55646593595
+          },
+          "6": {
+            "material": "carbon",
+            "name": "包覆铺层 4 / +55°",
+            "max_GP_von_Mises_MPa": 61.34877988094249,
+            "max_abs_fiber_sigma11_MPa": 65.40742665221181,
+            "volume_mm3": 255488.2042404518
+          },
+          "7": {
+            "material": "carbon",
+            "name": "上极区局部补强",
+            "max_GP_von_Mises_MPa": 96.4551592759949,
+            "max_abs_fiber_sigma11_MPa": 99.10072318416196,
+            "volume_mm3": 4273.077316903033
+          },
+          "8": {
+            "material": "carbon",
+            "name": "下极区局部补强",
+            "max_GP_von_Mises_MPa": 90.80310878380261,
+            "max_abs_fiber_sigma11_MPa": 96.4037356619158,
+            "volume_mm3": 4271.782176427214
+          },
+          "9": {
+            "material": "titanium",
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 28.33809551181732,
+            "max_abs_fiber_sigma11_MPa": 20.757132086519356,
+            "volume_mm3": 83493.10707185788
+          },
+          "10": {
+            "material": "titanium",
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 29.487673083741026,
+            "max_abs_fiber_sigma11_MPa": 20.63035007466759,
+            "volume_mm3": 80852.26006732885
+          },
+          "14": {
+            "material": "steel",
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 8.96673748438421,
+            "max_abs_fiber_sigma11_MPa": 7.533458883590745,
+            "volume_mm3": 16166.006370053345
+          },
+          "18": {
+            "material": "steel",
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 9.059659078359497,
+            "max_abs_fiber_sigma11_MPa": 6.255185660727408,
+            "volume_mm3": 14389.972160853926
+          }
+        },
+        "mesh_sha256": "09ec8d0aba2072d29ac2e76fb9b5d6b6a3400287e69b846b6b06fb0156e93e15",
+        "contract_sha256": "f531aa86858d16ddd61f4e6c232b55e2ca5b3eb74c5ae79c70ab03bb7548e488",
+        "solver_sha256": "f19f891eb9922bcb70e4cfdabf9fb35881a531fe7ca7643ed6652ab5cec5d9ea",
+        "total_seconds": 210.75054929500038,
+        "limitations": [
+          "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+          "Straight-sided geometry, P2 displacement; curved mesh attempt rejected; convergence belongs to C03",
+          "von Mises for composites is a diagnostic, not a failure criterion",
+          "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+        ],
+        "research_only": true
+      },
+      "asset_root": "h6_P2"
+    },
+    {
+      "id": "h4_P2",
+      "label": "h4 · P2",
+      "degree": 2,
+      "h_mm": 4,
+      "cap_convention": "circular",
+      "summary": {
+        "status": "completed",
+        "case_id": "C03_detailed_mesh_order_closure",
+        "backend": "CPU FFCx assembly; CUDA P2 FGMRES/Jacobi-Chebyshev and exact P1 transfer; CUDA P1 GAMG coarse correction; tiny CPU SVD at final coarse level, explicit in KSP view",
+        "preconditioner": "p1-gamg",
+        "dolfinx": "0.11.0",
+        "petsc": [
+          3,
+          25,
+          6
+        ],
+        "matrix_type": "seqaijcusparse",
+        "vector_type": "seqcuda",
+        "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+        "nodes": 2049168,
+        "geometry_nodes": 2049168,
+        "cells": 1378773,
+        "dofs": 6147504,
+        "displacement_degree": 2,
+        "cap_convention": "circular",
+        "raw_GP_saved": false,
+        "structural_parts": 12,
+        "display_only_seals": 6,
+        "pressure_MPa": 1.0,
+        "true_relative_residual": 1.6222728498362919e-10,
+        "peak_iterations": 1614,
+        "peak_reason": 2,
+        "peak_solve_seconds": 92.12718055499863,
+        "max_U_mm": 0.4090941958533781,
+        "strain_energy_Nmm": 8107.951319961925,
+        "external_work_Nmm": 16215.90264032076,
+        "energy_work_relative_error": 2.4476642934700976e-11,
+        "force_balance_N": [
+          1.2131239623958123e-09,
+          -9.382952581571402e-09,
+          2.873641682943351e-08
+        ],
+        "moment_balance_Nmm": [
+          6.71361028362713e-06,
+          6.607424490434637e-06,
+          -1.786084130424673e-07
+        ],
+        "load_resultant_N": [
+          3.7470471170308883e-11,
+          -1.3166939760722585e-11,
+          0.18147637618353027
+        ],
+        "gauge_reactions_N": [
+          1.1756534912255034e-09,
+          -1.3077906230174463e-08,
+          -0.09073908414911006,
+          3.7081205883637836e-09,
+          -0.09073831621129336,
+          1.0529132899780164e-06
+        ],
+        "cap_forces_N": {
+          "upper": 326.85129967948205,
+          "lower": 213.8246499849553
+        },
+        "cap_areas_mm2": {
+          "top": 53.195862399659,
+          "bottom": 43.40983110915589
+        },
+        "min_GP_Jacobian_mm3": 0.0007054084854201447,
+        "material_frame_det_max_error": 1.3322676295501878e-15,
+        "half_load_relative_error": 2.4687146096950672e-09,
+        "zero_load_U_norm": 0.0,
+        "part_statistics": {
+          "1": {
+            "material": "aluminum",
+            "name": "金属气密内衬",
+            "max_GP_von_Mises_MPa": 110.20558564382021,
+            "max_abs_fiber_sigma11_MPa": 50.86359801411041,
+            "volume_mm3": 335037.6012534381
+          },
+          "2": {
+            "material": "adhesive",
+            "name": "环氧粘接层 0.15 mm",
+            "max_GP_von_Mises_MPa": 10.790387986025067,
+            "max_abs_fiber_sigma11_MPa": 6.890770485627924,
+            "volume_mm3": 49522.13961592451
+          },
+          "3": {
+            "material": "carbon",
+            "name": "包覆铺层 1 / +55°",
+            "max_GP_von_Mises_MPa": 36.930483075298916,
+            "max_abs_fiber_sigma11_MPa": 38.26170502245502,
+            "volume_mm3": 248922.40288886277
+          },
+          "4": {
+            "material": "carbon",
+            "name": "包覆铺层 2 / -55°",
+            "max_GP_von_Mises_MPa": 42.77487955097521,
+            "max_abs_fiber_sigma11_MPa": 44.95292084387732,
+            "volume_mm3": 251139.40330806485
+          },
+          "5": {
+            "material": "carbon",
+            "name": "包覆铺层 3 / -55°",
+            "max_GP_von_Mises_MPa": 52.37039514714682,
+            "max_abs_fiber_sigma11_MPa": 55.54937212887113,
+            "volume_mm3": 253321.5751795593
+          },
+          "6": {
+            "material": "carbon",
+            "name": "包覆铺层 4 / +55°",
+            "max_GP_von_Mises_MPa": 62.558380223123436,
+            "max_abs_fiber_sigma11_MPa": 66.97804476320734,
+            "volume_mm3": 255498.85911744376
+          },
+          "7": {
+            "material": "carbon",
+            "name": "上极区局部补强",
+            "max_GP_von_Mises_MPa": 89.24179728237515,
+            "max_abs_fiber_sigma11_MPa": 91.90574184453305,
+            "volume_mm3": 4276.650237961278
+          },
+          "8": {
+            "material": "carbon",
+            "name": "下极区局部补强",
+            "max_GP_von_Mises_MPa": 90.07188930159421,
+            "max_abs_fiber_sigma11_MPa": 93.53504514128997,
+            "volume_mm3": 4276.478253320493
+          },
+          "9": {
+            "material": "titanium",
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 29.579850081804093,
+            "max_abs_fiber_sigma11_MPa": 24.418841143150026,
+            "volume_mm3": 83515.53144518849
+          },
+          "10": {
+            "material": "titanium",
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 29.05301724901896,
+            "max_abs_fiber_sigma11_MPa": 20.325593232049226,
+            "volume_mm3": 80877.78673663079
+          },
+          "14": {
+            "material": "steel",
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 8.50923333922133,
+            "max_abs_fiber_sigma11_MPa": 7.1496800698206275,
+            "volume_mm3": 16166.193910795466
+          },
+          "18": {
+            "material": "steel",
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 7.992592925927539,
+            "max_abs_fiber_sigma11_MPa": 6.307379929457932,
+            "volume_mm3": 14390.38320380233
+          }
+        },
+        "mesh_sha256": "cd60090df56f3dd3b03edd2cc4221b7a6be85ba92066c613968e2c79f0686d88",
+        "contract_sha256": "f531aa86858d16ddd61f4e6c232b55e2ca5b3eb74c5ae79c70ab03bb7548e488",
+        "solver_sha256": "f19f891eb9922bcb70e4cfdabf9fb35881a531fe7ca7643ed6652ab5cec5d9ea",
+        "total_seconds": 263.81060908499785,
+        "limitations": [
+          "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+          "Straight-sided geometry, P2 displacement; curved mesh attempt rejected; convergence belongs to C03",
+          "von Mises for composites is a diagnostic, not a failure criterion",
+          "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+        ],
+        "research_only": true
+      },
+      "asset_root": "h4_P2"
+    },
+    {
+      "id": "h6_P1_discrete",
+      "label": "h6 · P1 · discrete",
+      "degree": 1,
+      "h_mm": 6,
+      "cap_convention": "discrete",
+      "summary": {
+        "status": "completed",
+        "case_id": "C03_detailed_mesh_order_closure",
+        "backend": "CPU FFCx assembly; PETSc CUDA FGMRES/GAMG on full displacement operator, unsmoothed aggregation and Jacobi/Chebyshev levels; small coarsest SVD on CPU, hierarchy recorded in KSP view",
+        "preconditioner": "full-gamg",
+        "dolfinx": "0.11.0",
+        "petsc": [
+          3,
+          25,
+          6
+        ],
+        "matrix_type": "seqaijcusparse",
+        "vector_type": "seqcuda",
+        "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+        "nodes": 194235,
+        "geometry_nodes": 1380976,
+        "cells": 914613,
+        "dofs": 582705,
+        "displacement_degree": 1,
+        "cap_convention": "discrete",
+        "raw_GP_saved": false,
+        "structural_parts": 12,
+        "display_only_seals": 6,
+        "pressure_MPa": 1.0,
+        "true_relative_residual": 1.0064423384076088e-10,
+        "peak_iterations": 1250,
+        "peak_reason": 2,
+        "peak_solve_seconds": 11.80303892500524,
+        "max_U_mm": 0.3558673808965421,
+        "strain_energy_Nmm": 7438.243489346411,
+        "external_work_Nmm": 14876.486978976074,
+        "energy_work_relative_error": 1.9040324872321435e-11,
+        "force_balance_N": [
+          7.397276985399159e-09,
+          -3.6577197173870424e-10,
+          1.012342480954942e-07
+        ],
+        "moment_balance_Nmm": [
+          3.0271518264082436e-07,
+          -4.150657857082675e-07,
+          2.71417526404895e-07
+        ],
+        "load_resultant_N": [
+          1.9024967712333307e-10,
+          -1.3517892361036843e-10,
+          -3.024795969253091e-10
+        ],
+        "gauge_reactions_N": [
+          7.207027308275826e-09,
+          1.4777762236128922e-08,
+          -6.191539902999921e-08,
+          -1.5008355284257258e-08,
+          1.2655218761814524e-07,
+          3.689993910427347e-08
+        ],
+        "cap_forces_N": {
+          "upper": 326.3265049563995,
+          "lower": 213.48133163778297
+        },
+        "cap_areas_mm2": {
+          "top": 53.195862399658836,
+          "bottom": 43.409831109155924
+        },
+        "min_GP_Jacobian_mm3": 0.0007576650013307442,
+        "material_frame_det_max_error": 1.3322676295501878e-15,
+        "half_load_relative_error": 1.418537712971484e-09,
+        "zero_load_U_norm": 0.0,
+        "part_statistics": {
+          "1": {
+            "material": "aluminum",
+            "name": "金属气密内衬",
+            "max_GP_von_Mises_MPa": 121.31593639252604,
+            "max_abs_fiber_sigma11_MPa": 66.36848717773022,
+            "volume_mm3": 335073.5662344351
+          },
+          "2": {
+            "material": "adhesive",
+            "name": "环氧粘接层 0.15 mm",
+            "max_GP_von_Mises_MPa": 11.999602060925477,
+            "max_abs_fiber_sigma11_MPa": 13.907176710911811,
+            "volume_mm3": 49499.813948484465
+          },
+          "3": {
+            "material": "carbon",
+            "name": "包覆铺层 1 / +55°",
+            "max_GP_von_Mises_MPa": 50.52424863922276,
+            "max_abs_fiber_sigma11_MPa": 45.99220020127004,
+            "volume_mm3": 248940.3663322951
+          },
+          "4": {
+            "material": "carbon",
+            "name": "包覆铺层 2 / -55°",
+            "max_GP_von_Mises_MPa": 59.345487691180296,
+            "max_abs_fiber_sigma11_MPa": 57.78991192899262,
+            "volume_mm3": 251137.4190358348
+          },
+          "5": {
+            "material": "carbon",
+            "name": "包覆铺层 3 / -55°",
+            "max_GP_von_Mises_MPa": 65.77294909592428,
+            "max_abs_fiber_sigma11_MPa": 63.462395314847484,
+            "volume_mm3": 253313.55646593595
+          },
+          "6": {
+            "material": "carbon",
+            "name": "包覆铺层 4 / +55°",
+            "max_GP_von_Mises_MPa": 65.0127729558093,
+            "max_abs_fiber_sigma11_MPa": 63.80702953562865,
+            "volume_mm3": 255488.2042404518
+          },
+          "7": {
+            "material": "carbon",
+            "name": "上极区局部补强",
+            "max_GP_von_Mises_MPa": 182.04309593155625,
+            "max_abs_fiber_sigma11_MPa": 111.17621784185062,
+            "volume_mm3": 4273.077316903033
+          },
+          "8": {
+            "material": "carbon",
+            "name": "下极区局部补强",
+            "max_GP_von_Mises_MPa": 197.260839744581,
+            "max_abs_fiber_sigma11_MPa": 115.08124594065819,
+            "volume_mm3": 4271.782176427214
+          },
+          "9": {
+            "material": "titanium",
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 25.400880121550667,
+            "max_abs_fiber_sigma11_MPa": 22.12636996430218,
+            "volume_mm3": 83493.10707185788
+          },
+          "10": {
+            "material": "titanium",
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "max_GP_von_Mises_MPa": 24.678954256689487,
+            "max_abs_fiber_sigma11_MPa": 20.843602380172328,
+            "volume_mm3": 80852.26006732885
+          },
+          "14": {
+            "material": "steel",
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 8.662495949057826,
+            "max_abs_fiber_sigma11_MPa": 6.588713455863745,
+            "volume_mm3": 16166.006370053345
+          },
+          "18": {
+            "material": "steel",
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "max_GP_von_Mises_MPa": 8.122620694961272,
+            "max_abs_fiber_sigma11_MPa": 5.379646160759858,
+            "volume_mm3": 14389.972160853926
+          }
+        },
+        "mesh_sha256": "09ec8d0aba2072d29ac2e76fb9b5d6b6a3400287e69b846b6b06fb0156e93e15",
+        "contract_sha256": "f531aa86858d16ddd61f4e6c232b55e2ca5b3eb74c5ae79c70ab03bb7548e488",
+        "solver_sha256": "f19f891eb9922bcb70e4cfdabf9fb35881a531fe7ca7643ed6652ab5cec5d9ea",
+        "total_seconds": 57.17700224500004,
+        "limitations": [
+          "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+          "Straight-sided geometry, P1 displacement; curved mesh attempt rejected; convergence belongs to C03",
+          "von Mises for composites is a diagnostic, not a failure criterion",
+          "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+        ],
+        "research_only": true
+      },
+      "asset_root": "h6_P1_discrete"
+    }
+  ],
+  "default_left": "h6_P1",
+  "default_right": "h6_P2",
+  "research_scope": "Mesh/order sensitivity; none promoted past the production SICN gate"
+}

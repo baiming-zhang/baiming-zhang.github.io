@@ -1,0 +1,139 @@
+{
+  "schema": "copv_c02_structural_elastic_v1",
+  "case_id": "C03_detailed_mesh_order_closure",
+  "units": {
+    "length": "mm",
+    "force": "N",
+    "stress": "MPa",
+    "energy": "N mm"
+  },
+  "scope": "Small-displacement static linear-elastic code/research baseline; not a rated pressure, strength, seal, burst or manufactured-vessel qualification. Mesh sensitivity research; passing positive Jacobians does not imply the R03 production SICN gate is passed.",
+  "geometry": {
+    "source": "Accepted C01 detailed baseline: metal liner, adhesive, four ply groups, two polar collars, two titanium bosses and two steel inserts.",
+    "structural_part_count": 12,
+    "display_only_part_count": 6,
+    "display_only": "Four elastomer O-rings and two PEEK rings; compression, seal contact and leakage are not modeled.",
+    "analysis_repair": "Fit sampled polar-collar inner boundaries to the exact outer-ply CAD surface; retain outer envelopes and boss pockets, record volume changes and source hashes."
+  },
+  "materials": {
+    "aluminum": {
+      "grade": "Al 6061-T6",
+      "model": "isotropic_linear",
+      "E_MPa": 69000.0,
+      "nu": 0.33,
+      "source": "configs/copv_material_candidates.json -> elastic_control_candidate.liner; NASA 20180003005 Table 4"
+    },
+    "titanium": {
+      "grade": "Ti-6Al-4V",
+      "model": "isotropic_linear",
+      "E_MPa": 115100.0,
+      "nu": 0.28,
+      "source": "R02 material-reference.json; NASA/TM-2016-218864 Table II; linear elastic constants only, no plastic curve imported; nu=0.28 is the retained R02 analysis assumption"
+    },
+    "steel": {
+      "grade": "316L",
+      "model": "isotropic_linear",
+      "E_MPa": 200000.0,
+      "nu": 0.3,
+      "source": "Alfa Laval EN1.4404/AISI316L physical-properties table gives E=200GPa; nu=0.30 is an explicit isotropic analysis assumption",
+      "source_url": "https://www.alfalaval.no/produkter/vaskebehandling/en-1-4404-aisi-316l/"
+    },
+    "adhesive": {
+      "grade": "generic epoxy bondline numerical idealization",
+      "model": "isotropic_linear",
+      "E_MPa": 3000.0,
+      "nu": 0.35,
+      "source": "Explicit baseline modeling assumptions, not measured/qualified adhesive properties or an identification with the lamina's 3501-6 matrix"
+    },
+    "carbon": {
+      "grade": "AS4/3501-6 numerical lamina benchmark",
+      "model": "orthotropic_linear_3D",
+      "E1": 114452.9710665888,
+      "E2": 10342.135939752,
+      "E3": 10342.135939752,
+      "G12": 5998.43884505616,
+      "G13": 5998.43884505616,
+      "G23": 3792.1165112424,
+      "nu12": 0.33,
+      "nu13": 0.33,
+      "nu23": 0.47,
+      "source": "configs/copv_material_candidates.json -> elastic_control_candidate.overwrap; NASA-TM-109108 Table 1, upstream citation not independently retrieved"
+    }
+  },
+  "material_axes": {
+    "engineering_strain_voigt": [
+      "11",
+      "22",
+      "33",
+      "23",
+      "13",
+      "12"
+    ],
+    "engineering_shear": true,
+    "definition": "Q columns are [fiber, transverse, normal] in global xyz. m=-unit increasing-z meridian tangent; c=+e_theta; n=m cross c; fiber=cos(alpha)m+sin(alpha)c, transverse=-sin(alpha)m+cos(alpha)c.",
+    "ply_angles_degrees_inner_to_outer": [
+      55.0,
+      -55.0,
+      -55.0,
+      55.0
+    ],
+    "polar_collar_angles_degrees": {
+      "top": 25.0,
+      "bottom": -25.0
+    },
+    "evaluation": "Rotate full 3D strain/stress at each volume GP; retain transverse shear, curvature and twist. Nominal direction field is a research design choice, not a validated manufacturing winding path."
+  },
+  "connections": "Perfectly bonded shared structural interfaces; nominal gaps remain unloaded unless explicitly recorded as tied contacts. No friction, opening, cohesive damage or seal crush.",
+  "load": {
+    "peak_pressure_MPa": 1.0,
+    "pressure_traction": "-p*n_solid on the true inner wetted wall and internal port shoulders; exterior pressure zero.",
+    "upper_bore_radius_mm": 10.2,
+    "lower_bore_radius_mm": 8.25,
+    "equivalent_caps": "Each port receives its own p*pi*bore_radius^2 outward axial resultant once, distributed over its actual annular end face; no end-cap solid is invented.",
+    "path_pressure_MPa": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.5,
+      0.4,
+      0.3,
+      0.2,
+      0.1,
+      0.0
+    ]
+  },
+  "gauge": "Free-vessel 3-2-1 nodal gauge at three separated lower-port end points; prove rank six for rigid-motion modes. This removes rigid translation/rotation, not a physical mounting clamp.",
+  "discretization": {
+    "geometry": "straight-sided Gmsh TET10 with midside coordinates at exact chord midpoints; curved attempt rejected for negative Jacobians",
+    "displacement": "P1 vector on the full detailed structural partition; TET10 midside display values are exact affine interpolation, not independent P2 unknowns",
+    "volume_quadrature_degree": 4,
+    "boundary_quadrature_degree": 4,
+    "stress_output": "Original element and GP; no averaging across materials or ply interfaces",
+    "limitation": "Detailed P1 code/research baseline. Geometry, mesh and P1/P2 convergence belong to C03; independent P2 verification specimens are not a full detailed P2 solve.",
+    "accepted_mesh_directory": "mesh_h6_netgen",
+    "mesh_optimizer": "Netgen on linear tetrahedra, then straight-sided TET10 coordinates"
+  },
+  "backend": {
+    "assembly": "CPU FFCx/DOLFINx",
+    "linear_algebra": "PETSc CUDA AIJCUSPARSE / CUDA vectors; selected preconditioner recorded in summary and KSP view. Default full-P1 CUDA FGMRES/GAMG with small CPU SVD coarsest solve; optional explicit CPU-HYPRE P1 coarse path is not a silent fallback.",
+    "silent_CPU_fallback": false,
+    "coarse_backend_explicit": true
+  },
+  "verification": {
+    "orthotropic_specimen": "Independent skfem versus FEniCSx 3-component axisymmetric Quad9, same geometry/BC/load/GP fields, plus CPU/GPU algebra equality",
+    "three_dimensional_patch": "Rotated 3D orthotropic straight-sided P2 element checked against analytical affine-strain energy and nodal equilibrium, with CalculiX where available",
+    "full_model": "Positive Jacobians and connected load path; force/moment balance, true residual, external work versus twice strain energy, cap resultants, all saved load/unload states",
+    "mesh_convergence": "C03; C02 does not claim local peak-stress convergence"
+  }
+}

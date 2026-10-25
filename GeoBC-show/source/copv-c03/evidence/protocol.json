@@ -1,0 +1,42 @@
+{
+  "schema": "copv_c03_frozen_v1",
+  "created": "2026-10-26T00:44:33.289298+08:00",
+  "geometry": "Unchanged C02 12-part structural partition; six display-only seal/backup parts remain excluded",
+  "mesh_levels_h_mm": [
+    9,
+    6,
+    4
+  ],
+  "baseline_reused": "C02 h6 P1 circular-cap frozen results",
+  "comparisons": [
+    "P1 h9/h6/h4, identical material, gauge and circular cap law",
+    "P1 versus P2 on exactly the same h9 mesh; h6 P2 if resource reserve allows",
+    "h6 P1 circular versus discrete bore-polygon cap closure",
+    "2048 exact common physical probes, containment and material identity required; unmapped points explicit",
+    "material-wise stress volume norms and sharp-corner peak diagnostics kept separate"
+  ],
+  "research_mesh_gate": [
+    "finite, positive integration Jacobians",
+    "one connected conformal structural partition",
+    "native node and material identity",
+    "load/force/moment/energy/true-residual checks in solver"
+  ],
+  "production_gate": {
+    "reference": "R03",
+    "min_sicn": 0.05,
+    "max_volume_relative_error": 0.001,
+    "nonpassing_status": "research comparison only; quarantined from production dataset; not claimed mesh converged"
+  },
+  "solver": {
+    "primary_backend": "GPU-FEniCSx/PETSc CUDA",
+    "p2_preconditioner": "exact P1 transfer + CUDA P1 GAMG, fine GPU smoothing/Krylov; tiny final CPU SVD declared",
+    "host_RAM_reserve_GiB": 6,
+    "WSL_RAM_reserve_GiB": 2.5,
+    "GPU_reserve_MiB": 1024
+  },
+  "viewer": "mesh/field cases share camera and retain actual 3D BC/load geometry toggles",
+  "limitations": [
+    "No mesh-independent local peak stress or strength certification assumed",
+    "Geometry discretization, displacement order and cap-closure changes are reported separately"
+  ]
+}
