@@ -1,9 +1,82 @@
 {
   "conditional_branch_diagnostic": {
     "pid": 25660,
-    "stage": "waiting_for_homotopy",
-    "updated_unix": 1792897099.0470195,
-    "upstream_driver_pid": 38240
+    "stage": "complete",
+    "updated_unix": 1792898330.0869353,
+    "report": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\results\\rod_r05_yield_branch_20261025\\normal_rodv2_0053__compression_skew\\tangent_inertia.json"
+  },
+  "preyield_branch_check": {
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "load_factor": 0.7,
+    "backend": "cpu",
+    "constitutive_scope": "Virgin hyperelastic tangent; PEEQ=0 verified.",
+    "fields_sha256": null,
+    "snapshot_sha256": "6d611773825201615b89d18bdf4358427ed3fe42c1aabe0c52f3a138bfed5ab8",
+    "partial_diagnostic_only": true,
+    "reassembled_free_residual_relative": 3.8520305266074707e-10,
+    "bordered_inertia_negative_zero_positive": [
+      2,
+      0,
+      107245
+    ],
+    "mean_constraint_rank": 2,
+    "negative_admissible_directions": 0,
+    "zero_pivots": 0,
+    "label": "no_negative_direction_detected_at_checkpoint",
+    "branch_applicability": "This is an equilibrated branch at the specified frozen constraints. A negative tangent direction precludes a stable local potential minimum. Direct convergence is not a stability certificate; no critical load or post-buckled branch is inferred.",
+    "seconds": 5.301937103271484,
+    "created_unix": 1792898327.727844,
+    "does_not_change_effective_count": true,
+    "modes_state": "complete",
+    "near_zero_eigenvalues_N_per_mm": [
+      0.0007631026425848069,
+      0.03339596478082396,
+      0.05670108025273578,
+      0.16894910908687516,
+      1.5921929008437188,
+      1.682938669236383
+    ],
+    "relative_eigen_residuals": [
+      3.955855023107275e-07,
+      1.6292763612624996e-08,
+      6.445972923852007e-09,
+      1.6659228349572886e-09,
+      2.8155397550477053e-10,
+      2.7146915591044224e-10
+    ],
+    "mode_xyz_squared_fractions": [
+      [
+        0.014372493477849895,
+        3.4971320485273735e-07,
+        0.9856271568089452
+      ],
+      [
+        0.005879530840676233,
+        0.845061729339972,
+        0.14905873981935
+      ],
+      [
+        0.017329823478046624,
+        0.40023958135678817,
+        0.5824305951651615
+      ],
+      [
+        0.06349176276747123,
+        2.0856143904243527e-05,
+        0.936487381088627
+      ],
+      [
+        0.11319627256588709,
+        0.7804589645910367,
+        0.10634476284307232
+      ],
+      [
+        0.07005223047622242,
+        0.0024151459347413165,
+        0.9275326235890422
+      ]
+    ],
+    "eigenvalue_scope": "Constrained tangent, reduced Euclidean displacement norm; eigenvalues nearest zero, not a critical load or vibration frequency."
   },
   "elastic_path_comparison_0053": {
     "sample_id": "normal_rodv2_0053__compression_skew",
@@ -244,6 +317,33 @@
     "seconds": 131.97640895843506,
     "passed": true
   },
+  "adaptive_homotopy_plastic_regression": {
+    "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+    "U_relative_L2": 2.1407295027091586e-07,
+    "GP_tensor_relative_L2": 1.0476594050261153e-07,
+    "PEEQ_absolute_error": 4.823153730787802e-12,
+    "CCX_max_PEEQ": 8.967564e-05,
+    "FEn_max_PEEQ": 8.967563517684627e-05,
+    "all_20_states_U_max_relative": 2.1407295027091586e-07,
+    "all_20_states_max_PEEQ_absolute_error": 4.823153730787802e-12,
+    "GP_match_mm": 2.0032143250599133e-15,
+    "material_range_passed": true,
+    "unload_displacement_norm_mm": 0.0013880615186398339,
+    "passed": true
+  },
+  "adaptive_homotopy_full_rod_regression": {
+    "sample_id": "normal_rodv2_0028__compression",
+    "scope": "Existing accepted ID used only for full nonlinear elastic-rod regression; no new effective count",
+    "relative_L2": {
+      "U_peak_mm": 2.7247159564969377e-12,
+      "GP_Cauchy_stress_MPa": 1.9001237396797796e-12,
+      "GP_von_Mises_MPa": 8.297995933380571e-13
+    },
+    "reference_fields_sha256": "104ad4c9586a3724e05719188b5e772e91066cd26c83a94111353e23b3ea5fa7",
+    "solver_sha256": "6f6fe8946b2d11bad960e5cb5000320080075bc1609c3d4e5e3eb5347e24716a",
+    "seconds": 100.57150053977966,
+    "passed": true
+  },
   "target_cases": [
     {
       "sample_id": "normal_rodv2_0033__compression_skew",
@@ -322,16 +422,7 @@
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
       "state": "running",
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_homotopy",
-      "solver_status": {
-        "phase": "newton",
-        "pid": 6281,
-        "elapsed_seconds": 757.7157211303711,
-        "step": 7,
-        "load_factor": 0.729962158203125,
-        "iteration": 11,
-        "free_residual_relative": 0.006200024678537748
-      }
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_adaptive_homotopy"
     },
     {
       "sample_id": "normal_rodv2_0058__compression_skew",
@@ -484,11 +575,26 @@
       "started_unix": 1792896517.8928604,
       "solver_source_sha256": "57977e45712f5fde0b4bd74443e235f69cd4f3058f5732814fec1b2c38bcd032",
       "method": "冻结历史的数值载荷延续",
-      "state": "running",
+      "state": "time_bound",
       "last_accepted_load_factor": 0.7,
-      "attempted_load_factor": 0.729962158203125,
-      "elapsed_seconds": 757.7157211303711,
-      "last_relative_residual": 0.006200024678537748,
+      "attempted_load_factor": 0.7273186978712147,
+      "elapsed_seconds": 1791.4585773944855,
+      "last_relative_residual": 0.0015861980129067378,
+      "failure": {
+        "error": "1800-second controller recovery budget reached; no complete target result, not a proof of no physical equilibrium"
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "started_unix": 1792898545.2415297,
+      "solver_source_sha256": "6f6fe8946b2d11bad960e5cb5000320080075bc1609c3d4e5e3eb5347e24716a",
+      "method": "冻结历史／自适应延续步长",
+      "state": "running",
+      "last_accepted_load_factor": null,
+      "attempted_load_factor": null,
+      "elapsed_seconds": null,
+      "last_relative_residual": null,
       "failure": null,
       "archived": false
     }
