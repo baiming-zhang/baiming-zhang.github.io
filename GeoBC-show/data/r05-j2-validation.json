@@ -1219,20 +1219,18 @@
   },
   "remaining_hybrid_arc_driver": {
     "pid": 39776,
-    "stage": "waiting_for_mode_plane_driver",
-    "updated_unix": 1792922677.7006698,
-    "upstream_pid": 42576
+    "stage": "explicit_range_tail_recovery",
+    "updated_unix": 1792924471.8226023,
+    "sample_id": "normal_rodv2_0159__compression_skew",
+    "sample_ids": [
+      "normal_rodv2_0154__compression_skew",
+      "normal_rodv2_0159__compression_skew"
+    ]
   },
   "mode_plane_driver": {
     "pid": 42576,
-    "stage": "validated_recovery_running",
-    "updated_unix": 1792922435.6619098,
-    "sample_ids": [
-      "normal_rodv2_0053__compression_skew",
-      "normal_rodv2_0096__gas_inertia_30deg",
-      "normal_rodv2_0079__compression_skew"
-    ],
-    "solver_sha256": "1eeda35ea6d1dd478067ae63ca1b63b94572d563fda7d1e4168ed4a5ae24f86e"
+    "stage": "complete",
+    "updated_unix": 1792923080.8110778
   },
   "mode_plane_manifest": {
     "state": "validated",
@@ -1341,6 +1339,67 @@
     "requeue_after": 42576,
     "created_unix": 1792922677.3446023
   },
+  "mode_tail_driver": {
+    "pid": 32656,
+    "stage": "waiting_for_remaining_recovery",
+    "updated_unix": 1792924688.637406,
+    "upstream_pid": 39776,
+    "solver_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483"
+  },
+  "mode_tail_manifest": {
+    "state": "validation_pending",
+    "production_enabled": false,
+    "profile": "mode_tail_v3",
+    "PEEQ_limit": 0.1,
+    "source_policy": "Original CCX constant Cauchy958.2434MPa tail, original four points unchanged; not damage/fracture calibration",
+    "solver_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+    "arc_module_sha256": "6d817262839d0c7bc42aee0f76a711436c1096c614c38fba19260b50b7d4dd1a",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "branch_module_sha256": "95cf28f0cf77bacecc5c6331e20d095251f8f5b0af186f7646035c7d5533ef7b",
+    "parent_solver_sha256": "1eeda35ea6d1dd478067ae63ca1b63b94572d563fda7d1e4168ed4a5ae24f86e",
+    "parent_arc_module_sha256": "138cc5c13ea3b4ddd0af5a4b48e47568b6492b97b774b3d8f92ffeb77d3fb540",
+    "numerical_parent_manifest_sha256": "55fcfad93be5c0d5718b5bb055fc68e1c02bd7399d2fa0ad1cff229e3665af22",
+    "operator_and_history_update_unchanged": true,
+    "gates_sha256": {
+      "ccx_constant_tail_investigation/material_point_review.json": "f83701e08e532726602bc3a372d9b715c4e05ba90b20b7f323937b6785e1ae9c",
+      "ccx_constant_tail_investigation/ufl_quadrature_review.json": "6d9fbc0dc36fdc6befa972490e80842b7945ba383530a2552a16131844bc4190",
+      "ccx_constant_tail_investigation/curved_tet10_assembly_review.json": "b1457f696fe895d42726b2334854f96d01ea23401527134259a208ef78cf9d95"
+    },
+    "core_sha256": {
+      "geobc/rod_finite_j2_r05.py": "7f3cb61ec2308e351e22906bfadb4ed941f6f981897296a784b88af8240f0d8b",
+      "geobc/rod_finite_j2_ufl_r05.py": "e26d865bca30140678eda6901d67f39153b8bbb941b16c65f6d55daaf7373c73"
+    },
+    "allowed_source_edits": [
+      "from geobc.rod_r05_mode_plane import continue_target",
+      "if p.max()>PLASTIC_P[-1]+1e-12:",
+      "Plastic strain exceeds frozen material data range",
+      "trial_plastic.max()>.00951460622563769",
+      "pp.max()<=.00951460622563769",
+      "material_data_range_passed=True,max_yield_consistency_residual_MPa=",
+      "with frozen piecewise Cauchy hardening;"
+    ],
+    "created_unix": 1792923889.8024635
+  },
+  "mode_tail_main_capability_loaded": false,
+  "mode_tail_isolated_pending_count": 0,
+  "mode_tail_reference_checks": [
+    {
+      "passed": true,
+      "sample_id": "normal_rodv2_0154__compression_skew",
+      "reference_load_factor": 0.9,
+      "old_PEEQ_zero_proven": true,
+      "reassembled_trial_PEEQ_zero": true,
+      "min_J": 0.9970724621739734,
+      "free_residual_relative": 2.999193480287108e-10,
+      "source_state_sha256": "c3b3954372bc2091ec86f92c252228edf7623dd4078045dd8dbb3103f9d07e30",
+      "source_history_sha256": "afc5a845f7e71acdf1360e2ada641a5027834edb0824b823cff45e5be7f0da1e",
+      "geometry_sha256": "9634872cdc2a1f12c5c84ae02b3697478429829c5fc598d25902962ae67b78b0",
+      "load_sha256": "7bebd5f2e87de0702dabe28f5dca7f61a9c35162dd194d2a558744b44283d25e",
+      "global_linear_solve": false,
+      "scope": "Earlier accepted virgin reference for own-geometry numerical mode only; not current plastic tangent, stability or critical-load proof; no dataset count",
+      "created_unix": 1792924586.5377328
+    }
+  ],
   "arc_tail_main_contract_loaded": false,
   "arc_tail_isolated_pending_count": 0,
   "arclength_domain_rejections": [
@@ -2357,19 +2416,24 @@
     },
     {
       "sample_id": "normal_rodv2_0079__compression_skew",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792923080.9176211,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane",
       "solver_status": {
         "phase": "numerical_mode_plane",
         "pid": 20107,
-        "elapsed_seconds": 185.88721823692322,
+        "elapsed_seconds": 209.14387369155884,
         "step": 9,
         "original_target": 1.0,
-        "numerical_load": -1.8272032805867555,
-        "amplitude_mm": 13.75,
-        "iteration": 1,
-        "free_residual_relative": 59.81847373670159,
-        "numerical_constraint_mm": 0.0
+        "numerical_load": 0.8790846323902902,
+        "amplitude_mm": -16.5625,
+        "iteration": 4,
+        "free_residual_relative": 4.1653661811831815e-10,
+        "numerical_constraint_mm": 7.105427357601002e-15
       }
     },
     {
@@ -2509,6 +2573,86 @@
       }
     },
     {
+      "sample_id": "normal_rodv2_0123__compression_skew",
+      "state": "accepted_in_main_queue",
+      "last_failure": null,
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "accepted_review": {
+        "sample_id": "normal_rodv2_0123__compression_skew",
+        "geometry_case_id": "rodv2_0123",
+        "group": "normal",
+        "split": "validation",
+        "scenario": "compression_skew",
+        "fields_directory": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\j2_extension_v1\\recovery\\normal_rodv2_0123__compression_skew\\fenicsx",
+        "fields_sha256": "7466880827e80b5ce266dfb2a52af8b88a274ac135e313f286d9952b6fe25311",
+        "backend": "cpu",
+        "linear_solver": "direct",
+        "seconds": 98.17946434020996,
+        "max_U_mm": 6.142246772236239,
+        "max_GP_von_Mises_MPa": 942.5369662580646,
+        "max_relative_residual": 9.65874598127553e-08,
+        "min_J": 0.9971863835137498,
+        "accepted_states": 10,
+        "origin": "source_checked_full_J2_recovery",
+        "verified_unix": 1792924877.0286913,
+        "identity_finite_equilibrium_gates_passed": true,
+        "constitutive_scope": "source-checked finite-strain isotropic J2 with frozen piecewise Cauchy hardening; refuse unsupported plastic strain",
+        "physical_inputs_unchanged": true,
+        "max_PEEQ": 0.004393961261298286,
+        "full_J2_recovery": true,
+        "stability_status": "not_assessed",
+        "bounded_original_ccx_tail": false,
+        "material_range_limit_PEEQ": 0.00951460622563769,
+        "tail_validation_manifest_sha256": null,
+        "provenance_sha256": "a075b431d1317af14ed9ffd5423180e75e21d0fe7e49fb1bef6dcac13dbcbb5c"
+      },
+      "solver_status": {
+        "phase": "complete_pending_cross_solver_review",
+        "pid": 21191,
+        "elapsed_seconds": 98.22466731071472
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0123__gas_inertia_30deg",
+      "state": "accepted_in_main_queue",
+      "last_failure": null,
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "accepted_review": {
+        "sample_id": "normal_rodv2_0123__gas_inertia_30deg",
+        "geometry_case_id": "rodv2_0123",
+        "group": "normal",
+        "split": "validation",
+        "scenario": "gas_inertia_30deg",
+        "fields_directory": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\j2_extension_v1\\recovery\\normal_rodv2_0123__gas_inertia_30deg\\fenicsx",
+        "fields_sha256": "3f61a4f89903ae57813a7be9a68b0eb37e51b584fb474d7f821af743f666a78d",
+        "backend": "cpu",
+        "linear_solver": "direct",
+        "seconds": 78.53047156333923,
+        "max_U_mm": 0.24741949095551202,
+        "max_GP_von_Mises_MPa": 939.676202882111,
+        "max_relative_residual": 1.5066396979412234e-07,
+        "min_J": 0.9961691049236724,
+        "accepted_states": 10,
+        "origin": "source_checked_full_J2_recovery",
+        "verified_unix": 1792925018.1854482,
+        "identity_finite_equilibrium_gates_passed": true,
+        "constitutive_scope": "source-checked finite-strain isotropic J2 with frozen piecewise Cauchy hardening; refuse unsupported plastic strain",
+        "physical_inputs_unchanged": true,
+        "max_PEEQ": 0.0034612890954881367,
+        "full_J2_recovery": true,
+        "stability_status": "not_assessed",
+        "bounded_original_ccx_tail": false,
+        "material_range_limit_PEEQ": 0.00951460622563769,
+        "tail_validation_manifest_sha256": null,
+        "provenance_sha256": "a28cfcbff68b4e9a856224629902e34030019aa9cb478dbb74463be227db88d8"
+      },
+      "solver_status": {
+        "phase": "complete_pending_cross_solver_review",
+        "pid": 21226,
+        "elapsed_seconds": 78.57837700843811
+      }
+    },
+    {
       "sample_id": "normal_rodv2_0147__gas_inertia_30deg",
       "state": "accepted_in_main_queue",
       "last_failure": null,
@@ -2592,38 +2736,37 @@
       "sample_id": "normal_rodv2_0154__compression_skew",
       "state": "failed",
       "last_failure": {
-        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
-        "time_unix": 1792917705.8461077,
+        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
+        "time_unix": 1792924185.057909,
         "no_accepted_full_case": true
       },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
-        "phase": "newton",
-        "pid": 17488,
-        "elapsed_seconds": 120.91304111480713,
+        "phase": "numerical_arc",
+        "pid": 20286,
+        "elapsed_seconds": 829.5672154426575,
         "step": 9,
-        "load_factor": 1.0,
-        "iteration": 6,
-        "free_residual_relative": 0.11989623035522515
+        "original_target": 1.0,
+        "numerical_load": -0.35340541919675283,
+        "arc_iteration": 2,
+        "free_residual_relative": 1.3461986763224574e-09,
+        "arc_constraint": 2.1547649969378465e-16
       }
     },
     {
       "sample_id": "normal_rodv2_0159__compression_skew",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
-        "time_unix": 1792919127.0076787,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
-        "phase": "newton",
-        "pid": 18201,
-        "elapsed_seconds": 182.03572511672974,
+        "phase": "numerical_arc",
+        "pid": 20774,
+        "elapsed_seconds": 901.4810910224915,
         "step": 9,
-        "load_factor": 1.0,
-        "iteration": 23,
-        "free_residual_relative": 935.0713642352574
+        "original_target": 1.0,
+        "numerical_load": 0.47407335578217835,
+        "arc_iteration": 26,
+        "free_residual_relative": 2.0370182574242338e-09,
+        "arc_constraint": -1.197975637960702e-16
       }
     },
     {
@@ -3266,7 +3409,7 @@
         "time_unix": 1792917705.8461077,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
@@ -3338,7 +3481,7 @@
         "time_unix": 1792919127.0076787,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
@@ -3513,12 +3656,112 @@
       "started_unix": 1792922865.7682323,
       "solver_source_sha256": "1eeda35ea6d1dd478067ae63ca1b63b94572d563fda7d1e4168ed4a5ae24f86e",
       "method": "数值模态幅值平面／原载荷端点撤去数值行",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.8790846323902902,
+      "elapsed_seconds": 209.14387369155884,
+      "last_relative_residual": 4.1653661811831815e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792923080.9176211,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0154__compression_skew",
+      "started_unix": 1792923081.3123636,
+      "solver_source_sha256": "0a716fd36501129884b98e6f38ee86a4c1e3ea5752b10440f5f34f2bb3de21bb",
+      "method": "冻结历史／真切向弧长与原载荷交点细化",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.9231937567768054,
+      "elapsed_seconds": 260.11137342453003,
+      "last_relative_residual": 1.4685609800007076e-09,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792923349.8798892,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0154__compression_skew",
+      "started_unix": 1792923351.5234091,
+      "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
+      "method": "原CCX有界尾段／真切向弧长与交点细化",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": -0.35340541919675283,
+      "elapsed_seconds": 829.5672154426575,
+      "last_relative_residual": 1.3461986763224574e-09,
+      "failure": {
+        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
+        "time_unix": 1792924185.057909,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0159__compression_skew",
+      "started_unix": 1792924186.7849019,
+      "solver_source_sha256": "0a716fd36501129884b98e6f38ee86a4c1e3ea5752b10440f5f34f2bb3de21bb",
+      "method": "冻结历史／真切向弧长与原载荷交点细化",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.8492872947895032,
+      "elapsed_seconds": 273.201779127121,
+      "last_relative_residual": 6.263436467517041e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792924469.7733135,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0159__compression_skew",
+      "started_unix": 1792924471.9735677,
+      "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
+      "method": "原CCX有界尾段／真切向弧长与交点细化",
       "state": "running",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 1.0,
-      "numerical_trial_load_factor": -1.8272032805867555,
-      "elapsed_seconds": 185.88721823692322,
-      "last_relative_residual": 59.81847373670159,
+      "numerical_trial_load_factor": 0.47407335578217835,
+      "elapsed_seconds": 901.4810910224915,
+      "last_relative_residual": 2.0370182574242338e-09,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0123__compression_skew",
+      "started_unix": 1792924771.8918645,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "verified_pending_main_queue_merge",
+      "last_accepted_load_factor": 1.0,
+      "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 98.22466731071472,
+      "last_relative_residual": null,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0123__gas_inertia_30deg",
+      "started_unix": 1792924933.0351405,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "verified_pending_main_queue_merge",
+      "last_accepted_load_factor": 1.0,
+      "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 78.57837700843811,
+      "last_relative_residual": null,
       "failure": null,
       "archived": false
     }
