@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25 09:07 北京时间",
+  "updated": "2026-10-25 09:22 北京时间",
   "tasks": [
     {
       "id": "R01",
@@ -222,32 +222,40 @@
       "review": "检查筒体/封头等几何连接及厚度定义，说明简化假设",
       "dependencies": "M01",
       "start": "2026-10-28",
-      "issues": "几何交付完成；人工审核待进行。C1 Bezier 双开口简化；GPU接入验证非C02铺层仿真。",
+      "issues": "详细基准装配与参考视图待人工审核；新 boss/密封/铺层尚未进行正式 FE。原15参数样例与GPU接入结果保留为v1。",
       "page": "C01.html",
       "results": [
         {
-          "label": "三维几何与剖面",
+          "label": "多材料装配与端口近景",
           "url": "viewers/copv-geometry.html"
         },
         {
-          "label": "参数范围",
-          "url": "data/copv-c01-parameter-ranges.json"
+          "label": "详细 CAD 与源码 ZIP",
+          "url": "data/copv-detailed-v2-CAD-source.zip"
         },
         {
-          "label": "样例参数与质量 CSV",
-          "url": "data/copv-c01-parameters-and-quality.csv"
+          "label": "构件 / 材质 / 体积记录",
+          "url": "data/copv-detailed-v2.json"
         },
         {
-          "label": "可复现 CAD 与源码 ZIP",
-          "url": "data/copv-c01-reproducible.zip"
+          "label": "构造与纹理说明",
+          "url": "source/copv-detailed-v2/README.md"
         },
         {
-          "label": "GPU-FEniCSx 接入验证",
+          "label": "v1 参数样例（15例）",
+          "url": "viewers/copv-geometry-v1.html"
+        },
+        {
+          "label": "v1 GPU-FEniCSx 接入验证",
           "url": "data/copv-c01-gpu-fenicsx.json"
         },
         {
-          "label": "建模与复现说明",
-          "url": "source/copv-c01/README.md"
+          "label": "v1 参数范围",
+          "url": "data/copv-c01-parameter-ranges.json"
+        },
+        {
+          "label": "v1 CAD 与源码 ZIP",
+          "url": "data/copv-c01-reproducible.zip"
         }
       ]
     },
