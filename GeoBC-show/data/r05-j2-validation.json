@@ -1918,8 +1918,8 @@
   "frozen_ccx_driver": {
     "pid": 35172,
     "stage": "ccx_original_fixed_targets",
-    "updated_unix": 1792928762.8550794,
-    "sample_id": "normal_rodv2_0028__compression"
+    "updated_unix": 1792929649.653728,
+    "sample_id": "normal_rodv2_0053__compression_skew"
   },
   "frozen_ccx_input_width_review": {
     "classification": "input_serialization_error_not_numerical_failure",
@@ -1932,8 +1932,141 @@
     "sample_count_changed": false,
     "created_unix": 1792928659.359023
   },
-  "frozen_ccx_structural_reviews": [],
-  "frozen_ccx_outcomes": [],
+  "frozen_ccx_structural_reviews": [
+    {
+      "passed": true,
+      "sample_id": "normal_rodv2_0028__compression",
+      "reference_relative_L2": {
+        "U_peak_mm": 6.520577883520613e-12,
+        "GP_Cauchy_stress_MPa": 1.054045114003458e-09,
+        "GP_von_Mises_MPa": 4.478015335966588e-10
+      },
+      "ccx_printed_stress_relative_L2": 7.917712878244065e-08,
+      "all_ten_printed_U_relative_L2": [
+        7.548590056765266e-08,
+        1.0913674932554259e-07,
+        1.9933117871120305e-07,
+        1.6524000431356755e-07,
+        1.3891435874582648e-07,
+        1.1846570500411867e-07,
+        1.0377537182944645e-07,
+        9.196455231796983e-08,
+        8.241716230416565e-08,
+        7.569331701328363e-08
+      ],
+      "all_ten_original_targets_reassembled": true,
+      "no_cached_material_history_committed": true,
+      "original_residual_threshold": 2e-07,
+      "max_original_residual": 2.8471205649866e-08,
+      "max_newton_iterations": 1,
+      "ccx_dat_sha256": "412681e45fb9121296213a9bd62531e92e95c19795d80fd184018a7e93a1d216",
+      "frozen_solver_sha256": "7446421972c870811d3c8738436653dee85da0953121044647bc22da6a464690",
+      "replay_solver_sha256": "683fa1db297a98af0c52a2370c3127110080fb376fdadaf3c8e8d224f7091291",
+      "scope": "Independent exact-constraint CCX baseline, with readout rounding corrected by the original FEniCSx solver; diagnostic duplicate, not a new dataset ID or stability proof",
+      "counted": false
+    }
+  ],
+  "frozen_ccx_outcomes": [
+    {
+      "sample_id": "normal_rodv2_0028__compression",
+      "state": "completed_diagnostic",
+      "exit_code": 0,
+      "seconds": 827.4616086483002,
+      "executable_sha256": "e18360eb32a5cd48f91a212c57069212cd8e27d2f798a599a78106bd0b3ecc1f",
+      "counted": false
+    }
+  ],
+  "ccx_followup_driver": {
+    "pid": 14420,
+    "stage": "waiting_for_independent_ccx_chain",
+    "updated_unix": 1792929640.8200822,
+    "upstream_pid": 35172
+  },
+  "ccx_seed_data_contract": {
+    "passed": true,
+    "positive_original_displacement_guess": true,
+    "rejected": [
+      "input_fingerprint",
+      "initial_guesses_only",
+      "numerical_roots",
+      "external_material_history"
+    ],
+    "source_sha256": "60fd16140b0e8b280fb3e9058e557b1eebf8590e35f23437362e779b60b595f4",
+    "scope": "Dispatcher/input-source contract only; numerical sources and original acceptance thresholds unchanged; not a sample"
+  },
+  "ccx_printout_residual_reviews": [
+    {
+      "sample_id": "normal_rodv2_0028__compression",
+      "records": [
+        {
+          "step": 0,
+          "load_factor": 0.1,
+          "printed_free_residual_relative": 0.003135486512047173,
+          "projected_guess_free_residual_relative": 0.003135486436211919
+        },
+        {
+          "step": 1,
+          "load_factor": 0.2,
+          "printed_free_residual_relative": 0.00249580299026794,
+          "projected_guess_free_residual_relative": 0.0024958029737243443
+        },
+        {
+          "step": 2,
+          "load_factor": 0.3,
+          "printed_free_residual_relative": 0.010620312654006446,
+          "projected_guess_free_residual_relative": 0.010620312601007952
+        },
+        {
+          "step": 3,
+          "load_factor": 0.4,
+          "printed_free_residual_relative": 0.011748725131650907,
+          "projected_guess_free_residual_relative": 0.011748725115470518
+        },
+        {
+          "step": 4,
+          "load_factor": 0.5,
+          "printed_free_residual_relative": 0.006400420157942263,
+          "projected_guess_free_residual_relative": 0.006400420104485073
+        },
+        {
+          "step": 5,
+          "load_factor": 0.6,
+          "printed_free_residual_relative": 0.007514600243420452,
+          "projected_guess_free_residual_relative": 0.0075146002064148155
+        },
+        {
+          "step": 6,
+          "load_factor": 0.7,
+          "printed_free_residual_relative": 0.005234445783001802,
+          "projected_guess_free_residual_relative": 0.0052344457500030205
+        },
+        {
+          "step": 7,
+          "load_factor": 0.8,
+          "printed_free_residual_relative": 0.004469940222941264,
+          "projected_guess_free_residual_relative": 0.004469940177519305
+        },
+        {
+          "step": 8,
+          "load_factor": 0.9,
+          "printed_free_residual_relative": 0.005100806658247979,
+          "projected_guess_free_residual_relative": 0.005100806604147573
+        },
+        {
+          "step": 9,
+          "load_factor": 1.0,
+          "printed_free_residual_relative": 0.003974321792675173,
+          "projected_guess_free_residual_relative": 0.003974321748608801
+        }
+      ],
+      "counted": false,
+      "no_global_linear_solve": true,
+      "no_material_history_imported": true,
+      "virgin_reference_justification": "All ten corrected original FEniCSx states and CCX states independently have PEEQ0; this tool does not apply to plastic histories",
+      "scope": "Printed U is rounded; these raw residuals are diagnostics, not relaxed production thresholds. Corrected FEniCSx endpoints still require R<2e-7",
+      "solver_forms_sha256": "03a66f01251e61840fa9bf518750965ad24d9389559ca1dda71421a97ff0356c"
+    }
+  ],
   "arc_tail_main_contract_loaded": false,
   "arc_tail_isolated_pending_count": 0,
   "arclength_domain_rejections": [
