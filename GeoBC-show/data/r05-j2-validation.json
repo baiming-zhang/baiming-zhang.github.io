@@ -1,0 +1,225 @@
+{
+  "material_points": {
+    "scope": "Material-point prototype only, not a production FE recovery solver",
+    "reference": "Unmodified CalculiX incplas.f compiled as an independent static-isotropic oracle",
+    "source_commit": "7109537497f5bc76160000b990177c7d7368789c",
+    "histories": [
+      {
+        "history": "elastic_tension",
+        "states": 8,
+        "stress_relative_error": 6.075812279712891e-13,
+        "PEEQ_absolute_error": 0.0,
+        "metric_absolute_error": 0.0,
+        "max_consistency_residual_MPa": 0.0,
+        "final_PEEQ": 0.0,
+        "passed": true
+      },
+      {
+        "history": "hydrostatic",
+        "states": 9,
+        "stress_relative_error": 2.5663179429575108e-14,
+        "PEEQ_absolute_error": 0.0,
+        "metric_absolute_error": 0.0,
+        "max_consistency_residual_MPa": 0.0,
+        "final_PEEQ": 0.0,
+        "passed": true
+      },
+      {
+        "history": "plastic_tension_unload",
+        "states": 42,
+        "stress_relative_error": 4.0835690262886305e-13,
+        "PEEQ_absolute_error": 9.367506770274758e-17,
+        "metric_absolute_error": 2.220446049250313e-16,
+        "max_consistency_residual_MPa": 4.547473508864641e-13,
+        "final_PEEQ": 0.004075358030052424,
+        "passed": true
+      },
+      {
+        "history": "plastic_shear_unload",
+        "states": 42,
+        "stress_relative_error": 1.849621598457649e-12,
+        "PEEQ_absolute_error": 2.168404344971009e-18,
+        "metric_absolute_error": 2.220446049250313e-16,
+        "max_consistency_residual_MPa": 3.410605131648481e-13,
+        "final_PEEQ": 0.005684821383334198,
+        "passed": true
+      },
+      {
+        "history": "nonproportional",
+        "states": 30,
+        "stress_relative_error": 9.217801438188697e-13,
+        "PEEQ_absolute_error": 9.150666335777657e-17,
+        "metric_absolute_error": 2.220446049250313e-16,
+        "max_consistency_residual_MPa": 2.2737367544323206e-13,
+        "final_PEEQ": 0.003284322333451827,
+        "passed": true
+      },
+      {
+        "history": "superposed_rotation",
+        "states": 34,
+        "stress_relative_error": 1.5499063076623676e-13,
+        "PEEQ_absolute_error": 7.45931094670027e-17,
+        "metric_absolute_error": 1.1102230246251565e-16,
+        "max_consistency_residual_MPa": 7.958078640513122e-12,
+        "final_PEEQ": 0.0016255752946342952,
+        "passed": true
+      }
+    ],
+    "material_range_limit": 0.00951460622563769,
+    "beyond_material_data_refused": true,
+    "all_passed": true
+  },
+  "ufl_tangent": {
+    "scope": "One native TET10/P2 quadrature integration and automatic material tangent; not a full structural solve",
+    "cases": [
+      {
+        "state": 0,
+        "stress_relative_error": 8.840163922736983e-14,
+        "history_absolute_error": 0.0,
+        "tangent_relative_error": 2.9997662952709755e-10,
+        "PEEQ": 0.0,
+        "passed": true
+      },
+      {
+        "state": 1,
+        "stress_relative_error": 1.7106802726350768e-15,
+        "history_absolute_error": 3.252606517456513e-17,
+        "tangent_relative_error": 2.9550943044413983e-10,
+        "PEEQ": 0.0016266115414534106,
+        "passed": true
+      },
+      {
+        "state": 2,
+        "stress_relative_error": 3.1699888453483607e-16,
+        "history_absolute_error": 2.0599841277224584e-18,
+        "tangent_relative_error": 3.111454034379703e-10,
+        "PEEQ": 0.0026610207766471702,
+        "passed": true
+      },
+      {
+        "state": 3,
+        "stress_relative_error": 2.32853889908638e-16,
+        "history_absolute_error": 0.0,
+        "tangent_relative_error": 2.233919230795389e-10,
+        "PEEQ": 0.0026610207766471702,
+        "passed": true
+      }
+    ],
+    "all_passed": true
+  },
+  "plastic_structural_benchmark": {
+    "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+    "U_relative_L2": 2.140992925197314e-07,
+    "GP_tensor_relative_L2": 1.0477814546181992e-07,
+    "PEEQ_absolute_error": 4.859861211375938e-12,
+    "CCX_max_PEEQ": 8.967564e-05,
+    "FEn_max_PEEQ": 8.967563514013879e-05,
+    "all_20_states_U_max_relative": 2.140992925197314e-07,
+    "all_20_states_max_PEEQ_absolute_error": 4.859861211375938e-12,
+    "GP_match_mm": 2.0032143250599133e-15,
+    "material_range_passed": true,
+    "unload_displacement_norm_mm": 0.0013880615084031973,
+    "passed": true
+  },
+  "damped_Newton_structural_regression": {
+    "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+    "U_relative_L2": 2.1409929380249526e-07,
+    "GP_tensor_relative_L2": 1.0477814393394814e-07,
+    "PEEQ_absolute_error": 4.859864206484439e-12,
+    "CCX_max_PEEQ": 8.967564e-05,
+    "FEn_max_PEEQ": 8.96756351401358e-05,
+    "all_20_states_U_max_relative": 2.1409929380249526e-07,
+    "all_20_states_max_PEEQ_absolute_error": 4.859864206484439e-12,
+    "GP_match_mm": 2.0032143250599133e-15,
+    "material_range_passed": true,
+    "unload_displacement_norm_mm": 0.0013880615083842515,
+    "passed": true,
+    "solver_sha256": "891d94013417d3dfd6f09044ca95920d1b70264f5e092969c08c865d3600b667",
+    "globalization": "Backtracking at original target loads, no trial history commit, positive determinant and residual descent"
+  },
+  "target_cases": [
+    {
+      "sample_id": "normal_rodv2_0033__compression_skew",
+      "state": "accepted_in_main_queue",
+      "accepted_review": {
+        "sample_id": "normal_rodv2_0033__compression_skew",
+        "geometry_case_id": "rodv2_0033",
+        "group": "normal",
+        "split": "train",
+        "scenario": "compression_skew",
+        "fields_directory": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\j2_extension_v1\\recovery\\normal_rodv2_0033__compression_skew\\fenicsx",
+        "fields_sha256": "53e5f11f39f473ea572d2ec026fcc0888ef32d81e1776b45cdc4d6bf683d260b",
+        "backend": "cpu",
+        "linear_solver": "direct",
+        "seconds": 86.44716739654541,
+        "max_U_mm": 2.1665082728443212,
+        "max_GP_von_Mises_MPa": 815.9877972825927,
+        "max_relative_residual": 1.736264610299195e-07,
+        "min_J": 0.9970378758954298,
+        "accepted_states": 10,
+        "origin": "source_checked_full_J2_recovery",
+        "verified_unix": 1792892443.4921224,
+        "identity_finite_equilibrium_gates_passed": true,
+        "constitutive_scope": "source-checked finite-strain isotropic J2 with frozen piecewise Cauchy hardening; refuse unsupported plastic strain",
+        "physical_inputs_unchanged": true,
+        "max_PEEQ": 3.527867616349586e-05,
+        "full_J2_recovery": true,
+        "stability_status": "not_assessed",
+        "provenance_sha256": "d78b10bfc1893da25a91bb6759bc429cd09389ba377e76e5467b6f24b76b5c0f"
+      },
+      "solver_status": {
+        "phase": "complete_pending_cross_solver_review",
+        "pid": 3125,
+        "elapsed_seconds": 86.49831414222717
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0033__gas_inertia_30deg",
+      "state": "accepted_in_main_queue",
+      "accepted_review": {
+        "sample_id": "normal_rodv2_0033__gas_inertia_30deg",
+        "geometry_case_id": "rodv2_0033",
+        "group": "normal",
+        "split": "train",
+        "scenario": "gas_inertia_30deg",
+        "fields_directory": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\j2_extension_v1\\recovery\\normal_rodv2_0033__gas_inertia_30deg\\fenicsx",
+        "fields_sha256": "8c2883386b77e0bca981bb058788a0c4c79df6bb256fd44ffae64d17de883e93",
+        "backend": "cpu",
+        "linear_solver": "direct",
+        "seconds": 60.37521433830261,
+        "max_U_mm": 0.197126138637147,
+        "max_GP_von_Mises_MPa": 935.0592784324973,
+        "max_relative_residual": 6.134801262851989e-08,
+        "min_J": 0.9959324910184357,
+        "accepted_states": 10,
+        "origin": "source_checked_full_J2_recovery",
+        "verified_unix": 1792892443.56789,
+        "identity_finite_equilibrium_gates_passed": true,
+        "constitutive_scope": "source-checked finite-strain isotropic J2 with frozen piecewise Cauchy hardening; refuse unsupported plastic strain",
+        "physical_inputs_unchanged": true,
+        "max_PEEQ": 0.0019560695579346923,
+        "full_J2_recovery": true,
+        "stability_status": "not_assessed",
+        "provenance_sha256": "e0f6f89eba867a316176a3754f967bed3466e634b98a75ba9e6a3c692df2c122"
+      },
+      "solver_status": {
+        "phase": "complete_pending_cross_solver_review",
+        "pid": 3227,
+        "elapsed_seconds": 60.4167046546936
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "state": "failed",
+      "solver_status": {
+        "phase": "newton",
+        "pid": 3384,
+        "elapsed_seconds": 100.25705027580261,
+        "step": 7,
+        "load_factor": 0.8,
+        "iteration": 4,
+        "free_residual_relative": NaN
+      }
+    }
+  ]
+}
