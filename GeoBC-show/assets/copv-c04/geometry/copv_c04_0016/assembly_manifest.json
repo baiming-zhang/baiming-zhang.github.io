@@ -1,0 +1,241 @@
+{
+  "schema": "copv_c04_detailed_assembly_v1",
+  "case_id": "copv_c04_0016",
+  "parameters_mm": {
+    "inner_radius_mm": 90.12567374543882,
+    "straight_length_mm": 337.73927917591294,
+    "dome_depth_mm": 59.4175807128042,
+    "boss_bore_radius_mm": 15.930403560524649,
+    "neck_length_mm": 14.078746124935703,
+    "liner_thickness_mm": 1.002171602409226,
+    "overwrap_thickness_mm": 2.6709433493617385
+  },
+  "materials": {
+    "aluminum": {
+      "label": "Al 6061 内衬",
+      "color": [
+        0.66,
+        0.72,
+        0.76
+      ],
+      "kind": 1
+    },
+    "carbon": {
+      "label": "碳纤维 / 环氧",
+      "color": [
+        0.075,
+        0.085,
+        0.092
+      ],
+      "kind": 0
+    },
+    "titanium": {
+      "label": "Ti-6Al-4V boss",
+      "color": [
+        0.49,
+        0.52,
+        0.55
+      ],
+      "kind": 2
+    },
+    "steel": {
+      "label": "316L 接口套",
+      "color": [
+        0.7,
+        0.73,
+        0.75
+      ],
+      "kind": 3
+    },
+    "elastomer": {
+      "label": "弹性体 O 形圈",
+      "color": [
+        0.045,
+        0.052,
+        0.047
+      ],
+      "kind": 4
+    },
+    "peek": {
+      "label": "PEEK 挡圈",
+      "color": [
+        0.64,
+        0.54,
+        0.35
+      ],
+      "kind": 5
+    },
+    "adhesive": {
+      "label": "环氧粘接界面",
+      "color": [
+        0.53,
+        0.31,
+        0.13
+      ],
+      "kind": 6
+    }
+  },
+  "section": false,
+  "scope": "Parametric CAD construction concept. Port sizes, seal stack, metal identities and local reinforcement are illustrative design choices, not a qualified product.",
+  "display_tessellation": "Tri3 of actual component CAD surfaces, not a volume FE mesh. Section is a true CAD quarter cut, retaining solid cut faces.",
+  "cavity": "Empty storage cavity. Metallic liner, adhesive, four structural ply bands and polar reinforcement; no invented internal baffles.",
+  "thread_display": "Procedural helical thread texture on insert bore; not a CAD thread solid or a qualified thread form.",
+  "original_solver_scope": "C04 geometry input only until this case passes mesh gates and has its own GPU-FEniCSx result; no other geometry field is reused.",
+  "seconds": 10.806276399991475,
+  "parts": [
+    {
+      "name": "金属气密内衬",
+      "material": "aluminum",
+      "group": "liner",
+      "volume_mm3": 261979.5921825147,
+      "solid_count": 1
+    },
+    {
+      "name": "环氧粘接层 0.15 mm",
+      "material": "adhesive",
+      "group": "bond",
+      "volume_mm3": 38587.78360690456,
+      "solid_count": 1
+    },
+    {
+      "name": "包覆铺层 1 / +55°",
+      "material": "carbon",
+      "group": "ply",
+      "ply": 1,
+      "angle": 55,
+      "volume_mm3": 172709.49703511433,
+      "solid_count": 1
+    },
+    {
+      "name": "包覆铺层 2 / -55°",
+      "material": "carbon",
+      "group": "ply",
+      "ply": 2,
+      "angle": -55,
+      "volume_mm3": 174221.69932195055,
+      "solid_count": 1
+    },
+    {
+      "name": "包覆铺层 3 / -55°",
+      "material": "carbon",
+      "group": "ply",
+      "ply": 3,
+      "angle": -55,
+      "volume_mm3": 175727.98524682387,
+      "solid_count": 1
+    },
+    {
+      "name": "包覆铺层 4 / +55°",
+      "material": "carbon",
+      "group": "ply",
+      "ply": 4,
+      "angle": 55,
+      "volume_mm3": 177241.03006468806,
+      "solid_count": 1
+    },
+    {
+      "name": "上极区局部补强",
+      "material": "carbon",
+      "group": "reinforcement",
+      "angle": 25,
+      "volume_mm3": 3756.5984354232305,
+      "solid_count": 1
+    },
+    {
+      "name": "下极区局部补强",
+      "material": "carbon",
+      "group": "reinforcement",
+      "angle": -25,
+      "volume_mm3": 3756.598435423207,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · 嵌入法兰与车削 boss",
+      "material": "titanium",
+      "group": "boss",
+      "end": 1,
+      "volume_mm3": 72676.21187605402,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · 嵌入法兰与车削 boss",
+      "material": "titanium",
+      "group": "boss",
+      "end": -1,
+      "volume_mm3": 70254.57883638711,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · O 形圈 1",
+      "material": "elastomer",
+      "group": "seal",
+      "end": 1,
+      "volume_mm3": 217.20064257048654,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · O 形圈 2",
+      "material": "elastomer",
+      "group": "seal",
+      "end": 1,
+      "volume_mm3": 217.20064257048654,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · PEEK 挡圈",
+      "material": "peek",
+      "group": "backup",
+      "end": 1,
+      "volume_mm3": 128.4089574702224,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · 中空接口套 / 六角扳手位",
+      "material": "steel",
+      "group": "insert",
+      "end": 1,
+      "volume_mm3": 17137.041441963687,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · O 形圈 1",
+      "material": "elastomer",
+      "group": "seal",
+      "end": -1,
+      "volume_mm3": 217.20064257048654,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · O 形圈 2",
+      "material": "elastomer",
+      "group": "seal",
+      "end": -1,
+      "volume_mm3": 217.20064257048654,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · PEEK 挡圈",
+      "material": "peek",
+      "group": "backup",
+      "end": -1,
+      "volume_mm3": 128.4089574702224,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · 中空接口套 / 六角扳手位",
+      "material": "steel",
+      "group": "insert",
+      "end": -1,
+      "volume_mm3": 15208.64344288144,
+      "solid_count": 1
+    }
+  ],
+  "gmsh_version": "4.15.2",
+  "artifact_sha256": {
+    "detailed_assembly.step": "c78ad3bf56293a753f29ecbc5cddb48602145632fb2437824d2b04dda9620707",
+    "detailed_assembly.brep": "ea8be7d79d3d5b03e47718f14a22bc1fe83b5c641d5e1949ea5a1814d2284d41",
+    "model.json.gz": "f833056f22695c5733b519e906614dc18bbfaa9d48179d6935477f7e1fbd9375"
+  },
+  "section_sha256": "1d36d4824f2a5f49e3a72beea857534e667e2e54652dc2cd724937c5fe5b1ca9",
+  "total_build_seconds": 24.40989459992852
+}

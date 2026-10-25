@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26 01:31 北京时间",
+  "updated": "2026-10-26 02:51 北京时间",
   "tasks": [
     {
       "id": "R01",
@@ -377,14 +377,40 @@
       "phase": "第2周",
       "title": "COPV 小批量试跑",
       "due": "2026-11-01",
-      "status": "未开始",
+      "status": "进行中",
       "deliverables": "建议先试跑 20–50 个几何",
       "review": "核对数据字段和样本对应关系，确认后启动批量任务",
       "dependencies": "C03",
       "start": "2026-10-31",
-      "issues": "",
+      "issues": "生产标签目前为 0。保留 C03 的 SICN≥0.05 和体积误差≤0.1% 门槛；相交及资源停止记录保留，未通过网格不送入生产求解。",
       "page": "C04.html",
-      "results": []
+      "results": [
+        {
+          "label": "20 几何与真实三维 BC/载荷",
+          "url": "viewers/copv-c04-pilot.html?v=c04-1"
+        },
+        {
+          "label": "试跑进度 JSON",
+          "url": "data/copv-c04-progress.json"
+        },
+        {
+          "label": "冻结协议",
+          "url": "data/copv-c04-protocol.json"
+        },
+        {
+          "label": "样本对应 CSV",
+          "url": "data/copv-c04-sample-manifest.csv"
+        },
+        {
+          "label": "原始 20 个 CAD 输入",
+          "url": "data/copv-c04-original-CAD-inputs.zip"
+        },
+        {
+          "label": "源码与执行证据",
+          "url": "data/copv-c04-source-evidence.zip"
+        }
+      ],
+      "actual_start": "2026-10-26"
     },
     {
       "id": "C05",

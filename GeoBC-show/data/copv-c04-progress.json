@@ -1,0 +1,1638 @@
+{
+  "schema": "copv_c04_progress_v1",
+  "updated": "2026-10-26T02:51:14.829102+08:00",
+  "status": "in_progress",
+  "target_distinct_geometries": 20,
+  "CAD_completed": 20,
+  "accepted_FE_labels": 0,
+  "GPU_parameterization_validation": {
+    "passed": true,
+    "reference": "Frozen C03 h6 P1 discrete-cap case",
+    "relative_nodal_U_difference": 2.082076224048836e-09,
+    "accepted_pilot_labels": 0,
+    "scope": "Validation of generalizing geometric boundary/axes formulas; no rejected mesh is promoted"
+  },
+  "validation_excluded_from_pilot": true,
+  "protocol_sha256": "8fc44404642065bc589ac8d1598a04ea3d52369a0c95e4844ee5930e242dda1d",
+  "protocol_hash_convention": "Canonical UTF-8 text with LF; the original Windows CRLF file is retained separately",
+  "source_geometry_revision": "Original v1 geometry shown; separately versioned v2 interface alignment is being assessed",
+  "production_release": false,
+  "quality_gate": {
+    "surface_min_SICN": 0.05,
+    "volume_min_SICN": 0.05,
+    "total_volume_relative_error_max": 0.001,
+    "material_region_volume_relative_error_max": 0.001,
+    "positive_Jacobians": true,
+    "one_connected_component": true,
+    "shared_Tri6_interfaces": true
+  },
+  "attempts": [
+    {
+      "id": "repair_001_sizing",
+      "status": "rejected_PLC_intersection",
+      "FE_labels": 0
+    },
+    {
+      "id": "repair_002_heal",
+      "status": "CAD_drift_passed_mesh_overlapping_facets",
+      "FE_labels": 0
+    },
+    {
+      "id": "repair_003_alignment",
+      "status": "CAD_drift_passed_coarse_port_circle_intersection",
+      "FE_labels": 0
+    },
+    {
+      "id": "repair_004_curvature64",
+      "status": "resource_aborted_before_FE",
+      "surface_linear_nodes": 2232809,
+      "FE_labels": 0
+    },
+    {
+      "id": "repair_005_targeted",
+      "status": "quality_rejected",
+      "FE_labels": 0,
+      "mesh": {
+        "parameters_mm": {
+          "inner_radius_mm": 100.0,
+          "straight_length_mm": 400.0,
+          "dome_depth_mm": 60.0,
+          "boss_bore_radius_mm": 15.0,
+          "neck_length_mm": 20.0,
+          "liner_thickness_mm": 1.0,
+          "overwrap_thickness_mm": 3.0
+        },
+        "case_id": "repair_003_alignment",
+        "status": "prepared",
+        "source_CAD_sha256": "58c13eb0524ee142b46f3be75e54129fd8a7337bc66d8f3d2a953446f9385fee",
+        "source_model_sha256": "9dd7fea36723d7b0263c54ee25bfcd2112b94e211246ba31d2e5389103300bfa",
+        "parts": [
+          {
+            "name": "金属气密内衬",
+            "material": "aluminum",
+            "group": "liner",
+            "volume_mm3": 335078.43389441585,
+            "solid_count": 1,
+            "part_id": 1,
+            "source_volume_tag": 1,
+            "structural": true
+          },
+          {
+            "name": "环氧粘接层 0.15 mm",
+            "material": "adhesive",
+            "group": "bond",
+            "volume_mm3": 49523.82919948455,
+            "solid_count": 1,
+            "part_id": 2,
+            "source_volume_tag": 2,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 1 / +55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 1,
+            "angle": 55,
+            "volume_mm3": 248944.2400732995,
+            "solid_count": 1,
+            "part_id": 3,
+            "source_volume_tag": 3,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 2 / -55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 2,
+            "angle": -55,
+            "volume_mm3": 251162.19966425514,
+            "solid_count": 1,
+            "part_id": 4,
+            "source_volume_tag": 4,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 3 / -55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 3,
+            "angle": -55,
+            "volume_mm3": 253340.68628953863,
+            "solid_count": 1,
+            "part_id": 5,
+            "source_volume_tag": 5,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 4 / +55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 4,
+            "angle": 55,
+            "volume_mm3": 255522.13308312465,
+            "solid_count": 1,
+            "part_id": 6,
+            "source_volume_tag": 6,
+            "structural": true
+          },
+          {
+            "name": "上极区局部补强",
+            "material": "carbon",
+            "group": "reinforcement",
+            "angle": 25,
+            "volume_mm3": 4315.3025387904,
+            "solid_count": 1,
+            "part_id": 7,
+            "source_volume_tag": 7,
+            "structural": true
+          },
+          {
+            "name": "下极区局部补强",
+            "material": "carbon",
+            "group": "reinforcement",
+            "angle": -25,
+            "volume_mm3": 4315.3025387904145,
+            "solid_count": 1,
+            "part_id": 8,
+            "source_volume_tag": 8,
+            "structural": true
+          },
+          {
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "group": "boss",
+            "end": 1,
+            "volume_mm3": 83609.91842092882,
+            "solid_count": 1,
+            "part_id": 9,
+            "source_volume_tag": 9,
+            "structural": true
+          },
+          {
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "group": "boss",
+            "end": -1,
+            "volume_mm3": 80967.86546160035,
+            "solid_count": 1,
+            "part_id": 10,
+            "source_volume_tag": 10,
+            "structural": true
+          },
+          {
+            "name": "上端充装口 · O 形圈 1",
+            "material": "elastomer",
+            "group": "seal",
+            "end": 1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 11,
+            "source_volume_tag": 12,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · O 形圈 2",
+            "material": "elastomer",
+            "group": "seal",
+            "end": 1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 12,
+            "source_volume_tag": 13,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · PEEK 挡圈",
+            "material": "peek",
+            "group": "backup",
+            "end": 1,
+            "volume_mm3": 122.13923188534119,
+            "solid_count": 1,
+            "part_id": 13,
+            "source_volume_tag": 14,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "group": "insert",
+            "end": 1,
+            "volume_mm3": 16164.284969179704,
+            "solid_count": 1,
+            "part_id": 14,
+            "source_volume_tag": 11,
+            "structural": true
+          },
+          {
+            "name": "下端服务口 · O 形圈 1",
+            "material": "elastomer",
+            "group": "seal",
+            "end": -1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 15,
+            "source_volume_tag": 16,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · O 形圈 2",
+            "material": "elastomer",
+            "group": "seal",
+            "end": -1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 16,
+            "source_volume_tag": 17,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · PEEK 挡圈",
+            "material": "peek",
+            "group": "backup",
+            "end": -1,
+            "volume_mm3": 122.13923188534119,
+            "solid_count": 1,
+            "part_id": 17,
+            "source_volume_tag": 18,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "group": "insert",
+            "end": -1,
+            "volume_mm3": 14387.368748382787,
+            "solid_count": 1,
+            "part_id": 18,
+            "source_volume_tag": 15,
+            "structural": true
+          }
+        ],
+        "collar_interface_repairs": [
+          {
+            "part_id": 7,
+            "old_volume_mm3": 4315.302538790362,
+            "new_volume_mm3": 4319.960164784536,
+            "relative_change": 0.001079327799686558,
+            "rule": "retain C01 outer collar envelope; fit inner interface to exact outer-ply spline and original boss pockets"
+          },
+          {
+            "part_id": 8,
+            "old_volume_mm3": 4315.302538790369,
+            "new_volume_mm3": 4318.577527506501,
+            "relative_change": 0.0007589244755594748,
+            "rule": "retain C01 outer collar envelope; fit inner interface to exact outer-ply spline and original boss pockets"
+          }
+        ],
+        "partition_volume_count": 12,
+        "volume_records": [
+          {
+            "tag": 1,
+            "part_id": 1,
+            "volume_mm3": 335072.182640414,
+            "center_mm": [
+              -0.000310149794095195,
+              -5.995931079580018e-14,
+              7.64909729343992e-12
+            ]
+          },
+          {
+            "tag": 2,
+            "part_id": 2,
+            "volume_mm3": 49523.829199477565,
+            "center_mm": [
+              5.576582901593941e-05,
+              0.00011070458450816742,
+              -0.00962338222741848
+            ]
+          },
+          {
+            "tag": 3,
+            "part_id": 3,
+            "volume_mm3": 248944.24007330276,
+            "center_mm": [
+              -0.0005037253460047962,
+              -4.112552889808978e-05,
+              -0.0022557360400149817
+            ]
+          },
+          {
+            "tag": 4,
+            "part_id": 4,
+            "volume_mm3": 251162.19966425654,
+            "center_mm": [
+              0.0002581704937239672,
+              1.269834142614347e-05,
+              0.00424282746970444
+            ]
+          },
+          {
+            "tag": 5,
+            "part_id": 5,
+            "volume_mm3": 253340.6862895349,
+            "center_mm": [
+              -0.0007558262652551637,
+              5.97655917965963e-06,
+              0.004924628581727854
+            ]
+          },
+          {
+            "tag": 6,
+            "part_id": 6,
+            "volume_mm3": 255524.59388379718,
+            "center_mm": [
+              5.069655425538166e-05,
+              6.599371906004222e-07,
+              -0.010204064717950906
+            ]
+          },
+          {
+            "tag": 9,
+            "part_id": 9,
+            "volume_mm3": 83609.97770206665,
+            "center_mm": [
+              1.8131655173332775e-05,
+              -1.590345109525985e-07,
+              260.83245311857905
+            ]
+          },
+          {
+            "tag": 10,
+            "part_id": 10,
+            "volume_mm3": 80967.88351112268,
+            "center_mm": [
+              3.5136361191417454e-06,
+              1.10557300315573e-06,
+              -259.95855631827357
+            ]
+          },
+          {
+            "tag": 11,
+            "part_id": 14,
+            "volume_mm3": 16164.284969179711,
+            "center_mm": [
+              4.2339934267990046e-15,
+              -7.690901604832765e-16,
+              288.50482528167015
+            ]
+          },
+          {
+            "tag": 15,
+            "part_id": 18,
+            "volume_mm3": 14387.368748382785,
+            "center_mm": [
+              4.8398834646061985e-15,
+              -2.6656005612519345e-16,
+              -285.64983078254636
+            ]
+          },
+          {
+            "tag": 17,
+            "part_id": 7,
+            "volume_mm3": 4319.959964915872,
+            "center_mm": [
+              0.004520804386446331,
+              0.0010838436335329324,
+              241.5106219624223
+            ]
+          },
+          {
+            "tag": 18,
+            "part_id": 8,
+            "volume_mm3": 4318.575337251246,
+            "center_mm": [
+              0.00047329439812402824,
+              -0.000155555051676543,
+              -241.51264199699904
+            ]
+          }
+        ],
+        "original_ambiguous_volume_ownership": [],
+        "resolved_overlap_policy": [],
+        "ambiguous_volume_ownership": [],
+        "gmsh_version": "4.15.2",
+        "h_mm": 4.0,
+        "seconds": 54.16267900005914,
+        "C04_sizing_recipe": {
+          "bond_h_mm": 2.0,
+          "collar_h_mm": 2.0,
+          "collar_root_h_mm": 0.2,
+          "min_size_mm": 0.15,
+          "documentation": "https://gmsh.info/doc/texinfo/#Gmsh-mesh-size-fields"
+        },
+        "additional_optimizer": "Netgen",
+        "nodes": 5644741,
+        "cells": 3584342,
+        "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+        "min_det_jac_mm3": 0.00013159358358269622,
+        "connected_components": 1,
+        "curvature_points_per_circle": 64,
+        "linear_meshing_seconds": 366.83608089992777,
+        "meshing_total_seconds": 456.2366921999492
+      },
+      "quality": {
+        "mesh": "repair_005_targeted_quality",
+        "nodes": 5644741,
+        "corner_nodes": 836214,
+        "cells": 3584342,
+        "h_mm": 4.0,
+        "min_volume_sicn": 0.009865516201606628,
+        "min_surface_sicn": 0.056321373715234546,
+        "nonpositive_sicn": 0,
+        "below_005": 843,
+        "all_Jacobians_positive": true,
+        "conformal_six_node_interface_pairs": 846522,
+        "surface_faces": 2468986,
+        "total_mesh_volume_mm3": 1597082.2069656588,
+        "total_CAD_volume_mm3": 1597335.781983702,
+        "total_relative_volume_error": 0.0001587487245344743,
+        "max_part_relative_volume_error": 0.009794040217186106,
+        "production_gate": {
+          "reference": "R03",
+          "SICN_threshold": 0.05,
+          "volume_tolerance": 0.001,
+          "passed": false,
+          "status": "quarantined_from_production",
+          "connected_components": 1,
+          "independent_load_closure_passed": true
+        },
+        "parts": [
+          {
+            "part_id": 1,
+            "name": "金属气密内衬",
+            "material": "aluminum",
+            "cells": 405801,
+            "min_volume_sicn": 0.2400166045561378,
+            "p01_volume_sicn": 0.4711510855379539,
+            "median_volume_sicn": 0.6439088905852497,
+            "below_005": 0,
+            "min_surface_sicn": 0.34490409962772356,
+            "mesh_volume_mm3": 337456.1238858006,
+            "CAD_volume_mm3": 335072.182640414,
+            "relative_volume_error": 0.007114709513039275
+          },
+          {
+            "part_id": 2,
+            "name": "环氧粘接层 0.15 mm",
+            "material": "adhesive",
+            "cells": 610150,
+            "min_volume_sicn": 0.061118438017945344,
+            "p01_volume_sicn": 0.13806232670911683,
+            "median_volume_sicn": 0.17945095898258745,
+            "below_005": 0,
+            "min_surface_sicn": 0.22453228525255092,
+            "mesh_volume_mm3": 49520.2052487104,
+            "CAD_volume_mm3": 49523.829199477565,
+            "relative_volume_error": 7.31758998797627e-05
+          },
+          {
+            "part_id": 3,
+            "name": "包覆铺层 1 / +55°",
+            "material": "carbon",
+            "cells": 380915,
+            "min_volume_sicn": 0.18706554027331035,
+            "p01_volume_sicn": 0.3690850001647978,
+            "median_volume_sicn": 0.5263228260305932,
+            "below_005": 0,
+            "min_surface_sicn": 0.5250394230073004,
+            "mesh_volume_mm3": 246506.070174188,
+            "CAD_volume_mm3": 248944.24007330276,
+            "relative_volume_error": 0.009794040217186106
+          },
+          {
+            "part_id": 4,
+            "name": "包覆铺层 2 / -55°",
+            "material": "carbon",
+            "cells": 195683,
+            "min_volume_sicn": 0.190014402661959,
+            "p01_volume_sicn": 0.33881735605303537,
+            "median_volume_sicn": 0.44388852358233455,
+            "below_005": 0,
+            "min_surface_sicn": 0.524765061744753,
+            "mesh_volume_mm3": 251139.08983301453,
+            "CAD_volume_mm3": 251162.19966425654,
+            "relative_volume_error": 9.201158165084156e-05
+          },
+          {
+            "part_id": 5,
+            "name": "包覆铺层 3 / -55°",
+            "material": "carbon",
+            "cells": 194139,
+            "min_volume_sicn": 0.19617275522973046,
+            "p01_volume_sicn": 0.3339224422054929,
+            "median_volume_sicn": 0.44542353274625124,
+            "below_005": 0,
+            "min_surface_sicn": 0.47436468757107303,
+            "mesh_volume_mm3": 253321.9488752878,
+            "CAD_volume_mm3": 253340.6862895349,
+            "relative_volume_error": 7.396133057635534e-05
+          },
+          {
+            "part_id": 6,
+            "name": "包覆铺层 4 / +55°",
+            "material": "carbon",
+            "cells": 447646,
+            "min_volume_sicn": 0.009865516201606628,
+            "p01_volume_sicn": 0.06430829599504137,
+            "median_volume_sicn": 0.3509327707100057,
+            "below_005": 817,
+            "min_surface_sicn": 0.1404783606893536,
+            "mesh_volume_mm3": 255627.9732892752,
+            "CAD_volume_mm3": 255524.59388379718,
+            "relative_volume_error": 0.0004045771246778962
+          },
+          {
+            "part_id": 7,
+            "name": "上极区局部补强",
+            "material": "carbon",
+            "cells": 375728,
+            "min_volume_sicn": 0.0900107259647851,
+            "p01_volume_sicn": 0.17769503250698676,
+            "median_volume_sicn": 0.4086349284236501,
+            "below_005": 0,
+            "min_surface_sicn": 0.3134999143147552,
+            "mesh_volume_mm3": 4310.783632525465,
+            "CAD_volume_mm3": 4319.959964915872,
+            "relative_volume_error": 0.0021241707017962685
+          },
+          {
+            "part_id": 8,
+            "name": "下极区局部补强",
+            "material": "carbon",
+            "cells": 376164,
+            "min_volume_sicn": 0.08887480854566045,
+            "p01_volume_sicn": 0.17802201870323267,
+            "median_volume_sicn": 0.40870757376122413,
+            "below_005": 0,
+            "min_surface_sicn": 0.3134999143426566,
+            "mesh_volume_mm3": 4310.500337997057,
+            "CAD_volume_mm3": 4318.575337251246,
+            "relative_volume_error": 0.00186982942836178
+          },
+          {
+            "part_id": 9,
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "cells": 194939,
+            "min_volume_sicn": 0.07143231057262442,
+            "p01_volume_sicn": 0.19229969556015394,
+            "median_volume_sicn": 0.5083591208627953,
+            "below_005": 0,
+            "min_surface_sicn": 0.0567862717944306,
+            "mesh_volume_mm3": 83493.16535981293,
+            "CAD_volume_mm3": 83609.97770206665,
+            "relative_volume_error": 0.0013971100754262
+          },
+          {
+            "part_id": 10,
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "cells": 190979,
+            "min_volume_sicn": 0.05400187746706917,
+            "p01_volume_sicn": 0.16403082843787167,
+            "median_volume_sicn": 0.4966573989344803,
+            "below_005": 0,
+            "min_surface_sicn": 0.05713006552326369,
+            "mesh_volume_mm3": 80857.62659764854,
+            "CAD_volume_mm3": 80967.88351112268,
+            "relative_volume_error": 0.0013617363909356195
+          },
+          {
+            "part_id": 14,
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "cells": 107936,
+            "min_volume_sicn": 0.06664330004657248,
+            "p01_volume_sicn": 0.17761421110512057,
+            "median_volume_sicn": 0.5085479860974234,
+            "below_005": 0,
+            "min_surface_sicn": 0.056321373715256196,
+            "mesh_volume_mm3": 16157.469018121526,
+            "CAD_volume_mm3": 16164.284969179711,
+            "relative_volume_error": 0.00042166734075654855
+          },
+          {
+            "part_id": 18,
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "cells": 104262,
+            "min_volume_sicn": 0.03604597403630467,
+            "p01_volume_sicn": 0.14915782217146775,
+            "median_volume_sicn": 0.49179001662145183,
+            "below_005": 26,
+            "min_surface_sicn": 0.056321373715234546,
+            "mesh_volume_mm3": 14381.250713276622,
+            "CAD_volume_mm3": 14387.368748382785,
+            "relative_volume_error": 0.00042523655389392623
+          }
+        ],
+        "mesh_sha256": "a521a2607382ba449fd86cdf44845fce6fad51b2c2fa8a9ca891a5f1b865a106"
+      }
+    },
+    {
+      "id": "repair_006_controlled",
+      "status": "load_closure_rejected_no_FE",
+      "FE_labels": 0,
+      "mesh": {
+        "parameters_mm": {
+          "inner_radius_mm": 100.0,
+          "straight_length_mm": 400.0,
+          "dome_depth_mm": 60.0,
+          "boss_bore_radius_mm": 15.0,
+          "neck_length_mm": 20.0,
+          "liner_thickness_mm": 1.0,
+          "overwrap_thickness_mm": 3.0
+        },
+        "case_id": "repair_003_alignment",
+        "status": "prepared",
+        "source_CAD_sha256": "58c13eb0524ee142b46f3be75e54129fd8a7337bc66d8f3d2a953446f9385fee",
+        "source_model_sha256": "9dd7fea36723d7b0263c54ee25bfcd2112b94e211246ba31d2e5389103300bfa",
+        "parts": [
+          {
+            "name": "金属气密内衬",
+            "material": "aluminum",
+            "group": "liner",
+            "volume_mm3": 335078.43389441585,
+            "solid_count": 1,
+            "part_id": 1,
+            "source_volume_tag": 1,
+            "structural": true
+          },
+          {
+            "name": "环氧粘接层 0.15 mm",
+            "material": "adhesive",
+            "group": "bond",
+            "volume_mm3": 49523.82919948455,
+            "solid_count": 1,
+            "part_id": 2,
+            "source_volume_tag": 2,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 1 / +55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 1,
+            "angle": 55,
+            "volume_mm3": 248944.2400732995,
+            "solid_count": 1,
+            "part_id": 3,
+            "source_volume_tag": 3,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 2 / -55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 2,
+            "angle": -55,
+            "volume_mm3": 251162.19966425514,
+            "solid_count": 1,
+            "part_id": 4,
+            "source_volume_tag": 4,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 3 / -55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 3,
+            "angle": -55,
+            "volume_mm3": 253340.68628953863,
+            "solid_count": 1,
+            "part_id": 5,
+            "source_volume_tag": 5,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 4 / +55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 4,
+            "angle": 55,
+            "volume_mm3": 255522.13308312465,
+            "solid_count": 1,
+            "part_id": 6,
+            "source_volume_tag": 6,
+            "structural": true
+          },
+          {
+            "name": "上极区局部补强",
+            "material": "carbon",
+            "group": "reinforcement",
+            "angle": 25,
+            "volume_mm3": 4315.3025387904,
+            "solid_count": 1,
+            "part_id": 7,
+            "source_volume_tag": 7,
+            "structural": true
+          },
+          {
+            "name": "下极区局部补强",
+            "material": "carbon",
+            "group": "reinforcement",
+            "angle": -25,
+            "volume_mm3": 4315.3025387904145,
+            "solid_count": 1,
+            "part_id": 8,
+            "source_volume_tag": 8,
+            "structural": true
+          },
+          {
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "group": "boss",
+            "end": 1,
+            "volume_mm3": 83609.91842092882,
+            "solid_count": 1,
+            "part_id": 9,
+            "source_volume_tag": 9,
+            "structural": true
+          },
+          {
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "group": "boss",
+            "end": -1,
+            "volume_mm3": 80967.86546160035,
+            "solid_count": 1,
+            "part_id": 10,
+            "source_volume_tag": 10,
+            "structural": true
+          },
+          {
+            "name": "上端充装口 · O 形圈 1",
+            "material": "elastomer",
+            "group": "seal",
+            "end": 1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 11,
+            "source_volume_tag": 12,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · O 形圈 2",
+            "material": "elastomer",
+            "group": "seal",
+            "end": 1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 12,
+            "source_volume_tag": 13,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · PEEK 挡圈",
+            "material": "peek",
+            "group": "backup",
+            "end": 1,
+            "volume_mm3": 122.13923188534119,
+            "solid_count": 1,
+            "part_id": 13,
+            "source_volume_tag": 14,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "group": "insert",
+            "end": 1,
+            "volume_mm3": 16164.284969179704,
+            "solid_count": 1,
+            "part_id": 14,
+            "source_volume_tag": 11,
+            "structural": true
+          },
+          {
+            "name": "下端服务口 · O 形圈 1",
+            "material": "elastomer",
+            "group": "seal",
+            "end": -1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 15,
+            "source_volume_tag": 16,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · O 形圈 2",
+            "material": "elastomer",
+            "group": "seal",
+            "end": -1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 16,
+            "source_volume_tag": 17,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · PEEK 挡圈",
+            "material": "peek",
+            "group": "backup",
+            "end": -1,
+            "volume_mm3": 122.13923188534119,
+            "solid_count": 1,
+            "part_id": 17,
+            "source_volume_tag": 18,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "group": "insert",
+            "end": -1,
+            "volume_mm3": 14387.368748382787,
+            "solid_count": 1,
+            "part_id": 18,
+            "source_volume_tag": 15,
+            "structural": true
+          }
+        ],
+        "collar_interface_repairs": [
+          {
+            "part_id": 7,
+            "old_volume_mm3": 4315.302538790362,
+            "new_volume_mm3": 4319.960164784536,
+            "relative_change": 0.001079327799686558,
+            "rule": "retain C01 outer collar envelope; fit inner interface to exact outer-ply spline and original boss pockets"
+          },
+          {
+            "part_id": 8,
+            "old_volume_mm3": 4315.302538790369,
+            "new_volume_mm3": 4318.577527506501,
+            "relative_change": 0.0007589244755594748,
+            "rule": "retain C01 outer collar envelope; fit inner interface to exact outer-ply spline and original boss pockets"
+          }
+        ],
+        "partition_volume_count": 12,
+        "volume_records": [
+          {
+            "tag": 1,
+            "part_id": 1,
+            "volume_mm3": 335072.182640414,
+            "center_mm": [
+              -0.000310149794095195,
+              -5.995931079580018e-14,
+              7.64909729343992e-12
+            ]
+          },
+          {
+            "tag": 2,
+            "part_id": 2,
+            "volume_mm3": 49523.829199477565,
+            "center_mm": [
+              5.576582901593941e-05,
+              0.00011070458450816742,
+              -0.00962338222741848
+            ]
+          },
+          {
+            "tag": 3,
+            "part_id": 3,
+            "volume_mm3": 248944.24007330276,
+            "center_mm": [
+              -0.0005037253460047962,
+              -4.112552889808978e-05,
+              -0.0022557360400149817
+            ]
+          },
+          {
+            "tag": 4,
+            "part_id": 4,
+            "volume_mm3": 251162.19966425654,
+            "center_mm": [
+              0.0002581704937239672,
+              1.269834142614347e-05,
+              0.00424282746970444
+            ]
+          },
+          {
+            "tag": 5,
+            "part_id": 5,
+            "volume_mm3": 253340.6862895349,
+            "center_mm": [
+              -0.0007558262652551637,
+              5.97655917965963e-06,
+              0.004924628581727854
+            ]
+          },
+          {
+            "tag": 6,
+            "part_id": 6,
+            "volume_mm3": 255524.59388379718,
+            "center_mm": [
+              5.069655425538166e-05,
+              6.599371906004222e-07,
+              -0.010204064717950906
+            ]
+          },
+          {
+            "tag": 9,
+            "part_id": 9,
+            "volume_mm3": 83609.97770206665,
+            "center_mm": [
+              1.8131655173332775e-05,
+              -1.590345109525985e-07,
+              260.83245311857905
+            ]
+          },
+          {
+            "tag": 10,
+            "part_id": 10,
+            "volume_mm3": 80967.88351112268,
+            "center_mm": [
+              3.5136361191417454e-06,
+              1.10557300315573e-06,
+              -259.95855631827357
+            ]
+          },
+          {
+            "tag": 11,
+            "part_id": 14,
+            "volume_mm3": 16164.284969179711,
+            "center_mm": [
+              4.2339934267990046e-15,
+              -7.690901604832765e-16,
+              288.50482528167015
+            ]
+          },
+          {
+            "tag": 15,
+            "part_id": 18,
+            "volume_mm3": 14387.368748382785,
+            "center_mm": [
+              4.8398834646061985e-15,
+              -2.6656005612519345e-16,
+              -285.64983078254636
+            ]
+          },
+          {
+            "tag": 17,
+            "part_id": 7,
+            "volume_mm3": 4319.959964915872,
+            "center_mm": [
+              0.004520804386446331,
+              0.0010838436335329324,
+              241.5106219624223
+            ]
+          },
+          {
+            "tag": 18,
+            "part_id": 8,
+            "volume_mm3": 4318.575337251246,
+            "center_mm": [
+              0.00047329439812402824,
+              -0.000155555051676543,
+              -241.51264199699904
+            ]
+          }
+        ],
+        "original_ambiguous_volume_ownership": [],
+        "resolved_overlap_policy": [],
+        "ambiguous_volume_ownership": [],
+        "gmsh_version": "4.15.2",
+        "h_mm": 4.0,
+        "seconds": 54.16267900005914,
+        "C04_sizing_recipe": {
+          "bond_h_mm": 2.0,
+          "collar_h_mm": 2.0,
+          "collar_root_h_mm": 0.2,
+          "min_size_mm": 0.15,
+          "documentation": "https://gmsh.info/doc/texinfo/#Gmsh-mesh-size-fields"
+        },
+        "additional_optimizer": "Netgen",
+        "nodes": 4463315,
+        "cells": 3004373,
+        "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+        "min_det_jac_mm3": 0.00012815103689436507,
+        "connected_components": 1,
+        "curvature_points_per_circle": 0,
+        "linear_meshing_seconds": 254.4269594999496,
+        "meshing_total_seconds": 324.0827186999377
+      },
+      "load_closure": {
+        "pressure_boundary_facets": 52497,
+        "top_cap_facets": 104,
+        "bottom_cap_facets": 81,
+        "pressure_plus_caps_force_resultant_N": [
+          78.80165760188471,
+          44.01805006559995,
+          5.943733991676126
+        ],
+        "pressure_plus_caps_moment_resultant_Nmm": [
+          5663.81802362887,
+          -1516.6755618920163,
+          30.467771971374987
+        ],
+        "force_relative_to_p_pi_R2": 0.0028793619702923113,
+        "moment_relative_to_p_pi_R2_L": 0.00031262892670815294,
+        "method": "Independent outward tetra face topology and exact planar triangle pressure area vectors; same idealized fluid boundary rule; caps each applied once",
+        "passed": false,
+        "exterior_faces": 404308,
+        "material_interface_faces": 1563396,
+        "seconds": 6.618736100033857
+      }
+    },
+    {
+      "id": "repair_007_uniform_shell",
+      "status": "resource_aborted_before_FE",
+      "FE_labels": 0,
+      "resource_guard": {
+        "status": "resource_aborted_before_FE",
+        "observed_surface_linear_nodes": 1220956,
+        "reason": "Uniform high-curvature shell refinement exceeded the single-GPU surface-node budget; retain uniform baseline spacing with localized adhesive patches"
+      }
+    },
+    {
+      "id": "repair_008_local_patches",
+      "status": "meshing",
+      "FE_labels": 0
+    }
+  ],
+  "cases": [
+    {
+      "id": "copv_c04_0000",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "9850a35a660581d429e6bbd442172fbe5608ce4e75c67e0573395f520def799a",
+      "CAD_status": "completed",
+      "CAD_sha256": "7113807d2db471f3582c1c5146bb74473390d4f593a0c011e88150df149fb7db",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0000",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0000",
+        "parameters_sha256": "9850a35a660581d429e6bbd442172fbe5608ce4e75c67e0573395f520def799a",
+        "started": "2026-10-26T02:28:42.755157+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.9192055526205962e-06,
+        "source_CAD_sha256": "58c13eb0524ee142b46f3be75e54129fd8a7337bc66d8f3d2a953446f9385fee",
+        "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
+        "finished": "2026-10-26T02:30:05.287096+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0001",
+      "parameters_mm": {
+        "inner_radius_mm": 90.0,
+        "straight_length_mm": 360.0,
+        "dome_depth_mm": 54.0,
+        "boss_bore_radius_mm": 13.5,
+        "neck_length_mm": 18.0,
+        "liner_thickness_mm": 0.9,
+        "overwrap_thickness_mm": 2.6999999999999997
+      },
+      "parameters_sha256": "114d9e59f5c2ca966fc1a4b48a35753ee309107c1026edc027b79687a09c82e3",
+      "CAD_status": "completed",
+      "CAD_sha256": "1ee10ba0e182bde3d9b6d8517537388ed3ddc9a678b98d4529941a363e5f89b5",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0001",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0001",
+        "parameters_sha256": "114d9e59f5c2ca966fc1a4b48a35753ee309107c1026edc027b79687a09c82e3",
+        "started": "2026-10-26T02:30:05.287604+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.6794344136771286e-06,
+        "source_CAD_sha256": "7c2cd144dc84aecc0ced0e8071de02c51ebacf91819154c4cc1edc3356fcc5d4",
+        "partition_sha256": "34f9f0374692841ded7aabf90e978462d51e5596d171764f96cf519d49f8586f",
+        "finished": "2026-10-26T02:31:20.423429+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0002",
+      "parameters_mm": {
+        "inner_radius_mm": 110.0,
+        "straight_length_mm": 440.0,
+        "dome_depth_mm": 66.0,
+        "boss_bore_radius_mm": 16.5,
+        "neck_length_mm": 22.0,
+        "liner_thickness_mm": 1.1,
+        "overwrap_thickness_mm": 3.3
+      },
+      "parameters_sha256": "7c8dd419a4fcf24603b37dc5a564c8ecbc1c472ef2f45bbedadf7ddaea26ef24",
+      "CAD_status": "completed",
+      "CAD_sha256": "093db6ecbd459cb5d4838fab1db6ec439136d58f3e5976a78c84ddc019370e1f",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0002",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0002",
+        "parameters_sha256": "7c8dd419a4fcf24603b37dc5a564c8ecbc1c472ef2f45bbedadf7ddaea26ef24",
+        "started": "2026-10-26T02:31:20.424936+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 3.2067564690319017e-06,
+        "source_CAD_sha256": "f25883ee66be0f8be91a2b62d80958bae0528035d1c68e937418ec09208f841c",
+        "partition_sha256": "7fdcdb0f3faf4a824bbd5c5b44f40715b0c207657366b81ad4eab91ffe44c2a8",
+        "finished": "2026-10-26T02:32:48.120685+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0003",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 350.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "11fc550aab2069a23e27b63454297073e6a3a249c4a93ff2b7ea88dbddc1148c",
+      "CAD_status": "completed",
+      "CAD_sha256": "366dce0176373745afb1e58ef99f0425c04234bbf6fba2110ea552a5a7949aca",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0003",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0003",
+        "parameters_sha256": "11fc550aab2069a23e27b63454297073e6a3a249c4a93ff2b7ea88dbddc1148c",
+        "started": "2026-10-26T02:32:48.123197+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.919399331169359e-06,
+        "source_CAD_sha256": "bf1e6cdb8de18257b5fceb211a05de72054bf8466b765fe899353622e214c7e6",
+        "partition_sha256": "ae61b9d3642202dc4a68d8bb354273da74d3ede32ca6d2067ab7bffd13f7f7de",
+        "finished": "2026-10-26T02:34:12.082311+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0004",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 450.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "6e0a1d824c59f3e085527c08f3d15ac1b20fdb44aea348104b1f58b40443b267",
+      "CAD_status": "completed",
+      "CAD_sha256": "66dff13d7712f5de9094ede81f26e0574fed4c35ed4590fd58854fc06fb48d6c",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0004",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0004",
+        "parameters_sha256": "6e0a1d824c59f3e085527c08f3d15ac1b20fdb44aea348104b1f58b40443b267",
+        "started": "2026-10-26T02:34:12.083850+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.92517385935831e-06,
+        "source_CAD_sha256": "abf3756492488e1ed28c744a70ec2ce9d8529e235c56d7ceea08253277fa538c",
+        "partition_sha256": "a8f07e6a7e533c9bc37ac13669a2102686bd16cf8e7642a0284af53118f5c453",
+        "finished": "2026-10-26T02:35:36.765376+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0005",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 55.00000000000001,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "3fb4b122307a1370d73a00418686ef48641d0ba597cef7c1ff49b8af4d6fa5b1",
+      "CAD_status": "completed",
+      "CAD_sha256": "9e18d9eb6f3d9085e51c07a79ca024dd01bda9498a25968dd5dcce8d88918819",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0005",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0005",
+        "parameters_sha256": "3fb4b122307a1370d73a00418686ef48641d0ba597cef7c1ff49b8af4d6fa5b1",
+        "started": "2026-10-26T02:35:36.765376+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.9617158083805606e-06,
+        "source_CAD_sha256": "61aadc6a5c3a9bd815f88469e779f249da9c788cb7af0ab080ffc6175c8eba04",
+        "partition_sha256": "c35d970747c6513e0af43840a986fb00228c26588080512df6d197847028cdd2",
+        "finished": "2026-10-26T02:37:01.928841+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0006",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 70.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "220ffbdc961e7e7fbccf6d1397d2f66b1c699009fd449799ebde91da8a25b257",
+      "CAD_status": "completed",
+      "CAD_sha256": "83681a10bcab1984e446dc43dd653e67837a0f6c547b59710cb47feaecac57c5",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0006",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0006",
+        "parameters_sha256": "220ffbdc961e7e7fbccf6d1397d2f66b1c699009fd449799ebde91da8a25b257",
+        "started": "2026-10-26T02:37:01.930360+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.8654397392635644e-06,
+        "source_CAD_sha256": "2a99d28a0e4219ab569f116e3028125eb8b6351b9152ab3678230dcc4f96c494",
+        "partition_sha256": "5bff6506605d73d0d70ce9a9c9ada51f2e3a9ec389380554bfaa975cc42bab68",
+        "finished": "2026-10-26T02:38:25.211577+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0007",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 12.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "472a90446ecca45e014bbb90df78f1a8108b37654ea6860fa8eae7ae143edceb",
+      "CAD_status": "completed",
+      "CAD_sha256": "a3fb0e439594b85eaad5158e3f127680f6ca698b11da120888bbb079bf7edf5b",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0007",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0007",
+        "parameters_sha256": "472a90446ecca45e014bbb90df78f1a8108b37654ea6860fa8eae7ae143edceb",
+        "started": "2026-10-26T02:38:25.213092+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.1085105268436877e-06,
+        "source_CAD_sha256": "77768165fd76e162d065eee25fbd56058127352cc33a9c3f61c8476ea434b6cf",
+        "partition_sha256": "66d935ae41b40a372cba127c43df3036a1f1240371eb4250e853f0a1057afc49",
+        "finished": "2026-10-26T02:39:48.350015+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0008",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 18.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "b32973314bb27065925c34f109529f868445a8cc0f2e5f8a3b17ce24233a0d0d",
+      "CAD_status": "completed",
+      "CAD_sha256": "9ecf6bd43c96a3fac7347fce4eb79952ec74b13a17cb76131730d2df98292645",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0008",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0008",
+        "parameters_sha256": "b32973314bb27065925c34f109529f868445a8cc0f2e5f8a3b17ce24233a0d0d",
+        "started": "2026-10-26T02:39:48.351533+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 4.1324841821843705e-06,
+        "source_CAD_sha256": "9e001df6057d7f5b62de6e7775ff09e93de607cb170553c10167ccbe79ef0205",
+        "partition_sha256": "1c0fdff1040ab96e3f90db00aa9ecdfde93e6eee6930da0dd39480454378dd46",
+        "finished": "2026-10-26T02:41:14.668764+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0009",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 15.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "860a45c59c7e90a01b0d832adaeceb4aea18f21748ad1c0e7ffd12ba3d0e8d66",
+      "CAD_status": "completed",
+      "CAD_sha256": "d0016f33e77e435ad201f5596cb0cb52bbc22b6ed7a56e23100a5c3113f998be",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0009",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0009",
+        "parameters_sha256": "860a45c59c7e90a01b0d832adaeceb4aea18f21748ad1c0e7ffd12ba3d0e8d66",
+        "started": "2026-10-26T02:41:14.670795+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 3.178377504076124e-06,
+        "source_CAD_sha256": "0bc933b87f1afbb0361c07d2bb4108d7427cb68884b803139cef7dff103f0b73",
+        "partition_sha256": "48d67c7d47477a594e92af5b5d2e8dca532b4bdbbd3bf894287367a2f2879dcc",
+        "finished": "2026-10-26T02:42:41.365287+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0010",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 25.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "edb6ead36aabf68842295fe77dd36713c80380371195e2e94a04612eb7e5fa91",
+      "CAD_status": "completed",
+      "CAD_sha256": "3d356428f2de9351d048b133123056cf14c3f16a559917ad13f355b662177db2",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0010",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0010",
+        "parameters_sha256": "edb6ead36aabf68842295fe77dd36713c80380371195e2e94a04612eb7e5fa91",
+        "started": "2026-10-26T02:42:41.367853+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.69908680228248e-06,
+        "source_CAD_sha256": "1bf7f2d5d2a4585f1491f85a128c414a9d10735a5ad91e657bae658ada22bed9",
+        "partition_sha256": "2e8669320e4356250176365f861ddeda0870e99ade6693d465d0c460f4afb350",
+        "finished": "2026-10-26T02:44:08.068969+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0011",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 0.8,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "0f4f70a974a6a293019e3d3b8cab7e679ffc23ecb61fb4a2c20072be4c2124a8",
+      "CAD_status": "completed",
+      "CAD_sha256": "402030ab24873312648a0a19b1314e19565c6c217a77074363c4ca5555131089",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0011",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0011",
+        "parameters_sha256": "0f4f70a974a6a293019e3d3b8cab7e679ffc23ecb61fb4a2c20072be4c2124a8",
+        "started": "2026-10-26T02:44:08.070514+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 3.1370707800348896e-06,
+        "source_CAD_sha256": "a57c0ee4d65b17ee9f227ffe2753b1d9cc46c1f7e4e39f48c79f9fe243b38d28",
+        "partition_sha256": "1376a07df0ab9be74db99ade3ebccf7285a3817c82b596a5ddcf7304095e3852",
+        "finished": "2026-10-26T02:45:34.711928+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0012",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.2,
+        "overwrap_thickness_mm": 3.0
+      },
+      "parameters_sha256": "c198122ba4c51dcce20d7828ef324bec8ea43cb3d70670b95a4b0b84611c86ef",
+      "CAD_status": "completed",
+      "CAD_sha256": "56f0face697e7ce9947a69e2358e0f28b72995e6ef901f6c485e774a9bab8f99",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0012",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0012",
+        "parameters_sha256": "c198122ba4c51dcce20d7828ef324bec8ea43cb3d70670b95a4b0b84611c86ef",
+        "started": "2026-10-26T02:45:34.713445+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.6946819942086364e-06,
+        "source_CAD_sha256": "7ec019b3ceb1dbdf48d41ad2a2730ad1d2bb59e5ddf0eff8a5cc06291aa7abd7",
+        "partition_sha256": "9deff34d054963850ea634dbe67a503684124ff69cf360bebee445576bc43793",
+        "finished": "2026-10-26T02:46:58.132395+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0013",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 2.5
+      },
+      "parameters_sha256": "d2394ccb5d9affedd297336e3d257ba364d30b024b242b1f9bd010420060eff3",
+      "CAD_status": "completed",
+      "CAD_sha256": "24eea6c7f28026abe3809b4b034a248d5f48133127466de5f50bd61f546b2445",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0013",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0013",
+        "parameters_sha256": "d2394ccb5d9affedd297336e3d257ba364d30b024b242b1f9bd010420060eff3",
+        "started": "2026-10-26T02:46:58.132395+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.9192055526205962e-06,
+        "source_CAD_sha256": "8b0c6390279400f5d0935f0b3b94de92fb5a8b7f5b1ad56f6823b1217309ec18",
+        "partition_sha256": "15408a982650272ce13618da8d00c6be482eac37dd7a18a848adcec20f045144",
+        "finished": "2026-10-26T02:48:27.807136+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0014",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.5000000000000004
+      },
+      "parameters_sha256": "a2ba96e5716d873f0b4f5a66665fc291f0d7e212e710c89647b2374f3f5b7579",
+      "CAD_status": "completed",
+      "CAD_sha256": "dfc9ffd7db7d93ba6d02ec40a054d8a7107b5f170578de4ed06a2df9e01ebd54",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0014",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0014",
+        "parameters_sha256": "a2ba96e5716d873f0b4f5a66665fc291f0d7e212e710c89647b2374f3f5b7579",
+        "started": "2026-10-26T02:48:27.807136+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.9192055526205962e-06,
+        "source_CAD_sha256": "fd810345c5d0e10a03e8e7c26caab21535414bade913629244e41d70f3473499",
+        "partition_sha256": "254b3f2c757725527cd31c2e89fed84a16bacd0d6b594c02f135f25012c69ec5",
+        "finished": "2026-10-26T02:49:49.544808+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0015",
+      "parameters_mm": {
+        "inner_radius_mm": 94.85227886437838,
+        "straight_length_mm": 414.8922305106328,
+        "dome_depth_mm": 58.12028140358615,
+        "boss_bore_radius_mm": 14.264303463540577,
+        "neck_length_mm": 23.67528828459404,
+        "liner_thickness_mm": 0.9460562940992525,
+        "overwrap_thickness_mm": 2.982566349193316
+      },
+      "parameters_sha256": "ad2a0390034c7b61c78e21aca6a8fb9b7ea4f1f3a7a839fa505a54b8e120c1b4",
+      "CAD_status": "completed",
+      "CAD_sha256": "5014a02abe5499f0bd3aa64bbdcfc140f903c73d08e3e9012134cabf7bf043bb",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0015",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0015",
+        "parameters_sha256": "ad2a0390034c7b61c78e21aca6a8fb9b7ea4f1f3a7a839fa505a54b8e120c1b4",
+        "started": "2026-10-26T02:49:49.546315+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.589899419591646e-06,
+        "source_CAD_sha256": "de5753d38029de1714a79d13fd2b835e8e9047bb1fa75a2dc348876ca7ab7641",
+        "partition_sha256": "349a16281f97fed47b54a663e7c1aaec70c6fab34d9046f8de666c717d6430b6",
+        "finished": "2026-10-26T02:51:08.536776+08:00"
+      }
+    },
+    {
+      "id": "copv_c04_0016",
+      "parameters_mm": {
+        "inner_radius_mm": 90.12567374543882,
+        "straight_length_mm": 337.73927917591294,
+        "dome_depth_mm": 59.4175807128042,
+        "boss_bore_radius_mm": 15.930403560524649,
+        "neck_length_mm": 14.078746124935703,
+        "liner_thickness_mm": 1.002171602409226,
+        "overwrap_thickness_mm": 2.6709433493617385
+      },
+      "parameters_sha256": "81b9308ad39ef7c08b21fd6249710d64e1d64bc818e8ebf258789b157869eaa0",
+      "CAD_status": "completed",
+      "CAD_sha256": "ea8be7d79d3d5b03e47718f14a22bc1fe83b5c641d5e1949ea5a1814d2284d41",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0016",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0016",
+        "parameters_sha256": "81b9308ad39ef7c08b21fd6249710d64e1d64bc818e8ebf258789b157869eaa0",
+        "started": "2026-10-26T02:51:08.537943+08:00",
+        "CAD_status": "running",
+        "partition_status": "not_started"
+      }
+    },
+    {
+      "id": "copv_c04_0017",
+      "parameters_mm": {
+        "inner_radius_mm": 98.02373495296013,
+        "straight_length_mm": 408.4985902335099,
+        "dome_depth_mm": 65.77416908646927,
+        "boss_bore_radius_mm": 15.331698959033163,
+        "neck_length_mm": 21.37798741628987,
+        "liner_thickness_mm": 0.8121443496117503,
+        "overwrap_thickness_mm": 2.5175734892998514
+      },
+      "parameters_sha256": "2c5f057577d6b6544a6c192dde137fab2e709e776a5fa7575a7a9a9b38a3c295",
+      "CAD_status": "completed",
+      "CAD_sha256": "d6ac7dee61974756e0f175570e33c0f69483b2d8e29996c4cea1afe5f2ea775a",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0017"
+    },
+    {
+      "id": "copv_c04_0018",
+      "parameters_mm": {
+        "inner_radius_mm": 104.4479109121539,
+        "straight_length_mm": 418.4510471422303,
+        "dome_depth_mm": 61.65271526607576,
+        "boss_bore_radius_mm": 13.25765633403154,
+        "neck_length_mm": 18.704656197152467,
+        "liner_thickness_mm": 0.9873850294672261,
+        "overwrap_thickness_mm": 3.642044800395832
+      },
+      "parameters_sha256": "bab50eaf1ca8cc309c2cc9dc4b09e8e62dce16b0ff9ec84765b7c4f133d7ace3",
+      "CAD_status": "completed",
+      "CAD_sha256": "5320e03a20815cf45e293d91f9ad0ee1fdff1110cecbf3f14a127f53a050362c",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0018"
+    },
+    {
+      "id": "copv_c04_0019",
+      "parameters_mm": {
+        "inner_radius_mm": 108.42847193598158,
+        "straight_length_mm": 385.26472679948216,
+        "dome_depth_mm": 59.83506719815991,
+        "boss_bore_radius_mm": 15.026733984444427,
+        "neck_length_mm": 21.876793740261128,
+        "liner_thickness_mm": 1.278297813124801,
+        "overwrap_thickness_mm": 2.95942943019801
+      },
+      "parameters_sha256": "b571a4797f289409d2132ae7f3b99211876c2d1318d5f2b54f33188b4ac08f70",
+      "CAD_status": "completed",
+      "CAD_sha256": "e426d72764c0616b7f0f88a957736c5996a2694941ce3329849e1bcbb17c6163",
+      "CAD_revision": "v1_original_preserved",
+      "mesh_status": "waiting_for_validated_recipe",
+      "solver_status": "not_started",
+      "accepted": false,
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0019"
+    }
+  ]
+}

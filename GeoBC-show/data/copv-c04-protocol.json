@@ -1,0 +1,777 @@
+{
+  "schema": "copv_c04_detailed_pilot_v1",
+  "created": "2026-10-26T01:59:46.211469+08:00",
+  "target_distinct_geometries": 20,
+  "geometry_seed": 20261026,
+  "geometry_scope": "Detailed C01/C02/C03 assembly: retain 12 structural regions and six display-only seal/backup parts; not the old axisymmetric-only dataset proposal",
+  "geometry_sampling": "one original baseline, fourteen one-parameter extrema, five LHS interaction samples; IDs frozen before fields",
+  "ranges": {
+    "inner_radius_mm": [
+      90.0,
+      110.0
+    ],
+    "straight_length_over_radius": [
+      3.5,
+      4.5
+    ],
+    "dome_depth_over_radius": [
+      0.55,
+      0.7
+    ],
+    "boss_bore_radius_over_radius": [
+      0.12,
+      0.18
+    ],
+    "neck_length_over_radius": [
+      0.15,
+      0.25
+    ],
+    "liner_thickness_over_radius": [
+      0.008,
+      0.012
+    ],
+    "overwrap_thickness_over_radius": [
+      0.025,
+      0.035
+    ]
+  },
+  "materials_source": "copv_c03_mesh_v1.json",
+  "primary_solver": "true three-dimensional GPU-FEniCSx P2, exact P1 CUDA GAMG coarse transfer",
+  "load": "1 MPa internal traction plus actual discrete port-polygon cap resultants; exact geometry-specific ports and six-DOF numerical gauge",
+  "quality_gate": {
+    "surface_min_SICN": 0.05,
+    "volume_min_SICN": 0.05,
+    "total_volume_relative_error_max": 0.001,
+    "material_region_volume_relative_error_max": 0.001,
+    "positive_Jacobians": true,
+    "one_connected_component": true,
+    "shared_Tri6_interfaces": true
+  },
+  "upstream_hold": "C03 has 6541 low-SICN cells; no C03 research mesh is promoted to production",
+  "repair_policy": "Retain original CAD and attempt local sizing; a separately versioned 0.002 mm CAD-healing candidate may be examined with material identity and volume-drift checks. No silent geometry change or quality-threshold relaxation.",
+  "failure_policy": "Failed IDs and inputs retained, no replacement; geometry/mesh rejections have no FE label; accepted fields must pass true residual, energy/force/moment and native-ID checks",
+  "viewer": "retain 3D cylinder/cone BC/load glyphs following model camera and actual case displacement; no sprites or white outlines",
+  "split_policy": "pilot is train-only; no rescaling/resolution of a pilot geometry enters a future holdout split",
+  "cases": [
+    {
+      "id": "copv_c04_0000",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562243,
+          "min_parallel_tangent_scale": 0.6052296171437757,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999760655083243,
+            "wrap": 2.9999281922057244,
+            "total": 3.9999042620332936
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685748
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0001",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 90.0,
+        "straight_length_mm": 360.0,
+        "dome_depth_mm": 54.0,
+        "boss_bore_radius_mm": 13.5,
+        "neck_length_mm": 18.0,
+        "liner_thickness_mm": 0.9,
+        "overwrap_thickness_mm": 2.6999999999999997
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562241,
+          "min_parallel_tangent_scale": 0.6052296171437759,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 13.5,
+          "min_profile_axial_sample_increment_mm": 0.07574889606971169,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.8999784589574918,
+            "wrap": 2.699935372985151,
+            "total": 3.599913835829964
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685746
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0002",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 110.0,
+        "straight_length_mm": 440.0,
+        "dome_depth_mm": 66.0,
+        "boss_bore_radius_mm": 16.5,
+        "neck_length_mm": 22.0,
+        "liner_thickness_mm": 1.1,
+        "overwrap_thickness_mm": 3.3
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562248,
+          "min_parallel_tangent_scale": 0.6052296171437752,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 16.5,
+          "min_profile_axial_sample_increment_mm": 0.09258198408514318,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 1.0999736720591569,
+            "wrap": 3.2999210114262967,
+            "total": 4.399894688236623
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685748
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0003",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 350.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562243,
+          "min_parallel_tangent_scale": 0.6052296171437757,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08416544007741322,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999760655083244,
+            "wrap": 2.999928192205724,
+            "total": 3.9999042620332936
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685746
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0004",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 450.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562243,
+          "min_parallel_tangent_scale": 0.6052296171437757,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999760655083243,
+            "wrap": 2.9999281922057244,
+            "total": 3.9999042620332936
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685748
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0005",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 55.00000000000001,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.4695800379160042,
+          "min_parallel_tangent_scale": 0.5304199620839958,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.06780824927918161,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999715172069907,
+            "wrap": 2.9999145455804834,
+            "total": 3.999886068827967
+          },
+          "minimum_clearance_over_nominal": 0.9999715151934945
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0006",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 70.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.29034850632664866,
+          "min_parallel_tangent_scale": 0.7096514936733513,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.11424475611835305,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.999982414415453,
+            "wrap": 2.9999472408760184,
+            "total": 3.9999296576618044
+          },
+          "minimum_clearance_over_nominal": 0.9999824136253395
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0007",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 12.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.40862002957010424,
+          "min_parallel_tangent_scale": 0.5913799704298959,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 12.0,
+          "min_profile_axial_sample_increment_mm": 0.08231910885405114,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.999974346618902,
+            "wrap": 2.9999230351053674,
+            "total": 3.999897386475605
+          },
+          "minimum_clearance_over_nominal": 0.9999743450351225
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0008",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 18.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.38092323299668013,
+          "min_parallel_tangent_scale": 0.6190767670033199,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 18.0,
+          "min_profile_axial_sample_increment_mm": 0.08599611076391511,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999777248363096,
+            "wrap": 2.9999331705993617,
+            "total": 3.9999108993452417
+          },
+          "minimum_clearance_over_nominal": 0.9999777235331205
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0009",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 15.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562243,
+          "min_parallel_tangent_scale": 0.6052296171437757,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999760655083243,
+            "wrap": 2.9999281922057244,
+            "total": 3.9999042620332936
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685748
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0010",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 25.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562243,
+          "min_parallel_tangent_scale": 0.6052296171437757,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999760655083243,
+            "wrap": 2.9999281922057244,
+            "total": 3.9999042620332936
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685748
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0011",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 0.8,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.37503186371341307,
+          "min_parallel_tangent_scale": 0.6249681362865869,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08687362846842461,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.7999808524066595,
+            "wrap": 2.9999281931434503,
+            "total": 3.799909048931629
+          },
+          "minimum_clearance_over_nominal": 0.99997606438115
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0012",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.2,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.4145089019990355,
+          "min_parallel_tangent_scale": 0.5854910980009644,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08145415655349098,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 1.1999712786099894,
+            "wrap": 2.9999281912261084,
+            "total": 4.199899475134959
+          },
+          "minimum_clearance_over_nominal": 0.9999760637420362
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0013",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 2.5
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.34542408499919625,
+          "min_parallel_tangent_scale": 0.6545759150008037,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.09092119975514379,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999760655083243,
+            "wrap": 2.499940160171436,
+            "total": 3.499916229279132
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685744
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0014",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.5000000000000004
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.44411668071325233,
+          "min_parallel_tangent_scale": 0.5558833192867476,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.07737264751938255,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999760655083243,
+            "wrap": 3.499916224240012,
+            "total": 4.499892294787457
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685748
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0015",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 94.85227886437838,
+        "straight_length_mm": 414.8922305106328,
+        "dome_depth_mm": 58.12028140358615,
+        "boss_bore_radius_mm": 14.264303463540577,
+        "neck_length_mm": 23.67528828459404,
+        "liner_thickness_mm": 0.9460562940992525,
+        "overwrap_thickness_mm": 2.982566349193316
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3918150132905796,
+          "min_parallel_tangent_scale": 0.6081849867094213,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 14.264303463540577,
+          "min_profile_axial_sample_increment_mm": 0.08188353178132957,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9460346023258746,
+            "wrap": 2.9824979590952716,
+            "total": 3.9285325653631693
+          },
+          "minimum_clearance_over_nominal": 0.9999770700497366
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0016",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 90.12567374543882,
+        "straight_length_mm": 337.73927917591294,
+        "dome_depth_mm": 59.4175807128042,
+        "boss_bore_radius_mm": 15.930403560524649,
+        "neck_length_mm": 14.078746124935703,
+        "liner_thickness_mm": 1.002171602409226,
+        "overwrap_thickness_mm": 2.6709433493617385
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.32294068278589266,
+          "min_parallel_tangent_scale": 0.6770593172141074,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.930403560524649,
+          "min_profile_axial_sample_increment_mm": 0.09274565423135073,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 1.0021529654320698,
+            "wrap": 2.670893676179782,
+            "total": 3.6730466443480774
+          },
+          "minimum_clearance_over_nominal": 0.9999814023828066
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0017",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 98.02373495296013,
+        "straight_length_mm": 408.4985902335099,
+        "dome_depth_mm": 65.77416908646927,
+        "boss_bore_radius_mm": 15.331698959033163,
+        "neck_length_mm": 21.37798741628987,
+        "liner_thickness_mm": 0.8121443496117503,
+        "overwrap_thickness_mm": 2.5175734892998514
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.26624410754813327,
+          "min_parallel_tangent_scale": 0.7337558924518668,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.331698959033163,
+          "min_profile_axial_sample_increment_mm": 0.11098397452059316,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.8121290401586226,
+            "wrap": 2.5175260295140283,
+            "total": 3.3296550715486273
+          },
+          "minimum_clearance_over_nominal": 0.9999811485996238
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0018",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 104.4479109121539,
+        "straight_length_mm": 418.4510471422303,
+        "dome_depth_mm": 61.65271526607576,
+        "boss_bore_radius_mm": 13.25765633403154,
+        "neck_length_mm": 18.704656197152467,
+        "liner_thickness_mm": 0.9873850294672261,
+        "overwrap_thickness_mm": 3.642044800395832
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.46412000673420883,
+          "min_parallel_tangent_scale": 0.5358799932657912,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 13.25765633403154,
+          "min_profile_axial_sample_increment_mm": 0.07672697604311907,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9873592686908677,
+            "wrap": 3.641949774165624,
+            "total": 4.629309048503248
+          },
+          "minimum_clearance_over_nominal": 0.9999739085498899
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0019",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 108.42847193598158,
+        "straight_length_mm": 385.26472679948216,
+        "dome_depth_mm": 59.83506719815991,
+        "boss_bore_radius_mm": 15.026733984444427,
+        "neck_length_mm": 21.876793740261128,
+        "liner_thickness_mm": 1.278297813124801,
+        "overwrap_thickness_mm": 2.95942943019801
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.4618598448666276,
+          "min_parallel_tangent_scale": 0.5381401551333724,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.026733984444427,
+          "min_profile_axial_sample_increment_mm": 0.07484759149747333,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 1.2782606683163182,
+            "wrap": 2.959343427660385,
+            "total": 4.2376041033430285
+          },
+          "minimum_clearance_over_nominal": 0.9999709394869336
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    }
+  ]
+}

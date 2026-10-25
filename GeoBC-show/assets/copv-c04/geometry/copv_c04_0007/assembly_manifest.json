@@ -1,0 +1,241 @@
+{
+  "schema": "copv_c04_detailed_assembly_v1",
+  "case_id": "copv_c04_0007",
+  "parameters_mm": {
+    "inner_radius_mm": 100.0,
+    "straight_length_mm": 400.0,
+    "dome_depth_mm": 60.0,
+    "boss_bore_radius_mm": 12.0,
+    "neck_length_mm": 20.0,
+    "liner_thickness_mm": 1.0,
+    "overwrap_thickness_mm": 3.0
+  },
+  "materials": {
+    "aluminum": {
+      "label": "Al 6061 内衬",
+      "color": [
+        0.66,
+        0.72,
+        0.76
+      ],
+      "kind": 1
+    },
+    "carbon": {
+      "label": "碳纤维 / 环氧",
+      "color": [
+        0.075,
+        0.085,
+        0.092
+      ],
+      "kind": 0
+    },
+    "titanium": {
+      "label": "Ti-6Al-4V boss",
+      "color": [
+        0.49,
+        0.52,
+        0.55
+      ],
+      "kind": 2
+    },
+    "steel": {
+      "label": "316L 接口套",
+      "color": [
+        0.7,
+        0.73,
+        0.75
+      ],
+      "kind": 3
+    },
+    "elastomer": {
+      "label": "弹性体 O 形圈",
+      "color": [
+        0.045,
+        0.052,
+        0.047
+      ],
+      "kind": 4
+    },
+    "peek": {
+      "label": "PEEK 挡圈",
+      "color": [
+        0.64,
+        0.54,
+        0.35
+      ],
+      "kind": 5
+    },
+    "adhesive": {
+      "label": "环氧粘接界面",
+      "color": [
+        0.53,
+        0.31,
+        0.13
+      ],
+      "kind": 6
+    }
+  },
+  "section": false,
+  "scope": "Parametric CAD construction concept. Port sizes, seal stack, metal identities and local reinforcement are illustrative design choices, not a qualified product.",
+  "display_tessellation": "Tri3 of actual component CAD surfaces, not a volume FE mesh. Section is a true CAD quarter cut, retaining solid cut faces.",
+  "cavity": "Empty storage cavity. Metallic liner, adhesive, four structural ply bands and polar reinforcement; no invented internal baffles.",
+  "thread_display": "Procedural helical thread texture on insert bore; not a CAD thread solid or a qualified thread form.",
+  "original_solver_scope": "C04 geometry input only until this case passes mesh gates and has its own GPU-FEniCSx result; no other geometry field is reused.",
+  "seconds": 11.736897499999031,
+  "parts": [
+    {
+      "name": "金属气密内衬",
+      "material": "aluminum",
+      "group": "liner",
+      "volume_mm3": 334209.31905491836,
+      "solid_count": 1
+    },
+    {
+      "name": "环氧粘接层 0.15 mm",
+      "material": "adhesive",
+      "group": "bond",
+      "volume_mm3": 49574.357814866584,
+      "solid_count": 1
+    },
+    {
+      "name": "包覆铺层 1 / +55°",
+      "material": "carbon",
+      "group": "ply",
+      "ply": 1,
+      "angle": 55,
+      "volume_mm3": 249229.40698849177,
+      "solid_count": 1
+    },
+    {
+      "name": "包覆铺层 2 / -55°",
+      "material": "carbon",
+      "group": "ply",
+      "ply": 2,
+      "angle": -55,
+      "volume_mm3": 251455.87431326834,
+      "solid_count": 1
+    },
+    {
+      "name": "包覆铺层 3 / -55°",
+      "material": "carbon",
+      "group": "ply",
+      "ply": 3,
+      "angle": -55,
+      "volume_mm3": 253681.54177369317,
+      "solid_count": 1
+    },
+    {
+      "name": "包覆铺层 4 / +55°",
+      "material": "carbon",
+      "group": "ply",
+      "ply": 4,
+      "angle": 55,
+      "volume_mm3": 255886.47897675214,
+      "solid_count": 1
+    },
+    {
+      "name": "上极区局部补强",
+      "material": "carbon",
+      "group": "reinforcement",
+      "angle": 25,
+      "volume_mm3": 4194.768619025711,
+      "solid_count": 1
+    },
+    {
+      "name": "下极区局部补强",
+      "material": "carbon",
+      "group": "reinforcement",
+      "angle": -25,
+      "volume_mm3": 4194.7686190256945,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · 嵌入法兰与车削 boss",
+      "material": "titanium",
+      "group": "boss",
+      "end": 1,
+      "volume_mm3": 95902.66436018284,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · 嵌入法兰与车削 boss",
+      "material": "titanium",
+      "group": "boss",
+      "end": -1,
+      "volume_mm3": 92631.62720713226,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · O 形圈 1",
+      "material": "elastomer",
+      "group": "seal",
+      "end": 1,
+      "volume_mm3": 172.38866910257266,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · O 形圈 2",
+      "material": "elastomer",
+      "group": "seal",
+      "end": 1,
+      "volume_mm3": 172.38866910257266,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · PEEK 挡圈",
+      "material": "peek",
+      "group": "backup",
+      "end": 1,
+      "volume_mm3": 101.9230831594918,
+      "solid_count": 1
+    },
+    {
+      "name": "上端充装口 · 中空接口套 / 六角扳手位",
+      "material": "steel",
+      "group": "insert",
+      "end": 1,
+      "volume_mm3": 13329.776966969806,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · O 形圈 1",
+      "material": "elastomer",
+      "group": "seal",
+      "end": -1,
+      "volume_mm3": 172.38866910257266,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · O 形圈 2",
+      "material": "elastomer",
+      "group": "seal",
+      "end": -1,
+      "volume_mm3": 172.38866910257266,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · PEEK 挡圈",
+      "material": "peek",
+      "group": "backup",
+      "end": -1,
+      "volume_mm3": 101.9230831594918,
+      "solid_count": 1
+    },
+    {
+      "name": "下端服务口 · 中空接口套 / 六角扳手位",
+      "material": "steel",
+      "group": "insert",
+      "end": -1,
+      "volume_mm3": 12004.936871502248,
+      "solid_count": 1
+    }
+  ],
+  "gmsh_version": "4.15.2",
+  "artifact_sha256": {
+    "detailed_assembly.step": "88829e3b4363064148b7071439a2401c462400ad5578f7118659dca74e77e4d2",
+    "detailed_assembly.brep": "a3fb0e439594b85eaad5158e3f127680f6ca698b11da120888bbb079bf7edf5b",
+    "model.json.gz": "50b78fe85b6c580cd89223650d5f9556ca73ec585ae76a8e4bf8e91d7f2c46cb"
+  },
+  "section_sha256": "cb03ed7ec9561fe801fd18f96569adb2453b67208115a98bd0050809f237ec43",
+  "total_build_seconds": 24.735480699921027
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "c04_geometry_repair_candidate_v2",
+  "reason": "A 0.001 mm boolean-tool extension below the liner end creates a very narrow structural face near z=\u00b1(end-3). Align the boss bore tool start with the exact liner/insert interface plane.",
+  "change": "boss bore tool liner_end-0.001 -> liner_end; no adhesive/ply/port nominal dimension or material change",
+  "history": "C01/C02/C03 geometry and all C04 v1 inputs retained",
+  "acceptance": "Compare all 12 CAD region volumes to the original baseline, each relative difference <=0.1%; then run unchanged mesh gates; no field accepted before both pass",
+  "status": "candidate_not_accepted"
+}
