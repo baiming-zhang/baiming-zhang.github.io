@@ -1,0 +1,554 @@
+KSP Object: (copv_) 1 MPI process
+  type: fgmres
+    restart=60, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+    happy breakdown tolerance=1e-30
+  maximum iterations=20000, initial guess is zero
+  tolerances: relative=1e-10, absolute=1e-50, divergence=10000.
+  right preconditioning
+  using UNPRECONDITIONED norm type for convergence test
+PC Object: (copv_) 1 MPI process
+  type: mg
+    type is MULTIPLICATIVE, levels=2 cycles=v
+      Cycles per PCApply=1
+      Not using Galerkin computed coarse grid matrices
+  Coarse grid solver -- level 0 -------------------------------
+    KSP Object: (copv_p1_) 1 MPI process
+      type: preonly
+      maximum iterations=10000, initial guess is zero
+      tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+      left preconditioning
+      not checking for convergence
+    PC Object: (copv_p1_) 1 MPI process
+      type: gamg
+        type is MULTIPLICATIVE, levels=15 cycles=v
+          Cycles per PCApply=1
+          Using externally compute Galerkin coarse grid matrices
+          GAMG specific options
+            Threshold for dropping small values in graph on each level =       0.       0.       0.       0.       0.       0.       0.       0.       0.       0.       0.       0.       0.       0.       0.      
+            Threshold scaling factor for each level not specified = 1.
+            AGG specific options
+              Number of levels of aggressive coarsening 1
+              MIS-k aggressive coarsening
+              MIS-2 coarsening on aggressive levels
+              MatCoarsen Object: (copv_p1_pc_gamg_) 1 MPI process
+                type: misk
+              Number smoothing steps to construct prolongation 0
+            Complexity:    grid = 1.11372    operator = 1.15761
+            Per-level complexity: op = operator, int = interpolation
+                #equations  | #active PEs | avg nnz/row op | avg nnz/row int
+                    558            1             19                0
+                    654            1             20                6
+                   1314            1             21                6
+                   1374            1             21                6
+                   1428            1             22                6
+                   1482            1             22                6
+                   1680            1             23                6
+                   1788            1             23                6
+                   2202            1             23                6
+                   2706            1             26                6
+                   3420            1             30                6
+                   5436            1             37                6
+                  13032            1             52                6
+                  52032            1             72                6
+                 783546            1             41                6
+      Coarse grid solver -- level 0 -------------------------------
+        KSP Object: (copv_p1_mg_coarse_) 1 MPI process
+          type: preonly
+          maximum iterations=10000, initial guess is zero
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_coarse_) 1 MPI process
+          type: svd
+            All singular values smaller than 1e-12 treated as zero
+            Provided essential rank of the matrix 0 (all other eigenvalues are zeroed)
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: (copv_p1_mg_coarse_sub_) 1 MPI process
+            type: seqaijcusparse
+            rows=558, cols=558, bs=6
+            total: nonzeros=10260, allocated nonzeros=10260
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Down solver (pre-smoother) on level 1 -------------------------------
+        KSP Object: (copv_p1_mg_levels_1_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.263691, max 2.9006
+            eigenvalues estimated via gmres: min 5.00489e-13, max 2.63691
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_1_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_1_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=654, cols=654, bs=6
+            total: nonzeros=12492, allocated nonzeros=12492
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 2 -------------------------------
+        KSP Object: (copv_p1_mg_levels_2_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.251361, max 2.76498
+            eigenvalues estimated via gmres: min 3.68594e-14, max 2.51361
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_2_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_2_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=1314, cols=1314, bs=6
+            total: nonzeros=26460, allocated nonzeros=26460
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 3 -------------------------------
+        KSP Object: (copv_p1_mg_levels_3_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.251293, max 2.76422
+            eigenvalues estimated via gmres: min 9.68392e-14, max 2.51293
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_3_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_3_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=1374, cols=1374, bs=6
+            total: nonzeros=28188, allocated nonzeros=28188
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 4 -------------------------------
+        KSP Object: (copv_p1_mg_levels_4_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.258359, max 2.84195
+            eigenvalues estimated via gmres: min 2.0485e-13, max 2.58359
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_4_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_4_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=1428, cols=1428, bs=6
+            total: nonzeros=30096, allocated nonzeros=30096
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 5 -------------------------------
+        KSP Object: (copv_p1_mg_levels_5_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.259724, max 2.85696
+            eigenvalues estimated via gmres: min 1.54099e-13, max 2.59724
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_5_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_5_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=1482, cols=1482, bs=6
+            total: nonzeros=31356, allocated nonzeros=31356
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 6 -------------------------------
+        KSP Object: (copv_p1_mg_levels_6_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.285337, max 3.1387
+            eigenvalues estimated via gmres: min 1.12244e-13, max 2.85337
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_6_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_6_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=1680, cols=1680, bs=6
+            total: nonzeros=37080, allocated nonzeros=37080
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 7 -------------------------------
+        KSP Object: (copv_p1_mg_levels_7_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.285373, max 3.13911
+            eigenvalues estimated via gmres: min 1.25677e-13, max 2.85373
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_7_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_7_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=1788, cols=1788, bs=6
+            total: nonzeros=39744, allocated nonzeros=39744
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 8 -------------------------------
+        KSP Object: (copv_p1_mg_levels_8_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.285368, max 3.13905
+            eigenvalues estimated via gmres: min 1.83853e-13, max 2.85368
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_8_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_8_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=2202, cols=2202, bs=6
+            total: nonzeros=49788, allocated nonzeros=49788
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 9 -------------------------------
+        KSP Object: (copv_p1_mg_levels_9_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.284789, max 3.13268
+            eigenvalues estimated via gmres: min 1.09607e-13, max 2.84789
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_9_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_9_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=2706, cols=2706, bs=6
+            total: nonzeros=68868, allocated nonzeros=68868
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 10 -------------------------------
+        KSP Object: (copv_p1_mg_levels_10_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.282941, max 3.11235
+            eigenvalues estimated via gmres: min 3.59712e-13, max 2.82941
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_10_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_10_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=3420, cols=3420, bs=6
+            total: nonzeros=99936, allocated nonzeros=99936
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 11 -------------------------------
+        KSP Object: (copv_p1_mg_levels_11_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.300158, max 3.30174
+            eigenvalues estimated via gmres: min 6.69687e-13, max 3.00158
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_11_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_11_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=5436, cols=5436, bs=6
+            total: nonzeros=200448, allocated nonzeros=200448
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 12 -------------------------------
+        KSP Object: (copv_p1_mg_levels_12_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.339028, max 3.72931
+            eigenvalues estimated via gmres: min 6.2772e-13, max 3.39028
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_12_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_12_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=13032, cols=13032, bs=6
+            total: nonzeros=674856, allocated nonzeros=674856
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 13 -------------------------------
+        KSP Object: (copv_p1_mg_levels_13_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.444229, max 4.88652
+            eigenvalues estimated via gmres: min 1.00009e-12, max 4.44229
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_13_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_13_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=52032, cols=52032, bs=6
+            total: nonzeros=3704328, allocated nonzeros=3704328
+            total number of mallocs used during MatSetValues calls=0
+              not using I-node routines
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      Down solver (pre-smoother) on level 14 -------------------------------
+        KSP Object: (copv_p1_mg_levels_14_) 1 MPI process
+          type: chebyshev
+            Chebyshev polynomial of first kind
+            eigenvalue targets used: min 0.632869, max 6.96156
+            eigenvalues estimated via gmres: min 0.0918972, max 6.32869
+            eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+            KSP Object: (copv_p1_mg_levels_14_esteig_) 1 MPI process
+              type: gmres
+                restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+                happy breakdown tolerance=1e-30
+              maximum iterations=10, initial guess is zero
+              tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+              left preconditioning
+              using PRECONDITIONED norm type for convergence test
+            estimating eigenvalues using a noisy random number generated right-hand side
+          maximum iterations=3, nonzero initial guess
+          tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+          left preconditioning
+          not checking for convergence
+        PC Object: (copv_p1_mg_levels_14_) 1 MPI process
+          type: jacobi
+            type DIAGONAL
+          linear system matrix, which is also used to construct the preconditioner:
+          Mat Object: 1 MPI process
+            type: seqaijcusparse
+            rows=783546, cols=783546, bs=3
+            total: nonzeros=31811816, allocated nonzeros=31811900
+            total number of mallocs used during MatSetValues calls=6
+              has attached near null space
+              using I-node routines: found 261187 nodes, limit used is 5
+      Up solver (post-smoother) same as down solver (pre-smoother)
+      linear system matrix, which is also used to construct the preconditioner:
+      Mat Object: 1 MPI process
+        type: seqaijcusparse
+        rows=783546, cols=783546, bs=3
+        total: nonzeros=31811816, allocated nonzeros=31811900
+        total number of mallocs used during MatSetValues calls=6
+          has attached near null space
+          using I-node routines: found 261187 nodes, limit used is 5
+  Down solver (pre-smoother) on level 1 -------------------------------
+    KSP Object: (copv_mg_levels_1_) 1 MPI process
+      type: chebyshev
+        Chebyshev polynomial of first kind
+        eigenvalue targets used: min 0.613541, max 6.74895
+        eigenvalues estimated via gmres: min 0.101775, max 6.13541
+        eigenvalues estimated using gmres with transform: [0. 0.1; 0. 1.1]
+        KSP Object: (copv_mg_levels_1_esteig_) 1 MPI process
+          type: gmres
+            restart=30, using classical (unmodified) Gram-Schmidt orthogonalization with no iterative refinement
+            happy breakdown tolerance=1e-30
+          maximum iterations=10, initial guess is zero
+          tolerances: relative=1e-12, absolute=1e-50, divergence=10000.
+          left preconditioning
+          using PRECONDITIONED norm type for convergence test
+        estimating eigenvalues using a noisy random number generated right-hand side
+      maximum iterations=5, nonzero initial guess
+      tolerances: relative=1e-05, absolute=1e-50, divergence=10000.
+      left preconditioning
+      not checking for convergence
+    PC Object: (copv_mg_levels_1_) 1 MPI process
+      type: jacobi
+        type DIAGONAL
+      linear system matrix, which is also used to construct the preconditioner:
+      Mat Object: 1 MPI process
+        type: seqaijcusparse
+        rows=5693805, cols=5693805, bs=3
+        total: nonzeros=461032965, allocated nonzeros=461032965
+        total number of mallocs used during MatSetValues calls=0
+          has attached near null space
+          using I-node routines: found 1897935 nodes, limit used is 5
+  Up solver (post-smoother) same as down solver (pre-smoother)
+  linear system matrix, which is also used to construct the preconditioner:
+  Mat Object: 1 MPI process
+    type: seqaijcusparse
+    rows=5693805, cols=5693805, bs=3
+    total: nonzeros=461032965, allocated nonzeros=461032965
+    total number of mallocs used during MatSetValues calls=0
+      has attached near null space
+      using I-node routines: found 1897935 nodes, limit used is 5

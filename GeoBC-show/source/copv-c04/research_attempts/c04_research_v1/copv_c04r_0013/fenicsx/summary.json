@@ -1,0 +1,179 @@
+{
+  "status": "completed",
+  "case_id": "copv_c04r_0013",
+  "backend": "CPU FFCx assembly; CUDA P2 FGMRES/Jacobi-Chebyshev and exact P1 transfer; CUDA P1 GAMG coarse correction; tiny CPU SVD at final coarse level, explicit in KSP view",
+  "preconditioner": "p1-gamg",
+  "dolfinx": "0.11.0",
+  "petsc": [
+    3,
+    25,
+    6
+  ],
+  "matrix_type": "seqaijcusparse",
+  "vector_type": "seqcuda",
+  "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+  "nodes": 1377405,
+  "geometry_nodes": 1377405,
+  "cells": 912382,
+  "dofs": 4132215,
+  "displacement_degree": 2,
+  "cap_convention": "discrete",
+  "geometry_parameters_mm": {
+    "inner_radius_mm": 100.0,
+    "straight_length_mm": 400.0,
+    "dome_depth_mm": 60.0,
+    "boss_bore_radius_mm": 15.0,
+    "neck_length_mm": 20.0,
+    "liner_thickness_mm": 1.0,
+    "overwrap_thickness_mm": 2.5
+  },
+  "research_pilot": true,
+  "dataset_release": "quarantined_not_for_production_training",
+  "research_validation_only": true,
+  "native_schema_saved": true,
+  "production_eligible": false,
+  "raw_GP_saved": false,
+  "local_GP_saved": true,
+  "structural_parts": 12,
+  "display_only_seals": 6,
+  "pressure_MPa": 1.0,
+  "true_relative_residual": 1.0539175480827324e-10,
+  "peak_iterations": 1716,
+  "peak_reason": 2,
+  "peak_solve_seconds": 64.92394642199997,
+  "max_U_mm": 0.46544844564092147,
+  "strain_energy_Nmm": 9252.19185010972,
+  "external_work_Nmm": 18504.383700372367,
+  "energy_work_relative_error": 8.26427815070474e-12,
+  "force_balance_N": [
+    -1.8783466462779508e-08,
+    -1.2028257736183823e-08,
+    2.587934226291888e-09
+  ],
+  "moment_balance_Nmm": [
+    4.303126729977433e-06,
+    2.1281739644765537e-06,
+    8.932728743008775e-07
+  ],
+  "load_resultant_N": [
+    -8.229900094747222e-11,
+    -1.1052427029145662e-10,
+    1.4182954810593174e-10
+  ],
+  "gauge_reactions_N": [
+    -1.8701167461832036e-08,
+    4.3980777201559074e-08,
+    -2.423026898012992e-07,
+    -5.589851066745144e-08,
+    -6.184896165252474e-07,
+    8.632384110047325e-07
+  ],
+  "cap_forces_N": {
+    "upper": 326.32650495639956,
+    "lower": 213.48133163778297
+  },
+  "cap_areas_mm2": {
+    "top": 53.19586239965884,
+    "bottom": 43.40983110915594
+  },
+  "min_GP_Jacobian_mm3": 0.006694224020178478,
+  "material_frame_det_max_error": 1.3322676295501878e-15,
+  "half_load_relative_error": 1.42233809294308e-09,
+  "zero_load_U_norm": 0.0,
+  "part_statistics": {
+    "1": {
+      "material": "aluminum",
+      "name": "\u91d1\u5c5e\u6c14\u5bc6\u5185\u886c",
+      "max_GP_von_Mises_MPa": 123.53641969613086,
+      "max_abs_fiber_sigma11_MPa": 57.55137139386461,
+      "volume_mm3": 335067.97384233645
+    },
+    "2": {
+      "material": "adhesive",
+      "name": "\u73af\u6c27\u7c98\u63a5\u5c42 0.15 mm",
+      "max_GP_von_Mises_MPa": 12.657721733953833,
+      "max_abs_fiber_sigma11_MPa": 7.51100143859508,
+      "volume_mm3": 49510.98786455612
+    },
+    "3": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 1 / +55\u00b0",
+      "max_GP_von_Mises_MPa": 44.34370770599471,
+      "max_abs_fiber_sigma11_MPa": 46.066188011742454,
+      "volume_mm3": 207291.67891517826
+    },
+    "4": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 2 / -55\u00b0",
+      "max_GP_von_Mises_MPa": 50.406792959607415,
+      "max_abs_fiber_sigma11_MPa": 53.12354958702434,
+      "volume_mm3": 208801.6310497487
+    },
+    "5": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 3 / -55\u00b0",
+      "max_GP_von_Mises_MPa": 60.33732889032778,
+      "max_abs_fiber_sigma11_MPa": 63.644113359582256,
+      "volume_mm3": 210360.23430778747
+    },
+    "6": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 4 / +55\u00b0",
+      "max_GP_von_Mises_MPa": 71.38821019277697,
+      "max_abs_fiber_sigma11_MPa": 75.18081013967071,
+      "volume_mm3": 211847.87896353277
+    },
+    "7": {
+      "material": "carbon",
+      "name": "\u4e0a\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+      "max_GP_von_Mises_MPa": 101.2906673666587,
+      "max_abs_fiber_sigma11_MPa": 104.86757886285005,
+      "volume_mm3": 4452.279854800349
+    },
+    "8": {
+      "material": "carbon",
+      "name": "\u4e0b\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+      "max_GP_von_Mises_MPa": 99.06648986011454,
+      "max_abs_fiber_sigma11_MPa": 102.9222132266633,
+      "volume_mm3": 4452.542428651115
+    },
+    "9": {
+      "material": "titanium",
+      "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+      "max_GP_von_Mises_MPa": 33.577283795300175,
+      "max_abs_fiber_sigma11_MPa": 23.616889632856918,
+      "volume_mm3": 83494.24209213047
+    },
+    "10": {
+      "material": "titanium",
+      "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+      "max_GP_von_Mises_MPa": 32.45732011991279,
+      "max_abs_fiber_sigma11_MPa": 25.31777387574569,
+      "volume_mm3": 80858.74289195961
+    },
+    "14": {
+      "material": "steel",
+      "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+      "max_GP_von_Mises_MPa": 8.593397602777902,
+      "max_abs_fiber_sigma11_MPa": 7.115466631321539,
+      "volume_mm3": 16166.337576946702
+    },
+    "18": {
+      "material": "steel",
+      "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+      "max_GP_von_Mises_MPa": 7.949290380667321,
+      "max_abs_fiber_sigma11_MPa": 6.323840572959374,
+      "volume_mm3": 14389.677901163659
+    }
+  },
+  "mesh_sha256": "87b25eb4e06e626bacddbc2b60d89f625a45cad4ef50139ee8165b2bc8d408f5",
+  "contract_sha256": "d27c8e52acf1a6fbf11c9fd04671c10804dcc7c646bbf3ed5ed5fcdebe53c7b8",
+  "solver_sha256": "a597325c85f27bf0743913bea396a97f26ace67ed304f26e17a5f0232dfdf56c",
+  "total_seconds": 186.20646958399993,
+  "limitations": [
+    "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+    "Straight-sided geometry, P2 displacement; curved mesh attempt rejected; convergence belongs to C03",
+    "von Mises for composites is a diagnostic, not a failure criterion",
+    "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+  ]
+}

@@ -134,7 +134,7 @@
     }
     draw();
   };
-  fetch(c03Assets+'/bc-loads.json?v=c04-2').then(response=>{
+  fetch(c03Assets+'/bc-loads.json?v=c04-3').then(response=>{
     if(!response.ok)throw Error('BC metadata missing');return response.json();
   }).then(data=>{
     metadata=data;bcButton.disabled=false;loadButton.disabled=false;

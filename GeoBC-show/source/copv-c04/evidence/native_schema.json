@@ -1,0 +1,39 @@
+{
+  "units": {
+    "xyz": "mm",
+    "U": "mm",
+    "stress": "MPa",
+    "force": "N",
+    "energy": "N mm"
+  },
+  "mesh": [
+    "xyz",
+    "cells TET10",
+    "node_ids",
+    "cell_ids",
+    "cell_part_ids",
+    "positive Jacobian"
+  ],
+  "nodal": [
+    "U_mm at original Gmsh node_ids",
+    "actual six constrained components",
+    "consistent pressure/upper-cap/lower-cap vectors",
+    "gauge reactions"
+  ],
+  "GP": {
+    "file": "GP_stress_local_MPa.npy",
+    "shape": "[original cell order,14,6]",
+    "Voigt_order": [
+      "11",
+      "22",
+      "33",
+      "23",
+      "13",
+      "12"
+    ],
+    "strain": "Engineering strain reconstructable with frozen local compliance; tensor shear is gamma/2",
+    "axes": "Exact deterministic reconstruction from frozen geometry/material-frame source and degree4 Basix quadrature; not cross-material smoothing"
+  },
+  "states": "20 exact linear-elastic pressure-scaled display states; independently checked half/zero RHS, not nonlinear load history",
+  "release": "All outputs remain quarantined research, no production training release"
+}

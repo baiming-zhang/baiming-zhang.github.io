@@ -1,7 +1,7 @@
 {
   "schema": "copv_c04_progress_v1",
-  "updated": "2026-10-26T03:24:45.108734+08:00",
-  "status": "in_progress",
+  "updated": "2026-10-26T04:30:15.405436+08:00",
+  "status": "completed_with_production_hold",
   "target_distinct_geometries": 20,
   "CAD_completed": 20,
   "accepted_FE_labels": 0,
@@ -15,7 +15,7 @@
   "validation_excluded_from_pilot": true,
   "protocol_sha256": "8fc44404642065bc589ac8d1598a04ea3d52369a0c95e4844ee5930e242dda1d",
   "protocol_hash_convention": "Canonical UTF-8 text with LF; the original Windows CRLF file is retained separately",
-  "source_geometry_revision": "Original v1 geometry shown; separately versioned v2 interface alignment is being assessed",
+  "source_geometry_revision": "v1 originals preserved for CAD preview; declared v2 interface alignment used for every research FE input",
   "production_release": false,
   "quality_gate": {
     "surface_min_SICN": 0.05,
@@ -1662,7 +1662,9 @@
       "research_status": "CPU_failed",
       "research_label": false,
       "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_mesh_sha256": null,
+      "production_label": false,
+      "retained_failure": "nonpositive_Jacobian"
     },
     {
       "id": "copv_c04_0001",
@@ -1695,10 +1697,13 @@
         "finished": "2026-10-26T02:31:20.423429+08:00"
       },
       "research_case_id": "copv_c04r_0001",
-      "research_status": "CPU_failed",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "7c2cd144dc84aecc0ced0e8071de02c51ebacf91819154c4cc1edc3356fcc5d4",
+      "research_mesh_sha256": "6fd668507d0773cf513f1d2a6ce3b94935917b6dece08c1567b8cbed28d68b06",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0001",
+      "artifact_root": "data/copv/c04_research_h4_retry_v1/cases/copv_c04r_0001"
     },
     {
       "id": "copv_c04_0002",
@@ -1735,7 +1740,9 @@
       "research_label": true,
       "research_CAD_sha256": "f25883ee66be0f8be91a2b62d80958bae0528035d1c68e937418ec09208f841c",
       "research_mesh_sha256": "8dd4b9c1ad99fe082d5d0ad680bea70cdd8d0e308c694f042a85faeb76133a61",
-      "research_field_viewer": "copv-c04-case.html?case=copv_c04_0002"
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0002",
+      "production_label": false,
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0002"
     },
     {
       "id": "copv_c04_0003",
@@ -1768,10 +1775,13 @@
         "finished": "2026-10-26T02:34:12.082311+08:00"
       },
       "research_case_id": "copv_c04r_0003",
-      "research_status": "CPU_failed",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "bf1e6cdb8de18257b5fceb211a05de72054bf8466b765fe899353622e214c7e6",
+      "research_mesh_sha256": "1878c57aa01134f90efe232dde5ec6b4cc279b52e06621a24d03ce0667dbc9fd",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0003",
+      "artifact_root": "data/copv/c04_research_h4_retry_v1/cases/copv_c04r_0003"
     },
     {
       "id": "copv_c04_0004",
@@ -1807,7 +1817,10 @@
       "research_status": "completed",
       "research_label": true,
       "research_CAD_sha256": "abf3756492488e1ed28c744a70ec2ce9d8529e235c56d7ceea08253277fa538c",
-      "research_mesh_sha256": "1cda46452450419e76b12b6d32de031f057c304f2a196e2d22ed0e6289700a21"
+      "research_mesh_sha256": "1cda46452450419e76b12b6d32de031f057c304f2a196e2d22ed0e6289700a21",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0004",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0004"
     },
     {
       "id": "copv_c04_0005",
@@ -1840,10 +1853,13 @@
         "finished": "2026-10-26T02:37:01.928841+08:00"
       },
       "research_case_id": "copv_c04r_0005",
-      "research_status": "running",
-      "research_label": false,
+      "research_status": "completed",
+      "research_label": true,
       "research_CAD_sha256": "61aadc6a5c3a9bd815f88469e779f249da9c788cb7af0ab080ffc6175c8eba04",
-      "research_mesh_sha256": "348cd0765980a268adeba8228f39072e7f3a486246ee06f7d813318869e75556"
+      "research_mesh_sha256": "348cd0765980a268adeba8228f39072e7f3a486246ee06f7d813318869e75556",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0005",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0005"
     },
     {
       "id": "copv_c04_0006",
@@ -1876,10 +1892,13 @@
         "finished": "2026-10-26T02:38:25.211577+08:00"
       },
       "research_case_id": "copv_c04r_0006",
-      "research_status": "CPU_failed",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "2a99d28a0e4219ab569f116e3028125eb8b6351b9152ab3678230dcc4f96c494",
+      "research_mesh_sha256": "341f566659a96e57c878e6177cfd2d53433dbe1af50f44e6814ded70daa5d48c",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0006",
+      "artifact_root": "data/copv/c04_research_h4_retry_v1/cases/copv_c04r_0006"
     },
     {
       "id": "copv_c04_0007",
@@ -1912,10 +1931,13 @@
         "finished": "2026-10-26T02:39:48.350015+08:00"
       },
       "research_case_id": "copv_c04r_0007",
-      "research_status": "queued",
-      "research_label": false,
+      "research_status": "completed",
+      "research_label": true,
       "research_CAD_sha256": "77768165fd76e162d065eee25fbd56058127352cc33a9c3f61c8476ea434b6cf",
-      "research_mesh_sha256": "9f2d572cadc3f88146106614ca3ca9cc449a05d4af037e7fb59efd4822a50b4f"
+      "research_mesh_sha256": "9f2d572cadc3f88146106614ca3ca9cc449a05d4af037e7fb59efd4822a50b4f",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0007",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0007"
     },
     {
       "id": "copv_c04_0008",
@@ -1948,10 +1970,13 @@
         "finished": "2026-10-26T02:41:14.668764+08:00"
       },
       "research_case_id": "copv_c04r_0008",
-      "research_status": "queued",
-      "research_label": false,
+      "research_status": "completed",
+      "research_label": true,
       "research_CAD_sha256": "9e001df6057d7f5b62de6e7775ff09e93de607cb170553c10167ccbe79ef0205",
-      "research_mesh_sha256": "b7a5adb0f840e76c8b9e7f02a5357cf9a5c615c636221f1471658be447ce1c27"
+      "research_mesh_sha256": "b7a5adb0f840e76c8b9e7f02a5357cf9a5c615c636221f1471658be447ce1c27",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0008",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0008"
     },
     {
       "id": "copv_c04_0009",
@@ -1984,10 +2009,13 @@
         "finished": "2026-10-26T02:42:41.365287+08:00"
       },
       "research_case_id": "copv_c04r_0009",
-      "research_status": "CPU_failed",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "0bc933b87f1afbb0361c07d2bb4108d7427cb68884b803139cef7dff103f0b73",
+      "research_mesh_sha256": "3de6ad9f92d6fd2c766a4228cf680623791e5db0ec0e9eed0419114182f3a2a0",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0009",
+      "artifact_root": "data/copv/c04_research_retry_v1/cases/copv_c04r_0009"
     },
     {
       "id": "copv_c04_0010",
@@ -2020,10 +2048,13 @@
         "finished": "2026-10-26T02:44:08.068969+08:00"
       },
       "research_case_id": "copv_c04r_0010",
-      "research_status": "queued",
-      "research_label": false,
+      "research_status": "completed",
+      "research_label": true,
       "research_CAD_sha256": "1bf7f2d5d2a4585f1491f85a128c414a9d10735a5ad91e657bae658ada22bed9",
-      "research_mesh_sha256": "96801a61a89863df457f3926a99e8ddbad90e9d1fdd5c6fa6a3661cca0e838b4"
+      "research_mesh_sha256": "96801a61a89863df457f3926a99e8ddbad90e9d1fdd5c6fa6a3661cca0e838b4",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0010",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0010"
     },
     {
       "id": "copv_c04_0011",
@@ -2059,7 +2090,9 @@
       "research_status": "CPU_failed",
       "research_label": false,
       "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_mesh_sha256": null,
+      "production_label": false,
+      "retained_failure": "nonpositive_Jacobian"
     },
     {
       "id": "copv_c04_0012",
@@ -2092,10 +2125,13 @@
         "finished": "2026-10-26T02:46:58.132395+08:00"
       },
       "research_case_id": "copv_c04r_0012",
-      "research_status": "queued",
-      "research_label": false,
+      "research_status": "completed",
+      "research_label": true,
       "research_CAD_sha256": "7ec019b3ceb1dbdf48d41ad2a2730ad1d2bb59e5ddf0eff8a5cc06291aa7abd7",
-      "research_mesh_sha256": "d4a3f7585adcad86a3b1ea93a8f738a7fc04cdb057bf8d472cf16a8ce0b4d28e"
+      "research_mesh_sha256": "d4a3f7585adcad86a3b1ea93a8f738a7fc04cdb057bf8d472cf16a8ce0b4d28e",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0012",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0012"
     },
     {
       "id": "copv_c04_0013",
@@ -2128,10 +2164,13 @@
         "finished": "2026-10-26T02:48:27.807136+08:00"
       },
       "research_case_id": "copv_c04r_0013",
-      "research_status": "CPU_running",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "8b0c6390279400f5d0935f0b3b94de92fb5a8b7f5b1ad56f6823b1217309ec18",
+      "research_mesh_sha256": "87b25eb4e06e626bacddbc2b60d89f625a45cad4ef50139ee8165b2bc8d408f5",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0013",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0013"
     },
     {
       "id": "copv_c04_0014",
@@ -2164,10 +2203,13 @@
         "finished": "2026-10-26T02:49:49.544808+08:00"
       },
       "research_case_id": "copv_c04r_0014",
-      "research_status": "CPU_pending",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "fd810345c5d0e10a03e8e7c26caab21535414bade913629244e41d70f3473499",
+      "research_mesh_sha256": "a08566bd87f95c64f44977864caec427a2ef7a1bb6e5e35ec4d9c59c90d51e61",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0014",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0014"
     },
     {
       "id": "copv_c04_0015",
@@ -2200,10 +2242,13 @@
         "finished": "2026-10-26T02:51:08.536776+08:00"
       },
       "research_case_id": "copv_c04r_0015",
-      "research_status": "CPU_pending",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "de5753d38029de1714a79d13fd2b835e8e9047bb1fa75a2dc348876ca7ab7641",
+      "research_mesh_sha256": "a676748cfdc6e8e13a31b96184d47324cb21d3253ce162ef89faef3a6fb14d1c",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0015",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0015"
     },
     {
       "id": "copv_c04_0016",
@@ -2236,10 +2281,13 @@
         "finished": "2026-10-26T02:52:26.278881+08:00"
       },
       "research_case_id": "copv_c04r_0016",
-      "research_status": "CPU_pending",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "bafeaa774ff0b8bd6de56b3a9e0681a4a666bcc3b57253c4e1ed93a662f4e9a5",
+      "research_mesh_sha256": "8a708e5cacc1d810516f0ebdfbb81edb20bd0268bad65e4b5e0b60da65e03fd9",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0016",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0016"
     },
     {
       "id": "copv_c04_0017",
@@ -2272,10 +2320,13 @@
         "finished": "2026-10-26T02:53:46.584543+08:00"
       },
       "research_case_id": "copv_c04r_0017",
-      "research_status": "CPU_pending",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "91ebb3812d59812686ab85e1e258a2a64dd856e46bd5d06780fbd19190866fb0",
+      "research_mesh_sha256": "fedd133525e706129b74d341d4e35e072e17bf903c3a89b861afd0460345578d",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0017",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0017"
     },
     {
       "id": "copv_c04_0018",
@@ -2308,10 +2359,13 @@
         "finished": "2026-10-26T02:55:05.489856+08:00"
       },
       "research_case_id": "copv_c04r_0018",
-      "research_status": "CPU_pending",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "83a354b3359095cdcab64f264f8a72f4b5fc1625022059d4a91fa019c16f6760",
+      "research_mesh_sha256": "cb157d06850cdfea3be76ff12e411925122ba0dddbf250d3bdefa8b19e81be3a",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0018",
+      "artifact_root": "data/copv/c04_research_h4_retry_v1/cases/copv_c04r_0018"
     },
     {
       "id": "copv_c04_0019",
@@ -2344,19 +2398,25 @@
         "finished": "2026-10-26T02:56:31.601577+08:00"
       },
       "research_case_id": "copv_c04r_0019",
-      "research_status": "CPU_pending",
-      "research_label": false,
-      "research_CAD_sha256": null,
-      "research_mesh_sha256": null
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "4ed3c6ceecd2bc7ba8a5f94c4dd22f46419056c399c0e545d23c080a09d1468f",
+      "research_mesh_sha256": "f41fb7d6bbef18a07eaca02bb47c53782c4b2f205d4fbb980d485d8f5d65b038",
+      "production_label": false,
+      "research_field_viewer": "copv-c04-result-v3.html?case=copv_c04_0019",
+      "artifact_root": "data/copv/c04_research_v1/cases/copv_c04r_0019"
     }
   ],
   "research_pilot": {
-    "scope": "Separate quarantined research/schema pilot; no production labels",
-    "research_labels": 2,
-    "failed_cases": 6,
-    "CPU_completed": 7,
-    "GPU_completed": 2,
-    "updated": "2026-10-26T03:23:45.307563+08:00",
+    "scope": "Completed separate quarantined schema/research pilot; not production training data",
+    "research_labels": 18,
+    "failed_cases": 2,
+    "GPU_completed": 18,
+    "CPU_completed": 18,
+    "mesh_attempts": 27,
+    "failed_mesh_attempts": 9,
+    "wall_minutes": 70.10244686666667,
+    "updated": "2026-10-26T04:30:15.405436+08:00",
     "protocol_url": "data/copv-c04-research-protocol.json"
   },
   "P2_native_schema_validation": {

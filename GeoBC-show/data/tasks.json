@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26 03:24 北京时间",
+  "updated": "2026-10-26 04:30 北京时间",
   "tasks": [
     {
       "id": "R01",
@@ -377,44 +377,46 @@
       "phase": "第2周",
       "title": "COPV 小批量试跑",
       "due": "2026-11-01",
-      "status": "进行中",
+      "status": "已完成",
       "deliverables": "建议先试跑 20–50 个几何",
       "review": "核对数据字段和样本对应关系，确认后启动批量任务",
       "dependencies": "C03",
       "start": "2026-10-31",
-      "issues": "生产标签仍为 0。687 万单元候选通过面质量和材料体积误差门槛，但保留 262 个低 SICN 单元。另行冻结隔离研究试跑，结果不进入生产训练；失败 ID 与记录保留。",
+      "issues": "生产合格标签仍为 0。原 SICN≥0.05 与材料区体积误差≤0.1% 门槛未放宽；0000、0011 在保留的重试中出现非正 Jacobian，未进入 FE。C05 量产前仍须修复网格。",
       "page": "C04.html",
       "results": [
         {
-          "label": "20 几何与真实三维 BC/载荷",
-          "url": "viewers/copv-c04-pilot.html?v=c04-2"
+          "label": "20 几何与全部成功 GPU 场",
+          "url": "viewers/copv-c04-pilot.html?v=c04-3"
         },
         {
-          "label": "试跑进度 JSON",
-          "url": "data/copv-c04-progress.json"
+          "label": "最终研究核对",
+          "url": "data/copv-c04-review.json"
         },
         {
-          "label": "冻结协议",
-          "url": "data/copv-c04-protocol.json"
+          "label": "20 输入 / 18 场对应 CSV",
+          "url": "data/copv-c04-final-sample-manifest.csv"
         },
         {
-          "label": "隔离研究协议",
+          "label": "原始字段 schema",
+          "url": "data/copv-c04-native-schema.json"
+        },
+        {
+          "label": "冻结研究协议",
           "url": "data/copv-c04-research-protocol.json"
-        },
-        {
-          "label": "样本对应 CSV",
-          "url": "data/copv-c04-sample-manifest.csv"
-        },
-        {
-          "label": "原始 20 个 CAD 输入",
-          "url": "data/copv-c04-original-CAD-inputs.zip"
         },
         {
           "label": "源码与执行证据",
           "url": "data/copv-c04-source-evidence.zip"
+        },
+        {
+          "label": "原始 20 个 CAD 输入",
+          "url": "data/copv-c04-original-CAD-inputs.zip"
         }
       ],
-      "actual_start": "2026-10-26"
+      "actual_start": "2026-10-26",
+      "completed": "2026-10-26",
+      "production_release": false
     },
     {
       "id": "C05",

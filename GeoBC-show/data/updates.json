@@ -425,6 +425,27 @@
           "url": "data/copv-c04-progress.json"
         }
       ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-26",
+      "title": "C04 研究试跑完成：18 个真实 GPU P2 场，2 个失败保留，生产标签仍为 0",
+      "summary": "C04 小批量研究试跑完成：20 个冻结几何中，18 个完成真实三维 GPU-FEniCSx P2 及原始字段检查，2 个保留失败；全部成功算例可打开三维 BC / 载荷。",
+      "review": "生产合格标签仍为 0。原 SICN≥0.05 与材料区体积误差≤0.1% 门槛未放宽；0000、0011 在保留的重试中出现非正 Jacobian，未进入 FE。C05 量产前仍须修复网格。",
+      "links": [
+        {
+          "label": "20 几何与全部成功 GPU 场",
+          "url": "viewers/copv-c04-pilot.html?v=c04-3"
+        },
+        {
+          "label": "最终研究核对",
+          "url": "data/copv-c04-review.json"
+        },
+        {
+          "label": "20 输入 / 18 场对应 CSV",
+          "url": "data/copv-c04-final-sample-manifest.csv"
+        }
+      ]
     }
   ]
 }

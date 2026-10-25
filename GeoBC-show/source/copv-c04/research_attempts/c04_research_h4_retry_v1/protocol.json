@@ -1,0 +1,109 @@
+{
+  "schema": "c04_same_ID_h4_retry_v1",
+  "created": "2026-10-26T03:38:09.880614+08:00",
+  "reason": "Eight retained production-mesh attempts: 6.87M-cell candidate passed surface and material-volume gates but retained 262 low-SICN cells and would require ~29.6M P2 DOFs. Continue C04 schema/ID/GPU throughput pilot in a separate quarantine, following the C03 research method; never reinterpret its production gate.",
+  "production_protocol_unchanged": true,
+  "production_labels_allowed": false,
+  "failed_ID_replacement": false,
+  "geometry_revision": "Declared v2 1-micron interface alignment; each original CAD and revised CAD retained",
+  "solver": "Actual 3D GPU-FEniCSx P2 / exact embedded P1 CUDA GAMG; same constitutive law and discrete pressure caps",
+  "mesh": {
+    "h_mm": 4,
+    "curvature": 64,
+    "min_size_mm": 0.5,
+    "straight_TET10": true,
+    "Netgen": false,
+    "Relocate3D_iterations": 3
+  },
+  "required_before_research_solve": [
+    "Positive Jacobians",
+    "One connected structural mesh",
+    "Conformal six-node material interfaces",
+    "Independent pressure/cap force and moment closure",
+    "Native node/cell IDs and parameter identities",
+    "Single worker resource limits"
+  ],
+  "required_after_solve": [
+    "True residual < 1e-7",
+    "Force/moment and energy gates",
+    "Independent half/zero solves",
+    "Native consistent pressure/cap RHS identity < 1e-10",
+    "Finite original-cell local GP stress and matching IDs"
+  ],
+  "not_certified": [
+    "Production mesh quality",
+    "Training release",
+    "Local peak-stress convergence",
+    "Strength or failure criteria"
+  ],
+  "cases": [
+    {
+      "id": "copv_c04r_0001",
+      "parent_case_id": "copv_c04_0001",
+      "parameters_mm": {
+        "inner_radius_mm": 90.0,
+        "straight_length_mm": 360.0,
+        "dome_depth_mm": 54.0,
+        "boss_bore_radius_mm": 13.5,
+        "neck_length_mm": 18.0,
+        "liner_thickness_mm": 0.9,
+        "overwrap_thickness_mm": 2.6999999999999997
+      },
+      "split": "quarantined_research_only"
+    },
+    {
+      "id": "copv_c04r_0003",
+      "parent_case_id": "copv_c04_0003",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 350.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "split": "quarantined_research_only"
+    },
+    {
+      "id": "copv_c04r_0006",
+      "parent_case_id": "copv_c04_0006",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 70.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "split": "quarantined_research_only"
+    },
+    {
+      "id": "copv_c04r_0018",
+      "parent_case_id": "copv_c04_0018",
+      "parameters_mm": {
+        "inner_radius_mm": 104.4479109121539,
+        "straight_length_mm": 418.4510471422303,
+        "dome_depth_mm": 61.65271526607576,
+        "boss_bore_radius_mm": 13.25765633403154,
+        "neck_length_mm": 18.704656197152467,
+        "liner_thickness_mm": 0.9873850294672261,
+        "overwrap_thickness_mm": 3.642044800395832
+      },
+      "split": "quarantined_research_only"
+    }
+  ],
+  "parent_protocol": "../c04_research_v1/protocol.json",
+  "retry_reason": "Retain original h6 failure; try the SAME frozen input on h4, built-in Gmsh/Relocate3D and no Netgen; no replacement geometry or relaxed production threshold",
+  "GPU_dependencies": [
+    {
+      "pid": 28148,
+      "script": "run_c04_research_pipeline.py"
+    },
+    {
+      "pid": 12080,
+      "script": "run_c04_research_retry_pipeline.py"
+    }
+  ]
+}
