@@ -1,0 +1,78 @@
+{
+  "generated": "2026-10-25T13:29:51.125304+08:00",
+  "completed_tasks": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "C01",
+    "C02"
+  ],
+  "coverage": [
+    {
+      "task": "R01",
+      "status": "geometry_only",
+      "scope": "几何与网格预览，未施加载荷/约束；对应求解工况另见 R02。",
+      "viewer": "viewers/geometry.html"
+    },
+    {
+      "task": "R02",
+      "status": "covered",
+      "scope": "粗 Cal、细 Cal、细 Cal 平均显示、GPU FEn 四栏；另覆盖独立曲边单元核对试件。",
+      "viewer": "viewers/cal-comparison.html?bc=1&loads=1",
+      "extra": "viewers/bc-inspector.html?case=r02-reference-patch"
+    },
+    {
+      "task": "R03",
+      "status": "covered",
+      "scope": "与 R02 共用的完整/嵌入四栏结果视图均有开关。网格本身不虚构工况。",
+      "viewer": "viewers/cal-embed.html?bc=1&loads=1"
+    },
+    {
+      "task": "R04",
+      "status": "covered",
+      "scope": "7 个几何 × 5 类工况；22 个接受/复用结果与 13 个未接受输入明确区分，全部可切换查看。",
+      "viewer": "viewers/r04-compare.html?bc=1&loads=1"
+    },
+    {
+      "task": "C01",
+      "status": "covered_historical_only",
+      "scope": "18 实体构造及 15 个参数几何不附会求解 BC。历史 v1 基准的内压/底端轴向约束已单独可视化。",
+      "viewer": "viewers/bc-inspector.html?case=c01-smoke",
+      "extra": "C02.html"
+    },
+    {
+      "task": "C02",
+      "status": "already_covered_verified",
+      "scope": "已复核现有三点定位、受压内壁与上下端等效合力开关。",
+      "viewer": "viewers/copv-c02.html"
+    }
+  ],
+  "data_index": "assets/fe-bc/index.json",
+  "no_FE_recomputed": true,
+  "validation": {
+    "checked_at": "2026-10-25T13:43:30.565643+08:00",
+    "syntax_checked_scripts": 9,
+    "exported_case_datasets": 10,
+    "r04_inputs": 35,
+    "r04_accepted_or_reused": 22,
+    "r04_input_only": 13,
+    "accepted_radial_constraint_max_error_mm": 3.004566669247144e-10,
+    "accepted_mean_constraint_max_error_mm": 3.77776847768199e-12,
+    "browser_checked": [
+      "cal-embed: four viewports with actual constraints and loads",
+      "R04: multiple geometries, accepted and failed scenarios, U/stress switching, independent toggle",
+      "R04 quality matrix: all 35 exact case/scenario links; one navigation checked",
+      "C01 historical axisymmetric smoke: original node/element scope, pressure and axial support",
+      "R02 curved reference patch: ten actual directional constraints and manufactured nodal forces",
+      "completed task coverage page: all six task entries"
+    ],
+    "webgl_console_errors_in_checked_R04_view": 0,
+    "reference_images": [
+      "assets/fe-bc/reference-01-cal.jpg",
+      "assets/fe-bc/reference-02-r04.jpg",
+      "assets/fe-bc/reference-03-c01-smoke.jpg",
+      "assets/fe-bc/reference-04-r04-tension.jpg"
+    ]
+  }
+}
