@@ -1,16 +1,16 @@
 {
   "task": "R05",
-  "updated_beijing": "2026-10-25T17:01:04.932708+08:00",
+  "updated_beijing": "2026-10-25T17:03:05.431333+08:00",
   "target": 1000,
-  "effective_success": 662,
+  "effective_success": 663,
   "worker_configuration": {
     "cuda_workers": 2,
     "cpu_workers": 1
   },
   "temporary_cpu_slot_task": "Frozen-history numerical pseudo-arclength_tangent validation and recovery",
-  "gpu_success": 304,
+  "gpu_success": 305,
   "cpu_success": 358,
-  "unresolved": 338,
+  "unresolved": 337,
   "full_J2_recovered": 8,
   "stability_representatives": [
     {
@@ -55,14 +55,8 @@
     }
   ],
   "phase": "running",
-  "elapsed_recovery_seconds": 30957.71977376938,
+  "elapsed_recovery_seconds": 31078.21839952469,
   "active": {
-    "normal_rodv2_0160__tension_skew": {
-      "method": "cuda_cg",
-      "worker_id": "cuda_cg_2",
-      "started_unix": 1792918722.9798412,
-      "phase": "solving"
-    },
     "normal_rodv2_0160__compression_skew": {
       "method": "cuda_cg",
       "worker_id": "cuda_cg_1",
@@ -73,6 +67,12 @@
       "method": "cpu_direct",
       "worker_id": "cpu_direct_1",
       "started_unix": 1792918816.3714428,
+      "phase": "full_J2_recovery"
+    },
+    "normal_rodv2_0160__gas_inertia_30deg": {
+      "method": "cuda_cg",
+      "worker_id": "cuda_cg_2",
+      "started_unix": 1792918982.0232322,
       "phase": "solving"
     }
   },
@@ -16793,10 +16793,37 @@
       "bounded_original_ccx_tail": false,
       "material_range_limit_PEEQ": 0.00951460622563769,
       "tail_validation_manifest_sha256": null
+    },
+    {
+      "sample_id": "normal_rodv2_0160__tension_skew",
+      "geometry_case_id": "rodv2_0160",
+      "group": "normal",
+      "split": "train",
+      "scenario": "tension_skew",
+      "fields_sha256": "941f8fbd205b88681651deb01759fb015796c1ee4c5fa3905a9db6b371c1cd18",
+      "backend": "cuda",
+      "linear_solver": "iterative",
+      "seconds": 253.10821557044983,
+      "max_U_mm": 1.092214581820818,
+      "max_GP_von_Mises_MPa": 143.44371953554509,
+      "max_relative_residual": 1.9952058845037342e-07,
+      "min_J": 0.9997036949471325,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cuda_cg",
+      "verified_unix": 1792918981.8974802,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed",
+      "bounded_original_ccx_tail": false,
+      "material_range_limit_PEEQ": 0.00951460622563769,
+      "tail_validation_manifest_sha256": null
     }
   ],
-  "recent_30_min_completions": 31,
-  "eta_from_recent_throughput_beijing": "2026-10-25T22:28:10.739159+08:00",
+  "recent_30_min_completions": 30,
+  "eta_from_recent_throughput_beijing": "2026-10-25T22:40:05.431333+08:00",
   "eta_scope": "Extrapolation from the last 30 minutes of unique accepted IDs; unresolved constitutive/branch cases and changing mesh size may delay completion.",
   "bounded_tail_enabled": true,
   "bounded_tail_accepted_count": 1,
@@ -17896,6 +17923,58 @@
       "accepted_original_target": false,
       "correction_failed": true
     },
+    "arclength_domain_rejections": [
+      {
+        "sample_id": "normal_rodv2_0053__compression_skew",
+        "source": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+        "accepted_original_prefix": 0.7,
+        "classification": "material_range_rejected_trials_observed",
+        "last_rejection": {
+          "reasons": [
+            "material_range"
+          ],
+          "min_J": 0.9957044423467774,
+          "trial_PEEQ_max": 0.009515216571701644,
+          "all_finite": true,
+          "material_range_limit_PEEQ": 0.00951460622563769
+        },
+        "raw_outcome_unchanged": {
+          "state": "failed",
+          "exit_code": 1,
+          "not_counted": true,
+          "detail": {
+            "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+            "time_unix": 1792918716.8177636,
+            "no_accepted_full_case": true
+          }
+        }
+      },
+      {
+        "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
+        "source": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+        "accepted_original_prefix": 0.4,
+        "classification": "material_range_rejected_trials_observed",
+        "last_rejection": {
+          "reasons": [
+            "material_range"
+          ],
+          "min_J": 0.993925742961282,
+          "trial_PEEQ_max": 0.009515361760277582,
+          "all_finite": true,
+          "material_range_limit_PEEQ": 0.00951460622563769
+        },
+        "raw_outcome_unchanged": {
+          "state": "failed",
+          "exit_code": 1,
+          "not_counted": true,
+          "detail": {
+            "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+            "time_unix": 1792918490.7182398,
+            "no_accepted_full_case": true
+          }
+        }
+      }
+    ],
     "constant_tail_material_investigation": {
       "scope": "Independent investigation of the original CCX constant tail; no production acceptance range change",
       "reference": "Unmodified CalculiX incplas.f, constant tail and zero hardening slope at lines531-533",
@@ -18862,13 +18941,13 @@
         "solver_status": {
           "phase": "numerical_arc",
           "pid": 18118,
-          "elapsed_seconds": 145.70987582206726,
+          "elapsed_seconds": 267.4288578033447,
           "step": 9,
           "original_target": 1.0,
-          "numerical_load": 0.9342053869388044,
-          "arc_iteration": 16,
-          "free_residual_relative": 1.290761945701697,
-          "arc_constraint": -4.996003610813204e-16
+          "numerical_load": 0.9104667943569187,
+          "arc_iteration": 0,
+          "free_residual_relative": 1.1965369107011263,
+          "arc_constraint": 0.0
         }
       },
       {
@@ -19103,6 +19182,20 @@
           "load_factor": 1.0,
           "iteration": 6,
           "free_residual_relative": 0.11989623035522515
+        }
+      },
+      {
+        "sample_id": "normal_rodv2_0159__compression_skew",
+        "state": "running",
+        "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+        "solver_status": {
+          "phase": "newton",
+          "pid": 18201,
+          "elapsed_seconds": 48.066795110702515,
+          "step": 4,
+          "load_factor": 0.5,
+          "iteration": 1,
+          "free_residual_relative": 2.779134273841545
         }
       }
     ],
@@ -19671,9 +19764,23 @@
         "state": "running",
         "last_accepted_load_factor": 0.9,
         "attempted_load_factor": 1.0,
-        "numerical_trial_load_factor": 0.9342053869388044,
-        "elapsed_seconds": 145.70987582206726,
-        "last_relative_residual": 1.290761945701697,
+        "numerical_trial_load_factor": 0.9104667943569187,
+        "elapsed_seconds": 267.4288578033447,
+        "last_relative_residual": 1.1965369107011263,
+        "failure": null,
+        "archived": false
+      },
+      {
+        "sample_id": "normal_rodv2_0159__compression_skew",
+        "started_unix": 1792918938.2034204,
+        "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+        "method": "优先完整牛顿步／有限试探回溯",
+        "state": "running",
+        "last_accepted_load_factor": 0.4,
+        "attempted_load_factor": 0.5,
+        "numerical_trial_load_factor": null,
+        "elapsed_seconds": 48.066795110702515,
+        "last_relative_residual": 2.779134273841545,
         "failure": null,
         "archived": false
       }

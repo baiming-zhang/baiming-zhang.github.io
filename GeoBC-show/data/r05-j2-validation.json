@@ -1093,6 +1093,58 @@
     "accepted_original_target": false,
     "correction_failed": true
   },
+  "arclength_domain_rejections": [
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "source": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+      "accepted_original_prefix": 0.7,
+      "classification": "material_range_rejected_trials_observed",
+      "last_rejection": {
+        "reasons": [
+          "material_range"
+        ],
+        "min_J": 0.9957044423467774,
+        "trial_PEEQ_max": 0.009515216571701644,
+        "all_finite": true,
+        "material_range_limit_PEEQ": 0.00951460622563769
+      },
+      "raw_outcome_unchanged": {
+        "state": "failed",
+        "exit_code": 1,
+        "not_counted": true,
+        "detail": {
+          "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+          "time_unix": 1792918716.8177636,
+          "no_accepted_full_case": true
+        }
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
+      "source": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+      "accepted_original_prefix": 0.4,
+      "classification": "material_range_rejected_trials_observed",
+      "last_rejection": {
+        "reasons": [
+          "material_range"
+        ],
+        "min_J": 0.993925742961282,
+        "trial_PEEQ_max": 0.009515361760277582,
+        "all_finite": true,
+        "material_range_limit_PEEQ": 0.00951460622563769
+      },
+      "raw_outcome_unchanged": {
+        "state": "failed",
+        "exit_code": 1,
+        "not_counted": true,
+        "detail": {
+          "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+          "time_unix": 1792918490.7182398,
+          "no_accepted_full_case": true
+        }
+      }
+    }
+  ],
   "constant_tail_material_investigation": {
     "scope": "Independent investigation of the original CCX constant tail; no production acceptance range change",
     "reference": "Unmodified CalculiX incplas.f, constant tail and zero hardening slope at lines531-533",
@@ -2059,13 +2111,13 @@
       "solver_status": {
         "phase": "numerical_arc",
         "pid": 18118,
-        "elapsed_seconds": 145.70987582206726,
+        "elapsed_seconds": 267.4288578033447,
         "step": 9,
         "original_target": 1.0,
-        "numerical_load": 0.9342053869388044,
-        "arc_iteration": 16,
-        "free_residual_relative": 1.290761945701697,
-        "arc_constraint": -4.996003610813204e-16
+        "numerical_load": 0.9104667943569187,
+        "arc_iteration": 0,
+        "free_residual_relative": 1.1965369107011263,
+        "arc_constraint": 0.0
       }
     },
     {
@@ -2300,6 +2352,20 @@
         "load_factor": 1.0,
         "iteration": 6,
         "free_residual_relative": 0.11989623035522515
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0159__compression_skew",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "solver_status": {
+        "phase": "newton",
+        "pid": 18201,
+        "elapsed_seconds": 48.066795110702515,
+        "step": 4,
+        "load_factor": 0.5,
+        "iteration": 1,
+        "free_residual_relative": 2.779134273841545
       }
     }
   ],
@@ -2868,9 +2934,23 @@
       "state": "running",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 1.0,
-      "numerical_trial_load_factor": 0.9342053869388044,
-      "elapsed_seconds": 145.70987582206726,
-      "last_relative_residual": 1.290761945701697,
+      "numerical_trial_load_factor": 0.9104667943569187,
+      "elapsed_seconds": 267.4288578033447,
+      "last_relative_residual": 1.1965369107011263,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0159__compression_skew",
+      "started_unix": 1792918938.2034204,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "running",
+      "last_accepted_load_factor": 0.4,
+      "attempted_load_factor": 0.5,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 48.066795110702515,
+      "last_relative_residual": 2.779134273841545,
       "failure": null,
       "archived": false
     }
