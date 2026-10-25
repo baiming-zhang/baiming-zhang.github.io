@@ -2363,21 +2363,8 @@
   },
   "untried_mode_tail_driver": {
     "pid": 44780,
-    "stage": "validated_recovery_running",
-    "updated_unix": 1792944716.9886866,
-    "sample_ids": [
-      "extreme_rodv2_0040__combined_bending",
-      "extreme_rodv2_0053__combined_bending",
-      "extreme_rodv2_0054__combined_bending",
-      "extreme_rodv2_0061__combined_bending",
-      "extreme_rodv2_0135__combined_bending",
-      "extreme_rodv2_0154__combined_bending",
-      "extreme_rodv2_0158__combined_bending",
-      "normal_rodv2_0051__compression_skew",
-      "normal_rodv2_0135__compression",
-      "normal_rodv2_0135__compression_skew"
-    ],
-    "solver_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483"
+    "stage": "complete",
+    "updated_unix": 1792948277.5130665
   },
   "crossload_seed_driver": {
     "pid": 31484,
@@ -2869,19 +2856,17 @@
   },
   "joint_mode_elastic": {
     "pid": 25240,
-    "stage": "two_unique_ID_CPU_lanes",
-    "updated_unix": 1792947382.979961,
-    "mode_pid": 44780,
-    "elastic_seed_pid": 47060,
-    "max_CPU": 2
+    "stage": "complete",
+    "updated_unix": 1792948983.6035054,
+    "elastic_seed_exit_code": 0,
+    "pending_ids": []
   },
   "elastic_seed_lane": {
     "pid": 47060,
-    "stage": "full_J2_original_3D_recovery",
-    "updated_unix": 1792947481.1139643,
+    "stage": "complete",
+    "updated_unix": 1792948981.3177643,
     "sample_id": "normal_rodv2_0053__compression_skew",
-    "source_review_sha256": "e855ad6f106ca923a9fa95d1c4497ba060eff2bc8430c6b525fa5c87fedf1a73",
-    "rejected_elastic_state_not_a_label": true
+    "has_full_result": false
   },
   "thickness_full3d_trial": {
     "sample_id": "normal_rodv2_0053__compression_skew",
@@ -2932,6 +2917,220 @@
     "no_material_history_exported": true,
     "counted": false,
     "scope": "Original source and guard unchanged. Only U is captured from the exception frame, never accepted as a label; every target and plastic history must be recomputed by the separate full J2 solver."
+  },
+  "yield_rejected_trial": {
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "not_counted": true,
+    "source_review_sha256": "e855ad6f106ca923a9fa95d1c4497ba060eff2bc8430c6b525fa5c87fedf1a73",
+    "original_outcome": {
+      "state": "failed",
+      "exit_code": 1,
+      "not_counted": true,
+      "detail": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792948983.5402486,
+        "no_accepted_full_case": true
+      }
+    },
+    "formal_last_factor": 0.7,
+    "seconds": 1492.7155294418335,
+    "classification": "numerical_arc_step_exhausted_not_time_bound",
+    "no_repeat_same_source_data": true
+  },
+  "lm_manifest": {
+    "state": "validated",
+    "production_enabled": true,
+    "profile": "lm_tail_v4",
+    "material_range_limit_PEEQ": 0.1,
+    "solver_sha256": "82cf758d1abbb82317f3ff310f85dae9544df1598e4f3359dce97f8e5c4a51fb",
+    "module_sha256": {
+      "geobc/rod_r05_cuda_lm.py": "5b898262adee7397438e103377c56eb49b2bb2f435714b9ce2f1c19ca38d6822",
+      "geobc/rod_r05_lm_tail.py": "9f71a0fa54aae51eaea345ec296dc9635e19fd859269a80e6537bb3319b10c5c",
+      "geobc/rod_r05_warm_cache.py": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590"
+    },
+    "core_sha256": {
+      "geobc/rod_finite_j2_r05.py": "7f3cb61ec2308e351e22906bfadb4ed941f6f981897296a784b88af8240f0d8b",
+      "geobc/rod_finite_j2_ufl_r05.py": "e26d865bca30140678eda6901d67f39153b8bbb941b16c65f6d55daaf7373c73"
+    },
+    "parent_solver_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
+    "parent_manifest_sha256": "1b3ac0d74c99332f37f2706e11672a2d518ac72a57e779391ef1671b5365e32d",
+    "gates_sha256": {
+      "ccx_constant_tail_investigation/material_point_review.json": "f83701e08e532726602bc3a372d9b715c4e05ba90b20b7f323937b6785e1ae9c",
+      "ccx_constant_tail_investigation/ufl_quadrature_review.json": "6d9fbc0dc36fdc6befa972490e80842b7945ba383530a2552a16131844bc4190",
+      "ccx_constant_tail_investigation/curved_tet10_assembly_review.json": "b1457f696fe895d42726b2334854f96d01ea23401527134259a208ef78cf9d95",
+      "cuda_lm_design/scalar_cuda_review.json": "4410e0be37ddebc8a5f15a8ba06a80ed894b1709770c49f4b7fe0fb369c1d17d",
+      "plastic_tet10_lm_tail/cross_solver_review.json": "6a5be78e9c564b6074271d3aa55a8a7343fd4c7a5b44bf972b474cb9d8493416",
+      "elastic_rod_0028_lm_tail/cross_solver_review.json": "99e1389f87930017b3a0a0e35b7f30653d5d8e5e12ebd0960cbe81eeb5a03551"
+    },
+    "scope": "Validation candidate only; no production dispatch or compatible controller acceptance yet",
+    "validated_unix": 1792949872.445065,
+    "arc_module_sha256": "9f71a0fa54aae51eaea345ec296dc9635e19fd859269a80e6537bb3319b10c5c",
+    "cuda_lm_module_sha256": "5b898262adee7397438e103377c56eb49b2bb2f435714b9ce2f1c19ca38d6822",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "recovery_dispatcher_sha256": "8247b51945e16d0fd04a05e8a73ae69852e84d899adbbbc9aa5035a393799514",
+    "operator_and_history_update_unchanged": true,
+    "PEEQ_limit": 0.1,
+    "production_contract_validated_unix": 1792950157.3499403
+  },
+  "lm_contract": {
+    "passed": true,
+    "old_0095_full_field_reverified": true,
+    "V1_V2_V3_compatible": true,
+    "forged_fields_rejected": [
+      "material_range_limit_PEEQ",
+      "tail_validation_manifest_sha256",
+      "tail_solver_sha256",
+      "tail_profile",
+      "linear_algebra_device",
+      "cuda_lm_module_sha256",
+      "recovery_dispatcher_sha256",
+      "original_solver_sha256"
+    ],
+    "final_manifest_sha256": "d13dfe7a8d00bbd7b6f6553a8e82f4f26d9fc2f7f868de4c3ec81d66a79a54f2",
+    "source_sha256": "82cf758d1abbb82317f3ff310f85dae9544df1598e4f3359dce97f8e5c4a51fb",
+    "module_sha256": {
+      "geobc/rod_r05_cuda_lm.py": "5b898262adee7397438e103377c56eb49b2bb2f435714b9ce2f1c19ca38d6822",
+      "geobc/rod_r05_lm_tail.py": "9f71a0fa54aae51eaea345ec296dc9635e19fd859269a80e6537bb3319b10c5c",
+      "geobc/rod_r05_warm_cache.py": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590"
+    },
+    "dispatcher_sha256": "8247b51945e16d0fd04a05e8a73ae69852e84d899adbbbc9aa5035a393799514",
+    "scope": "Synthetic contract tests and duplicate diagnostics do not count dataset IDs"
+  },
+  "lm_plastic_regression": {
+    "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+    "U_relative_L2": 2.1410451641933437e-07,
+    "GP_tensor_relative_L2": 1.0477574221458148e-07,
+    "PEEQ_absolute_error": 4.820658642775734e-12,
+    "CCX_max_PEEQ": 8.967564e-05,
+    "FEn_max_PEEQ": 8.967563517934136e-05,
+    "all_20_states_U_max_relative": 2.1410451641933437e-07,
+    "all_20_states_max_PEEQ_absolute_error": 1.0600281018761796e-10,
+    "GP_match_mm": 2.0032143250599133e-15,
+    "material_range_passed": true,
+    "unload_displacement_norm_mm": 0.0013880616462067965,
+    "passed": true,
+    "solver_sha256": "82cf758d1abbb82317f3ff310f85dae9544df1598e4f3359dce97f8e5c4a51fb",
+    "module_sha256": {
+      "geobc/rod_r05_cuda_lm.py": "5b898262adee7397438e103377c56eb49b2bb2f435714b9ce2f1c19ca38d6822",
+      "geobc/rod_r05_lm_tail.py": "9f71a0fa54aae51eaea345ec296dc9635e19fd859269a80e6537bb3319b10c5c",
+      "geobc/rod_r05_warm_cache.py": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590"
+    },
+    "actual_CUDA_LM_steps": 26,
+    "physical_targets_reassembled": 20,
+    "CPU_polish_calls": 20,
+    "normal_equation_conditioning_warning": true
+  },
+  "lm_rod_regression": {
+    "passed": true,
+    "solver_sha256": "82cf758d1abbb82317f3ff310f85dae9544df1598e4f3359dce97f8e5c4a51fb",
+    "module_sha256": {
+      "geobc/rod_r05_cuda_lm.py": "5b898262adee7397438e103377c56eb49b2bb2f435714b9ce2f1c19ca38d6822",
+      "geobc/rod_r05_lm_tail.py": "9f71a0fa54aae51eaea345ec296dc9635e19fd859269a80e6537bb3319b10c5c",
+      "geobc/rod_r05_warm_cache.py": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590"
+    },
+    "relative_L2": {
+      "U_peak_mm": 2.726607160436332e-12,
+      "GP_Cauchy_stress_MPa": 1.868650881391163e-12,
+      "GP_von_Mises_MPa": 8.083749356175061e-13
+    },
+    "actual_CUDA_LM_steps": 1,
+    "physical_targets_reassembled": 10,
+    "CPU_polish_calls": 1,
+    "normal_equation_conditioning_warning": true
+  },
+  "lm_pilot_failure": {
+    "sample_id": "extreme_rodv2_0040__combined_bending",
+    "not_counted": true,
+    "original_outcome": {
+      "state": "failed",
+      "exit_code": 1,
+      "not_counted": true,
+      "detail": {
+        "error": "RuntimeError('Newton stagnation; cut numerical homotopy interval')",
+        "time_unix": 1792950468.2987425,
+        "no_accepted_full_case": true
+      }
+    },
+    "source_method": "validated_lm_tail_v4",
+    "CUDA_LM_steps": 2,
+    "CUDA_KSP_iterations": 2385,
+    "last_LM_relative_residual": 0.09302722297164626,
+    "scope": "LM reduced the original residual, but subsequent CPU Newton stagnated. No full target or physical sample accepted; do not repeat this source/data or roll out blindly."
+  },
+  "mode_bracket_manifest": {
+    "state": "validated",
+    "production_enabled": true,
+    "profile": "mode_bracket_tail_v5",
+    "PEEQ_limit": 0.1,
+    "operator_and_history_update_unchanged": true,
+    "solver_sha256": "6de0e56ecb3af9c0ebaa568aa950889cb6efc02757f17bc94b5370702d1cdfdf",
+    "module_sha256": {
+      "geobc/rod_r05_mode_bracket_tail.py": "13198e5cdbaab5ea5bc79b1004d44d6f461eb627b1deddc9e4fa3b75d4fe7e4a",
+      "geobc/rod_r05_warm_cache.py": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+      "geobc/rod_r05_branch_seed.py": "95cf28f0cf77bacecc5c6331e20d095251f8f5b0af186f7646035c7d5533ef7b"
+    },
+    "core_sha256": {
+      "geobc/rod_finite_j2_r05.py": "7f3cb61ec2308e351e22906bfadb4ed941f6f981897296a784b88af8240f0d8b",
+      "geobc/rod_finite_j2_ufl_r05.py": "e26d865bca30140678eda6901d67f39153b8bbb941b16c65f6d55daaf7373c73"
+    },
+    "parent_solver_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+    "parent_manifest_sha256": "850c097f59a5a7bd5ff9e6180727346a745052a1d2141c2c220021f50ad0ad70",
+    "gates_sha256": {
+      "ccx_constant_tail_investigation/material_point_review.json": "f83701e08e532726602bc3a372d9b715c4e05ba90b20b7f323937b6785e1ae9c",
+      "ccx_constant_tail_investigation/ufl_quadrature_review.json": "6d9fbc0dc36fdc6befa972490e80842b7945ba383530a2552a16131844bc4190",
+      "ccx_constant_tail_investigation/curved_tet10_assembly_review.json": "b1457f696fe895d42726b2334854f96d01ea23401527134259a208ef78cf9d95",
+      "mode_bracket_scalar_review.json": "dc8b3e22adcba46551418e7eb7a725e56fd33f6599e949290bd66de230a252f4",
+      "plastic_tet10_mode_bracket_tail/cross_solver_review.json": "15d172dd6a39ca874c7a0b1adf0cbe69ae9d46aa1d8f5293c8bfb2e2a2158677",
+      "elastic_rod_0028_mode_bracket_tail/cross_solver_review.json": "fd7bfbb6d9698c10c45845f60b7c2786a49e65e770a8ceea3968bfeae3d9f630"
+    },
+    "validated_unix": 1792951157.8346238,
+    "arc_module_sha256": "13198e5cdbaab5ea5bc79b1004d44d6f461eb627b1deddc9e4fa3b75d4fe7e4a",
+    "branch_module_sha256": "95cf28f0cf77bacecc5c6331e20d095251f8f5b0af186f7646035c7d5533ef7b",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "recovery_dispatcher_sha256": "88b2a20f071af3fe5c22550c1abbc5d17846b55589289cef9c5e3027fb898909",
+    "production_contract_validated_unix": 1792951400.212179
+  },
+  "mode_bracket_contract": {
+    "passed": true,
+    "legacy_V1_V2_V3_V4_preserved": true,
+    "forged_fields_rejected": [
+      "material_range_limit_PEEQ",
+      "tail_validation_manifest_sha256",
+      "tail_solver_sha256",
+      "tail_profile",
+      "dispatcher"
+    ],
+    "final_manifest_sha256": "ef2aa33c3f1abfe9807f51d2b95e5f649f5f0dde2047c7d973a5b87725ba2da8",
+    "solver_sha256": "6de0e56ecb3af9c0ebaa568aa950889cb6efc02757f17bc94b5370702d1cdfdf",
+    "module_sha256": {
+      "geobc/rod_r05_mode_bracket_tail.py": "13198e5cdbaab5ea5bc79b1004d44d6f461eb627b1deddc9e4fa3b75d4fe7e4a",
+      "geobc/rod_r05_warm_cache.py": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+      "geobc/rod_r05_branch_seed.py": "95cf28f0cf77bacecc5c6331e20d095251f8f5b0af186f7646035c7d5533ef7b"
+    },
+    "dispatcher_sha256": "88b2a20f071af3fe5c22550c1abbc5d17846b55589289cef9c5e3027fb898909",
+    "scope": "Contract witnesses and regression IDs are not additional dataset samples"
+  },
+  "mode_bracket_pilot": {
+    "pid": 43876,
+    "stage": "original_ten_target_pilot",
+    "updated_unix": 1792951403.331888,
+    "sample_id": "extreme_rodv2_0040__combined_bending",
+    "source_review_sha256": "32d5124cacad52149c012ffaf603106aa6fbdddc7492b1dd8f51b461591d83b7",
+    "max_CPU": 1,
+    "max_GPU": 0
+  },
+  "mode_bracket_evidence": {
+    "sample_id": "extreme_rodv2_0040__combined_bending",
+    "original_target": 1.0,
+    "existing_numerical_bracket_loads": [
+      0.4288049991147713,
+      1.6342043616600803
+    ],
+    "failed_prediction_amplitude": -11.255796883045573,
+    "original_failure": "Numerical mode-plane backtracking exhausted",
+    "old_policy": "Drops the bracket after one failed predictor",
+    "new_policy": "Retains original bracket and shrinks numerical predictor distance from a converged endpoint; every attempt consumes same 48 budget, original 35 Newton/domain/physical targets unchanged",
+    "scope": "Two roots do not prove a continuous admissible branch or target existence. Local subdivision must actually solve the original equations, and only exact original targets commit history."
   },
   "ccx_printout_residual_reviews": [
     {
@@ -3889,24 +4088,19 @@
   "target_cases": [
     {
       "sample_id": "extreme_rodv2_0040__combined_bending",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
-        "time_unix": 1792945132.698252,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_bracket_tail",
       "solver_status": {
         "phase": "numerical_mode_plane",
-        "pid": 28246,
-        "elapsed_seconds": 407.9342694282532,
+        "pid": 397,
+        "elapsed_seconds": 150.0087010860443,
         "step": 9,
         "original_target": 1.0,
-        "numerical_load": 1.2905098562305526,
-        "amplitude_mm": -21.25,
-        "iteration": 5,
-        "free_residual_relative": 8.069808421723463e-11,
-        "numerical_constraint_mm": 0.0
+        "numerical_load": 0.5125206588597586,
+        "amplitude_mm": 15.0,
+        "iteration": 12,
+        "free_residual_relative": 159.40250467069606,
+        "numerical_constraint_mm": -7.105427357601002e-15
       }
     },
     {
@@ -4397,35 +4591,45 @@
     },
     {
       "sample_id": "normal_rodv2_0051__compression_skew",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792947797.2202744,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
       "solver_status": {
         "phase": "numerical_mode_plane",
         "pid": 28983,
-        "elapsed_seconds": 69.0437753200531,
+        "elapsed_seconds": 333.22656440734863,
         "step": 7,
         "original_target": 0.8,
-        "numerical_load": 0.513525145179312,
-        "amplitude_mm": 5.0,
-        "iteration": 1,
-        "free_residual_relative": 0.07763362285074712,
-        "numerical_constraint_mm": 2.6645352591003757e-15
+        "numerical_load": 0.7428764876021304,
+        "amplitude_mm": -21.25,
+        "iteration": 5,
+        "free_residual_relative": 6.740579497922709e-10,
+        "numerical_constraint_mm": 7.105427357601002e-15
       }
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792948983.5402486,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
         "phase": "numerical_arc",
         "pid": 29017,
-        "elapsed_seconds": 45.6200909614563,
+        "elapsed_seconds": 1492.7155294418335,
         "step": 7,
         "original_target": 0.8,
-        "numerical_load": 0.7041289829025924,
-        "arc_iteration": 2,
-        "free_residual_relative": 1.4180890364901315e-05,
-        "arc_constraint": -3.7304686249794994e-16
+        "numerical_load": 0.42223767349333335,
+        "arc_iteration": 34,
+        "free_residual_relative": 2.0745252743830436e-09,
+        "arc_constraint": -1.6041353384016457e-16
       }
     },
     {
@@ -4867,42 +5071,44 @@
       "sample_id": "normal_rodv2_0135__compression",
       "state": "failed",
       "last_failure": {
-        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
-        "time_unix": 1792934573.6939945,
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792947999.0202034,
         "no_accepted_full_case": true
       },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
       "solver_status": {
-        "phase": "numerical_arc",
-        "pid": 24790,
-        "elapsed_seconds": 1437.3917789459229,
+        "phase": "numerical_mode_plane",
+        "pid": 29183,
+        "elapsed_seconds": 194.1327040195465,
         "step": 9,
         "original_target": 1.0,
-        "numerical_load": 0.4323680041948951,
-        "arc_iteration": 32,
-        "free_residual_relative": 2.003355952953614e-09,
-        "arc_constraint": 2.0080088364820664e-16
+        "numerical_load": 0.9008065410346601,
+        "amplitude_mm": -21.25,
+        "iteration": 4,
+        "free_residual_relative": 4.983667697019816e-10,
+        "numerical_constraint_mm": -1.0658141036401503e-14
       }
     },
     {
       "sample_id": "normal_rodv2_0135__compression_skew",
       "state": "failed",
       "last_failure": {
-        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
-        "time_unix": 1792931139.0171945,
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792948277.5936005,
         "no_accepted_full_case": true
       },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
       "solver_status": {
-        "phase": "numerical_arc",
-        "pid": 23580,
-        "elapsed_seconds": 926.8392593860626,
+        "phase": "numerical_mode_plane",
+        "pid": 29210,
+        "elapsed_seconds": 274.6568195819855,
         "step": 7,
         "original_target": 0.8,
-        "numerical_load": -0.35100777391867866,
-        "arc_iteration": 3,
-        "free_residual_relative": 5.839505827100316e-11,
-        "arc_constraint": 2.2930981827186826e-16
+        "numerical_load": 0.7411135389701939,
+        "amplitude_mm": -21.25,
+        "iteration": 5,
+        "free_residual_relative": 5.934817661249868e-10,
+        "numerical_constraint_mm": 7.105427357601002e-15
       }
     },
     {
@@ -6447,7 +6653,7 @@
         "time_unix": 1792931139.0171945,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0103__compression_skew",
@@ -6533,7 +6739,7 @@
         "time_unix": 1792934573.6939945,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "extreme_rodv2_0054__combined_bending",
@@ -7077,7 +7283,7 @@
         "time_unix": 1792945132.698252,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "extreme_rodv2_0053__combined_bending",
@@ -7210,13 +7416,17 @@
       "started_unix": 1792947457.386906,
       "solver_source_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
       "method": "独立有界CCX尾段／模态幅值数值分支",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.8,
-      "numerical_trial_load_factor": 0.513525145179312,
-      "elapsed_seconds": 69.0437753200531,
-      "last_relative_residual": 0.07763362285074712,
-      "failure": null,
+      "numerical_trial_load_factor": 0.7428764876021304,
+      "elapsed_seconds": 333.22656440734863,
+      "last_relative_residual": 6.740579497922709e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792947797.2202744,
+        "no_accepted_full_case": true
+      },
       "archived": false
     },
     {
@@ -7224,12 +7434,84 @@
       "started_unix": 1792947481.2091637,
       "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
       "method": "原CCX有界尾段／真切向弧长与交点细化",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.8,
-      "numerical_trial_load_factor": 0.7041289829025924,
-      "elapsed_seconds": 45.6200909614563,
-      "last_relative_residual": 1.4180890364901315e-05,
+      "numerical_trial_load_factor": 0.42223767349333335,
+      "elapsed_seconds": 1492.7155294418335,
+      "last_relative_residual": 2.0745252743830436e-09,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792948983.5402486,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0135__compression",
+      "started_unix": 1792947797.432238,
+      "solver_source_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+      "method": "独立有界CCX尾段／模态幅值数值分支",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.9008065410346601,
+      "elapsed_seconds": 194.1327040195465,
+      "last_relative_residual": 4.983667697019816e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792947999.0202034,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0135__compression_skew",
+      "started_unix": 1792947997.4648685,
+      "solver_source_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+      "method": "独立有界CCX尾段／模态幅值数值分支",
+      "state": "failed",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.7411135389701939,
+      "elapsed_seconds": 274.6568195819855,
+      "last_relative_residual": 5.934817661249868e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792948277.5936005,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "extreme_rodv2_0040__combined_bending",
+      "started_unix": 1792950401.9191542,
+      "solver_source_sha256": "82cf758d1abbb82317f3ff310f85dae9544df1598e4f3359dce97f8e5c4a51fb",
+      "method": "初始完整J2牛顿（历史版本）",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 57.689342737197876,
+      "last_relative_residual": 0.23731466458994296,
+      "failure": {
+        "error": "RuntimeError('Newton stagnation; cut numerical homotopy interval')",
+        "time_unix": 1792950468.2987425,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "extreme_rodv2_0040__combined_bending",
+      "started_unix": 1792951403.3466573,
+      "solver_source_sha256": "6de0e56ecb3af9c0ebaa568aa950889cb6efc02757f17bc94b5370702d1cdfdf",
+      "method": "初始完整J2牛顿（历史版本）",
+      "state": "running",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.5125206588597586,
+      "elapsed_seconds": 150.0087010860443,
+      "last_relative_residual": 159.40250467069606,
       "failure": null,
       "archived": false
     }
