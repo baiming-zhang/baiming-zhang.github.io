@@ -1431,7 +1431,7 @@
     "original_mode_row_removed": true,
     "scope": "Bounded-tail signed numerical-mode regression; original physical constraints restored; no new dataset count"
   },
-  "mode_tail_main_capability_loaded": false,
+  "mode_tail_main_capability_loaded": true,
   "mode_tail_isolated_pending_count": 0,
   "mode_tail_reference_checks": [
     {
@@ -3112,12 +3112,19 @@
   },
   "mode_bracket_pilot": {
     "pid": 43876,
-    "stage": "original_ten_target_pilot",
-    "updated_unix": 1792951403.331888,
-    "sample_id": "extreme_rodv2_0040__combined_bending",
-    "source_review_sha256": "32d5124cacad52149c012ffaf603106aa6fbdddc7492b1dd8f51b461591d83b7",
-    "max_CPU": 1,
-    "max_GPU": 0
+    "stage": "complete",
+    "updated_unix": 1792952453.4378896,
+    "pilot_passed": false,
+    "original_outcome": {
+      "state": "failed",
+      "exit_code": 1,
+      "not_counted": true,
+      "detail": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792952450.7323568,
+        "no_accepted_full_case": true
+      }
+    }
   },
   "mode_bracket_evidence": {
     "sample_id": "extreme_rodv2_0040__combined_bending",
@@ -3205,7 +3212,7 @@
       "solver_forms_sha256": "03a66f01251e61840fa9bf518750965ad24d9389559ca1dda71421a97ff0356c"
     }
   ],
-  "arc_tail_main_contract_loaded": false,
+  "arc_tail_main_contract_loaded": true,
   "arc_tail_isolated_pending_count": 0,
   "arclength_domain_rejections": [
     {
@@ -4088,19 +4095,24 @@
   "target_cases": [
     {
       "sample_id": "extreme_rodv2_0040__combined_bending",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792952450.7323568,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_bracket_tail",
       "solver_status": {
         "phase": "numerical_mode_plane",
         "pid": 397,
-        "elapsed_seconds": 150.0087010860443,
+        "elapsed_seconds": 1035.9078488349915,
         "step": 9,
         "original_target": 1.0,
-        "numerical_load": 0.5125206588597586,
-        "amplitude_mm": 15.0,
-        "iteration": 12,
-        "free_residual_relative": 159.40250467069606,
-        "numerical_constraint_mm": -7.105427357601002e-15
+        "numerical_load": 1.9999996536595857,
+        "amplitude_mm": -13.374968368885089,
+        "iteration": 3,
+        "free_residual_relative": 1.145242217467338,
+        "numerical_constraint_mm": 7.105427357601002e-15
       }
     },
     {
@@ -7506,13 +7518,17 @@
       "started_unix": 1792951403.3466573,
       "solver_source_sha256": "6de0e56ecb3af9c0ebaa568aa950889cb6efc02757f17bc94b5370702d1cdfdf",
       "method": "初始完整J2牛顿（历史版本）",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 1.0,
-      "numerical_trial_load_factor": 0.5125206588597586,
-      "elapsed_seconds": 150.0087010860443,
-      "last_relative_residual": 159.40250467069606,
-      "failure": null,
+      "numerical_trial_load_factor": 1.9999996536595857,
+      "elapsed_seconds": 1035.9078488349915,
+      "last_relative_residual": 1.145242217467338,
+      "failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792952450.7323568,
+        "no_accepted_full_case": true
+      },
       "archived": false
     }
   ]
