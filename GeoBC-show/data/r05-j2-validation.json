@@ -2114,9 +2114,8 @@
   },
   "after_adaptive_baseline_driver": {
     "pid": 43992,
-    "stage": "explicit_range_tail_recovery",
-    "updated_unix": 1792937749.4102938,
-    "sample_id": "extreme_rodv2_0154__combined_bending",
+    "stage": "complete",
+    "updated_unix": 1792938514.6237924,
     "sample_ids": [
       "extreme_rodv2_0054__combined_bending",
       "extreme_rodv2_0040__combined_bending",
@@ -2180,9 +2179,11 @@
   },
   "crossload_seed_driver": {
     "pid": 31484,
-    "stage": "waiting_for_current_baseline_chain",
-    "updated_unix": 1792937480.812324,
-    "upstream_pid": 43992
+    "stage": "same_geometry_other_load_U_guess_recovery",
+    "updated_unix": 1792938515.3264694,
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "original_force_and_material_unchanged": true,
+    "source_review_sha256": "df84de651dfdeaf70d9acd6260d628fe64d46dd5896a5a31e587160d8084467e"
   },
   "crossload_seed_data_gate": {
     "passed": true,
@@ -3387,19 +3388,43 @@
       }
     },
     {
+      "sample_id": "extreme_rodv2_0135__combined_bending",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
+        "time_unix": 1792938092.813194,
+        "no_accepted_full_case": true
+      },
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "solver_status": {
+        "phase": "newton",
+        "pid": 27014,
+        "elapsed_seconds": 61.44231033325195,
+        "step": 4,
+        "load_factor": 0.5,
+        "iteration": 5,
+        "free_residual_relative": 1701.7454615936254
+      }
+    },
+    {
       "sample_id": "extreme_rodv2_0154__combined_bending",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
+        "time_unix": 1792938513.8022778,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
         "phase": "numerical_arc",
         "pid": 26861,
-        "elapsed_seconds": 106.58409118652344,
+        "elapsed_seconds": 759.3877470493317,
         "step": 5,
         "original_target": 0.6,
-        "numerical_load": 0.5812336773110334,
-        "arc_iteration": 1,
-        "free_residual_relative": 0.014749730755842653,
-        "arc_constraint": 7.025630077706069e-17
+        "numerical_load": -0.713755703430371,
+        "arc_iteration": 2,
+        "free_residual_relative": 3.617546817083378e-11,
+        "arc_constraint": -3.613861040202348e-16
       }
     },
     {
@@ -3440,6 +3465,25 @@
         "phase": "complete_pending_cross_solver_review",
         "pid": 26439,
         "elapsed_seconds": 55.828683853149414
+      }
+    },
+    {
+      "sample_id": "extreme_rodv2_0158__combined_bending",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
+        "time_unix": 1792938936.0960512,
+        "no_accepted_full_case": true
+      },
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "solver_status": {
+        "phase": "newton",
+        "pid": 27282,
+        "elapsed_seconds": 313.41787099838257,
+        "step": 9,
+        "load_factor": 1.0,
+        "iteration": 39,
+        "free_residual_relative": 3688.01063083302
       }
     },
     {
@@ -3539,24 +3583,18 @@
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
-        "time_unix": 1792926637.3384266,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
-        "phase": "numerical_mode_plane",
-        "pid": 21927,
-        "elapsed_seconds": 299.61821365356445,
+        "phase": "numerical_arc",
+        "pid": 27226,
+        "elapsed_seconds": 547.9757177829742,
         "step": 7,
         "original_target": 0.8,
-        "numerical_load": 0.6905155316015689,
-        "amplitude_mm": -21.25,
-        "iteration": 5,
-        "free_residual_relative": 7.990297181685302e-10,
-        "numerical_constraint_mm": 2.1316282072803006e-14
+        "numerical_load": 0.4311281014697833,
+        "arc_iteration": 18,
+        "free_residual_relative": 2.04341861003948e-09,
+        "arc_constraint": -2.667137344314341e-17
       }
     },
     {
@@ -5342,7 +5380,7 @@
         "time_unix": 1792926637.3384266,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
@@ -5907,13 +5945,67 @@
       "started_unix": 1792937749.5351355,
       "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
       "method": "原CCX有界尾段／真切向弧长与交点细化",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.5,
       "attempted_load_factor": 0.6,
-      "numerical_trial_load_factor": 0.5812336773110334,
-      "elapsed_seconds": 106.58409118652344,
-      "last_relative_residual": 0.014749730755842653,
+      "numerical_trial_load_factor": -0.713755703430371,
+      "elapsed_seconds": 759.3877470493317,
+      "last_relative_residual": 3.617546817083378e-11,
+      "failure": {
+        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
+        "time_unix": 1792938513.8022778,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "extreme_rodv2_0135__combined_bending",
+      "started_unix": 1792938023.646219,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "failed",
+      "last_accepted_load_factor": 0.4,
+      "attempted_load_factor": 0.5,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 61.44231033325195,
+      "last_relative_residual": 1701.7454615936254,
+      "failure": {
+        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
+        "time_unix": 1792938092.813194,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "started_unix": 1792938515.438893,
+      "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
+      "method": "原CCX有界尾段／真切向弧长与交点细化",
+      "state": "running",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.4311281014697833,
+      "elapsed_seconds": 547.9757177829742,
+      "last_relative_residual": 2.04341861003948e-09,
       "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "extreme_rodv2_0158__combined_bending",
+      "started_unix": 1792938612.0800004,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 313.41787099838257,
+      "last_relative_residual": 3688.01063083302,
+      "failure": {
+        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
+        "time_unix": 1792938936.0960512,
+        "no_accepted_full_case": true
+      },
       "archived": false
     }
   ]
