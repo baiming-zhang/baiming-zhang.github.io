@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26 02:51 北京时间",
+  "updated": "2026-10-26 03:24 北京时间",
   "tasks": [
     {
       "id": "R01",
@@ -382,12 +382,12 @@
       "review": "核对数据字段和样本对应关系，确认后启动批量任务",
       "dependencies": "C03",
       "start": "2026-10-31",
-      "issues": "生产标签目前为 0。保留 C03 的 SICN≥0.05 和体积误差≤0.1% 门槛；相交及资源停止记录保留，未通过网格不送入生产求解。",
+      "issues": "生产标签仍为 0。687 万单元候选通过面质量和材料体积误差门槛，但保留 262 个低 SICN 单元。另行冻结隔离研究试跑，结果不进入生产训练；失败 ID 与记录保留。",
       "page": "C04.html",
       "results": [
         {
           "label": "20 几何与真实三维 BC/载荷",
-          "url": "viewers/copv-c04-pilot.html?v=c04-1"
+          "url": "viewers/copv-c04-pilot.html?v=c04-2"
         },
         {
           "label": "试跑进度 JSON",
@@ -396,6 +396,10 @@
         {
           "label": "冻结协议",
           "url": "data/copv-c04-protocol.json"
+        },
+        {
+          "label": "隔离研究协议",
+          "url": "data/copv-c04-research-protocol.json"
         },
         {
           "label": "样本对应 CSV",

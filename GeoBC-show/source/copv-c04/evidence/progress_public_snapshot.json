@@ -1,6 +1,6 @@
 {
   "schema": "copv_c04_progress_v1",
-  "updated": "2026-10-26T02:51:14.829102+08:00",
+  "updated": "2026-10-26T03:24:45.108734+08:00",
   "status": "in_progress",
   "target_distinct_geometries": 20,
   "CAD_completed": 20,
@@ -1046,8 +1046,585 @@
     },
     {
       "id": "repair_008_local_patches",
-      "status": "meshing",
-      "FE_labels": 0
+      "status": "quality_rejected",
+      "FE_labels": 0,
+      "mesh": {
+        "parameters_mm": {
+          "inner_radius_mm": 100.0,
+          "straight_length_mm": 400.0,
+          "dome_depth_mm": 60.0,
+          "boss_bore_radius_mm": 15.0,
+          "neck_length_mm": 20.0,
+          "liner_thickness_mm": 1.0,
+          "overwrap_thickness_mm": 3.0
+        },
+        "case_id": "repair_003_alignment",
+        "status": "prepared",
+        "source_CAD_sha256": "58c13eb0524ee142b46f3be75e54129fd8a7337bc66d8f3d2a953446f9385fee",
+        "source_model_sha256": "9dd7fea36723d7b0263c54ee25bfcd2112b94e211246ba31d2e5389103300bfa",
+        "parts": [
+          {
+            "name": "金属气密内衬",
+            "material": "aluminum",
+            "group": "liner",
+            "volume_mm3": 335078.43389441585,
+            "solid_count": 1,
+            "part_id": 1,
+            "source_volume_tag": 1,
+            "structural": true
+          },
+          {
+            "name": "环氧粘接层 0.15 mm",
+            "material": "adhesive",
+            "group": "bond",
+            "volume_mm3": 49523.82919948455,
+            "solid_count": 1,
+            "part_id": 2,
+            "source_volume_tag": 2,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 1 / +55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 1,
+            "angle": 55,
+            "volume_mm3": 248944.2400732995,
+            "solid_count": 1,
+            "part_id": 3,
+            "source_volume_tag": 3,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 2 / -55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 2,
+            "angle": -55,
+            "volume_mm3": 251162.19966425514,
+            "solid_count": 1,
+            "part_id": 4,
+            "source_volume_tag": 4,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 3 / -55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 3,
+            "angle": -55,
+            "volume_mm3": 253340.68628953863,
+            "solid_count": 1,
+            "part_id": 5,
+            "source_volume_tag": 5,
+            "structural": true
+          },
+          {
+            "name": "包覆铺层 4 / +55°",
+            "material": "carbon",
+            "group": "ply",
+            "ply": 4,
+            "angle": 55,
+            "volume_mm3": 255522.13308312465,
+            "solid_count": 1,
+            "part_id": 6,
+            "source_volume_tag": 6,
+            "structural": true
+          },
+          {
+            "name": "上极区局部补强",
+            "material": "carbon",
+            "group": "reinforcement",
+            "angle": 25,
+            "volume_mm3": 4315.3025387904,
+            "solid_count": 1,
+            "part_id": 7,
+            "source_volume_tag": 7,
+            "structural": true
+          },
+          {
+            "name": "下极区局部补强",
+            "material": "carbon",
+            "group": "reinforcement",
+            "angle": -25,
+            "volume_mm3": 4315.3025387904145,
+            "solid_count": 1,
+            "part_id": 8,
+            "source_volume_tag": 8,
+            "structural": true
+          },
+          {
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "group": "boss",
+            "end": 1,
+            "volume_mm3": 83609.91842092882,
+            "solid_count": 1,
+            "part_id": 9,
+            "source_volume_tag": 9,
+            "structural": true
+          },
+          {
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "group": "boss",
+            "end": -1,
+            "volume_mm3": 80967.86546160035,
+            "solid_count": 1,
+            "part_id": 10,
+            "source_volume_tag": 10,
+            "structural": true
+          },
+          {
+            "name": "上端充装口 · O 形圈 1",
+            "material": "elastomer",
+            "group": "seal",
+            "end": 1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 11,
+            "source_volume_tag": 12,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · O 形圈 2",
+            "material": "elastomer",
+            "group": "seal",
+            "end": 1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 12,
+            "source_volume_tag": 13,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · PEEK 挡圈",
+            "material": "peek",
+            "group": "backup",
+            "end": 1,
+            "volume_mm3": 122.13923188534119,
+            "solid_count": 1,
+            "part_id": 13,
+            "source_volume_tag": 14,
+            "structural": false
+          },
+          {
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "group": "insert",
+            "end": 1,
+            "volume_mm3": 16164.284969179704,
+            "solid_count": 1,
+            "part_id": 14,
+            "source_volume_tag": 11,
+            "structural": true
+          },
+          {
+            "name": "下端服务口 · O 形圈 1",
+            "material": "elastomer",
+            "group": "seal",
+            "end": -1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 15,
+            "source_volume_tag": 16,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · O 形圈 2",
+            "material": "elastomer",
+            "group": "seal",
+            "end": -1,
+            "volume_mm3": 206.59277011498781,
+            "solid_count": 1,
+            "part_id": 16,
+            "source_volume_tag": 17,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · PEEK 挡圈",
+            "material": "peek",
+            "group": "backup",
+            "end": -1,
+            "volume_mm3": 122.13923188534119,
+            "solid_count": 1,
+            "part_id": 17,
+            "source_volume_tag": 18,
+            "structural": false
+          },
+          {
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "group": "insert",
+            "end": -1,
+            "volume_mm3": 14387.368748382787,
+            "solid_count": 1,
+            "part_id": 18,
+            "source_volume_tag": 15,
+            "structural": true
+          }
+        ],
+        "collar_interface_repairs": [
+          {
+            "part_id": 7,
+            "old_volume_mm3": 4315.302538790362,
+            "new_volume_mm3": 4319.960164784536,
+            "relative_change": 0.001079327799686558,
+            "rule": "retain C01 outer collar envelope; fit inner interface to exact outer-ply spline and original boss pockets"
+          },
+          {
+            "part_id": 8,
+            "old_volume_mm3": 4315.302538790369,
+            "new_volume_mm3": 4318.577527506501,
+            "relative_change": 0.0007589244755594748,
+            "rule": "retain C01 outer collar envelope; fit inner interface to exact outer-ply spline and original boss pockets"
+          }
+        ],
+        "partition_volume_count": 12,
+        "volume_records": [
+          {
+            "tag": 1,
+            "part_id": 1,
+            "volume_mm3": 335072.182640414,
+            "center_mm": [
+              -0.000310149794095195,
+              -5.995931079580018e-14,
+              7.64909729343992e-12
+            ]
+          },
+          {
+            "tag": 2,
+            "part_id": 2,
+            "volume_mm3": 49523.829199477565,
+            "center_mm": [
+              5.576582901593941e-05,
+              0.00011070458450816742,
+              -0.00962338222741848
+            ]
+          },
+          {
+            "tag": 3,
+            "part_id": 3,
+            "volume_mm3": 248944.24007330276,
+            "center_mm": [
+              -0.0005037253460047962,
+              -4.112552889808978e-05,
+              -0.0022557360400149817
+            ]
+          },
+          {
+            "tag": 4,
+            "part_id": 4,
+            "volume_mm3": 251162.19966425654,
+            "center_mm": [
+              0.0002581704937239672,
+              1.269834142614347e-05,
+              0.00424282746970444
+            ]
+          },
+          {
+            "tag": 5,
+            "part_id": 5,
+            "volume_mm3": 253340.6862895349,
+            "center_mm": [
+              -0.0007558262652551637,
+              5.97655917965963e-06,
+              0.004924628581727854
+            ]
+          },
+          {
+            "tag": 6,
+            "part_id": 6,
+            "volume_mm3": 255524.59388379718,
+            "center_mm": [
+              5.069655425538166e-05,
+              6.599371906004222e-07,
+              -0.010204064717950906
+            ]
+          },
+          {
+            "tag": 9,
+            "part_id": 9,
+            "volume_mm3": 83609.97770206665,
+            "center_mm": [
+              1.8131655173332775e-05,
+              -1.590345109525985e-07,
+              260.83245311857905
+            ]
+          },
+          {
+            "tag": 10,
+            "part_id": 10,
+            "volume_mm3": 80967.88351112268,
+            "center_mm": [
+              3.5136361191417454e-06,
+              1.10557300315573e-06,
+              -259.95855631827357
+            ]
+          },
+          {
+            "tag": 11,
+            "part_id": 14,
+            "volume_mm3": 16164.284969179711,
+            "center_mm": [
+              4.2339934267990046e-15,
+              -7.690901604832765e-16,
+              288.50482528167015
+            ]
+          },
+          {
+            "tag": 15,
+            "part_id": 18,
+            "volume_mm3": 14387.368748382785,
+            "center_mm": [
+              4.8398834646061985e-15,
+              -2.6656005612519345e-16,
+              -285.64983078254636
+            ]
+          },
+          {
+            "tag": 17,
+            "part_id": 7,
+            "volume_mm3": 4319.959964915872,
+            "center_mm": [
+              0.004520804386446331,
+              0.0010838436335329324,
+              241.5106219624223
+            ]
+          },
+          {
+            "tag": 18,
+            "part_id": 8,
+            "volume_mm3": 4318.575337251246,
+            "center_mm": [
+              0.00047329439812402824,
+              -0.000155555051676543,
+              -241.51264199699904
+            ]
+          }
+        ],
+        "original_ambiguous_volume_ownership": [],
+        "resolved_overlap_policy": [],
+        "ambiguous_volume_ownership": [],
+        "gmsh_version": "4.15.2",
+        "h_mm": 4.0,
+        "seconds": 54.16267900005914,
+        "C04_adhesive_patch_source": "C03 h4 low-SICN adhesive centroids; only a mesh-size prior, never transferred fields; every case still passes its own full gates",
+        "C04_sizing_recipe": {
+          "bond_h_mm": 4.0,
+          "collar_h_mm": 1.0,
+          "collar_root_h_mm": 0.3,
+          "min_size_mm": 0.3,
+          "documentation": "https://gmsh.info/doc/texinfo/#Gmsh-mesh-size-fields"
+        },
+        "additional_optimizer": "Netgen",
+        "nodes": 9860853,
+        "cells": 6872705,
+        "geometry_mapping": "straight-sided TET10 coordinate storage (affine geometry); displacement degree selected by solver",
+        "min_det_jac_mm3": 0.00024226706617569858,
+        "connected_components": 1,
+        "curvature_points_per_circle": 64,
+        "linear_meshing_seconds": 561.4417414999334,
+        "meshing_total_seconds": 752.8737492999062
+      },
+      "quality": {
+        "mesh": "repair_008_local_patches_quality",
+        "nodes": 9860853,
+        "corner_nodes": 1328137,
+        "cells": 6872705,
+        "h_mm": 4.0,
+        "min_volume_sicn": 0.029689218789285918,
+        "min_surface_sicn": 0.1447307596953595,
+        "nonpositive_sicn": 0,
+        "below_005": 262,
+        "all_Jacobians_positive": true,
+        "conformal_six_node_interface_pairs": 1201593,
+        "surface_faces": 3066934,
+        "total_mesh_volume_mm3": 1597310.75887487,
+        "total_CAD_volume_mm3": 1597335.781983702,
+        "total_relative_volume_error": 1.566552825915668e-05,
+        "max_part_relative_volume_error": 0.0008188872269544456,
+        "production_gate": {
+          "reference": "R03",
+          "SICN_threshold": 0.05,
+          "volume_tolerance": 0.001,
+          "passed": false,
+          "status": "quarantined_from_production",
+          "connected_components": 1,
+          "independent_load_closure_passed": true
+        },
+        "parts": [
+          {
+            "part_id": 1,
+            "name": "金属气密内衬",
+            "material": "aluminum",
+            "cells": 1121173,
+            "min_volume_sicn": 0.18690913729711872,
+            "p01_volume_sicn": 0.4528615170553864,
+            "median_volume_sicn": 0.8477257743542693,
+            "below_005": 0,
+            "min_surface_sicn": 0.21297088925466137,
+            "mesh_volume_mm3": 335058.8797003753,
+            "CAD_volume_mm3": 335072.182640414,
+            "relative_volume_error": 3.970171422118529e-05
+          },
+          {
+            "part_id": 2,
+            "name": "环氧粘接层 0.15 mm",
+            "material": "adhesive",
+            "cells": 599591,
+            "min_volume_sicn": 0.029689218789285918,
+            "p01_volume_sicn": 0.07098911690982583,
+            "median_volume_sicn": 0.7541301387064592,
+            "below_005": 262,
+            "min_surface_sicn": 0.21922511561410019,
+            "mesh_volume_mm3": 49519.76063311586,
+            "CAD_volume_mm3": 49523.829199477565,
+            "relative_volume_error": 8.215371120268156e-05
+          },
+          {
+            "part_id": 3,
+            "name": "包覆铺层 1 / +55°",
+            "material": "carbon",
+            "cells": 869302,
+            "min_volume_sicn": 0.14432569571253415,
+            "p01_volume_sicn": 0.3515623677615999,
+            "median_volume_sicn": 0.8218619620079473,
+            "below_005": 0,
+            "min_surface_sicn": 0.21819756182635264,
+            "mesh_volume_mm3": 248924.75451146884,
+            "CAD_volume_mm3": 248944.24007330276,
+            "relative_volume_error": 7.827279646310803e-05
+          },
+          {
+            "part_id": 4,
+            "name": "包覆铺层 2 / -55°",
+            "material": "carbon",
+            "cells": 892997,
+            "min_volume_sicn": 0.14680504728162172,
+            "p01_volume_sicn": 0.35557947994923367,
+            "median_volume_sicn": 0.8227709618358936,
+            "below_005": 0,
+            "min_surface_sicn": 0.2181975618263726,
+            "mesh_volume_mm3": 251142.63274329633,
+            "CAD_volume_mm3": 251162.19966425654,
+            "relative_volume_error": 7.790551677899771e-05
+          },
+          {
+            "part_id": 5,
+            "name": "包覆铺层 3 / -55°",
+            "material": "carbon",
+            "cells": 918405,
+            "min_volume_sicn": 0.1653345992257212,
+            "p01_volume_sicn": 0.35765348586282514,
+            "median_volume_sicn": 0.8222704359467331,
+            "below_005": 0,
+            "min_surface_sicn": 0.2235250150230929,
+            "mesh_volume_mm3": 253320.88829808313,
+            "CAD_volume_mm3": 253340.6862895349,
+            "relative_volume_error": 7.814769803360377e-05
+          },
+          {
+            "part_id": 6,
+            "name": "包覆铺层 4 / +55°",
+            "material": "carbon",
+            "cells": 1003746,
+            "min_volume_sicn": 0.11498139744794829,
+            "p01_volume_sicn": 0.3338781680378568,
+            "median_volume_sicn": 0.8156781448646993,
+            "below_005": 0,
+            "min_surface_sicn": 0.20128894667737643,
+            "mesh_volume_mm3": 255575.49058069423,
+            "CAD_volume_mm3": 255524.59388379718,
+            "relative_volume_error": 0.00019918512000538513
+          },
+          {
+            "part_id": 7,
+            "name": "上极区局部补强",
+            "material": "carbon",
+            "cells": 253309,
+            "min_volume_sicn": 0.09003958517412715,
+            "p01_volume_sicn": 0.1235930669527809,
+            "median_volume_sicn": 0.3412169237037901,
+            "below_005": 0,
+            "min_surface_sicn": 0.41996003049169167,
+            "mesh_volume_mm3": 4316.422404879648,
+            "CAD_volume_mm3": 4319.959964915872,
+            "relative_volume_error": 0.0008188872269544456
+          },
+          {
+            "part_id": 8,
+            "name": "下极区局部补强",
+            "material": "carbon",
+            "cells": 253279,
+            "min_volume_sicn": 0.09188663273809793,
+            "p01_volume_sicn": 0.1233808401275417,
+            "median_volume_sicn": 0.34146579034755303,
+            "below_005": 0,
+            "min_surface_sicn": 0.41996003049124736,
+            "mesh_volume_mm3": 4316.443838117049,
+            "CAD_volume_mm3": 4318.575337251246,
+            "relative_volume_error": 0.0004935653468427503
+          },
+          {
+            "part_id": 9,
+            "name": "上端充装口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "cells": 347548,
+            "min_volume_sicn": 0.14550584150897214,
+            "p01_volume_sicn": 0.480868073206732,
+            "median_volume_sicn": 0.8693286978585395,
+            "below_005": 0,
+            "min_surface_sicn": 0.1447307596953814,
+            "mesh_volume_mm3": 83608.63763627104,
+            "CAD_volume_mm3": 83609.97770206665,
+            "relative_volume_error": 1.602758226282308e-05
+          },
+          {
+            "part_id": 10,
+            "name": "下端服务口 · 嵌入法兰与车削 boss",
+            "material": "titanium",
+            "cells": 303123,
+            "min_volume_sicn": 0.12101109715657585,
+            "p01_volume_sicn": 0.46830123390172174,
+            "median_volume_sicn": 0.8626461315473577,
+            "below_005": 0,
+            "min_surface_sicn": 0.1447307596953595,
+            "mesh_volume_mm3": 80967.83413917237,
+            "CAD_volume_mm3": 80967.88351112268,
+            "relative_volume_error": 6.097720253173122e-07
+          },
+          {
+            "part_id": 14,
+            "name": "上端充装口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "cells": 145103,
+            "min_volume_sicn": 0.15251968635300484,
+            "p01_volume_sicn": 0.3881149647112359,
+            "median_volume_sicn": 0.8562094611436984,
+            "below_005": 0,
+            "min_surface_sicn": 0.14473075969536237,
+            "mesh_volume_mm3": 16168.699465755804,
+            "CAD_volume_mm3": 16164.284969179711,
+            "relative_volume_error": 0.0002731018776587213
+          },
+          {
+            "part_id": 18,
+            "name": "下端服务口 · 中空接口套 / 六角扳手位",
+            "material": "steel",
+            "cells": 165129,
+            "min_volume_sicn": 0.09993314371875045,
+            "p01_volume_sicn": 0.3996360487897503,
+            "median_volume_sicn": 0.8613216053015275,
+            "below_005": 0,
+            "min_surface_sicn": 0.3103422139982003,
+            "mesh_volume_mm3": 14390.314923640424,
+            "CAD_volume_mm3": 14387.368748382785,
+            "relative_volume_error": 0.0002047751266520681
+          }
+        ],
+        "mesh_sha256": "7216c1a65f79e9974f0412fc52d1fcc0aa02060f6e4ac1435645db5ad36c19ac"
+      }
     }
   ],
   "cases": [
@@ -1080,7 +1657,12 @@
         "source_CAD_sha256": "58c13eb0524ee142b46f3be75e54129fd8a7337bc66d8f3d2a953446f9385fee",
         "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
         "finished": "2026-10-26T02:30:05.287096+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0000",
+      "research_status": "CPU_failed",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0001",
@@ -1111,7 +1693,12 @@
         "source_CAD_sha256": "7c2cd144dc84aecc0ced0e8071de02c51ebacf91819154c4cc1edc3356fcc5d4",
         "partition_sha256": "34f9f0374692841ded7aabf90e978462d51e5596d171764f96cf519d49f8586f",
         "finished": "2026-10-26T02:31:20.423429+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0001",
+      "research_status": "CPU_failed",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0002",
@@ -1142,7 +1729,13 @@
         "source_CAD_sha256": "f25883ee66be0f8be91a2b62d80958bae0528035d1c68e937418ec09208f841c",
         "partition_sha256": "7fdcdb0f3faf4a824bbd5c5b44f40715b0c207657366b81ad4eab91ffe44c2a8",
         "finished": "2026-10-26T02:32:48.120685+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0002",
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "f25883ee66be0f8be91a2b62d80958bae0528035d1c68e937418ec09208f841c",
+      "research_mesh_sha256": "8dd4b9c1ad99fe082d5d0ad680bea70cdd8d0e308c694f042a85faeb76133a61",
+      "research_field_viewer": "copv-c04-case.html?case=copv_c04_0002"
     },
     {
       "id": "copv_c04_0003",
@@ -1173,7 +1766,12 @@
         "source_CAD_sha256": "bf1e6cdb8de18257b5fceb211a05de72054bf8466b765fe899353622e214c7e6",
         "partition_sha256": "ae61b9d3642202dc4a68d8bb354273da74d3ede32ca6d2067ab7bffd13f7f7de",
         "finished": "2026-10-26T02:34:12.082311+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0003",
+      "research_status": "CPU_failed",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0004",
@@ -1204,7 +1802,12 @@
         "source_CAD_sha256": "abf3756492488e1ed28c744a70ec2ce9d8529e235c56d7ceea08253277fa538c",
         "partition_sha256": "a8f07e6a7e533c9bc37ac13669a2102686bd16cf8e7642a0284af53118f5c453",
         "finished": "2026-10-26T02:35:36.765376+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0004",
+      "research_status": "completed",
+      "research_label": true,
+      "research_CAD_sha256": "abf3756492488e1ed28c744a70ec2ce9d8529e235c56d7ceea08253277fa538c",
+      "research_mesh_sha256": "1cda46452450419e76b12b6d32de031f057c304f2a196e2d22ed0e6289700a21"
     },
     {
       "id": "copv_c04_0005",
@@ -1235,7 +1838,12 @@
         "source_CAD_sha256": "61aadc6a5c3a9bd815f88469e779f249da9c788cb7af0ab080ffc6175c8eba04",
         "partition_sha256": "c35d970747c6513e0af43840a986fb00228c26588080512df6d197847028cdd2",
         "finished": "2026-10-26T02:37:01.928841+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0005",
+      "research_status": "running",
+      "research_label": false,
+      "research_CAD_sha256": "61aadc6a5c3a9bd815f88469e779f249da9c788cb7af0ab080ffc6175c8eba04",
+      "research_mesh_sha256": "348cd0765980a268adeba8228f39072e7f3a486246ee06f7d813318869e75556"
     },
     {
       "id": "copv_c04_0006",
@@ -1266,7 +1874,12 @@
         "source_CAD_sha256": "2a99d28a0e4219ab569f116e3028125eb8b6351b9152ab3678230dcc4f96c494",
         "partition_sha256": "5bff6506605d73d0d70ce9a9c9ada51f2e3a9ec389380554bfaa975cc42bab68",
         "finished": "2026-10-26T02:38:25.211577+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0006",
+      "research_status": "CPU_failed",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0007",
@@ -1297,7 +1910,12 @@
         "source_CAD_sha256": "77768165fd76e162d065eee25fbd56058127352cc33a9c3f61c8476ea434b6cf",
         "partition_sha256": "66d935ae41b40a372cba127c43df3036a1f1240371eb4250e853f0a1057afc49",
         "finished": "2026-10-26T02:39:48.350015+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0007",
+      "research_status": "queued",
+      "research_label": false,
+      "research_CAD_sha256": "77768165fd76e162d065eee25fbd56058127352cc33a9c3f61c8476ea434b6cf",
+      "research_mesh_sha256": "9f2d572cadc3f88146106614ca3ca9cc449a05d4af037e7fb59efd4822a50b4f"
     },
     {
       "id": "copv_c04_0008",
@@ -1328,7 +1946,12 @@
         "source_CAD_sha256": "9e001df6057d7f5b62de6e7775ff09e93de607cb170553c10167ccbe79ef0205",
         "partition_sha256": "1c0fdff1040ab96e3f90db00aa9ecdfde93e6eee6930da0dd39480454378dd46",
         "finished": "2026-10-26T02:41:14.668764+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0008",
+      "research_status": "queued",
+      "research_label": false,
+      "research_CAD_sha256": "9e001df6057d7f5b62de6e7775ff09e93de607cb170553c10167ccbe79ef0205",
+      "research_mesh_sha256": "b7a5adb0f840e76c8b9e7f02a5357cf9a5c615c636221f1471658be447ce1c27"
     },
     {
       "id": "copv_c04_0009",
@@ -1359,7 +1982,12 @@
         "source_CAD_sha256": "0bc933b87f1afbb0361c07d2bb4108d7427cb68884b803139cef7dff103f0b73",
         "partition_sha256": "48d67c7d47477a594e92af5b5d2e8dca532b4bdbbd3bf894287367a2f2879dcc",
         "finished": "2026-10-26T02:42:41.365287+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0009",
+      "research_status": "CPU_failed",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0010",
@@ -1390,7 +2018,12 @@
         "source_CAD_sha256": "1bf7f2d5d2a4585f1491f85a128c414a9d10735a5ad91e657bae658ada22bed9",
         "partition_sha256": "2e8669320e4356250176365f861ddeda0870e99ade6693d465d0c460f4afb350",
         "finished": "2026-10-26T02:44:08.068969+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0010",
+      "research_status": "queued",
+      "research_label": false,
+      "research_CAD_sha256": "1bf7f2d5d2a4585f1491f85a128c414a9d10735a5ad91e657bae658ada22bed9",
+      "research_mesh_sha256": "96801a61a89863df457f3926a99e8ddbad90e9d1fdd5c6fa6a3661cca0e838b4"
     },
     {
       "id": "copv_c04_0011",
@@ -1421,7 +2054,12 @@
         "source_CAD_sha256": "a57c0ee4d65b17ee9f227ffe2753b1d9cc46c1f7e4e39f48c79f9fe243b38d28",
         "partition_sha256": "1376a07df0ab9be74db99ade3ebccf7285a3817c82b596a5ddcf7304095e3852",
         "finished": "2026-10-26T02:45:34.711928+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0011",
+      "research_status": "CPU_failed",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0012",
@@ -1452,7 +2090,12 @@
         "source_CAD_sha256": "7ec019b3ceb1dbdf48d41ad2a2730ad1d2bb59e5ddf0eff8a5cc06291aa7abd7",
         "partition_sha256": "9deff34d054963850ea634dbe67a503684124ff69cf360bebee445576bc43793",
         "finished": "2026-10-26T02:46:58.132395+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0012",
+      "research_status": "queued",
+      "research_label": false,
+      "research_CAD_sha256": "7ec019b3ceb1dbdf48d41ad2a2730ad1d2bb59e5ddf0eff8a5cc06291aa7abd7",
+      "research_mesh_sha256": "d4a3f7585adcad86a3b1ea93a8f738a7fc04cdb057bf8d472cf16a8ce0b4d28e"
     },
     {
       "id": "copv_c04_0013",
@@ -1483,7 +2126,12 @@
         "source_CAD_sha256": "8b0c6390279400f5d0935f0b3b94de92fb5a8b7f5b1ad56f6823b1217309ec18",
         "partition_sha256": "15408a982650272ce13618da8d00c6be482eac37dd7a18a848adcec20f045144",
         "finished": "2026-10-26T02:48:27.807136+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0013",
+      "research_status": "CPU_running",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0014",
@@ -1514,7 +2162,12 @@
         "source_CAD_sha256": "fd810345c5d0e10a03e8e7c26caab21535414bade913629244e41d70f3473499",
         "partition_sha256": "254b3f2c757725527cd31c2e89fed84a16bacd0d6b594c02f135f25012c69ec5",
         "finished": "2026-10-26T02:49:49.544808+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0014",
+      "research_status": "CPU_pending",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0015",
@@ -1545,7 +2198,12 @@
         "source_CAD_sha256": "de5753d38029de1714a79d13fd2b835e8e9047bb1fa75a2dc348876ca7ab7641",
         "partition_sha256": "349a16281f97fed47b54a663e7c1aaec70c6fab34d9046f8de666c717d6430b6",
         "finished": "2026-10-26T02:51:08.536776+08:00"
-      }
+      },
+      "research_case_id": "copv_c04r_0015",
+      "research_status": "CPU_pending",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0016",
@@ -1570,9 +2228,18 @@
         "id": "copv_c04_0016",
         "parameters_sha256": "81b9308ad39ef7c08b21fd6249710d64e1d64bc818e8ebf258789b157869eaa0",
         "started": "2026-10-26T02:51:08.537943+08:00",
-        "CAD_status": "running",
-        "partition_status": "not_started"
-      }
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 3.5437208851796242e-06,
+        "source_CAD_sha256": "bafeaa774ff0b8bd6de56b3a9e0681a4a666bcc3b57253c4e1ed93a662f4e9a5",
+        "partition_sha256": "6afa0df7caeeca67e606a57e42da773644bc4896703222825fbafb476bde2bca",
+        "finished": "2026-10-26T02:52:26.278881+08:00"
+      },
+      "research_case_id": "copv_c04r_0016",
+      "research_status": "CPU_pending",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0017",
@@ -1592,7 +2259,23 @@
       "mesh_status": "waiting_for_validated_recipe",
       "solver_status": "not_started",
       "accepted": false,
-      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0017"
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0017",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0017",
+        "parameters_sha256": "2c5f057577d6b6544a6c192dde137fab2e709e776a5fa7575a7a9a9b38a3c295",
+        "started": "2026-10-26T02:52:26.280404+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 3.1376158753371186e-06,
+        "source_CAD_sha256": "91ebb3812d59812686ab85e1e258a2a64dd856e46bd5d06780fbd19190866fb0",
+        "partition_sha256": "6dbe378d487144aedd019f2ebe4f17ebf8aed955cb6f2abfa81423063d6bf59e",
+        "finished": "2026-10-26T02:53:46.584543+08:00"
+      },
+      "research_case_id": "copv_c04r_0017",
+      "research_status": "CPU_pending",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0018",
@@ -1612,7 +2295,23 @@
       "mesh_status": "waiting_for_validated_recipe",
       "solver_status": "not_started",
       "accepted": false,
-      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0018"
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0018",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0018",
+        "parameters_sha256": "bab50eaf1ca8cc309c2cc9dc4b09e8e62dce16b0ff9ec84765b7c4f133d7ace3",
+        "started": "2026-10-26T02:53:46.585053+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.477702929271075e-06,
+        "source_CAD_sha256": "83a354b3359095cdcab64f264f8a72f4b5fc1625022059d4a91fa019c16f6760",
+        "partition_sha256": "00c70bb72eeabb00a7e475ae1d4b665a18562e74c278570fe33ce3e72cd08544",
+        "finished": "2026-10-26T02:55:05.489856+08:00"
+      },
+      "research_case_id": "copv_c04r_0018",
+      "research_status": "CPU_pending",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     },
     {
       "id": "copv_c04_0019",
@@ -1632,7 +2331,47 @@
       "mesh_status": "waiting_for_validated_recipe",
       "solver_status": "not_started",
       "accepted": false,
-      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0019"
+      "geometry_asset_root": "../assets/copv-c04/geometry/copv_c04_0019",
+      "revision_v2_preparation": {
+        "id": "copv_c04_0019",
+        "parameters_sha256": "b571a4797f289409d2132ae7f3b99211876c2d1318d5f2b54f33188b4ac08f70",
+        "started": "2026-10-26T02:55:05.491367+08:00",
+        "CAD_status": "completed",
+        "partition_status": "completed",
+        "CAD_revision_max_volume_drift": 2.5660246614211957e-06,
+        "source_CAD_sha256": "4ed3c6ceecd2bc7ba8a5f94c4dd22f46419056c399c0e545d23c080a09d1468f",
+        "partition_sha256": "82646178f0bde2d0fe984d0a1a6a850bdca778152ec8f8363ebd33bd9a6a7b32",
+        "finished": "2026-10-26T02:56:31.601577+08:00"
+      },
+      "research_case_id": "copv_c04r_0019",
+      "research_status": "CPU_pending",
+      "research_label": false,
+      "research_CAD_sha256": null,
+      "research_mesh_sha256": null
     }
-  ]
+  ],
+  "research_pilot": {
+    "scope": "Separate quarantined research/schema pilot; no production labels",
+    "research_labels": 2,
+    "failed_cases": 6,
+    "CPU_completed": 7,
+    "GPU_completed": 2,
+    "updated": "2026-10-26T03:23:45.307563+08:00",
+    "protocol_url": "data/copv-c04-research-protocol.json"
+  },
+  "P2_native_schema_validation": {
+    "passed": true,
+    "accepted_pilot_labels": 0,
+    "actual_P2_DOFs": 4142928,
+    "native_load_identity": {
+      "passed": true,
+      "relative_difference": 1.9195568602725908e-14,
+      "node_order": "original Gmsh node_ids",
+      "pressure_MPa": 1.0,
+      "units": "mm N MPa",
+      "basis": "Actual P2 affine Tri6 surface shape-function integrals; no corner-only load transfer"
+    },
+    "local_GP_saved": true,
+    "seconds": 156.5495798587799
+  }
 }
