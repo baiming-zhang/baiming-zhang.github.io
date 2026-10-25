@@ -1,0 +1,42 @@
+{
+  "schema": "copv_c05_preflight_plan_v1",
+  "status": "designed_production_blocked",
+  "C04_result": {
+    "frozen_inputs": 20,
+    "research_fields": 18,
+    "retained_failures": 2,
+    "production_labels": 0
+  },
+  "first_repair_inputs": [
+    "copv_c04_0000",
+    "copv_c04_0011"
+  ],
+  "validation_inputs": [
+    "copv_c04_0002",
+    "copv_c04_0018"
+  ],
+  "geometry": "Keep original/revised CAD versions and physical material IDs; no silent deletion of adhesive, plies or port details",
+  "mesh_strategy": [
+    "Diagnose negative Jacobians before/after each optimizer; isolate Netgen DLL failures from CAD admissibility",
+    "Test matched angular/axial nodes across thin bonded layers and conformal swept/multi-block TET10 decomposition",
+    "Grade local collar/port transitions while matching neighboring-layer surface density; avoid the volume bias measured under bond-only refinement",
+    "Retain strict original geometry/material volume, SICN, Jacobian and topology gates"
+  ],
+  "unchanged_release_gate": {
+    "min_surface_SICN": 0.05,
+    "min_volume_SICN": 0.05,
+    "max_material_volume_relative_error": 0.001,
+    "positive_Jacobians": true,
+    "conformal_Tri6": true,
+    "connected_components": 1,
+    "independent_pressure_cap_closure": true
+  },
+  "initial_compute_guard": {
+    "max_cells": 2000000,
+    "max_P2_DOFs": 9000000,
+    "GPU_workers": 1
+  },
+  "rollout": "Repair and review the four named inputs first; repeat required mesh/order response checks before freezing a production protocol. Do not launch 1000 production cases while the gate remains false.",
+  "data_split": "Existing pilot geometries remain lineage-linked; never place rescaled/remeshed copies into a future holdout split",
+  "next_deliverable": "Mesh repair evidence and production readiness review, before the C05 bulk dataset"
+}
