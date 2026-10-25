@@ -1917,9 +1917,10 @@
   },
   "frozen_ccx_driver": {
     "pid": 35172,
-    "stage": "ccx_original_fixed_targets",
-    "updated_unix": 1792929649.653728,
-    "sample_id": "normal_rodv2_0053__compression_skew"
+    "stage": "failed",
+    "updated_unix": 1792929949.3514426,
+    "error": "AssertionError('Inspect CCX log; no physical nonexistence conclusion')",
+    "scope": "Diagnostic/orchestration failure, no sample count or physical-nonexistence claim"
   },
   "frozen_ccx_input_width_review": {
     "classification": "input_serialization_error_not_numerical_failure",
@@ -1974,13 +1975,25 @@
       "seconds": 827.4616086483002,
       "executable_sha256": "e18360eb32a5cd48f91a212c57069212cd8e27d2f798a599a78106bd0b3ecc1f",
       "counted": false
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "state": "numerical_or_input_failure",
+      "exit_code": 201,
+      "seconds": 299.6723780632019,
+      "executable_sha256": "e18360eb32a5cd48f91a212c57069212cd8e27d2f798a599a78106bd0b3ecc1f",
+      "counted": false
     }
   ],
   "ccx_followup_driver": {
     "pid": 14420,
-    "stage": "waiting_for_independent_ccx_chain",
-    "updated_unix": 1792929640.8200822,
-    "upstream_pid": 35172
+    "stage": "untried_standard_continuation",
+    "updated_unix": 1792931140.4121819,
+    "sample_id": "normal_rodv2_0051__compression_skew",
+    "sample_ids": [
+      "normal_rodv2_0135__compression_skew",
+      "normal_rodv2_0051__compression_skew"
+    ]
   },
   "ccx_seed_data_contract": {
     "passed": true,
@@ -1993,6 +2006,69 @@
     ],
     "source_sha256": "60fd16140b0e8b280fb3e9058e557b1eebf8590e35f23437362e779b60b595f4",
     "scope": "Dispatcher/input-source contract only; numerical sources and original acceptance thresholds unchanged; not a sample"
+  },
+  "ccx_0053_prefix_review": {
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "state": "fixed_step_ccx_diverged_at_original_80pct",
+    "formal_ccx_prefix": 0.7,
+    "accepted_CCX_max_PEEQ": 0,
+    "records": [
+      {
+        "original_factor": 0.1,
+        "U_relative_L2": 8.20764481817189e-08,
+        "FEn_original_R": 2.0873918754834244e-08
+      },
+      {
+        "original_factor": 0.2,
+        "U_relative_L2": 1.7718734056040065e-07,
+        "FEn_original_R": 1.5022449636768678e-10
+      },
+      {
+        "original_factor": 0.3,
+        "U_relative_L2": 1.7029371702050596e-07,
+        "FEn_original_R": 1.3047118817045212e-10
+      },
+      {
+        "original_factor": 0.4,
+        "U_relative_L2": 1.199776336895655e-07,
+        "FEn_original_R": 1.6453026778716084e-10
+      },
+      {
+        "original_factor": 0.5,
+        "U_relative_L2": 8.092096733793936e-08,
+        "FEn_original_R": 2.3123242012284978e-08
+      },
+      {
+        "original_factor": 0.6,
+        "U_relative_L2": 5.398346032137032e-08,
+        "FEn_original_R": 2.266828651012899e-10
+      },
+      {
+        "original_factor": 0.7,
+        "U_relative_L2": 1.9926336146551593e-07,
+        "FEn_original_R": 5.836499746186358e-10
+      }
+    ],
+    "max_prefix_U_relative_L2": 1.9926336146551593e-07,
+    "comparison": "Native displacement fields at the same seven original targets; not a full stress-field or GPU/CPU comparison",
+    "scope": "Both solvers reach the same virgin prefix; fixed-step CCX also diverges at80%. Independent evidence of numerical/branch difficulty, not physical nonexistence or completed sample.",
+    "counted": false,
+    "created_unix": 1792930323.7156298
+  },
+  "original_cpu_dispatch_review": {
+    "classification": "dispatch_selector_gap_not_sample_failure",
+    "case_id": "normal_rodv2_0135__compression",
+    "reason": "Original CPU elastic numerical failure had no J2 provenance yet; requiring nonempty J2 attempts excluded it from the prior followup.",
+    "fix": "Only include no-J2 cases when original CPU outcome is numerical_failure and solver/geometry/load fingerprints match frozen protocol; resource waits and unknown provenance excluded.",
+    "upstream_pid": 14420,
+    "source": "notes/r05_original_cpu_continuation_slot.py",
+    "physical_inputs_or_thresholds_changed": false
+  },
+  "original_cpu_followup_driver": {
+    "pid": 45500,
+    "stage": "waiting_for_after_ccx_recovery",
+    "updated_unix": 1792930427.914565,
+    "upstream_pid": 14420
   },
   "ccx_printout_residual_reviews": [
     {
@@ -3024,21 +3100,18 @@
     },
     {
       "sample_id": "normal_rodv2_0051__compression_skew",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
-        "time_unix": 1792928426.2899916,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_intersection",
       "solver_status": {
-        "phase": "newton",
-        "pid": 22777,
-        "elapsed_seconds": 241.95578026771545,
+        "phase": "numerical_arc",
+        "pid": 24012,
+        "elapsed_seconds": 85.16562962532043,
         "step": 7,
-        "load_factor": 0.8,
-        "iteration": 64,
-        "free_residual_relative": 1349.6882859163509
+        "original_target": 0.8,
+        "numerical_load": 0.7334748768535687,
+        "arc_iteration": 6,
+        "free_residual_relative": 3.238767464755345e-10,
+        "arc_constraint": -3.5865407865820487e-16
       }
     },
     {
@@ -3299,6 +3372,46 @@
       }
     },
     {
+      "sample_id": "normal_rodv2_0103__compression_skew",
+      "state": "accepted_in_main_queue",
+      "last_failure": null,
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "accepted_review": {
+        "sample_id": "normal_rodv2_0103__compression_skew",
+        "geometry_case_id": "rodv2_0103",
+        "group": "normal",
+        "split": "test",
+        "scenario": "compression_skew",
+        "fields_directory": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\j2_extension_v1\\recovery\\normal_rodv2_0103__compression_skew\\fenicsx",
+        "fields_sha256": "e9ef36cd78ecbd3318e29176a6aa4e13253b0a9bc0f158be05929c732eb8e813",
+        "backend": "cpu",
+        "linear_solver": "direct",
+        "seconds": 121.41739511489868,
+        "max_U_mm": 17.375085911298054,
+        "max_GP_von_Mises_MPa": 904.7171433499083,
+        "max_relative_residual": 5.012668094798279e-08,
+        "min_J": 0.9962824208192527,
+        "accepted_states": 10,
+        "origin": "source_checked_full_J2_recovery",
+        "verified_unix": 1792930951.7019186,
+        "identity_finite_equilibrium_gates_passed": true,
+        "constitutive_scope": "source-checked finite-strain isotropic J2 with frozen piecewise Cauchy hardening; refuse unsupported plastic strain",
+        "physical_inputs_unchanged": true,
+        "max_PEEQ": 0.0007374471339770827,
+        "full_J2_recovery": true,
+        "stability_status": "not_assessed",
+        "bounded_original_ccx_tail": false,
+        "material_range_limit_PEEQ": 0.00951460622563769,
+        "tail_validation_manifest_sha256": null,
+        "provenance_sha256": "9f06a83a2d6a829e28ddcc5359128cd633186050d9c7325fb92dcaf066992754"
+      },
+      "solver_status": {
+        "phase": "complete_pending_cross_solver_review",
+        "pid": 23873,
+        "elapsed_seconds": 121.4785361289978
+      }
+    },
+    {
       "sample_id": "normal_rodv2_0123__compression_skew",
       "state": "accepted_in_main_queue",
       "last_failure": null,
@@ -3462,19 +3575,21 @@
       "sample_id": "normal_rodv2_0135__compression_skew",
       "state": "failed",
       "last_failure": {
-        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
-        "time_unix": 1792926223.213555,
+        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
+        "time_unix": 1792931139.0171945,
         "no_accepted_full_case": true
       },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
-        "phase": "newton",
-        "pid": 21724,
-        "elapsed_seconds": 146.89178490638733,
+        "phase": "numerical_arc",
+        "pid": 23580,
+        "elapsed_seconds": 926.8392593860626,
         "step": 7,
-        "load_factor": 0.8,
-        "iteration": 28,
-        "free_residual_relative": 178.40591720015564
+        "original_target": 0.8,
+        "numerical_load": -0.35100777391867866,
+        "arc_iteration": 3,
+        "free_residual_relative": 5.839505827100316e-11,
+        "arc_constraint": 2.2930981827186826e-16
       }
     },
     {
@@ -4765,7 +4880,7 @@
         "time_unix": 1792926223.213555,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
@@ -4969,7 +5084,7 @@
         "time_unix": 1792928426.2899916,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0056__gas_inertia_30deg",
@@ -4982,6 +5097,70 @@
       "numerical_trial_load_factor": null,
       "elapsed_seconds": 162.37444925308228,
       "last_relative_residual": null,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0135__compression_skew",
+      "started_unix": 1792929950.111949,
+      "solver_source_sha256": "0a716fd36501129884b98e6f38ee86a4c1e3ea5752b10440f5f34f2bb3de21bb",
+      "method": "冻结历史／真切向弧长与原载荷交点细化",
+      "state": "failed",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.7282478817876287,
+      "elapsed_seconds": 244.43180465698242,
+      "last_relative_residual": 6.525461772707324e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792930203.3996558,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0135__compression_skew",
+      "started_unix": 1792930205.3200674,
+      "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
+      "method": "原CCX有界尾段／真切向弧长与交点细化",
+      "state": "failed",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": -0.35100777391867866,
+      "elapsed_seconds": 926.8392593860626,
+      "last_relative_residual": 5.839505827100316e-11,
+      "failure": {
+        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
+        "time_unix": 1792931139.0171945,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0103__compression_skew",
+      "started_unix": 1792930826.5684905,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "verified_pending_main_queue_merge",
+      "last_accepted_load_factor": 1.0,
+      "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 121.4785361289978,
+      "last_relative_residual": null,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0051__compression_skew",
+      "started_unix": 1792931140.537297,
+      "solver_source_sha256": "0a716fd36501129884b98e6f38ee86a4c1e3ea5752b10440f5f34f2bb3de21bb",
+      "method": "冻结历史／真切向弧长与原载荷交点细化",
+      "state": "running",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.7334748768535687,
+      "elapsed_seconds": 85.16562962532043,
+      "last_relative_residual": 3.238767464755345e-10,
       "failure": null,
       "archived": false
     }
