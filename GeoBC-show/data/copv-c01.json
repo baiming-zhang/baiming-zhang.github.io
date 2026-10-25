@@ -1,0 +1,966 @@
+{
+  "schema": "copv_c01_geometry_v1",
+  "cases": [
+    {
+      "case_id": "baseline",
+      "label": "基准",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 335662.77012798085,
+          "overwrap_volume": 1034682.2894610491
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.8310687127941492e-14,
+        "max_offset_curvature_ratio": 0.3943613817490433,
+        "midpoint_CAD_profile_error_mm": [
+          3.737197891664851e-05,
+          3.834591373003779e-05,
+          4.1210131061794095e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.3947703828562243,
+            "min_parallel_tangent_scale": 0.6052296171437757,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999760655083243,
+              "wrap": 2.9999281922057244,
+              "total": 3.9999042620332936
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685748
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 3.547162563677375e-12
+      },
+      "seconds": 0.8671234999783337
+    },
+    {
+      "case_id": "inner_radius_mm_min",
+      "label": "inner_radius_mm min",
+      "parameters_mm": {
+        "inner_radius_mm": 90.0,
+        "straight_length_mm": 360.0,
+        "dome_depth_mm": 54.0,
+        "boss_bore_radius_mm": 13.5,
+        "neck_length_mm": 18.0,
+        "liner_thickness_mm": 0.9,
+        "overwrap_thickness_mm": 2.6999999999999997
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 244698.15942327218,
+          "overwrap_volume": 754283.3890171599
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 1.4210854715202004e-14,
+        "max_offset_curvature_ratio": 0.3943613817490433,
+        "midpoint_CAD_profile_error_mm": [
+          3.3634781027032555e-05,
+          3.4511322357840144e-05,
+          3.70891179640351e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.3947703828562241,
+            "min_parallel_tangent_scale": 0.6052296171437759,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 13.5,
+            "min_profile_axial_sample_increment_mm": 0.07574889606971169,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.8999784589574918,
+              "wrap": 2.699935372985151,
+              "total": 3.599913835829964
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685746
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 7.669087587203194e-11
+      },
+      "seconds": 0.7113601999590173
+    },
+    {
+      "case_id": "inner_radius_mm_max",
+      "label": "inner_radius_mm max",
+      "parameters_mm": {
+        "inner_radius_mm": 110.0,
+        "straight_length_mm": 440.0,
+        "dome_depth_mm": 66.0,
+        "boss_bore_radius_mm": 16.5,
+        "neck_length_mm": 22.0,
+        "liner_thickness_mm": 1.1,
+        "overwrap_thickness_mm": 3.3
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 446767.14704031305,
+          "overwrap_volume": 1377162.127272745
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.842170943040401e-14,
+        "max_offset_curvature_ratio": 0.3943613817490438,
+        "midpoint_CAD_profile_error_mm": [
+          4.110917680549702e-05,
+          4.2180505103243105e-05,
+          4.533114418795694e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.3947703828562248,
+            "min_parallel_tangent_scale": 0.6052296171437752,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 16.5,
+            "min_profile_axial_sample_increment_mm": 0.09258198408514318,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 1.0999736720591569,
+              "wrap": 3.2999210114262967,
+              "total": 4.399894688236623
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685748
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 9.070189044280141e-12
+      },
+      "seconds": 0.7502985000610352
+    },
+    {
+      "case_id": "straight_length_over_radius_min",
+      "label": "straight_length_over_radius min",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 350.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 304090.1803738889,
+          "overwrap_volume": 938078.4005938988
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 1.4099832412739488e-14,
+        "max_offset_curvature_ratio": 0.3943613817490433,
+        "midpoint_CAD_profile_error_mm": [
+          3.73719789176563e-05,
+          3.834591373003779e-05,
+          4.1210131061794095e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.3947703828562243,
+            "min_parallel_tangent_scale": 0.6052296171437757,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.08416544007741322,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999760655083244,
+              "wrap": 2.999928192205724,
+              "total": 3.9999042620332936
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685746
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 4.009237386526365e-12
+      },
+      "seconds": 0.6983252000063658
+    },
+    {
+      "case_id": "straight_length_over_radius_max",
+      "label": "straight_length_over_radius max",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 450.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 367235.3598821077,
+          "overwrap_volume": 1131286.178328223
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.8310687127941492e-14,
+        "max_offset_curvature_ratio": 0.3943613817490433,
+        "midpoint_CAD_profile_error_mm": [
+          3.737197891664851e-05,
+          3.8345913715835876e-05,
+          4.121013104759217e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.3947703828562243,
+            "min_parallel_tangent_scale": 0.6052296171437757,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999760655083243,
+              "wrap": 2.9999281922057244,
+              "total": 3.9999042620332936
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685748
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 3.2250868642336172e-12
+      },
+      "seconds": 0.7289755999809131
+    },
+    {
+      "case_id": "dome_depth_over_radius_min",
+      "label": "dome_depth_over_radius min",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 55.00000000000001,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 333481.0547635288,
+          "overwrap_volume": 1027957.7172656432
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 1.3988810110276972e-14,
+        "max_offset_curvature_ratio": 0.4686555146272292,
+        "midpoint_CAD_profile_error_mm": [
+          4.367817429470808e-05,
+          4.509729037817517e-05,
+          4.921905242185947e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.4695800379160042,
+            "min_parallel_tangent_scale": 0.5304199620839958,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.06780824927918161,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999715172069907,
+              "wrap": 2.9999145455804834,
+              "total": 3.999886068827967
+            },
+            "minimum_clearance_over_nominal": 0.9999715151934945
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 5.484945830858123e-12
+      },
+      "seconds": 0.7610887000337243
+    },
+    {
+      "case_id": "dome_depth_over_radius_max",
+      "label": "dome_depth_over_radius max",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 70.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 340310.709794539,
+          "overwrap_volume": 1048948.91206705
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.786659791809143e-14,
+        "max_offset_curvature_ratio": 0.2903113580911273,
+        "midpoint_CAD_profile_error_mm": [
+          2.826037611320471e-05,
+          2.8766169540268426e-05,
+          3.0274463050809466e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.29034850632664866,
+            "min_parallel_tangent_scale": 0.7096514936733513,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.11424475611835305,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.999982414415453,
+              "wrap": 2.9999472408760184,
+              "total": 3.9999296576618044
+            },
+            "minimum_clearance_over_nominal": 0.9999824136253395
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 4.594202795971114e-11
+      },
+      "seconds": 0.6839775000698864
+    },
+    {
+      "case_id": "boss_bore_radius_over_radius_min",
+      "label": "boss_bore_radius_over_radius min",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 12.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 334680.55795295717,
+          "overwrap_volume": 1032044.4811390614
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.5479618415147343e-14,
+        "max_offset_curvature_ratio": 0.40806053681312215,
+        "midpoint_CAD_profile_error_mm": [
+          4.118055376483528e-05,
+          4.2311879515268465e-05,
+          4.562569983634954e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.40862002957010424,
+            "min_parallel_tangent_scale": 0.5913799704298959,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 12.0,
+            "min_profile_axial_sample_increment_mm": 0.08231910885405114,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.999974346618902,
+              "wrap": 2.9999230351053674,
+              "total": 3.999897386475605
+            },
+            "minimum_clearance_over_nominal": 0.9999743450351225
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 2.4064084058750268e-11
+      },
+      "seconds": 0.7298577999463305
+    },
+    {
+      "case_id": "boss_bore_radius_over_radius_max",
+      "label": "boss_bore_radius_over_radius max",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 18.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 336570.6688718029,
+          "overwrap_volume": 1037082.4330748833
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.8005375796169574e-14,
+        "max_offset_curvature_ratio": 0.3806403428935878,
+        "midpoint_CAD_profile_error_mm": [
+          3.378945447724337e-05,
+          3.462412361733656e-05,
+          3.708795039205102e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.38092323299668013,
+            "min_parallel_tangent_scale": 0.6190767670033199,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 18.0,
+            "min_profile_axial_sample_increment_mm": 0.08599611076391511,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999777248363096,
+              "wrap": 2.9999331705993617,
+              "total": 3.9999108993452417
+            },
+            "minimum_clearance_over_nominal": 0.9999777235331205
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 1.7398971152715603e-11
+      },
+      "seconds": 0.7348008999833837
+    },
+    {
+      "case_id": "neck_length_over_radius_min",
+      "label": "neck_length_over_radius min",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 15.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 334688.8764053683,
+          "overwrap_volume": 1031383.6171747802
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.8310687127941492e-14,
+        "max_offset_curvature_ratio": 0.3943613817490433,
+        "midpoint_CAD_profile_error_mm": [
+          3.737197891664851e-05,
+          3.834591373003779e-05,
+          4.1210131061794095e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.3947703828562243,
+            "min_parallel_tangent_scale": 0.6052296171437757,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999760655083243,
+              "wrap": 2.9999281922057244,
+              "total": 3.9999042620332936
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685748
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 3.5620395522073522e-12
+      },
+      "seconds": 0.7411989000393078
+    },
+    {
+      "case_id": "neck_length_over_radius_max",
+      "label": "neck_length_over_radius max",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 25.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 336636.6638505933,
+          "overwrap_volume": 1037980.9617473178
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.8310687127941492e-14,
+        "max_offset_curvature_ratio": 0.3943613817490433,
+        "midpoint_CAD_profile_error_mm": [
+          3.737197891664851e-05,
+          3.834591373003779e-05,
+          4.1210131061794095e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.3947703828562243,
+            "min_parallel_tangent_scale": 0.6052296171437757,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999760655083243,
+              "wrap": 2.9999281922057244,
+              "total": 3.9999042620332936
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685748
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 3.537836690270524e-12
+      },
+      "seconds": 0.7374963000183925
+    },
+    {
+      "case_id": "liner_thickness_over_radius_min",
+      "label": "liner_thickness_over_radius min",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 0.8,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 268160.4274341436,
+          "overwrap_volume": 1031911.5032685634
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.7977620220553945e-14,
+        "max_offset_curvature_ratio": 0.3746433126615911,
+        "midpoint_CAD_profile_error_mm": [
+          3.737197891664851e-05,
+          3.815211655362389e-05,
+          4.102114481813956e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.37503186371341307,
+            "min_parallel_tangent_scale": 0.6249681362865869,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.08687362846842461,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.7999808524066595,
+              "wrap": 2.9999281931434503,
+              "total": 3.799909048931629
+            },
+            "minimum_clearance_over_nominal": 0.99997606438115
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 2.807443166830126e-11
+      },
+      "seconds": 0.7480095999781042
+    },
+    {
+      "case_id": "liner_thickness_over_radius_max",
+      "label": "liner_thickness_over_radius max",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.2,
+        "overwrap_thickness_mm": 3.0
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 403350.3421442521,
+          "overwrap_volume": 1037450.4992406062
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.808864252301646e-14,
+        "max_offset_curvature_ratio": 0.41407945083649544,
+        "midpoint_CAD_profile_error_mm": [
+          3.737197891664851e-05,
+          3.853926778880185e-05,
+          4.139889907339463e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.4145089019990355,
+            "min_parallel_tangent_scale": 0.5854910980009644,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.08145415655349098,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 1.1999712786099894,
+              "wrap": 2.9999281912261084,
+              "total": 4.199899475134959
+            },
+            "minimum_clearance_over_nominal": 0.9999760637420362
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 7.890577080615913e-12
+      },
+      "seconds": 0.7254411999601871
+    },
+    {
+      "case_id": "overwrap_thickness_over_radius_min",
+      "label": "overwrap_thickness_over_radius min",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 2.5
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 335662.77012798085,
+          "overwrap_volume": 859345.4013929262
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.8310687127941492e-14,
+        "max_offset_curvature_ratio": 0.34506620903041285,
+        "midpoint_CAD_profile_error_mm": [
+          3.737197891664851e-05,
+          3.834591373003779e-05,
+          4.0737235393065425e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.34542408499919625,
+            "min_parallel_tangent_scale": 0.6545759150008037,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.09092119975514379,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999760655083243,
+              "wrap": 2.499940160171436,
+              "total": 3.499916229279132
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685744
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 5.581091144790662e-12
+      },
+      "seconds": 0.783687699935399
+    },
+    {
+      "case_id": "overwrap_thickness_over_radius_max",
+      "label": "overwrap_thickness_over_radius max",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.5000000000000004
+      },
+      "checks": {
+        "positive_material_volumes_mm3": {
+          "liner_volume": 335662.77012798085,
+          "overwrap_volume": 1211164.9992108466
+        },
+        "shared_interface_face_count": 5,
+        "max_sample_normal_offset_error_mm": 2.8310687127941492e-14,
+        "max_offset_curvature_ratio": 0.4436565544676737,
+        "midpoint_CAD_profile_error_mm": [
+          3.737197891664851e-05,
+          3.834591373003779e-05,
+          4.16816612309162e-05
+        ],
+        "positive_radius": true,
+        "monotone_axial_profiles": true,
+        "cylinder_dome_neck_C1_analytic": true
+      },
+      "review": {
+        "eligibility": {
+          "passed": true,
+          "reasons": [],
+          "metrics": {
+            "max_abs_curvature_times_wall": 0.44411668071325233,
+            "min_parallel_tangent_scale": 0.5558833192867476,
+            "curvature_samples": 10001,
+            "clearance_curve_samples": 1217,
+            "min_profile_radius_mm": 15.0,
+            "min_profile_axial_sample_increment_mm": 0.07737264751938255,
+            "polyline_min_layer_clearance_mm": {
+              "liner": 0.9999760655083243,
+              "wrap": 3.499916224240012,
+              "total": 4.499892294787457
+            },
+            "minimum_clearance_over_nominal": 0.9999760640685748
+          },
+          "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+        },
+        "step_roundtrip_volume_count": 2,
+        "step_roundtrip_max_relative_volume_error": 3.547162563677375e-12
+      },
+      "seconds": 0.6911099000135437
+    }
+  ],
+  "case_count": 15,
+  "all_passed": true,
+  "parameter_ranges": {
+    "inner_radius_mm": [
+      90.0,
+      110.0
+    ],
+    "straight_length_over_radius": [
+      3.5,
+      4.5
+    ],
+    "dome_depth_over_radius": [
+      0.55,
+      0.7
+    ],
+    "boss_bore_radius_over_radius": [
+      0.12,
+      0.18
+    ],
+    "neck_length_over_radius": [
+      0.15,
+      0.25
+    ],
+    "liner_thickness_over_radius": [
+      0.008,
+      0.012
+    ],
+    "overwrap_thickness_over_radius": [
+      0.025,
+      0.035
+    ]
+  },
+  "range_rule": "R in mm; all other independent parameters are ratios to R. Not every Cartesian-product combination is certified; eligibility required.",
+  "units": "mm, mm^3",
+  "profile": "C1 cubic Bezier, not isotensoid; constant analytic normal thickness; two open necks; no bosses/contact/winding manufacturability",
+  "viewer_geometry": "Analytic profile revolution tessellation, not FE mesh; quarter cutaway is display-only. CAD interpolation deviation recorded per case.",
+  "seconds": 14.79095990001224,
+  "viewer_cases": [
+    {
+      "id": "baseline",
+      "label": "基准",
+      "asset": "../assets/copv-c01/baseline.json.gz"
+    },
+    {
+      "id": "inner_radius_mm_min",
+      "label": "内半径 · 下限",
+      "asset": "../assets/copv-c01/inner_radius_mm_min.json.gz"
+    },
+    {
+      "id": "inner_radius_mm_max",
+      "label": "内半径 · 上限",
+      "asset": "../assets/copv-c01/inner_radius_mm_max.json.gz"
+    },
+    {
+      "id": "straight_length_over_radius_min",
+      "label": "筒长比例 · 下限",
+      "asset": "../assets/copv-c01/straight_length_over_radius_min.json.gz"
+    },
+    {
+      "id": "straight_length_over_radius_max",
+      "label": "筒长比例 · 上限",
+      "asset": "../assets/copv-c01/straight_length_over_radius_max.json.gz"
+    },
+    {
+      "id": "dome_depth_over_radius_min",
+      "label": "封头深度比例 · 下限",
+      "asset": "../assets/copv-c01/dome_depth_over_radius_min.json.gz"
+    },
+    {
+      "id": "dome_depth_over_radius_max",
+      "label": "封头深度比例 · 上限",
+      "asset": "../assets/copv-c01/dome_depth_over_radius_max.json.gz"
+    },
+    {
+      "id": "boss_bore_radius_over_radius_min",
+      "label": "颈孔半径比例 · 下限",
+      "asset": "../assets/copv-c01/boss_bore_radius_over_radius_min.json.gz"
+    },
+    {
+      "id": "boss_bore_radius_over_radius_max",
+      "label": "颈孔半径比例 · 上限",
+      "asset": "../assets/copv-c01/boss_bore_radius_over_radius_max.json.gz"
+    },
+    {
+      "id": "neck_length_over_radius_min",
+      "label": "颈长比例 · 下限",
+      "asset": "../assets/copv-c01/neck_length_over_radius_min.json.gz"
+    },
+    {
+      "id": "neck_length_over_radius_max",
+      "label": "颈长比例 · 上限",
+      "asset": "../assets/copv-c01/neck_length_over_radius_max.json.gz"
+    },
+    {
+      "id": "liner_thickness_over_radius_min",
+      "label": "内衬厚度比例 · 下限",
+      "asset": "../assets/copv-c01/liner_thickness_over_radius_min.json.gz"
+    },
+    {
+      "id": "liner_thickness_over_radius_max",
+      "label": "内衬厚度比例 · 上限",
+      "asset": "../assets/copv-c01/liner_thickness_over_radius_max.json.gz"
+    },
+    {
+      "id": "overwrap_thickness_over_radius_min",
+      "label": "包覆厚度比例 · 下限",
+      "asset": "../assets/copv-c01/overwrap_thickness_over_radius_min.json.gz"
+    },
+    {
+      "id": "overwrap_thickness_over_radius_max",
+      "label": "包覆厚度比例 · 上限",
+      "asset": "../assets/copv-c01/overwrap_thickness_over_radius_max.json.gz"
+    }
+  ],
+  "viewer_common_radius_mm": 350,
+  "gpu_fenicsx_smoke": {
+    "status": "passed",
+    "scope": "C01 geometry import and CUDA algebra check only; 2-layer isotropic, two-component axisym Q2, open necks, bottom uz=0, top traction-free, inner pressure 1 MPa; NOT C02 physical COPV/layup validation",
+    "dolfinx": "0.11.0",
+    "petsc": [
+      3,
+      25,
+      6
+    ],
+    "backend": "CPU FFCx assembly + PETSc CUDA CG/GAMG",
+    "matrix_type": "seqaijcusparse",
+    "vector_type": "seqcuda",
+    "nodes": 735,
+    "cells": 156,
+    "dofs": 1470,
+    "iterations": 935,
+    "converged_reason": 2,
+    "relative_residual": 1.7598144390005947e-09,
+    "CPU_GPU_U_relative_L2": 1.8615257288423277e-10,
+    "energy_work_relative_error": 1.5266774420392524e-12,
+    "max_U_mm": 0.16088949718291656,
+    "inner_area_mm2": 333359.6840009408,
+    "original_node_mapping_max_error_mm": 1.139086659085919e-13,
+    "cuda_solve_seconds": 4.341264885999863,
+    "total_seconds": 7.386377196000012,
+    "material_E_MPa": [
+      69000,
+      120000
+    ],
+    "material_nu": [
+      0.33,
+      0.28
+    ],
+    "input_geometry_sha256": "51c0ea59ec38b4b9b2a66c48fcaeb40944d770a408ceb3c18020aee6de64f001",
+    "executed_solver_sha256": "fa4954178c17944038b35b7202d3701bd3524154ac22b2bd8c221888953e95f3"
+  }
+}

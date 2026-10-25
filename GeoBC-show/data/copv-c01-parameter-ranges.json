@@ -1,0 +1,42 @@
+{
+  "independent_ranges": {
+    "inner_radius_mm": [
+      90.0,
+      110.0
+    ],
+    "straight_length_over_radius": [
+      3.5,
+      4.5
+    ],
+    "dome_depth_over_radius": [
+      0.55,
+      0.7
+    ],
+    "boss_bore_radius_over_radius": [
+      0.12,
+      0.18
+    ],
+    "neck_length_over_radius": [
+      0.15,
+      0.25
+    ],
+    "liner_thickness_over_radius": [
+      0.008,
+      0.012
+    ],
+    "overwrap_thickness_over_radius": [
+      0.025,
+      0.035
+    ]
+  },
+  "rule": "R in mm; all other independent parameters are ratios to R. Not every Cartesian-product combination is certified; eligibility required.",
+  "baseline_parameters_mm": {
+    "inner_radius_mm": 100.0,
+    "straight_length_mm": 400.0,
+    "dome_depth_mm": 60.0,
+    "boss_bore_radius_mm": 15.0,
+    "neck_length_mm": 20.0,
+    "liner_thickness_mm": 1.0,
+    "overwrap_thickness_mm": 3.0
+  }
+}

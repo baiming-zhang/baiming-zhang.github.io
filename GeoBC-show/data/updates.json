@@ -188,6 +188,39 @@
           "url": "R05.html#r05-validation"
         }
       ]
+    },
+    {
+      "task": "C01",
+      "date": "2026-10-25",
+      "title": "C01 几何交付：15 例双层 CAD 与 GPU-FEniCSx 接入验证",
+      "summary": "COPV 参数化几何已完成：基准与七参数上下限共 15 例，可旋转、缩放并剖开查看内衬与外包覆层。",
+      "review": "15 例几何检查与 STEP 体积往返通过；GPU-FEniCSx 几何接入验证通过。封头采用 C1 Bezier 简化，双颈开口；复合铺层与正式内压仿真由 C02/C03 继续验收。人工审核待进行。",
+      "links": [
+        {
+          "label": "三维几何与剖面",
+          "url": "viewers/copv-geometry.html"
+        },
+        {
+          "label": "参数范围",
+          "url": "data/copv-c01-parameter-ranges.json"
+        },
+        {
+          "label": "样例参数与质量 CSV",
+          "url": "data/copv-c01-parameters-and-quality.csv"
+        },
+        {
+          "label": "可复现 CAD 与源码 ZIP",
+          "url": "data/copv-c01-reproducible.zip"
+        },
+        {
+          "label": "GPU-FEniCSx 接入验证",
+          "url": "data/copv-c01-gpu-fenicsx.json"
+        },
+        {
+          "label": "建模与复现说明",
+          "url": "source/copv-c01/README.md"
+        }
+      ]
     }
   ]
 }

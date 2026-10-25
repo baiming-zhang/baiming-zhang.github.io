@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25 09:02 北京时间",
+  "updated": "2026-10-25 09:07 北京时间",
   "tasks": [
     {
       "id": "R01",
@@ -217,14 +217,39 @@
       "phase": "第2周",
       "title": "COPV 几何生成",
       "due": "2026-10-29",
-      "status": "未开始",
+      "status": "已完成",
       "deliverables": "参数化脚本、参数范围、几何样例",
       "review": "检查筒体/封头等几何连接及厚度定义，说明简化假设",
       "dependencies": "M01",
       "start": "2026-10-28",
-      "issues": "",
+      "issues": "几何交付完成；人工审核待进行。C1 Bezier 双开口简化；GPU接入验证非C02铺层仿真。",
       "page": "C01.html",
-      "results": []
+      "results": [
+        {
+          "label": "三维几何与剖面",
+          "url": "viewers/copv-geometry.html"
+        },
+        {
+          "label": "参数范围",
+          "url": "data/copv-c01-parameter-ranges.json"
+        },
+        {
+          "label": "样例参数与质量 CSV",
+          "url": "data/copv-c01-parameters-and-quality.csv"
+        },
+        {
+          "label": "可复现 CAD 与源码 ZIP",
+          "url": "data/copv-c01-reproducible.zip"
+        },
+        {
+          "label": "GPU-FEniCSx 接入验证",
+          "url": "data/copv-c01-gpu-fenicsx.json"
+        },
+        {
+          "label": "建模与复现说明",
+          "url": "source/copv-c01/README.md"
+        }
+      ]
     },
     {
       "id": "C02",

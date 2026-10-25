@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "scope": "C01 geometry import and CUDA algebra check only; 2-layer isotropic, two-component axisym Q2, open necks, bottom uz=0, top traction-free, inner pressure 1 MPa; NOT C02 physical COPV/layup validation",
+  "dolfinx": "0.11.0",
+  "petsc": [
+    3,
+    25,
+    6
+  ],
+  "backend": "CPU FFCx assembly + PETSc CUDA CG/GAMG",
+  "matrix_type": "seqaijcusparse",
+  "vector_type": "seqcuda",
+  "nodes": 735,
+  "cells": 156,
+  "dofs": 1470,
+  "iterations": 935,
+  "converged_reason": 2,
+  "relative_residual": 1.7598144390005947e-09,
+  "CPU_GPU_U_relative_L2": 1.8615257288423277e-10,
+  "energy_work_relative_error": 1.5266774420392524e-12,
+  "max_U_mm": 0.16088949718291656,
+  "inner_area_mm2": 333359.6840009408,
+  "original_node_mapping_max_error_mm": 1.139086659085919e-13,
+  "cuda_solve_seconds": 4.341264885999863,
+  "total_seconds": 7.386377196000012,
+  "material_E_MPa": [
+    69000,
+    120000
+  ],
+  "material_nu": [
+    0.33,
+    0.28
+  ],
+  "input_geometry_sha256": "51c0ea59ec38b4b9b2a66c48fcaeb40944d770a408ceb3c18020aee6de64f001",
+  "executed_solver_sha256": "fa4954178c17944038b35b7202d3701bd3524154ac22b2bd8c221888953e95f3"
+}

@@ -1,0 +1,144 @@
+{
+  "schema": "copv_dataset_candidate_v1",
+  "status": "candidate_design_pending_solver_cross_validation_and_resolution_review",
+  "production_ready": false,
+  "batch_authorized_by_this_file": false,
+  "target_distinct_geometries": 1000,
+  "pilot_distinct_geometries": 24,
+  "units": {"length": "mm", "force": "N", "stress_and_pressure": "MPa", "energy": "N mm"},
+  "geometry": {
+    "generator": "geobc.copv_structured_mesh.analytic_segments; periodic normal-offset layered Hex27",
+    "shape": "Two equal C1 cubic-Bezier domes between one cylinder and two open cylindrical necks; not an isotensoid",
+    "baseline_parameters_mm": {
+      "inner_radius_mm": 100.0, "straight_length_mm": 400.0, "dome_depth_mm": 60.0,
+      "boss_bore_radius_mm": 15.0, "neck_length_mm": 20.0,
+      "liner_thickness_mm": 1.0, "overwrap_thickness_mm": 3.0
+    },
+    "candidate_independent_ranges": {
+      "inner_radius_mm": [90.0, 110.0],
+      "straight_length_over_radius": [3.5, 4.5],
+      "dome_depth_over_radius": [0.55, 0.70],
+      "boss_bore_radius_over_radius": [0.12, 0.18],
+      "neck_length_over_radius": [0.15, 0.25],
+      "liner_thickness_over_radius": [0.008, 0.012],
+      "overwrap_thickness_over_radius": [0.025, 0.035]
+    },
+    "parameter_conversion": "R=inner_radius_mm; each other physical dimension equals its dimensionless ratio times R",
+    "dome_control_polygon_rz": "[(R,L/2),(R,L/2+0.4D),(b,L/2+0.6D),(b,L/2+D)]; reflected on the left",
+    "fixed_geometry_features": ["Constant normal liner thickness", "Constant total normal wrap thickness", "Equal physical wrap-ply thickness", "No boss fillet/contact/insert", "No variation in winding angle or dome control fractions"],
+    "eligibility_gates_before_any_solve": {
+      "positive_finite_dimensions": true,
+      "boss_radius_less_than_half_inner_radius": true,
+      "dome_depth_over_radius_range": [0.35, 1.5],
+      "total_wall_over_radius_strict_max": 0.1,
+      "sampled_max_abs_curvature_times_total_wall_max": 0.65,
+      "existing_geometry_hard_reject_curvature_ratio": 0.8,
+      "sampled_min_parallel_tangent_scale_min": 0.35,
+      "parallel_tangent_scale_formula": "1 + t*kappa for n=(dz,-dr)/|d|, checked for all t between zero and total wall",
+      "dense_dome_curvature_samples": 10001,
+      "all_offset_profiles_positive_radius_and_increasing_z": true,
+      "nonintersecting_meridian_layers_required": true,
+      "sampled_nearest_layer_clearance_min_fraction_of_nominal_gap": 0.98,
+      "clearance_pairs": ["inner-to-interface: liner thickness", "interface-to-outer: wrap thickness", "inner-to-outer: total thickness"],
+      "clearance_interpretation": "Sampled nearest-curve gap is an additional sanity gate, not a global CAD distance proof; same-parameter normal spacing alone cannot exclude nonlocal intersections",
+      "actual_mesh_min_detJ_strictly_positive": true,
+      "all_original_nodes_used_and_shared_material_interface_exact": true,
+      "all_mesh_joins_are_segment_boundaries": true,
+      "proposed_gates_must_be_implemented_and_reviewed_before_batch": true
+    },
+    "baseline_geometry_evidence": {
+      "path": "../../data/copv/vessel_dome_convergence/geometry_diagnostics.json",
+      "sampled_max_offset_curvature_ratio": 0.3947703828562243,
+      "sampled_min_parallel_tangent_scale": 0.6052296171437757,
+      "nominal_normal_layer_clearance_mm": {"liner": 1.0, "wrap": 3.0, "total": 4.0},
+      "global_nearest_surface_clearance_mm": null,
+      "note": "The existing baseline checked positive profiles, normal offsets and real mesh Jacobians; no unsampled global-clearance proof is claimed"
+    }
+  },
+  "sampling_and_split_candidate": {
+    "geometry_seed": 2026,
+    "split_seed": 2026,
+    "sampling": "One baseline + fourteen one-parameter extrema + nine maximin Latin-hypercube points for 24 pilot train geometries; remaining 976 distinct constrained Latin-hypercube geometries",
+    "coordinate_space": "Seven independent coordinates listed in candidate_independent_ranges, each mapped linearly from [0,1]",
+    "geometry_level_counts": {"train": 800, "validation": 100, "test": 100},
+    "pilot_split": "All 24 pilot geometries belong to train; randomly assign the other 976 to 776 train / 100 validation / 100 test before reading labels",
+    "pilot_selection": "Pilot extrema change one coordinate at a time while others stay at their baseline ratios; nine space-filling points add interactions",
+    "before_label_manifest": "Store immutable case ID, complete geometry, split, source/protocol hash and eligibility outcome before solving",
+    "rejected_geometry_policy": "Deterministic pre-label rejection/resampling with candidate attempt IDs and rejection reason recorded; freeze the manifest before solves",
+    "solver_failure_policy": "Retain failed case ID and traceback; do not silently replace, change resolution/material/BC, or relabel splits",
+    "no_mesh_or_pressure_leakage": "All meshes/resolutions/pressure rescalings of one geometry inherit one split; pilot results are not a test set"
+  },
+  "fixed_material_candidate": {
+    "source_config": "configs/copv_material_candidates.json",
+    "source_config_sha256": "c3c62a3ce01b0f71a56fbe3d5df0c56d3e8c593a874f811ceb4feead6858f2e2",
+    "candidate_id": "al6061_as4_3501_6_reported_elastic_benchmark",
+    "liner": "Reported Aluminum 6061-T6 isotropic E=69000 MPa, nu=0.33",
+    "overwrap": "Reported AS4/3501-6 full nine orthotropic constants, copied exactly from the source config; no transversely-isotropic closure substitution",
+    "source_pdf_sha256": {
+      "liner": "cf6f448d2954f3355fe913faf34f654af29f6a88286a306a63abd0602d059be1",
+      "overwrap": "7fe95ab453161762a7aa89a2b0e888e82ce34972681e5617a010d09467007d82"
+    },
+    "scope": "Fixed reported elastic benchmark inputs, not certified material lots or validated manufactured vessel properties",
+    "bond": "Conformal perfectly bonded shared material-interface nodes, no contact or delamination"
+  },
+  "fixed_layup_candidate": {
+    "ply_order": "Inner liner outward through four overwrap plies",
+    "overwrap_angles_degrees": [55.0, -55.0, -55.0, 55.0],
+    "overwrap_ply_thickness_fractions": [0.25, 0.25, 0.25, 0.25],
+    "base_frame": "m=-unit increasing-z meridian tangent, c=+e_theta, n=m cross c outward",
+    "material_frame": "fiber=cos(alpha)*m+sin(alpha)*c; transverse=-sin(alpha)*m+cos(alpha)*c; normal=n",
+    "axes_at_every_GP": true,
+    "proper_frame_and_outward_normal_checks_required": true,
+    "scope": "Symmetric balanced numerical layup; not a winding-path/manufacturability claim. Retain utheta and local coupling even though membrane ply angles balance"
+  },
+  "fixed_load_and_boundary_candidate": {
+    "pressure_MPa": 1.0,
+    "pressure": "Consistent -p*n_solid on the complete true inner wetted wall, exterior pressure zero",
+    "cap_equivalent_force_per_end_N": "p*pi*boss_bore_radius_mm^2, bottom -z and top +z, each applied once",
+    "cap_distribution": "Uniform axial traction on each complete annular end face, normalized by actual quadratic-surface integrated area",
+    "support": "Sliding rigid axial end planes: bottom uz=0, top shared unknown uz master; radial and hoop end displacements free",
+    "rigid_motion_gauge_3d": "Three tangential constraints at separated bottom outer-ring nodes remove only admissible in-plane translation/rotation rigid modes",
+    "rigid_motion_gauge_axisymmetric": "One bottom outer utheta=0 gauge removes only rigid axial rotation; bottom uz already removes axial translation",
+    "physical_scope": "Small-displacement static 3D linear elasticity of a double-open-neck test vessel with equivalent caps; not resolved bosses, mounting clamps, contact or actual closure geometry",
+    "scope_of_learning": "Geometry generalization under one fixed load and material/layup protocol; no independent BC or pressure generalization claim"
+  },
+  "resolution_and_solver_decision": {
+    "frozen": false,
+    "production_solver_route": null,
+    "candidate_solver_route": "Validated independent axisymmetric three-component fine FE field sampled at ALL original 3D Hex27 export-grid nodes; this is not a direct full-3D solve per export grid",
+    "candidate_reference_grid": {"formulation": "axisymmetric_3component_Quad9", "meridian_segments": [2, 96, 64, 96, 2], "liner_elements": 4, "wrap_elements_per_physical_ply": 2, "nodes": 13025, "validation_pending": true},
+    "candidate_export_grid": {"purpose": "original_3d_node_sampling_grid", "nphi": 16, "meridian_segments": [2, 12, 16, 12, 2], "liner_elements": 1, "wrap_elements_per_physical_ply": 1, "nodes": 31328, "cells": 3520},
+    "baseline_3d_reference": {"path": "../../data/copv/vessel_pilot_dome_refined", "nphi": 32, "meridian_segments": [2, 24, 16, 24, 2], "liner_elements": 2, "wrap_elements_per_physical_ply": 1, "nodes": 113984, "cells": 13056},
+    "reviewed_directional_convergence": "Meridian-only 74048 to 113984 nodes: full U 0.369%, radial U 0.776%, energy 0.260%, extension 0.331%, maximum layer stress p95 change 1.602%",
+    "open_decisions": ["Root review of independent three-component axisymmetric versus 3D same-vessel cross-validation", "Thickness resolution at each real material/ply boundary", "Tangential displacement convergence with a predeclared relative/absolute tolerance for small utheta", "Circumferential discretization or symmetry reduction error", "Range-extreme geometry/field resolution on 24 pilot cases", "Measured throughput and memory at the reviewed resolution"],
+    "axisymmetric_route_rule": "Can be selected only after same-domain cross-validation; if labels are lifted to a 3D mesh, explicitly record axisymmetric_3component origin and never describe them as independent full-3D solves",
+    "3d_quadrature": "Existing intorder=5 volume and exact topology-reference surface mapping are the current benchmark, not yet a frozen all-geometry recipe",
+    "field_acceptance_targets_candidate": {"full_node_U_relative_change_max": 0.02, "radial_U_relative_change_max": 0.02, "compliance_or_energy_relative_change_max": 0.02, "end_extension_relative_change_max": 0.02, "per_ply_GP_stress_RMS_and_p95_relative_change_max": 0.02},
+    "peak_stress_convergence_claimed": false,
+    "solver_and_conservation_gates": {"reduced_relative_residual_max": 1e-8, "force_balance_relative_max": 1e-8, "moment_balance_relative_max": 1e-8, "work_energy_relative_error_max": 1e-8, "half_body_pressure_cap_resultant_relative_error_max": 0.01},
+    "dimensionless_scales": "Force=p*pi*inner_radius^2; moment=force*maximum geometric extent; keep absolute residuals as well"
+  },
+  "label_schema_candidate": {
+    "nodal": ["Original node IDs and xyz", "Full displacement U in global xyz", "Consistent load and reaction", "Pressure/cap load components", "Boundary and physical-ply memberships", "Axial master and gauge attributes"],
+    "cell_and_GP": ["Original cell IDs/connectivity", "Material ID and physical ply ID", "Full six-component stress and engineering strain with explicit Voigt order", "Local material axes at every GP", "GP xyz and volume weight", "Local stress/strain without interface averaging"],
+    "stress_association": "Integration points within original cell order; no smoothing across material or +/-ply interfaces",
+    "diagnostics": ["Pressure-normal/area/resultants", "Energy and cap work", "Force/moment/residual", "Mesh metrics", "Material/protocol/source hashes", "Exact solver formulation and measured runtime/memory"],
+    "von_mises": "Optional diagnostic only, not a composite failure criterion"
+  },
+  "pilot_and_throughput_candidate": {
+    "launch_order": "Resolve solver and baseline mesh gates first; review deterministic 24-geometry train pilot; freeze versioned protocol only after pilot review; then request/follow existing authorization for 1000-case production",
+    "initial_parallel_solve_workers": 1,
+    "blas_omp_mkl_threads_per_worker": 1,
+    "minimum_available_physical_RAM_GiB": 8.0,
+    "memory_guard_action": "Stop only the owning solver process, write failure state, preserve completed endpoints",
+    "candidate_two_worker_rule": "Only after measured peak RAM and elapsed time on pilot cases; combined predicted peak plus 8 GiB reserve must fit available memory. Do not assume linear speedup",
+    "hardware_observation": {"logical_CPU_processors": 24, "installed_usable_RAM_GiB_approx": 63.3},
+    "measured_3d_baseline_seconds": 950.9026673999615,
+    "measurement_scope": "One reported 113984-node case on this machine, one BLAS thread; not a range-wide production throughput guarantee",
+    "simple_serial_cost_projection_at_this_one_baseline": {"pilot_24_hours": 6.339351115999744, "target_1000_hours": 264.13962983332265},
+    "GPU": "Keep FE sparse solves on validated CPU path; GPU remains available for TS3/MGN. No unvalidated GPU solver port solely to advertise acceleration",
+    "axisymmetric_cost_projection": null
+  },
+  "excluded_claims": ["Burst or certified pressure rating", "Actual manufacturable winding", "Plasticity/autofrettage/residual stress", "Damage, fatigue, rupture or delamination", "Arbitrary nonaxisymmetric loading", "Mesh convergence from conservation checks alone", "Production-ready dataset from one baseline"],
+  "next_action": "Root review this candidate design and pending axisymmetric/3D/thickness evidence; no new solve or batch is triggered by this configuration"
+}
