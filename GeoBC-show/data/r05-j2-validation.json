@@ -135,6 +135,198 @@
     },
     "scope": "Actual nonzero mode guess corrected by original unconstrained-equilibrium Newton, original constraints and10targets; no new count"
   },
+  "arclength_driver": {
+    "pid": 16988,
+    "stage": "waiting_for_branch_driver",
+    "updated_unix": 1792916429.7665045,
+    "upstream_pid": 16072,
+    "solver_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8"
+  },
+  "arclength_exact_scalar": {
+    "passed": true,
+    "scope": "Exact production candidate helper on analytic u^3-u=lambda, starting at u=-1. SciPy linear algebra mock, not FEniCSx or a valid dataset sample.",
+    "arc_module_sha256": "b1431207905f62202730e583427c0cd8129304a90d6dd7acb1f55bc23bf7b06b",
+    "actual_arc_roots": 19,
+    "numerical_load_reversal": true,
+    "maximum_root_residual": 8.187166500306375e-10,
+    "original_target": 0.5,
+    "final_root": 1.191487883953184,
+    "final_residual": 2.1249668691325496e-13,
+    "roots": [
+      [
+        -0.930402926555852,
+        0.125
+      ],
+      [
+        -0.7797957285948118,
+        0.3056164671313568
+      ],
+      [
+        -0.6901400123252268,
+        0.3614309921392184
+      ],
+      [
+        -0.6389220392284135,
+        0.3781004077616655
+      ],
+      [
+        -0.48526528736580854,
+        0.3709938534154686
+      ],
+      [
+        -0.35687906746269754,
+        0.3114259969942754
+      ],
+      [
+        -0.25593595186577706,
+        0.23917132509127356
+      ],
+      [
+        -0.13091116945089082,
+        0.12866764861364108
+      ],
+      [
+        0.03904522101696799,
+        -0.03898569560870009
+      ],
+      [
+        0.29824128080617973,
+        -0.27171335664453716
+      ],
+      [
+        0.5078618968559603,
+        -0.3768722741521031
+      ],
+      [
+        0.5922810250594477,
+        -0.38451072932979496
+      ],
+      [
+        0.723807665314518,
+        -0.3446066134706462
+      ],
+      [
+        0.7946783850442707,
+        -0.29282807002795913
+      ],
+      [
+        0.8655663271015682,
+        -0.217079649366162
+      ],
+      [
+        0.9448317895581743,
+        -0.10137373274420652
+      ],
+      [
+        1.035135492043644,
+        0.07401786734811072
+      ],
+      [
+        1.133139950556921,
+        0.3218187119874038
+      ],
+      [
+        1.2125760433970965,
+        0.5703238177890225
+      ]
+    ]
+  },
+  "branch_0096_seed_outcome": {
+    "initial_guesses_only": true,
+    "no_added_constraints": true,
+    "no_cached_history_committed": true,
+    "selection": "First admissible converged seed in a deterministic ordered list; no uniqueness or stability claim",
+    "events": [
+      {
+        "kind": "initialized",
+        "mode_available": true
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": 0.0,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": 0.05,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": -0.05,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": 0.25,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": -0.25,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": 1.0,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": -1.0,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": 5.0,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      },
+      {
+        "kind": "target_seed_failed",
+        "step": 4,
+        "original_target": 0.5,
+        "amplitude_mm": -5.0,
+        "error": "Newton stagnation; cut numerical homotopy interval",
+        "history_committed": false
+      }
+    ],
+    "original_trace": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\j2_extension_v1\\recovery\\normal_rodv2_0096__gas_inertia_30deg\\fenicsx\\branch_seed_review.json",
+    "original_trace_sha256": "a7749d0abff023a64f30c90655f31159e95344e581cdcb6f51bcf0b5ee870caa",
+    "outcome": {
+      "state": "failed",
+      "exit_code": 1,
+      "not_counted": true,
+      "detail": {
+        "error": "RuntimeError('Numerical continuation interval exhausted; original target not accepted')",
+        "time_unix": 1792915531.093142,
+        "no_accepted_full_case": true
+      }
+    }
+  },
   "constant_tail_material_investigation": {
     "scope": "Independent investigation of the original CCX constant tail; no production acceptance range change",
     "reference": "Unmodified CalculiX incplas.f, constant tail and zero hardening slope at lines531-533",
@@ -1038,21 +1230,16 @@
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Numerical continuation attempt limit; no original target label exported')",
-        "time_unix": 1792913438.507415,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_warm_pc",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_branch_warm",
       "solver_status": {
         "phase": "newton",
-        "pid": 14724,
-        "elapsed_seconds": 1297.4180076122284,
+        "pid": 16355,
+        "elapsed_seconds": 969.891524553299,
         "step": 7,
-        "load_factor": 0.7523085110675907,
-        "iteration": 12,
-        "free_residual_relative": 0.00039880523215559435,
+        "load_factor": 0.7531785864284319,
+        "iteration": 3,
+        "free_residual_relative": 0.00011268451827978864,
         "numerical_root_tolerance": 2e-09
       }
     },
@@ -1192,17 +1379,22 @@
     },
     {
       "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical continuation interval exhausted; original target not accepted')",
+        "time_unix": 1792915531.093142,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_branch_warm",
       "solver_status": {
         "phase": "newton",
         "pid": 16027,
-        "elapsed_seconds": 231.98538422584534,
+        "elapsed_seconds": 507.9260914325714,
         "step": 4,
-        "load_factor": 0.5,
-        "iteration": 2,
-        "free_residual_relative": 5.7287649326813206e-05,
-        "numerical_root_tolerance": 2e-07
+        "load_factor": 0.4994903564453124,
+        "iteration": 12,
+        "free_residual_relative": 0.0001926627028135085,
+        "numerical_root_tolerance": 2e-09
       }
     },
     {
@@ -1241,6 +1433,46 @@
         "pid": 11843,
         "elapsed_seconds": 91.89937591552734
       }
+    },
+    {
+      "sample_id": "normal_rodv2_0147__gas_inertia_30deg",
+      "state": "accepted_in_main_queue",
+      "last_failure": null,
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "accepted_review": {
+        "sample_id": "normal_rodv2_0147__gas_inertia_30deg",
+        "geometry_case_id": "rodv2_0147",
+        "group": "normal",
+        "split": "train",
+        "scenario": "gas_inertia_30deg",
+        "fields_directory": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\j2_extension_v1\\recovery\\normal_rodv2_0147__gas_inertia_30deg\\fenicsx",
+        "fields_sha256": "75a1ec286bb0d2436b29d6ee0160185ee8f2e0235c3da7c9eeb6e1e219965995",
+        "backend": "cpu",
+        "linear_solver": "direct",
+        "seconds": 132.27907371520996,
+        "max_U_mm": 0.1238964627949496,
+        "max_GP_von_Mises_MPa": 948.6409587268845,
+        "max_relative_residual": 7.537853058894831e-08,
+        "min_J": 0.9906283590918483,
+        "accepted_states": 10,
+        "origin": "source_checked_full_J2_recovery",
+        "verified_unix": 1792916277.9831083,
+        "identity_finite_equilibrium_gates_passed": true,
+        "constitutive_scope": "source-checked finite-strain isotropic J2 with frozen piecewise Cauchy hardening; refuse unsupported plastic strain",
+        "physical_inputs_unchanged": true,
+        "max_PEEQ": 0.006383997880137812,
+        "full_J2_recovery": true,
+        "stability_status": "not_assessed",
+        "bounded_original_ccx_tail": false,
+        "material_range_limit_PEEQ": 0.00951460622563769,
+        "tail_validation_manifest_sha256": null,
+        "provenance_sha256": "854cd5c40641a9df86c7ba4aec3b2bfc93113cc1d8f935b5f1f2346b8310c18e"
+      },
+      "solver_status": {
+        "phase": "complete_pending_cross_solver_review",
+        "pid": 16651,
+        "elapsed_seconds": 132.36167216300964
+      }
     }
   ],
   "attempts": [
@@ -1252,6 +1484,7 @@
       "state": "verified_pending_main_queue_merge",
       "last_accepted_load_factor": 1.0,
       "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 86.49831414222717,
       "last_relative_residual": null,
       "failure": null,
@@ -1265,6 +1498,7 @@
       "state": "verified_pending_main_queue_merge",
       "last_accepted_load_factor": 1.0,
       "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 60.4167046546936,
       "last_relative_residual": null,
       "failure": null,
@@ -1278,6 +1512,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 100.25705027580261,
       "last_relative_residual": null,
       "failure": {
@@ -1295,6 +1530,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.5,
       "attempted_load_factor": 0.6,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 538.2976989746094,
       "last_relative_residual": 0.11806657865032211,
       "failure": {
@@ -1312,6 +1548,7 @@
       "state": "verified_pending_main_queue_merge",
       "last_accepted_load_factor": 1.0,
       "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 548.8741495609283,
       "last_relative_residual": null,
       "failure": null,
@@ -1325,6 +1562,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 121.10090613365173,
       "last_relative_residual": 3224.4587338682563,
       "failure": {
@@ -1342,6 +1580,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 349.06362295150757,
       "last_relative_residual": 0.9330638403343778,
       "failure": {
@@ -1359,6 +1598,7 @@
       "state": "time_bound",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.7273186978712147,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 1791.4585773944855,
       "last_relative_residual": 0.0015861980129067378,
       "failure": {
@@ -1374,6 +1614,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.7342573068875965,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 1536.0238676071167,
       "last_relative_residual": 0.0006241092267806059,
       "failure": {
@@ -1391,6 +1632,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 157.67474603652954,
       "last_relative_residual": 109.07213376701567,
       "failure": {
@@ -1408,6 +1650,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 0.9322446951143273,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 1472.3219084739685,
       "last_relative_residual": 3.36311139497024e-10,
       "failure": {
@@ -1425,6 +1668,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.7408906729085204,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 971.2367568016052,
       "last_relative_residual": 0.0006807490288906567,
       "failure": {
@@ -1442,6 +1686,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 0.938698172622638,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 1134.5013217926025,
       "last_relative_residual": 5.645317105123335e-10,
       "failure": {
@@ -1459,6 +1704,7 @@
       "state": "verified_pending_main_queue_merge",
       "last_accepted_load_factor": 1.0,
       "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 122.40472292900085,
       "last_relative_residual": null,
       "failure": null,
@@ -1472,6 +1718,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 123.51333045959473,
       "last_relative_residual": 3.3026899484953394e-08,
       "failure": {
@@ -1489,6 +1736,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.5,
       "attempted_load_factor": 0.6,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 37.47569227218628,
       "last_relative_residual": 1225.6455732942118,
       "failure": {
@@ -1506,6 +1754,7 @@
       "state": "time_bound",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.725116789340974,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 1795.7301137447357,
       "last_relative_residual": 0.013103795542942718,
       "failure": {
@@ -1521,6 +1770,7 @@
       "state": "verified_pending_main_queue_merge",
       "last_accepted_load_factor": 1.0,
       "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 91.89937591552734,
       "last_relative_residual": null,
       "failure": null,
@@ -1534,6 +1784,7 @@
       "state": "time_bound",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 0.9509462992280515,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 1793.9321258068085,
       "last_relative_residual": 0.0006669592046743728,
       "failure": {
@@ -1549,6 +1800,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.4,
       "attempted_load_factor": 0.4994903564453124,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 707.8530402183533,
       "last_relative_residual": 0.0001926627110601524,
       "failure": {
@@ -1566,6 +1818,7 @@
       "state": "verified_pending_tail_contract_reload",
       "last_accepted_load_factor": 1.0,
       "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 173.13751459121704,
       "last_relative_residual": null,
       "failure": null,
@@ -1579,6 +1832,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.7523085110675907,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 1297.4180076122284,
       "last_relative_residual": 0.00039880523215559435,
       "failure": {
@@ -1586,7 +1840,7 @@
         "time_unix": 1792913438.507415,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0079__compression_skew",
@@ -1596,6 +1850,7 @@
       "state": "failed",
       "last_accepted_load_factor": 0.9,
       "attempted_load_factor": 0.9529017356555827,
+      "numerical_trial_load_factor": null,
       "elapsed_seconds": 900.8000991344452,
       "last_relative_residual": 8.893389145543085e-05,
       "failure": {
@@ -1610,11 +1865,44 @@
       "started_unix": 1792915016.8016129,
       "solver_source_sha256": "7c9ad6cfae3f9b1ea573ceb23d55d2669e144f45df3621418a6c6f4ac951cabb",
       "method": "软方向确定性初始猜值／原方程与约束不变",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.4,
-      "attempted_load_factor": 0.5,
-      "elapsed_seconds": 231.98538422584534,
-      "last_relative_residual": 5.7287649326813206e-05,
+      "attempted_load_factor": 0.4994903564453124,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 507.9260914325714,
+      "last_relative_residual": 0.0001926627028135085,
+      "failure": {
+        "error": "RuntimeError('Numerical continuation interval exhausted; original target not accepted')",
+        "time_unix": 1792915531.093142,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "started_unix": 1792915531.8637578,
+      "solver_source_sha256": "7c9ad6cfae3f9b1ea573ceb23d55d2669e144f45df3621418a6c6f4ac951cabb",
+      "method": "软方向确定性初始猜值／原方程与约束不变",
+      "state": "running",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.7531785864284319,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 969.891524553299,
+      "last_relative_residual": 0.00011268451827978864,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0147__gas_inertia_30deg",
+      "started_unix": 1792916142.750049,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "verified_pending_main_queue_merge",
+      "last_accepted_load_factor": 1.0,
+      "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 132.36167216300964,
+      "last_relative_residual": null,
       "failure": null,
       "archived": false
     }
