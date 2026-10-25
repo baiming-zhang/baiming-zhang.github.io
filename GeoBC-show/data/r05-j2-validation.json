@@ -1,4 +1,76 @@
 {
+  "warm_pc_manifest": {
+    "state": "validated",
+    "solver_sha256": "683fa1db297a98af0c52a2370c3127110080fb376fdadaf3c8e8d224f7091291",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "gates_sha256": {
+      "plastic_tet10_warm_pc_cold/cross_solver_review.json": "88a1431798719b5e97ed97bd04dcf3ac884a48b4818213553c465fc2efa8824b",
+      "plastic_tet10_warm_pc/cross_solver_review.json": "b8317ca657c0013be6947ff6dffa7af6a5a8c44bbed3d6c265b7543146b31210",
+      "elastic_rod_0028_warm_pc/cross_solver_review.json": "76f98e07fb1070a2e0064c2e6acf916e97e82d64f5f5f77041ccf4887814cd92"
+    },
+    "validated_unix": 1792912136.2426713,
+    "original_targets_and_history_unchanged": true
+  },
+  "warm_pc_driver": {
+    "pid": 21344,
+    "stage": "validated_recovery_running",
+    "updated_unix": 1792912136.660518,
+    "sample_ids": [
+      "normal_rodv2_0053__compression_skew",
+      "normal_rodv2_0079__compression_skew"
+    ],
+    "solver_sha256": "683fa1db297a98af0c52a2370c3127110080fb376fdadaf3c8e8d224f7091291"
+  },
+  "warm_cache_negative_checks": {
+    "passed": true,
+    "mismatched_force_rejected": true,
+    "modified_snapshot_rejected": true,
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "physical_fields_untouched": true,
+    "checked_unix": 1792912470.2972066
+  },
+  "warm_pc_prefix_performance": {
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "original_target_factor": 0.7,
+    "previous_PC_prefix_seconds": 1122.1421866416931,
+    "warm_rechecked_prefix_seconds": 2.5088253021240234,
+    "scope": "One recovery prefix, not a whole-solver speedup; all seven original targets reassemble equilibrium, constraints and constitutive response; no new valid sample",
+    "physical_history_recomputed": true
+  },
+  "warm_pc_plastic_regression": {
+    "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+    "U_relative_L2": 2.1407295125972076e-07,
+    "GP_tensor_relative_L2": 1.0476593103762739e-07,
+    "PEEQ_absolute_error": 4.82315035620854e-12,
+    "CCX_max_PEEQ": 8.967564e-05,
+    "FEn_max_PEEQ": 8.967563517684965e-05,
+    "all_20_states_U_max_relative": 2.1407295125972076e-07,
+    "all_20_states_max_PEEQ_absolute_error": 4.82315035620854e-12,
+    "GP_match_mm": 2.0032143250599133e-15,
+    "material_range_passed": true,
+    "unload_displacement_norm_mm": 0.0013880615186388557,
+    "passed": true,
+    "solver_sha256": "683fa1db297a98af0c52a2370c3127110080fb376fdadaf3c8e8d224f7091291",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "original_target_guesses_used": 20,
+    "numerical_seeds_revalidated": 9,
+    "cold_noncommitted_roots": 40,
+    "no_cached_history_committed": true
+  },
+  "warm_pc_full_rod_regression": {
+    "passed": true,
+    "relative_L2": {
+      "U_peak_mm": 2.7266071604361814e-12,
+      "GP_Cauchy_stress_MPa": 1.868650874844165e-12,
+      "GP_von_Mises_MPa": 8.083749340720676e-13
+    },
+    "solver_sha256": "683fa1db297a98af0c52a2370c3127110080fb376fdadaf3c8e8d224f7091291",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "original_target_guesses_used": 10,
+    "perturbed_cached_target_step": 4,
+    "perturbed_guess_corrected_by_Newton_iterations": 2,
+    "scope": "Same original rod; cached displacement guess intentionally perturbed, all10 states independently rechecked and corrected; no new count"
+  },
   "constant_tail_material_investigation": {
     "scope": "Independent investigation of the original CCX constant tail; no production acceptance range change",
     "reference": "Unmodified CalculiX incplas.f, constant tail and zero hardening slope at lines531-533",
@@ -902,19 +974,16 @@
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
-      "state": "time_bound",
-      "last_failure": {
-        "error": "1800-second recovery attempt budget reached; not a proof of no equilibrium"
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_pc_homotopy",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_warm_pc",
       "solver_status": {
         "phase": "newton",
-        "pid": 11562,
-        "elapsed_seconds": 1795.7301137447357,
+        "pid": 14724,
+        "elapsed_seconds": 978.200626373291,
         "step": 7,
-        "load_factor": 0.725116789340974,
-        "iteration": 3,
-        "free_residual_relative": 0.013103795542942718,
+        "load_factor": 0.7510565962189174,
+        "iteration": 2,
+        "free_residual_relative": 0.0008177052321133578,
         "numerical_root_tolerance": 2e-09
       }
     },
@@ -1376,7 +1445,7 @@
       "failure": {
         "error": "1800-second recovery attempt budget reached; not a proof of no equilibrium"
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0102__gas_inertia_30deg",
@@ -1433,6 +1502,19 @@
       "attempted_load_factor": null,
       "elapsed_seconds": 173.13751459121704,
       "last_relative_residual": null,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "started_unix": 1792912136.6853216,
+      "solver_source_sha256": "683fa1db297a98af0c52a2370c3127110080fb376fdadaf3c8e8d224f7091291",
+      "method": "原目标与数值根仅作初值复用／冻结物理历史",
+      "state": "running",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.7510565962189174,
+      "elapsed_seconds": 978.200626373291,
+      "last_relative_residual": 0.0008177052321133578,
       "failure": null,
       "archived": false
     }
