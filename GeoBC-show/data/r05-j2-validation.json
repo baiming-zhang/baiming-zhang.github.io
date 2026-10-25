@@ -68,13 +68,8 @@
   },
   "branch_warm_driver": {
     "pid": 16072,
-    "stage": "validated_recovery_running",
-    "updated_unix": 1792915016.7824728,
-    "sample_ids": [
-      "normal_rodv2_0096__gas_inertia_30deg",
-      "normal_rodv2_0053__compression_skew"
-    ],
-    "solver_sha256": "7c9ad6cfae3f9b1ea573ceb23d55d2669e144f45df3621418a6c6f4ac951cabb"
+    "stage": "complete",
+    "updated_unix": 1792916616.955133
   },
   "branch_warm_manifest": {
     "state": "validated",
@@ -137,10 +132,22 @@
   },
   "arclength_driver": {
     "pid": 16988,
-    "stage": "waiting_for_branch_driver",
-    "updated_unix": 1792916429.7665045,
-    "upstream_pid": 16072,
-    "solver_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8"
+    "stage": "complete",
+    "updated_unix": 1792918077.9200537
+  },
+  "arclength_manifest": {
+    "state": "validated",
+    "solver_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8",
+    "arc_module_sha256": "b1431207905f62202730e583427c0cd8129304a90d6dd7acb1f55bc23bf7b06b",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "gates_sha256": {
+      "plastic_tet10_arclength/cross_solver_review.json": "2944c25cd1242705add5b0b8bc35b835106c6d8c57f1103e3cc10472e6c906dc",
+      "elastic_rod_0028_arclength/cross_solver_review.json": "d6edfe82ee0f0380db5312905f0897f62e8552fb04c1f9e66c1a3cf2f7cbb021",
+      "arclength_design/scalar_review.json": "bc91c5126d14ff941d4867e3995172fcfe0b31c63913667e2cd683f86c6cc4f3",
+      "arclength_design/actual_helper_scalar_review.json": "77b6a415cdb7a59e279fd6009194aafc32dc0873d2eb3c06ce788672dd865471"
+    },
+    "validated_unix": 1792916657.0442934,
+    "numerical_parameter_not_physical_loading": true
   },
   "arclength_exact_scalar": {
     "passed": true,
@@ -230,6 +237,37 @@
         0.5703238177890225
       ]
     ]
+  },
+  "arclength_plastic_regression": {
+    "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+    "U_relative_L2": 2.0938485096815183e-07,
+    "GP_tensor_relative_L2": 1.0307686121934556e-07,
+    "PEEQ_absolute_error": 2.0625973260086916e-12,
+    "CCX_max_PEEQ": 8.967564e-05,
+    "FEn_max_PEEQ": 8.967564206259733e-05,
+    "all_20_states_U_max_relative": 2.0938485096815183e-07,
+    "all_20_states_max_PEEQ_absolute_error": 1.3156543424017652e-11,
+    "GP_match_mm": 2.0032143250599133e-15,
+    "material_range_passed": true,
+    "unload_displacement_norm_mm": 0.001388061629111882,
+    "passed": true,
+    "solver_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8",
+    "arc_module_sha256": "b1431207905f62202730e583427c0cd8129304a90d6dd7acb1f55bc23bf7b06b",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "numerical_arc_roots": 60
+  },
+  "arclength_full_rod_regression": {
+    "passed": true,
+    "relative_L2": {
+      "U_peak_mm": 2.726607160436197e-12,
+      "GP_Cauchy_stress_MPa": 1.8686508813708326e-12,
+      "GP_von_Mises_MPa": 8.083749354630676e-13
+    },
+    "solver_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8",
+    "arc_module_sha256": "b1431207905f62202730e583427c0cd8129304a90d6dd7acb1f55bc23bf7b06b",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "actual_arc_roots": 3,
+    "scope": "Frozen-history numerical arc roots then original-load correction; all10 original physical states; no new count"
   },
   "branch_0096_seed_outcome": {
     "initial_guesses_only": true,
@@ -326,6 +364,734 @@
         "no_accepted_full_case": true
       }
     }
+  },
+  "arclength_tangent_driver": {
+    "pid": 36096,
+    "stage": "validated_recovery_running",
+    "updated_unix": 1792918134.5744772,
+    "sample_ids": [
+      "normal_rodv2_0096__gas_inertia_30deg",
+      "normal_rodv2_0053__compression_skew",
+      "normal_rodv2_0079__compression_skew"
+    ],
+    "solver_sha256": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589"
+  },
+  "arclength_tangent_manifest": {
+    "state": "validated",
+    "solver_sha256": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+    "arc_module_sha256": "6fd1cff39d18629ef7b6f2b3e7b12b6c6a8eb2a509c1aab151862d46c5882db2",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "gates_sha256": {
+      "plastic_tet10_arclength_tangent/cross_solver_review.json": "0b85d0f9451a74e1dc0dd9b487e9c61466717144ba9558c7309f9cdb3198e049",
+      "elastic_rod_0028_arclength_tangent/cross_solver_review.json": "352a5f27d8af14fd89adc02eac4d69c2fc15235f744dcbf45f5a6feb9591b127",
+      "arclength_design/scalar_review.json": "bc91c5126d14ff941d4867e3995172fcfe0b31c63913667e2cd683f86c6cc4f3",
+      "arclength_design/tangent_helper_scalar_review.json": "9784cd1c7299654794fbcd419d85b7e3f0aeded4bd05e75277d0f9ca3c53f294"
+    },
+    "validated_unix": 1792918133.8975568,
+    "numerical_parameter_not_physical_loading": true
+  },
+  "arclength_tangent_exact_scalar": {
+    "passed": true,
+    "scope": "Exact production candidate helper on analytic u^3-u=lambda, starting at u=-1. SciPy linear algebra mock, not FEniCSx or a valid dataset sample.",
+    "arc_module_sha256": "6fd1cff39d18629ef7b6f2b3e7b12b6c6a8eb2a509c1aab151862d46c5882db2",
+    "actual_arc_roots": 17,
+    "numerical_load_reversal": true,
+    "maximum_root_residual": 8.233183579342551e-10,
+    "original_target": 0.5,
+    "final_root": 1.1914878841102168,
+    "final_residual": 5.119715762447186e-10,
+    "roots": [
+      [
+        -0.9318527134693161,
+        0.12267889466426914
+      ],
+      [
+        -0.7828581548166147,
+        0.3030703125456849
+      ],
+      [
+        -0.697479259081385,
+        0.35817142058008267
+      ],
+      [
+        -0.5783178733080389,
+        0.38489855690810626
+      ],
+      [
+        -0.3777973933217183,
+        0.3238740425378076
+      ],
+      [
+        -0.24366204002995615,
+        0.22919553481608973
+      ],
+      [
+        -0.08210080606874408,
+        0.08154740258736998
+      ],
+      [
+        0.1448213818213674,
+        -0.1417840092902942
+      ],
+      [
+        0.4687983067983673,
+        -0.36576963448467703
+      ],
+      [
+        0.5444249154576798,
+        -0.38305819337633157
+      ],
+      [
+        0.7115070480306547,
+        -0.3513120982283749
+      ],
+      [
+        0.8003912071071,
+        -0.2876397221096565
+      ],
+      [
+        0.8888069810260272,
+        -0.18666915351707264
+      ],
+      [
+        0.9836329884449625,
+        -0.03193477028832044
+      ],
+      [
+        1.0890159505224994,
+        0.20250876748738736
+      ],
+      [
+        1.1760797499035938,
+        0.4506309251431768
+      ],
+      [
+        1.2489639282847946,
+        0.6993085098552612
+      ]
+    ]
+  },
+  "arclength_tangent_plastic_regression": {
+    "scope": "Independent curved TET10 diagnostic, not one of the 1000 dataset IDs",
+    "U_relative_L2": 2.0938495291423273e-07,
+    "GP_tensor_relative_L2": 1.0307686795578668e-07,
+    "PEEQ_absolute_error": 2.062444954945876e-12,
+    "CCX_max_PEEQ": 8.967564e-05,
+    "FEn_max_PEEQ": 8.967564206244496e-05,
+    "all_20_states_U_max_relative": 2.0938495291423273e-07,
+    "all_20_states_max_PEEQ_absolute_error": 1.3156678837480864e-11,
+    "GP_match_mm": 2.0032143250599133e-15,
+    "material_range_passed": true,
+    "unload_displacement_norm_mm": 0.0013880616289866797,
+    "passed": true,
+    "solver_sha256": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+    "arc_module_sha256": "6fd1cff39d18629ef7b6f2b3e7b12b6c6a8eb2a509c1aab151862d46c5882db2",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "numerical_arc_roots": 60
+  },
+  "arclength_tangent_full_rod_regression": {
+    "passed": true,
+    "relative_L2": {
+      "U_peak_mm": 2.726607160436197e-12,
+      "GP_Cauchy_stress_MPa": 1.8686508813708326e-12,
+      "GP_von_Mises_MPa": 8.083749354630676e-13
+    },
+    "solver_sha256": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+    "arc_module_sha256": "6fd1cff39d18629ef7b6f2b3e7b12b6c6a8eb2a509c1aab151862d46c5882db2",
+    "cache_module_sha256": "c808b5a03273d1e2d10ea782a112d2ad62338199ce1bf83aeeedf0ac86be5590",
+    "actual_arc_roots": 3,
+    "scope": "Frozen-history numerical arc roots then original-load correction; all10 original physical states; no new count"
+  },
+  "arclength_0096_secant_outcome": {
+    "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
+    "outcome": {
+      "state": "failed",
+      "exit_code": 1,
+      "not_counted": true,
+      "detail": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792917023.3014438,
+        "no_accepted_full_case": true
+      }
+    },
+    "status": {
+      "phase": "numerical_arc",
+      "pid": 16901,
+      "elapsed_seconds": 355.771532535553,
+      "step": 4,
+      "original_target": 0.5,
+      "numerical_load": 0.4994799872447932,
+      "arc_iteration": 10,
+      "free_residual_relative": 4.940057909456822e-05,
+      "arc_constraint": -3.848172323329957e-16
+    },
+    "trace": {
+      "scope": "Numerical roots only; history frozen",
+      "events": [
+        {
+          "kind": "numerical_seed_rechecked",
+          "load_factor": 0.49946289062499993,
+          "residual": 1.1311974181528325e-10
+        },
+        {
+          "kind": "direct_target_failed",
+          "error": "Newton stagnation; cut numerical homotopy interval"
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.5038395746541874,
+          "arc_step": 0.05,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.5016512484601586,
+          "arc_step": 0.025,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.5005570730973168,
+          "arc_step": 0.0125,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.5000099813327243,
+          "arc_step": 0.00625,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.49973643708169646,
+          "arc_step": 0.003125,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.4995996636580492,
+          "arc_step": 0.0015625,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.49953127713615564,
+          "arc_step": 0.00078125,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.4994970838339506,
+          "arc_step": 0.000390625,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        },
+        {
+          "kind": "arc_trial_failed",
+          "numerical_load": 0.4994799872447932,
+          "arc_step": 0.0001953125,
+          "error": "Arc corrector backtracking exhausted",
+          "history_committed": false
+        }
+      ]
+    },
+    "interpretation": "No new numerical roots; nine corrector trials failed as ds decreased .05 to .0001953125. This does not establish absence of equilibrium or material-range violation. New candidate will measure a bordered tangent rather than assume the old long secant is a local tangent."
+  },
+  "arclength_0053_local_domain": {
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "scope": "Local frozen-history residual and material-domain evaluation only, no MUMPS solve, no structural stability claim and no valid sample count",
+    "snapshot_sha256": "34499da25638dd74a1718edbf0b065a79ffeb8a80343abf03f84e05158703a29",
+    "solver_source_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8",
+    "load_factor": 0.6926769631133672,
+    "history_base_factor": 0.7,
+    "original_target_factor": 0.8,
+    "reassembled_free_residual_relative": 7.930070674205799e-10,
+    "old_PEEQ_max": 0.0,
+    "trial_PEEQ_max": 0.009514573831004076,
+    "trial_material_range_passed": true,
+    "does_not_change_effective_count": true,
+    "created_unix": 1792917843.016702,
+    "state": "complete_local_domain_evaluation",
+    "min_J": 0.9957044641191584,
+    "positive_J": true,
+    "distance_to_original_PEEQ_cap": 3.2394633612750634e-08,
+    "global_linear_solve": false,
+    "seconds": 0.36609506607055664
+  },
+  "arclength_0053_frozen_trace": {
+    "scope": "Numerical roots only; history frozen",
+    "events": [
+      {
+        "kind": "numerical_seed_rechecked",
+        "load_factor": 0.7532518206189647,
+        "residual": 5.667497161827111e-10
+      },
+      {
+        "kind": "direct_target_failed",
+        "error": "Newton stagnation; cut numerical homotopy interval"
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.7563805151712132,
+        "arc_step": 0.05,
+        "error": "Arc corrector iteration limit",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.7543612564364209,
+        "arc_step": 0.025,
+        "error": "Arc corrector iteration limit",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.753608047773511,
+        "original_target": 0.8,
+        "free_residual_relative": 4.89183669026126e-10,
+        "arc_step": 0.0125,
+        "corrector_iterations": 32,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7536954474721452,
+        "original_target": 0.8,
+        "free_residual_relative": 4.904364998950639e-10,
+        "arc_step": 0.008749999999999999,
+        "corrector_iterations": 3,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7537068309277463,
+        "original_target": 0.8,
+        "free_residual_relative": 4.925453136488958e-10,
+        "arc_step": 0.013124999999999998,
+        "corrector_iterations": 3,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7534849403424879,
+        "original_target": 0.8,
+        "free_residual_relative": 5.299194368396595e-10,
+        "arc_step": 0.019687499999999997,
+        "corrector_iterations": 3,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.752615260317016,
+        "original_target": 0.8,
+        "free_residual_relative": 5.317730812503397e-10,
+        "arc_step": 0.029531249999999995,
+        "corrector_iterations": 4,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7504270829895685,
+        "original_target": 0.8,
+        "free_residual_relative": 5.429812703073165e-10,
+        "arc_step": 0.04429687499999999,
+        "corrector_iterations": 6,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7475622946255168,
+        "original_target": 0.8,
+        "free_residual_relative": 5.450278512659681e-10,
+        "arc_step": 0.04429687499999999,
+        "corrector_iterations": 8,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7443559312569282,
+        "original_target": 0.8,
+        "free_residual_relative": 5.737196823793351e-10,
+        "arc_step": 0.04429687499999999,
+        "corrector_iterations": 8,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.740924961172088,
+        "original_target": 0.8,
+        "free_residual_relative": 5.894040536886706e-10,
+        "arc_step": 0.04429687499999999,
+        "corrector_iterations": 7,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7373386647089128,
+        "original_target": 0.8,
+        "free_residual_relative": 6.072305416162351e-10,
+        "arc_step": 0.04429687499999999,
+        "corrector_iterations": 6,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7336492598906854,
+        "original_target": 0.8,
+        "free_residual_relative": 6.285797140808051e-10,
+        "arc_step": 0.04429687499999999,
+        "corrector_iterations": 5,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.728004192724831,
+        "original_target": 0.8,
+        "free_residual_relative": 6.436000120323484e-10,
+        "arc_step": 0.06644531249999999,
+        "corrector_iterations": 6,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7222556051804584,
+        "original_target": 0.8,
+        "free_residual_relative": 6.500634438457326e-10,
+        "arc_step": 0.06644531249999999,
+        "corrector_iterations": 7,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7164233631956267,
+        "original_target": 0.8,
+        "free_residual_relative": 6.73836613777436e-10,
+        "arc_step": 0.06644531249999999,
+        "corrector_iterations": 6,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7105401808348413,
+        "original_target": 0.8,
+        "free_residual_relative": 7.341795300257571e-10,
+        "arc_step": 0.06644531249999999,
+        "corrector_iterations": 5,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.7016727679059469,
+        "original_target": 0.8,
+        "free_residual_relative": 7.646219962447719e-10,
+        "arc_step": 0.09966796874999999,
+        "corrector_iterations": 4,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6883722821514552,
+        "arc_step": 0.14950195312499998,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.6949809671992047,
+        "original_target": 0.8,
+        "free_residual_relative": 7.848108073796257e-10,
+        "arc_step": 0.07475097656249999,
+        "corrector_iterations": 5,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6849440393641989,
+        "arc_step": 0.11212646484374998,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6899625032817017,
+        "arc_step": 0.05606323242187499,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6924717352404532,
+        "arc_step": 0.028031616210937495,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.6937243809915025,
+        "original_target": 0.8,
+        "free_residual_relative": 7.947943988218449e-10,
+        "arc_step": 0.014015808105468748,
+        "corrector_iterations": 3,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6918395123524796,
+        "arc_step": 0.02102371215820312,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.6927818883671238,
+        "original_target": 0.8,
+        "free_residual_relative": 8.092744838643365e-10,
+        "arc_step": 0.01051185607910156,
+        "corrector_iterations": 2,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6913681495158649,
+        "arc_step": 0.01576778411865234,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6920750189414944,
+        "arc_step": 0.00788389205932617,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6924284536543092,
+        "arc_step": 0.003941946029663085,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6926051710107165,
+        "arc_step": 0.0019709730148315427,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.6926935305766723,
+        "original_target": 0.8,
+        "free_residual_relative": 7.815743647057118e-10,
+        "arc_step": 0.0009854865074157713,
+        "corrector_iterations": 2,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6925609938929036,
+        "arc_step": 0.001478229761123657,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.692627262234788,
+        "arc_step": 0.0007391148805618284,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6926603964057301,
+        "arc_step": 0.0003695574402809142,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_root",
+        "numerical_load": 0.6926769631133672,
+        "original_target": 0.8,
+        "free_residual_relative": 7.930070674205808e-10,
+        "arc_step": 0.0001847787201404571,
+        "corrector_iterations": 1,
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6926521119184391,
+        "arc_step": 0.0002771680802106857,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      },
+      {
+        "kind": "arc_trial_failed",
+        "numerical_load": 0.6926645375159032,
+        "arc_step": 0.00013858404010534285,
+        "error": "Arc predictor outside checked numerical domain",
+        "history_committed": false
+      }
+    ]
+  },
+  "arclength_intersection_driver": {
+    "pid": 36592,
+    "stage": "waiting_for_tangent_driver",
+    "updated_unix": 1792918723.4629796,
+    "upstream_pid": 36096,
+    "solver_sha256": "0a716fd36501129884b98e6f38ee86a4c1e3ea5752b10440f5f34f2bb3de21bb"
+  },
+  "arclength_intersection_scalar": {
+    "passed": true,
+    "scope": "Exact production candidate helper on analytic u^3-u=lambda, starting at u=-1. SciPy linear algebra mock, not FEniCSx or a valid dataset sample.",
+    "arc_module_sha256": "4c7d99e6166d85f33140c3500b39d0f3e1e954aa87c5f41a10202bc89ef8d0d4",
+    "actual_arc_roots": 27,
+    "numerical_load_reversal": true,
+    "maximum_root_residual": 8.233183579342551e-10,
+    "original_target": 0.5,
+    "final_root": 1.191487884083624,
+    "final_residual": 4.2530756694247884e-10,
+    "roots": [
+      [
+        -0.9318527134693161,
+        0.12267889466426914
+      ],
+      [
+        -0.7828581548166147,
+        0.3030703125456849
+      ],
+      [
+        -0.697479259081385,
+        0.35817142058008267
+      ],
+      [
+        -0.5783178733080389,
+        0.38489855690810626
+      ],
+      [
+        -0.3777973933217183,
+        0.3238740425378076
+      ],
+      [
+        -0.24366204002995615,
+        0.22919553481608973
+      ],
+      [
+        -0.08210080606874408,
+        0.08154740258736998
+      ],
+      [
+        0.1448213818213674,
+        -0.1417840092902942
+      ],
+      [
+        0.4687983067983673,
+        -0.36576963448467703
+      ],
+      [
+        0.5444249154576798,
+        -0.38305819337633157
+      ],
+      [
+        0.7115070480306547,
+        -0.3513120982283749
+      ],
+      [
+        0.8003912071071,
+        -0.2876397221096565
+      ],
+      [
+        0.8888069810260272,
+        -0.18666915351707264
+      ],
+      [
+        0.9836329884449625,
+        -0.03193477028832044
+      ],
+      [
+        1.0890159505224994,
+        0.20250876748738736
+      ],
+      [
+        1.1760797499035938,
+        0.4506309251431768
+      ],
+      [
+        1.2489639282847946,
+        0.6993085098552612
+      ],
+      [
+        1.1914765894110912,
+        0.49996319233261105
+      ],
+      [
+        1.191488448827143,
+        0.5000018403833695
+      ],
+      [
+        1.191487262885538,
+        0.4999979755782936
+      ],
+      [
+        1.1914879151381488,
+        0.5000001012210853
+      ],
+      [
+        1.1914878499128878,
+        0.49999988865680617
+      ],
+      [
+        1.1914878857867353,
+        0.5000000055671597
+      ],
+      [
+        1.1914878821993504,
+        0.4999999938761243
+      ],
+      [
+        1.191487884172412,
+        0.5000000003061937
+      ],
+      [
+        1.1914878839751057,
+        0.4999999996631868
+      ],
+      [
+        1.191487884083624,
+        0.5000000000168406
+      ]
+    ]
+  },
+  "arclength_0096_direction_quality": {
+    "comparison": {
+      "kind": "actual_tangent",
+      "numerical_load": 0.4999855537315544,
+      "normalized_load_component": 0.0004998031597890831,
+      "backward_error": 7.910222646109344e-19,
+      "mean_direction_mm": 1.3938311349518608e-19,
+      "secant_free_action_relative": 21.393644587499985,
+      "tangent_free_action_relative": 1.3292560474690782e-10,
+      "history_committed": false
+    },
+    "scope": "Frozen-history numerical endpoint tangent action, not a stability audit",
+    "root_crossing": {
+      "kind": "arc_root",
+      "numerical_load": 0.5001531005189258,
+      "original_target": 0.5,
+      "free_residual_relative": 9.754885627322249e-11,
+      "arc_step": 0.5,
+      "corrector_iterations": 3,
+      "history_committed": false
+    },
+    "original_target": 0.5,
+    "accepted_original_target": false,
+    "correction_failed": true
   },
   "constant_tail_material_investigation": {
     "scope": "Independent investigation of the original CCX constant tail; no production acceptance range change",
@@ -1230,17 +1996,23 @@
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
-      "state": "running",
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_branch_warm",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792918716.8177636,
+        "no_accepted_full_case": true
+      },
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tangent",
       "solver_status": {
-        "phase": "newton",
-        "pid": 16355,
-        "elapsed_seconds": 969.891524553299,
+        "phase": "numerical_arc",
+        "pid": 17933,
+        "elapsed_seconds": 219.01586246490479,
         "step": 7,
-        "load_factor": 0.7531785864284319,
-        "iteration": 3,
-        "free_residual_relative": 0.00011268451827978864,
-        "numerical_root_tolerance": 2e-09
+        "original_target": 0.8,
+        "numerical_load": 0.6926785422738572,
+        "arc_iteration": 1,
+        "free_residual_relative": 8.025920174525103e-10,
+        "arc_constraint": -1.949708476117551e-16
       }
     },
     {
@@ -1282,22 +2054,18 @@
     },
     {
       "sample_id": "normal_rodv2_0079__compression_skew",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Numerical continuation interval exhausted; original target not accepted')",
-        "time_unix": 1792914347.4954414,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_warm_pc",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tangent",
       "solver_status": {
-        "phase": "newton",
-        "pid": 15222,
-        "elapsed_seconds": 900.8000991344452,
+        "phase": "numerical_arc",
+        "pid": 18118,
+        "elapsed_seconds": 145.70987582206726,
         "step": 9,
-        "load_factor": 0.9529017356555827,
-        "iteration": 12,
-        "free_residual_relative": 8.893389145543085e-05,
-        "numerical_root_tolerance": 2e-09
+        "original_target": 1.0,
+        "numerical_load": 0.9342053869388044,
+        "arc_iteration": 16,
+        "free_residual_relative": 1.290761945701697,
+        "arc_constraint": -4.996003610813204e-16
       }
     },
     {
@@ -1381,20 +2149,21 @@
       "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
       "state": "failed",
       "last_failure": {
-        "error": "RuntimeError('Numerical continuation interval exhausted; original target not accepted')",
-        "time_unix": 1792915531.093142,
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792918490.7182398,
         "no_accepted_full_case": true
       },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_branch_warm",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tangent",
       "solver_status": {
-        "phase": "newton",
-        "pid": 16027,
-        "elapsed_seconds": 507.9260914325714,
+        "phase": "numerical_arc",
+        "pid": 17779,
+        "elapsed_seconds": 348.1788568496704,
         "step": 4,
-        "load_factor": 0.4994903564453124,
-        "iteration": 12,
-        "free_residual_relative": 0.0001926627028135085,
-        "numerical_root_tolerance": 2e-09
+        "original_target": 0.5,
+        "numerical_load": 0.43871053286379597,
+        "arc_iteration": 1,
+        "free_residual_relative": 2.2288196204388205e-10,
+        "arc_constraint": 7.468182903379481e-17
       }
     },
     {
@@ -1472,6 +2241,65 @@
         "phase": "complete_pending_cross_solver_review",
         "pid": 16651,
         "elapsed_seconds": 132.36167216300964
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0148__gas_inertia_30deg",
+      "state": "accepted_in_main_queue",
+      "last_failure": null,
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "accepted_review": {
+        "sample_id": "normal_rodv2_0148__gas_inertia_30deg",
+        "geometry_case_id": "rodv2_0148",
+        "group": "normal",
+        "split": "train",
+        "scenario": "gas_inertia_30deg",
+        "fields_directory": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\j2_extension_v1\\recovery\\normal_rodv2_0148__gas_inertia_30deg\\fenicsx",
+        "fields_sha256": "d681e0e7b3d1f7dcdbc019d90df5fec2d31d528033f68765e166b549a14c2aab",
+        "backend": "cpu",
+        "linear_solver": "direct",
+        "seconds": 76.61011290550232,
+        "max_U_mm": 0.1365066288088282,
+        "max_GP_von_Mises_MPa": 853.6783451340929,
+        "max_relative_residual": 2.0740847407785084e-08,
+        "min_J": 0.9960654438696559,
+        "accepted_states": 10,
+        "origin": "source_checked_full_J2_recovery",
+        "verified_unix": 1792916637.570763,
+        "identity_finite_equilibrium_gates_passed": true,
+        "constitutive_scope": "source-checked finite-strain isotropic J2 with frozen piecewise Cauchy hardening; refuse unsupported plastic strain",
+        "physical_inputs_unchanged": true,
+        "max_PEEQ": 7.394566669943594e-05,
+        "full_J2_recovery": true,
+        "stability_status": "not_assessed",
+        "bounded_original_ccx_tail": false,
+        "material_range_limit_PEEQ": 0.00951460622563769,
+        "tail_validation_manifest_sha256": null,
+        "provenance_sha256": "9f063b8820c7aa44a4f486847c71728f441fab5a035ffbc048aef7ccdb22b7a8"
+      },
+      "solver_status": {
+        "phase": "complete_pending_cross_solver_review",
+        "pid": 16821,
+        "elapsed_seconds": 76.66096758842468
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0154__compression_skew",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
+        "time_unix": 1792917705.8461077,
+        "no_accepted_full_case": true
+      },
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_hybrid",
+      "solver_status": {
+        "phase": "newton",
+        "pid": 17488,
+        "elapsed_seconds": 120.91304111480713,
+        "step": 9,
+        "load_factor": 1.0,
+        "iteration": 6,
+        "free_residual_relative": 0.11989623035522515
       }
     }
   ],
@@ -1858,7 +2686,7 @@
         "time_unix": 1792914347.4954414,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
@@ -1876,21 +2704,25 @@
         "time_unix": 1792915531.093142,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
       "started_unix": 1792915531.8637578,
       "solver_source_sha256": "7c9ad6cfae3f9b1ea573ceb23d55d2669e144f45df3621418a6c6f4ac951cabb",
       "method": "软方向确定性初始猜值／原方程与约束不变",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.7,
-      "attempted_load_factor": 0.7531785864284319,
+      "attempted_load_factor": 0.75329889974145,
       "numerical_trial_load_factor": null,
-      "elapsed_seconds": 969.891524553299,
-      "last_relative_residual": 0.00011268451827978864,
-      "failure": null,
-      "archived": false
+      "elapsed_seconds": 1078.5865783691406,
+      "last_relative_residual": 0.00010535554372691771,
+      "failure": {
+        "error": "RuntimeError('Numerical continuation interval exhausted; original target not accepted')",
+        "time_unix": 1792916615.0131345,
+        "no_accepted_full_case": true
+      },
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0147__gas_inertia_30deg",
@@ -1903,6 +2735,142 @@
       "numerical_trial_load_factor": null,
       "elapsed_seconds": 132.36167216300964,
       "last_relative_residual": null,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0148__gas_inertia_30deg",
+      "started_unix": 1792916552.3719063,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "verified_pending_main_queue_merge",
+      "last_accepted_load_factor": 1.0,
+      "attempted_load_factor": null,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 76.66096758842468,
+      "last_relative_residual": null,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
+      "started_unix": 1792916657.757434,
+      "solver_source_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8",
+      "method": "冻结历史／数值伪弧长及原载荷目标纠正",
+      "state": "failed",
+      "last_accepted_load_factor": 0.4,
+      "attempted_load_factor": 0.5,
+      "numerical_trial_load_factor": 0.4994799872447932,
+      "elapsed_seconds": 355.771532535553,
+      "last_relative_residual": 4.940057909456822e-05,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792917023.3014438,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "started_unix": 1792917022.809266,
+      "solver_source_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8",
+      "method": "冻结历史／数值伪弧长及原载荷目标纠正",
+      "state": "failed",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.6926769631133672,
+      "elapsed_seconds": 524.7629609107971,
+      "last_relative_residual": 7.930070674205808e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792917555.1395683,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0079__compression_skew",
+      "started_unix": 1792917552.8718467,
+      "solver_source_sha256": "efc6d433a95a08e796503d8f3320f0f8744d6f94bdfef66263f688ca708844c8",
+      "method": "冻结历史／数值伪弧长及原载荷目标纠正",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.8742331726882181,
+      "elapsed_seconds": 520.2637386322021,
+      "last_relative_residual": 4.2293600847531753e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792918080.3981566,
+        "no_accepted_full_case": true
+      },
+      "archived": true
+    },
+    {
+      "sample_id": "normal_rodv2_0154__compression_skew",
+      "started_unix": 1792917578.2621765,
+      "solver_source_sha256": "799ec5ee9f4560ca40e9df3c450b8384cb6bac2553758f0c44efd62dbc95a5a9",
+      "method": "优先完整牛顿步／有限试探回溯",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": null,
+      "elapsed_seconds": 120.91304111480713,
+      "last_relative_residual": 0.11989623035522515,
+      "failure": {
+        "error": "RuntimeError('Newton step not admissible; no fallback physics')",
+        "time_unix": 1792917705.8461077,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0096__gas_inertia_30deg",
+      "started_unix": 1792918134.6062946,
+      "solver_source_sha256": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+      "method": "冻结历史／约束算法切线预测的数值伪弧长",
+      "state": "failed",
+      "last_accepted_load_factor": 0.4,
+      "attempted_load_factor": 0.5,
+      "numerical_trial_load_factor": 0.43871053286379597,
+      "elapsed_seconds": 348.1788568496704,
+      "last_relative_residual": 2.2288196204388205e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792918490.7182398,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "started_unix": 1792918489.657926,
+      "solver_source_sha256": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+      "method": "冻结历史／约束算法切线预测的数值伪弧长",
+      "state": "failed",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.6926785422738572,
+      "elapsed_seconds": 219.01586246490479,
+      "last_relative_residual": 8.025920174525103e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792918716.8177636,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0079__compression_skew",
+      "started_unix": 1792918719.694614,
+      "solver_source_sha256": "431003ed194afe8d13545921d00a0da9b250b89821e3ccb9d592a8bff1fab589",
+      "method": "冻结历史／约束算法切线预测的数值伪弧长",
+      "state": "running",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 0.9342053869388044,
+      "elapsed_seconds": 145.70987582206726,
+      "last_relative_residual": 1.290761945701697,
       "failure": null,
       "archived": false
     }
