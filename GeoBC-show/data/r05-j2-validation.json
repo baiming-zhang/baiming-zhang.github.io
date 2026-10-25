@@ -1,4 +1,24 @@
 {
+  "elastic_path_comparison_0053": {
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "scope": "Scalar maxima and equilibrium history only; not a complete raw-field comparison",
+    "common_accepted_states": 7,
+    "last_common_load_factor": 0.7,
+    "maximum_VM_history_absolute_difference_MPa": 2.11125137639101e-06,
+    "maximum_min_J_history_absolute_difference": 8.921197114375445e-12,
+    "elastic_CPU_failure": {
+      "error": "RuntimeError('Yield detected: full J2 return map required; elastic-branch comparison invalid')",
+      "time_unix": 1792892551.7271135,
+      "no_accepted_full_case": true
+    },
+    "GPU_failure": {
+      "error": "RuntimeError('Yield detected: full J2 return map required; elastic-branch comparison invalid')",
+      "time_unix": 1792893206.4102037,
+      "no_accepted_full_case": true
+    },
+    "interpretation": "The two original virgin-elastic methods match through 70% load, and neither exports an accepted full-load case. CPU detects yield at the next target; full-J2 recovery is required. This comparison does not establish stability.",
+    "created_unix": 1792893348.99383
+  },
   "material_points": {
     "scope": "Material-point prototype only, not a production FE recovery solver",
     "reference": "Unmodified CalculiX incplas.f compiled as an independent static-isotropic oracle",
@@ -210,15 +230,15 @@
     },
     {
       "sample_id": "normal_rodv2_0053__compression_skew",
-      "state": "failed",
+      "state": "running",
       "solver_status": {
         "phase": "newton",
-        "pid": 3384,
-        "elapsed_seconds": 100.25705027580261,
-        "step": 7,
-        "load_factor": 0.8,
-        "iteration": 4,
-        "free_residual_relative": NaN
+        "pid": 3912,
+        "elapsed_seconds": 144.61229467391968,
+        "step": 3,
+        "load_factor": 0.4,
+        "iteration": 20,
+        "free_residual_relative": 0.11870327747794751
       }
     }
   ]

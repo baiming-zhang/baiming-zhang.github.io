@@ -1,15 +1,16 @@
 {
   "task": "R05",
-  "updated_beijing": "2026-10-25T09:49:49.417714+08:00",
+  "updated_beijing": "2026-10-25T09:57:00.227369+08:00",
   "target": 1000,
-  "effective_success": 187,
+  "effective_success": 194,
   "worker_configuration": {
     "cuda_workers": 2,
-    "cpu_workers": 2
+    "cpu_workers": 1
   },
-  "gpu_success": 102,
-  "cpu_success": 85,
-  "unresolved": 813,
+  "temporary_cpu_slot_task": "Validated damped-Newton full-J2 retry of 0053, then restore two CPU workers",
+  "gpu_success": 103,
+  "cpu_success": 91,
+  "unresolved": 806,
   "full_J2_recovered": 2,
   "stability_representatives": [
     {
@@ -54,30 +55,24 @@
     }
   ],
   "phase": "running",
-  "elapsed_recovery_seconds": 5082.204780101776,
+  "elapsed_recovery_seconds": 5513.014435529709,
   "active": {
-    "normal_rodv2_0053__compression_skew": {
+    "normal_rodv2_0057__tension_skew": {
       "method": "cuda_cg",
       "worker_id": "cuda_cg_1",
-      "started_unix": 1792892768.4064538,
+      "started_unix": 1792893209.7659628,
       "phase": "solving"
     },
-    "normal_rodv2_0055__tension_skew": {
+    "normal_rodv2_0057__compression_skew": {
       "method": "cpu_direct",
       "worker_id": "cpu_direct_1",
-      "started_unix": 1792892936.17017,
+      "started_unix": 1792893246.4342704,
       "phase": "solving"
     },
-    "normal_rodv2_0055__compression_skew": {
+    "normal_rodv2_0057__gas_inertia_30deg": {
       "method": "cuda_cg",
       "worker_id": "cuda_cg_2",
-      "started_unix": 1792892955.9827623,
-      "phase": "solving"
-    },
-    "normal_rodv2_0054__gas_inertia_30deg": {
-      "method": "cpu_direct",
-      "worker_id": "cpu_direct_2",
-      "started_unix": 1792892959.4014103,
+      "started_unix": 1792893270.8815432,
       "phase": "solving"
     }
   },
@@ -88,7 +83,9 @@
     "-8": 12
   },
   "old_scheduler_resource_waits": 879,
-  "blocked": [],
+  "blocked": [
+    "normal_rodv2_0053__compression_skew"
+  ],
   "diagnostic_outcomes": [
     {
       "sample_id": "extreme_rodv2_0027__overpressure",
@@ -700,7 +697,13 @@
       "production_completions": 3
     }
   ],
-  "unresolved_cases": [],
+  "unresolved_cases": [
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "error": "RuntimeError('Yield detected: full J2 return map required; elastic-branch comparison invalid')",
+      "category": "yield_requires_full_J2"
+    }
+  ],
   "acceptance": "1000 unique frozen sample IDs with full 10 accepted states, finite fields, native identities and residual <2e-7; failures, waits and benchmark-only runs excluded.",
   "constitutive_scope": "E=115100 MPa, nu=0.28; frozen virgin elastic branch plus separately validated full-J2 recovery; plastic strain capped at material data limit 0.00951460622563769. No dataset unload claim.",
   "samples": [
@@ -4847,9 +4850,197 @@
       "max_PEEQ": 0.0,
       "full_J2_recovery": false,
       "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0055__tension_skew",
+      "geometry_case_id": "rodv2_0055",
+      "group": "normal",
+      "split": "train",
+      "scenario": "tension_skew",
+      "fields_sha256": "f30f7dc7a395bf098c67ab2c3aaba59f88285054aa6ca16c7aac33e8502816eb",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 80.82197260856628,
+      "max_U_mm": 0.867399713099751,
+      "max_GP_von_Mises_MPa": 261.4332954471274,
+      "max_relative_residual": 6.0407384277962194e-09,
+      "min_J": 0.9981205168808336,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792893027.6733692,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0054__gas_inertia_30deg",
+      "geometry_case_id": "rodv2_0054",
+      "group": "normal",
+      "split": "train",
+      "scenario": "gas_inertia_30deg",
+      "fields_sha256": "0f313ca7edd988f5d3e5d5e75132cb1fb545c74077eaa37261c16adbbe08c218",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 89.53374671936035,
+      "max_U_mm": 0.19394808941367309,
+      "max_GP_von_Mises_MPa": 216.6513450863238,
+      "max_relative_residual": 5.603333962255432e-08,
+      "min_J": 0.9987911691538665,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792893055.9509847,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0055__gas_inertia_30deg",
+      "geometry_case_id": "rodv2_0055",
+      "group": "normal",
+      "split": "train",
+      "scenario": "gas_inertia_30deg",
+      "fields_sha256": "b60ae240602215dd01c466432f97f940394f0a583c0a8a4c8db441069e0fe964",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 60.05901050567627,
+      "max_U_mm": 0.22407630216337632,
+      "max_GP_von_Mises_MPa": 304.83053303868604,
+      "max_relative_residual": 1.2067687491171128e-07,
+      "min_J": 0.9977743388469904,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792893093.742475,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0055__inertia_tdc",
+      "geometry_case_id": "rodv2_0055",
+      "group": "normal",
+      "split": "train",
+      "scenario": "inertia_tdc",
+      "fields_sha256": "60793972a161875e376396079f4d2285a7a19e6ca5fb9b9bcc086e715cd1282f",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 52.22605323791504,
+      "max_U_mm": 0.05389241757362365,
+      "max_GP_von_Mises_MPa": 127.63370500147934,
+      "max_relative_residual": 5.609189309805023e-10,
+      "min_J": 0.999065172347687,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792893117.0991883,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0057__tension",
+      "geometry_case_id": "rodv2_0057",
+      "group": "normal",
+      "split": "train",
+      "scenario": "tension",
+      "fields_sha256": "2719f6f0863abeeb52063c7d91ad70adc53b82780d1531f49f637566860a374d",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 146.29205679893494,
+      "max_U_mm": 0.0507131517258961,
+      "max_GP_von_Mises_MPa": 89.5289340258788,
+      "max_relative_residual": 3.098929155703804e-10,
+      "min_J": 0.9998031641387527,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792893246.319406,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0057__compression",
+      "geometry_case_id": "rodv2_0057",
+      "group": "normal",
+      "split": "train",
+      "scenario": "compression",
+      "fields_sha256": "74d1f85f45f18b84ac0067d8aa9baa6b82e5c287c9868c1fa3b8ecaa00ad1cf5",
+      "backend": "cpu",
+      "linear_solver": "direct",
+      "seconds": 145.89094185829163,
+      "max_U_mm": 0.0360269786269894,
+      "max_GP_von_Mises_MPa": 89.53703819506576,
+      "max_relative_residual": 3.118454490146615e-10,
+      "min_J": 0.9995646875898374,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cpu_direct",
+      "verified_unix": 1792893269.6400194,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
+    },
+    {
+      "sample_id": "normal_rodv2_0055__compression_skew",
+      "geometry_case_id": "rodv2_0055",
+      "group": "normal",
+      "split": "train",
+      "scenario": "compression_skew",
+      "fields_sha256": "548779f5a55a30c50b85876aa691ecd975612a434401943d1f32744660c559e5",
+      "backend": "cuda",
+      "linear_solver": "iterative",
+      "seconds": 307.0052914619446,
+      "max_U_mm": 1.8718779128026364,
+      "max_GP_von_Mises_MPa": 191.9128365593254,
+      "max_relative_residual": 1.9922171475262292e-07,
+      "min_J": 0.9985087168592759,
+      "accepted_states": 10,
+      "origin": "recovery_v2_cuda_cg",
+      "verified_unix": 1792893270.8084493,
+      "identity_finite_equilibrium_gates_passed": true,
+      "constitutive_scope": "source-matched finite-strain J2 virgin elastic branch; abort on yield",
+      "physical_inputs_unchanged": true,
+      "max_PEEQ": 0.0,
+      "full_J2_recovery": false,
+      "stability_status": "not_assessed"
     }
   ],
   "full_J2_extension": {
+    "elastic_path_comparison_0053": {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "scope": "Scalar maxima and equilibrium history only; not a complete raw-field comparison",
+      "common_accepted_states": 7,
+      "last_common_load_factor": 0.7,
+      "maximum_VM_history_absolute_difference_MPa": 2.11125137639101e-06,
+      "maximum_min_J_history_absolute_difference": 8.921197114375445e-12,
+      "elastic_CPU_failure": {
+        "error": "RuntimeError('Yield detected: full J2 return map required; elastic-branch comparison invalid')",
+        "time_unix": 1792892551.7271135,
+        "no_accepted_full_case": true
+      },
+      "GPU_failure": {
+        "error": "RuntimeError('Yield detected: full J2 return map required; elastic-branch comparison invalid')",
+        "time_unix": 1792893206.4102037,
+        "no_accepted_full_case": true
+      },
+      "interpretation": "The two original virgin-elastic methods match through 70% load, and neither exports an accepted full-load case. CPU detects yield at the next target; full-J2 recovery is required. This comparison does not establish stability.",
+      "created_unix": 1792893348.99383
+    },
     "material_points": {
       "scope": "Material-point prototype only, not a production FE recovery solver",
       "reference": "Unmodified CalculiX incplas.f compiled as an independent static-isotropic oracle",
@@ -5061,15 +5252,15 @@
       },
       {
         "sample_id": "normal_rodv2_0053__compression_skew",
-        "state": "failed",
+        "state": "running",
         "solver_status": {
           "phase": "newton",
-          "pid": 3384,
-          "elapsed_seconds": 100.25705027580261,
-          "step": 7,
-          "load_factor": 0.8,
-          "iteration": 4,
-          "free_residual_relative": NaN
+          "pid": 3912,
+          "elapsed_seconds": 144.61229467391968,
+          "step": 3,
+          "load_factor": 0.4,
+          "iteration": 20,
+          "free_residual_relative": 0.11870327747794751
         }
       }
     ]
