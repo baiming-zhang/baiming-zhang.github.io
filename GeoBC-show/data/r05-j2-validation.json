@@ -2604,11 +2604,10 @@
   },
   "thickness_full3d_lane": {
     "pid": 45696,
-    "stage": "original_full_3D_recovery",
-    "updated_unix": 1792945553.6770403,
+    "stage": "complete",
+    "updated_unix": 1792947048.8775322,
     "sample_id": "normal_rodv2_0053__compression_skew",
-    "source_review_sha256": "53506e3d5cfad5f2b73aced22d2fc3b1e6e8d76f0bb0c77f5341d78f4ca6a625",
-    "temporary_plane_released": true
+    "has_full_result": false
   },
   "thickness_initial_data": {
     "source_kind": "GPU_fixed_block_thickness_relaxation_initial_U_v1",
@@ -2867,6 +2866,72 @@
       ]
     },
     "candidate_improves_elastic_residual": true
+  },
+  "joint_mode_elastic": {
+    "pid": 25240,
+    "stage": "two_unique_ID_CPU_lanes",
+    "updated_unix": 1792947382.979961,
+    "mode_pid": 44780,
+    "elastic_seed_pid": 47060,
+    "max_CPU": 2
+  },
+  "elastic_seed_lane": {
+    "pid": 47060,
+    "stage": "full_J2_original_3D_recovery",
+    "updated_unix": 1792947481.1139643,
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "source_review_sha256": "e855ad6f106ca923a9fa95d1c4497ba060eff2bc8430c6b525fa5c87fedf1a73",
+    "rejected_elastic_state_not_a_label": true
+  },
+  "thickness_full3d_trial": {
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "state": "failed_not_counted",
+    "original_outcome": {
+      "state": "failed",
+      "exit_code": 1,
+      "not_counted": true,
+      "detail": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792947048.463281,
+        "no_accepted_full_case": true
+      }
+    },
+    "original_targets_accepted": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "formal_last_target": 0.7,
+    "solver": "unchanged_arc_tail_v2",
+    "initial_data": "thickness_relaxed_inputs_v1",
+    "elapsed_native_seconds": 1485.7189719676971,
+    "failure_class": "numerical_arc_step_exhausted_not_time_bound",
+    "note": "The corrected auxiliary guess did not recover the original 80% target. No repeat of the same data/source or extra budget.",
+    "updated_unix": 1792947412.6341484
+  },
+  "yield_rejected_elastic_source": {
+    "sample_id": "normal_rodv2_0053__compression_skew",
+    "source_kind": "original_yield_rejected_elastic_equilibrium_U_only",
+    "original_solver_sha256": "7446421972c870811d3c8738436653dee85da0953121044647bc22da6a464690",
+    "geometry_sha256": "b19f836c9c1879fecc74c2fd4905398e92996e539fedf6f95c9bfbf61bb21df2",
+    "target_load_sha256": "275a3e1b5b86bb9241b5d65252a0da976110f9ad651d546bef162a3076f571a7",
+    "source_guard_triggered": true,
+    "load_factor": 0.8,
+    "elastic_equilibrium_residual": 2.5363766042424634e-08,
+    "elastic_trial_VM_MPa": 1635.4685365261068,
+    "min_J": 0.9934956108124563,
+    "mean_mm": [
+      -8.131751618989622e-21,
+      -7.675873034216183e-20
+    ],
+    "not_a_material_valid_J2_state": true,
+    "no_material_history_exported": true,
+    "counted": false,
+    "scope": "Original source and guard unchanged. Only U is captured from the exception frame, never accepted as a label; every target and plastic history must be recomputed by the separate full J2 solver."
   },
   "ccx_printout_residual_reviews": [
     {
@@ -4152,38 +4217,46 @@
     },
     {
       "sample_id": "extreme_rodv2_0135__combined_bending",
-      "state": "running",
+      "state": "failed",
+      "last_failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792946580.0227807,
+        "no_accepted_full_case": true
+      },
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
       "solver_status": {
-        "phase": "newton",
+        "phase": "numerical_mode_plane",
         "pid": 28476,
-        "elapsed_seconds": 22.314337491989136,
+        "elapsed_seconds": 386.0819888114929,
         "step": 4,
-        "load_factor": 0.5,
-        "iteration": 10,
-        "free_residual_relative": 0.4134344438741283,
-        "numerical_root_tolerance": 2e-07
+        "original_target": 0.5,
+        "numerical_load": 0.592672282343564,
+        "amplitude_mm": -21.25,
+        "iteration": 5,
+        "free_residual_relative": 1.805151777599881e-10,
+        "numerical_constraint_mm": 0.0
       }
     },
     {
       "sample_id": "extreme_rodv2_0154__combined_bending",
       "state": "failed",
       "last_failure": {
-        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
-        "time_unix": 1792938513.8022778,
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792946827.553202,
         "no_accepted_full_case": true
       },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
       "solver_status": {
-        "phase": "numerical_arc",
-        "pid": 26861,
-        "elapsed_seconds": 759.3877470493317,
+        "phase": "numerical_mode_plane",
+        "pid": 28513,
+        "elapsed_seconds": 243.79145312309265,
         "step": 5,
         "original_target": 0.6,
-        "numerical_load": -0.713755703430371,
-        "arc_iteration": 2,
-        "free_residual_relative": 3.617546817083378e-11,
-        "arc_constraint": -3.613861040202348e-16
+        "numerical_load": 0.728009304782115,
+        "amplitude_mm": -21.25,
+        "iteration": 5,
+        "free_residual_relative": 3.518515151353584e-10,
+        "numerical_constraint_mm": -2.1316282072803006e-14
       }
     },
     {
@@ -4230,21 +4303,22 @@
       "sample_id": "extreme_rodv2_0158__combined_bending",
       "state": "failed",
       "last_failure": {
-        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
-        "time_unix": 1792944581.8758934,
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792947459.8502707,
         "no_accepted_full_case": true
       },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
       "solver_status": {
-        "phase": "numerical_arc",
-        "pid": 27869,
-        "elapsed_seconds": 923.7935738563538,
+        "phase": "numerical_mode_plane",
+        "pid": 28617,
+        "elapsed_seconds": 626.1792607307434,
         "step": 9,
         "original_target": 1.0,
-        "numerical_load": -0.8099609971495628,
-        "arc_iteration": 2,
-        "free_residual_relative": 1.3159111451369212e-11,
-        "arc_constraint": -4.8615720705456585e-17
+        "numerical_load": 1.4187724838010685,
+        "amplitude_mm": -13.75,
+        "iteration": 5,
+        "free_residual_relative": 3.394537789665101e-11,
+        "numerical_constraint_mm": -1.0658141036401503e-14
       }
     },
     {
@@ -4323,23 +4397,19 @@
     },
     {
       "sample_id": "normal_rodv2_0051__compression_skew",
-      "state": "failed",
-      "last_failure": {
-        "error": "RuntimeError('Numerical arc attempt limit; no original target accepted')",
-        "time_unix": 1792932348.774187,
-        "no_accepted_full_case": true
-      },
-      "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
+      "state": "running",
+      "solver_module": "tools.rod_fenicsx_solver_r05_j2_mode_plane_tail",
       "solver_status": {
-        "phase": "numerical_arc",
-        "pid": 24206,
-        "elapsed_seconds": 936.0508365631104,
+        "phase": "numerical_mode_plane",
+        "pid": 28983,
+        "elapsed_seconds": 69.0437753200531,
         "step": 7,
         "original_target": 0.8,
-        "numerical_load": -0.43617895564150116,
-        "arc_iteration": 2,
-        "free_residual_relative": 1.6407762330396496e-09,
-        "arc_constraint": -1.237953475488737e-16
+        "numerical_load": 0.513525145179312,
+        "amplitude_mm": 5.0,
+        "iteration": 1,
+        "free_residual_relative": 0.07763362285074712,
+        "numerical_constraint_mm": 2.6645352591003757e-15
       }
     },
     {
@@ -4348,14 +4418,14 @@
       "solver_module": "tools.rod_fenicsx_solver_r05_j2_arclength_tail",
       "solver_status": {
         "phase": "numerical_arc",
-        "pid": 28433,
-        "elapsed_seconds": 656.3294336795807,
+        "pid": 29017,
+        "elapsed_seconds": 45.6200909614563,
         "step": 7,
         "original_target": 0.8,
-        "numerical_load": 0.43475529245060734,
-        "arc_iteration": 5,
-        "free_residual_relative": 2.2633432914123982e-09,
-        "arc_constraint": 1.3160859121258417e-16
+        "numerical_load": 0.7041289829025924,
+        "arc_iteration": 2,
+        "free_residual_relative": 1.4180890364901315e-05,
+        "arc_constraint": -3.7304686249794994e-16
       }
     },
     {
@@ -6427,7 +6497,7 @@
         "time_unix": 1792932348.774187,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "normal_rodv2_0135__compression",
@@ -6717,7 +6787,7 @@
         "time_unix": 1792938513.8022778,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "extreme_rodv2_0135__combined_bending",
@@ -6989,7 +7059,7 @@
         "time_unix": 1792944581.8758934,
         "no_accepted_full_case": true
       },
-      "archived": false
+      "archived": true
     },
     {
       "sample_id": "extreme_rodv2_0040__combined_bending",
@@ -7050,14 +7120,18 @@
       "started_unix": 1792945553.7693408,
       "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
       "method": "原CCX有界尾段／真切向弧长与交点细化",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.7,
       "attempted_load_factor": 0.8,
-      "numerical_trial_load_factor": 0.43475529245060734,
-      "elapsed_seconds": 656.3294336795807,
-      "last_relative_residual": 2.2633432914123982e-09,
-      "failure": null,
-      "archived": false
+      "numerical_trial_load_factor": 0.4302571977913105,
+      "elapsed_seconds": 1485.7189719676971,
+      "last_relative_residual": 2.089531062020359e-09,
+      "failure": {
+        "error": "RuntimeError('Numerical arc step exhausted; original target not accepted')",
+        "time_unix": 1792947048.463281,
+        "no_accepted_full_case": true
+      },
+      "archived": true
     },
     {
       "sample_id": "extreme_rodv2_0061__combined_bending",
@@ -7082,12 +7156,80 @@
       "started_unix": 1792946187.220312,
       "solver_source_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
       "method": "独立有界CCX尾段／模态幅值数值分支",
-      "state": "running",
+      "state": "failed",
       "last_accepted_load_factor": 0.4,
       "attempted_load_factor": 0.5,
-      "numerical_trial_load_factor": null,
-      "elapsed_seconds": 22.314337491989136,
-      "last_relative_residual": 0.4134344438741283,
+      "numerical_trial_load_factor": 0.592672282343564,
+      "elapsed_seconds": 386.0819888114929,
+      "last_relative_residual": 1.805151777599881e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792946580.0227807,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "extreme_rodv2_0154__combined_bending",
+      "started_unix": 1792946577.28055,
+      "solver_source_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+      "method": "独立有界CCX尾段／模态幅值数值分支",
+      "state": "failed",
+      "last_accepted_load_factor": 0.5,
+      "attempted_load_factor": 0.6,
+      "numerical_trial_load_factor": 0.728009304782115,
+      "elapsed_seconds": 243.79145312309265,
+      "last_relative_residual": 3.518515151353584e-10,
+      "failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792946827.553202,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "extreme_rodv2_0158__combined_bending",
+      "started_unix": 1792946827.3206236,
+      "solver_source_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+      "method": "独立有界CCX尾段／模态幅值数值分支",
+      "state": "failed",
+      "last_accepted_load_factor": 0.9,
+      "attempted_load_factor": 1.0,
+      "numerical_trial_load_factor": 1.4187724838010685,
+      "elapsed_seconds": 626.1792607307434,
+      "last_relative_residual": 3.394537789665101e-11,
+      "failure": {
+        "error": "RuntimeError('Numerical signed-mode attempt budget or amplitude list exhausted; no original target accepted')",
+        "time_unix": 1792947459.8502707,
+        "no_accepted_full_case": true
+      },
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0051__compression_skew",
+      "started_unix": 1792947457.386906,
+      "solver_source_sha256": "d9380aa4fcd03beb509c29b7116c283913e7ded652712e155446f2878919c483",
+      "method": "独立有界CCX尾段／模态幅值数值分支",
+      "state": "running",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.513525145179312,
+      "elapsed_seconds": 69.0437753200531,
+      "last_relative_residual": 0.07763362285074712,
+      "failure": null,
+      "archived": false
+    },
+    {
+      "sample_id": "normal_rodv2_0053__compression_skew",
+      "started_unix": 1792947481.2091637,
+      "solver_source_sha256": "9d5ce7a7048ce88374f532ee23e550072515a404814f27d375b19681693655cc",
+      "method": "原CCX有界尾段／真切向弧长与交点细化",
+      "state": "running",
+      "last_accepted_load_factor": 0.7,
+      "attempted_load_factor": 0.8,
+      "numerical_trial_load_factor": 0.7041289829025924,
+      "elapsed_seconds": 45.6200909614563,
+      "last_relative_residual": 1.4180890364901315e-05,
       "failure": null,
       "archived": false
     }
