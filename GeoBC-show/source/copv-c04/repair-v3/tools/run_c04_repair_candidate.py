@@ -23,7 +23,7 @@ def main():
     if args.backend=='linux':
         shellfile=root/'run_mesh_linux.sh';shelltext=shellfile.read_text();shelltext=shelltext.replace('\nexec ', '\nexport COPV_C04_LINEAR_OPTIMIZER='+shlex.quote(os.environ.get('COPV_C04_LINEAR_OPTIMIZER','none'))+'\nexport COPV_C04_COLLAR_FRONTAL='+shlex.quote(os.environ.get('COPV_C04_COLLAR_FRONTAL','0'))+'\nexec timeout --signal=TERM --kill-after=10s 850s ');shellfile.write_bytes(shelltext.encode())
         extra=''
-        for key in ['COPV_C04_SURFACE_CHECKPOINT','COPV_C04_MAX_SURFACE_NODES','COPV_C04_ROOT_BAND_MM','COPV_C04_MATCH_ROOT_CIRCLES']:
+        for key in ['COPV_C04_SURFACE_CHECKPOINT','COPV_C04_MAX_SURFACE_NODES','COPV_C04_ROOT_BAND_MM','COPV_C04_MATCH_ROOT_CIRCLES','COPV_C04_FRONTAL_PARTS','COPV_C04_ADJACENT_ROOT_BAND']:
             if key in os.environ:extra+='export '+key+'='+shlex.quote(linux(os.environ[key]) if key.endswith('CHECKPOINT') else os.environ[key])+'\n'
         shellfile.write_bytes(shelltext.replace('\nexec ','\n'+extra+'exec ').encode())
     state=dict(case_id=args.case,attempt=args.attempt,pid=os.getpid(),phase='meshing',started=datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),command=cmd,partition_file=str(partition/'structural_partition.brep'),backend=args.backend,max_cells=args.max_cells,linear_optimizer=os.environ.get('COPV_C04_LINEAR_OPTIMIZER','none'),source_sha256=hashlib.sha256(frozen.read_bytes()).hexdigest(),partition_sha256=hashlib.sha256((partition/'structural_partition.brep').read_bytes()).hexdigest(),new_FE_labels=0)

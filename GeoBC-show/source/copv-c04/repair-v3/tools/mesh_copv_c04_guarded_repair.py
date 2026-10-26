@@ -31,7 +31,7 @@ def main():
             tags=[t for t,v in pid.items() if v==p];gmsh.model.addPhysicalGroup(3,tags,p);gmsh.model.setPhysicalName(3,p,'part_'+str(p))
         options={'Mesh.MeshSizeMin':.15,'Mesh.MeshSizeMax':args.h,'Mesh.MeshSizeFromCurvature':0,'Mesh.MeshSizeFromPoints':0,'Mesh.MeshSizeExtendFromBoundary':0,'Mesh.Algorithm':6,'Mesh.Algorithm3D':algorithm,'Mesh.MaxNumThreads3D':1,'Mesh.MaxNumThreads2D':1,'Mesh.RandomSeed':args.seed,'Mesh.SecondOrderLinear':1,'Mesh.Binary':1,'Mesh.SaveAll':1}
         for key,val in options.items():gmsh.option.setNumber(key,val)
-        params=report['parameters_mm'];roots=[];root_band=float(__import__('os').environ.get('COPV_C04_ROOT_BAND_MM','.75'));matched_root_band=__import__('os').environ.get('COPV_C04_MATCH_ROOT_CIRCLES')=='1'
+        params=report['parameters_mm'];roots=[];root_band=float(__import__('os').environ.get('COPV_C04_ROOT_BAND_MM','.75'));matched_root_band=__import__('os').environ.get('COPV_C04_MATCH_ROOT_CIRCLES')=='1';frontal_parts=set(map(int,__import__('os').environ.get('COPV_C04_FRONTAL_PARTS','7,8').split(',')));adjacent_band=__import__('os').environ.get('COPV_C04_ADJACENT_ROOT_BAND')=='1'
         for sign,role in [(1,7),(-1,8)]:
             role_vols=[t for t,p in pid.items() if p==role];bounds=[gmsh.model.getBoundingBox(3,t) for t in role_vols];z0=min(b[2] for b in bounds) if sign>0 else -max(b[5] for b in bounds)
             # Exact collar boundary circle at its initial axial plane.
@@ -55,7 +55,7 @@ def main():
             f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F','1.0');g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',port_faces);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
         for z0,radius in roots:
             f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},1.8*Sqrt((Sqrt(x*x+y*y)-{radius})^2+(Abs(z)-{z0})^2))';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [1,2,3,4,5,6,7,8]])
-            f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},Max(0,Abs(Abs(z)-{z0})-{root_band})*.6)';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [7,8]])
+            f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},Max(0,Abs(Abs(z)-{z0})-{root_band})*.6)';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in ([6,7,8] if adjacent_band else [7,8])])
         # Resolve meridian curvature against the 0.15mm bondline, without applying
         # tiny port-fillet curvature to the entire vessel surface.
         rz,normal=analytic_segments(params,(4,1500,16,1500,4));arc=np.r_[0.,np.cumsum(np.linalg.norm(np.diff(rz,axis=0),axis=1))];unique=np.r_[True,np.diff(arc)>1e-10];rz=rz[unique];normal=normal[unique];arc=arc[unique];kappa=np.linalg.norm(np.gradient(normal,arc,axis=0),axis=1);meridian_sizes=[]
@@ -98,6 +98,7 @@ def main():
             count=max(c['segments'] for c in group)
             for circle in group:circle['segments']=count;gmsh.model.mesh.setTransfiniteCurve(circle['curve'],count+1)
         report['repair_recipe']=dict(options=options,roots=roots,circles=circles,torus_surface_only_size_mm=.25,torus_faces=torus_faces,torus_boundary_controls=torus_boundary_controls,collar_frontal=__import__('os').environ.get('COPV_C04_COLLAR_FRONTAL')=='1',root_band_mm=root_band,matched_root_circle_sizing=matched_root_band,linear_optimizer=__import__('os').environ.get('COPV_C04_LINEAR_OPTIMIZER','none'),meridian_curvature_size_controls=meridian_sizes,nominal_meridian_chord_target_mm=.015,shell_h=args.shell_h,bond_h=args.bond_h,root_h=args.root_h,scope='Same BREP/materials. Explicit torus-boundary segmentation removes under-resolved transverse fillet chords; not a fully swept/multiblock layer topology.',source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),partition_sha256=hashlib.sha256(args.partition.read_bytes()).hexdigest())
+        report['repair_recipe'].update(frontal_part_ids=sorted(frontal_parts),adjacent_outer_ply_root_band=adjacent_band)
         if args.recipe=='baseline':
             gmsh.model.mesh.removeConstraints();gmsh.model.mesh.field.remove(f);uniform=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(uniform,'F',str(args.h));gmsh.model.mesh.field.setAsBackgroundMesh(uniform)
             for key,value in [('Mesh.MeshSizeMin',.5),('Mesh.MeshSizeFromCurvature',64),('Mesh.MeshSizeFromPoints',1)]:gmsh.option.setNumber(key,value);options[key]=value
@@ -115,7 +116,7 @@ def main():
             if len(gmsh.model.mesh.getNodes()[0])>surface_cap:raise RuntimeError('Surface node resource guard: retain attempt, do not start volume generation')
             if not surface_checkpoint:gmsh.write(str(out/'surface_checkpoint.msh'))
             if __import__('os').environ.get('COPV_C04_COLLAR_FRONTAL')=='1':
-                gmsh.option.setNumber('Mesh.MeshOnlyVisible',1);gmsh.model.setVisibility(vols,0);gmsh.model.setVisibility([(3,t) for t,p in pid.items() if p not in [7,8]],1);gmsh.model.mesh.generate(3);state('noncollar_Delaunay_generated');gmsh.model.setVisibility(vols,0);gmsh.model.setVisibility([(3,t) for t,p in pid.items() if p in [7,8]],1);gmsh.option.setNumber('Mesh.Algorithm3D',4);gmsh.model.mesh.generate(3);gmsh.option.setNumber('Mesh.MeshOnlyVisible',0);gmsh.model.setVisibility(vols,1);assert all(sum(len(e) for e in gmsh.model.mesh.getElements(3,t)[1])>0 for t in pid),'Hybrid recipe left an empty material region';state('collar_Frontal_generated')
+                gmsh.option.setNumber('Mesh.MeshOnlyVisible',1);gmsh.model.setVisibility(vols,0);gmsh.model.setVisibility([(3,t) for t,p in pid.items() if p not in frontal_parts],1);gmsh.model.mesh.generate(3);state('selected_Delaunay_generated',part_ids=sorted(set(pid.values())-frontal_parts));gmsh.model.setVisibility(vols,0);gmsh.model.setVisibility([(3,t) for t,p in pid.items() if p in frontal_parts],1);gmsh.option.setNumber('Mesh.Algorithm3D',4);gmsh.model.mesh.generate(3);gmsh.option.setNumber('Mesh.MeshOnlyVisible',0);gmsh.model.setVisibility(vols,1);assert all(sum(len(e) for e in gmsh.model.mesh.getElements(3,t)[1])>0 for t in pid),'Hybrid recipe left an empty material region';state('selected_Frontal_generated',part_ids=sorted(frontal_parts))
             else:gmsh.model.mesh.generate(3)
         log=gmsh.logger.get();write('gmsh_messages.json',log)
         if any(line.startswith('Error:') for line in log):raise RuntimeError('Gmsh reported a meshing error; inspect gmsh_messages.json and failed_mesh.msh')
