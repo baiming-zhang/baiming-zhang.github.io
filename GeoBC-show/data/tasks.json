@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27 07:22 北京时间",
+  "updated": "2026-10-26T23:27:44.804064+00:00",
   "tasks": [
     {
       "id": "R01",
@@ -146,12 +146,12 @@
       "phase": "第1周",
       "title": "Connecting rod 批量数据",
       "due": "2026-10-27",
-      "status": "进行中",
+      "status": "已完成",
       "deliverables": "1000个有效样本；保留几何、网格、工况、场与后端记录",
       "review": "保存几何参数、mesh、工况和场数据，汇总有效/失败数量",
       "dependencies": "R04",
       "start": "2026-10-25",
-      "issues": "有效108/1000；GPU 78、CPU直接恢复 30。旧调度资源不足归为等待；真实数值失败持续对照恢复。",
+      "issues": "原15个未收敛ID排除并保留。已核身份、十目标、有限、正J、材料与平衡；未逐例认证稳定性或解的唯一性。",
       "page": "R05.html",
       "results": [
         {
@@ -169,6 +169,14 @@
         {
           "label": "进度与对照数据JSON",
           "url": "data/r05-summary.json"
+        },
+        {
+          "label": "1000例最终验收范围",
+          "url": "data/r05-final-acceptance.json"
+        },
+        {
+          "label": "20个三维模型与原始输入",
+          "url": "viewers/r05-models-20.html"
         }
       ]
     },
@@ -177,42 +185,81 @@
       "phase": "第1周",
       "title": "TS3 / MGN 数据接口",
       "due": "2026-10-25",
-      "status": "未开始",
+      "status": "已完成",
       "deliverables": "两个模型的数据加载与输入输出定义",
       "review": "核对坐标、连通性、边界特征、标签和归一化",
       "dependencies": "R03",
       "start": "2026-10-24",
-      "issues": "",
+      "issues": "原TET10全节点与二次边图；标准化只取对应TRAIN子集。输入不含响应或ID；validation/test未参与拟合。",
       "page": "R06.html",
-      "results": []
+      "results": [
+        {
+          "label": "共享数据接口与样本",
+          "url": "assets/r06-r08-overfit-large-v2/interface.json"
+        },
+        {
+          "label": "网络及训练配置",
+          "url": "assets/r06-r08-overfit-large-v2/config.json"
+        },
+        {
+          "label": "六组结果汇总",
+          "url": "R06.html"
+        }
+      ]
     },
     {
       "id": "R07",
       "phase": "第1周",
       "title": "TS3 小规模 overfitting",
       "due": "2026-10-27",
-      "status": "未开始",
+      "status": "已完成",
       "deliverables": "训练曲线、预测/真值/误差图、checkpoint",
-      "review": "建议固定 8–32 个样本，记录训练集误差并判断能否拟合",
+      "review": "按用户指定1/5/20条各训练2000轮；记录实测误差、曲线与checkpoint，不设误差通过线",
       "dependencies": "R04、R06",
       "start": "2026-10-25",
-      "issues": "",
+      "issues": "完成固定训练预算，不设误差通过线。1/5/20条位移平均L2为0.851%/3.850%/14.875%，节点VM为4.490%/13.021%/20.883%；仅训练集拟合。",
       "page": "R07.html",
-      "results": []
+      "results": [
+        {
+          "label": "六组训练实际结果与曲线",
+          "url": "assets/r06-r08-overfit-large-v2/results.json"
+        },
+        {
+          "label": "逐例误差CSV",
+          "url": "assets/r06-r08-overfit-large-v2/per_case.csv"
+        },
+        {
+          "label": "TS3预测图与三档权重",
+          "url": "R07.html"
+        }
+      ]
     },
     {
       "id": "R08",
       "phase": "第1周",
       "title": "MGN 小规模 overfitting",
       "due": "2026-10-27",
-      "status": "未开始",
+      "status": "已完成",
       "deliverables": "训练曲线、预测/真值/误差图、checkpoint",
-      "review": "使用与 TS3 相同样本和目标场，统一误差口径",
+      "review": "按用户指定1/5/20条各训练2000轮；记录实测误差、曲线与checkpoint，不设误差通过线",
       "dependencies": "R04、R06",
       "start": "2026-10-25",
-      "issues": "",
+      "issues": "完成固定训练预算，不设误差通过线。1/5/20条位移平均L2为0.437%/1.035%/2.117%，节点VM为1.851%/4.455%/11.238%；仅训练集拟合。",
       "page": "R08.html",
-      "results": []
+      "results": [
+        {
+          "label": "六组训练实际结果与曲线",
+          "url": "assets/r06-r08-overfit-large-v2/results.json"
+        },
+        {
+          "label": "逐例误差CSV",
+          "url": "assets/r06-r08-overfit-large-v2/per_case.csv"
+        },
+        {
+          "label": "MGN预测图与三档权重",
+          "url": "R08.html"
+        }
+      ]
     },
     {
       "id": "M01",
