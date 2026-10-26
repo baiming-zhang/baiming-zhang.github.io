@@ -1,6 +1,6 @@
 {
   "schema": "c04_repair_progress_v3",
-  "updated": "2026-10-27T05:48:34.250330+08:00",
+  "updated": "2026-10-27T05:49:57.768837+08:00",
   "status": "repair_in_progress",
   "historical": {
     "frozen_inputs": 20,
@@ -25660,6 +25660,7 @@
         ],
         "seconds": 4.930527299999085
       },
+      "native_bad_cell_ids_file": "curved_defects_v1/native_bad_cells.npz",
       "status": "candidate_rejected_by_preflight"
     },
     {
@@ -25765,6 +25766,24 @@
         {
           "stage": "linear_generated",
           "seconds": 120.70337243700124,
+          "cells": 2188370,
+          "min_J": 1.1232649971484746e-05,
+          "nonpositive": 0,
+          "min_SICN": 0.000780303865690507,
+          "below_005": 146
+        },
+        {
+          "stage": "straight_order2_canonicalized",
+          "seconds": 145.4335177590001,
+          "cells": 2188370,
+          "min_J": 1.1232649935087362e-05,
+          "nonpositive": 0,
+          "min_SICN": 0.0007803038650872125,
+          "below_005": 146
+        },
+        {
+          "stage": "linear_checkpoint",
+          "seconds": 148.3964266439998,
           "cells": 2188370,
           "min_J": 1.1232649971484746e-05,
           "nonpositive": 0,
