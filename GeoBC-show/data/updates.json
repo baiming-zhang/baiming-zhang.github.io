@@ -446,6 +446,23 @@
           "url": "data/copv-c04-final-sample-manifest.csv"
         }
       ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-26",
+      "title": "C04 失败问题定位：保留原始异常、优化翻转实例与薄层网格证据",
+      "summary": "完成4个指定输入的问题定位：8次阶段诊断、原始单元空间分布和同CAD面偏差检查，原尝试全部保留。",
+      "review": "项目生产放行记录仍为 0；SICN≥0.05 与逐材料区体积误差≤0.1% 是原项目筛选门槛，并非行业统一标准。新增失败诊断：首轮 Netgen 访问异常，复现捕捉 Relocate3D 诱发翻转；固定种子单线程对照可重复。薄胶层、极区补强与曲面离散仍需修复，诊断不等于修复验收。",
+      "links": [
+        {
+          "label": "失败日志与问题定位",
+          "url": "viewers/copv-c04-failures.html"
+        },
+        {
+          "label": "下载诊断证据",
+          "url": "data/copv-c04-diagnosis-evidence.zip"
+        }
+      ]
     }
   ]
 }

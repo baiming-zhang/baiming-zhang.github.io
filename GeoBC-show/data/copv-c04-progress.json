@@ -1,6 +1,6 @@
 {
   "schema": "copv_c04_progress_v1",
-  "updated": "2026-10-26T04:30:15.405436+08:00",
+  "updated": "2026-10-26T15:56:28.881022+08:00",
   "status": "completed_with_production_hold",
   "target_distinct_geometries": 20,
   "CAD_completed": 20,
@@ -2433,5 +2433,22 @@
     },
     "local_GP_saved": true,
     "seconds": 156.5495798587799
+  },
+  "failure_diagnosis": {
+    "status": "diagnostic_completed_no_production_promotion",
+    "date": "2026-10-26T15:56:28.881022+08:00",
+    "inputs": [
+      "copv_c04_0000",
+      "copv_c04_0011",
+      "copv_c04_0002",
+      "copv_c04_0018"
+    ],
+    "stage_meshing_runs": 8,
+    "new_FE_labels": 0,
+    "new_production_labels": 0,
+    "report": "data/copv-c04-diagnosis.json",
+    "viewer": "viewers/copv-c04-failures.html",
+    "evidence_zip": "data/copv-c04-diagnosis-evidence.zip",
+    "threshold_scope": "Original project screening gates; not universal industry limits; original attempts unchanged"
   }
 }
