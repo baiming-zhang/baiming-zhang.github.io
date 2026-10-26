@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T03:19:54.359399+08:00",
+  "updated": "2026-10-27T03:28:20.942894+08:00",
   "files": {
     "attempt001/mesh/failure.json": {
       "bytes": 263,
@@ -100,6 +100,10 @@
     "attempt012_guarded_curved_HXT/stages.json": {
       "bytes": 702,
       "sha256": "e89a411ec717556e24351bb8bfe12c914f676758e87821f9c7fd3d8aed6a9494"
+    },
+    "attempt013_guarded_curved_torus/local_geometry_hold.json": {
+      "bytes": 401,
+      "sha256": "da9602897a2f8baba5101baf3b8e1b8a0405b3a11b5988d49982abe398b92199"
     },
     "attempt013_guarded_curved_torus/preflight/review.json": {
       "bytes": 1115,
@@ -237,9 +241,17 @@
       "bytes": 238,
       "sha256": "a3ba7758437028755c2d707edb3fec5eaa7ff6c8c94c994b5f6fcee9b076fd26"
     },
+    "attempt027_local_J_from025/curving_guard_policy.json": {
+      "bytes": 348,
+      "sha256": "c9783aa05be80705b846424e83be27f67a34d442679934cd92b96b85d1af5aa5"
+    },
     "attempt027_local_J_from025/geometry_check/review.json": {
       "bytes": 100430,
       "sha256": "4d986c77756bd05fdf3e5b32babcaedd8b58926f1b17990bb0140c47f30352b5"
+    },
+    "attempt027_local_J_from025/preflight/review.json": {
+      "bytes": 1478,
+      "sha256": "16fd70b6b0b925881747264e2f8d9b3d87db6464a022b12c71d04f142968a0c4"
     },
     "attempt027_local_J_from025/projection_summary.json": {
       "bytes": 562,
@@ -265,21 +277,41 @@
       "bytes": 986,
       "sha256": "c477b5b1a2f5562a97bcd75c6ff76d9b4d5021f9e9f212a98ff15e61be22c9f8"
     },
+    "attempt029_matched_root_volume/mesh/failure.json": {
+      "bytes": 1191,
+      "sha256": "b4c8d49f6bc7dc756acc1f145c4f2ec5dcd95a505c38775f4edbc839f3f9922b"
+    },
     "attempt029_matched_root_volume/mesh/stages.json": {
-      "bytes": 110,
-      "sha256": "f8e022a20e79e1c999691a8abcdc4313c774bbf1493f9a36891f2c58a5bf29ae"
+      "bytes": 946,
+      "sha256": "93ef78577910a406546d82ad7c383f054d9b31ffef0b7a1a165c1dc462e1fd72"
     },
     "attempt029_matched_root_volume/state.json": {
-      "bytes": 954,
-      "sha256": "b0b1e0fb0f65a5c985839c0230397a4582e2de8e616fbdada39f1f96972195f1"
+      "bytes": 984,
+      "sha256": "eb403fd3a0210861cb5d3b33896dcc7de190aa6837039ed5cf36957b34ca0954"
+    },
+    "attempt030_CPU_Netgen_root/mesh/stages.json": {
+      "bytes": 1131,
+      "sha256": "2299cecc8d1cfdf72bd0fe29614b028edb9209d4e7ff98a1116aaadfc54d0eb0"
+    },
+    "attempt030_CPU_Netgen_root/state.json": {
+      "bytes": 947,
+      "sha256": "62bb91a78803d63e0f8c4383017fd713ce35374bb8ce0388cd5d207484fa4548"
     },
     "diagnosis_024_025_v1.json": {
       "bytes": 33840,
       "sha256": "4873122b8ae69934cedac0ab837c0f26d966b3d596519f6d53beaefd46122789"
     },
+    "gpu_validation_queue.json": {
+      "bytes": 355,
+      "sha256": "b2cbc9da9f9fb57a13a44851472c53cfc65ab2948e6a983089d04cc1478e06e9"
+    },
     "protocol.json": {
       "bytes": 6520,
       "sha256": "cd11a462bcb97a79bcea965f40187c48c2397dd406e35ffe30cce74f597acd8a"
+    },
+    "quadrature_validation_v2/review.json": {
+      "bytes": 1077,
+      "sha256": "5ce01399be3c8ee3c692b6f9dcd08e7f44c56e24d88969424516d08870cf1a91"
     },
     "resource_amendment_v1.json": {
       "bytes": 1052,
@@ -292,6 +324,50 @@
     "resource_amendment_v3.json": {
       "bytes": 446,
       "sha256": "cd44e6da9f558591a2509127aef14977257348272e207ece6893ba0ae8b195cb"
+    },
+    "resource_amendment_v4_CPU_only.json": {
+      "bytes": 519,
+      "sha256": "c656c93735faf4eafb4c48782bface6834dbd129354c7a4c75e2ea83700b354f"
+    },
+    "tools/advance_c04_candidate30.py": {
+      "bytes": 2581,
+      "sha256": "e17d24375c15e47270036782eb938d1de3e9ce1587c24c63b431137d08751d2d"
+    },
+    "tools/check_c04_curved_geometry.py": {
+      "bytes": 4889,
+      "sha256": "164a2411fa12e9b08cd0af6e2181d3dd164e4166926cf19ebaf3892f30ea82f1"
+    },
+    "tools/curve_c04_repair_candidate.py": {
+      "bytes": 11846,
+      "sha256": "cb7feb0abc144ec590320e8217c3e109ea0f8d77579884043de51b6f63a9852e"
+    },
+    "tools/mesh_copv_c04_guarded_repair.py": {
+      "bytes": 20006,
+      "sha256": "0b0ca56157bf89b212d1f4f4e55cbb14e59ac3806fa33321f3bef81287ddf110"
+    },
+    "tools/preflight_c04_curved_candidate.py": {
+      "bytes": 5450,
+      "sha256": "1adda5caac2366581715bc2ea658a52eddabc01d8493fbcf0d463becca8dbfb8"
+    },
+    "tools/prepare_c04_curved_solver.py": {
+      "bytes": 3795,
+      "sha256": "315ae31651c7d097662277b50f311dd10d77a7b51c50ea5d3aae87700920c3b7"
+    },
+    "tools/prepare_c04_curved_solver_v2.py": {
+      "bytes": 6640,
+      "sha256": "0118889c9fc33951c5d1fb9d7002ddfd49991f34ce74f5566bc4823ee8afb534"
+    },
+    "tools/run_c04_repair_candidate.py": {
+      "bytes": 8369,
+      "sha256": "4accee60987361d34b426f8815a34f23e74fdf144b334c7ee6bff49270bd701d"
+    },
+    "tools/run_c04_repair_gpu_queue.py": {
+      "bytes": 7064,
+      "sha256": "a3961897e5ce02264acdf4189f4f2dd108a6b6a1e94b5a58ddca3b0caef4703c"
+    },
+    "tools/validate_c04_curved_quadrature.py": {
+      "bytes": 4865,
+      "sha256": "fff91443344b48d39877c266ebc482ade9ae6bbdfbdbfadf7a00e2c44021da08"
     }
   }
 }

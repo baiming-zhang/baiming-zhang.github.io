@@ -1,6 +1,6 @@
 {
   "schema": "c04_repair_progress_v3",
-  "updated": "2026-10-27T03:19:54.359399+08:00",
+  "updated": "2026-10-27T03:28:20.942894+08:00",
   "status": "repair_in_progress",
   "historical": {
     "frozen_inputs": 20,
@@ -1298,6 +1298,13 @@
         "max_target_distance_mm": 0.25671930919098596,
         "geometry_scope": "Quadratic approximation; partially projected nodes may remain off CAD. Must pass independent per-region volume and boundary/load checks before any FE field."
       },
+      "local_geometry_hold.json": {
+        "status": "held_for_local_geometry_refinement_before_FE",
+        "max_target_distance_mm": 0.25671930919098596,
+        "candidate_local_distance_screen_mm": 0.03,
+        "reason": "Global material volumes passed, but some port midnodes still deviate up to0.2567mm from CAD targets. Refine actual port surface spacing before GPU validation; previous preflight alone is insufficient.",
+        "new_FE_labels": 0
+      },
       "preflight/review.json": {
         "schema": "c04_curved_mesh_preflight_v1",
         "created": "2026-10-26T17:20:18.308972+08:00",
@@ -1320,7 +1327,7 @@
         "scope": "Permission for a repair-candidate verification solve only if geometry/topology/load/resource checks pass. Does not waive the original SICN target or certify stress convergence; no production/training label.",
         "seconds": 9.020097599946894
       },
-      "status": "curved_positive_J_mesh_preflight_only"
+      "status": "local_geometry_hold_no_FE"
     },
     {
       "attempt": "attempt014_ports_root_HXT",
@@ -6087,6 +6094,13 @@
         "max_target_distance_mm": 0.004264058083667368,
         "geometry_scope": "Quadratic approximation; partially projected nodes may remain off CAD. Must pass independent per-region volume and boundary/load checks before any FE field."
       },
+      "curving_guard_policy.json": {
+        "positive_J_guard": true,
+        "parent_relative_SICN_floor_enabled": false,
+        "original_production_min_SICN": 0.05,
+        "production_eligible": false,
+        "reason": "Actual executed COPV_C04_CURVE_DET_ONLY=1; local Jacobian guard only, independent CAD distance/volume/topology/load checks passed. Original production shape gate remains failed."
+      },
       "geometry_check/review.json": {
         "schema": "c04_local_CAD_screen_v1",
         "case_id": "copv_c04_0000",
@@ -9638,6 +9652,33 @@
         "production_eligible": false,
         "seconds": 83.62428870000076
       },
+      "preflight/review.json": {
+        "schema": "c04_curved_mesh_preflight_v2",
+        "created": "2026-10-27T03:19:59.418176+08:00",
+        "case_id": "copv_c04_0000",
+        "mesh_sha256": "230d03cf182993a9bab87976f310b44c31011b7b6ddacc989870c9765ed65d00",
+        "native_vectors_sha256": "a4c1cea3b940cf0c705099314633b075d8cb328cbcc8307857e4aac1d7877d69",
+        "closure_sha256": "81c78b656ea2abeaa0e7655dd79c5dca6cfbae23126c89a2b77544ba483ab841",
+        "topology_passed": true,
+        "shared_Tri6_interfaces": true,
+        "connected_components": 1,
+        "positive_Jacobians": true,
+        "max_material_volume_error": 0.0002691570343704708,
+        "material_volume_passed": true,
+        "resource_guard_passed": true,
+        "resource_policy_file": "data\\copv\\c04_repair_v3\\resource_amendment_v1.json",
+        "resource_policy_sha256": "7af6051e7218bd6eb3b00afb636eebea1e23ccdf6d30b99f3d5a9df31b9222be",
+        "local_geometry_screen_passed": true,
+        "local_geometry_review_sha256": "4d986c77756bd05fdf3e5b32babcaedd8b58926f1b17990bb0140c47f30352b5",
+        "quadratic_load_closure_passed": true,
+        "original_volume_SICN_target_passed": false,
+        "original_surface_SICN_target_passed": true,
+        "original_mesh_release_passed": false,
+        "candidate_FE_validation_allowed": true,
+        "production_eligible": false,
+        "scope": "Repair candidate verification only after actual local CAD, volume, topology, load and resource screens. Original SICN target and production hold are unchanged; no stress-convergence certification.",
+        "seconds": 12.665267700002005
+      },
       "status": "curved_positive_J_mesh_preflight_only"
     },
     {
@@ -9702,7 +9743,7 @@
         "case_id": "copv_c04_0000",
         "attempt": "attempt029_matched_root_volume",
         "pid": 4920,
-        "phase": "meshing",
+        "phase": "mesh_failed_retained",
         "started": "2026-10-27T03:18:03.899083+08:00",
         "command": [
           "wsl",
@@ -9719,28 +9760,216 @@
         "source_sha256": "0b0ca56157bf89b212d1f4f4e55cbb14e59ac3806fa33321f3bef81287ddf110",
         "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
         "new_FE_labels": 0,
-        "elapsed_seconds": 0.024196899998059962,
-        "updated": "2026-10-27T03:18:03.905680+08:00"
+        "elapsed_seconds": 301.04787360000046,
+        "updated": "2026-10-27T03:23:04.929406+08:00",
+        "exit_code": 1
+      },
+      "mesh/failure.json": {
+        "error": "Cell resource guard: 3062535",
+        "type": "RuntimeError",
+        "seconds": 279.29995080000003,
+        "stages": [
+          {
+            "stage": "surface_checkpoint_imported",
+            "seconds": 0.765565381000016,
+            "nodes": 687908
+          },
+          {
+            "stage": "noncollar_Delaunay_generated",
+            "seconds": 118.28064986700002
+          },
+          {
+            "stage": "collar_Frontal_generated",
+            "seconds": 232.672144742
+          },
+          {
+            "stage": "linear_generated",
+            "seconds": 234.71843300300003,
+            "cells": 3062535,
+            "min_J": 6.387143753235069e-07,
+            "nonpositive": 0,
+            "min_SICN": 1.664450376216601e-05,
+            "below_005": 1102
+          },
+          {
+            "stage": "straight_order2_canonicalized",
+            "seconds": 274.50270231800005,
+            "cells": 3062535,
+            "min_J": 6.387143273939649e-07,
+            "nonpositive": 0,
+            "min_SICN": 1.6644503709062598e-05,
+            "below_005": 1102
+          },
+          {
+            "stage": "linear_checkpoint",
+            "seconds": 279.24151863400004,
+            "cells": 3062535,
+            "min_J": 6.387143753235069e-07,
+            "nonpositive": 0,
+            "min_SICN": 1.664450376216601e-05,
+            "below_005": 1102
+          }
+        ],
+        "error_entities": [],
+        "error_nodes": []
       },
       "mesh/stages.json": [
         {
           "stage": "surface_checkpoint_imported",
           "seconds": 0.765565381000016,
           "nodes": 687908
+        },
+        {
+          "stage": "noncollar_Delaunay_generated",
+          "seconds": 118.28064986700002
+        },
+        {
+          "stage": "collar_Frontal_generated",
+          "seconds": 232.672144742
+        },
+        {
+          "stage": "linear_generated",
+          "seconds": 234.71843300300003,
+          "cells": 3062535,
+          "min_J": 6.387143753235069e-07,
+          "nonpositive": 0,
+          "min_SICN": 1.664450376216601e-05,
+          "below_005": 1102
+        },
+        {
+          "stage": "straight_order2_canonicalized",
+          "seconds": 274.50270231800005,
+          "cells": 3062535,
+          "min_J": 6.387143273939649e-07,
+          "nonpositive": 0,
+          "min_SICN": 1.6644503709062598e-05,
+          "below_005": 1102
+        },
+        {
+          "stage": "linear_checkpoint",
+          "seconds": 279.24151863400004,
+          "cells": 3062535,
+          "min_J": 6.387143753235069e-07,
+          "nonpositive": 0,
+          "min_SICN": 1.664450376216601e-05,
+          "below_005": 1102
+        }
+      ],
+      "status": "mesh_failed_retained"
+    },
+    {
+      "attempt": "attempt030_CPU_Netgen_root",
+      "case_id": "copv_c04_0000",
+      "new_FE_labels": 0,
+      "production_eligible": false,
+      "state.json": {
+        "case_id": "copv_c04_0000",
+        "attempt": "attempt030_CPU_Netgen_root",
+        "pid": 10540,
+        "phase": "meshing",
+        "started": "2026-10-27T03:24:14.125537+08:00",
+        "command": [
+          "wsl",
+          "-d",
+          "cold-surge-ubuntu-24.04",
+          "--",
+          "bash",
+          "/mnt/c/Users/ASUS/Desktop/GeoBC Neural Operator/data/copv/c04_repair_v3/copv_c04_0000/attempt030_CPU_Netgen_root/run_mesh_linux.sh"
+        ],
+        "partition_file": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_pilot_v1\\cases\\copv_c04_0000\\partition_v2\\structural_partition.brep",
+        "backend": "linux",
+        "max_cells": 3300000,
+        "linear_optimizer": "Netgen",
+        "source_sha256": "0b0ca56157bf89b212d1f4f4e55cbb14e59ac3806fa33321f3bef81287ddf110",
+        "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
+        "new_FE_labels": 0,
+        "elapsed_seconds": 0.023939700000482844,
+        "updated": "2026-10-27T03:24:14.131500+08:00"
+      },
+      "mesh/stages.json": [
+        {
+          "stage": "imported_retained_linear_checkpoint",
+          "seconds": 2.545201915000007,
+          "cells": 3062535,
+          "min_J": 6.387143753235069e-07,
+          "nonpositive": 0,
+          "min_SICN": 1.664450376216601e-05,
+          "below_005": 1102
+        },
+        {
+          "stage": "linear_generated",
+          "seconds": 3.4985078610000073,
+          "cells": 3062535,
+          "min_J": 6.387143753235069e-07,
+          "nonpositive": 0,
+          "min_SICN": 1.664450376216601e-05,
+          "below_005": 1102
+        },
+        {
+          "stage": "straight_order2_canonicalized",
+          "seconds": 30.285143367000046,
+          "cells": 3062535,
+          "min_J": 6.387143273939649e-07,
+          "nonpositive": 0,
+          "min_SICN": 1.6644503709062598e-05,
+          "below_005": 1102
+        },
+        {
+          "stage": "linear_checkpoint",
+          "seconds": 33.371931834000065,
+          "cells": 3062535,
+          "min_J": 6.387143753235069e-07,
+          "nonpositive": 0,
+          "min_SICN": 1.664450376216601e-05,
+          "below_005": 1102
+        },
+        {
+          "stage": "Netgen_linear_proposal",
+          "seconds": 222.65168635099997,
+          "cells": 3120107,
+          "min_J": 0.00019715716887093375,
+          "nonpositive": 0,
+          "min_SICN": 0.009674792260373485,
+          "below_005": 296
         }
       ],
       "status": "meshing"
     }
   ],
-  "worker29": {
-    "pid": 27724,
-    "started": "2026-10-27T03:18:03.706697+08:00",
-    "status": "active",
-    "phase": "attempt029_matched_root_volume",
-    "new_FE_labels": 0,
-    "new_production_labels": 0,
-    "seconds": 0.025890400000207592,
-    "updated": "2026-10-27T03:18:03.706697+08:00"
+  "workers": {
+    "worker24_progress": {
+      "pid": 7660,
+      "case_id": "copv_c04_0000",
+      "started": "2026-10-26T18:28:06.233713+08:00",
+      "new_FE_labels": 0,
+      "status": "failed_retained",
+      "phase": "CPU_candidates_exhausted",
+      "seconds": 691.3810244000051,
+      "updated": "2026-10-26T18:39:37.589882+08:00",
+      "reason": "No candidate passed geometry/volume/topology/load screens; continue repair, no GPU field or production release."
+    },
+    "worker29_progress": {
+      "pid": 27724,
+      "started": "2026-10-27T03:18:03.706697+08:00",
+      "status": "CPU_stage_finished",
+      "phase": "mesh_failed_retained",
+      "new_FE_labels": 0,
+      "new_production_labels": 0,
+      "seconds": 301.3479609999995,
+      "updated": "2026-10-27T03:23:05.028636+08:00",
+      "returncode": 0,
+      "reason": "Inspect actual mesh quality and resources; no automatic GPU or promotion."
+    },
+    "worker30_progress": {
+      "pid": 19096,
+      "started": "2026-10-27T03:24:13.940584+08:00",
+      "status": "active",
+      "phase": "attempt030_CPU_Netgen",
+      "new_FE_labels": 0,
+      "new_production_labels": 0,
+      "seconds": 0.02164690000063274,
+      "updated": "2026-10-27T03:24:13.941584+08:00"
+    }
   },
-  "explanation": "Candidate validity, CAD distance, volume and production shape gates are separate. No failed ID is replaced. Original viewers retain their true 3D BC/load switches."
+  "explanation": "Candidate validity, CAD distance, volume and production shape gates are separate. No failed ID is replaced. Original viewers retain their true 3D BC/load switches. Attempt013 old preflight is superseded by its explicit local_geometry_hold and must not enter GPU."
 }
