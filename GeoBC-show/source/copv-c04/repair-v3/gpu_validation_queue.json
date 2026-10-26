@@ -1,11 +1,21 @@
 {
   "schema": "c04_curved_GPU_validation_queue_v1",
-  "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt027_local_J_from025",
+  "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56",
   "status": "waiting_resources",
   "production_eligible": false,
   "new_FE_labels": 0,
   "runs": [],
-  "GPU_free_MiB": 20530,
-  "GPU_utilization_percent": 96,
-  "updated": "2026-10-27T05:47:16.263028+08:00"
+  "GPU_free_MiB": 20363,
+  "GPU_utilization_percent": 97,
+  "updated": "2026-10-27T07:08:28.301123+08:00",
+  "candidate_history": [
+    {
+      "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt027_local_J_from025",
+      "selected_until": "2026-10-27T07:08:23.445232+08:00",
+      "runs": 0,
+      "reason": "Superseded before any run by SAME-ID mesh058 passing all original mesh screens. Original candidate retained."
+    }
+  ],
+  "selection_reason": "First original-mesh-screen-passing SAME0000 mesh; GPU fields/convergence pending",
+  "mesh_template_file": "data/copv/c04_repair_v3/mesh_template_058_v1.json"
 }

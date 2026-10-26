@@ -1,0 +1,35 @@
+{
+  "schema": "c04_mesh_template_v1",
+  "created": "2026-10-27T07:08:23.445232+08:00",
+  "case_id": "copv_c04_0000",
+  "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56",
+  "original_mesh_screen_passed": true,
+  "production_eligible": false,
+  "recipe": [
+    "052 independent linear mesh",
+    "053 CAD projection with safe-local pullback",
+    "056 fixed-CAD interior analytic SICN patch",
+    "058 recentered two-ring polish"
+  ],
+  "original_gates": {
+    "surface_min_SICN": 0.05,
+    "volume_min_SICN": 0.05,
+    "total_volume_relative_error_max": 0.001,
+    "material_region_volume_relative_error_max": 0.001,
+    "positive_Jacobians": true,
+    "one_connected_component": true,
+    "shared_Tri6_interfaces": true
+  },
+  "evidence_sha256": {
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/mesh/mesh.npz": "43f29c4b9d012c4693dd8c426f3e01820f05a00838ad8a2327b0b9d9bd78f36c",
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/preflight/review.json": "a35d8db6c2a805a195b16befc6c1a8ff720cc27fb9039d972e56acc8b40d790e",
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/geometry_check/review.json": "ae501f4df4acf72b72211d5b4f17a16d8c9003af04e68ce064c9b9c2027d5a42",
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/result.json": "6e944ea3c324ff8fcf276e5990bc639609e18e25cf9344be88d88a9e004df3c7",
+    "data/copv/c04_repair_v3/worker52_config.json": "d0b8374ae8de39f9772a07cf2a5a3290528cdfdc855b8ca9a296ac923d414843",
+    "data/copv/c04_repair_v3/worker56_config.json": "d46cde1cf76b6fe011492864abc838fe40d9eb7f235aaec2384f5da5a33d7f77",
+    "data/copv/c04_repair_v3/worker58_config.json": "f3cac0e81ee29c2abca94a5477ac8f2e6b7eb3ff78d4dce52a81268174de90ba",
+    "data/copv/c04_repair_v3/sicn_objective_validation_v1/review.json": "754b70fb27bb0a168f24432b2d4e8243d12a3f44118e3f422a2a0a433b744efd",
+    "notes/c04_shape_objective.py": "f9a43898baf3e6e284ffb7cd8f86e4ae03948fa6d41208792618774f4a55e032"
+  },
+  "scope": "Only this exact SAME-0000 mesh passed all screening gates. GPU-P2 fields and same-geometry sensitivity remain pending. Applying this recipe to another frozen ID requires independent checks."
+}

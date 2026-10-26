@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-27T06:59:39.808482+08:00",
+  "worker_state": "worker58_progress.json",
+  "reuse_parent": true,
+  "mesh_attempt": "attempt052_outer_ply_cost_margin",
+  "parent_mesh_sha256": "28a4f0ccb35c381959c56ef02483a884d09816517a359f5dd907a9c3e4e216ed",
+  "curved_attempt": "attempt058_two_cell_patch56",
+  "environment": {
+    "COPV_C04_PROJECTED_CHECKPOINT": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt056_sicn_patch53\\mesh\\mesh.msh",
+    "COPV_C04_SICN_OPT_TARGET": ".07",
+    "COPV_C04_SICN_PATCH_RINGS": "2",
+    "COPV_C04_SICN_MAX_PATCH_CELLS": "50000",
+    "COPV_C04_SICN_MAX_ITER": "200",
+    "COPV_C04_SICN_MOVE_WEIGHT": "1e-8",
+    "COPV_C04_SICN_GTOL": "1e-12",
+    "COPV_C04_SICN_FTOL": "1e-15",
+    "COPV_C04_SICN_NATIVE_CHECK_EVERY": "10"
+  },
+  "curver_arguments": [
+    "--shape-optimize"
+  ],
+  "curver_timeout_seconds": 600,
+  "scope": "Continue only the two native steel cells below .05 in056. Diagnostics show nonzero interior gradients and exhausted previous coordinate-step bounds, so recenter a new bounded two-ring neighborhood with all CAD nodes fixed. Native patch check may stop early at .0505, but full native Gmsh .05/positiveJ and all CAD/volume/topology/load/resource gates still mandatory."
+}

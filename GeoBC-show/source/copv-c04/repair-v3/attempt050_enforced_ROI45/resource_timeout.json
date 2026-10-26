@@ -1,0 +1,40 @@
+{
+  "status": "CPU_material_ROI_timeout_no_completed_result",
+  "wall_limit_seconds": 900,
+  "worker_final_state": {
+    "pid": 13648,
+    "started": "2026-10-27T06:18:51.151952+08:00",
+    "status": "failed_retained",
+    "config": "data\\copv\\c04_repair_v3\\worker50_config.json",
+    "new_FE_labels": 0,
+    "new_production_labels": 0,
+    "phase": "attempt050_enforced_ROI45",
+    "seconds": 900.1691310000024,
+    "updated": "2026-10-27T06:33:51.303439+08:00",
+    "error": "TimeoutExpired(['C:\\\\Users\\\\ASUS\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python.exe', '-X', 'utf8', '-B', 'notes/curve_c04_repair_candidate.py', '--parent', 'C:\\\\Users\\\\ASUS\\\\Desktop\\\\GeoBC Neural Operator\\\\data\\\\copv\\\\c04_repair_v3\\\\copv_c04_0000\\\\attempt044_reduced_outer_port_cost', '--output', 'C:\\\\Users\\\\ASUS\\\\Desktop\\\\GeoBC Neural Operator\\\\data\\\\copv\\\\c04_repair_v3\\\\copv_c04_0000\\\\attempt050_enforced_ROI45', '--high-order', '--high-order-method', 'HighOrder'], 900.0)"
+  },
+  "actual_enforced_scope": {
+    "full_cells": 2241574,
+    "ROI_cells": 723559,
+    "selected_entities": [
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    "method": "Separate model with unselected CAD volumes removed, keeping shared boundary geometry; no unsupported dimTags filtering. Partial ROI is never an FE mesh."
+  },
+  "reason": "True material ROI enforced, but native connectivity discovery on entity2 still exceeded time bound. No final result or FE permission."
+}

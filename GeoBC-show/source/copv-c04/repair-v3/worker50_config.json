@@ -1,0 +1,22 @@
+{
+  "created": "2026-10-27T06:18:51.054644+08:00",
+  "worker_state": "worker50_progress.json",
+  "reuse_parent": true,
+  "mesh_attempt": "attempt044_reduced_outer_port_cost",
+  "parent_mesh_sha256": "01cf4b75cfb1683afc6313304acad3a303253923a07385ce33382c4434cc0c0c",
+  "curved_attempt": "attempt050_enforced_ROI45",
+  "environment": {
+    "COPV_C04_PROJECTED_CHECKPOINT": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt045_curved_cost\\mesh\\mesh.msh",
+    "COPV_C04_HIGH_ORDER_FIX_BOUNDARY": "1",
+    "COPV_C04_HIGH_ORDER_INTERNAL_MIN": ".8",
+    "COPV_C04_HIGH_ORDER_PARTS": "2,5,9,10",
+    "COPV_C04_HIGH_ORDER_MESH_ROI": "1"
+  },
+  "curver_arguments": [
+    "--high-order",
+    "--high-order-method",
+    "HighOrder"
+  ],
+  "curver_timeout_seconds": 900,
+  "scope": "Enforce ROI in a second CAD model: remove all non-target volumes, optimize target cells only, allow changes only to selected volume-owned nodes, restore into untouched complete full mesh. Verify full native topology and all CAD boundaries before accepting proposal. No dimTags API claim."
+}

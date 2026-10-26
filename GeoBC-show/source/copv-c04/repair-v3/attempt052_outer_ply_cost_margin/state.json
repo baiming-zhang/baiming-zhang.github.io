@@ -1,0 +1,42 @@
+{
+  "case_id": "copv_c04_0000",
+  "attempt": "attempt052_outer_ply_cost_margin",
+  "pid": 29888,
+  "phase": "mesh_quality_rejected_retained",
+  "started": "2026-10-27T06:31:44.941043+08:00",
+  "command": [
+    "wsl",
+    "-d",
+    "cold-surge-ubuntu-24.04",
+    "--",
+    "bash",
+    "/mnt/c/Users/ASUS/Desktop/GeoBC Neural Operator/data/copv/c04_repair_v3/copv_c04_0000/attempt052_outer_ply_cost_margin/run_mesh_linux.sh"
+  ],
+  "partition_file": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_pilot_v1\\cases\\copv_c04_0000\\partition_v2\\structural_partition.brep",
+  "backend": "linux",
+  "max_cells": 3300000,
+  "linear_optimizer": "Netgen",
+  "source_sha256": "9b0daa31542748c1c3a1a44f9d97d58020874388595fff78993825c0bc229c5e",
+  "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
+  "new_FE_labels": 0,
+  "elapsed_seconds": 338.1689589000016,
+  "updated": "2026-10-27T06:37:23.108242+08:00",
+  "quality": {
+    "cells": 2150456,
+    "nodes": 3315443,
+    "min_volume_sicn": 0.05550838697206841,
+    "min_surface_sicn": 0.07226988891996004,
+    "below_005": 0,
+    "max_part_relative_volume_error": 0.01716510598324761,
+    "total_relative_volume_error": 0.00027694044036719045,
+    "production_gate": {
+      "reference": "R03",
+      "SICN_threshold": 0.05,
+      "volume_tolerance": 0.001,
+      "passed": false,
+      "status": "quality_rejected_no_FE",
+      "connected_components": 1,
+      "independent_load_closure_passed": true
+    }
+  }
+}

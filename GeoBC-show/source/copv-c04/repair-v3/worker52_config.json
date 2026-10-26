@@ -1,0 +1,30 @@
+{
+  "created": "2026-10-27T06:31:44.691282+08:00",
+  "worker_state": "worker52_progress.json",
+  "mesh_attempt": "attempt052_outer_ply_cost_margin",
+  "curved_attempt": "attempt053_curved_cost_margin",
+  "environment": {
+    "COPV_C04_VOLUME_ALGORITHM": "1",
+    "COPV_C04_LINEAR_OPTIMIZER": "Netgen",
+    "COPV_C04_COLLAR_FRONTAL": "1",
+    "COPV_C04_MAX_SURFACE_NODES": "700000",
+    "COPV_C04_MATCH_ROOT_CIRCLES": "1",
+    "COPV_C04_FRONTAL_PARTS": "7,8",
+    "COPV_C04_ADJACENT_ROOT_BAND": "1",
+    "COPV_C04_ADJACENT_ROOT_H": ".85",
+    "COPV_C04_MAIN_CHORD_MM": ".045",
+    "COPV_C04_THIN_CHORD_MM": ".015",
+    "COPV_C04_PORT_FACE_H": "2.0",
+    "COPV_C04_ROOT_BAND_MM": ".75",
+    "COPV_C04_ROOT_GROWTH": ".4"
+  },
+  "parameters": {
+    "h": 6,
+    "shell-h": 6.0,
+    "bond-h": 3,
+    "root-h": 0.25,
+    "max-cells": 3300000,
+    "circle-segments": 80
+  },
+  "scope": "Clone046 with only adjacent outer-ply root-volume size .75\u2192.85mm. Preserve measured thin .015, port2.0/circle80 and fillet.25 controls. 046 already fits cell cap but exceeds native P2 DOF cap by1.00382%; this new sizing hypothesis must independently pass all original quality/CAD/volume/load/resource checks, no acceptance threshold changes."
+}

@@ -7,7 +7,9 @@ W=Path(__file__).resolve().parents[1];B=W/'data/copv/c04_repair_v3';C=B/'copv_c0
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--config',type=Path,required=True);args=ap.parse_args();cfg=read(args.config);start=time.perf_counter();state=dict(pid=os.getpid(),started=datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),status='active',config=str(args.config),new_FE_labels=0,new_production_labels=0)
+ case_id=cfg.get('case_id','copv_c04_0000');assert case_id in {r['id'] for r in read(B/'protocol.json')['inputs']};C=B/case_id
  progress=B/cfg['worker_state'];assert not progress.exists(),'Do not repeat an existing worker'
+ state['case_id']=case_id
  assert not (C/cfg['curved_attempt']).exists(),'Never overwrite an attempt'
  if cfg.get('reuse_parent'):
   assert hashlib.sha256((C/cfg['mesh_attempt']/'mesh/mesh.npz').read_bytes()).hexdigest()==cfg['parent_mesh_sha256'],'Reused parent identity mismatch'
@@ -22,7 +24,7 @@ def main():
   save(phase)
   with (B/(phase+'_execution.log')).open('x',encoding='utf-8') as f:return subprocess.run([sys.executable,'-X','utf8','-B',*arguments],cwd=W,env=env,stdout=f,stderr=subprocess.STDOUT,timeout=limit).returncode
  try:
-  parameters=cfg.get('parameters',{});command=['notes/run_c04_repair_candidate.py','--case','copv_c04_0000','--attempt',cfg['mesh_attempt'],'--partition','data/copv/c04_pilot_v1/cases/copv_c04_0000/partition_v2','--backend','linux']
+  parameters=cfg.get('parameters',{});command=['notes/run_c04_repair_candidate.py','--case',case_id,'--attempt',cfg['mesh_attempt'],'--partition',f'data/copv/c04_pilot_v1/cases/{case_id}/partition_v2','--backend','linux']
   for key,value in parameters.items():command.extend(['--'+key,str(value)])
   if cfg.get('linear_checkpoint'):command.extend(['--linear-checkpoint',str(W/cfg['linear_checkpoint'])])
   if cfg.get('reuse_parent'):save('reused_parent_checked');rc=0
