@@ -1,0 +1,114 @@
+{
+  "status": "curved_positive_J_mesh_preflight_only",
+  "case_id": "copv_c04_0000",
+  "parent_attempt": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt019_recovered_Delaunay",
+  "stages": [
+    {
+      "stage": "parent_affine_imported",
+      "seconds": 3.947463799966499,
+      "cells": 2036895,
+      "min_J": 7.41138899683242e-06,
+      "nonpositive": 0,
+      "min_SICN": 8.50232055672932e-05,
+      "below_005": 21750
+    },
+    {
+      "stage": "CAD_projected_order2",
+      "seconds": 203.54176259995438,
+      "cells": 2036895,
+      "min_J": -0.7088523429852175,
+      "nonpositive": 1149,
+      "min_SICN": -0.7641469750792066,
+      "below_005": 36345
+    },
+    {
+      "stage": "after_guarded_local_curving",
+      "seconds": 244.08102749998216,
+      "cells": 2036895,
+      "min_J": 7.335255131774021e-06,
+      "nonpositive": 0,
+      "min_SICN": 8.414979979955135e-05,
+      "below_005": 23430
+    }
+  ],
+  "min_GP_J": 7.355636158280853e-06,
+  "volume_method": "Original Gmsh TET10 coordinate basis, degree4 reference tetra quadrature; detJ varies by GP",
+  "parts": [
+    {
+      "part_id": 1,
+      "CAD_volume_mm3": 335072.182640414,
+      "mesh_curved_volume_mm3": 334744.28256209893,
+      "relative_error": 0.000978595345430211
+    },
+    {
+      "part_id": 2,
+      "CAD_volume_mm3": 49523.829199477565,
+      "mesh_curved_volume_mm3": 49847.959150342656,
+      "relative_error": 0.006544929099878916
+    },
+    {
+      "part_id": 3,
+      "CAD_volume_mm3": 248944.24007330276,
+      "mesh_curved_volume_mm3": 248962.00074044248,
+      "relative_error": 7.134395692176554e-05
+    },
+    {
+      "part_id": 4,
+      "CAD_volume_mm3": 251162.19966425654,
+      "mesh_curved_volume_mm3": 251159.7292125069,
+      "relative_error": 9.836081038216982e-06
+    },
+    {
+      "part_id": 5,
+      "CAD_volume_mm3": 253340.6862895349,
+      "mesh_curved_volume_mm3": 253351.72210235655,
+      "relative_error": 4.356115467785138e-05
+    },
+    {
+      "part_id": 6,
+      "CAD_volume_mm3": 255524.59388379718,
+      "mesh_curved_volume_mm3": 255523.04536663293,
+      "relative_error": 6.060149204123455e-06
+    },
+    {
+      "part_id": 7,
+      "CAD_volume_mm3": 4319.959964915872,
+      "mesh_curved_volume_mm3": 4318.406457021785,
+      "relative_error": 0.0003596116414742445
+    },
+    {
+      "part_id": 8,
+      "CAD_volume_mm3": 4318.575337251246,
+      "mesh_curved_volume_mm3": 4318.28498623541,
+      "relative_error": 6.723305561728843e-05
+    },
+    {
+      "part_id": 9,
+      "CAD_volume_mm3": 83609.97770206665,
+      "mesh_curved_volume_mm3": 83631.75818374017,
+      "relative_error": 0.0002605009865106478
+    },
+    {
+      "part_id": 10,
+      "CAD_volume_mm3": 80967.88351112268,
+      "mesh_curved_volume_mm3": 80985.65538099004,
+      "relative_error": 0.00021949282970834538
+    },
+    {
+      "part_id": 14,
+      "CAD_volume_mm3": 16164.284969179711,
+      "mesh_curved_volume_mm3": 16164.470704969766,
+      "relative_error": 1.1490504554290126e-05
+    },
+    {
+      "part_id": 18,
+      "CAD_volume_mm3": 14387.368748382785,
+      "mesh_curved_volume_mm3": 14387.672396847167,
+      "relative_error": 2.110521177933755e-05
+    }
+  ],
+  "max_part_volume_error": 0.006544929099878916,
+  "new_FE_labels": 0,
+  "source_sha256": "599bef57bcfa1cb74c0bc872e0926612f0228cd5e2e7d1c504a86129e78be558",
+  "seconds": 269.3318516999716
+}

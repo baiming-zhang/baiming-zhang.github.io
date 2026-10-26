@@ -1,0 +1,173 @@
+{
+  "schema": "c04_mesh_repair_v3",
+  "created": "2026-10-26T16:32:40.472806+08:00",
+  "scope": "Versioned repair of the four requested frozen inputs; preserve original attempts and CAD/material dimensions",
+  "inputs": [
+    {
+      "id": "copv_c04_0000",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 1.0,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562243,
+          "min_parallel_tangent_scale": 0.6052296171437757,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08416544007747007,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9999760655083243,
+            "wrap": 2.9999281922057244,
+            "total": 3.9999042620332936
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685748
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0002",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 110.0,
+        "straight_length_mm": 440.0,
+        "dome_depth_mm": 66.0,
+        "boss_bore_radius_mm": 16.5,
+        "neck_length_mm": 22.0,
+        "liner_thickness_mm": 1.1,
+        "overwrap_thickness_mm": 3.3
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.3947703828562248,
+          "min_parallel_tangent_scale": 0.6052296171437752,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 16.5,
+          "min_profile_axial_sample_increment_mm": 0.09258198408514318,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 1.0999736720591569,
+            "wrap": 3.2999210114262967,
+            "total": 4.399894688236623
+          },
+          "minimum_clearance_over_nominal": 0.9999760640685748
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0011",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 100.0,
+        "straight_length_mm": 400.0,
+        "dome_depth_mm": 60.0,
+        "boss_bore_radius_mm": 15.0,
+        "neck_length_mm": 20.0,
+        "liner_thickness_mm": 0.8,
+        "overwrap_thickness_mm": 3.0
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.37503186371341307,
+          "min_parallel_tangent_scale": 0.6249681362865869,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 15.0,
+          "min_profile_axial_sample_increment_mm": 0.08687362846842461,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.7999808524066595,
+            "wrap": 2.9999281931434503,
+            "total": 3.799909048931629
+          },
+          "minimum_clearance_over_nominal": 0.99997606438115
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    },
+    {
+      "id": "copv_c04_0018",
+      "split": "train_pilot",
+      "parameters_mm": {
+        "inner_radius_mm": 104.4479109121539,
+        "straight_length_mm": 418.4510471422303,
+        "dome_depth_mm": 61.65271526607576,
+        "boss_bore_radius_mm": 13.25765633403154,
+        "neck_length_mm": 18.704656197152467,
+        "liner_thickness_mm": 0.9873850294672261,
+        "overwrap_thickness_mm": 3.642044800395832
+      },
+      "analytic_precheck": {
+        "passed": true,
+        "reasons": [],
+        "metrics": {
+          "max_abs_curvature_times_wall": 0.46412000673420883,
+          "min_parallel_tangent_scale": 0.5358799932657912,
+          "curvature_samples": 10001,
+          "clearance_curve_samples": 1217,
+          "min_profile_radius_mm": 13.25765633403154,
+          "min_profile_axial_sample_increment_mm": 0.07672697604311907,
+          "polyline_min_layer_clearance_mm": {
+            "liner": 0.9873592686908677,
+            "wrap": 3.641949774165624,
+            "total": 4.629309048503248
+          },
+          "minimum_clearance_over_nominal": 0.9999739085498899
+        },
+        "scope": "Dense analytic local geometry and exact distances between sampled polyline segments; no FE/production claim"
+      },
+      "CAD_status": "pending",
+      "mesh_status": "pending",
+      "solver_status": "not_started",
+      "accepted": false
+    }
+  ],
+  "original_quality_gate": {
+    "surface_min_SICN": 0.05,
+    "volume_min_SICN": 0.05,
+    "total_volume_relative_error_max": 0.001,
+    "material_region_volume_relative_error_max": 0.001,
+    "positive_Jacobians": true,
+    "one_connected_component": true,
+    "shared_Tri6_interfaces": true
+  },
+  "threshold_scope": "Project screening targets, not industry-wide accuracy certification. No historical release rewritten.",
+  "mesh_priorities": [
+    "Deterministic seed and thread controls; stage checks and rejected optimizer proposal rollback",
+    "Same-solid topology partition at collar onset and matched boundary segmentation",
+    "CAD/facet and per-region volume control, then native P2 field sensitivity"
+  ],
+  "resource_guard": {
+    "max_cells_initial": 2000000,
+    "max_P2_DOFs_initial": 9000000,
+    "GPU_workers": 1
+  },
+  "failed_attempts_retained": true,
+  "replace_failed_IDs": false
+}

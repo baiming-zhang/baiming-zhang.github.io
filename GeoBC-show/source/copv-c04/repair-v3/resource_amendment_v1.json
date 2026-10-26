@@ -1,0 +1,13 @@
+{
+  "schema": "c04_resource_amendment_v1",
+  "created": "2026-10-26T17:50:01.154235+08:00",
+  "initial_max_cells": 2000000,
+  "initial_max_P2_DOFs": 9000000,
+  "max_cells": 2200000,
+  "max_P2_DOFs": 10000000,
+  "GPU_workers": 1,
+  "reason": "Attempt016 produced 2036895 positive-J linear cells, 1.84475% beyond the initial heuristic cell budget. Retain it and allow an explicitly versioned bounded extension after HXT failed on both Windows and Linux.",
+  "memory_plan": "Worst-case conservative 100 matrix nonzeros per displacement DOF gives about 12GB CSR at 10M DOFs (8-byte values + 4-byte indices), plus P1 multigrid, vectors and overhead. Queue only when >=24GB GPU memory is free and utilization is low. Check actual assembled matrix and available host memory before CUDA conversion. One owned GPU worker; no interruption or restart of other tasks.",
+  "scope": "Resource planning only. Original SICN >=0.05 and every material volume error <=0.1% remain unchanged; no production label or accuracy waiver.",
+  "production_labels": 0
+}

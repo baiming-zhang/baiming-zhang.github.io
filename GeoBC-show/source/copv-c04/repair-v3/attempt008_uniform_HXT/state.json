@@ -1,0 +1,53 @@
+{
+  "case_id": "copv_c04_0000",
+  "attempt": "attempt008_uniform_HXT",
+  "pid": 35016,
+  "phase": "mesh_quality_rejected_retained",
+  "started": "2026-10-26T16:57:17.163945+08:00",
+  "command": [
+    "C:\\Users\\ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt008_uniform_HXT\\mesher_executed.py",
+    "--partition",
+    "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_pilot_v1\\cases\\copv_c04_0000\\partition_v2\\structural_partition.brep",
+    "--review",
+    "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_pilot_v1\\cases\\copv_c04_0000\\partition_v2\\partition_review.json",
+    "--output",
+    "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt008_uniform_HXT\\mesh",
+    "--h",
+    "5.0",
+    "--shell-h",
+    "3.5",
+    "--bond-h",
+    "3.5",
+    "--root-h",
+    "0.5",
+    "--circle-segments",
+    "128",
+    "--recipe",
+    "matched"
+  ],
+  "source_sha256": "c2de799aa9f0238222ca9373135bcfa138eba9cf21597b21beb295aa1692bfd7",
+  "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
+  "new_FE_labels": 0,
+  "elapsed_seconds": 283.0961288999533,
+  "updated": "2026-10-26T17:02:00.246118+08:00",
+  "quality": {
+    "cells": 1766075,
+    "nodes": 2616486,
+    "min_volume_sicn": 0.011048073882647167,
+    "min_surface_sicn": 0.036406208849854564,
+    "below_005": 6636,
+    "max_part_relative_volume_error": 0.016588688550347896,
+    "total_relative_volume_error": 0.00023427460964198232,
+    "production_gate": {
+      "reference": "R03",
+      "SICN_threshold": 0.05,
+      "volume_tolerance": 0.001,
+      "passed": false,
+      "status": "quality_rejected_no_FE",
+      "connected_components": 1,
+      "independent_load_closure_passed": true
+    }
+  }
+}

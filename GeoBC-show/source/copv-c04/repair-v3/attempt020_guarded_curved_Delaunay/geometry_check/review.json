@@ -1,0 +1,3551 @@
+{
+  "schema": "c04_local_CAD_screen_v1",
+  "case_id": "copv_c04_0000",
+  "mesh_sha256": "e8e3538e12945a28ab8ae75f35fbed90039d4fb7578d475743bf46326fefc9f9",
+  "CAD_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
+  "method": "All nodes classified on each CAD surface, plus four Tri6 interior reference points on up to the declared number of deterministically selected triangles per CAD face; Euclidean distance to Gmsh getClosestPoint on owning surface.",
+  "tolerance_basis": "Additional project candidate-screening tolerances, not industry standards: collar .003mm (10% of nominal .03mm onset excess), adhesive .0075mm (5% of nominal .15mm bondline), other surfaces .015mm. This sampled interior test is not a rigorous global geometry error bound.",
+  "samples_per_face": 128,
+  "faces": [
+    {
+      "surface": 1,
+      "type": "Cylinder",
+      "part_ids": [
+        1
+      ],
+      "nodes": 2491,
+      "triangles": 1110,
+      "max_node_CAD_distance_mm": 1.432144669219779e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00016235459549415333,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.39106416859201004,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 2,
+      "type": "Plane",
+      "part_ids": [
+        1,
+        18
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9541356549128476,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 3,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        1
+      ],
+      "nodes": 38383,
+      "triangles": 18816,
+      "max_node_CAD_distance_mm": 6.811674183262686e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00043722829424759516,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.545760738096556,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 4,
+      "type": "Cylinder",
+      "part_ids": [
+        1,
+        10
+      ],
+      "nodes": 8881,
+      "triangles": 4296,
+      "max_node_CAD_distance_mm": 1.5280799322856756e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 6.14173486598793e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7291579481283345,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 5,
+      "type": "Cylinder",
+      "part_ids": [
+        1
+      ],
+      "nodes": 93357,
+      "triangles": 46034,
+      "max_node_CAD_distance_mm": 1.0247593068766006e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 3.30922099431224e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5521670966622425,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 6,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        1,
+        10
+      ],
+      "nodes": 10301,
+      "triangles": 4990,
+      "max_node_CAD_distance_mm": 4.122823520454444e-08,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.334263648352023e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7374265219787713,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 7,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        1,
+        2
+      ],
+      "nodes": 34735,
+      "triangles": 16986,
+      "max_node_CAD_distance_mm": 0.020582182703497053,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.007930589884138884,
+      "project_screen_tolerance_mm": 0.0075,
+      "min_surface_SICN": 0.47239056251692474,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 8,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        1
+      ],
+      "nodes": 38371,
+      "triangles": 18810,
+      "max_node_CAD_distance_mm": 6.876130250026286e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0004328520546082797,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6101207523750644,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 9,
+      "type": "Cylinder",
+      "part_ids": [
+        1,
+        2
+      ],
+      "nodes": 94285,
+      "triangles": 46498,
+      "max_node_CAD_distance_mm": 0.022169032476221998,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00781374843863949,
+      "project_screen_tolerance_mm": 0.0075,
+      "min_surface_SICN": 0.40946256252482266,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 10,
+      "type": "Cylinder",
+      "part_ids": [
+        1
+      ],
+      "nodes": 2537,
+      "triangles": 1132,
+      "max_node_CAD_distance_mm": 1.3557455178480058e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00010375557202839108,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.33801273481343225,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 11,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        1,
+        2
+      ],
+      "nodes": 34711,
+      "triangles": 16974,
+      "max_node_CAD_distance_mm": 0.02303731523518599,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.009637556723581263,
+      "project_screen_tolerance_mm": 0.0075,
+      "min_surface_SICN": 0.5682275672651514,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 12,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        1,
+        9
+      ],
+      "nodes": 10305,
+      "triangles": 4992,
+      "max_node_CAD_distance_mm": 1.4081115255860699e-08,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00010834048535353529,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7384903648220038,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 13,
+      "type": "Plane",
+      "part_ids": [
+        1,
+        14
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9541356549128484,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 14,
+      "type": "Cylinder",
+      "part_ids": [
+        1,
+        9
+      ],
+      "nodes": 8877,
+      "triangles": 4294,
+      "max_node_CAD_distance_mm": 1.5280799322856756e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 6.048018634248216e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7299311792863403,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 15,
+      "type": "Plane",
+      "part_ids": [
+        2,
+        10
+      ],
+      "nodes": 963,
+      "triangles": 321,
+      "max_node_CAD_distance_mm": 1.9895196601282805e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 8.526512829121202e-14,
+      "project_screen_tolerance_mm": 0.0075,
+      "min_surface_SICN": 0.39512792972745686,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 16,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        2,
+        3
+      ],
+      "nodes": 34770,
+      "triangles": 17003,
+      "max_node_CAD_distance_mm": 0.016691176798406773,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00034851829240770154,
+      "project_screen_tolerance_mm": 0.0075,
+      "min_surface_SICN": 0.47434342921826955,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 17,
+      "type": "Cylinder",
+      "part_ids": [
+        2,
+        3
+      ],
+      "nodes": 94381,
+      "triangles": 46546,
+      "max_node_CAD_distance_mm": 0.01229431960042424,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0022358106853665265,
+      "project_screen_tolerance_mm": 0.0075,
+      "min_surface_SICN": 0.5799734521112213,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 18,
+      "type": "Plane",
+      "part_ids": [
+        2,
+        9
+      ],
+      "nodes": 963,
+      "triangles": 321,
+      "max_node_CAD_distance_mm": 1.9895196601282805e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.1368683772161603e-13,
+      "project_screen_tolerance_mm": 0.0075,
+      "min_surface_SICN": 0.39512812479482085,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 19,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        2,
+        3
+      ],
+      "nodes": 34690,
+      "triangles": 16963,
+      "max_node_CAD_distance_mm": 0.018307019736335,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.004641592338516975,
+      "project_screen_tolerance_mm": 0.0075,
+      "min_surface_SICN": 0.47258101103603595,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 20,
+      "type": "Plane",
+      "part_ids": [
+        3,
+        10
+      ],
+      "nodes": 1637,
+      "triangles": 653,
+      "max_node_CAD_distance_mm": 2.2737367544323206e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 8.526512829121202e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8223206586184191,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 21,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        3,
+        4
+      ],
+      "nodes": 35133,
+      "triangles": 17180,
+      "max_node_CAD_distance_mm": 3.6213635846318357e-07,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0002626084317251635,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5696453365160364,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 22,
+      "type": "Cylinder",
+      "part_ids": [
+        3,
+        4
+      ],
+      "nodes": 95045,
+      "triangles": 46878,
+      "max_node_CAD_distance_mm": 1.0247593068766006e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 3.8362072645423654e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5481680089022026,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 23,
+      "type": "Plane",
+      "part_ids": [
+        3,
+        9
+      ],
+      "nodes": 1637,
+      "triangles": 653,
+      "max_node_CAD_distance_mm": 1.9895196601282805e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.1368683772161603e-13,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.82232066970225,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 24,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        3,
+        4
+      ],
+      "nodes": 35061,
+      "triangles": 17144,
+      "max_node_CAD_distance_mm": 5.3956604680883e-08,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0002810850542067152,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.569645225633149,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 25,
+      "type": "Plane",
+      "part_ids": [
+        4,
+        10
+      ],
+      "nodes": 1724,
+      "triangles": 688,
+      "max_node_CAD_distance_mm": 2.2737367544323206e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8298492122689969,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 26,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        4,
+        5
+      ],
+      "nodes": 35097,
+      "triangles": 17158,
+      "max_node_CAD_distance_mm": 6.648529608088735e-08,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0003553955603715031,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5706801030611345,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 27,
+      "type": "Cylinder",
+      "part_ids": [
+        4,
+        5
+      ],
+      "nodes": 95637,
+      "triangles": 47174,
+      "max_node_CAD_distance_mm": 1.0247593068766006e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 3.636418972555322e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5770860201955296,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 28,
+      "type": "Plane",
+      "part_ids": [
+        4,
+        9
+      ],
+      "nodes": 1724,
+      "triangles": 688,
+      "max_node_CAD_distance_mm": 1.9895196601282805e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8298492676802263,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 29,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        4,
+        5
+      ],
+      "nodes": 35285,
+      "triangles": 17252,
+      "max_node_CAD_distance_mm": 1.4772822105480515e-08,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0002662223071938859,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.47490530979809215,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 30,
+      "type": "Plane",
+      "part_ids": [
+        5,
+        10
+      ],
+      "nodes": 1807,
+      "triangles": 721,
+      "max_node_CAD_distance_mm": 2.2737367544323206e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8306813030440214,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 31,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        5,
+        6
+      ],
+      "nodes": 36286,
+      "triangles": 17747,
+      "max_node_CAD_distance_mm": 5.754781978390441e-08,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0003401787083585635,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.4582206339293299,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 32,
+      "type": "Cylinder",
+      "part_ids": [
+        5,
+        6
+      ],
+      "nodes": 96197,
+      "triangles": 47454,
+      "max_node_CAD_distance_mm": 1.0247593068766006e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.506395847834004e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5409577575376909,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 33,
+      "type": "Plane",
+      "part_ids": [
+        5,
+        9
+      ],
+      "nodes": 1807,
+      "triangles": 721,
+      "max_node_CAD_distance_mm": 1.9895196601282805e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.83068125346235,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 34,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        5,
+        6
+      ],
+      "nodes": 36334,
+      "triangles": 17771,
+      "max_node_CAD_distance_mm": 0.008156104454142957,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00030883980068867307,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.45558824646164114,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 35,
+      "type": "Plane",
+      "part_ids": [
+        6,
+        10
+      ],
+      "nodes": 1897,
+      "triangles": 757,
+      "max_node_CAD_distance_mm": 2.2737367544323206e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8366153626649891,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 36,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        6,
+        8
+      ],
+      "nodes": 57080,
+      "triangles": 27831,
+      "max_node_CAD_distance_mm": 0.00863383327149394,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0010669186777247687,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5728528015173209,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 37,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        6
+      ],
+      "nodes": 38668,
+      "triangles": 18455,
+      "max_node_CAD_distance_mm": 9.558387637815399e-08,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0003703513472209898,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.2842747303512812,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 38,
+      "type": "Cylinder",
+      "part_ids": [
+        6
+      ],
+      "nodes": 96773,
+      "triangles": 47742,
+      "max_node_CAD_distance_mm": 1.0247593068766006e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.526721541093406e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6016364896212985,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 39,
+      "type": "Plane",
+      "part_ids": [
+        6,
+        9
+      ],
+      "nodes": 1897,
+      "triangles": 757,
+      "max_node_CAD_distance_mm": 2.2737367544323206e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.1368683772161603e-13,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8366153702782874,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 40,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        6
+      ],
+      "nodes": 38444,
+      "triangles": 18343,
+      "max_node_CAD_distance_mm": 0.00022970965285869737,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0003868182953534172,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.26408824924162494,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 41,
+      "type": "Surface of Revolution",
+      "part_ids": [
+        6,
+        7
+      ],
+      "nodes": 57176,
+      "triangles": 27879,
+      "max_node_CAD_distance_mm": 0.012116654599517667,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.002089189598657526,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5395696722445897,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 42,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 5900,
+      "triangles": 2822,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.842170943040401e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5972190720647104,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 43,
+      "type": "Plane",
+      "part_ids": [
+        7,
+        9
+      ],
+      "nodes": 1840,
+      "triangles": 758,
+      "max_node_CAD_distance_mm": 2.2737367544323206e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.7461825246528531,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 44,
+      "type": "Cone",
+      "part_ids": [
+        9
+      ],
+      "nodes": 7011,
+      "triangles": 3360,
+      "max_node_CAD_distance_mm": 4.14314051144892e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.39735587709819e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5751351860805881,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 45,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 4907,
+      "triangles": 2274,
+      "max_node_CAD_distance_mm": 4.1583447479068616e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.753503072746695e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6961705836195954,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 46,
+      "type": "Cone",
+      "part_ids": [
+        9
+      ],
+      "nodes": 7825,
+      "triangles": 3710,
+      "max_node_CAD_distance_mm": 4.7664655742347644e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.5570578198268745e-06,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6353637450184306,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 47,
+      "type": "Plane",
+      "part_ids": [
+        9,
+        14
+      ],
+      "nodes": 1792,
+      "triangles": 768,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9114464385453875,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 48,
+      "type": "Cone",
+      "part_ids": [
+        9
+      ],
+      "nodes": 12831,
+      "triangles": 6242,
+      "max_node_CAD_distance_mm": 3.552713678800501e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.5846854680143103e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6544508226552815,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 49,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 768,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.1502806661160551,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 50,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 2065,
+      "triangles": 900,
+      "max_node_CAD_distance_mm": 0.005873035424022036,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.004674826661130352,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5518236503529437,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 51,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 2857,
+      "triangles": 1294,
+      "max_node_CAD_distance_mm": 1.7763568394002505e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 3.619881010816478e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5480311801577058,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 52,
+      "type": "Torus",
+      "part_ids": [
+        9
+      ],
+      "nodes": 1721,
+      "triangles": 708,
+      "max_node_CAD_distance_mm": 0.12115047123066841,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.11551240778918356,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.13439423566517544,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 53,
+      "type": "Torus",
+      "part_ids": [
+        9
+      ],
+      "nodes": 2743,
+      "triangles": 1232,
+      "max_node_CAD_distance_mm": 0.10627314903027106,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.022206220799174076,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.15121957938231506,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 54,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 1401,
+      "triangles": 568,
+      "max_node_CAD_distance_mm": 0.005873035424022264,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0039531508586974394,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5563580645132499,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 55,
+      "type": "Torus",
+      "part_ids": [
+        9
+      ],
+      "nodes": 2663,
+      "triangles": 1192,
+      "max_node_CAD_distance_mm": 0.03335166564135005,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.028748933712534466,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.15121957938232686,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 56,
+      "type": "Torus",
+      "part_ids": [
+        9
+      ],
+      "nodes": 1721,
+      "triangles": 708,
+      "max_node_CAD_distance_mm": 0.12115047123066777,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.1155124077891849,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.13439423566517486,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 57,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.002740749864543917,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.001827189507613014,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6164903992729516,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 58,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 8299,
+      "triangles": 4010,
+      "max_node_CAD_distance_mm": 0.005873035424022264,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.003918678176140583,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6499646386678171,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 59,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.765093796000161,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 60,
+      "type": "Cone",
+      "part_ids": [
+        9
+      ],
+      "nodes": 2361,
+      "triangles": 1050,
+      "max_node_CAD_distance_mm": 2.4868995751603507e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.0380586478027947e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7183401248569387,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 61,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0028536928534669283,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.488905635249226e-08,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6937750488257215,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 62,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 5691,
+      "triangles": 2710,
+      "max_node_CAD_distance_mm": 2.3898437090739062e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 3.3622284823055716e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6699176693368945,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 63,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.765093796000158,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 64,
+      "type": "Cone",
+      "part_ids": [
+        9
+      ],
+      "nodes": 4413,
+      "triangles": 1756,
+      "max_node_CAD_distance_mm": 2.3092638912203256e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.835969282060861e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.3948492218856669,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 65,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 769,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 1.637720085286689e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.90186593463403e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.34199810343871945,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 66,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.17556878150609212,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 67,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.17556878150613062,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 68,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.1755687815058087,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 69,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.17556878150613398,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 70,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.17556878150619745,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 71,
+      "type": "Plane",
+      "part_ids": [
+        9
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.17556878150604527,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 72,
+      "type": "Torus",
+      "part_ids": [
+        9
+      ],
+      "nodes": 2703,
+      "triangles": 1212,
+      "max_node_CAD_distance_mm": 0.15940972354537392,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.10864536833352455,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.15121957938234593,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 73,
+      "type": "Plane",
+      "part_ids": [
+        9,
+        14
+      ],
+      "nodes": 237,
+      "triangles": 94,
+      "max_node_CAD_distance_mm": 9.871175158657624e-14,
+      "sampled_interior_points": 376,
+      "max_sampled_interior_CAD_distance_mm": 1.2809491335957507e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8545637998964474,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 74,
+      "type": "Plane",
+      "part_ids": [
+        9,
+        14
+      ],
+      "nodes": 237,
+      "triangles": 94,
+      "max_node_CAD_distance_mm": 1.4921397450962104e-13,
+      "sampled_interior_points": 376,
+      "max_sampled_interior_CAD_distance_mm": 1.7763568394002505e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8545637998964104,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 75,
+      "type": "Plane",
+      "part_ids": [
+        9,
+        14
+      ],
+      "nodes": 237,
+      "triangles": 94,
+      "max_node_CAD_distance_mm": 1.6833500104388266e-13,
+      "sampled_interior_points": 376,
+      "max_sampled_interior_CAD_distance_mm": 2.4242552967656972e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8545637998964493,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 76,
+      "type": "Plane",
+      "part_ids": [
+        9,
+        14
+      ],
+      "nodes": 237,
+      "triangles": 94,
+      "max_node_CAD_distance_mm": 1.68279384745685e-13,
+      "sampled_interior_points": 376,
+      "max_sampled_interior_CAD_distance_mm": 2.4269041078059695e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8545637998964127,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 77,
+      "type": "Plane",
+      "part_ids": [
+        9,
+        14
+      ],
+      "nodes": 237,
+      "triangles": 94,
+      "max_node_CAD_distance_mm": 1.4921397450962104e-13,
+      "sampled_interior_points": 376,
+      "max_sampled_interior_CAD_distance_mm": 1.7763568394002505e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.854563799896474,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 78,
+      "type": "Plane",
+      "part_ids": [
+        9,
+        14
+      ],
+      "nodes": 237,
+      "triangles": 94,
+      "max_node_CAD_distance_mm": 1.0025012684538455e-13,
+      "sampled_interior_points": 376,
+      "max_sampled_interior_CAD_distance_mm": 1.432144669219779e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8545637998964446,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 79,
+      "type": "Torus",
+      "part_ids": [
+        9
+      ],
+      "nodes": 2703,
+      "triangles": 1212,
+      "max_node_CAD_distance_mm": 0.03038275358816654,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0222062207992331,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.1512195793823283,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 80,
+      "type": "Plane",
+      "part_ids": [
+        9,
+        14
+      ],
+      "nodes": 1468,
+      "triangles": 604,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7979991164442888,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 81,
+      "type": "Cylinder",
+      "part_ids": [
+        9
+      ],
+      "nodes": 1819,
+      "triangles": 778,
+      "max_node_CAD_distance_mm": 1.6758116906701664e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.7860364725168484e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8063627290427855,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 82,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 5900,
+      "triangles": 2822,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.842170943040401e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5972190720647231,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 83,
+      "type": "Plane",
+      "part_ids": [
+        8,
+        10
+      ],
+      "nodes": 1852,
+      "triangles": 764,
+      "max_node_CAD_distance_mm": 1.9895196601282805e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.1368683772161603e-13,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.746182520999062,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 84,
+      "type": "Cone",
+      "part_ids": [
+        10
+      ],
+      "nodes": 7095,
+      "triangles": 3402,
+      "max_node_CAD_distance_mm": 4.14314051144892e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.312254564145958e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5600676034042613,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 85,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 4911,
+      "triangles": 2276,
+      "max_node_CAD_distance_mm": 4.2780337774645346e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.840211997093545e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6747045809539082,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 86,
+      "type": "Cone",
+      "part_ids": [
+        10
+      ],
+      "nodes": 7777,
+      "triangles": 3686,
+      "max_node_CAD_distance_mm": 4.0194366942304644e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.446508639861912e-06,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6804700422162295,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 87,
+      "type": "Plane",
+      "part_ids": [
+        10,
+        18
+      ],
+      "nodes": 1792,
+      "triangles": 768,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9114464385453872,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 88,
+      "type": "Cone",
+      "part_ids": [
+        10
+      ],
+      "nodes": 12783,
+      "triangles": 6218,
+      "max_node_CAD_distance_mm": 3.709141974507642e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.6273972455013374e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6735647484819125,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 89,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 768,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.15028066611607244,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 90,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 2085,
+      "triangles": 910,
+      "max_node_CAD_distance_mm": 0.005873035424022264,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00538166918889505,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.551823650353018,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 91,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 3813,
+      "triangles": 1708,
+      "max_node_CAD_distance_mm": 1.6758116906701664e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.959194297931525e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5522825188023894,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 92,
+      "type": "Torus",
+      "part_ids": [
+        10
+      ],
+      "nodes": 2561,
+      "triangles": 1128,
+      "max_node_CAD_distance_mm": 0.12115047123066806,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.11551240778918298,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.13439423566517467,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 93,
+      "type": "Torus",
+      "part_ids": [
+        10
+      ],
+      "nodes": 7895,
+      "triangles": 3744,
+      "max_node_CAD_distance_mm": 1.7117939918840646e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00010421448544934042,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.273123845882555,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 94,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 1393,
+      "triangles": 564,
+      "max_node_CAD_distance_mm": 0.005873035424022264,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.003953150858701963,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5563580645132515,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 95,
+      "type": "Torus",
+      "part_ids": [
+        10
+      ],
+      "nodes": 7895,
+      "triangles": 3744,
+      "max_node_CAD_distance_mm": 1.7117939918840646e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00010714341251510901,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.27312384588020394,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 96,
+      "type": "Torus",
+      "part_ids": [
+        10
+      ],
+      "nodes": 2097,
+      "triangles": 896,
+      "max_node_CAD_distance_mm": 0.12115047123066806,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.1155124077891607,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.13439423566517467,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 97,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 2177,
+      "triangles": 896,
+      "max_node_CAD_distance_mm": 1.6758116906701664e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.4239428489925035e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.49117833800119676,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 98,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 8279,
+      "triangles": 4000,
+      "max_node_CAD_distance_mm": 0.005873035424022036,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0028276093238950957,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.649964638666658,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 99,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7650937960001595,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 100,
+      "type": "Cone",
+      "part_ids": [
+        10
+      ],
+      "nodes": 2333,
+      "triangles": 1036,
+      "max_node_CAD_distance_mm": 2.6645352591003757e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.0380586479709935e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7183401248726519,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 101,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 1.7495085916501026e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.48890547199938e-08,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6937750488258518,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 102,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 2655,
+      "triangles": 1196,
+      "max_node_CAD_distance_mm": 2.2469334198890888e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.2441634200008252e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7010358225183414,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 103,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.765093796000168,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 104,
+      "type": "Cone",
+      "part_ids": [
+        10
+      ],
+      "nodes": 4401,
+      "triangles": 1750,
+      "max_node_CAD_distance_mm": 2.161031364628563e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.8359692761500036e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.39484922188570054,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 105,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 1153,
+      "triangles": 384,
+      "max_node_CAD_distance_mm": 1.637720085286689e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.113316783357967e-08,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.4499029174616913,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 106,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.175568781506078,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 107,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.1755687815059979,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 108,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.1755687815060743,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 109,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.17556878150604224,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 110,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.1755687815060089,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 111,
+      "type": "Plane",
+      "part_ids": [
+        10
+      ],
+      "nodes": 731,
+      "triangles": 290,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.1755687815060304,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 112,
+      "type": "Torus",
+      "part_ids": [
+        10
+      ],
+      "nodes": 7895,
+      "triangles": 3744,
+      "max_node_CAD_distance_mm": 1.7117939918840646e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00010421448544934042,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.2731238458823826,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 113,
+      "type": "Plane",
+      "part_ids": [
+        10,
+        18
+      ],
+      "nodes": 1468,
+      "triangles": 604,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7979991164442882,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 114,
+      "type": "Torus",
+      "part_ids": [
+        10
+      ],
+      "nodes": 7895,
+      "triangles": 3744,
+      "max_node_CAD_distance_mm": 1.7117939918840646e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00010714341251510901,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.27312384588020394,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 115,
+      "type": "Cylinder",
+      "part_ids": [
+        10
+      ],
+      "nodes": 1153,
+      "triangles": 384,
+      "max_node_CAD_distance_mm": 1.637720085286689e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.113316704774472e-08,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.4499029174617492,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 116,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 2780,
+      "triangles": 1262,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5619133560878253,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 117,
+      "type": "Cylinder",
+      "part_ids": [
+        14
+      ],
+      "nodes": 8633,
+      "triangles": 4164,
+      "max_node_CAD_distance_mm": 0.006857679720718018,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.071542239458121e-06,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5997411318138207,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 118,
+      "type": "Cylinder",
+      "part_ids": [
+        14
+      ],
+      "nodes": 2845,
+      "triangles": 1288,
+      "max_node_CAD_distance_mm": 1.637720085286689e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 4.986670631628342e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5429624572763639,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 119,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9880911770087357,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 120,
+      "type": "Torus",
+      "part_ids": [
+        14
+      ],
+      "nodes": 17191,
+      "triangles": 8444,
+      "max_node_CAD_distance_mm": 0.027737034109395157,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00028310844741852434,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.366400943457232,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 121,
+      "type": "Cone",
+      "part_ids": [
+        14
+      ],
+      "nodes": 3083,
+      "triangles": 1408,
+      "max_node_CAD_distance_mm": 1.507288760336424e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.762802211300577e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5521960807794868,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 122,
+      "type": "Cylinder",
+      "part_ids": [
+        14
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0006814483557428893,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00032718485754226035,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6158186019873427,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 123,
+      "type": "Cylinder",
+      "part_ids": [
+        14
+      ],
+      "nodes": 4695,
+      "triangles": 2212,
+      "max_node_CAD_distance_mm": 1.432144669219779e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 4.4740002777154726e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7246390258959932,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 124,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.818412779652139,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 125,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 2684,
+      "triangles": 1212,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8493118474113242,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 126,
+      "type": "Cylinder",
+      "part_ids": [
+        14
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 1.5888218580782548e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 8.662697656591533e-08,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7392857242861095,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 127,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 407,
+      "triangles": 178,
+      "max_node_CAD_distance_mm": 9.871175158657624e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.432144669219779e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9007393683916952,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 128,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 407,
+      "triangles": 178,
+      "max_node_CAD_distance_mm": 1.0025012684538455e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.432144669219779e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9373476127267818,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 129,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 407,
+      "triangles": 178,
+      "max_node_CAD_distance_mm": 1.4921397450962104e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.7763568394002505e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9023826667686569,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 130,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 407,
+      "triangles": 178,
+      "max_node_CAD_distance_mm": 1.4921397450962104e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.7763568394002505e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9007393683916828,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 131,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 407,
+      "triangles": 178,
+      "max_node_CAD_distance_mm": 1.6833500104388266e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.4242552967656972e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9023826667686591,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 132,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 407,
+      "triangles": 178,
+      "max_node_CAD_distance_mm": 1.68279384745685e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.0787443809527258e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9371715660238765,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 133,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8184127796521437,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 134,
+      "type": "Plane",
+      "part_ids": [
+        14
+      ],
+      "nodes": 768,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.15028066611604707,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 135,
+      "type": "Cylinder",
+      "part_ids": [
+        14
+      ],
+      "nodes": 769,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 1.5888218580782548e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.8914161286796028e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.337424859521355,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 136,
+      "type": "Cylinder",
+      "part_ids": [
+        14
+      ],
+      "nodes": 1819,
+      "triangles": 778,
+      "max_node_CAD_distance_mm": 1.6687357476335705e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 3.4507013270247805e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7556871989372863,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 137,
+      "type": "Torus",
+      "part_ids": [
+        14
+      ],
+      "nodes": 17191,
+      "triangles": 8444,
+      "max_node_CAD_distance_mm": 0.027437093292383266,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.013416778663368413,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.3664009434569994,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 138,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 3284,
+      "triangles": 1514,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5512383284120945,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 139,
+      "type": "Cylinder",
+      "part_ids": [
+        18
+      ],
+      "nodes": 5399,
+      "triangles": 2554,
+      "max_node_CAD_distance_mm": 7.640399661428378e-15,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 4.656597085023051e-06,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5997411318137488,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 140,
+      "type": "Cylinder",
+      "part_ids": [
+        18
+      ],
+      "nodes": 2833,
+      "triangles": 1282,
+      "max_node_CAD_distance_mm": 1.6687357476335705e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 6.864117256479774e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5429624572761647,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 141,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 1052,
+      "triangles": 398,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5512383284119319,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 142,
+      "type": "Torus",
+      "part_ids": [
+        18
+      ],
+      "nodes": 17191,
+      "triangles": 8444,
+      "max_node_CAD_distance_mm": 0.02773703414145376,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.02293424015325922,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.366400943457232,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 143,
+      "type": "Cone",
+      "part_ids": [
+        18
+      ],
+      "nodes": 3591,
+      "triangles": 1660,
+      "max_node_CAD_distance_mm": 1.507288760336424e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.0681037536182944e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.5517411379398929,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 144,
+      "type": "Cylinder",
+      "part_ids": [
+        18
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0006814483557439486,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0003271848575455136,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.6158186019876327,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 145,
+      "type": "Cylinder",
+      "part_ids": [
+        18
+      ],
+      "nodes": 1799,
+      "triangles": 770,
+      "max_node_CAD_distance_mm": 1.432144669219779e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 2.2152870162578423e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8425058220259023,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 146,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8184127796521459,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 147,
+      "type": "Cone",
+      "part_ids": [
+        18
+      ],
+      "nodes": 1295,
+      "triangles": 518,
+      "max_node_CAD_distance_mm": 2.3160859559832578e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.4412129642750511e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7901643661535529,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 148,
+      "type": "Cylinder",
+      "part_ids": [
+        18
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 1.5888218580782548e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 8.662697532329466e-08,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.7392857242858928,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 149,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 2132,
+      "triangles": 936,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8881083058114307,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 150,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 1280,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8184127796521412,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 151,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 599,
+      "triangles": 272,
+      "max_node_CAD_distance_mm": 2.7114910356960115e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 6.4047456679787536e-15,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8960255787865821,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 152,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 599,
+      "triangles": 272,
+      "max_node_CAD_distance_mm": 2.7114910356960115e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.0242958677880805e-15,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.9006993331716071,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 153,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 591,
+      "triangles": 268,
+      "max_node_CAD_distance_mm": 4.973799150320701e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 7.105427357601002e-15,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8923760780816724,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 154,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 591,
+      "triangles": 268,
+      "max_node_CAD_distance_mm": 4.973799150320701e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 7.105427357601002e-15,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8923760780815966,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 155,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 599,
+      "triangles": 272,
+      "max_node_CAD_distance_mm": 2.864289338439558e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 7.944109290391274e-15,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8960255787866004,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 156,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 599,
+      "triangles": 272,
+      "max_node_CAD_distance_mm": 3.1776437161565096e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 6.4047456679787536e-15,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.8960255787865823,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 157,
+      "type": "Cylinder",
+      "part_ids": [
+        18
+      ],
+      "nodes": 769,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 1.5888218580782548e-14,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.8914161289411197e-07,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.33742485952130635,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 158,
+      "type": "Plane",
+      "part_ids": [
+        18
+      ],
+      "nodes": 768,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 0.0,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 5.684341886080802e-14,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.1502806661160394,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 159,
+      "type": "Torus",
+      "part_ids": [
+        18
+      ],
+      "nodes": 17191,
+      "triangles": 8444,
+      "max_node_CAD_distance_mm": 0.02773703414145376,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.022934240153254903,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.3664009434571157,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 160,
+      "type": "Cylinder",
+      "part_ids": [
+        18
+      ],
+      "nodes": 769,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 0.0027256907993521164,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0026166631673777566,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.33742485952109436,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 161,
+      "type": "Plane",
+      "part_ids": [
+        7
+      ],
+      "nodes": 7053,
+      "triangles": 2351,
+      "max_node_CAD_distance_mm": 2.5579538487363607e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 8.526512829121202e-14,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.3618474248874818,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 162,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 6387,
+      "triangles": 2530,
+      "max_node_CAD_distance_mm": 0.0017083409655264212,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0011103981546422528,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.21772601967466906,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 163,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 995,
+      "triangles": 358,
+      "max_node_CAD_distance_mm": 0.014216309408103452,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.001811093690916263,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.15120622334844117,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 164,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1279,
+      "triangles": 510,
+      "max_node_CAD_distance_mm": 0.0056732222395229435,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.003575289078668823,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.33028888167373477,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 165,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 773,
+      "triangles": 258,
+      "max_node_CAD_distance_mm": 2.9613525475972874e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.1246319935085845e-05,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.3676494138058106,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 166,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1287,
+      "triangles": 514,
+      "max_node_CAD_distance_mm": 0.0037222058856549193,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0027477979535702867,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.46837261821810267,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 167,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.997783086261874e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.260827591261757e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6496812547508466,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 168,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0016904473625082828,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0007654845563503196,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.48325409627314797,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 169,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.89235408062149e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.342345149877501e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6452114051879202,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 170,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.7517733012589603e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.48455151843329e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.49217941333652127,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 171,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.997783086261874e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.413314063684531e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6401670589676407,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 172,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.7517733012589603e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.51465164214643e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5011019242078336,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 173,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.9613525475972874e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.474403154565214e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6346057719960198,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 174,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.781930042285712e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.543317619941495e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5099150985573652,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 175,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.6314225835612427e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.526243724625786e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6285802948682,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 176,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 4.3869900538405577e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.57394633253794e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5179602680738185,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 177,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.8788084748251155e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.569433589389103e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6221390008263422,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 178,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.001618890133538729,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0007734802779751933,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5271648118197308,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 179,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.574675893923972e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.604540606527385e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6153262615927312,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 180,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0015622994548394804,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0007595141944312881,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.53569094334357,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 181,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.2100493280258087e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.63210599457119e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6081827934346447,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 182,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.781930042285712e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.639572508349127e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5441510984426721,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 183,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.8454740910466424e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.652647784750638e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6007459871928696,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 184,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.7517733012589603e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.655123901116658e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5525288571942187,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 185,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.781930042285712e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.666663238477182e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5930501738475282,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 186,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0007888321605240577,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.666829995354344e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5608062498347258,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 187,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.8788084748251155e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.674631952467558e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5851268698385285,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 188,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.1645329030274947e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.674270837013433e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5689636175466287,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 189,
+      "type": "Cone",
+      "part_ids": [
+        7
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 4.0693694993695867e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.677017688687972e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5770050262871164,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 190,
+      "type": "Plane",
+      "part_ids": [
+        8
+      ],
+      "nodes": 7053,
+      "triangles": 2351,
+      "max_node_CAD_distance_mm": 2.5579538487363607e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 8.526512829121202e-14,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.3618474248870976,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 191,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 769,
+      "triangles": 256,
+      "max_node_CAD_distance_mm": 2.9613525475972874e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 1.1246319933737454e-05,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5085827593175166,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 192,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 6387,
+      "triangles": 2530,
+      "max_node_CAD_distance_mm": 0.0017252395167944468,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0008773932888227765,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.13048008443260564,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 193,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.9613525475972874e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.2608275938221e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6496812574074255,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 194,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 995,
+      "triangles": 358,
+      "max_node_CAD_distance_mm": 0.014216309408106496,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0019350874878590048,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.15120658881098104,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 195,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.89235408062149e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.342345149003965e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6452114071441549,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 196,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1279,
+      "triangles": 510,
+      "max_node_CAD_distance_mm": 0.0056732222395210925,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.002734811709853821,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.33028888167366593,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 197,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.9613525475972874e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.413314067047833e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6401670589677428,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 198,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1287,
+      "triangles": 514,
+      "max_node_CAD_distance_mm": 0.003722205885597795,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0024568997289841255,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.4683737476189048,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 199,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.9613525475972874e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.474403157378503e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6346057719959963,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 200,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0017084692588124912,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.0007748381873898343,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.48325409602041247,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 201,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.6314225835612427e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.526243726178543e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6285802972993624,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 202,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0013457933133340185,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.484551514363944e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.49217941178417973,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 203,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.8788084748251155e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.569433588935675e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6221390032586743,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 204,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.7517733012589603e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.514651640939389e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5011019225056853,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 205,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.608766145426361e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.604540571031919e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6153262615926791,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 206,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.781930042285712e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.543317623703323e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5099150985572941,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 207,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.243687902600336e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.63210599633837e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.6081827950484665,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 208,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0016430097344664726,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00042128273469315043,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5179602680737876,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 209,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.8454740910466424e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.652647757605086e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.600745988226674,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 210,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 4.357544897420088e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.598579364143051e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5271648145935846,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 211,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.781930042285712e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.666663235273871e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5930501738475055,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 212,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0012171002337083097,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.000586155782118001,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5356909431928838,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 213,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.8454740910466424e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.674631946740411e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5851268718111532,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 214,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 0.0008117274491658366,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00038964495798162564,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5441510979912674,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 215,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 4.0693694993695867e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.677017688720911e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5770050286646191,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 216,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 3.7517733012589603e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.655123902778728e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5525288596201411,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 217,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.1934950269202788e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.674270837604711e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.568963619572041,
+      "below_005": 0,
+      "passed": true
+    },
+    {
+      "surface": 218,
+      "type": "Cone",
+      "part_ids": [
+        8
+      ],
+      "nodes": 1281,
+      "triangles": 512,
+      "max_node_CAD_distance_mm": 2.2243506013095567e-13,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 9.666830020435951e-06,
+      "project_screen_tolerance_mm": 0.003,
+      "min_surface_SICN": 0.5608062522698666,
+      "below_005": 0,
+      "passed": true
+    }
+  ],
+  "max_node_CAD_distance_mm": 0.15940972354537392,
+  "max_sampled_interior_CAD_distance_mm": 0.1155124077891849,
+  "min_surface_SICN": 0.13048008443260564,
+  "surface_below_005": 0,
+  "passed": false,
+  "production_eligible": false,
+  "seconds": 87.6747752999654
+}
