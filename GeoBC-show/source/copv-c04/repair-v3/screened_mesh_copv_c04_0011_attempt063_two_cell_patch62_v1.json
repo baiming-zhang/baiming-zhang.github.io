@@ -1,0 +1,31 @@
+{
+  "schema": "c04_screened_mesh_v1",
+  "created": "2026-10-27T07:32:16.484260+08:00",
+  "case_id": "copv_c04_0011",
+  "candidate": "data/copv/c04_repair_v3/copv_c04_0011/attempt063_two_cell_patch62",
+  "mesh_sha256": "74d8f3be2cb100ae0ce84385ebde21bafb72cd7d2d92e684fc95ff25c3508dbc",
+  "original_mesh_screen_passed": true,
+  "production_eligible": false,
+  "GPU_status": "not_started",
+  "evidence_sha256": {
+    "data/copv/c04_repair_v3/copv_c04_0011/attempt063_two_cell_patch62/mesh/mesh.npz": "74d8f3be2cb100ae0ce84385ebde21bafb72cd7d2d92e684fc95ff25c3508dbc",
+    "data/copv/c04_repair_v3/copv_c04_0011/attempt063_two_cell_patch62/preflight/review.json": "978418616cc907ccffe9088f0b244b3cc0c540c254ffca7415319de3102d0886",
+    "data/copv/c04_repair_v3/copv_c04_0011/attempt063_two_cell_patch62/geometry_check/review.json": "c77d8abde56d79d9e3e8656765783056a10e12a6e39f45dda7ca2a7a63698938",
+    "data/copv/c04_repair_v3/copv_c04_0011/attempt063_two_cell_patch62/result.json": "5d4c2c509f7fe818e8dde61dcdfdf67ed83d59c0edd19526a16d62e66948d99d",
+    "data/copv/c04_repair_v3/worker60_config.json": "e42641b29c0cfb8d7d976677cece65939dcc28f397cf7a7fe7ec2718480f27ed",
+    "data/copv/c04_repair_v3/worker62_config.json": "4b03c85800ff111ac6721c0a69b61bae0862abb62b772dfbc68eaaadc40fb00b",
+    "data/copv/c04_repair_v3/worker63_config.json": "205a9d3dc5f05dff06663e5a5236acea000ff3620977299fbb9bdc7a508052eb",
+    "notes/c04_shape_objective.py": "f9a43898baf3e6e284ffb7cd8f86e4ae03948fa6d41208792618774f4a55e032",
+    "data/copv/c04_repair_v3/sicn_objective_validation_v1/review.json": "754b70fb27bb0a168f24432b2d4e8243d12a3f44118e3f422a2a0a433b744efd"
+  },
+  "original_quality_targets": {
+    "surface_min_SICN": 0.05,
+    "volume_min_SICN": 0.05,
+    "total_volume_relative_error_max": 0.001,
+    "material_region_volume_relative_error_max": 0.001,
+    "positive_Jacobians": true,
+    "one_connected_component": true,
+    "shared_Tri6_interfaces": true
+  },
+  "scope": "Exact original-ID mesh screening only; actual GPU fields and same-geometry sensitivity pending. Active GPU queue and original history untouched."
+}

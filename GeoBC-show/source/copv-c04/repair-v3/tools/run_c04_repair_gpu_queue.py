@@ -22,6 +22,17 @@ def main():
  candidate=W/state['candidate'];preflight=read(candidate/'preflight/review.json');assert preflight['candidate_FE_validation_allowed'] and not preflight['production_eligible'];assert not (candidate/'local_geometry_hold.json').exists();assert sha(candidate/'mesh/mesh.npz')==preflight['mesh_sha256'];assert read(B/'quadrature_validation_v2/review.json')['passed'];assert shutil.disk_usage(W).free>=40*1024**3
  assert read(B/'compact_frame_validation_v1/review.json')['passed']
  identity=read(B/'compact_frame_validation_v1/helper_identity.json');helper=next(n for n in ast.parse((P/'tools/copv_fenicsx_c04_repair.py').read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='compact_material_frame');assert hashlib.sha256(ast.dump(helper,include_attributes=False).encode()).hexdigest()==identity['helper_AST_sha256'];assert sha(B/'compact_frame_validation_v1/review.json')==identity['validation_review_sha256']
+ # Apply the solver's existing before-domain RAM requirement before creating
+ # a GPU run, so an active C04 CPU mesher causes waiting rather than a known
+ # resource failure. The solver still checks real resources at every stage.
+ pending=[d for d in [6,8] if not any(r['degree']==d and r['status']=='completed' for r in state['runs'])]
+ host_query=subprocess.run(['wsl','-d','cold-surge-ubuntu-24.04','--','cat','/proc/meminfo'],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=30)
+ available=[int(line.split()[1])*1024 for line in host_query.stdout.splitlines() if line.startswith('MemAvailable:')]
+ if host_query.returncode or len(available)!=1:state.update(status='waiting_resources',resource_reason='WSL host availability query failed',updated=stamp());write(Q,state);return
+ nc=int(read(candidate/'mesh/mesh_review_curved_checked.json')['cells']);required=8*1024**3+nc*max(pending,default=8)*1024
+ state.update(host_available_bytes=available[0],host_before_domain_required_bytes=required)
+ if available[0]<required:state.update(status='waiting_resources',resource_reason='WSL RAM below unchanged solver before-domain guard; wait for active CPU work',updated=stamp());write(Q,state);print(json.dumps(state));return
+ state.pop('resource_reason',None)
  frozen=B/'gpu_solver_sources_v3'
  if frozen.exists():assert sha(frozen/'solver.py')==sha(P/'tools/copv_fenicsx_c04_repair.py'),'Frozen solver differs; preserve it and declare a NEW source version'
  if not frozen.exists():
