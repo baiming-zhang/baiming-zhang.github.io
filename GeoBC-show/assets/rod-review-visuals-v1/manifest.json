@@ -1,0 +1,585 @@
+{
+  "cases": [
+    {
+      "id": "normal_rodv2_0150__gas_inertia_30deg",
+      "number": 1,
+      "label": "rodv2_0150 · gas_inertia_30deg",
+      "mesh": "00-mesh.json.gz",
+      "truth": "00-truth.json.gz",
+      "surface_nodes": 16842,
+      "triangles": 33688,
+      "source_geometry_sha256": "b30eaa438bae1d9d8a94fec6c9ea82322b6a533a97bcf59001d917446c279044",
+      "source_cache_sha256": "011649bb399bfb3b531515ffc45d300345442533440345637075988a27d174f1"
+    },
+    {
+      "id": "normal_rodv2_0161__compression_skew",
+      "number": 2,
+      "label": "rodv2_0161 · compression_skew",
+      "mesh": "01-mesh.json.gz",
+      "truth": "01-truth.json.gz",
+      "surface_nodes": 17462,
+      "triangles": 34928,
+      "source_geometry_sha256": "a49e70547761df921b4f2753e753705c076907a3aea18a10d37da341f5a04664",
+      "source_cache_sha256": "814381efb1faa9eca8a65ef04af447ee5b3997bf566779a85ab2f06af8fa402e"
+    },
+    {
+      "id": "normal_rodv2_0170__gas_inertia_30deg",
+      "number": 3,
+      "label": "rodv2_0170 · gas_inertia_30deg",
+      "mesh": "02-mesh.json.gz",
+      "truth": "02-truth.json.gz",
+      "surface_nodes": 20706,
+      "triangles": 41416,
+      "source_geometry_sha256": "8346e684251519286d8e502b4b1c1241be06fbd73618b1c24e204041cc1bdfba",
+      "source_cache_sha256": "22c870cec471027723ad29e7545eac21d90bc3f3a77bab747f44d4334b323132"
+    },
+    {
+      "id": "extreme_rodv2_0130__combined_bending",
+      "number": 4,
+      "label": "rodv2_0130 · combined_bending",
+      "mesh": "03-mesh.json.gz",
+      "truth": "03-truth.json.gz",
+      "surface_nodes": 14946,
+      "triangles": 29896,
+      "source_geometry_sha256": "382ebd3a52e233efd9a0d8cef483cbf89c5e66c1dafff31e4a61229e27d7649f",
+      "source_cache_sha256": "40067eef4835c4b81a4a8af4c2ae5a2d9b292d35ae513cb55abdc4bbc8ff5c2d"
+    },
+    {
+      "id": "extreme_rodv2_0060__overspeed",
+      "number": 5,
+      "label": "rodv2_0060 · overspeed",
+      "mesh": "04-mesh.json.gz",
+      "truth": "04-truth.json.gz",
+      "surface_nodes": 26054,
+      "triangles": 52112,
+      "source_geometry_sha256": "c0d4128128e78fc36ff15e33761d64a07add168d6a63a1a354677aa9952a7b07",
+      "source_cache_sha256": "0503ba73b2b8e24d9f5bee2912f240894966bf2f969c3eebb2e0c184aaa64e7f"
+    },
+    {
+      "id": "extreme_rodv2_0155__rated_firing_compression",
+      "number": 6,
+      "label": "rodv2_0155 · rated_firing_compression",
+      "mesh": "05-mesh.json.gz",
+      "truth": "05-truth.json.gz",
+      "surface_nodes": 16714,
+      "triangles": 33432,
+      "source_geometry_sha256": "7aece1efda0c2701ff2a70a60632fd6935dc2866b402a0e8e08c2eb9e4e0f32f",
+      "source_cache_sha256": "5dd56bc362cf500c40f5920a22cc2da2635bc335f7b9eaad8fc728e8a87f5dac"
+    },
+    {
+      "id": "normal_rodv2_0081__tension",
+      "number": 7,
+      "label": "rodv2_0081 · tension",
+      "mesh": "06-mesh.json.gz",
+      "truth": "06-truth.json.gz",
+      "surface_nodes": 17350,
+      "triangles": 34704,
+      "source_geometry_sha256": "5f45b56177491689dbcb808560ebdb5735fe4c1f0f4bcb1db502f56b5314bbf6",
+      "source_cache_sha256": "d4a596cde4447c4c3fac6db2533f9cd76f4f04a7816328cc1c1e822ec931b136"
+    },
+    {
+      "id": "extreme_rodv2_0142__overspeed",
+      "number": 8,
+      "label": "rodv2_0142 · overspeed",
+      "mesh": "07-mesh.json.gz",
+      "truth": "07-truth.json.gz",
+      "surface_nodes": 17202,
+      "triangles": 34408,
+      "source_geometry_sha256": "78afa2037734f460123eac3e7437736a30293b6ce763e23e28ead9c7acc5eb42",
+      "source_cache_sha256": "0b6f1c092daf1b60b5018e9cabb2411e78d1dd371322ad4e292c8dfbadc2ae2a"
+    },
+    {
+      "id": "extreme_rodv2_0041__combined_bending",
+      "number": 9,
+      "label": "rodv2_0041 · combined_bending",
+      "mesh": "08-mesh.json.gz",
+      "truth": "08-truth.json.gz",
+      "surface_nodes": 17406,
+      "triangles": 34816,
+      "source_geometry_sha256": "b4b7f20fbb356f5b99f51502bfdb138093002fa8e45426dd5245defa2de160eb",
+      "source_cache_sha256": "97754209c9144b9b986a2b9be9c22c800a2832e1807ad19cb389b88a89842d57"
+    },
+    {
+      "id": "extreme_supp2_rodv2_0053__inertial_tension_350deg_8000rpm",
+      "number": 10,
+      "label": "rodv2_0053 · inertial_tension_350deg_8000rpm",
+      "mesh": "09-mesh.json.gz",
+      "truth": "09-truth.json.gz",
+      "surface_nodes": 17250,
+      "triangles": 34504,
+      "source_geometry_sha256": "b19f836c9c1879fecc74c2fd4905398e92996e539fedf6f95c9bfbf61bb21df2",
+      "source_cache_sha256": "1187a449fc203b0f705c88fc76119497c9ddb3dfed6fc62494e2ad76ba33bdc1"
+    },
+    {
+      "id": "normal_rodv2_0117__compression_skew",
+      "number": 11,
+      "label": "rodv2_0117 · compression_skew",
+      "mesh": "10-mesh.json.gz",
+      "truth": "10-truth.json.gz",
+      "surface_nodes": 15206,
+      "triangles": 30416,
+      "source_geometry_sha256": "57c1bdc5d4f204dac6d91566e8a2ee5a79b6562c887ddc21a24742c74955dd24",
+      "source_cache_sha256": "82455d9151f82ef31a5b8089b23a07d9df1e5222f126bbef7c889438c5c90d61"
+    },
+    {
+      "id": "extreme_rodv2_0061__overpressure",
+      "number": 12,
+      "label": "rodv2_0061 · overpressure",
+      "mesh": "11-mesh.json.gz",
+      "truth": "11-truth.json.gz",
+      "surface_nodes": 15410,
+      "triangles": 30824,
+      "source_geometry_sha256": "a583699832c612197679591e2302a487652e0266f6b837afa46b2c6a404fb795",
+      "source_cache_sha256": "4176939b16e3a0025c7e426f75b762760eb5064c913527891420c97d3178b7a3"
+    },
+    {
+      "id": "normal_rodv2_0059__inertia_tdc",
+      "number": 13,
+      "label": "rodv2_0059 · inertia_tdc",
+      "mesh": "12-mesh.json.gz",
+      "truth": "12-truth.json.gz",
+      "surface_nodes": 18266,
+      "triangles": 36536,
+      "source_geometry_sha256": "5728da59938c823d6fe08aafaebdb93849261eb82249e51d4276f8a857d230bb",
+      "source_cache_sha256": "6ce3feff001a9d575de266a9b2ad427da57b73627e3ab345b40ec45e732959d0"
+    },
+    {
+      "id": "normal_rodv2_0112__compression",
+      "number": 14,
+      "label": "rodv2_0112 · compression",
+      "mesh": "13-mesh.json.gz",
+      "truth": "13-truth.json.gz",
+      "surface_nodes": 24830,
+      "triangles": 49664,
+      "source_geometry_sha256": "d9c77820c79bebb57c33d22d649c35998c685f61392ea24bca0bb3a2eb836bf3",
+      "source_cache_sha256": "9a192607e8fb2f772a54fd154e627cff28290b57d284830659ec588dc630ab9e"
+    },
+    {
+      "id": "normal_rodv2_0033__tension_skew",
+      "number": 15,
+      "label": "rodv2_0033 · tension_skew",
+      "mesh": "14-mesh.json.gz",
+      "truth": "14-truth.json.gz",
+      "surface_nodes": 17902,
+      "triangles": 35808,
+      "source_geometry_sha256": "91182fe3e42317e7123b18d6202d755f7ce34289b16c237b4cc6bb490b9b6bfe",
+      "source_cache_sha256": "a7b4cb327a704b0e8ac3dd29888d851d7d2ec653414ddaca3918e06b7d6f4639"
+    },
+    {
+      "id": "normal_rodv2_0067__inertia_tdc",
+      "number": 16,
+      "label": "rodv2_0067 · inertia_tdc",
+      "mesh": "15-mesh.json.gz",
+      "truth": "15-truth.json.gz",
+      "surface_nodes": 26758,
+      "triangles": 53520,
+      "source_geometry_sha256": "9ce32b6da6b00aa76258d6497ca16fc4dc1e81f55a43fae6c838e8568df89e7b",
+      "source_cache_sha256": "0995db7d8603d8d2dc2b41f185f8f519623a19b4a89eebbfb9c2f8677900c4ce"
+    },
+    {
+      "id": "normal_rodv2_0063__tension_skew",
+      "number": 17,
+      "label": "rodv2_0063 · tension_skew",
+      "mesh": "16-mesh.json.gz",
+      "truth": "16-truth.json.gz",
+      "surface_nodes": 22206,
+      "triangles": 44416,
+      "source_geometry_sha256": "4f30027750d769139b5fb77b7fe7c5a5142d6a5ef2486dafa5c7585420bd8c53",
+      "source_cache_sha256": "deb0ae4b654f664ccc367850e414c13360a19f8c27dad8b593985512f89a0bf4"
+    },
+    {
+      "id": "normal_rodv2_0075__tension",
+      "number": 18,
+      "label": "rodv2_0075 · tension",
+      "mesh": "17-mesh.json.gz",
+      "truth": "17-truth.json.gz",
+      "surface_nodes": 17310,
+      "triangles": 34624,
+      "source_geometry_sha256": "dd4a5131ee16d1209e8cf08b6a0988c223d9d8d94ca458056d8244b5b963f4c7",
+      "source_cache_sha256": "2bb1bc4ffaff7b9706f5ac34358f2eaf3858b6bc1d0419e39f781d3745f1cee6"
+    },
+    {
+      "id": "normal_rodv2_0129__compression_skew",
+      "number": 19,
+      "label": "rodv2_0129 · compression_skew",
+      "mesh": "18-mesh.json.gz",
+      "truth": "18-truth.json.gz",
+      "surface_nodes": 27550,
+      "triangles": 55104,
+      "source_geometry_sha256": "6c094a943cb9c12c6a3869e7e577b54152995f46b999df27feddb00b2e71f53f",
+      "source_cache_sha256": "5d594d79cc9d5c9c6975a794599cc33bb9cd0805406e1ff1ca4abbf349bfd278"
+    },
+    {
+      "id": "normal_rodv2_0043__inertia_tdc",
+      "number": 20,
+      "label": "rodv2_0043 · inertia_tdc",
+      "mesh": "19-mesh.json.gz",
+      "truth": "19-truth.json.gz",
+      "surface_nodes": 22834,
+      "triangles": 45672,
+      "source_geometry_sha256": "4276e27e3e4b9b5be0793650a3e0d8f18df6f6f31a29513fb8e6588f9817398c",
+      "source_cache_sha256": "747cd8325d7f5668a68a66ffc7cf2c6173b0740505a5d6121ff1555c236431a7"
+    }
+  ],
+  "models": {
+    "ts3": {
+      "1": {
+        "default_case": 0,
+        "selection": "Largest sum of squared relative U and VM errors in this training subset; not a best-case selection."
+      },
+      "5": {
+        "default_case": 4,
+        "selection": "Largest sum of squared relative U and VM errors in this training subset; not a best-case selection."
+      },
+      "20": {
+        "default_case": 3,
+        "selection": "Largest sum of squared relative U and VM errors in this training subset; not a best-case selection."
+      }
+    },
+    "mgn": {
+      "1": {
+        "default_case": 0,
+        "selection": "Largest sum of squared relative U and VM errors in this training subset; not a best-case selection."
+      },
+      "5": {
+        "default_case": 2,
+        "selection": "Largest sum of squared relative U and VM errors in this training subset; not a best-case selection."
+      },
+      "20": {
+        "default_case": 13,
+        "selection": "Largest sum of squared relative U and VM errors in this training subset; not a best-case selection."
+      }
+    }
+  },
+  "precision": "Float32 surface display only; original Float64 targets, predictions and metrics unchanged.",
+  "geometry": "All original quadratic boundary nodes retained; each TET10 face is split into four triangles. No surface smoothing/remeshing.",
+  "stress": "Element four-GP maximum VM, reference-volume-weighted projection to native nodes. Not direct GP predictions.",
+  "deformation_scale": 1,
+  "error_definition": "U: Euclidean norm of the prediction minus FE vector; VM: absolute predicted minus FE projected node VM; shown on reference configuration.",
+  "palettes": {
+    "viridis": [
+      [
+        0.267004,
+        0.004874,
+        0.329415
+      ],
+      [
+        0.277018,
+        0.050344,
+        0.375715
+      ],
+      [
+        0.282327,
+        0.094955,
+        0.417331
+      ],
+      [
+        0.282884,
+        0.13592,
+        0.453427
+      ],
+      [
+        0.278012,
+        0.180367,
+        0.486697
+      ],
+      [
+        0.269308,
+        0.218818,
+        0.509577
+      ],
+      [
+        0.257322,
+        0.25613,
+        0.526563
+      ],
+      [
+        0.243113,
+        0.292092,
+        0.538516
+      ],
+      [
+        0.225863,
+        0.330805,
+        0.547314
+      ],
+      [
+        0.210503,
+        0.363727,
+        0.552206
+      ],
+      [
+        0.19586,
+        0.395433,
+        0.555276
+      ],
+      [
+        0.182256,
+        0.426184,
+        0.55712
+      ],
+      [
+        0.168126,
+        0.459988,
+        0.558082
+      ],
+      [
+        0.15627,
+        0.489624,
+        0.557936
+      ],
+      [
+        0.144759,
+        0.519093,
+        0.556572
+      ],
+      [
+        0.133743,
+        0.548535,
+        0.553541
+      ],
+      [
+        0.123463,
+        0.581687,
+        0.547445
+      ],
+      [
+        0.119423,
+        0.611141,
+        0.538982
+      ],
+      [
+        0.12478,
+        0.640461,
+        0.527068
+      ],
+      [
+        0.143303,
+        0.669459,
+        0.511215
+      ],
+      [
+        0.180653,
+        0.701402,
+        0.488189
+      ],
+      [
+        0.226397,
+        0.728888,
+        0.462789
+      ],
+      [
+        0.281477,
+        0.755203,
+        0.432552
+      ],
+      [
+        0.344074,
+        0.780029,
+        0.397381
+      ],
+      [
+        0.421908,
+        0.805774,
+        0.35191
+      ],
+      [
+        0.496615,
+        0.826376,
+        0.306377
+      ],
+      [
+        0.575563,
+        0.844566,
+        0.256415
+      ],
+      [
+        0.657642,
+        0.860219,
+        0.203082
+      ],
+      [
+        0.751884,
+        0.874951,
+        0.143228
+      ],
+      [
+        0.83527,
+        0.886029,
+        0.102646
+      ],
+      [
+        0.916242,
+        0.896091,
+        0.100717
+      ],
+      [
+        0.993248,
+        0.906157,
+        0.143936
+      ]
+    ],
+    "magma": [
+      [
+        0.265447,
+        0.060237,
+        0.46184
+      ],
+      [
+        0.304081,
+        0.067835,
+        0.480812
+      ],
+      [
+        0.341482,
+        0.080564,
+        0.492631
+      ],
+      [
+        0.378211,
+        0.095332,
+        0.500067
+      ],
+      [
+        0.414709,
+        0.110431,
+        0.504662
+      ],
+      [
+        0.451271,
+        0.125132,
+        0.507198
+      ],
+      [
+        0.488088,
+        0.139186,
+        0.508011
+      ],
+      [
+        0.52527,
+        0.152569,
+        0.507192
+      ],
+      [
+        0.562866,
+        0.165368,
+        0.504692
+      ],
+      [
+        0.600868,
+        0.177743,
+        0.500394
+      ],
+      [
+        0.639216,
+        0.189921,
+        0.49415
+      ],
+      [
+        0.677786,
+        0.202203,
+        0.485819
+      ],
+      [
+        0.716387,
+        0.214982,
+        0.47529
+      ],
+      [
+        0.754737,
+        0.228772,
+        0.462509
+      ],
+      [
+        0.792427,
+        0.244242,
+        0.447543
+      ],
+      [
+        0.828886,
+        0.262229,
+        0.430644
+      ],
+      [
+        0.86332,
+        0.283729,
+        0.412403
+      ],
+      [
+        0.8947,
+        0.309773,
+        0.393995
+      ],
+      [
+        0.921884,
+        0.341098,
+        0.377376
+      ],
+      [
+        0.944006,
+        0.377643,
+        0.365136
+      ],
+      [
+        0.960949,
+        0.418323,
+        0.35963
+      ],
+      [
+        0.973381,
+        0.46152,
+        0.361965
+      ],
+      [
+        0.982279,
+        0.505851,
+        0.371874
+      ],
+      [
+        0.988533,
+        0.550446,
+        0.388365
+      ],
+      [
+        0.993326,
+        0.602275,
+        0.41439
+      ],
+      [
+        0.99581,
+        0.646344,
+        0.441361
+      ],
+      [
+        0.997077,
+        0.690088,
+        0.471811
+      ],
+      [
+        0.997341,
+        0.733545,
+        0.505167
+      ],
+      [
+        0.996727,
+        0.776795,
+        0.541039
+      ],
+      [
+        0.995424,
+        0.819875,
+        0.57914
+      ],
+      [
+        0.993545,
+        0.862859,
+        0.619299
+      ],
+      [
+        0.991332,
+        0.905763,
+        0.661309
+      ]
+    ]
+  }
+}
