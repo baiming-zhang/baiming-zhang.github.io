@@ -1,0 +1,27 @@
+{
+  "created": "2026-10-27T04:45:55.717566+08:00",
+  "worker_state": "worker36_progress.json",
+  "mesh_attempt": "attempt036_graded_root",
+  "curved_attempt": "attempt037_curved_graded_root",
+  "environment": {
+    "COPV_C04_VOLUME_ALGORITHM": "1",
+    "COPV_C04_LINEAR_OPTIMIZER": "Netgen",
+    "COPV_C04_COLLAR_FRONTAL": "1",
+    "COPV_C04_MAX_SURFACE_NODES": "700000",
+    "COPV_C04_MATCH_ROOT_CIRCLES": "1",
+    "COPV_C04_FRONTAL_PARTS": "7,8",
+    "COPV_C04_ADJACENT_ROOT_BAND": "1",
+    "COPV_C04_ADJACENT_ROOT_H": ".5",
+    "COPV_C04_MAIN_CHORD_MM": ".045",
+    "COPV_C04_ROOT_BAND_MM": ".75",
+    "COPV_C04_ROOT_GROWTH": ".25"
+  },
+  "parameters": {
+    "h": 6,
+    "shell-h": 5.5,
+    "bond-h": 3,
+    "root-h": 0.25,
+    "max-cells": 3300000
+  },
+  "scope": "Same CAD and original geometric/quality criteria. Shorter0.75mm root-size plateau, gradual .25 size-growth/mm on volume and circular boundaries. Actual clearance .07755mm at root,.10479 at1mm,.16392 at2mm,.25256 at3mm. New cost hypothesis; must measure actual quality, curved CAD fit and resource counts."
+}

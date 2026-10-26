@@ -1,0 +1,13 @@
+{
+  "created": "2026-10-27T04:45:55.717566+08:00",
+  "max_CPU_optimizer_cells": 3500000,
+  "max_CPU_surface_nodes": 700000,
+  "concurrent_CPU_workers": 2,
+  "threads_per_worker": 1,
+  "prelaunch_WSL_MemAvailable_kB": 30044788,
+  "min_host_headroom_GiB_for_two_CPU_workers": 20,
+  "max_GPU_candidate_cells": 2200000,
+  "max_GPU_P2_DOFs": 10000000,
+  "original_quality_gate_changed": false,
+  "reason": "032 positive-J linear mesh exceeded 3.3M CPU optimizer ceiling by 18166 cells (0.5505%). Preserve original32; allow CPU-only NEW034 Netgen inspection of its exact saved checkpoint. Separate036 applies a shorter root plateau with slower growth to reduce cost. GPU remains occupied and no new GPU allocation is permitted by this CPU amendment."
+}

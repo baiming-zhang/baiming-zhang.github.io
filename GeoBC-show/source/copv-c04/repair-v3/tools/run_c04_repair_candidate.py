@@ -7,7 +7,8 @@ import numpy as np
 import gmsh
 W=Path(__file__).resolve().parents[1];P=W/'publication/GeoBC-Neural-Operator';BASE=W/'data/copv/c04_repair_v3';O=BASE
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
-def write(p,d):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def write(p,d):
+    p.parent.mkdir(parents=True,exist_ok=True);temp=p.with_name(p.name+'.tmp_'+str(os.getpid()));temp.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');temp.replace(p)
 def main():
     global O
     ap=argparse.ArgumentParser();ap.add_argument('--case',required=True);ap.add_argument('--attempt',required=True);ap.add_argument('--partition',type=Path,required=True);ap.add_argument('--h',type=float,default=5.);ap.add_argument('--shell-h',type=float,default=4.);ap.add_argument('--bond-h',type=float,default=3.);ap.add_argument('--root-h',type=float,default=.75);ap.add_argument('--circle-segments',type=int,default=128);ap.add_argument('--recipe',choices=['matched','baseline'],default='matched');ap.add_argument('--max-cells',type=int,default=2000000);ap.add_argument('--backend',choices=['windows','linux'],default='windows');ap.add_argument('--linear-checkpoint',type=Path);args=ap.parse_args();start=time.perf_counter();root=BASE/args.case/args.attempt;root.mkdir(parents=True,exist_ok=False);O=root
@@ -23,12 +24,20 @@ def main():
     if args.backend=='linux':
         shellfile=root/'run_mesh_linux.sh';shelltext=shellfile.read_text();shelltext=shelltext.replace('\nexec ', '\nexport COPV_C04_LINEAR_OPTIMIZER='+shlex.quote(os.environ.get('COPV_C04_LINEAR_OPTIMIZER','none'))+'\nexport COPV_C04_COLLAR_FRONTAL='+shlex.quote(os.environ.get('COPV_C04_COLLAR_FRONTAL','0'))+'\nexec timeout --signal=TERM --kill-after=10s 850s ');shellfile.write_bytes(shelltext.encode())
         extra=''
-        for key in ['COPV_C04_SURFACE_CHECKPOINT','COPV_C04_MAX_SURFACE_NODES','COPV_C04_ROOT_BAND_MM','COPV_C04_MATCH_ROOT_CIRCLES','COPV_C04_FRONTAL_PARTS','COPV_C04_ADJACENT_ROOT_BAND','COPV_C04_ADJACENT_ROOT_H','COPV_C04_MAIN_CHORD_MM']:
+        for key in ['COPV_C04_SURFACE_CHECKPOINT','COPV_C04_MAX_SURFACE_NODES','COPV_C04_ROOT_BAND_MM','COPV_C04_ROOT_GROWTH','COPV_C04_MATCH_ROOT_CIRCLES','COPV_C04_FRONTAL_PARTS','COPV_C04_ADJACENT_ROOT_BAND','COPV_C04_ADJACENT_ROOT_H','COPV_C04_MAIN_CHORD_MM']:
             if key in os.environ:extra+='export '+key+'='+shlex.quote(linux(os.environ[key]) if key.endswith('CHECKPOINT') else os.environ[key])+'\n'
         shellfile.write_bytes(shelltext.replace('\nexec ','\n'+extra+'exec ').encode())
     state=dict(case_id=args.case,attempt=args.attempt,pid=os.getpid(),phase='meshing',started=datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),command=cmd,partition_file=str(partition/'structural_partition.brep'),backend=args.backend,max_cells=args.max_cells,linear_optimizer=os.environ.get('COPV_C04_LINEAR_OPTIMIZER','none'),source_sha256=hashlib.sha256(frozen.read_bytes()).hexdigest(),partition_sha256=hashlib.sha256((partition/'structural_partition.brep').read_bytes()).hexdigest(),new_FE_labels=0)
     def save():
-        state['elapsed_seconds']=time.perf_counter()-start;state['updated']=datetime.now(ZoneInfo('Asia/Shanghai')).isoformat();write(root/'state.json',state);progress=read(BASE/'progress.json');progress.update(updated=state['updated'],phase=state['phase'],current_attempt=str(root.relative_to(W)).replace('\\','/'),current_pid=os.getpid());progress['attempts']=[r for r in progress['attempts'] if not(r['case_id']==args.case and r['attempt']==args.attempt)]+[dict(case_id=args.case,attempt=args.attempt,status=state['phase'],state_file=str((root/'state.json').relative_to(W)).replace('\\','/'))];write(BASE/'progress.json',progress)
+        state['elapsed_seconds']=time.perf_counter()-start;state['updated']=datetime.now(ZoneInfo('Asia/Shanghai')).isoformat();write(root/'state.json',state);lock=BASE/'worker_progress.lock';deadline=time.monotonic()+10
+        while True:
+            try:descriptor=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY);break
+            except FileExistsError:
+                if time.monotonic()>deadline:raise RuntimeError('C04 progress writer lock is busy; inspect owner before retry')
+                time.sleep(.1)
+        try:
+            os.write(descriptor,str(os.getpid()).encode());os.close(descriptor);progress=read(BASE/'progress.json');progress.update(updated=state['updated'],phase=state['phase'],current_attempt=str(root.relative_to(W)).replace('\\','/'),current_pid=os.getpid());progress['attempts']=[r for r in progress['attempts'] if not(r['case_id']==args.case and r['attempt']==args.attempt)]+[dict(case_id=args.case,attempt=args.attempt,status=state['phase'],state_file=str((root/'state.json').relative_to(W)).replace('\\','/'))];write(BASE/'progress.json',progress)
+        finally:lock.unlink()
     save();env=os.environ.copy();env['PYTHONPATH']=os.pathsep.join([str(P),str(W/'.rod_deps'),str(W/'.local_deps')]);env.pop('COPV_C02_NETGEN',None)
     try:
         with (root/'mesh_execution.log').open('w',encoding='utf-8') as log:run=subprocess.run(cmd,cwd=W,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=900,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
