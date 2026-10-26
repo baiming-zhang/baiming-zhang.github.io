@@ -1,13 +1,13 @@
 {
-  "updated_unix": 1793011096.05068,
+  "updated_unix": 1793042119.760522,
   "version": "large_v2",
   "completed_runs": 4,
   "total_runs": 6,
   "training_only": true,
   "no_error_gate": true,
   "error_threshold": null,
-  "paused_by_user": true,
-  "pause_checkpoint_epoch": 1100,
+  "paused_by_user": false,
+  "pause_checkpoint_epoch": null,
   "models": {
     "ts3": {
       "parameters": 7626372,
@@ -108,14 +108,21 @@
       "no_error_gate": true
     },
     {
-      "phase": "paused_by_user",
+      "phase": "training",
+      "pid": 277,
       "method": "ts3",
       "count": 20,
-      "step": 1100,
+      "step": 1115,
       "total_steps": 2000,
-      "elapsed_seconds": 3971.738567829132,
-      "checkpoint": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\r06_r08_overfit_large_v2\\formal\\ts3\\20\\last.pt",
-      "no_error_gate": true
+      "updates_per_case": 1115,
+      "native_case_forward_backward_count": 22300,
+      "elapsed_seconds": 4026.7301921844482,
+      "seconds_per_epoch": 3.6661082903544107,
+      "remaining_seconds_estimate": 3244.5058369636536,
+      "loss": 0.15034365560859442,
+      "peak_gpu_bytes": 3491703296,
+      "learning_rate": 0.0001340490878124629,
+      "error_threshold": null
     },
     {
       "phase": "experiment_completed",
