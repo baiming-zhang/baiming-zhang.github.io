@@ -1,6 +1,6 @@
 {
   "schema": "c04_repair_progress_v3",
-  "updated": "2026-10-27T03:34:04.680939+08:00",
+  "updated": "2026-10-27T04:14:23.653195+08:00",
   "status": "repair_in_progress",
   "historical": {
     "frozen_inputs": 20,
@@ -9997,7 +9997,7 @@
         "case_id": "copv_c04_0000",
         "attempt": "attempt031_outer_ply_Frontal",
         "pid": 16548,
-        "phase": "meshing",
+        "phase": "mesh_failed_retained",
         "started": "2026-10-27T03:33:16.562468+08:00",
         "command": [
           "wsl",
@@ -10014,14 +10014,169 @@
         "source_sha256": "deeebd0a69fd770612e3611d7c6f2793584ae160efe6b03b021cdb614a40486e",
         "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
         "new_FE_labels": 0,
-        "elapsed_seconds": 0.021550700002990197,
-        "updated": "2026-10-27T03:33:16.568468+08:00"
+        "elapsed_seconds": 675.0694509000023,
+        "updated": "2026-10-27T03:44:31.617284+08:00",
+        "exit_code": 1
+      },
+      "mesh/failure.json": {
+        "error": "Cell resource guard: 5062564",
+        "type": "RuntimeError",
+        "seconds": 623.7193295740001,
+        "stages": [
+          {
+            "stage": "surface_checkpoint_imported",
+            "seconds": 0.7355672599999252,
+            "nodes": 687908
+          },
+          {
+            "stage": "selected_Delaunay_generated",
+            "seconds": 181.76425801599999,
+            "part_ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              9,
+              10,
+              14,
+              18
+            ]
+          },
+          {
+            "stage": "selected_Frontal_generated",
+            "seconds": 535.027108822,
+            "part_ids": [
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "stage": "linear_generated",
+            "seconds": 538.3247342489999,
+            "cells": 5062564,
+            "min_J": 1.1759361328239566e-08,
+            "nonpositive": 0,
+            "min_SICN": 4.5560170436905126e-05,
+            "below_005": 3475
+          },
+          {
+            "stage": "straight_order2_canonicalized",
+            "seconds": 615.5660670719999,
+            "cells": 5062564,
+            "min_J": 1.175936125224376e-08,
+            "nonpositive": 0,
+            "min_SICN": 4.55601698521604e-05,
+            "below_005": 3475
+          },
+          {
+            "stage": "linear_checkpoint",
+            "seconds": 623.640577634,
+            "cells": 5062564,
+            "min_J": 1.1759361328239566e-08,
+            "nonpositive": 0,
+            "min_SICN": 4.5560170436905126e-05,
+            "below_005": 3475
+          }
+        ],
+        "error_entities": [],
+        "error_nodes": []
       },
       "mesh/stages.json": [
         {
           "stage": "surface_checkpoint_imported",
           "seconds": 0.7355672599999252,
           "nodes": 687908
+        },
+        {
+          "stage": "selected_Delaunay_generated",
+          "seconds": 181.76425801599999,
+          "part_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            14,
+            18
+          ]
+        },
+        {
+          "stage": "selected_Frontal_generated",
+          "seconds": 535.027108822,
+          "part_ids": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "stage": "linear_generated",
+          "seconds": 538.3247342489999,
+          "cells": 5062564,
+          "min_J": 1.1759361328239566e-08,
+          "nonpositive": 0,
+          "min_SICN": 4.5560170436905126e-05,
+          "below_005": 3475
+        },
+        {
+          "stage": "straight_order2_canonicalized",
+          "seconds": 615.5660670719999,
+          "cells": 5062564,
+          "min_J": 1.175936125224376e-08,
+          "nonpositive": 0,
+          "min_SICN": 4.55601698521604e-05,
+          "below_005": 3475
+        },
+        {
+          "stage": "linear_checkpoint",
+          "seconds": 623.640577634,
+          "cells": 5062564,
+          "min_J": 1.1759361328239566e-08,
+          "nonpositive": 0,
+          "min_SICN": 4.5560170436905126e-05,
+          "below_005": 3475
+        }
+      ],
+      "status": "mesh_failed_retained"
+    },
+    {
+      "attempt": "attempt032_lower_cost_root",
+      "case_id": "copv_c04_0000",
+      "new_FE_labels": 0,
+      "production_eligible": false,
+      "state.json": {
+        "case_id": "copv_c04_0000",
+        "attempt": "attempt032_lower_cost_root",
+        "pid": 19048,
+        "phase": "meshing",
+        "started": "2026-10-27T04:13:38.960783+08:00",
+        "command": [
+          "wsl",
+          "-d",
+          "cold-surge-ubuntu-24.04",
+          "--",
+          "bash",
+          "/mnt/c/Users/ASUS/Desktop/GeoBC Neural Operator/data/copv/c04_repair_v3/copv_c04_0000/attempt032_lower_cost_root/run_mesh_linux.sh"
+        ],
+        "partition_file": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_pilot_v1\\cases\\copv_c04_0000\\partition_v2\\structural_partition.brep",
+        "backend": "linux",
+        "max_cells": 3300000,
+        "linear_optimizer": "Netgen",
+        "source_sha256": "a007615e4c855dd3ab35aae4f8b97827ce1c890cb43f284e68d4e00677a2244a",
+        "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
+        "new_FE_labels": 0,
+        "elapsed_seconds": 0.02264160000049742,
+        "updated": "2026-10-27T04:13:38.966783+08:00"
+      },
+      "mesh/stages.json": [
+        {
+          "stage": "surface_generated",
+          "seconds": 25.6184640890001,
+          "nodes": 694108
         }
       ],
       "status": "meshing"
@@ -10062,6 +10217,16 @@
       "updated": "2026-10-27T03:30:02.888121+08:00",
       "returncode": 0,
       "reason": "CPU-only diagnosis; GPU size ceiling remains unchanged. Inspect quality and material volumes before designing next candidate."
+    },
+    "worker32_progress": {
+      "pid": 11308,
+      "started": "2026-10-27T04:13:38.770200+08:00",
+      "status": "active",
+      "new_FE_labels": 0,
+      "new_production_labels": 0,
+      "phase": "attempt032_lower_cost_root",
+      "seconds": 0.028168199998617638,
+      "updated": "2026-10-27T04:13:38.770200+08:00"
     }
   },
   "explanation": "Candidate validity, CAD distance, volume and production shape gates are separate. No failed ID is replaced. Original viewers retain their true 3D BC/load switches. Attempt013 old preflight is superseded by its explicit local_geometry_hold and must not enter GPU."

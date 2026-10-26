@@ -55,14 +55,19 @@ def main():
             f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F','1.0');g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',port_faces);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
         for z0,radius in roots:
             f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},1.8*Sqrt((Sqrt(x*x+y*y)-{radius})^2+(Abs(z)-{z0})^2))';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [1,2,3,4,5,6,7,8]])
-            f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},Max(0,Abs(Abs(z)-{z0})-{root_band})*.6)';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in ([6,7,8] if adjacent_band else [7,8])])
+            f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},Max(0,Abs(Abs(z)-{z0})-{root_band})*.6)';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [7,8]])
+            if adjacent_band:
+                adjacent_h=float(__import__('os').environ.get('COPV_C04_ADJACENT_ROOT_H',str(args.root_h)))
+                f=gmsh.model.mesh.field.add('MathEval');expression=f'{adjacent_h}+Min({max(0,args.h-adjacent_h)},Max(0,Abs(Abs(z)-{z0})-{root_band})*.6)';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p==6])
         # Resolve meridian curvature against the 0.15mm bondline, without applying
         # tiny port-fillet curvature to the entire vessel surface.
+        chord_target=float(__import__('os').environ.get('COPV_C04_MAIN_CHORD_MM','.015'))
+        if not .005<=chord_target<=.06:raise ValueError('Main chord sizing heuristic outside declared probe range')
         rz,normal=analytic_segments(params,(4,1500,16,1500,4));arc=np.r_[0.,np.cumsum(np.linalg.norm(np.diff(rz,axis=0),axis=1))];unique=np.r_[True,np.diff(arc)>1e-10];rz=rz[unique];normal=normal[unique];arc=arc[unique];kappa=np.linalg.norm(np.gradient(normal,arc,axis=0),axis=1);meridian_sizes=[]
         for bucket in np.unique(np.floor(abs(rz[:,1]))):
             mask=(np.floor(abs(rz[:,1]))==bucket)&(abs(rz[:,1])>=params['straight_length_mm']/2-.5)
             if not mask.any():continue
-            k=float(kappa[mask].max());size=min(args.shell_h,np.sqrt(8*.015/max(k,1e-12)));size=max(.6,size)
+            k=float(kappa[mask].max());size=min(args.shell_h,np.sqrt(8*chord_target/max(k,1e-12)));size=max(.6,size)
             if size<args.shell_h:meridian_sizes.append((float(np.mean(abs(rz[mask,1]))),float(size)))
         if meridian_sizes:
             expression=str(args.shell_h)
@@ -98,7 +103,7 @@ def main():
             count=max(c['segments'] for c in group)
             for circle in group:circle['segments']=count;gmsh.model.mesh.setTransfiniteCurve(circle['curve'],count+1)
         report['repair_recipe']=dict(options=options,roots=roots,circles=circles,torus_surface_only_size_mm=.25,torus_faces=torus_faces,torus_boundary_controls=torus_boundary_controls,collar_frontal=__import__('os').environ.get('COPV_C04_COLLAR_FRONTAL')=='1',root_band_mm=root_band,matched_root_circle_sizing=matched_root_band,linear_optimizer=__import__('os').environ.get('COPV_C04_LINEAR_OPTIMIZER','none'),meridian_curvature_size_controls=meridian_sizes,nominal_meridian_chord_target_mm=.015,shell_h=args.shell_h,bond_h=args.bond_h,root_h=args.root_h,scope='Same BREP/materials. Explicit torus-boundary segmentation removes under-resolved transverse fillet chords; not a fully swept/multiblock layer topology.',source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),partition_sha256=hashlib.sha256(args.partition.read_bytes()).hexdigest())
-        report['repair_recipe'].update(frontal_part_ids=sorted(frontal_parts),adjacent_outer_ply_root_band=adjacent_band)
+        report['repair_recipe'].update(frontal_part_ids=sorted(frontal_parts),adjacent_outer_ply_root_band=adjacent_band,adjacent_outer_ply_root_h_mm=adjacent_h if adjacent_band else None,nominal_meridian_chord_target_mm=chord_target,chord_scope='Linear boundary sizing heuristic only. Actual curved CAD-distance, Jacobian, SICN, material-volume and GPU resource criteria remain unchanged.')
         if args.recipe=='baseline':
             gmsh.model.mesh.removeConstraints();gmsh.model.mesh.field.remove(f);uniform=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(uniform,'F',str(args.h));gmsh.model.mesh.field.setAsBackgroundMesh(uniform)
             for key,value in [('Mesh.MeshSizeMin',.5),('Mesh.MeshSizeFromCurvature',64),('Mesh.MeshSizeFromPoints',1)]:gmsh.option.setNumber(key,value);options[key]=value
