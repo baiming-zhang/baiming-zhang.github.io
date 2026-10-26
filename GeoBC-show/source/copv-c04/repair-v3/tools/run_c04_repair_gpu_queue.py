@@ -20,7 +20,8 @@ def main():
  if free<24576 or util>10 or not args.launch_if_idle:state.update(status='waiting_resources');write(Q,state);print(json.dumps(state));return
  import numpy as np
  candidate=W/state['candidate'];preflight=read(candidate/'preflight/review.json');assert preflight['candidate_FE_validation_allowed'] and not preflight['production_eligible'];assert not (candidate/'local_geometry_hold.json').exists();assert sha(candidate/'mesh/mesh.npz')==preflight['mesh_sha256'];assert read(B/'quadrature_validation_v2/review.json')['passed'];assert shutil.disk_usage(W).free>=40*1024**3
- frozen=B/'gpu_solver_sources_v2'
+ assert read(B/'compact_frame_validation_v1/review.json')['passed']
+ frozen=B/'gpu_solver_sources_v3'
  if not frozen.exists():
   frozen.mkdir();shutil.copyfile(P/'tools/copv_fenicsx_c04_repair.py',frozen/'solver.py')
   for name in ['__init__.py','copv_material.py','copv_structured_mesh.py','copv_geometry.py']:

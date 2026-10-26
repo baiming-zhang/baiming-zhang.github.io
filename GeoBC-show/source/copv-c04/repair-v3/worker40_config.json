@@ -1,0 +1,29 @@
+{
+  "created": "2026-10-27T05:18:40.972132+08:00",
+  "worker_state": "worker40_progress.json",
+  "mesh_attempt": "attempt040_thin_fit_port_cost",
+  "curved_attempt": "attempt041_curved_thin_fit",
+  "environment": {
+    "COPV_C04_VOLUME_ALGORITHM": "1",
+    "COPV_C04_LINEAR_OPTIMIZER": "Netgen",
+    "COPV_C04_COLLAR_FRONTAL": "1",
+    "COPV_C04_MAX_SURFACE_NODES": "700000",
+    "COPV_C04_MATCH_ROOT_CIRCLES": "1",
+    "COPV_C04_FRONTAL_PARTS": "7,8",
+    "COPV_C04_ADJACENT_ROOT_BAND": "1",
+    "COPV_C04_ADJACENT_ROOT_H": ".5",
+    "COPV_C04_MAIN_CHORD_MM": ".045",
+    "COPV_C04_THIN_CHORD_MM": ".015",
+    "COPV_C04_PORT_FACE_H": "1.4",
+    "COPV_C04_ROOT_BAND_MM": ".75",
+    "COPV_C04_ROOT_GROWTH": ".3"
+  },
+  "parameters": {
+    "h": 6,
+    "shell-h": 5.5,
+    "bond-h": 3,
+    "root-h": 0.25,
+    "max-cells": 3300000
+  },
+  "scope": "Restore known .015 chord sizing on liner/bond/first-ply only; smooth port faces1.4mm, torus and fillet boundary.25mm unchanged. Same CAD, true geometric/volume/SICN targets unchanged. New isolated hypothesis, no GPU/production permission."
+}

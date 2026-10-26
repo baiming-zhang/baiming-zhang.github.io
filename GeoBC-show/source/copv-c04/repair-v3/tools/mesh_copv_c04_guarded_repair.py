@@ -52,8 +52,10 @@ def main():
         if torus_faces:
             f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F','.25');g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',torus_faces);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
         port_faces=sorted({abs(face) for volume,part in pid.items() if part in [9,10,14,18] for dim,face in gmsh.model.getBoundary([(3,volume)],combined=False) if dim==2})
+        port_face_h=float(__import__('os').environ.get('COPV_C04_PORT_FACE_H','1.0'))
+        if not .5<=port_face_h<=2.:raise ValueError('Smooth port-face size outside declared range')
         if port_faces:
-            f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F','1.0');g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',port_faces);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
+            f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F',str(port_face_h));g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',port_faces);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
         for z0,radius in roots:
             f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},1.8*Sqrt((Sqrt(x*x+y*y)-{radius})^2+(Abs(z)-{z0})^2))';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [1,2,3,4,5,6,7,8]])
             f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},Max(0,Abs(Abs(z)-{z0})-{root_band})*{root_growth})';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [7,8]])
@@ -74,12 +76,25 @@ def main():
             expression=str(args.shell_h)
             for z0,size in meridian_sizes:expression=f'Min({expression},{size}+.25*Abs(Abs(z)-{z0}))'
             f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [1,2,3,4,5,6,7,8]])
+        thin_chord=__import__('os').environ.get('COPV_C04_THIN_CHORD_MM');thin_sizes=[]
+        if thin_chord is not None:
+            thin_chord=float(thin_chord)
+            if not .005<=thin_chord<=chord_target:raise ValueError('Thin-layer chord sizing must be at least as fine as main sizing')
+            for bucket in np.unique(np.floor(abs(rz[:,1]))):
+                mask=(np.floor(abs(rz[:,1]))==bucket)&(abs(rz[:,1])>=params['straight_length_mm']/2-.5)
+                if not mask.any():continue
+                size=max(.6,min(args.shell_h,np.sqrt(8*thin_chord/max(float(kappa[mask].max()),1e-12))))
+                if size<args.shell_h:thin_sizes.append((float(np.mean(abs(rz[mask,1]))),float(size)))
+            expression=str(args.shell_h)
+            for z0,size in thin_sizes:expression=f'Min({expression},{size}+.25*Abs(Abs(z)-{z0}))'
+            f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [1,2,3]])
         if args.adaptive_cloud:
             cloud=np.load(args.adaptive_cloud);points=np.asarray(cloud['xyz']);tags=[occ.addPoint(*map(float,q)) for q in points];occ.synchronize();f=gmsh.model.mesh.field.add('Distance');gmsh.model.mesh.field.setNumbers(f,'PointsList',tags);g=gmsh.model.mesh.field.add('Threshold')
             for key,value in [('InField',f),('SizeMin',1.),('SizeMax',args.h),('DistMin',.5),('DistMax',2.)]:gmsh.model.mesh.field.setNumber(g,key,value)
             fields.append(g)
         f=gmsh.model.mesh.field.add('Min');gmsh.model.mesh.field.setNumbers(f,'FieldsList',fields);gmsh.model.mesh.field.setAsBackgroundMesh(f)
         circles=[]
+        thin_curves={abs(curve) for volume,part in pid.items() if part in [1,2,3] for dim,face in gmsh.model.getBoundary([(3,volume)],combined=False) for dim,curve in gmsh.model.getBoundary([(2,abs(face))],combined=False)}
         for _,curve in gmsh.model.getEntities(1):
             if gmsh.model.getType(1,curve)!='Circle':continue
             length=occ.getMass(1,curve);box=gmsh.model.getBoundingBox(1,curve);z=(box[2]+box[5])/2
@@ -90,6 +105,7 @@ def main():
                     # collar refinement on every circular material boundary too.
                     local=min(local,args.root_h+root_growth*max(0,min(abs(abs(z)-zz) for zz,rr in roots)-root_band))
                 if radius>params['boss_bore_radius_mm']+3:local=min([local]+[size+.25*abs(abs(z)-z0) for z0,size in meridian_sizes])
+                if curve in thin_curves and radius>params['boss_bore_radius_mm']+3:local=min([local]+[size+.25*abs(abs(z)-z0) for z0,size in thin_sizes])
                 segments=max(args.circle_segments,int(np.ceil(length/min(args.h,local))));segments=8*int(np.ceil(segments/8));gmsh.model.mesh.setTransfiniteCurve(curve,segments+1);circles.append(dict(curve=curve,z=z,radius=radius,segments=segments))
             else:
                 lo,hi=gmsh.model.getParametrizationBounds(1,curve);curvature=float(abs(gmsh.model.getCurvature(1,curve,[(float(lo[0])+float(hi[0]))/2])[0]));segments=max(4,int(np.ceil(length*curvature/(2*np.pi)*48)));gmsh.model.mesh.setTransfiniteCurve(curve,segments+1)
@@ -104,7 +120,7 @@ def main():
             count=max(c['segments'] for c in group)
             for circle in group:circle['segments']=count;gmsh.model.mesh.setTransfiniteCurve(circle['curve'],count+1)
         report['repair_recipe']=dict(options=options,roots=roots,circles=circles,torus_surface_only_size_mm=.25,torus_faces=torus_faces,torus_boundary_controls=torus_boundary_controls,collar_frontal=__import__('os').environ.get('COPV_C04_COLLAR_FRONTAL')=='1',root_band_mm=root_band,matched_root_circle_sizing=matched_root_band,linear_optimizer=__import__('os').environ.get('COPV_C04_LINEAR_OPTIMIZER','none'),meridian_curvature_size_controls=meridian_sizes,nominal_meridian_chord_target_mm=.015,shell_h=args.shell_h,bond_h=args.bond_h,root_h=args.root_h,scope='Same BREP/materials. Explicit torus-boundary segmentation removes under-resolved transverse fillet chords; not a fully swept/multiblock layer topology.',source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),partition_sha256=hashlib.sha256(args.partition.read_bytes()).hexdigest())
-        report['repair_recipe'].update(frontal_part_ids=sorted(frontal_parts),root_size_growth_per_mm=root_growth,adjacent_outer_ply_root_band=adjacent_band,adjacent_outer_ply_root_h_mm=adjacent_h if adjacent_band else None,nominal_meridian_chord_target_mm=chord_target,chord_scope='Linear boundary sizing heuristic only. Actual curved CAD-distance, Jacobian, SICN, material-volume and GPU resource criteria remain unchanged.')
+        report['repair_recipe'].update(frontal_part_ids=sorted(frontal_parts),root_size_growth_per_mm=root_growth,adjacent_outer_ply_root_band=adjacent_band,adjacent_outer_ply_root_h_mm=adjacent_h if adjacent_band else None,nominal_meridian_chord_target_mm=chord_target,thin_layer_chord_target_mm=thin_chord,thin_layer_curvature_sizes=thin_sizes,smooth_port_face_h_mm=port_face_h,chord_scope='Linear boundary sizing heuristic only. Actual curved CAD-distance, Jacobian, SICN, material-volume and GPU resource criteria remain unchanged; torus .25mm boundary/surface controls retained.')
         if args.recipe=='baseline':
             gmsh.model.mesh.removeConstraints();gmsh.model.mesh.field.remove(f);uniform=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(uniform,'F',str(args.h));gmsh.model.mesh.field.setAsBackgroundMesh(uniform)
             for key,value in [('Mesh.MeshSizeMin',.5),('Mesh.MeshSizeFromCurvature',64),('Mesh.MeshSizeFromPoints',1)]:gmsh.option.setNumber(key,value);options[key]=value
