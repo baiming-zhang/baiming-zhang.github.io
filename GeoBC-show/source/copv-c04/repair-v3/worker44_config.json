@@ -1,0 +1,29 @@
+{
+  "created": "2026-10-27T05:45:54.097443+08:00",
+  "worker_state": "worker44_progress.json",
+  "mesh_attempt": "attempt044_reduced_outer_port_cost",
+  "curved_attempt": "attempt045_curved_cost",
+  "environment": {
+    "COPV_C04_VOLUME_ALGORITHM": "1",
+    "COPV_C04_LINEAR_OPTIMIZER": "Netgen",
+    "COPV_C04_COLLAR_FRONTAL": "1",
+    "COPV_C04_MAX_SURFACE_NODES": "700000",
+    "COPV_C04_MATCH_ROOT_CIRCLES": "1",
+    "COPV_C04_FRONTAL_PARTS": "7,8",
+    "COPV_C04_ADJACENT_ROOT_BAND": "1",
+    "COPV_C04_ADJACENT_ROOT_H": ".75",
+    "COPV_C04_MAIN_CHORD_MM": ".045",
+    "COPV_C04_THIN_CHORD_MM": ".015",
+    "COPV_C04_PORT_FACE_H": "1.8",
+    "COPV_C04_ROOT_BAND_MM": ".75",
+    "COPV_C04_ROOT_GROWTH": ".4"
+  },
+  "parameters": {
+    "h": 6,
+    "shell-h": 6.0,
+    "bond-h": 3,
+    "root-h": 0.25,
+    "max-cells": 3300000
+  },
+  "scope": "Same CAD and thin-layer .015 chord, fillet .25 detail. Test outer-ply root minimum.75, root growth.4 and smooth-port1.8 sizing to reduce nativeDOFs. All original measured CAD, material volume, SICN and GPU size criteria unchanged; no acceptance claim."
+}

@@ -25,4 +25,5 @@ new="""# Sparse storage is already preallocated. Reserve the actual coefficient
 assert old in s;s=s.replace(old,new,1)
 s=s.replace('del bilinear,linear,Q;gc.collect()','del bilinear,linear,Q,T,FrameParameters;gc.collect()',1)
 s=s.replace("report['assembly_quadrature_degree']=args.assembly_quadrature;", "report['assembly_frame_storage']='compact_exact_axisymmetric_frame';report['assembly_quadrature_degree']=args.assembly_quadrature;",1)
+s=s.replace("dataset_release='quarantined_not_for_production_training'","dataset_release=contract.get('dataset_release','quarantined_not_for_production_training')",1)
 compile(s,str(p),'exec');p.write_text(s,encoding='utf-8');print('Prepared exact compact-frame candidate; CPU equivalence validation required before GPU')

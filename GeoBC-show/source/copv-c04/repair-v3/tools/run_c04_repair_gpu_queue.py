@@ -2,7 +2,7 @@
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
-import argparse,hashlib,json,os,shlex,shutil,subprocess,time
+import argparse,ast,hashlib,json,os,shlex,shutil,subprocess,time
 W=Path(__file__).resolve().parents[1];P=W/'publication/GeoBC-Neural-Operator';B=W/'data/copv/c04_repair_v3';Q=B/'gpu_validation_queue.json'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -21,7 +21,9 @@ def main():
  import numpy as np
  candidate=W/state['candidate'];preflight=read(candidate/'preflight/review.json');assert preflight['candidate_FE_validation_allowed'] and not preflight['production_eligible'];assert not (candidate/'local_geometry_hold.json').exists();assert sha(candidate/'mesh/mesh.npz')==preflight['mesh_sha256'];assert read(B/'quadrature_validation_v2/review.json')['passed'];assert shutil.disk_usage(W).free>=40*1024**3
  assert read(B/'compact_frame_validation_v1/review.json')['passed']
+ identity=read(B/'compact_frame_validation_v1/helper_identity.json');helper=next(n for n in ast.parse((P/'tools/copv_fenicsx_c04_repair.py').read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='compact_material_frame');assert hashlib.sha256(ast.dump(helper,include_attributes=False).encode()).hexdigest()==identity['helper_AST_sha256'];assert sha(B/'compact_frame_validation_v1/review.json')==identity['validation_review_sha256']
  frozen=B/'gpu_solver_sources_v3'
+ if frozen.exists():assert sha(frozen/'solver.py')==sha(P/'tools/copv_fenicsx_c04_repair.py'),'Frozen solver differs; preserve it and declare a NEW source version'
  if not frozen.exists():
   frozen.mkdir();shutil.copyfile(P/'tools/copv_fenicsx_c04_repair.py',frozen/'solver.py')
   for name in ['__init__.py','copv_material.py','copv_structured_mesh.py','copv_geometry.py']:

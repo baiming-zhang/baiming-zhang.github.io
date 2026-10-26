@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T05:24:29.051026+08:00",
+  "updated": "2026-10-27T05:48:34.250330+08:00",
   "files": {
     "attempt001/mesh/failure.json": {
       "bytes": 263,
@@ -168,6 +168,10 @@
     "attempt018_high_order_CAD/high_order_options.json": {
       "bytes": 484,
       "sha256": "a364153b0d97b4f485e0d14f2af2ed2f9ee91f4f78621ad65a0632e74d3aadc7"
+    },
+    "attempt018_high_order_CAD/resource_timeout.json": {
+      "bytes": 517,
+      "sha256": "aecf446df73e1175a4eee79e33ea01b112d71fb4112ae6df972ec5c7129b74eb"
     },
     "attempt018_high_order_CAD/stages.json": {
       "bytes": 466,
@@ -397,17 +401,69 @@
       "bytes": 491,
       "sha256": "de102cdf555b6f91031f22ce588ee6e8ea3b4ca9521d3e4398239773df2ca169"
     },
+    "attempt038_elastic36/resource_timeout.json": {
+      "bytes": 1208,
+      "sha256": "72bb7762114acc7b0bbda5e5a0619307424ffc9519213cb169ea38fcdb84daec"
+    },
     "attempt038_elastic36/stages.json": {
       "bytes": 465,
       "sha256": "35b1b5f452c61e2f22be3a2e8c27fb68e8b7cb2c7244a797b073eb69f65e96f1"
     },
     "attempt040_thin_fit_port_cost/mesh/stages.json": {
-      "bytes": 1097,
-      "sha256": "b4869ee32d6f0d7cf2a445a77fef5a75b08b2be2846db9364a01ab98d7f4b627"
+      "bytes": 2159,
+      "sha256": "268e3340678a36565273d3f2fc26e5f0d29827b26658ea067b1da2572797f2ad"
     },
     "attempt040_thin_fit_port_cost/state.json": {
-      "bytes": 953,
-      "sha256": "714da217c0b33b313b366b2c6689c42279ff5c6399ee1d17057399c9cae423ef"
+      "bytes": 1547,
+      "sha256": "54eac0aef2aac1879f29762c86c4315d12d4f3fa8e4f3eaa61a727ea691188b8"
+    },
+    "attempt041_curved_thin_fit/curved_defects_v1/review.json": {
+      "bytes": 79983,
+      "sha256": "55969316204983d3ae97514d30721526bfde423f2825cbfe84764ccbc7c012ac"
+    },
+    "attempt041_curved_thin_fit/curving_guard_policy.json": {
+      "bytes": 341,
+      "sha256": "8ac3a66a0f1c9a5268fd1d0d422725c8746f83aef468d46dbe32ac382675f3c1"
+    },
+    "attempt041_curved_thin_fit/geometry_check/review.json": {
+      "bytes": 100442,
+      "sha256": "8dbd192698ec8a2f7f8a43b593280c07b856313658ae97cfd6783db5410ce884"
+    },
+    "attempt041_curved_thin_fit/preflight/review.json": {
+      "bytes": 1480,
+      "sha256": "5176ce542137b11155fcec1e41f3596c5a595df66a7476bebe3d2bbf07f844c3"
+    },
+    "attempt041_curved_thin_fit/projection_summary.json": {
+      "bytes": 563,
+      "sha256": "92f99dbac0018f85ec876460cec3f332c19015241bb63e28872f1001d1d68667"
+    },
+    "attempt041_curved_thin_fit/result.json": {
+      "bytes": 3486,
+      "sha256": "1624b8ead2301fb21cc9114742a63b3aac9bec2c88f49073b02b99ab2e3c8429"
+    },
+    "attempt041_curved_thin_fit/stages.json": {
+      "bytes": 695,
+      "sha256": "c1da1ccf8eed6a69aff4c4d9e7c60ac5fdcd9c87a488465e4b840dcc30cd6e30"
+    },
+    "attempt042_fixed_boundary_opt41/high_order_options.json": {
+      "bytes": 484,
+      "sha256": "2e4c6d473bc58a901de2dd583e93b52c2e5d46d7705eb33466c716b2b6504a31"
+    },
+    "attempt042_fixed_boundary_opt41/stages.json": {
+      "bytes": 459,
+      "sha256": "e3471debe5dc8f1ae33d67720ce32817512491ac7760a150311928bc9e67d13c"
+    },
+    "attempt044_reduced_outer_port_cost/mesh/stages.json": {
+      "bytes": 647,
+      "sha256": "5947fa1156f677d2dc71bca7efe5e0b31ed673973e86485dfc276709f235d28f"
+    },
+    "attempt044_reduced_outer_port_cost/state.json": {
+      "bytes": 963,
+      "sha256": "bf2ccbd85a58e76e3cf884a8b155db735ab8eb253a96630c7df79baaca39d539"
+    },
+    "compact_frame_validation_v1/helper_identity.json": {
+      "bytes": 363,
+      "sha256": "b0e04eff9fbdc22f6edd267982671631ef8ab7ecff4fad837fb582d688410fb4"
     },
     "compact_frame_validation_v1/review.json": {
       "bytes": 1913,
@@ -427,7 +483,7 @@
     },
     "gpu_validation_queue.json": {
       "bytes": 355,
-      "sha256": "b2195d561e2d04c33b37c8a4003deff22b9441a4ac9f2113d26c5886b985313a"
+      "sha256": "2a850f3bc7b3ee1335d05d82fa13fe95ffef46a5d4526ec00afef0c6a517ccaa"
     },
     "protocol.json": {
       "bytes": 6520,
@@ -470,8 +526,8 @@
       "sha256": "164a2411fa12e9b08cd0af6e2181d3dd164e4166926cf19ebaf3892f30ea82f1"
     },
     "tools/curve_c04_repair_candidate.py": {
-      "bytes": 11846,
-      "sha256": "cb7feb0abc144ec590320e8217c3e109ea0f8d77579884043de51b6f63a9852e"
+      "bytes": 12160,
+      "sha256": "9bbcd37e69743b60c5804ce840a02fdf5f5fecad24fde80a9aa189ef73748d8c"
     },
     "tools/mesh_copv_c04_guarded_repair.py": {
       "bytes": 23256,
@@ -490,8 +546,8 @@
       "sha256": "0118889c9fc33951c5d1fb9d7002ddfd49991f34ce74f5566bc4823ee8afb534"
     },
     "tools/prepare_c04_curved_solver_v3.py": {
-      "bytes": 3680,
-      "sha256": "e846efcf2e82caaff9e261055ac76079a3b442a99d6a347c6a1eec6c1ceb2f43"
+      "bytes": 3847,
+      "sha256": "d29d0f029a12431798470337bdd12c0e209be075b50878cc6105348fa61c1aa6"
     },
     "tools/run_c04_elastic38.py": {
       "bytes": 2527,
@@ -502,12 +558,12 @@
       "sha256": "103e6e01a3e40edd9d7c49085de772c4158c7c384411d7d583b28da1b8884832"
     },
     "tools/run_c04_repair_gpu_queue.py": {
-      "bytes": 7132,
-      "sha256": "1b0c7665beef58994f99ccaaf772c862ef542f52669af90fab36a1500efbe334"
+      "bytes": 7741,
+      "sha256": "be2c1c361143943af685f69db83826ee516fa33708c845e2bfec9703ec0cf5ef"
     },
     "tools/run_c04_versioned_cpu_candidate.py": {
-      "bytes": 3566,
-      "sha256": "82c759ce64cd7ef3ca8e21f5fe13af161f0a7f2c8d6b85214f674f5402bdb6be"
+      "bytes": 3944,
+      "sha256": "af27fd7665705a5f9ced799c5e4338e746eb6f20c39f207386dc474dc4366a07"
     },
     "tools/validate_c04_compact_frame.py": {
       "bytes": 4819,
@@ -528,6 +584,14 @@
     "worker40_config.json": {
       "bytes": 1114,
       "sha256": "2188a50ac8749ca36d7eef87b6d11e321f7a76bf7c80f1150ef54372c3ef2743"
+    },
+    "worker42_config.json": {
+      "bytes": 1077,
+      "sha256": "99b79c5278708e5a977af530c17af22205b05cb6f8c73d9bd8a3b52bba12e5cd"
+    },
+    "worker44_config.json": {
+      "bytes": 1129,
+      "sha256": "dd28e783d5bd980ca00be85b42444f0f79512419df0f31564d775f430d9867a0"
     }
   }
 }

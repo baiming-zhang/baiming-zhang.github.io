@@ -2,13 +2,16 @@
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
-import argparse,json,os,subprocess,sys,time
+import argparse,hashlib,json,os,subprocess,sys,time
 W=Path(__file__).resolve().parents[1];B=W/'data/copv/c04_repair_v3';C=B/'copv_c04_0000'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--config',type=Path,required=True);args=ap.parse_args();cfg=read(args.config);start=time.perf_counter();state=dict(pid=os.getpid(),started=datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),status='active',config=str(args.config),new_FE_labels=0,new_production_labels=0)
  progress=B/cfg['worker_state'];assert not progress.exists(),'Do not repeat an existing worker'
- for key in ['mesh_attempt','curved_attempt']:assert not (C/cfg[key]).exists(),'Never overwrite an attempt'
+ assert not (C/cfg['curved_attempt']).exists(),'Never overwrite an attempt'
+ if cfg.get('reuse_parent'):
+  assert hashlib.sha256((C/cfg['mesh_attempt']/'mesh/mesh.npz').read_bytes()).hexdigest()==cfg['parent_mesh_sha256'],'Reused parent identity mismatch'
+ else:assert not (C/cfg['mesh_attempt']).exists(),'Never overwrite an attempt'
  env=os.environ.copy();env['PYTHONPATH']=os.pathsep.join([str(W/'publication/GeoBC-Neural-Operator'),str(W/'.rod_deps'),str(W/'.local_deps')])
  for key in list(env):
   if key.startswith('COPV_C04_'):del env[key]
@@ -19,12 +22,14 @@ def main():
   save(phase)
   with (B/(phase+'_execution.log')).open('x',encoding='utf-8') as f:return subprocess.run([sys.executable,'-X','utf8','-B',*arguments],cwd=W,env=env,stdout=f,stderr=subprocess.STDOUT,timeout=limit).returncode
  try:
-  parameters=cfg['parameters'];command=['notes/run_c04_repair_candidate.py','--case','copv_c04_0000','--attempt',cfg['mesh_attempt'],'--partition','data/copv/c04_pilot_v1/cases/copv_c04_0000/partition_v2','--backend','linux']
+  parameters=cfg.get('parameters',{});command=['notes/run_c04_repair_candidate.py','--case','copv_c04_0000','--attempt',cfg['mesh_attempt'],'--partition','data/copv/c04_pilot_v1/cases/copv_c04_0000/partition_v2','--backend','linux']
   for key,value in parameters.items():command.extend(['--'+key,str(value)])
   if cfg.get('linear_checkpoint'):command.extend(['--linear-checkpoint',str(W/cfg['linear_checkpoint'])])
-  rc=run(cfg['mesh_attempt'],command,1150);parent=C/cfg['mesh_attempt'];candidate=C/cfg['curved_attempt']
+  if cfg.get('reuse_parent'):save('reused_parent_checked');rc=0
+  else:rc=run(cfg['mesh_attempt'],command,1150)
+  parent=C/cfg['mesh_attempt'];candidate=C/cfg['curved_attempt']
   if rc or not (parent/'mesh/mesh.npz').exists():save('mesh_failed_retained',status='failed_retained',returncode=rc);return
-  rc=run(cfg['curved_attempt'],['notes/curve_c04_repair_candidate.py','--parent',str(parent),'--output',str(candidate),'--safe-local'],1500)
+  rc=run(cfg['curved_attempt'],['notes/curve_c04_repair_candidate.py','--parent',str(parent),'--output',str(candidate),*cfg.get('curver_arguments',['--safe-local'])],cfg.get('curver_timeout_seconds',1500))
   if rc or not (candidate/'result.json').exists() or read(candidate/'result.json')['status']!='curved_positive_J_mesh_preflight_only':save('curved_failed_retained',status='failed_retained',returncode=rc);return
   rc=run(cfg['curved_attempt']+'_geometry',['notes/check_c04_curved_geometry.py',str(candidate)],600)
   if rc:save('geometry_failed_retained',status='failed_retained',returncode=rc);return

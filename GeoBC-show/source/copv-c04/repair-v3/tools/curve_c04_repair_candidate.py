@@ -23,6 +23,8 @@ def main():
         if args.high_order:
             gmsh.write(str(out/'CAD_projected_before_optimization.msh'));options={'Mesh.HighOrderFixBoundaryNodes':0,'Mesh.HighOrderDistCAD':1,'Mesh.HighOrderNumLayers':2,'Mesh.HighOrderIterMax':50,'Mesh.HighOrderPassMax':5,'Mesh.HighOrderThresholdMin':.1,'Mesh.HighOrderThresholdMax':2.}
             if args.high_order_method=='HighOrderElastic':options['Mesh.HighOrderFixBoundaryNodes']=1
+            if 'COPV_C04_HIGH_ORDER_FIX_BOUNDARY' in os.environ:options['Mesh.HighOrderFixBoundaryNodes']=int(os.environ['COPV_C04_HIGH_ORDER_FIX_BOUNDARY'])
+            if 'COPV_C04_HIGH_ORDER_INTERNAL_MIN' in os.environ:options['Mesh.HighOrderThresholdMin']=float(os.environ['COPV_C04_HIGH_ORDER_INTERNAL_MIN'])
             write(out/'high_order_options.json',dict(method=args.high_order_method,options=options,documentation='https://gmsh.info/doc/texinfo/#Mesh-options',scope='Explicit versioned candidate. Actual boundary-to-CAD check still required; no release claim.'))
             for key,value in options.items():gmsh.option.setNumber(key,value)
             gmsh.model.mesh.optimize(args.high_order_method);projected=measure('after_'+args.high_order_method+'_optimization')
