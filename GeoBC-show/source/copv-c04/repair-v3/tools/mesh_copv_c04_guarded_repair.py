@@ -56,6 +56,19 @@ def main():
         if not .5<=port_face_h<=2.:raise ValueError('Smooth port-face size outside declared range')
         if port_faces:
             f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F',str(port_face_h));g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',port_faces);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
+        port_curve_repair=__import__('os').environ.get('COPV_C04_PORT_CURVE_REPAIR')=='1';narrow_annuli=[];annulus_curve_h={};partial_circle_controls=[]
+        if port_curve_repair:
+            for face in port_faces:
+                boundary=list({abs(c) for dim,c in gmsh.model.getBoundary([(2,face)],combined=False)})
+                if gmsh.model.getType(2,face)!='Plane' or len(boundary)!=2 or any(gmsh.model.getType(1,c)!='Circle' for c in boundary):continue
+                lengths=[occ.getMass(1,c) for c in boundary];perimeter=sum(lengths);width=2*occ.getMass(2,face)/perimeter
+                full=[]
+                for c,length in zip(boundary,lengths):
+                    lo,hi=gmsh.model.getParametrizationBounds(1,c);k=abs(float(gmsh.model.getCurvature(1,c,[(float(lo[0])+float(hi[0]))/2])[0]));full.append(abs(length*k-2*np.pi)<1e-5)
+                if not all(full) or not 0<width<.25:continue
+                target=max(.15,min(port_face_h,4*width));narrow_annuli.append(dict(surface=face,width_2A_over_P_mm=width,target_edge_mm=target,curves=boundary))
+                for c in boundary:annulus_curve_h[c]=min(annulus_curve_h.get(c,port_face_h),target)
+                f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F',str(target));g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',[face]);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
         for z0,radius in roots:
             f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},1.8*Sqrt((Sqrt(x*x+y*y)-{radius})^2+(Abs(z)-{z0})^2))';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [1,2,3,4,5,6,7,8]])
             f=gmsh.model.mesh.field.add('MathEval');expression=f'{args.root_h}+Min({args.h-args.root_h},Max(0,Abs(Abs(z)-{z0})-{root_band})*{root_growth})';gmsh.model.mesh.field.setString(f,'F',expression);restrict(f,[t for t,p in pid.items() if p in [7,8]])
@@ -99,6 +112,10 @@ def main():
             if gmsh.model.getType(1,curve)!='Circle':continue
             length=occ.getMass(1,curve);box=gmsh.model.getBoundingBox(1,curve);z=(box[2]+box[5])/2
             if abs(box[5]-box[2])<1e-5 and length>4:
+                if port_curve_repair:
+                    lo,hi=gmsh.model.getParametrizationBounds(1,curve);k=abs(float(gmsh.model.getCurvature(1,curve,[(float(lo[0])+float(hi[0]))/2])[0]));sweep=length*k
+                    if abs(sweep-2*np.pi)>=1e-5:
+                        segments=max(4,int(np.ceil(args.circle_segments*sweep/(2*np.pi))),int(np.ceil(length/port_face_h)));gmsh.model.mesh.setTransfiniteCurve(curve,segments+1);partial_circle_controls.append(dict(curve=curve,length_mm=length,true_radius_mm=1/k,sweep_radians=sweep,segments=segments));continue
                 radius=length/(2*np.pi);near=min(np.hypot(abs(z)-zz,radius-rr) for zz,rr in roots);local=args.root_h+min(args.h-args.root_h,1.8*near)
                 if matched_root_band:
                     # A transfinite curve overrides volume sizing. Match the axial
@@ -106,7 +123,7 @@ def main():
                     local=min(local,args.root_h+root_growth*max(0,min(abs(abs(z)-zz) for zz,rr in roots)-root_band))
                 if radius>params['boss_bore_radius_mm']+3:local=min([local]+[size+.25*abs(abs(z)-z0) for z0,size in meridian_sizes])
                 if curve in thin_curves and radius>params['boss_bore_radius_mm']+3:local=min([local]+[size+.25*abs(abs(z)-z0) for z0,size in thin_sizes])
-                segments=max(args.circle_segments,int(np.ceil(length/min(args.h,local))));segments=8*int(np.ceil(segments/8));gmsh.model.mesh.setTransfiniteCurve(curve,segments+1);circles.append(dict(curve=curve,z=z,radius=radius,segments=segments))
+                local=min(local,annulus_curve_h.get(curve,args.h));segments=max(args.circle_segments,int(np.ceil(length/min(args.h,local))));segments=8*int(np.ceil(segments/8));gmsh.model.mesh.setTransfiniteCurve(curve,segments+1);circles.append(dict(curve=curve,z=z,radius=radius,segments=segments))
             else:
                 lo,hi=gmsh.model.getParametrizationBounds(1,curve);curvature=float(abs(gmsh.model.getCurvature(1,curve,[(float(lo[0])+float(hi[0]))/2])[0]));segments=max(4,int(np.ceil(length*curvature/(2*np.pi)*48)));gmsh.model.mesh.setTransfiniteCurve(curve,segments+1)
         torus_boundary_controls=[];torus_curves={abs(c) for face in torus_faces for dim,c in gmsh.model.getBoundary([(2,face)],combined=False)}
@@ -121,6 +138,7 @@ def main():
             for circle in group:circle['segments']=count;gmsh.model.mesh.setTransfiniteCurve(circle['curve'],count+1)
         report['repair_recipe']=dict(options=options,roots=roots,circles=circles,torus_surface_only_size_mm=.25,torus_faces=torus_faces,torus_boundary_controls=torus_boundary_controls,collar_frontal=__import__('os').environ.get('COPV_C04_COLLAR_FRONTAL')=='1',root_band_mm=root_band,matched_root_circle_sizing=matched_root_band,linear_optimizer=__import__('os').environ.get('COPV_C04_LINEAR_OPTIMIZER','none'),meridian_curvature_size_controls=meridian_sizes,nominal_meridian_chord_target_mm=.015,shell_h=args.shell_h,bond_h=args.bond_h,root_h=args.root_h,scope='Same BREP/materials. Explicit torus-boundary segmentation removes under-resolved transverse fillet chords; not a fully swept/multiblock layer topology.',source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),partition_sha256=hashlib.sha256(args.partition.read_bytes()).hexdigest())
         report['repair_recipe'].update(frontal_part_ids=sorted(frontal_parts),root_size_growth_per_mm=root_growth,adjacent_outer_ply_root_band=adjacent_band,adjacent_outer_ply_root_h_mm=adjacent_h if adjacent_band else None,nominal_meridian_chord_target_mm=chord_target,thin_layer_chord_target_mm=thin_chord,thin_layer_curvature_sizes=thin_sizes,smooth_port_face_h_mm=port_face_h,chord_scope='Linear boundary sizing heuristic only. Actual curved CAD-distance, Jacobian, SICN, material-volume and GPU resource criteria remain unchanged; torus .25mm boundary/surface controls retained.')
+        report['repair_recipe'].update(port_curve_repair=port_curve_repair,narrow_annuli=narrow_annuli,partial_circle_controls=partial_circle_controls)
         if args.recipe=='baseline':
             gmsh.model.mesh.removeConstraints();gmsh.model.mesh.field.remove(f);uniform=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(uniform,'F',str(args.h));gmsh.model.mesh.field.setAsBackgroundMesh(uniform)
             for key,value in [('Mesh.MeshSizeMin',.5),('Mesh.MeshSizeFromCurvature',64),('Mesh.MeshSizeFromPoints',1)]:gmsh.option.setNumber(key,value);options[key]=value
@@ -137,6 +155,15 @@ def main():
             else:gmsh.model.mesh.generate(2);state('surface_generated',nodes=len(gmsh.model.mesh.getNodes()[0]))
             if len(gmsh.model.mesh.getNodes()[0])>surface_cap:raise RuntimeError('Surface node resource guard: retain attempt, do not start volume generation')
             if not surface_checkpoint:gmsh.write(str(out/'surface_checkpoint.msh'))
+            if __import__('os').environ.get('COPV_C04_STOP_ON_BAD_SURFACE')=='1':
+                badfaces=[];surface_min=1.
+                for dim,tag in gmsh.model.getEntities(2):
+                    eid=gmsh.model.mesh.getElements(2,tag)[1]
+                    if not len(eid):continue
+                    q=np.asarray(gmsh.model.mesh.getElementQualities(np.concatenate(eid),'minSICN'));surface_min=min(surface_min,float(q.min()))
+                    if q.min()<.05:badfaces.append(dict(surface=tag,type=gmsh.model.getType(2,tag),min_SICN=float(q.min()),below_005=int((q<.05).sum())))
+                write('surface_quality_review.json',dict(min_SICN=surface_min,original_threshold=.05,bad_faces=badfaces,passed=not badfaces,scope='Actual retained linear2D checkpoint, before volume generation. Final curved surface gate still required.'))
+                if badfaces:raise RuntimeError('Retained 2D surface SICN fails original .05; volume generation skipped')
             if __import__('os').environ.get('COPV_C04_COLLAR_FRONTAL')=='1':
                 gmsh.option.setNumber('Mesh.MeshOnlyVisible',1);gmsh.model.setVisibility(vols,0);gmsh.model.setVisibility([(3,t) for t,p in pid.items() if p not in frontal_parts],1);gmsh.model.mesh.generate(3);state('selected_Delaunay_generated',part_ids=sorted(set(pid.values())-frontal_parts));gmsh.model.setVisibility(vols,0);gmsh.model.setVisibility([(3,t) for t,p in pid.items() if p in frontal_parts],1);gmsh.option.setNumber('Mesh.Algorithm3D',4);gmsh.model.mesh.generate(3);gmsh.option.setNumber('Mesh.MeshOnlyVisible',0);gmsh.model.setVisibility(vols,1);assert all(sum(len(e) for e in gmsh.model.mesh.getElements(3,t)[1])>0 for t in pid),'Hybrid recipe left an empty material region';state('selected_Frontal_generated',part_ids=sorted(frontal_parts))
             else:gmsh.model.mesh.generate(3)

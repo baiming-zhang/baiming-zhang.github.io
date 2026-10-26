@@ -1,0 +1,33 @@
+{
+  "created": "2026-10-27T07:47:30.926191+08:00",
+  "worker_state": "worker70_progress.json",
+  "mesh_attempt": "attempt070_port_curve_and_cost",
+  "curved_attempt": "attempt071_curved_port_curve_and_cost",
+  "environment": {
+    "COPV_C04_VOLUME_ALGORITHM": "1",
+    "COPV_C04_LINEAR_OPTIMIZER": "Netgen",
+    "COPV_C04_COLLAR_FRONTAL": "1",
+    "COPV_C04_MAX_SURFACE_NODES": "700000",
+    "COPV_C04_MATCH_ROOT_CIRCLES": "1",
+    "COPV_C04_FRONTAL_PARTS": "7,8",
+    "COPV_C04_ADJACENT_ROOT_BAND": "1",
+    "COPV_C04_ADJACENT_ROOT_H": ".935",
+    "COPV_C04_MAIN_CHORD_MM": ".045",
+    "COPV_C04_THIN_CHORD_MM": ".020",
+    "COPV_C04_PORT_FACE_H": "2.0",
+    "COPV_C04_ROOT_BAND_MM": ".75",
+    "COPV_C04_ROOT_GROWTH": ".4",
+    "COPV_C04_PORT_CURVE_REPAIR": "1",
+    "COPV_C04_STOP_ON_BAD_SURFACE": "1"
+  },
+  "parameters": {
+    "h": 6.6,
+    "shell-h": 6.6,
+    "bond-h": 3.3,
+    "root-h": 0.25,
+    "max-cells": 3300000,
+    "circle-segments": 80
+  },
+  "scope": "SAME0002 new independent mesh after065 failed surface/volume shape and GPUcap. ExactCAD/native1D diagnosis: .1mm planar annulus vs1.54mm edges; short Circle arcs forced80segments opposite3segment Lines or5segment Hyperbolas. Fix only opt-in partial-circle angular counts and narrow full-annulus boundary size(.4mm). Thin chord sizing .015 to .020 is a cost hypothesis supported by measured thin CAD errors <=.000589mm vs unchanged actual tolerances; actual CAD/quality/resource checks required, not guaranteed. Pre-volume native2D SICN gate stops early on bad surface. All physical geometry/materials and original hard gates unchanged.",
+  "case_id": "copv_c04_0002"
+}
