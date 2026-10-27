@@ -1,0 +1,33 @@
+{
+  "created": "2026-10-27T09:05:26.061112+08:00",
+  "worker_state": "worker79_progress.json",
+  "mesh_attempt": "attempt079_port_and_root_cost",
+  "curved_attempt": "attempt080_curved_port_root_cost",
+  "environment": {
+    "COPV_C04_VOLUME_ALGORITHM": "1",
+    "COPV_C04_LINEAR_OPTIMIZER": "Netgen",
+    "COPV_C04_COLLAR_FRONTAL": "1",
+    "COPV_C04_MAX_SURFACE_NODES": "700000",
+    "COPV_C04_MATCH_ROOT_CIRCLES": "1",
+    "COPV_C04_FRONTAL_PARTS": "7,8",
+    "COPV_C04_ADJACENT_ROOT_BAND": "1",
+    "COPV_C04_ADJACENT_ROOT_H": ".935",
+    "COPV_C04_MAIN_CHORD_MM": ".045",
+    "COPV_C04_THIN_CHORD_MM": ".015",
+    "COPV_C04_PORT_FACE_H": "2.0",
+    "COPV_C04_ROOT_BAND_MM": ".5",
+    "COPV_C04_ROOT_GROWTH": ".6",
+    "COPV_C04_PORT_CURVE_REPAIR": "1",
+    "COPV_C04_STOP_ON_BAD_SURFACE": "1"
+  },
+  "parameters": {
+    "h": 6.6,
+    "shell-h": 6.6,
+    "bond-h": 3.3,
+    "root-h": 0.25,
+    "max-cells": 3300000,
+    "circle-segments": 80
+  },
+  "scope": "SAME frozen0002: use measured port arc/narrow-annulus repair and the now fully screened0018 root-cost strategy. Restore thin chord .015 from own065 CAD-passing result; root plateau .75 to .5 and growth .4 to .6. Main6.6/shell6.6/bond3.3/adjroot.935/root&fillet.25/port2/CAD/material dimensions unchanged. Require independent actual2D, curvedSICN/CAD/GP-J material-volume/sharedTri6/load/resource checks, no guaranteed acceptance or threshold relaxation. One CPU lane only while q8 waits, original failed versions retained.",
+  "case_id": "copv_c04_0002"
+}
