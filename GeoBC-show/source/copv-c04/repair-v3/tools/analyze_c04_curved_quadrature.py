@@ -6,6 +6,7 @@ import argparse,hashlib,json,os,time
 for key in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS']:os.environ[key]='1'
 import numpy as np
 from c04_repair_contracts import physical_identity
+from c04_solver_resource_identity import assert_same_numerical_solver
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
@@ -20,7 +21,8 @@ def main():
   else:
    errata=read(c.parents[1]/'legacy_contract_metadata_errata_v1.json');assert r['contract_sha256']==errata['legacy_contract_sha256'] and errata['numerical_solver_source_unchanged']
  assert all(r['contract_sha256']==sha(p/'executed_contract.json') for p,r in zip(runs,s))
- assert s[0]['case_id']==s[1]['case_id']==pre['case_id'] and physical_identity(contracts[0])==physical_identity(contracts[1]) and s[0]['solver_sha256']==s[1]['solver_sha256'] and s[0]['preconditioner']==s[1]['preconditioner'] and s[0]['cap_convention']==s[1]['cap_convention']=='quadratic-opening-edge'
+ solver_identity=assert_same_numerical_solver(runs,s)
+ assert s[0]['case_id']==s[1]['case_id']==pre['case_id'] and physical_identity(contracts[0])==physical_identity(contracts[1]) and s[0]['preconditioner']==s[1]['preconditioner'] and s[0]['cap_convention']==s[1]['cap_convention']=='quadratic-opening-edge'
  m=np.load(c/'mesh/mesh.npz');nodal=[np.load(p/'nodal_fields.npz') for p in runs];loads=[np.load(p/'native_load_and_bc.npz') for p in runs];cell=[np.load(p/'cell_display_fields.npz') for p in runs]
  for n,l,cl in zip(nodal,loads,cell):
   assert np.array_equal(n['node_ids'],m['node_ids']) and np.array_equal(l['node_ids'],m['node_ids']) and np.array_equal(cl['cell_ids'],m['cell_ids']) and np.array_equal(cl['cell_part_ids'],m['cell_part_ids'])
@@ -47,5 +49,6 @@ def main():
   for frame in ['local','global']:rec[frame+'_tensor_volume_L2_relative']=float(np.sqrt(rec[frame+'_tensor_diff_squared_volume']/rec[frame+'_tensor_q8_squared_volume']))
  energy=[r['strain_energy_Nmm'] for r in s];report=dict(schema='c04_same_mesh_quadrature_field_comparison_v1',created=datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),case_id=pre['case_id'],mesh_sha256=pre['mesh_sha256'],runs=[str(p) for p in runs],summary_sha256=[sha(p/'summary.json') for p in runs],assembly_degrees=[6,8],output_GP_points=14,displacement=displacement,strain_energy_Nmm=energy,strain_energy_relative_difference_to_q8=abs(energy[0]-energy[1])/abs(energy[1]),load_max_abs_component_differences_N=load_diffs,GP_coordinate_max_difference_mm=max_xyz,GP_volume_weight_max_difference_mm3=max_weight,parts=parts,production_eligible=False,scope='Actual native-node/14GP same-mesh integration-degree differences. q8 is a comparison reference, not known truth. No automatic production acceptance, mesh convergence, or point-peak stress accuracy claim. Tensor L2 includes factor2 for the three symmetric shear components; no averaging across materials.',seconds=time.perf_counter()-start)
  report.update(executed_contract_sha256=[r['contract_sha256'] for r in s],physical_input_identity_sha256=physical_identity(contracts[0]),contract_identity_scope='Per-run discretization degree and corrected legacy descriptive metadata may differ; each complete executed contract hash is bound to its summary, all physical inputs and actual native load/lock/geometry identities must match.')
+ report['solver_identity']=solver_identity
  out.mkdir(parents=True,exist_ok=False);(out/'review.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:report[k] for k in ['case_id','displacement','strain_energy_relative_difference_to_q8','production_eligible','seconds']}))
 if __name__=='__main__':main()

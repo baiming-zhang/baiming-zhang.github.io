@@ -25,7 +25,7 @@ def main():
  query=subprocess.run(['wsl','-d','cold-surge-ubuntu-24.04','--','nvidia-smi','--query-gpu=memory.free,utilization.gpu','--format=csv,noheader,nounits'],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=30)
  if query.returncode:state.update(status='waiting_resources',resource_reason='GPU availability query failed',updated=stamp());write(Q,state);return
  lines=query.stdout.strip().splitlines();assert len(lines)==1;free,util=[int(x.strip()) for x in lines[0].split(',')];state.update(GPU_free_MiB=free,GPU_utilization_percent=util,updated=stamp())
- if free<24576 or util>10 or not args.launch_if_idle:state.update(status='waiting_resources');write(Q,state);print(json.dumps(state));return
+ if free<24576 or util>30 or not args.launch_if_idle:state.update(status='waiting_resources');write(Q,state);print(json.dumps(state));return
  import numpy as np
  candidate=W/state['candidate'];preflight=read(candidate/'preflight/review.json');assert preflight['candidate_FE_validation_allowed'] and not preflight['production_eligible'];assert not (candidate/'local_geometry_hold.json').exists();assert sha(candidate/'mesh/mesh.npz')==preflight['mesh_sha256'];assert read(B/'quadrature_validation_v2/review.json')['passed'];assert shutil.disk_usage(W).free>=40*1024**3
  assert read(B/'compact_frame_validation_v1/review.json')['passed']
@@ -43,7 +43,7 @@ def main():
  state.update(host_available_bytes=available[0],host_before_domain_required_bytes=required)
  if available[0]<required:state.update(status='waiting_resources',resource_reason='WSL RAM below unchanged solver before-domain guard; wait for active CPU work',updated=stamp());write(Q,state);print(json.dumps(state));return
  state.pop('resource_reason',None)
- frozen=B/'gpu_solver_sources_v3'
+ frozen=B/'gpu_solver_sources_v4'
  contract_review=read(B/'contract_metadata_validation_v2/review.json');assert contract_review['passed'] and sha(W/'notes/c04_repair_contracts.py')==contract_review['builder_sha256'],'Contract builder changed; preserve validation and declare a new version'
  if frozen.exists():assert sha(frozen/'solver.py')==sha(P/'tools/copv_fenicsx_c04_repair.py'),'Frozen solver differs; preserve it and declare a NEW source version'
  if not frozen.exists():

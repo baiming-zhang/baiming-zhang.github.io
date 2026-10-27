@@ -1,0 +1,18 @@
+{
+  "schema": "c04_GPU_resource_interruption_v1",
+  "created": "2026-10-27T11:12:05.982690+08:00",
+  "failed_run": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt003",
+  "resource_stage": "before_domain",
+  "actual_resources": {
+    "stage": "before_domain",
+    "host_available_bytes": 31052926976,
+    "host_required_bytes": 26206470144,
+    "GPU_free_MiB": 29524,
+    "GPU_utilization_percent": 33,
+    "GPU_required_MiB": 24576
+  },
+  "GPU_utilization_limit_percent": 30,
+  "numerical_divergence_observed": false,
+  "reason": "GPU utilization increased above the user-authorized 30% limit after launch; no completed q8 field.",
+  "retry_policy": "Preserve this run; NEW attempt004 only after utilization is at most30% and all memory guards pass."
+}

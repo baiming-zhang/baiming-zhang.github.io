@@ -1,0 +1,19 @@
+{
+  "schema": "c04_GPU_resource_interruption_v1",
+  "created": "2026-10-27T11:07:24.602434+08:00",
+  "degree": 8,
+  "failed_run": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt002",
+  "resource_stage": "before_domain",
+  "actual_resources": {
+    "stage": "before_domain",
+    "host_available_bytes": 31184678912,
+    "host_required_bytes": 26206470144,
+    "GPU_free_MiB": 29722,
+    "GPU_utilization_percent": 11,
+    "GPU_required_MiB": 24576
+  },
+  "completed_q6_retained": true,
+  "numerical_divergence_observed": false,
+  "reason": "Launch gate saw 1% GPU utilization; solver pre-domain gate saw 11%, above unchanged 10% limit. No assembly or completed q8 field.",
+  "retry_policy": "Preserve attempts001/002; NEW attempt003 after stable idle. Frozen solver and all original resource gates unchanged. User assigns local 5090 to integration validation and V100 to later TS3 training."
+}

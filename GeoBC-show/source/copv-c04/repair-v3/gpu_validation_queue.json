@@ -233,11 +233,33 @@
       "seconds": 171.2967034999965,
       "error": "RuntimeError('GPU q8 returned 1; retain run and diagnose before new attempt')",
       "failure_evidence_file": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/GPU_q8_attempt001/resource_interruption_v1.json"
+    },
+    {
+      "degree": 8,
+      "status": "failed_retained",
+      "output": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt002",
+      "started": "2026-10-27T11:06:19.716950+08:00",
+      "case_id": "copv_c04_0000",
+      "physical_input_identity_sha256": "5345555e55de595078a2b13fe0f2af4ee5ee6890bc5bd730620033a300ab9fbd",
+      "seconds": 11.602838600003452,
+      "error": "RuntimeError('GPU q8 returned 1; retain run and diagnose before new attempt')",
+      "failure_evidence_file": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/GPU_q8_attempt002/resource_interruption_v1.json"
+    },
+    {
+      "degree": 8,
+      "status": "failed_retained",
+      "output": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt003",
+      "started": "2026-10-27T11:11:12.996902+08:00",
+      "case_id": "copv_c04_0000",
+      "physical_input_identity_sha256": "5345555e55de595078a2b13fe0f2af4ee5ee6890bc5bd730620033a300ab9fbd",
+      "seconds": 7.830546400000458,
+      "error": "RuntimeError('GPU q8 returned 1; retain run and diagnose before new attempt')",
+      "failure_evidence_file": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/GPU_q8_attempt003/resource_interruption_v1.json"
     }
   ],
-  "GPU_free_MiB": 29251,
-  "GPU_utilization_percent": 25,
-  "updated": "2026-10-27T10:19:34.007456+08:00",
+  "GPU_free_MiB": 29524,
+  "GPU_utilization_percent": 20,
+  "updated": "2026-10-27T11:12:05.982690+08:00",
   "candidate_history": [
     {
       "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt027_local_J_from025",
@@ -248,17 +270,29 @@
   ],
   "selection_reason": "First original-mesh-screen-passing SAME0000 mesh; GPU fields/convergence pending",
   "mesh_template_file": "data/copv/c04_repair_v3/mesh_template_058_v1.json",
-  "host_available_bytes": 32232910848,
+  "host_available_bytes": 31864270848,
   "host_before_domain_required_bytes": 26206470144,
-  "pid": 4028,
-  "started": "2026-10-27T07:56:52.748654+08:00",
+  "pid": 35372,
+  "started": "2026-10-27T11:11:12.994945+08:00",
   "retry_decisions": [
     {
       "created": "2026-10-27T08:18:59.827880+08:00",
       "failed_run": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt001",
       "action": "Retain failure and wait before NEW q8 run",
       "evidence": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/GPU_q8_attempt001/resource_interruption_v1.json"
+    },
+    {
+      "created": "2026-10-27T11:07:24.602434+08:00",
+      "failed_run": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt002",
+      "action": "Retain pre-domain resource stop; NEW q8 attempt003 after stable idle",
+      "evidence": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/GPU_q8_attempt002/resource_interruption_v1.json"
+    },
+    {
+      "created": "2026-10-27T11:12:05.982690+08:00",
+      "failed_run": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt003",
+      "action": "Retain utilization-only stop; next NEW q8 attempt004",
+      "evidence": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/GPU_q8_attempt003/resource_interruption_v1.json"
     }
   ],
-  "resource_reason": "q8 attempt001 retained: GPU utilization became busy; pending NEW q8 attempt002"
+  "resource_reason": "q8 attempt003 retained: GPU33% exceeds authorized30%; next NEW attempt004"
 }

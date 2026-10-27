@@ -1,0 +1,21 @@
+{
+  "schema": "c04_gpu_utilization_policy_amendment_v1",
+  "created": "2026-10-27T11:10:56.482485+08:00",
+  "user_instruction": "Change the utilization threshold to 30%.",
+  "old_utilization_limit_percent": 10,
+  "new_utilization_limit_percent": 30,
+  "old_solver_sha256": "412e0611865fb5e821683f3836b57be7940a079123f712ba16c6e88383b0eef6",
+  "new_solver_sha256": "c6ec8d3c92af624c13f32ed2d32a776a3dda489c95e2c71fdb48c04780335a57",
+  "controller_sha256": "49e3c664c8276d74311fbe64e4b40fd94ca61de35eeccc45a9cdb8c24e3f0294",
+  "full_source_only_change": "or util>10:raise RuntimeError -> or util>30:raise RuntimeError",
+  "numerical_code_byte_identical": true,
+  "old_frozen_sources_and_runs_preserved": true,
+  "checks": {
+    "utilization30_allowed": true,
+    "utilization31_rejected": true,
+    "RAM_guard_retained": true,
+    "VRAM_guard_retained": true,
+    "python_AST_passed": true
+  },
+  "scope": "Queue launch and solver before_domain/before_assembly/before_CUDA resource checks; no change to numerical physics, precision, solver tolerances or memory requirements."
+}
