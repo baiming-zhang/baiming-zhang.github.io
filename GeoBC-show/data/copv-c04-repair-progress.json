@@ -1,6 +1,6 @@
 {
   "schema": "c04_repair_progress_v3",
-  "updated": "2026-10-27T14:26:33.280366+08:00",
+  "updated": "2026-10-27T14:40:33.966289+08:00",
   "status": "repair_in_progress",
   "historical": {
     "frozen_inputs": 20,
@@ -11,7 +11,7 @@
     ],
     "production_labels": 0
   },
-  "new_FE_labels": 7,
+  "new_FE_labels": 8,
   "new_production_labels": 0,
   "original_quality_targets": {
     "surface_min_SICN": 0.05,
@@ -187577,7 +187577,7 @@
     {
       "attempt": "attempt078_sicn_patch75",
       "case_id": "copv_c04_0018",
-      "new_FE_labels": 0,
+      "new_FE_labels": 1,
       "production_eligible": false,
       "result.json": {
         "status": "curved_positive_J_mesh_preflight_only",
@@ -191337,7 +191337,7 @@
         "seconds": 10.37897779999912,
         "original_mesh_screen_passed": true
       },
-      "status": "original_mesh_screens_passed_GPU_and_sensitivity_pending"
+      "status": "mesh_and_GPU_checks_completed_acceptance_pending"
     }
   ],
   "workers": {
@@ -191834,8 +191834,8 @@
   },
   "explanation": "Candidate validity, CAD distance, volume and production shape gates are separate. No failed ID is replaced. Original viewers retain their true 3D BC/load switches. Attempt013 old preflight is superseded by its explicit local_geometry_hold and must not enter GPU.",
   "latest_update": {
-    "updated": "2026-10-27T06:26:33.197575+00:00",
-    "summary": "0002真实6/8阶均已完成(总22分33秒)，积分比较最大材料张量体积L2差0.004164%，独立三维BC/载荷查看器已QA并交付。0018六阶14:23启动，后台单通道推进。新增完成场7份/独立GPU几何3个；原历史与生产0、092局部应力hold保持。",
+    "updated": "2026-10-27T06:40:33.879155+00:00",
+    "summary": "0018六阶已完成515.21秒并通过原生核验；八阶attempt001在装配前因GPU利用率85%超过授权30%保护中止，RAM/空闲显存通过，无数值发散证据。失败完整保留，队列待资源后只建新attempt002，绝不重算六阶。新增完成场8份/独立GPU几何4个，生产0。",
     "paragraphs": [
       "四个原目标ID0000/058、0011/063、0002/081、0018/078已通过全部原网格筛查并独立冻结；各自实际全网格最小SICN约0.0500077、0.0500170、0.0500547、0.0500217，低质单元均为0。实际CAD、表面、逐材料GP-J体积、共享Tri6、单连通、真实Tri6载荷及GPU容量均通过。原20输入/18研究场/2失败/生产0历史完整保留，失败ID和旧版本未替换。网格通过不能自动当作生产放行。",
       "0000/058 q6已完成734.78秒，原生数据保持不可变。新增q8 attempt004经五次间隔2秒采样通过后启动，完成整个队列原生核验耗时887.18秒，求解器本体809.35秒、峰值线性求解317.81秒。真实CUDA seqaijcusparse/seqcuda、2150456曲边P2单元/9946329自由度，8阶装配45点，真实相对残差1.00761835e-10、能量/外功误差1.15384591e-10。原14GP局部/全局应力、实际GP坐标权重、原节点、实际载荷及6锁定分量全部保存并通过ID/有限值核验。",
@@ -191847,7 +191847,7 @@
       "实际同几何网格比较耗时约5.7秒，235/235公共物理探针全部匹配、无替换和零填充；能量相对差7.3344e-6，刚体对齐后最大探针位移差2.9684e-5mm。但是，下端钛通口part10的应力张量采样相对L2差约51.8%，part6/7/8约7.78%/9.51%/10.78%，part9约7.37%；这些是公共点采样范数，不是体积范数。最大单分量差23.27MPa，原生热点ID/坐标和全部235组比较值完整保留。整体能量与原始GP峰值稳定并不能抵消局部差异，不能宣称局部应力已收敛。",
       "针对新出现的局部差异，额外核对了085自身原始14GP：12材料分区各3个单元共504点，P2反解/梯度应力重建相对差5.369e-12、最大单分量误差1.608e-9MPa，核对通过。原始字段未改变，首次验证及描述标签勘误也独立保留。局部应力hold是生产/点应力准确性暂缓验收，不是CAD/网格有效性失败，不删除正确的隔离GPU场。",
       "092于北京时间13:22:10完成全线887.32秒。复用090的2116924单元/3292808节点(9878424自由度)，完整CAD投影初始187倒置/540低SICN。只移动7393个完整邻域内部节点(局部14715单元)，所有CAD/表面/不完整邻域固定，原生节点和拓扑保持；400次优化约492.90秒后迭代到上限，优化器success=false。验收依实际全网格检查：最终负J=0，低SICN=0，minSICN0.05006618，CAD最大节点距离3.5963e-7mm、最大采样面内偏差0.0016334mm；表面最小SICN0.135461，每材料GP-J体积误差max0.02666747%，共享Tri6/单连通/真实Tri6载荷/容量全部通过。因此网格筛查允许隔离GPU验证，但尚无该网格真实应力场。独立冻结SHA283899075240e2023d413455a8c3158f545e36ca5d973a141031fb6823741ac5，058/085和所有失败版本不变；现6套数值网格仍仅4个独立几何。新8阶队列和accuracy092协议冻结，要求复用058原235物理探针ID/坐标并对照保留085值，真实同材料P2反解，不换点/零填。网格通过不能直接解除局部应力hold或当成收敛证明。",
-      "0002自己的六阶626.5824秒、八阶726.0558秒含原生核验全部完成，八阶求解器657.5954秒/峰值165.2078秒，真实相对残差1.0090678e-10、能量误差1.6002155e-10、最大位移0.452860302mm。两阶原生节点/单元/14GP位置权重/实际载荷/6锁一致，17.8032秒完成全场比较：最大节点位移差4.89198e-7mm，节点无权L2相对差1.41984e-7(不是体积范数)，能量相对差1.73548e-8，材料应力张量体积L2相对差最大4.16413e-5约0.004164%。这些是同网格积分差异，不能替代局部应力/h收敛。0002的6/8查看器数据分别从原生场导出，核对6约束/28真实Tri6方向与曲边端力，软件SwiftShader检查和人工4PNG通过模型场、BC载荷、旋转、裁剪/网格及8→6→8切换；新0002-q6/q8目录交付，之前0000/0011显示资源全部SHA保持，访问guard/共享前端不变。0018 own6阶于北京时间14:23:11.246启动，资源5样本3/4/3/4/3%和before_domainGPU3%/31068MiB/host31.73GB>=20.92GB通过，随后自动单通道8阶；不提前计算完成标签。当前新增完成场7份、独立GPU几何3个，原20/18/2/生产0历史保持。其后092原235探针局部精度比较、跨几何和最终网站核验仍未完成。0011查看器78项、最近进度83项线上核验已通过，不重复旧数据大下载。"
+      "0018自己的六阶于北京时间14:31:46完成515.2080秒含原生核验，求解器466.3483秒/峰值135.8542秒，真实相对残差1.0052348e-10、能量误差1.4444668e-11、最大位移0.419170708mm，原14GP/原生节点单元/实际载荷/六锁均保存核验。随后八阶attempt001运行157.6182秒后在before_assembly被原资源保护中止：GPU利用率85%>授权30%，空闲显存28149MiB>=24576MiB，主机可用27267432448字节>=4219246352字节；尚无完整八阶场，无数值发散证据。原run/日志/资源文件和失败队列快照及resource_interruption_v1全部保留，确认后只执行一次资源失败ack，队列恢复waiting_resources；下一次必须稳定5次采样和全部原内存/显存/CSR/CUDA检查通过才新建八阶attempt002，不覆盖attempt001、不重算已完成六阶、不改源或门槛、不干扰其他GPU任务。本次不立即反复尝试。当前新增完成GPU字段8份、已有真实GPU场的独立几何4个，0018双阶尚未全部完成，原20/18/2/生产0历史不改，之后仍需092精度8阶、原235公共物理探针对照和跨几何。0002查看器首次线上核验因29.46MB surface.gz下载只收到20.78MB发生IncompleteRead而pending，这不是已确认的内容错误；保留失败路径，下次心跳核验当前后继提交，不立即重下旧大文件。"
     ]
   },
   "same_mesh_quadrature_comparison": {
@@ -192136,13 +192136,14 @@
     "copv_c04_0011",
     "copv_c04_0018"
   ],
-  "new_GPU_field_variants": 7,
+  "new_GPU_field_variants": 8,
   "new_unique_GPU_geometry_IDs": [
     "copv_c04_0000",
     "copv_c04_0002",
-    "copv_c04_0011"
+    "copv_c04_0011",
+    "copv_c04_0018"
   ],
-  "GPU_queue_status": "running",
+  "GPU_queue_status": "waiting_resources",
   "GPU_queues": [
     {
       "case_id": "copv_c04_0000",
@@ -192177,8 +192178,8 @@
     {
       "case_id": "copv_c04_0018",
       "candidate": "data/copv/c04_repair_v3/copv_c04_0018/attempt078_sicn_patch75",
-      "status": "running",
-      "new_FE_labels": 0
+      "status": "waiting_resources",
+      "new_FE_labels": 1
     }
   ],
   "additional_actual_case_viewers": [
