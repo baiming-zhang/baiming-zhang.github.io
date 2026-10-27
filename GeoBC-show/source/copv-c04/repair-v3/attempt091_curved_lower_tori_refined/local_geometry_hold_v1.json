@@ -1,0 +1,25 @@
+{
+  "created": "2026-10-27T05:07:22.664071+00:00",
+  "failed_faces": [
+    {
+      "surface": 52,
+      "type": "Torus",
+      "part_ids": [
+        9
+      ],
+      "nodes": 22917,
+      "triangles": 10526,
+      "max_node_CAD_distance_mm": 0.018844179752925662,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.011723597465954935,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.46780256722320995,
+      "below_005": 0,
+      "passed": false
+    }
+  ],
+  "geometry_review_sha256": "1f9ca540809b5446818af6fa64a8a66bb26b3add6183d498d0295adeb575a32d",
+  "preflight_sha256": "2d40392d0217be90a7adce6872bd166c9a04d874ac23da68e1e7fb982b3c9c62",
+  "GPU_allowed": false,
+  "reason": "091 retains retreated CAD nodes at upperTi torus52. Do not fix this incorrect boundary in a shape patch. Next attempt starts freshly from full CAD projection and permits only volume-owned nodes to move."
+}

@@ -81,7 +81,13 @@ def main():
         else:gmsh.model.mesh.setOrder(1);gmsh.model.mesh.setOrder(2)
         projected=measure('CAD_projected_order2')
         if args.shape_optimize:
-            assert not args.high_order and not args.safe_local and projected['nonpositive']==0;before_shape=projected.copy();optimize_sicn_patch(out);projected=measure('after_sampled_SICN_patch_optimization')
+            untangle=os.environ.get('COPV_C04_UNTANGLE_FULL_CAD')=='1'
+            assert not args.high_order and not args.safe_local and (projected['nonpositive']==0 or untangle)
+            if untangle:
+                proof=read(W/'data/copv/c04_repair_v3/sicn_negative_J_validation_v1/review.json');assert proof['passed'] and proof['helper_sha256']==hashlib.sha256((W/'notes/c04_shape_objective.py').read_bytes()).hexdigest()
+                assert not os.environ.get('COPV_C04_PROJECTED_CHECKPOINT'),'Untangling must begin from a fresh full CAD projection, never a retreated checkpoint'
+                gmsh.write(str(out/'full_CAD_before_untangling.msh'));write(out/'full_CAD_untangling_policy.json',dict(starting_native_nonpositive=projected['nonpositive'],starting_native_low_SICN=projected['below_005'],all_CAD_nodes_fixed=True,only_complete_star_volume_nodes_may_move=True,negative_J_derivative_validation_sha256=hashlib.sha256((W/'data/copv/c04_repair_v3/sicn_negative_J_validation_v1/review.json').read_bytes()).hexdigest(),scope='Intermediate invalid mesh repair only. No FE output or acceptance until full native positiveJ/SICN and independent CAD/volume/load/resource screens pass. No guarded boundary retreat.'))
+            before_shape=projected.copy();optimize_sicn_patch(out);projected=measure('after_sampled_SICN_patch_optimization')
             if projected['nonpositive'] or projected['min_SICN']<before_shape['min_SICN']-1e-12 or projected['below_005']>before_shape['below_005']:
                 gmsh.write(str(out/'rejected_curved_mesh.msh'));write(out/'result.json',dict(status='SICN_patch_proposal_rejected_no_FE',reason='Full native positive-J/shape non-degradation check failed',stages=stages));return
         if args.high_order:

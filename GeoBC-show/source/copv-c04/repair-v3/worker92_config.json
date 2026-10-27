@@ -1,0 +1,26 @@
+{
+  "created": "2026-10-27T05:07:22.664071+00:00",
+  "worker_state": "worker92_progress.json",
+  "reuse_parent": true,
+  "mesh_attempt": "attempt090_lower_tori_refined",
+  "parent_mesh_sha256": "22f238ca137f7bb14b8745fd2a4ab40dfa3535fc274580cb11936b075e85ad48",
+  "curved_attempt": "attempt092_full_CAD_untangle",
+  "environment": {
+    "COPV_C04_SICN_OPT_TARGET": ".07",
+    "COPV_C04_SICN_PATCH_RINGS": "1",
+    "COPV_C04_SICN_MAX_PATCH_CELLS": "50000",
+    "COPV_C04_SICN_MAX_ITER": "400",
+    "COPV_C04_SICN_MOVE_WEIGHT": "1e-7",
+    "COPV_C04_SICN_GTOL": "1e-11",
+    "COPV_C04_SICN_FTOL": "1e-15",
+    "COPV_C04_UNTANGLE_FULL_CAD": "1",
+    "COPV_C04_SICN_NATIVE_CHECK_EVERY": "10"
+  },
+  "curver_arguments": [
+    "--shape-optimize"
+  ],
+  "curver_timeout_seconds": 1500,
+  "scope": "No remeshing: reuse090 original affine parent and freshly recompute full CAD P2 projection. Only complete-star volume-owned nodes may move; every CAD node is fixed at its true full projection. Explicit intermediate negative-J repair permitted only by validated signed objective; full native positiveJ/SICN and actualCAD/volume/Tri6/interface/resource checks still decide eligibility. Original091 retained; never fix its retreated boundary.",
+  "case_id": "copv_c04_0000",
+  "purpose": "local_stress_accuracy_repair_only"
+}
