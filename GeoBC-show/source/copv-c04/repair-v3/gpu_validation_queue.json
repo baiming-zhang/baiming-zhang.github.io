@@ -1,13 +1,20 @@
 {
   "schema": "c04_curved_GPU_validation_queue_v1",
   "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56",
-  "status": "waiting_resources",
+  "status": "running",
   "production_eligible": false,
   "new_FE_labels": 0,
-  "runs": [],
-  "GPU_free_MiB": 29337,
-  "GPU_utilization_percent": 69,
-  "updated": "2026-10-27T07:42:18.457747+08:00",
+  "runs": [
+    {
+      "degree": 6,
+      "status": "running",
+      "output": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q6_attempt001",
+      "started": "2026-10-27T07:56:52.750659+08:00"
+    }
+  ],
+  "GPU_free_MiB": 31161,
+  "GPU_utilization_percent": 2,
+  "updated": "2026-10-27T07:56:52.505968+08:00",
   "candidate_history": [
     {
       "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt027_local_J_from025",
@@ -17,5 +24,9 @@
     }
   ],
   "selection_reason": "First original-mesh-screen-passing SAME0000 mesh; GPU fields/convergence pending",
-  "mesh_template_file": "data/copv/c04_repair_v3/mesh_template_058_v1.json"
+  "mesh_template_file": "data/copv/c04_repair_v3/mesh_template_058_v1.json",
+  "host_available_bytes": 32232910848,
+  "host_before_domain_required_bytes": 26206470144,
+  "pid": 4028,
+  "started": "2026-10-27T07:56:52.748654+08:00"
 }
