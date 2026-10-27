@@ -1,0 +1,26 @@
+{
+  "created": "2026-10-27T10:08:25.323330+08:00",
+  "worker_state": "worker85_progress.json",
+  "reuse_parent": true,
+  "mesh_attempt": "attempt082_same_geometry_root_coarsening",
+  "parent_mesh_sha256": "d40d36a7113f0e6744a6d04a53e51bf460d188a54e6dc7db0c609c19497067bc",
+  "curved_attempt": "attempt085_two_cell_patch84",
+  "environment": {
+    "COPV_C04_PROJECTED_CHECKPOINT": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt084_sicn_patch83\\mesh\\mesh.msh",
+    "COPV_C04_SICN_OPT_TARGET": ".07",
+    "COPV_C04_SICN_PATCH_RINGS": "2",
+    "COPV_C04_SICN_MAX_PATCH_CELLS": "50000",
+    "COPV_C04_SICN_MAX_ITER": "200",
+    "COPV_C04_SICN_MOVE_WEIGHT": "1e-8",
+    "COPV_C04_SICN_GTOL": "1e-12",
+    "COPV_C04_SICN_FTOL": "1e-15",
+    "COPV_C04_SICN_NATIVE_CHECK_EVERY": "10"
+  },
+  "curver_arguments": [
+    "--shape-optimize"
+  ],
+  "curver_timeout_seconds": 600,
+  "scope": "SAME0000 sensitivity variant only. Actual084 has two low-SICN cells, all other actual CAD/volume/surface/interface/load/capacity gates passed. Preserve084 and use fixed-CAD two-ring patch; no replacement of baseline058 or independent geometry label.",
+  "case_id": "copv_c04_0000",
+  "purpose": "same_geometry_mesh_sensitivity_only"
+}
