@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27 11:15 北京时间",
+  "updated": "2026-10-27T03:24:39.968363+00:00",
   "tasks": [
     {
       "id": "R01",
@@ -266,17 +266,17 @@
       "phase": "第1周",
       "title": "Connecting rod checkpoint",
       "due": "2026-10-27",
-      "status": "已完成",
-      "deliverables": "合理工况 simulation dataset + 两模型拟合结果",
-      "review": "人工 review 仿真与模型结果，汇总数据规模和遗留问题",
+      "status": "进行中",
+      "deliverables": "1000场数据与已有模型结果汇总 + V100全量1000场训练结果",
+      "review": "汇总数据、模型结果与遗留问题；V100全量1000场训练完成后再结项，不设误差通过线。",
       "dependencies": "R05、R07、R08",
       "start": "2026-10-27",
-      "issues": "1000有效=985原工况+15授权新工况，六组固定预算TRAIN拟合及四页离线PDF已汇总。AI审阅保留范围限制，不设误差通过线；不代表泛化、逐例稳定性或人工签署。",
+      "issues": "已交付1000条有效数据与六组本地1/5/20条拟合的阶段汇总和离线PDF；尚未在V100上完整训练全部1000个场，M01继续进行。",
       "page": "M01.html",
       "results": [
         {
           "label": "四页离线PDF",
-          "url": "assets/m01-checkpoint-v1/GeoBC_M01_summary.pdf"
+          "url": "assets/m01-checkpoint-v1/GeoBC_M01_summary.pdf?v=m01-progress-v2"
         },
         {
           "label": "1000例逐例汇总",

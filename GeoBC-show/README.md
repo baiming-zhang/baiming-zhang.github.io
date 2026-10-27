@@ -42,3 +42,5 @@ The plan metadata uses the user-provided table. Existing scientific results are 
 - 统计源为最终选定索引和权威accepted记录，图表源为large_v2已保存端点；`tools/build_m01_summary.py`提取统计，`tools/publish_m01_checkpoint.py`排版网页与PDF。没有重新求解FE或训练模型。
 - `viewers/m01-render.html`和`assets/m01-render.js`只作真实原节点场的静态插图导出。代表图共用0–1000MPa节点VM色阶；模型同行共用数据范围，保留负预测，均按原位移×1并附实际载荷方向箭头。
 - 代表图按物理机制和来源有目的选取；模型难例沿用TS3 TRAIN20既有联合误差最大规则，不按MGN表现挑选。所有原失败、检查点和源场继续保留。
+
+- M01当前为“进行中”：已有报告只是数据与本地小规模拟合的阶段交付，V100上全部1000个场的完整训练尚待完成，不能因报告交付而结项。
