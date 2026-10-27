@@ -19,6 +19,7 @@ The plan metadata uses the user-provided table. Existing scientific results are 
 - 样本数、误差、耗时、参数表、质控矩阵、下载链接和完整记录统一放在页尾的“查看详情”折叠区内。
 - 图片必须来自可追溯的真实结果；变形放大、应力平均等显示处理必须在图注中说明，不能暗示计算精度提高。
 - 失败和隔离结果保留在详情中，不用只展示成功结果的方式掩盖范围限制。
+- 所有展示应力或位移的三维视图都应提供实际受力箭头，参照 C04 的三维实体箭头格式。载荷独立开关，默认可见；压力为橙色，惯性体载荷为紫红色。方向来自原施加载荷，不能用位移方向代替力方向；箭头长度仅示意，位置随当前显示构形移动。
 
 ## R05–R08 展示维护
 
@@ -26,3 +27,4 @@ The plan metadata uses the user-provided table. Existing scientific results are 
 - R07/R08 真值与预测共享色阶；误差单独定义、单独色阶，在参考构形显示。默认展示该训练子集中联合相对误差最大的样本，允许切换工况和独立开启网格。
 - 简短评语明确标注“AI审阅 · Codex”；完整审阅依据在 `assets/rod-review-visuals-v1/ai-review.json` 和页尾默认关闭的“查看详情”内。
 - 数据导出源：研究代码仓库的 `tools/build_rod_review_visuals.py`；布局整理源：`tools/organize_rod_visual_pages.py`。训练发布器在有这些可视化资产时复用该布局，避免再次把曲线和指标放回正文。
+- 载荷箭头由 `tools/export_rod_review_loads.py` 从冻结载荷／原节点与单元记录导出，使用 C04 相同的 `FESpatialGlyphs` 三维几何。真值、预测用相同外载，分别跟随各自保存位移；误差图在参考构形显示载荷。原图和求解数据不改写。

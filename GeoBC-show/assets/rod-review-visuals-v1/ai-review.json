@@ -1,7 +1,7 @@
 {
   "author": "Codex",
   "role": "AI reviewer",
-  "updated_utc": "2026-10-26T23:56:14.103450+00:00",
+  "updated_utc": "2026-10-27T01:40:17.565418+00:00",
   "presentation_rule": "showcase-public-site/README.md and GeoBC-show/README.md",
   "reviews": {
     "R05": "核对最终验收记录：1000个有效结果由985条原结果和15个用户授权新工况组成，原15个未收敛ID排除且保留。十个原载荷目标、身份、有限性、正J、材料域与平衡验收记录完整。平衡验收不包含逐例稳定性、解的唯一性或实验符合性。首屏表面为原二次边界面分片；位移为真实倍数，节点应力仅作显示投影。",
@@ -16,6 +16,13 @@
     "stress": "Original four-GP element-maximum VM projected to original nodes by reference-volume weighting.",
     "error": "U vector Euclidean difference or absolute projected node VM difference against saved FE targets; error on reference configuration.",
     "training_sample_selection": "Default: maximum squared relative U plus squared relative VM error within selected TRAIN subset.",
-    "no_invented_accuracy_gate": true
+    "no_invented_accuracy_gate": true,
+    "loads": {
+      "source": "assets/rod-load-glyphs-v1/manifest.json",
+      "geometry": "Same FESpatialGlyphs closed 3D arrows as C04; x-ray visibility for internal load locations.",
+      "directions": "Frozen actual applied pressure/body-force directions, not displacement or reaction directions.",
+      "motion": "Anchors follow FE/prediction displacement separately; error uses reference anchors.",
+      "length": "Schematic direction samples, not proportional magnitudes."
+    }
   }
 }
