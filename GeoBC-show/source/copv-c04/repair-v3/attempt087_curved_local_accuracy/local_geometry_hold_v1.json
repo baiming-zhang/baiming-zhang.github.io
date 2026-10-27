@@ -1,0 +1,26 @@
+{
+  "created": "2026-10-27T04:37:24.136128+00:00",
+  "case_id": "copv_c04_0000",
+  "failed_faces": [
+    {
+      "surface": 56,
+      "type": "Torus",
+      "part_ids": [
+        9
+      ],
+      "nodes": 17213,
+      "triangles": 7928,
+      "max_node_CAD_distance_mm": 0.024954608608872844,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.00679795373477018,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.3502879904987367,
+      "below_005": 0,
+      "passed": false
+    }
+  ],
+  "geometry_review_sha256": "dcbc5db8915b2d98b3b6bcfe800d6375379cc0fbad10435d4086ca10704d11ab",
+  "preflight_sha256": "fb3184043500763cce4975be4f3f8a75fab6f4706e6a8c7cae82a6dbd4115c24",
+  "GPU_allowed": false,
+  "reason": "Guarded curving retained off-CAD nodes on upper titanium torus56. Do not fix these erroneous boundary coordinates in an interior SICN optimization. Preserve087 and restore geometry in a new attempt."
+}

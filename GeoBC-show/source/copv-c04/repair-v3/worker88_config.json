@@ -1,0 +1,36 @@
+{
+  "created": "2026-10-27T04:37:24.136128+00:00",
+  "worker_state": "worker88_progress.json",
+  "mesh_attempt": "attempt088_torus56_refined",
+  "curved_attempt": "attempt089_curved_torus56_refined",
+  "environment": {
+    "COPV_C04_VOLUME_ALGORITHM": "1",
+    "COPV_C04_LINEAR_OPTIMIZER": "Netgen",
+    "COPV_C04_COLLAR_FRONTAL": "1",
+    "COPV_C04_MAX_SURFACE_NODES": "700000",
+    "COPV_C04_MATCH_ROOT_CIRCLES": "1",
+    "COPV_C04_FRONTAL_PARTS": "7,8",
+    "COPV_C04_ADJACENT_ROOT_BAND": "1",
+    "COPV_C04_ADJACENT_ROOT_H": ".85",
+    "COPV_C04_MAIN_CHORD_MM": ".045",
+    "COPV_C04_THIN_CHORD_MM": ".015",
+    "COPV_C04_PORT_FACE_H": "2.0",
+    "COPV_C04_ROOT_BAND_MM": ".25",
+    "COPV_C04_ROOT_GROWTH": ".6",
+    "COPV_C04_STOP_ON_BAD_SURFACE": "1",
+    "COPV_C04_PORT_CURVE_REPAIR": "1",
+    "COPV_C04_LOCAL_ACCURACY_REGIONS_JSON": "[{\"parts\":[9],\"radius_mm\":25.323605645688293,\"z_mm\":247.09489050962785,\"h_min_mm\":0.65,\"plateau_mm\":1.0,\"growth_per_mm\":1.0},{\"parts\":[10],\"radius_mm\":25.331775201764064,\"z_mm\":-247.09576353216698,\"h_min_mm\":0.65,\"plateau_mm\":1.0,\"growth_per_mm\":1.0}]",
+    "COPV_C04_TORUS_FACE_H_JSON": "{\"56\":0.15}"
+  },
+  "parameters": {
+    "h": 6,
+    "shell-h": 6.0,
+    "bond-h": 3,
+    "root-h": 0.18,
+    "max-cells": 3300000,
+    "circle-segments": 80
+  },
+  "scope": "Same0000 original CAD/material/load and086 local-accuracy recipe; only failed torus56 surface and its shared boundary curves .25→.15mm. Other torus faces retain .25mm. This tests whether finer boundary triangles permit valid CAD projection without retreat; no guarantee. Original quality/CAD/volume/load/resource gates unchanged; no fixed-wrong-boundary optimization.",
+  "case_id": "copv_c04_0000",
+  "purpose": "local_stress_accuracy_repair_only"
+}

@@ -56,8 +56,13 @@ def main():
         for roles,h in [([1,2,3,4,5,6,7,8],args.shell_h),([2],args.bond_h)]:
             f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F',str(h));restrict(f,[t for t,p in pid.items() if p in roles])
         torus_faces=[t for _,t in gmsh.model.getEntities(2) if gmsh.model.getType(2,t)=='Torus']
+        torus_overrides={int(face):float(h) for face,h in json.loads(__import__('os').environ.get('COPV_C04_TORUS_FACE_H_JSON','{}')).items()}
+        assert set(torus_overrides)<=set(torus_faces),'Torus override must name an actual owning CAD face'
+        assert all(.15<=h<=.25 for h in torus_overrides.values()),'Torus refinement outside declared .15-.25mm range'
         if torus_faces:
             f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F','.25');g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',torus_faces);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
+        for face,h in torus_overrides.items():
+            f=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(f,'F',str(h));g=gmsh.model.mesh.field.add('Restrict');gmsh.model.mesh.field.setNumber(g,'InField',f);gmsh.model.mesh.field.setNumbers(g,'SurfacesList',[face]);gmsh.model.mesh.field.setNumber(g,'IncludeBoundary',1);fields.append(g)
         port_faces=sorted({abs(face) for volume,part in pid.items() if part in [9,10,14,18] for dim,face in gmsh.model.getBoundary([(3,volume)],combined=False) if dim==2})
         port_face_h=float(__import__('os').environ.get('COPV_C04_PORT_FACE_H','1.0'))
         if not .5<=port_face_h<=2.:raise ValueError('Smooth port-face size outside declared range')
@@ -138,9 +143,10 @@ def main():
                 lo,hi=gmsh.model.getParametrizationBounds(1,curve);curvature=float(abs(gmsh.model.getCurvature(1,curve,[(float(lo[0])+float(hi[0]))/2])[0]));segments=max(4,int(np.ceil(length*curvature/(2*np.pi)*48)));gmsh.model.mesh.setTransfiniteCurve(curve,segments+1)
         torus_boundary_controls=[];torus_curves={abs(c) for face in torus_faces for dim,c in gmsh.model.getBoundary([(2,face)],combined=False)}
         for curve in sorted(torus_curves):
-            length=occ.getMass(1,curve);lo,hi=gmsh.model.getParametrizationBounds(1,curve);k=float(np.max(abs(gmsh.model.getCurvature(1,curve,np.linspace(float(lo[0]),float(hi[0]),33).tolist()))));segments=max(4,int(np.ceil(length/.25)),int(np.ceil(length*k/(2*np.pi)*48)));found=next((c for c in circles if c['curve']==curve),None)
+            edge_h=min([.25]+[h for face,h in torus_overrides.items() if curve in {abs(c) for dim,c in gmsh.model.getBoundary([(2,face)],combined=False)}])
+            length=occ.getMass(1,curve);lo,hi=gmsh.model.getParametrizationBounds(1,curve);k=float(np.max(abs(gmsh.model.getCurvature(1,curve,np.linspace(float(lo[0]),float(hi[0]),33).tolist()))));segments=max(4,int(np.ceil(length/edge_h)),int(np.ceil(length*k/(2*np.pi)*48)));found=next((c for c in circles if c['curve']==curve),None)
             if found is not None:segments=max(segments,found['segments']);found['segments']=segments
-            gmsh.model.mesh.setTransfiniteCurve(curve,segments+1);torus_boundary_controls.append(dict(curve=curve,type=gmsh.model.getType(1,curve),length_mm=length,max_curvature_per_mm=k,segments=segments,target_max_edge_mm=.25))
+            gmsh.model.mesh.setTransfiniteCurve(curve,segments+1);torus_boundary_controls.append(dict(curve=curve,type=gmsh.model.getType(1,curve),length_mm=length,max_curvature_per_mm=k,segments=segments,target_max_edge_mm=edge_h))
         groups={}
         for circle in circles:groups.setdefault(round(abs(circle['z']),5),[]).append(circle)
         for group in groups.values():
@@ -150,6 +156,7 @@ def main():
         report['repair_recipe'].update(frontal_part_ids=sorted(frontal_parts),root_size_growth_per_mm=root_growth,adjacent_outer_ply_root_band=adjacent_band,adjacent_outer_ply_root_h_mm=adjacent_h if adjacent_band else None,nominal_meridian_chord_target_mm=chord_target,thin_layer_chord_target_mm=thin_chord,thin_layer_curvature_sizes=thin_sizes,smooth_port_face_h_mm=port_face_h,chord_scope='Linear boundary sizing heuristic only. Actual curved CAD-distance, Jacobian, SICN, material-volume and GPU resource criteria remain unchanged; torus .25mm boundary/surface controls retained.')
         report['repair_recipe'].update(port_curve_repair=port_curve_repair,narrow_annuli=narrow_annuli,partial_circle_controls=partial_circle_controls)
         report['repair_recipe']['local_accuracy_regions_mm']=accuracy_regions
+        report['repair_recipe']['torus_face_size_overrides_mm']=torus_overrides
         if args.recipe=='baseline':
             gmsh.model.mesh.removeConstraints();gmsh.model.mesh.field.remove(f);uniform=gmsh.model.mesh.field.add('MathEval');gmsh.model.mesh.field.setString(uniform,'F',str(args.h));gmsh.model.mesh.field.setAsBackgroundMesh(uniform)
             for key,value in [('Mesh.MeshSizeMin',.5),('Mesh.MeshSizeFromCurvature',64),('Mesh.MeshSizeFromPoints',1)]:gmsh.option.setNumber(key,value);options[key]=value
