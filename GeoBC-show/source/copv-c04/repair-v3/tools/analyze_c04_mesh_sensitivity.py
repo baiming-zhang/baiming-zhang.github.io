@@ -10,6 +10,24 @@ def ordinary(value):
  if isinstance(value,np.ndarray):return value.tolist()
  if isinstance(value,np.generic):return value.item()
  raise TypeError(type(value).__name__)
+def interior_peak_candidates(e,run,count=3):
+ """Global baseline scan, independent of all variant field values.
+
+  The frozen 14-point output rule's first six points lie on edges; its last
+  eight are interior. Selected candidates are also checked by actual inverse
+  geometry below. Raw all-GP maxima remain separate mesh-dependent diagnostics.
+ """
+ local=np.load(run/'GP_stress_local_MPa.npy',mmap_mode='r');glob=np.load(run/'GP_stress_xyz_MPa.npy',mmap_mode='r');best={pid:[] for pid in e.parts}
+ for first in range(0,len(e.cells),10000):
+  labels=e.pids[first:first+10000]
+  for pid in np.unique(labels):
+   within=np.flatnonzero(labels==pid);ids=first+within
+   if e.parts[int(pid)]['material']=='carbon':scores=abs(local[ids,6:,0])
+   else:
+    s=glob[ids,6:];scores=np.sqrt(.5*((s[...,0]-s[...,1])**2+(s[...,1]-s[...,2])**2+(s[...,2]-s[...,0])**2)+3*np.sum(s[...,3:]**2,axis=-1))
+   assert np.isfinite(scores).all();flat=scores.ravel();n=min(count,len(flat));top=np.argpartition(flat,len(flat)-n)[-n:]
+   candidates=best[int(pid)]+[(float(flat[i]),int(ids[i//8]),int(6+i%8)) for i in top];best[int(pid)]=sorted(candidates,key=lambda v:(-v[0],v[1],v[2]))[:count]
+ return best
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--baseline',type=Path,required=True);ap.add_argument('--reference-run',type=Path,required=True);ap.add_argument('--variant',type=Path,required=True);ap.add_argument('--variant-run',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);a=ap.parse_args();assert not a.output.exists();start=time.perf_counter()
  validation=read(B/'point_evaluator_validation_v2/review.json');assert validation['passed'] and validation['evaluator_sha256']==sha(W/'notes/c04_curved_point_fields.py')
@@ -43,6 +61,13 @@ def main():
   assert best is not None;_,cell,q,v=best
   key=f'p{pid}-cell{int(e0.cell_ids[cell])}-GP{q}'
   if not any(p['probe_id']==key for p in probes):probes.append(dict(probe_id=key,part_id=pid,baseline_cell=cell,baseline_GP=q,xyz_mm=gp[cell,q].copy(),reference=v))
+ for pid,candidates in interior_peak_candidates(e0,a.reference_run).items():
+  for rank,(score,cell,q) in enumerate(candidates,1):
+   key=f'p{pid}-cell{int(e0.cell_ids[cell])}-GP{q}';value,reason=e0.in_cell(gp[cell,q],cell);assert value is not None,reason;r=value['reference_xyz'];assert min(1-r.sum(),*r)>1e-4,'Selected peak GP is not interior'
+   role='global_baseline_interior_'+('absolute_fiber_sigma11' if e0.parts[pid]['material']=='carbon' else 'von_Mises')+'_rank'+str(rank)
+   existing=next((p for p in probes if p['probe_id']==key),None)
+   if existing is None:probes.append(dict(probe_id=key,part_id=pid,baseline_cell=cell,baseline_GP=q,xyz_mm=gp[cell,q].copy(),reference=value,reference_sampling_roles=[role],reference_peak_metric_MPa=score))
+   else:existing.setdefault('reference_sampling_roles',[]).append(role)
  del e0
  e1=Evaluator(a.variant,a.variant_run);matched=[];failures=[]
  for p in probes:
@@ -62,5 +87,6 @@ def main():
  for pid in sorted({p['part_id'] for p in matched}):
   rows=[p for p in matched if p['part_id']==pid];s0=np.array([p['reference']['stress_xyz_MPa'] for p in rows]);s1=np.array([p['variant']['stress_xyz_MPa'] for p in rows]);parts[pid]=dict(matched_probes=len(rows),stress_tensor_sample_L2_relative_to_baseline=float(np.sqrt(np.sum((s1-s0)**2*tensor)/np.sum(s0**2*tensor))),max_absolute_stress_component_difference_MPa=float(abs(s1-s0).max()),scope='Unweighted common-point sample norm; not a volume norm.')
  report=dict(schema='c04_same_geometry_nonuniform_mesh_sensitivity_v1',created=datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),case_id='copv_c04_0000',baseline_mesh_sha256=summaries[0]['mesh_sha256'],variant_mesh_sha256=summaries[1]['mesh_sha256'],source_summary_sha256=[sha(p/'summary.json') for p in runs],same_CAD_and_numerical_physics=True,quadrature_degree=8,energy_relative_difference_to_baseline=abs(summaries[1]['strain_energy_Nmm']/summaries[0]['strain_energy_Nmm']-1),displacement=dict(raw_common_probe_L2_mm=float(np.linalg.norm(du)),rigid_aligned_common_probe_L2_mm=float(np.linalg.norm(aligned)),max_raw_vector_difference_mm=float(np.linalg.norm(du,axis=1).max()),max_rigid_aligned_vector_difference_mm=float(np.linalg.norm(aligned,axis=1).max()),least_squares_translation_mm=coefficients[:3],least_squares_infinitesimal_rotation=coefficients[3:],fitting_center_mm=center,scope='Equal-weight common physical probes. Raw and six-DOF rigid-aligned differences retained; no nearest node/GP substitution.'),parts=parts,requested_probes=len(probes),matched_probes=len(matched),failed_or_ambiguous_probes=failures,material_volume_and_raw_GP_peak_diagnostics=peak_rows,production_eligible=False,limitations=['Two nonuniform meshes, unchanged minimum root/fillet size. This does not establish global h-limit or point-peak convergence.','Every failed/ambiguous original probe retained, with no substituted point or zero-filled field.','Raw GP maxima may occur on material/element boundaries and are mesh-dependent diagnostics.','Same nominal pressure is checked; actual per-run boundary integration/load verification remains bound to each completed run.'],seconds=time.perf_counter()-start)
+ report.update(probe_sampling='Four deterministic source cells per material with interior GP samples, plus globally scanned top-three interior absolute fiber sigma11 probes for carbon or von Mises probes for other materials. Selected entirely from baseline q8; no selection based on variant differences.',analysis_source_sha256=sha(Path(__file__)))
  (a.output/'review.json').write_text(json.dumps(report,default=ordinary,indent=2)+'\n');print(json.dumps(dict(matched=len(matched),retained_failures=len(failures),energy_relative_difference=report['energy_relative_difference_to_baseline'])))
 if __name__=='__main__':main()

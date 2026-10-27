@@ -2,16 +2,32 @@
   "schema": "c04_curved_GPU_validation_queue_v1",
   "case_id": "copv_c04_0000",
   "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt085_two_cell_patch84",
-  "status": "waiting_resources",
+  "status": "running",
   "purpose": "same_geometry_mesh_sensitivity_only",
   "assembly_degrees": [
     8
   ],
   "production_eligible": false,
   "new_FE_labels": 0,
-  "runs": [],
+  "runs": [
+    {
+      "degree": 8,
+      "status": "running",
+      "output": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt085_two_cell_patch84\\GPU_q8_attempt001",
+      "started": "2026-10-27T11:53:09.036572+08:00",
+      "case_id": "copv_c04_0000",
+      "physical_input_identity_sha256": "5eeb5effa7f506d91598cbae6b237b720e6fc31700672c176eb9fc751552fd8d"
+    }
+  ],
   "created": "2026-10-27T10:18:28.419658+08:00",
   "contract_schema": "c04_curved_P2_validation_contract_v2",
   "priority_after": "Complete primary0000 pair first, then this q8-only sensitivity variant, then0011/0002/0018; single C04 GPU lane.",
-  "study_protocol": "data/copv/c04_repair_v3/same_geometry_mesh_sensitivity_v1/protocol.json"
+  "study_protocol": "data/copv/c04_repair_v3/same_geometry_mesh_sensitivity_v1/protocol.json",
+  "GPU_free_MiB": 30951,
+  "GPU_utilization_percent": 2,
+  "updated": "2026-10-27T11:53:08.801704+08:00",
+  "host_available_bytes": 32243216384,
+  "host_before_domain_required_bytes": 24687550464,
+  "pid": 34888,
+  "started": "2026-10-27T11:53:09.035572+08:00"
 }

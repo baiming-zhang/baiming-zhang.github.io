@@ -1,6 +1,6 @@
 {
   "schema": "c04_repair_progress_v3",
-  "updated": "2026-10-27T11:37:07.116395+08:00",
+  "updated": "2026-10-27T12:02:09.803770+08:00",
   "status": "repair_in_progress",
   "historical": {
     "frozen_inputs": 20,
@@ -11,7 +11,7 @@
     ],
     "production_labels": 0
   },
-  "new_FE_labels": 1,
+  "new_FE_labels": 2,
   "new_production_labels": 0,
   "original_quality_targets": {
     "surface_min_SICN": 0.05,
@@ -170361,32 +170361,221 @@
   },
   "explanation": "Candidate validity, CAD distance, volume and production shape gates are separate. No failed ID is replaced. Original viewers retain their true 3D BC/load switches. Attempt013 old preflight is superseded by its explicit local_geometry_hold and must not enter GPU.",
   "latest_update": {
-    "updated": "2026-10-27T03:37:07.039277+00:00",
-    "summary": "本地RTX5090的q8 attempt004已启动，并通过初始资源检查(29%利用率、显存空闲29568MiB)。五次间隔2秒采样30/30/2/29/30%全部通过。当前准备真实曲边P2的45点积分与矩阵，尚未完成8阶场；已完成q6与所有失败原记录不改，生产0。",
+    "updated": "2026-10-27T04:02:09.720684+00:00",
+    "summary": "0000/058真实8阶GPU-P2完整场已完成，含原生核验887秒；6/8比较显示最大节点位移差4.44e-7mm、材料应力体积L2相对差最大0.00392%。三维查看器已新增6/8切换并通过本地QA。085同几何敏感性8阶正在本地5090运行；当前新增2份积分场仍仅1个独立几何，生产0。",
     "paragraphs": [
-      "已冻结的0000/058与0011/063分别拥有2150456/2149318单元，9946329/9942339个P2自由度；全网格最小SICN为0.0500077017/0.0500169721，低于0.05为0、正Jacobian。实际CAD、表面质量、逐材料GP-J体积、共享Tri6接口、单连通及真实Tri6载荷全部通过。最后一轮分别170.23/144.66秒。只是网格筛查通过；GPU字段、积分阶数/网格/局部应力敏感性未完成，生产放行仍为0。",
-      "0002首轮064/065于07:40:21完成772.55秒，2296017单元/3554043节点，超过GPU容量。曲边最小SICN0.0050401、859个低质体单元、372个低质表面单元；几何、正Jacobian、逐材料体积(最大0.0300734%)、接口与真实载荷通过。该版本预检拒绝，不能送GPU。原始版本及记录全部保留。",
-      "通口问题按具体CAD面及原生1D网格定位：面49/100是宽0.1mm环带，圆周只有80段、边长约1.54mm；面87等的短圆弧长5.25mm却也被强制80段(0.0656mm)，相邻直边长5.99mm只分3段(1.997mm)。锥面152等也存在短圆弧80段与双曲线5段的不匹配。原代码将部分圆弧误按完整圆处理，使用弧长/(2π)作为半径；实际CAD角度14.73°/18.44°，未见接近零的几何角。诊断只读取既有CAD和网格，不改变物理构造。",
-      "0002新070/071证明通口边界分段修复有效：直边表面minSICN 0.1169143，最终曲边表面0.0738732，全表面均过0.05。体规模降至2178462单元、3367953节点(10103859自由度)，仍比10M上限高1.03859%。该轮07:59:43结束732.43秒；1309个体单元SICN低于0.05、最小0.00714516，全部正Jacobian；实际CAD面7(内衬/胶层界面)有0.0182051mm偏差，超过该面0.0075mm容差。体积/接口/载荷通过仍不能抵消几何与资源失败，预检拒绝，禁止送GPU。",
-      "0018新072/073于08:00:28结束733.74秒：2172591单元、3344191节点(10032573自由度)，仍超过10M上限0.32573%；610个低SICN体单元、最小0.0110895，正Jacobian和曲边表面minSICN0.0660130通过；钛通口CAD面52节点偏差0.0213897mm，大于0.015mm容差。材料体积最大误差0.0217015%、接口和实际载荷通过；该版本仍拒绝、保留，禁止送GPU。",
-      "0018的078于09:00:27完成838.98秒，固定CAD边界及完整原生拓扑，仅优化内部节点后589个低SICN体单元归零，实际全网格minSICN0.0500217194、正Jacobian；容量、实际CAD、表面SICN、逐材料GP-J体积(最大0.0217941%)、共享Tri6、单连通和实际载荷全部再次通过。2007522单元、3085492节点、9256476自由度。已独立冻结screened_mesh_copv_c04_0018_attempt078_sicn_patch75_v1，原075及所有失败版本不改；GPU字段和敏感性仍待做，不能当生产放行。",
-      "0000/058 q6于08:09:07完成，含队列原生核对734.78秒(求解器本体677.45秒)。真实CUDA seqaijcusparse/seqcuda，2150456曲边P2单元/9946329自由度；真实相对残差1.0032e-10、能量/外功误差9.6482e-11，半载线性误差6.8697e-10、零载位移为0。1MPa下最大位移0.4093245mm。原14GP的局部/全局应力、实际体积权重、原节点及实际载荷/6锁定分量全部保存并通过队列ID核对。新增的是1个几何的1份积分阶数场，不是生产训练放行。",
-      "已准备同一精确网格的6/8阶原生字段比较脚本，必须等待两份真实完成输出后才执行：检查原节点/单元ID、实际载荷和锁定分量、14GP位置与体积权重，分材料报告应力张量体积L2、位移和能量差。当前仅完成语法检查，没有比较结果；8阶仅是参考，不是真值，也不能代替同几何网格或局部应力敏感性验证。生产放行仍为0。",
-      "q8 attempt001于08:09:07启动，171.30秒后在装配前保护中止：GPU利用率升至74%(门槛10%)，显存空闲29200MiB及主机可用26.81GB均满足要求。这是资源中断，没有完成q8场，也没有观察到数值发散。原run、资源快照和失败状态保存为resource_interruption_v1及独立队列快照；只待空闲后启动新q8 attempt002，已完成q6不重复。6/8场比较尚无结果。",
-      "曲边实际查看器已核对原生节点载荷及约束，并在软件WebGL浏览器中检查位移、三维实体压力箭头/支承、模型旋转、裁剪和网格开关，无浏览器或GL错误。显示6个约束分量、28个实际Tri6中心压力方向采样与上下孔口积分端力；箭头随模型转动、没有白色框。显示为实际Tri6节点四分片近似；裁剪不生成仿射填面。原18个查看器和访问入口保持。生产放行仍需8阶、同几何网格/局部应力敏感性等验证。 查看器及其真实载荷/几何压缩数据已在cf6ca4b的13项精确线上文件检查中通过；8阶仍未完成，选项保持禁用待资源。",
-      "0002的081于09:31:11完成626.12秒，451个低质体单元归零，实际全网格最小SICN0.0500546551、正Jacobian。2071970单元；实际CAD、表面、逐材料GP-J体积(最大0.0301364%)、共享Tri6、单连通、真实载荷和GPU容量全部通过，精确网格SHA89e58568bc63e80a117f44cafc4681f5c7641d2a2936e090b94090133856ca50已冻结。现在0000/058、0011/063、0002/081、0018/078四个目标原ID全部通过原网格筛查；GPU全场和敏感性尚未全部验收，不能当生产训练合格。",
-      "新增0011、0002、0018各自冻结网格及自身参数的GPU待运行队列；只有主0000的6/8阶验证完成后，才允许单通道继续其他ID。检查发现旧执行合同保留了C02的P1/直边描述文字：实际已完成q6的命令、冻结求解器、原生输出和summary均为曲边P2，数值执行没有使用那段文字。原合同及输出不改，另存legacy_contract_metadata_errata_v1勘误；后续v2合同写明真实P2/实际二次孔边端力。新旧合同物理输入指纹一致，求解器源和资源保护不改；这是元数据修正，不是新的有限元验证结果。",
-      "同几何敏感性网格082/083首轮647.59秒通过CAD/表面/正Jacobian/体积/接口/载荷和容量，但有152个低SICN体单元。084耗时357.77秒将152降至2，仍未过原门槛，完整版本保留。新085两圈内部修复于10:10:38完成133.04秒，全网格低SICN体单元归零、minSICN0.0500077017；全部原实际筛查再次通过，逐材料体积误差最大0.0270004%，1965041单元/3030014节点/9090042自由度。精确网格77a904cd977e4e90f8043409bb94afede93ef9b7337908fd3150480c989f22d8独立冻结；基准058保持。它仍是0000同一原始CAD的数值网格变体，不是第五个独立几何。",
-      "085只改变根部细网格平台0.75→0.5mm及外侧增长率0.4→0.6，最小根部/圆角尺寸0.25mm保持；同CAD及材料/载荷输入一致性已核对。计划与058各自真实q8场比较，085只计算8阶，不伪造6阶结果。此非均匀网格敏感性试验不能证明均匀h极限或局部峰值收敛；目前没有变体GPU场和跨网格结果。",
-      "已实现实际TET10反解、P2位移梯度、材料旋转及应力重建器，并用已完成q6的12个材料分区、各3个实际单元的全部14GP共504点核对通过：应力分量相对L2差1.4044e-11，最大绝对分量差5.594e-9MPa。首次验证因1e-8mm反解容差在薄曲边单元的边上GP过早停止而拒绝，失败记录保留；收紧至1e-11mm后独立v2验证通过，原FE数据不改。这只是后处理重建器验证，不是新增FE场或敏感性结论。",
-      "跨网格分析脚本已准备，尚未执行科学比较：限定同CAD/材料/载荷、同冻结求解器的两个完成q8场；在同材料公共物理点反解真实P2场，保留找不到或位于单元边界而梯度歧义的探针及理由，不换点或填零；报告原始和6自由度刚体对齐后的位移差、材料内点应力差、能量与原始GP峰值诊断。公共探针采样范数明确不是体积L2；原始GP峰值不能当收敛证明。",
-      "用户最新设备安排是本地RTX5090立即用于C04积分验证，V100留给最后TS3/网络训练。本轮不提交Sockeye上的C04迁移，也不启动TS3。已准备的远端迁移包保留为未提交记录。",
-      "原10%门槛下，q8 attempt002在启动检查1%之后，before_domain读到11%，运行11.60秒即保护中止。RAM可用约31.18GB、显存空闲29722MiB均通过，未装配、未产生q8完整场。原run/日志/资源快照和失败JSON保留。",
-      "用户明确将利用率门槛改为30%，记录gpu_utilization_30_amendment_v1；独立冻结V4，完整源码比较确认仅资源判断util>10改为util>30，FP64、物理、离散、载荷、收敛容差和内存/显存门槛均不变。原V3及其q6/q8历史不改。同网格6/8比较器已明确核对这项唯一源码差异，不能泛化成任意求解器版本可比。",
-      "q8 attempt003在30%新门槛下启动检查为20%，before_domain升至33%，运行7.83秒中止；RAM约31.05GB、显存空闲29524MiB通过，没有装配或数值发散证据。原attempt003及独立失败快照已保留，ack仅一次，主队列恢复等待；下次只能另起attempt004。",
-      "本轮每隔2秒共5次短采样为2%、30%、33%、29%、30%，显存均超过24GiB，其中一次超过30%，未满足持续启动条件，没有启动attempt004。资源剩余等待时间与ETA未知；现有其他任务未被停止或修改。后续仍是主q8完成后同网格6/8、085敏感性和其他自身ID验证；生产放行保持0。",
-      "本轮五次间隔2秒的利用率采样为30%、30%、2%、29%、30%，显存均超过24GiB，满足用户授权30%启动门槛。新增q8 attempt004启动后，before_domain实际利用率29%、显存空闲29568MiB、主机可用31.17GB，全部通过。真实2150456曲边P2单元、9946329自由度、8阶装配45个积分点正在处理；尚未完成8阶原始场，也没有6/8比较结论。后续资源/CSR/CUDA守卫继续有效，最终ETA待装配/求解实际进度确认；2400秒是超时保护上限。"
+      "四个原目标ID0000/058、0011/063、0002/081、0018/078已通过全部原网格筛查并独立冻结；各自实际全网格最小SICN约0.0500077、0.0500170、0.0500547、0.0500217，低质单元均为0。实际CAD、表面、逐材料GP-J体积、共享Tri6、单连通、真实Tri6载荷及GPU容量均通过。原20输入/18研究场/2失败/生产0历史完整保留，失败ID和旧版本未替换。网格通过不能自动当作生产放行。",
+      "0000/058 q6已完成734.78秒，原生数据保持不可变。新增q8 attempt004经五次间隔2秒采样通过后启动，完成整个队列原生核验耗时887.18秒，求解器本体809.35秒、峰值线性求解317.81秒。真实CUDA seqaijcusparse/seqcuda、2150456曲边P2单元/9946329自由度，8阶装配45点，真实相对残差1.00761835e-10、能量/外功误差1.15384591e-10。原14GP局部/全局应力、实际GP坐标权重、原节点、实际载荷及6锁定分量全部保存并通过ID/有限值核验。",
+      "真实同网格6/8全场比较已执行17.75秒：原节点/单元ID、14GP坐标和权重、四类实际节点载荷、6个锁定分量全部一致，GP坐标和节点载荷差均为0。最大节点位移向量差4.4392336e-7mm；节点位移无权L2相对差1.1292177e-7(此量不是有限元体积范数)。能量相对差2.1080072e-8，逐材料应力张量体积L2相对差最大3.9215137e-5，约0.00392%，剪切分量按对称张量范数计双权。8阶只是比较参考而非真值，这说明该精确网格上的积分阶数差异较小，不能替代网格/局部应力敏感性或直接放行生产。",
+      "原q8 attempts001/002/003全部保留，分别因资源保护中止，无完整场、无数值发散证据。用户将利用率门槛从10%明确改为30%，独立gpu_utilization_30_amendment_v1和V4冻结记录证明仅资源util literal变化，数值物理、FP64、容差、内存/显存门槛不改。q6的V3、全部旧run和旧执行合同不可变；比较器逐run核对完整合同及source SHA，再核对相同物理输入与唯一资源literal修订。旧合同遗留P1/直边描述的勘误独立记录，实际执行命令/冻结源/summary/raw均真实曲边P2。",
+      "q8显示数据已从真实原生场独立导出并核对实际节点载荷；在软件WebGL中通过6阶→8阶双向切换、位移/纤维应力、三维实体BC/压力箭头、模型旋转、剖面裁剪和网格开关检查，并人工检查四张参考图。显示6个实际约束分量、28个真实Tri6中心压力方向采样及上下端口积分端力。箭头随模型转动、没有白框；裁剪不生成仿射插值填面。q6压缩数据逐文件SHA保持不变，原18个研究查看器和生产访问guard保持。",
+      "同几何085敏感性网格有1965041单元/3030014节点=9090042自由度，比基准058约少8.62%单元。保留同一原始CAD/材料/载荷及0.25mm最小根部尺寸，仅将根部细网格平台0.75→0.5mm、增长率0.4→0.6。其全部原实际筛查已通过，逐材料体积最大误差0.0270004%，最小SICN0.0500077。085的真实8阶算例在主0000/058完整验证完成后单通道启动，当前运行中，没有085完整字段或跨网格结果；它是同一几何的网格变体，不能算第五个独立几何。",
+      "网格比较器已用真实q6的504GP核对P2反解/位移梯度/应力重建，源hash锁定；首次反解容差验证失败也保留。公共物理探针计划已冻结：每材料4个确定性单元内部GP采样，加上从基准q8全部单元扫描得到的每材料前三个内部应力峰值点(碳纤维按|σ11|，其他材料按von Mises)。不根据085差异择点；实际同材料二次包含反解后比较，保留未定位和单元边界梯度歧义探针ID/理由，不最近GP替代、不换点或填零。报告原位移差及6自由度刚体对齐差、点应力采样范数(不是体积L2)、能量和原始GP峰值诊断。两个非均匀网格不能证明h极限或峰值收敛。",
+      "当前新增GPU字段变体为0000同一原始几何的q6和q8两份，独立完成GPU几何ID仍只有0000。085完成后继续0011/0002/0018各自冻结网格及自身合同的6/8单通道验证，再做跨几何分析和最终网站交付。按最新安排，C04使用本地RTX5090，V100留给最后TS3/网络训练，本轮不提交远端C04迁移、不启动TS3。所有生产资格保持false。"
     ]
+  },
+  "same_mesh_quadrature_comparison": {
+    "schema": "c04_same_mesh_quadrature_field_comparison_v1",
+    "created": "2026-10-27T11:52:30.145034+08:00",
+    "case_id": "copv_c04_0000",
+    "mesh_sha256": "43f29c4b9d012c4693dd8c426f3e01820f05a00838ad8a2327b0b9d9bd78f36c",
+    "runs": [
+      "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q6_attempt001",
+      "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt004"
+    ],
+    "summary_sha256": [
+      "4164a56e14ed42de199082f66234924baba8dd029f259a73c190021d11301834",
+      "751b4312a0bed2f6f140d1082c118e9033d20a42158f37901af0365058ea1c21"
+    ],
+    "assembly_degrees": [
+      6,
+      8
+    ],
+    "output_GP_points": 14,
+    "displacement": {
+      "relative_nodal_L2": 1.1292176805706298e-07,
+      "max_vector_difference_mm": 4.439233615625792e-07,
+      "max_vector_difference_over_q8_peak": 1.0845266762389547e-06,
+      "q6_peak_U_mm": 0.4093245447652313,
+      "q8_peak_U_mm": 0.40932452035395506,
+      "scope": "Same native nodes. Nodal L2 is unweighted, not an FE volume norm."
+    },
+    "strain_energy_Nmm": [
+      8112.563718300858,
+      8112.563547287436
+    ],
+    "strain_energy_relative_difference_to_q8": 2.1080071793328898e-08,
+    "load_max_abs_component_differences_N": {
+      "consistent_load_N": 0.0,
+      "pressure_load_N": 0.0,
+      "upper_cap_load_N": 0.0,
+      "lower_cap_load_N": 0.0
+    },
+    "GP_coordinate_max_difference_mm": 0.0,
+    "GP_volume_weight_max_difference_mm3": 0.0,
+    "parts": {
+      "1": {
+        "cells": 252869,
+        "volume_mm3": 335082.4749299761,
+        "local_tensor_diff_squared_volume": 0.0025234881373613614,
+        "local_tensor_q8_squared_volume": 469335681.09513056,
+        "global_tensor_diff_squared_volume": 0.0025234881373613614,
+        "global_tensor_q8_squared_volume": 469335681.09513056,
+        "max_abs_local_component_difference_MPa": 0.001931050985469085,
+        "max_abs_global_component_difference_MPa": 0.001931050985469085,
+        "local_tensor_volume_L2_relative": 2.3187762713359093e-06,
+        "global_tensor_volume_L2_relative": 2.3187762713359093e-06
+      },
+      "2": {
+        "cells": 321923,
+        "volume_mm3": 49523.00055947649,
+        "local_tensor_diff_squared_volume": 0.00045574897072380176,
+        "local_tensor_q8_squared_volume": 296359.07547433197,
+        "global_tensor_diff_squared_volume": 0.00045574897072380176,
+        "global_tensor_q8_squared_volume": 296359.07547433197,
+        "max_abs_local_component_difference_MPa": 0.004461749670831683,
+        "max_abs_global_component_difference_MPa": 0.004461749670831683,
+        "local_tensor_volume_L2_relative": 3.9215136641888135e-05,
+        "global_tensor_volume_L2_relative": 3.9215136641888135e-05
+      },
+      "3": {
+        "cells": 237693,
+        "volume_mm3": 248948.75513350317,
+        "local_tensor_diff_squared_volume": 0.06843356645505436,
+        "local_tensor_q8_squared_volume": 207835202.99176058,
+        "global_tensor_diff_squared_volume": 0.06843356645505387,
+        "global_tensor_q8_squared_volume": 207835202.9917606,
+        "max_abs_local_component_difference_MPa": 0.02497957354016833,
+        "max_abs_global_component_difference_MPa": 0.01790222316832768,
+        "local_tensor_volume_L2_relative": 1.8145754550046634e-05,
+        "global_tensor_volume_L2_relative": 1.8145754550046566e-05
+      },
+      "4": {
+        "cells": 136781,
+        "volume_mm3": 251159.10895799933,
+        "local_tensor_diff_squared_volume": 0.1287461581632617,
+        "local_tensor_q8_squared_volume": 224814098.21216428,
+        "global_tensor_diff_squared_volume": 0.128746158163262,
+        "global_tensor_q8_squared_volume": 224814098.2121643,
+        "max_abs_local_component_difference_MPa": 0.035127584141797286,
+        "max_abs_global_component_difference_MPa": 0.01837753569733458,
+        "local_tensor_volume_L2_relative": 2.393069809867396e-05,
+        "global_tensor_volume_L2_relative": 2.3930698098673984e-05
+      },
+      "5": {
+        "cells": 147865,
+        "volume_mm3": 253352.01713911182,
+        "local_tensor_diff_squared_volume": 0.18732547771300323,
+        "local_tensor_q8_squared_volume": 252374520.2577233,
+        "global_tensor_diff_squared_volume": 0.18732547771300276,
+        "global_tensor_q8_squared_volume": 252374520.25772333,
+        "max_abs_local_component_difference_MPa": 0.029804748872564346,
+        "max_abs_global_component_difference_MPa": 0.020111236936273258,
+        "local_tensor_volume_L2_relative": 2.724430108782023e-05,
+        "global_tensor_volume_L2_relative": 2.7244301087820195e-05
+      },
+      "6": {
+        "cells": 369479,
+        "volume_mm3": 255523.47299911603,
+        "local_tensor_diff_squared_volume": 0.3617139922685694,
+        "local_tensor_q8_squared_volume": 284934154.0258011,
+        "global_tensor_diff_squared_volume": 0.3617139922685703,
+        "global_tensor_q8_squared_volume": 284934154.02580124,
+        "max_abs_local_component_difference_MPa": 0.04148275202195606,
+        "max_abs_global_component_difference_MPa": 0.029181772597858924,
+        "local_tensor_volume_L2_relative": 3.562955511986445e-05,
+        "global_tensor_volume_L2_relative": 3.562955511986449e-05
+      },
+      "7": {
+        "cells": 177107,
+        "volume_mm3": 4318.8042675639645,
+        "local_tensor_diff_squared_volume": 0.001103189340917954,
+        "local_tensor_q8_squared_volume": 4737294.370869282,
+        "global_tensor_diff_squared_volume": 0.0011031893409179131,
+        "global_tensor_q8_squared_volume": 4737294.370869282,
+        "max_abs_local_component_difference_MPa": 0.014722202140674767,
+        "max_abs_global_component_difference_MPa": 0.01120983580019086,
+        "local_tensor_volume_L2_relative": 1.5260186538251316e-05,
+        "global_tensor_volume_L2_relative": 1.5260186538251032e-05
+      },
+      "8": {
+        "cells": 177110,
+        "volume_mm3": 4318.808983593783,
+        "local_tensor_diff_squared_volume": 0.001159417186190358,
+        "local_tensor_q8_squared_volume": 4691833.05595919,
+        "global_tensor_diff_squared_volume": 0.0011594171861903384,
+        "global_tensor_q8_squared_volume": 4691833.05595919,
+        "max_abs_local_component_difference_MPa": 0.016404790422939186,
+        "max_abs_global_component_difference_MPa": 0.012580034119412886,
+        "local_tensor_volume_L2_relative": 1.5719857015895492e-05,
+        "global_tensor_volume_L2_relative": 1.5719857015895357e-05
+      },
+      "9": {
+        "cells": 106358,
+        "volume_mm3": 83609.95155687955,
+        "local_tensor_diff_squared_volume": 4.279537549729431e-05,
+        "local_tensor_q8_squared_volume": 3380423.553300813,
+        "global_tensor_diff_squared_volume": 4.279537549729431e-05,
+        "global_tensor_q8_squared_volume": 3380423.553300813,
+        "max_abs_local_component_difference_MPa": 0.023251979833348813,
+        "max_abs_global_component_difference_MPa": 0.023251979833348813,
+        "local_tensor_volume_L2_relative": 3.558056672030824e-06,
+        "global_tensor_volume_L2_relative": 3.558056672030824e-06
+      },
+      "10": {
+        "cells": 116303,
+        "volume_mm3": 80967.90621253502,
+        "local_tensor_diff_squared_volume": 4.2826149959628184e-05,
+        "local_tensor_q8_squared_volume": 3378486.618850261,
+        "global_tensor_diff_squared_volume": 4.2826149959628184e-05,
+        "global_tensor_q8_squared_volume": 3378486.618850261,
+        "max_abs_local_component_difference_MPa": 0.010327012901277577,
+        "max_abs_global_component_difference_MPa": 0.010327012901277577,
+        "local_tensor_volume_L2_relative": 3.5603559169143373e-06,
+        "global_tensor_volume_L2_relative": 3.5603559169143373e-06
+      },
+      "14": {
+        "cells": 54186,
+        "volume_mm3": 16164.298084897335,
+        "local_tensor_diff_squared_volume": 3.153854205167649e-06,
+        "local_tensor_q8_squared_volume": 57291.28060108956,
+        "global_tensor_diff_squared_volume": 3.153854205167649e-06,
+        "global_tensor_q8_squared_volume": 57291.28060108956,
+        "max_abs_local_component_difference_MPa": 0.019054439484404995,
+        "max_abs_global_component_difference_MPa": 0.019054439484404995,
+        "local_tensor_volume_L2_relative": 7.419532501267873e-06,
+        "global_tensor_volume_L2_relative": 7.419532501267873e-06
+      },
+      "18": {
+        "cells": 52782,
+        "volume_mm3": 14387.384172502132,
+        "local_tensor_diff_squared_volume": 7.3639950061912075e-06,
+        "local_tensor_q8_squared_volume": 34681.946467223795,
+        "global_tensor_diff_squared_volume": 7.3639950061912075e-06,
+        "global_tensor_q8_squared_volume": 34681.946467223795,
+        "max_abs_local_component_difference_MPa": 0.02237495447642246,
+        "max_abs_global_component_difference_MPa": 0.02237495447642246,
+        "local_tensor_volume_L2_relative": 1.4571525172404735e-05,
+        "global_tensor_volume_L2_relative": 1.4571525172404735e-05
+      }
+    },
+    "production_eligible": false,
+    "scope": "Actual native-node/14GP same-mesh integration-degree differences. q8 is a comparison reference, not known truth. No automatic production acceptance, mesh convergence, or point-peak stress accuracy claim. Tensor L2 includes factor2 for the three symmetric shear components; no averaging across materials.",
+    "seconds": 17.746005699998932,
+    "executed_contract_sha256": [
+      "f967841dea0b9a91eebb60097a512fd708769fc482b87460940c8474cdee4604",
+      "dbcde0ccf227ed6e9af88202e86cb020ea2c4e6e72cc4b9ddeabd94016d35979"
+    ],
+    "physical_input_identity_sha256": "5345555e55de595078a2b13fe0f2af4ee5ee6890bc5bd730620033a300ab9fbd",
+    "contract_identity_scope": "Per-run discretization degree and corrected legacy descriptive metadata may differ; each complete executed contract hash is bound to its summary, all physical inputs and actual native load/lock/geometry identities must match.",
+    "solver_identity": {
+      "solver_sha256": [
+        "412e0611865fb5e821683f3836b57be7940a079123f712ba16c6e88383b0eef6",
+        "c6ec8d3c92af624c13f32ed2d32a776a3dda489c95e2c71fdb48c04780335a57"
+      ],
+      "resource_amendment": "gpu_utilization_30_amendment_v1.json",
+      "scope": "Full executed sources match except the authorized GPU utilization guard 10% to 30%; numerical code is byte-identical."
+    }
   },
   "new_screened_mesh_geometry_IDs": [
     "copv_c04_0000",
@@ -170394,7 +170583,7 @@
     "copv_c04_0011",
     "copv_c04_0018"
   ],
-  "new_GPU_field_variants": 1,
+  "new_GPU_field_variants": 2,
   "new_unique_GPU_geometry_IDs": [
     "copv_c04_0000"
   ],
@@ -170403,13 +170592,13 @@
     {
       "case_id": "copv_c04_0000",
       "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56",
-      "status": "running",
-      "new_FE_labels": 1
+      "status": "completed_candidate_validation",
+      "new_FE_labels": 2
     },
     {
       "case_id": "copv_c04_0000",
       "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt085_two_cell_patch84",
-      "status": "waiting_resources",
+      "status": "running",
       "new_FE_labels": 0
     },
     {

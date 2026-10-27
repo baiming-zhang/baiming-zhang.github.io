@@ -1,0 +1,76 @@
+{
+  "status": "browser_checks_passed_pending_visual_inspection",
+  "assembly_degree": 8,
+  "degree_selector_roundtrip": true,
+  "software_renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+  "production_access_guard_unchanged": true,
+  "loopback_only_auth_removed_from_HTTP_response": true,
+  "errors": [],
+  "before": {
+    "basis": {
+      "r": [
+        0.8020957578842927,
+        0.5971954413623921,
+        0
+      ],
+      "u": [
+        -0.1991569711796944,
+        0.26748858191531544,
+        0.9427546655283462
+      ],
+      "d": [
+        0.563008788576655,
+        -0.7561795179459117,
+        0.3334870921408144
+      ]
+    },
+    "glError": 0,
+    "summary": "曲边研究验证 · 网格筛查通过 / 生产放行待敏感性验证 · 下端三点定位 / 内压与端力",
+    "panel": "下端三点数值定位A Ux / Uy / Uz = 0B Uy / Uz = 0C Uz = 0全局位移分量；消除 6 个刚体模态。墙面 / 铰链：无；结构界面理想粘结。|ΣR| ≈ 0.00000 N实际曲边孔口端力积分；反力用于数值定位核验。内压 1.00 MPa橙色：内壁与端口内肩，63,252 片。t = −p nsolid；外壁零表压。闭口端等效合力上端 +Z：326.851 N下端 −Z：213.825 N紫红色：实际环形端面。显示开关不改变工况。三维实体标记透视显示，可配合剖面查看；箭头长度示意，数值随状态更新。",
+    "error": ""
+  },
+  "after": {
+    "basis": {
+      "r": [
+        -0.14865070027136407,
+        0.9888897660047014,
+        0
+      ],
+      "u": [
+        -0.7621757896051278,
+        -0.11457087407469789,
+        0.63715114419858
+      ],
+      "d": [
+        0.6300722458961615,
+        0.09471296376381978,
+        0.7707388788989695
+      ]
+    },
+    "glError": 0,
+    "bcOn": "true",
+    "loadOn": "true"
+  },
+  "final": {
+    "glError": 0,
+    "error": ""
+  },
+  "screenshots": {
+    "01_field.png": {
+      "bytes": 103887,
+      "sha256": "32533e396fbfdf003a53a625ea29a69c281a2fb52aa54477fb0741d73c8c948c"
+    },
+    "02_BC_load.png": {
+      "bytes": 103153,
+      "sha256": "999e1d2ffb515789d229fe274af60001a21d63f400e18d153fa8c68b3234dead"
+    },
+    "03_rotated.png": {
+      "bytes": 122459,
+      "sha256": "bfffdfc2411a94f5792fcbaaec162e81e2e648f117cccc29bed4c0768783c21b"
+    },
+    "04_clipped_mesh.png": {
+      "bytes": 166815,
+      "sha256": "4252f12598825912e34cf37cc26385899e12990fc7b9e0d94f36516cba6bc92f"
+    }
+  }
+}
