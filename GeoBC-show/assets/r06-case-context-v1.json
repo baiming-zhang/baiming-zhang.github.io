@@ -1,0 +1,762 @@
+{
+  "schema": "r06_frozen_case_context_v1",
+  "author": "Codex",
+  "interface_manifest_sha256": "1f95b627248f44f382c4891728a0d30678edf52aa9d70d489ead4bed6e30828b",
+  "generator_sha256": "b454b543f73ea0a434876afb801b9f9a54144fb42a8f9bf5cef9dc98e8ef1385",
+  "cases": {
+    "normal_rodv2_0150__gas_inertia_30deg": {
+      "title": "30°燃气与惯性",
+      "settings": "3000 rpm · 30° · 缸内净压 4 MPa",
+      "scene": "上止点后30°，以给定燃气净压与转速构造连杆载荷快照。",
+      "cause": "燃气推力、活塞往复惯性和杆体惯性共同决定销孔合力与分布载荷。",
+      "response": "可能以轴向压缩为主并叠加弯曲，孔缘及截面过渡处可能出现应力集中。",
+      "scenario": "gas_inertia_30deg",
+      "original_scenario": {
+        "id": "gas_inertia_30deg",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 51.635685166952406,
+          "rod_center_distance_mm": 206.54274066780962,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "snapshot": {
+          "theta_deg": 30.0,
+          "net_pressure_MPa": 4.0,
+          "omega_rod_rad_s": -68.55517208472575,
+          "alpha_rod_rad_s2": 11842.41214688028,
+          "a_small_local_mm_s2": [
+            5031052.556585697,
+            633853.0427438794
+          ],
+          "axis_ex_global": [
+            -0.9921567416492215,
+            0.12499999999999999
+          ],
+          "axis_ey_global": [
+            -0.12499999999999999,
+            -0.9921567416492215
+          ],
+          "piston_on_rod_global_x_N": -17824.32202909671
+        }
+      },
+      "load_sha256": "2b345f11e63ec8f505632f2b4511f09423e9a88ca9d1042c8f82bf6848f0c472",
+      "metadata_sha256": "9a18ceb5bd5499af502bf78ca81ab6af3500f97cf299f2bf4facaa798919e238",
+      "geometry_sha256": "b30eaa438bae1d9d8a94fec6c9ea82322b6a533a97bcf59001d917446c279044",
+      "applied_pin_force_N": [
+        17949.04497595229,
+        128.44840032448354
+      ],
+      "body_force_N": [
+        -1860.1303747641095,
+        -1004.1685493171157,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0161__compression_skew": {
+      "title": "厚度偏载压缩",
+      "settings": "轴向力 6.1 kN · 厚度偏压 κ=-0.6",
+      "scene": "6.1 kN压缩叠加厚度方向偏压，用于表示接触不均或偏载的理想化情形。",
+      "cause": "厚度−z侧压力更大（κ=−0.6），轴向合力之外还引入偏心弯矩。",
+      "response": "可能出现出平面压弯及两侧应力不对称；本例没有惯性体载荷。",
+      "scenario": "compression_skew",
+      "original_scenario": {
+        "id": "compression_skew",
+        "width_skew": -0.6,
+        "engine": {
+          "crank_radius_mm": 45.25032396590068,
+          "rod_center_distance_mm": 181.0012958636027,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          6100.0,
+          0.0
+        ]
+      },
+      "load_sha256": "db979ce5252d4f10e7cf0335c5a292c5d7188dc32e5cafbf23498ea0f1c95ceb",
+      "metadata_sha256": "85216107277a5134c23b28c0b1adebc71370f553bd4a23ff0fc771665cb18e5e",
+      "geometry_sha256": "a49e70547761df921b4f2753e753705c076907a3aea18a10d37da341f5a04664",
+      "applied_pin_force_N": [
+        6100.0,
+        0.0
+      ],
+      "body_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0170__gas_inertia_30deg": {
+      "title": "30°燃气与惯性",
+      "settings": "3000 rpm · 30° · 缸内净压 4 MPa",
+      "scene": "上止点后30°，以给定燃气净压与转速构造连杆载荷快照。",
+      "cause": "燃气推力、活塞往复惯性和杆体惯性共同决定销孔合力与分布载荷。",
+      "response": "可能以轴向压缩为主并叠加弯曲，孔缘及截面过渡处可能出现应力集中。",
+      "scenario": "gas_inertia_30deg",
+      "original_scenario": {
+        "id": "gas_inertia_30deg",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 41.126127278057524,
+          "rod_center_distance_mm": 164.5045091122301,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "snapshot": {
+          "theta_deg": 30.0,
+          "net_pressure_MPa": 4.0,
+          "omega_rod_rad_s": -68.55517208472575,
+          "alpha_rod_rad_s2": 11842.41214688028,
+          "a_small_local_mm_s2": [
+            4007068.1180224577,
+            504843.1298468113
+          ],
+          "axis_ex_global": [
+            -0.9921567416492215,
+            0.12499999999999999
+          ],
+          "axis_ey_global": [
+            -0.12499999999999999,
+            -0.9921567416492215
+          ],
+          "piston_on_rod_global_x_N": -18288.757715526157
+        }
+      },
+      "load_sha256": "682f7ba9315587c058203aa8ec9c72719174179a1c24a09a5d4ec8a798541b3b",
+      "metadata_sha256": "9266189179f1b25d64a2d91da6bcc8b671f519043d4bd84a14775a18b30eb825",
+      "geometry_sha256": "8346e684251519286d8e502b4b1c1241be06fbd73618b1c24e204041cc1bdfba",
+      "applied_pin_force_N": [
+        18424.403003267566,
+        70.89651977663847
+      ],
+      "body_force_N": [
+        -1675.8430107793863,
+        -915.6990475578186,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "extreme_rodv2_0130__combined_bending": {
+      "title": "复合弯曲",
+      "settings": "4500 rpm · 60° · 缸内净压 2.5 MPa",
+      "scene": "4500 rpm、60°、净压2.5 MPa，另加厚度偏压κ=+0.3。",
+      "cause": "横向惯性产生面内弯曲，厚度偏压再引入出平面弯矩。",
+      "response": "可能出现不同方向的弯曲叠加、侧向位移及两侧应力不对称。",
+      "scenario": "combined_bending",
+      "original_scenario": {
+        "id": "combined_bending",
+        "theta_deg": 60,
+        "net_pressure_MPa": 2.5,
+        "rpm": 4500,
+        "width_skew": 0.3
+      },
+      "load_sha256": "61daf070265cf07ec3ceeea533088236888d96c5aa1dbeca4f2c27350267a0ee",
+      "metadata_sha256": "8a61122fda4dccba8d09a928d3a5420c3746c76942878a532f6f18b2e9248cea",
+      "geometry_sha256": "382ebd3a52e233efd9a0d8cef483cbf89c5e66c1dafff31e4a61229e27d7649f",
+      "applied_pin_force_N": [
+        11048.460592433114,
+        213.39242987694217
+      ],
+      "body_force_N": [
+        -1212.9733991058397,
+        -1917.6132353122898,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "extreme_rodv2_0060__overspeed": {
+      "title": "超速惯性拉伸",
+      "settings": "9000 rpm · 360° · 缸内净压 0 MPa",
+      "scene": "9000 rpm、上止点360°、缸内净压为零的高转速快照。",
+      "cause": "固定机构与相位下，惯性项随转速平方增大；净压为零时销孔仍传递惯性拉载。",
+      "response": "可能出现较大拉伸响应和局部应力集中；这里展示单个静态等效快照。",
+      "scenario": "overspeed",
+      "original_scenario": {
+        "id": "overspeed",
+        "theta_deg": 360,
+        "net_pressure_MPa": 0,
+        "rpm": 9000,
+        "width_skew": 0
+      },
+      "load_sha256": "ca9ab3bd55661d9bab6ee9d8facdd5f558d6e66335d647d59f7f009ad2f91bdf",
+      "metadata_sha256": "a80e74a4cca4856e71971f2df0bd9ef273a445fb48004cbd050af351df2addd8",
+      "geometry_sha256": "c0d4128128e78fc36ff15e33761d64a07add168d6a63a1a354677aa9952a7b07",
+      "applied_pin_force_N": [
+        -20603.23181766815,
+        0.0013562938842249204
+      ],
+      "body_force_N": [
+        -15478.366629504866,
+        0.00039143632714774476,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "extreme_rodv2_0155__rated_firing_compression": {
+      "title": "点火压缩",
+      "settings": "3000 rpm · 30° · 缸内净压 4 MPa",
+      "scene": "给定转速、30°相位和燃气净压的点火后压缩快照。",
+      "cause": "燃气推力与活塞惯性形成小头压载，连杆自身惯性同时分布在杆体上。",
+      "response": "可能产生压缩与弯曲耦合；局部响应还受孔径、杆身截面及约束影响。",
+      "scenario": "rated_firing_compression",
+      "original_scenario": {
+        "id": "rated_firing_compression",
+        "theta_deg": 30,
+        "net_pressure_MPa": 4,
+        "rpm": 3000,
+        "width_skew": 0
+      },
+      "load_sha256": "e588e12b05637ad9d7fb894bda89e73070142a9eb157a0f00be4bd692cca0477",
+      "metadata_sha256": "211cd4ed5c708dc8f07cbb9f3a223fa7b01940e1c220a1f208ea72c5484091be",
+      "geometry_sha256": "7aece1efda0c2701ff2a70a60632fd6935dc2866b402a0e8e08c2eb9e4e0f32f",
+      "applied_pin_force_N": [
+        18473.71994960353,
+        52.586059601988
+      ],
+      "body_force_N": [
+        -1191.1649202439687,
+        -683.5502501835163,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0081__tension": {
+      "title": "轴向拉伸基准",
+      "settings": "轴向力 6.1 kN · 厚度偏压 κ=+0",
+      "scene": "6.1 kN轴向拉伸的理想化对照；本例没有惯性体载荷。",
+      "cause": "销孔承压传入轴向拉力，载荷经杆身传向大头约束。",
+      "response": "可出现轴向伸长；孔缘、截面削弱处及过渡区可能产生较高应力。",
+      "scenario": "tension",
+      "original_scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 52.67224655812151,
+          "rod_center_distance_mm": 210.68898623248603,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      },
+      "load_sha256": "eb4deeb48b53f33a4d028873126c963bd3734ce432c724c2200721a216d61189",
+      "metadata_sha256": "f08800d5059e92559bdf4c69d9f276718ed841fab6ea746e064331e91fca37b7",
+      "geometry_sha256": "5f45b56177491689dbcb808560ebdb5735fe4c1f0f4bcb1db502f56b5314bbf6",
+      "applied_pin_force_N": [
+        -6100.0,
+        0.0
+      ],
+      "body_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "extreme_rodv2_0142__overspeed": {
+      "title": "超速惯性拉伸",
+      "settings": "9000 rpm · 360° · 缸内净压 0 MPa",
+      "scene": "9000 rpm、上止点360°、缸内净压为零的高转速快照。",
+      "cause": "固定机构与相位下，惯性项随转速平方增大；净压为零时销孔仍传递惯性拉载。",
+      "response": "可能出现较大拉伸响应和局部应力集中；这里展示单个静态等效快照。",
+      "scenario": "overspeed",
+      "original_scenario": {
+        "id": "overspeed",
+        "theta_deg": 360,
+        "net_pressure_MPa": 0,
+        "rpm": 9000,
+        "width_skew": 0
+      },
+      "load_sha256": "27f1a3ac5976de6c3d18493a922bff1b3d526c65e3b049df1af14ccf96ab4813",
+      "metadata_sha256": "79e46e93ca486de57265592b8003eab5d355de5af0acd26a1947b23b55a96982",
+      "geometry_sha256": "78afa2037734f460123eac3e7437736a30293b6ce763e23e28ead9c7acc5eb42",
+      "applied_pin_force_N": [
+        -19031.668252013125,
+        -0.0008365875829139769
+      ],
+      "body_force_N": [
+        -19012.32654685464,
+        -0.0001592156025045375,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "extreme_rodv2_0041__combined_bending": {
+      "title": "复合弯曲",
+      "settings": "4500 rpm · 60° · 缸内净压 2.5 MPa",
+      "scene": "4500 rpm、60°、净压2.5 MPa，另加厚度偏压κ=+0.3。",
+      "cause": "横向惯性产生面内弯曲，厚度偏压再引入出平面弯矩。",
+      "response": "可能出现不同方向的弯曲叠加、侧向位移及两侧应力不对称。",
+      "scenario": "combined_bending",
+      "original_scenario": {
+        "id": "combined_bending",
+        "theta_deg": 60,
+        "net_pressure_MPa": 2.5,
+        "rpm": 4500,
+        "width_skew": 0.3
+      },
+      "load_sha256": "5fa1592145a7f7af15223e48982080d8d8d658ab794b3a6ffc81d265907368c8",
+      "metadata_sha256": "b24fccf5fc07960a619698c264ef85cc5f351d206804c23ec0f9f19dfb9954c7",
+      "geometry_sha256": "b4b7f20fbb356f5b99f51502bfdb138093002fa8e45426dd5245defa2de160eb",
+      "applied_pin_force_N": [
+        11074.673092948562,
+        135.93511201498995
+      ],
+      "body_force_N": [
+        -1898.7612848879414,
+        -3989.445783112326,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "extreme_supp2_rodv2_0053__inertial_tension_350deg_8000rpm": {
+      "title": "近上止点高速拉伸",
+      "settings": "8000 rpm · 350° · 缸内净压 0 MPa",
+      "scene": "8000 rpm、上止点前10°（350°）、缸内净压为零的快照。",
+      "cause": "往复及摆动惯性形成拉伸与横向分量，经销孔压力和杆体分布载荷共同作用。",
+      "response": "可能出现拉伸—弯曲耦合；偏离上止点的横向惯性可使响应不再轴对称。",
+      "scenario": "inertial_tension_350deg_8000rpm",
+      "original_scenario": {
+        "id": "inertial_tension_350deg_8000rpm",
+        "theta_deg": 350.0,
+        "net_pressure_MPa": 0.0,
+        "rpm": 8000.0,
+        "width_skew": 0.0,
+        "label": "New high-speed angled inertial tension snapshot"
+      },
+      "load_sha256": "5afaa9babeacff491da573b2a3f7db2ac8becc416e956c689199b3c377adcbe9",
+      "metadata_sha256": "655f2d2645117a1542ccb3c10eef717a9a554c13cd4de358f8d730d1d48450c8",
+      "geometry_sha256": "b19f836c9c1879fecc74c2fd4905398e92996e539fedf6f95c9bfbf61bb21df2",
+      "applied_pin_force_N": [
+        -14693.135083947114,
+        -218.18974858777662
+      ],
+      "body_force_N": [
+        -14954.880531036319,
+        2129.098850031726,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0117__compression_skew": {
+      "title": "厚度偏载压缩",
+      "settings": "轴向力 6.1 kN · 厚度偏压 κ=-0.6",
+      "scene": "6.1 kN压缩叠加厚度方向偏压，用于表示接触不均或偏载的理想化情形。",
+      "cause": "厚度−z侧压力更大（κ=−0.6），轴向合力之外还引入偏心弯矩。",
+      "response": "可能出现出平面压弯及两侧应力不对称；本例没有惯性体载荷。",
+      "scenario": "compression_skew",
+      "original_scenario": {
+        "id": "compression_skew",
+        "width_skew": -0.6,
+        "engine": {
+          "crank_radius_mm": 51.926476326059166,
+          "rod_center_distance_mm": 207.70590530423667,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          6100.0,
+          0.0
+        ]
+      },
+      "load_sha256": "3c9c24bcb9e74833a3d564e6e51b55a3c7cc524b909803bd33541e52c0a0e845",
+      "metadata_sha256": "cbfc2633acea40baf2309462dd505b2bb9e72775dcc9947fdb47056220ea2264",
+      "geometry_sha256": "57c1bdc5d4f204dac6d91566e8a2ee5a79b6562c887ddc21a24742c74955dd24",
+      "applied_pin_force_N": [
+        6100.0,
+        0.0
+      ],
+      "body_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "extreme_rodv2_0061__overpressure": {
+      "title": "超压组合快照",
+      "settings": "4500 rpm · 15° · 缸内净压 6 MPa",
+      "scene": "4500 rpm、15°、缸内净压6 MPa的较高压力快照。",
+      "cause": "较高燃气净推力与该相位下的往复、杆体惯性共同形成压载。",
+      "response": "可能出现较高销孔承压和压弯响应；与其他工况的差异不能只归因于压力。",
+      "scenario": "overpressure",
+      "original_scenario": {
+        "id": "overpressure",
+        "theta_deg": 15,
+        "net_pressure_MPa": 6,
+        "rpm": 4500,
+        "width_skew": 0
+      },
+      "load_sha256": "09273889058d2c4a029d1e18f1707993918c604afcd931f45216513353ed0c9a",
+      "metadata_sha256": "904de7a5602ce30f7bf7368232f872ed4ea4683483332e7a3f004da4b2391f6c",
+      "geometry_sha256": "a583699832c612197679591e2302a487652e0266f6b837afa46b2c6a404fb795",
+      "applied_pin_force_N": [
+        25678.712412033234,
+        103.22234820295905
+      ],
+      "body_force_N": [
+        -3224.0597005747973,
+        -658.9428968716692,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0059__inertia_tdc": {
+      "title": "上止点惯性拉伸",
+      "settings": "3000 rpm · 360° · 缸内净压 0 MPa",
+      "scene": "上止点360°、缸内净压为零的惯性载荷快照。",
+      "cause": "往复加速度产生拉载，经销孔承压传递；缸内净压为零不等于销孔压力为零。",
+      "response": "可能以惯性拉伸为主，孔缘与过渡区应力受几何及杆体分布惯性共同影响。",
+      "scenario": "inertia_tdc",
+      "original_scenario": {
+        "id": "inertia_tdc",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 46.28206408358855,
+          "rod_center_distance_mm": 185.1282563343542,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "snapshot": {
+          "theta_deg": 360.0,
+          "net_pressure_MPa": 0.0,
+          "omega_rod_rad_s": -78.53981633974483,
+          "alpha_rod_rad_s2": -5.665677861864709e-12,
+          "a_small_local_mm_s2": [
+            5709820.792136067,
+            -3.496256878397219e-10
+          ],
+          "axis_ex_global": [
+            -1.0,
+            -6.123233995736766e-17
+          ],
+          "axis_ey_global": [
+            6.123233995736766e-17,
+            -1.0
+          ],
+          "piston_on_rod_global_x_N": 2569.41935646123
+        }
+      },
+      "load_sha256": "455f7089a1696a8d76d84a61a7d952948e74a6f1c076b7825acbd8498e160c79",
+      "metadata_sha256": "0a75ce5f72a958802fd6cf356ef7a3fe27d3587e603b83a8f3a3423a64d4b57f",
+      "geometry_sha256": "5728da59938c823d6fe08aafaebdb93849261eb82249e51d4276f8a857d230bb",
+      "applied_pin_force_N": [
+        -2569.41935646123,
+        -1.9792336629767162e-05
+      ],
+      "body_force_N": [
+        -2518.4910560548246,
+        -4.948083587071093e-06,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0112__compression": {
+      "title": "轴向压缩基准",
+      "settings": "轴向力 6.1 kN · 厚度偏压 κ=+0",
+      "scene": "6.1 kN轴向压缩的理想化对照；本例没有惯性体载荷。",
+      "cause": "轴向压载通过小头销孔承压传入，由杆身传向大头约束。",
+      "response": "可出现轴向缩短；细长杆也可能产生压弯，孔缘和过渡区可能应力集中。",
+      "scenario": "compression",
+      "original_scenario": {
+        "id": "compression",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 37.567074679234395,
+          "rod_center_distance_mm": 150.26829871693758,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          6100.0,
+          0.0
+        ]
+      },
+      "load_sha256": "f43ec91d839bf55581a67f114320b8b077f396a07c2059ae7a9af1b6500ea211",
+      "metadata_sha256": "3dcb91593624dd173a5af112e87d404aea00bacff5b4d825db7f9a78552c79f4",
+      "geometry_sha256": "d9c77820c79bebb57c33d22d649c35998c685f61392ea24bca0bb3a2eb836bf3",
+      "applied_pin_force_N": [
+        6100.0,
+        0.0
+      ],
+      "body_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0033__tension_skew": {
+      "title": "厚度偏载拉伸",
+      "settings": "轴向力 6.1 kN · 厚度偏压 κ=+0.6",
+      "scene": "6.1 kN拉伸叠加厚度方向偏压，用于表示接触不均或偏载的理想化情形。",
+      "cause": "厚度+z侧压力更大（κ=+0.6），轴向拉力之外还引入偏心弯矩。",
+      "response": "可能出现拉伸与出平面弯曲耦合，两侧应力和位移可不对称。",
+      "scenario": "tension_skew",
+      "original_scenario": {
+        "id": "tension_skew",
+        "width_skew": 0.6,
+        "engine": {
+          "crank_radius_mm": 53.21077243882033,
+          "rod_center_distance_mm": 212.8430897552813,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      },
+      "load_sha256": "0674931cfec1219863097df9aa7c366e06034da9904358aecd87ee26ec000ced",
+      "metadata_sha256": "a871421377bddff2dde6f36198f8709e6cde210b3d1aeddedd2df6c555f970e4",
+      "geometry_sha256": "91182fe3e42317e7123b18d6202d755f7ce34289b16c237b4cc6bb490b9b6bfe",
+      "applied_pin_force_N": [
+        -6100.0,
+        0.0
+      ],
+      "body_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0067__inertia_tdc": {
+      "title": "上止点惯性拉伸",
+      "settings": "3000 rpm · 360° · 缸内净压 0 MPa",
+      "scene": "上止点360°、缸内净压为零的惯性载荷快照。",
+      "cause": "往复加速度产生拉载，经销孔承压传递；缸内净压为零不等于销孔压力为零。",
+      "response": "可能以惯性拉伸为主，孔缘与过渡区应力受几何及杆体分布惯性共同影响。",
+      "scenario": "inertia_tdc",
+      "original_scenario": {
+        "id": "inertia_tdc",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 30.076542131924207,
+          "rod_center_distance_mm": 120.30616852769683,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "snapshot": {
+          "theta_deg": 360.0,
+          "net_pressure_MPa": 0.0,
+          "omega_rod_rad_s": -78.53981633974483,
+          "alpha_rod_rad_s2": -5.665677861864709e-12,
+          "a_small_local_mm_s2": [
+            3710544.6574348584,
+            -2.2720533189104558e-10
+          ],
+          "axis_ex_global": [
+            -1.0,
+            -6.123233995736766e-17
+          ],
+          "axis_ey_global": [
+            6.123233995736766e-17,
+            -1.0
+          ],
+          "piston_on_rod_global_x_N": 1669.7450958456864
+        }
+      },
+      "load_sha256": "c025b6f4abae4a8ac549eda5b649c74b16d8d354a1a2b73c17f4ff072162e915",
+      "metadata_sha256": "d09139d0ca35ca44890d228291230abc2d89493b1327cab0d989374f16e34d29",
+      "geometry_sha256": "9ce32b6da6b00aa76258d6497ca16fc4dc1e81f55a43fae6c838e8568df89e7b",
+      "applied_pin_force_N": [
+        -1669.7450958456864,
+        -2.580956698121058e-05
+      ],
+      "body_force_N": [
+        -992.238822964377,
+        -6.452391505073908e-06,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0063__tension_skew": {
+      "title": "厚度偏载拉伸",
+      "settings": "轴向力 6.1 kN · 厚度偏压 κ=+0.6",
+      "scene": "6.1 kN拉伸叠加厚度方向偏压，用于表示接触不均或偏载的理想化情形。",
+      "cause": "厚度+z侧压力更大（κ=+0.6），轴向拉力之外还引入偏心弯矩。",
+      "response": "可能出现拉伸与出平面弯曲耦合，两侧应力和位移可不对称。",
+      "scenario": "tension_skew",
+      "original_scenario": {
+        "id": "tension_skew",
+        "width_skew": 0.6,
+        "engine": {
+          "crank_radius_mm": 39.65004289568863,
+          "rod_center_distance_mm": 158.6001715827545,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      },
+      "load_sha256": "32c4ae7a1b19d18ca552d746d1a56852105ccb0a74ca6a8dc9e290c84e490a5b",
+      "metadata_sha256": "d37f0669156d13fc5f812eee0881fa0a22c0a30ecef2f61843e43f90ba3003c9",
+      "geometry_sha256": "4f30027750d769139b5fb77b7fe7c5a5142d6a5ef2486dafa5c7585420bd8c53",
+      "applied_pin_force_N": [
+        -6100.0,
+        0.0
+      ],
+      "body_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0075__tension": {
+      "title": "轴向拉伸基准",
+      "settings": "轴向力 6.1 kN · 厚度偏压 κ=+0",
+      "scene": "6.1 kN轴向拉伸的理想化对照；本例没有惯性体载荷。",
+      "cause": "销孔承压传入轴向拉力，载荷经杆身传向大头约束。",
+      "response": "可出现轴向伸长；孔缘、截面削弱处及过渡区可能产生较高应力。",
+      "scenario": "tension",
+      "original_scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 46.70866837144449,
+          "rod_center_distance_mm": 186.83467348577796,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      },
+      "load_sha256": "9a02ab31e53c030a189ad063cb49daf8043871eadd4872eedebc9d075acc4284",
+      "metadata_sha256": "12472f9694caf3528cce2be59f540e420127c5b53d70a1a93acf3cb56a1c5c6e",
+      "geometry_sha256": "dd4a5131ee16d1209e8cf08b6a0988c223d9d8d94ca458056d8244b5b963f4c7",
+      "applied_pin_force_N": [
+        -6100.0,
+        0.0
+      ],
+      "body_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0129__compression_skew": {
+      "title": "厚度偏载压缩",
+      "settings": "轴向力 6.1 kN · 厚度偏压 κ=-0.6",
+      "scene": "6.1 kN压缩叠加厚度方向偏压，用于表示接触不均或偏载的理想化情形。",
+      "cause": "厚度−z侧压力更大（κ=−0.6），轴向合力之外还引入偏心弯矩。",
+      "response": "可能出现出平面压弯及两侧应力不对称；本例没有惯性体载荷。",
+      "scenario": "compression_skew",
+      "original_scenario": {
+        "id": "compression_skew",
+        "width_skew": -0.6,
+        "engine": {
+          "crank_radius_mm": 31.40103111996089,
+          "rod_center_distance_mm": 125.60412447984356,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          6100.0,
+          0.0
+        ]
+      },
+      "load_sha256": "1f15e9cf07037f050b41901fa49376b6aca00b9b3a386833a1866dd3b276a07f",
+      "metadata_sha256": "e92e5bde0a8f62c450bc084519fef3335f7dae5cda7f7c3cae70affb0884eddd",
+      "geometry_sha256": "6c094a943cb9c12c6a3869e7e577b54152995f46b999df27feddb00b2e71f53f",
+      "applied_pin_force_N": [
+        6100.0,
+        0.0
+      ],
+      "body_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    },
+    "normal_rodv2_0043__inertia_tdc": {
+      "title": "上止点惯性拉伸",
+      "settings": "3000 rpm · 360° · 缸内净压 0 MPa",
+      "scene": "上止点360°、缸内净压为零的惯性载荷快照。",
+      "cause": "往复加速度产生拉载，经销孔承压传递；缸内净压为零不等于销孔压力为零。",
+      "response": "可能以惯性拉伸为主，孔缘与过渡区应力受几何及杆体分布惯性共同影响。",
+      "scenario": "inertia_tdc",
+      "original_scenario": {
+        "id": "inertia_tdc",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 38.14357952483129,
+          "rod_center_distance_mm": 152.57431809932515,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "snapshot": {
+          "theta_deg": 360.0,
+          "net_pressure_MPa": 0.0,
+          "omega_rod_rad_s": -78.53981633974483,
+          "alpha_rod_rad_s2": -5.665677861864709e-12,
+          "a_small_local_mm_s2": [
+            4705775.50439471,
+            -2.8814564544815014e-10
+          ],
+          "axis_ex_global": [
+            -1.0,
+            -6.123233995736766e-17
+          ],
+          "axis_ey_global": [
+            6.123233995736766e-17,
+            -1.0
+          ],
+          "piston_on_rod_global_x_N": 2117.5989769776197
+        }
+      },
+      "load_sha256": "5235aaf56f444a462fa728ef5e407f24dca6f76b81b23c9964df18de8fdbfa47",
+      "metadata_sha256": "ca7fbecbda5a0839fb30fed7fdb6421d523f0d06d5e06ebb48b7d8e38b90c63f",
+      "geometry_sha256": "4276e27e3e4b9b5be0793650a3e0d8f18df6f6f31a29513fb8e6588f9817398c",
+      "applied_pin_force_N": [
+        -2117.5989769776197,
+        -0.00018671124609503708
+      ],
+      "body_force_N": [
+        -1751.7821511449133,
+        -4.667781111056239e-05,
+        0.0
+      ],
+      "evidence_scope": "物理场景是冻结载荷的理想化解释；可能响应是机理预期，不是失稳、损伤、疲劳或实验符合性判定。"
+    }
+  },
+  "scope": "Case annotations only. No FE/NN source, fields, labels, training or acceptance criteria changed."
+}
