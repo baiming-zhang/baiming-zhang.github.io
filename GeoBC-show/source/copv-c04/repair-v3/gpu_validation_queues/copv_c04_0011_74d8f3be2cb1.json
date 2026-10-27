@@ -2,11 +2,27 @@
   "schema": "c04_curved_GPU_validation_queue_v1",
   "case_id": "copv_c04_0011",
   "candidate": "data/copv/c04_repair_v3/copv_c04_0011/attempt063_two_cell_patch62",
-  "status": "waiting_resources",
+  "status": "running",
   "production_eligible": false,
   "new_FE_labels": 0,
-  "runs": [],
+  "runs": [
+    {
+      "degree": 6,
+      "status": "running",
+      "output": "data\\copv\\c04_repair_v3\\copv_c04_0011\\attempt063_two_cell_patch62\\GPU_q6_attempt001",
+      "started": "2026-10-27T13:26:09.253402+08:00",
+      "case_id": "copv_c04_0011",
+      "physical_input_identity_sha256": "9cb77a8173629c64155c03c748e68bcc1f7b7b0ab237aabeb8c79f0898bdaa93"
+    }
+  ],
   "created": "2026-10-27T09:28:46.528786+08:00",
   "contract_schema": "c04_curved_P2_validation_contract_v2",
-  "priority_after": "Primary0000 q6/q8 validation must complete first; CLI enforces this and a single C04 GPU lane"
+  "priority_after": "Primary0000 q6/q8 validation must complete first; CLI enforces this and a single C04 GPU lane",
+  "GPU_free_MiB": 31053,
+  "GPU_utilization_percent": 1,
+  "updated": "2026-10-27T13:26:09.020786+08:00",
+  "host_available_bytes": 32327700480,
+  "host_before_domain_required_bytes": 26197147648,
+  "pid": 30448,
+  "started": "2026-10-27T13:26:09.252402+08:00"
 }
