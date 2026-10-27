@@ -1,0 +1,144 @@
+{
+  "updated_unix": 1793138876.4959629,
+  "cases": 20,
+  "epochs_each": 2000,
+  "rows": [
+    {
+      "variant": "S001",
+      "model": "TS3",
+      "layers": 16,
+      "width": 256,
+      "heads": 8,
+      "slices": 1,
+      "parameters": 7593108,
+      "role": "slice_count_ablation",
+      "phase": "queued"
+    },
+    {
+      "variant": "S002",
+      "model": "TS3",
+      "layers": 16,
+      "width": 256,
+      "heads": 8,
+      "slices": 2,
+      "parameters": 7593636,
+      "role": "slice_count_ablation",
+      "phase": "queued"
+    },
+    {
+      "variant": "S004",
+      "model": "TS3",
+      "layers": 16,
+      "width": 256,
+      "heads": 8,
+      "slices": 4,
+      "parameters": 7594692,
+      "role": "slice_count_ablation",
+      "phase": "queued"
+    },
+    {
+      "variant": "S008",
+      "model": "TS3",
+      "layers": 16,
+      "width": 256,
+      "heads": 8,
+      "slices": 8,
+      "parameters": 7596804,
+      "role": "slice_count_ablation",
+      "phase": "queued"
+    },
+    {
+      "variant": "S016",
+      "model": "TS3",
+      "layers": 16,
+      "width": 256,
+      "heads": 8,
+      "slices": 16,
+      "parameters": 7601028,
+      "role": "slice_count_ablation",
+      "phase": "queued"
+    },
+    {
+      "variant": "S032",
+      "model": "TS3",
+      "layers": 16,
+      "width": 256,
+      "heads": 8,
+      "slices": 32,
+      "parameters": 7609476,
+      "role": "slice_count_ablation",
+      "phase": "queued"
+    },
+    {
+      "variant": "S064",
+      "model": "TS3",
+      "layers": 16,
+      "width": 256,
+      "heads": 8,
+      "slices": 64,
+      "parameters": 7626372,
+      "role": "reused_64_baseline",
+      "phase": "completed_reused",
+      "mean_U_L2_percent": 14.875156625607161,
+      "worst_U_L2_percent": 51.994215887763104,
+      "mean_node_VM_L2_percent": 20.88300502849246,
+      "worst_node_VM_L2_percent": 35.95954078414134,
+      "elapsed_seconds": 7205.401588201523
+    },
+    {
+      "variant": "H064",
+      "model": "TS3",
+      "layers": 8,
+      "width": 256,
+      "heads": 8,
+      "slices": 64,
+      "parameters": 3894340,
+      "role": "half_parameter_comparison",
+      "phase": "waiting_for_exclusive_GPU",
+      "training_status": null
+    },
+    {
+      "model": "MGN",
+      "width": 256,
+      "parameters": 9298436,
+      "role": "existing_20_case_baseline_not_retrained",
+      "phase": "completed_reused",
+      "mean_U_L2_percent": 2.1165523057834945,
+      "worst_U_L2_percent": 4.08942404721866,
+      "mean_node_VM_L2_percent": 11.238286817850183,
+      "worst_node_VM_L2_percent": 15.89784101523684,
+      "elapsed_seconds": 10857.828392505646
+    }
+  ],
+  "half_parameter_ratio": 0.5106412328168624,
+  "queue": {
+    "phase": "waiting_for_exclusive_GPU",
+    "supervisor_pid": 3636,
+    "updated_unix": 1793138851.8953242,
+    "variant": "H064",
+    "slice_count": 64,
+    "resources": {
+      "utilization_percent": 99,
+      "memory_used_MiB": 3904,
+      "memory_total_MiB": 32607,
+      "reserved_existing_workflows": [
+        {
+          "pid": 35148,
+          "created_native_FILETIME": "134375558937455286",
+          "label": "existing_GPU_workflow"
+        }
+      ],
+      "other_compute_clients": [
+        {
+          "platform": "windows",
+          "pid": 8028,
+          "name": "c:\\users\\asus\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+        }
+      ],
+      "updated_unix": 1793138851.8953242
+    },
+    "consecutive_idle_observations": 0
+  },
+  "error_threshold": null,
+  "note": "Nominal trainable parameters; one-slice softmax is identically1. Original64 baseline reused; no new training result is invented."
+}
