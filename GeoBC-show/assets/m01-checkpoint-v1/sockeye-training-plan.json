@@ -1,0 +1,65 @@
+{
+  "protocol": "m01_sockeye_full_v1",
+  "phase": "prepared_not_submitted",
+  "slurm_job_ids": [],
+  "splits": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "geometry_splits": {
+    "train": 120,
+    "validation": 15,
+    "test": 15
+  },
+  "models": {
+    "ts3": {
+      "parameters": 11882756,
+      "architecture": {
+        "n_layers": 16,
+        "n_hidden": 320,
+        "n_head": 8,
+        "slice_num": 64,
+        "mlp_ratio": 2,
+        "dropout": 0.0
+      }
+    },
+    "mgn": {
+      "parameters": 11760196,
+      "architecture": {
+        "latent_size": 288,
+        "message_passing_steps": 15,
+        "hidden_layers": 2,
+        "chunk_size": 32768,
+        "checkpoint_blocks": true,
+        "output_channels": 4
+      }
+    },
+    "fno": {
+      "parameters": 10869982,
+      "architecture": {
+        "input_channels": 56,
+        "output_channels": 4,
+        "resolution": 64,
+        "width": 14,
+        "modes": 12,
+        "layers": 4,
+        "latent_channels": 16,
+        "head_width": 128,
+        "checkpoint_blocks": true,
+        "query_chunk_size": 32768,
+        "splat_mode": "trilinear_mean"
+      }
+    }
+  },
+  "epochs": 200,
+  "gradient_accumulation_cases": 8,
+  "native_nodes": true,
+  "node_sampling": false,
+  "error_threshold": null,
+  "early_stopping": false,
+  "checkpoint_selection": "minimum validation mean equal-case joint relative squared L2",
+  "test_policy": "once, only after fixed training budget and frozen validation-selected checkpoint",
+  "target": "Uxyz + reference-volume-weighted nodal projection of element four-GP maximum VM",
+  "hardware": "UBC Sockeye V100; actual native GPU probe required before production"
+}
