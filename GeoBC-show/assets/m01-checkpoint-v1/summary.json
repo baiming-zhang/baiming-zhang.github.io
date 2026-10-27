@@ -1,0 +1,543 @@
+{
+  "schema": "m01_checkpoint_v1",
+  "dataset": {
+    "samples": 1000,
+    "unique_geometries": 150,
+    "sources": {
+      "original": 985,
+      "new": 15
+    },
+    "groups": {
+      "normal": 900,
+      "extreme": 100
+    },
+    "splits": {
+      "train": 800,
+      "validation": 100,
+      "test": 100
+    },
+    "geometries_per_split": {
+      "train": 120,
+      "validation": 15,
+      "test": 15
+    },
+    "split_geometry_overlap": 0,
+    "scenarios": {
+      "tension": 150,
+      "compression": 149,
+      "tension_skew": 150,
+      "compression_skew": 144,
+      "gas_inertia_30deg": 149,
+      "inertia_tdc": 150,
+      "rated_firing_compression": 20,
+      "rated_inertial_tension": 20,
+      "combined_bending": 13,
+      "overpressure": 20,
+      "overspeed": 20,
+      "tension_new_bias_m025": 7,
+      "tension_new_bias_p025": 1,
+      "inertial_tension_350deg_8000rpm": 7
+    },
+    "backends": {
+      "cuda": 468,
+      "cpu": 532
+    },
+    "full_J2": 27,
+    "nonzero_PEEQ": 27,
+    "bounded_tail": 5,
+    "max_U_mm": {
+      "min": 0.014792442115043231,
+      "p50": 0.13644929182441434,
+      "p95": 2.552727296135557,
+      "max": 17.375085911298054
+    },
+    "raw_GP_VM_MPa": {
+      "min": 24.76105371757322,
+      "p50": 171.32518672369696,
+      "p95": 556.854456859295,
+      "max": 958.2434000000002
+    },
+    "max_relative_residual": 1.9999357494403836e-07,
+    "min_J": 0.9860448952873665,
+    "data_pipeline_wall_seconds": 66287.84855723381,
+    "training_seconds": 23322.65522313118
+  },
+  "acceptance": {
+    "effective_samples": 1000,
+    "retained_original": 985,
+    "new_user_authorized_conditions": 15,
+    "original_1000_all_converged": false,
+    "unique_IDs": 1000,
+    "all_ten_original_targets_accepted": true,
+    "final_load_factor": 1,
+    "max_relative_residual": 1.9999357494403836e-07,
+    "minimum_J": 0.9860448952873665,
+    "all_identity_finite_material_equilibrium_gates_passed": true,
+    "stability_certified_for_all": false,
+    "experimental_validation": false,
+    "scope": "Valid numerical FE data under the stated material/discretization/equilibrium contract. Fifteen original unresolved IDs remain excluded and preserved; no stability or physical uniqueness claim."
+  },
+  "experiments": [
+    {
+      "method": "ts3",
+      "count": 1,
+      "parameters": 7626372,
+      "epochs": 2000,
+      "updates_per_case": 2000,
+      "native_case_updates": 2000,
+      "best_checkpoint_epoch": 1950,
+      "elapsed_seconds": 345.7484543323517,
+      "mean_U_L2_percent": 0.8511555264370703,
+      "worst_U_L2_percent": 0.8511555264370703,
+      "mean_VM_L2_percent": 4.4895944513815556,
+      "worst_VM_L2_percent": 4.4895944513815556,
+      "prediction_image": "ts3_1_fields.png",
+      "checkpoint": "ts3_1_inference.pt"
+    },
+    {
+      "method": "ts3",
+      "count": 5,
+      "parameters": 7626372,
+      "epochs": 2000,
+      "updates_per_case": 2000,
+      "native_case_updates": 10000,
+      "best_checkpoint_epoch": 2000,
+      "elapsed_seconds": 1765.601500749588,
+      "mean_U_L2_percent": 3.849576022572864,
+      "worst_U_L2_percent": 9.509842650309835,
+      "mean_VM_L2_percent": 13.020948154182715,
+      "worst_VM_L2_percent": 15.61446971628269,
+      "prediction_image": "ts3_5_fields.png",
+      "checkpoint": "ts3_5_inference.pt"
+    },
+    {
+      "method": "ts3",
+      "count": 20,
+      "parameters": 7626372,
+      "epochs": 2000,
+      "updates_per_case": 2000,
+      "native_case_updates": 40000,
+      "best_checkpoint_epoch": 2000,
+      "elapsed_seconds": 7205.401588201523,
+      "mean_U_L2_percent": 14.875156625607161,
+      "worst_U_L2_percent": 51.994215887763104,
+      "mean_VM_L2_percent": 20.88300502849246,
+      "worst_VM_L2_percent": 35.95954078414134,
+      "prediction_image": "ts3_20_fields.png",
+      "checkpoint": "ts3_20_inference.pt"
+    },
+    {
+      "method": "mgn",
+      "count": 1,
+      "parameters": 9298436,
+      "epochs": 2000,
+      "updates_per_case": 2000,
+      "native_case_updates": 2000,
+      "best_checkpoint_epoch": 2000,
+      "elapsed_seconds": 446.05764079093933,
+      "mean_U_L2_percent": 0.4370875180141528,
+      "worst_U_L2_percent": 0.4370875180141528,
+      "mean_VM_L2_percent": 1.851065195417065,
+      "worst_VM_L2_percent": 1.851065195417065,
+      "prediction_image": "mgn_1_fields.png",
+      "checkpoint": "mgn_1_inference.pt"
+    },
+    {
+      "method": "mgn",
+      "count": 5,
+      "parameters": 9298436,
+      "epochs": 2000,
+      "updates_per_case": 2000,
+      "native_case_updates": 10000,
+      "best_checkpoint_epoch": 2000,
+      "elapsed_seconds": 2702.017646551132,
+      "mean_U_L2_percent": 1.034961210802154,
+      "worst_U_L2_percent": 1.3763724690618162,
+      "mean_VM_L2_percent": 4.455011815812413,
+      "worst_VM_L2_percent": 4.989660854332765,
+      "prediction_image": "mgn_5_fields.png",
+      "checkpoint": "mgn_5_inference.pt"
+    },
+    {
+      "method": "mgn",
+      "count": 20,
+      "parameters": 9298436,
+      "epochs": 2000,
+      "updates_per_case": 2000,
+      "native_case_updates": 40000,
+      "best_checkpoint_epoch": 2000,
+      "elapsed_seconds": 10857.828392505646,
+      "mean_U_L2_percent": 2.1165523057834945,
+      "worst_U_L2_percent": 4.08942404721866,
+      "mean_VM_L2_percent": 11.238286817850183,
+      "worst_VM_L2_percent": 15.89784101523684,
+      "prediction_image": "mgn_20_fields.png",
+      "checkpoint": "mgn_20_inference.pt"
+    }
+  ],
+  "models": {
+    "ts3": {
+      "parameters": 7626372,
+      "layers": 16,
+      "width": 256,
+      "heads": 8,
+      "slices": 64
+    },
+    "mgn": {
+      "parameters": 9298436,
+      "message_passing_steps": 15,
+      "width": 256
+    }
+  },
+  "representatives": [
+    {
+      "sample_id": "normal_rodv2_0081__tension",
+      "geometry": "rodv2_0081",
+      "group": "normal",
+      "split": "train",
+      "scenario": "tension",
+      "backend": "cuda",
+      "max_U_mm": 0.1595012758358653,
+      "raw_GP_VM_MPa": 211.2711763844251,
+      "max_PEEQ": 0.0,
+      "full_J2": false,
+      "bounded_tail": false,
+      "max_relative_residual": 1.9938210874333404e-07,
+      "min_J": 0.9994380055293862,
+      "origin": "retained_original",
+      "stability": "not_assessed",
+      "title": "轴向拉伸基准",
+      "case_index": 6,
+      "image": "renders/representative-0.png"
+    },
+    {
+      "sample_id": "extreme_rodv2_0130__combined_bending",
+      "geometry": "rodv2_0130",
+      "group": "extreme",
+      "split": "train",
+      "scenario": "combined_bending",
+      "backend": "cpu",
+      "max_U_mm": 8.750063781859735,
+      "raw_GP_VM_MPa": 578.6901796233476,
+      "max_PEEQ": 0.0,
+      "full_J2": false,
+      "bounded_tail": false,
+      "max_relative_residual": 1.9941521419102398e-07,
+      "min_J": 0.9977413441232268,
+      "origin": "retained_original",
+      "stability": "not_assessed",
+      "title": "复合弯曲 / 大位移",
+      "case_index": 3,
+      "image": "renders/representative-1.png"
+    },
+    {
+      "sample_id": "normal_rodv2_0170__gas_inertia_30deg",
+      "geometry": "rodv2_0170",
+      "group": "normal",
+      "split": "train",
+      "scenario": "gas_inertia_30deg",
+      "backend": "cpu",
+      "max_U_mm": 0.16289260008682094,
+      "raw_GP_VM_MPa": 958.2434000000002,
+      "max_PEEQ": 0.011230142516337218,
+      "full_J2": true,
+      "bounded_tail": true,
+      "max_relative_residual": 5.8668185213202794e-08,
+      "min_J": 0.9984092793766077,
+      "origin": "retained_original",
+      "stability": "not_assessed",
+      "title": "燃气与惯性 / 有界尾段",
+      "case_index": 2,
+      "image": "renders/representative-2.png"
+    },
+    {
+      "sample_id": "extreme_supp2_rodv2_0053__inertial_tension_350deg_8000rpm",
+      "geometry": "rodv2_0053",
+      "group": "extreme",
+      "split": "train",
+      "scenario": "inertial_tension_350deg_8000rpm",
+      "backend": "cuda",
+      "max_U_mm": 0.3550414600131172,
+      "raw_GP_VM_MPa": 266.7848028305076,
+      "max_PEEQ": 0.0,
+      "full_J2": false,
+      "bounded_tail": false,
+      "max_relative_residual": 1.9964251691977815e-07,
+      "min_J": 0.9993933468125026,
+      "origin": "user_authorized_new_condition",
+      "stability": "not_assessed",
+      "title": "新增工况 / 高速惯性拉伸",
+      "case_index": 9,
+      "image": "renders/representative-3.png"
+    }
+  ],
+  "hard_case": {
+    "sample_id": "extreme_rodv2_0130__combined_bending",
+    "case_index": 3,
+    "ranges": {
+      "U": [
+        0,
+        8.777765274047852
+      ],
+      "VM": [
+        -27.03510284423828,
+        576.376220703125
+      ]
+    },
+    "selection": "Selected by the existing TS3 TRAIN20 maximum joint relative-error rule, not by MGN performance.",
+    "rows": {
+      "ts3": {
+        "sample_id": "extreme_rodv2_0130__combined_bending",
+        "nodes": 30155,
+        "relative_U_L2": 0.5199421588776311,
+        "relative_VM_L2": 0.17806131936675454,
+        "U_RMSE_mm": 1.0903534618017492,
+        "VM_RMSE_MPa": 31.553022799050776,
+        "predicted_VM_min_MPa": -27.0351028094156,
+        "Ux_relative_L2": 0.8414963392619931,
+        "Uy_relative_L2": 0.9582621651524921,
+        "Uz_relative_L2": 0.5149941945448373
+      },
+      "mgn": {
+        "sample_id": "extreme_rodv2_0130__combined_bending",
+        "nodes": 30155,
+        "relative_U_L2": 0.010337008802418873,
+        "relative_VM_L2": 0.08275076241919198,
+        "U_RMSE_mm": 0.02167739841816753,
+        "VM_RMSE_MPa": 14.66369395968376,
+        "predicted_VM_min_MPa": 1.5667383298475217,
+        "Ux_relative_L2": 0.055779737506597794,
+        "Uy_relative_L2": 0.05948898160524415,
+        "Uz_relative_L2": 0.008608071847221253
+      }
+    }
+  },
+  "source_sha256": {
+    "final_index": "4222afd71c022412da991ad3b8155d3e5e4e3a383afd5040c93c76bd003ea714",
+    "accepted_status": "bbe3c6f5f6c87ce04a9176049f2468809afc4db6b74df3c3938cc308a846f664",
+    "experiments": "c0ca5fd5f85caae6acaad9e915a8031379219822edcde91b6fc90aeb2ee43d80"
+  },
+  "review": "1000 valid selected FE outcomes do not mean all original IDs converged. Six runs are training fits; no accuracy gate or held-out generalization claim. Raw GP stress and projected node VM are distinct quantities.",
+  "renders": [
+    {
+      "id": "representative-0",
+      "case_index": 6,
+      "source": "truth",
+      "field": "VM",
+      "range": [
+        0,
+        1000
+      ],
+      "bbox": [
+        [
+          -20.759471893310547,
+          -35.97599792480469,
+          -16.910303115844727
+        ],
+        [
+          243.69430541992188,
+          35.97599792480469,
+          16.910303115844727
+        ]
+      ]
+    },
+    {
+      "id": "representative-1",
+      "case_index": 3,
+      "source": "truth",
+      "field": "VM",
+      "range": [
+        0,
+        1000
+      ],
+      "bbox": [
+        [
+          -21.029394149780273,
+          -31.525760650634766,
+          -12.08358383178711
+        ],
+        [
+          244.27061462402344,
+          31.52554702758789,
+          20.139690399169922
+        ]
+      ]
+    },
+    {
+      "id": "representative-2",
+      "case_index": 2,
+      "source": "truth",
+      "field": "VM",
+      "range": [
+        0,
+        1000
+      ],
+      "bbox": [
+        [
+          -21.286121368408203,
+          -39.21028137207031,
+          -12.072155952453613
+        ],
+        [
+          200.47616577148438,
+          39.21012878417969,
+          12.06953239440918
+        ]
+      ]
+    },
+    {
+      "id": "representative-3",
+      "case_index": 9,
+      "source": "truth",
+      "field": "VM",
+      "range": [
+        0,
+        1000
+      ],
+      "bbox": [
+        [
+          -26.01401138305664,
+          -39.2673225402832,
+          -12.403606414794922
+        ],
+        [
+          248.6412353515625,
+          39.267677307128906,
+          12.403430938720703
+        ]
+      ]
+    },
+    {
+      "id": "hard-U-truth",
+      "case_index": 3,
+      "source": "truth",
+      "field": "U",
+      "range": [
+        0,
+        8.777765274047852
+      ],
+      "bbox": [
+        [
+          -21.029394149780273,
+          -31.528533935546875,
+          -12.08358383178711
+        ],
+        [
+          244.27175903320312,
+          31.52681541442871,
+          20.139690399169922
+        ]
+      ]
+    },
+    {
+      "id": "hard-U-ts3",
+      "case_index": 3,
+      "source": "ts3",
+      "field": "U",
+      "range": [
+        0,
+        8.777765274047852
+      ],
+      "bbox": [
+        [
+          -21.029394149780273,
+          -31.528533935546875,
+          -12.08358383178711
+        ],
+        [
+          244.27175903320312,
+          31.52681541442871,
+          20.139690399169922
+        ]
+      ]
+    },
+    {
+      "id": "hard-U-mgn",
+      "case_index": 3,
+      "source": "mgn",
+      "field": "U",
+      "range": [
+        0,
+        8.777765274047852
+      ],
+      "bbox": [
+        [
+          -21.029394149780273,
+          -31.528533935546875,
+          -12.08358383178711
+        ],
+        [
+          244.27175903320312,
+          31.52681541442871,
+          20.139690399169922
+        ]
+      ]
+    },
+    {
+      "id": "hard-VM-truth",
+      "case_index": 3,
+      "source": "truth",
+      "field": "VM",
+      "range": [
+        -27.03510284423828,
+        576.376220703125
+      ],
+      "bbox": [
+        [
+          -21.029394149780273,
+          -31.528533935546875,
+          -12.08358383178711
+        ],
+        [
+          244.27175903320312,
+          31.52681541442871,
+          20.139690399169922
+        ]
+      ]
+    },
+    {
+      "id": "hard-VM-ts3",
+      "case_index": 3,
+      "source": "ts3",
+      "field": "VM",
+      "range": [
+        -27.03510284423828,
+        576.376220703125
+      ],
+      "bbox": [
+        [
+          -21.029394149780273,
+          -31.528533935546875,
+          -12.08358383178711
+        ],
+        [
+          244.27175903320312,
+          31.52681541442871,
+          20.139690399169922
+        ]
+      ]
+    },
+    {
+      "id": "hard-VM-mgn",
+      "case_index": 3,
+      "source": "mgn",
+      "field": "VM",
+      "range": [
+        -27.03510284423828,
+        576.376220703125
+      ],
+      "bbox": [
+        [
+          -21.029394149780273,
+          -31.528533935546875,
+          -12.08358383178711
+        ],
+        [
+          244.27175903320312,
+          31.52681541442871,
+          20.139690399169922
+        ]
+      ]
+    }
+  ]
+}

@@ -35,3 +35,10 @@ The plan metadata uses the user-provided table. Existing scientific results are 
 - 逐例来源为 `assets/r06-case-context-v1.json`，由研究仓库 `tools/export_rod_case_context.py` 从冻结接口和原载荷说明生成；记录原载荷、几何和说明文件哈希。
 - 燃气净压与销孔承压须区分；纯轴向对照不因元数据存在 engine 字段就声称施加了惯性。厚度偏压的正负侧按原 κ 值说明。
 - 可能响应是条件性机理解释，不是已观测损伤、失稳、疲劳或实测循环的结论。原标签、输入和训练结果不变。
+
+## M01 连杆阶段汇总
+
+- `assets/m01-checkpoint-v1/` 保存数据分布、代表场、模型误差、同例对比、1000条逐例CSV及四页离线PDF。网页正文只显示一张可切换的汇总图与简短AI审阅，明细和下载折叠到底部。
+- 统计源为最终选定索引和权威accepted记录，图表源为large_v2已保存端点；`tools/build_m01_summary.py`提取统计，`tools/publish_m01_checkpoint.py`排版网页与PDF。没有重新求解FE或训练模型。
+- `viewers/m01-render.html`和`assets/m01-render.js`只作真实原节点场的静态插图导出。代表图共用0–1000MPa节点VM色阶；模型同行共用数据范围，保留负预测，均按原位移×1并附实际载荷方向箭头。
+- 代表图按物理机制和来源有目的选取；模型难例沿用TS3 TRAIN20既有联合误差最大规则，不按MGN表现挑选。所有原失败、检查点和源场继续保留。
