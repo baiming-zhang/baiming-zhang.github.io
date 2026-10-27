@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-27T05:22:42.143106+00:00",
+  "baseline": "attempt058_two_cell_patch56",
+  "additional_reference": "attempt085_two_cell_patch84",
+  "variant": "attempt092_full_CAD_untangle",
+  "purpose": "Local stress accuracy research after observed235-probe sensitivity; not an independent geometry or replacement of old fields.",
+  "lineage": [
+    "attempt086_local_accuracy",
+    "attempt087_curved_local_accuracy",
+    "attempt088_torus56_refined",
+    "attempt089_curved_torus56_refined",
+    "attempt090_lower_tori_refined",
+    "attempt091_curved_lower_tori_refined",
+    "attempt092_full_CAD_untangle"
+  ],
+  "changes": "Root min .25→.18mm/plateau.25/growth.6,local Ti9/10 hotspot bands.65mm,torus56.15/92and96.18mm,then fixed-full-CAD volume-only untangling. Exact same CAD/material/load/BC convention.",
+  "assembly_degrees": [
+    8
+  ],
+  "solver": "FrozenV4 FP64 with original resource/actualCSR/CUDA guards",
+  "probe_plan": "Reuse exact baseline058235 probe IDs/physical locations and material-specific trueP2 inverse/gradients; compare092 against058 and retained085 values at those same IDs. Preserve every failed/ambiguous probe ID; no substitution or zero-fill. Report raw and6DOF rigid-aligned displacement,unweighted tensor point-sampling L2(notvolume/trutherror),energy and nativeGP extrema separately.",
+  "acceptance": "Original mesh screens must all pass before GPU. Numerical residual/work/native ID checks after GPU; scientific local stress sensitivity remains an explicit separate hold. Three nonuniform meshes do not by themselves establish h-limit or peak convergence.",
+  "production_eligible": false
+}

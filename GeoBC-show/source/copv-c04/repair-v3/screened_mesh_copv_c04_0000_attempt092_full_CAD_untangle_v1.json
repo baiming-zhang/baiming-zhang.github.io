@@ -1,0 +1,32 @@
+{
+  "schema": "c04_screened_mesh_v1",
+  "created": "2026-10-27T13:22:27.060515+08:00",
+  "case_id": "copv_c04_0000",
+  "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt092_full_CAD_untangle",
+  "mesh_sha256": "283899075240e2023d413455a8c3158f545e36ca5d973a141031fb6823741ac5",
+  "original_mesh_screen_passed": true,
+  "production_eligible": false,
+  "GPU_status": "not_started",
+  "evidence_sha256": {
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt092_full_CAD_untangle/mesh/mesh.npz": "283899075240e2023d413455a8c3158f545e36ca5d973a141031fb6823741ac5",
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt092_full_CAD_untangle/preflight/review.json": "5c40998398e807fbdb5b4740591207584f14d00ef719192e04b9c7c3093ba7bb",
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt092_full_CAD_untangle/geometry_check/review.json": "d9679f7f3b95531972240059231cdca980df115892e218e945894e96c6ce9f80",
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt092_full_CAD_untangle/result.json": "45bcd6dfa88243cf0bf9005ac9ff98488cbaa12dbe72117c103b8b640055f9fa",
+    "data/copv/c04_repair_v3/worker86_config.json": "caff2bb62d64000a77baba7dc906d43317e462ddb40837760937d616aaa8890d",
+    "data/copv/c04_repair_v3/worker88_config.json": "62d9c631f5bb404dba97395f5c5571ec4ab22df6ad77161f6e4e4e39d86fea15",
+    "data/copv/c04_repair_v3/worker90_config.json": "e05fdee55ffdf4bc48592b520122cb789568ad170d36edb7b12f694becd7b223",
+    "data/copv/c04_repair_v3/worker92_config.json": "b9ab63f308043e9d094549332253a7d71959a89304e6d803efcf0b566fd0808e",
+    "notes/c04_shape_objective.py": "f9a43898baf3e6e284ffb7cd8f86e4ae03948fa6d41208792618774f4a55e032",
+    "data/copv/c04_repair_v3/sicn_objective_validation_v1/review.json": "754b70fb27bb0a168f24432b2d4e8243d12a3f44118e3f422a2a0a433b744efd"
+  },
+  "original_quality_targets": {
+    "surface_min_SICN": 0.05,
+    "volume_min_SICN": 0.05,
+    "total_volume_relative_error_max": 0.001,
+    "material_region_volume_relative_error_max": 0.001,
+    "positive_Jacobians": true,
+    "one_connected_component": true,
+    "shared_Tri6_interfaces": true
+  },
+  "scope": "Exact original-ID mesh screening only; actual GPU fields and same-geometry sensitivity pending. Active GPU queue and original history untouched."
+}
