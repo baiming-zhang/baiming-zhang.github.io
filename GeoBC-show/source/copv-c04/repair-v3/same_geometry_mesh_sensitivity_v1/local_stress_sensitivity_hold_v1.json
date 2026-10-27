@@ -1,0 +1,77 @@
+{
+  "schema": "c04_local_stress_sensitivity_hold_v1",
+  "created": "2026-10-27T04:22:29.429747+00:00",
+  "case_id": "copv_c04_0000",
+  "baseline": "attempt058_two_cell_patch56",
+  "variant": "attempt085_two_cell_patch84",
+  "comparison_sha256": "24f5d0cdf62bf6b7b924bf72540ad40752f2f26e7d0aee8ce6fbcb67817492e8",
+  "matched_probe_IDs": 235,
+  "failed_probe_IDs": 0,
+  "energy_relative_difference": 7.334398397951247e-06,
+  "part10_tensor_sample_relative_L2": 0.5180009443873418,
+  "hotspots": [
+    {
+      "part_id": 6,
+      "probe_id": "p6-cell2143442-GP6",
+      "xyz_mm": [
+        -64.44910962791808,
+        -11.21960084773479,
+        231.11096373711808
+      ],
+      "baseline_native_cell_id": 2143442,
+      "variant_native_cell_id": 1978108,
+      "max_stress_component_difference_MPa": 13.39407935965987
+    },
+    {
+      "part_id": 7,
+      "probe_id": "p7-cell2925461-GP9",
+      "xyz_mm": [
+        52.2123014100735,
+        -39.392668167547924,
+        231.1487236807041
+      ],
+      "baseline_native_cell_id": 2925461,
+      "variant_native_cell_id": 2712623,
+      "max_stress_component_difference_MPa": 10.557545208932211
+    },
+    {
+      "part_id": 8,
+      "probe_id": "p8-cell2990064-GP6",
+      "xyz_mm": [
+        24.430358240982642,
+        60.65156809328144,
+        -231.15674476277135
+      ],
+      "baseline_native_cell_id": 2990064,
+      "variant_native_cell_id": 2785018,
+      "max_stress_component_difference_MPa": 21.86749284727516
+    },
+    {
+      "part_id": 9,
+      "probe_id": "p9-cell2427867-GP6",
+      "xyz_mm": [
+        -6.342635267427363,
+        -24.51644306914693,
+        247.09489050962785
+      ],
+      "baseline_native_cell_id": 2427867,
+      "variant_native_cell_id": 2255158,
+      "max_stress_component_difference_MPa": 2.1191856044094877
+    },
+    {
+      "part_id": 10,
+      "probe_id": "p10-cell2541674-GP7",
+      "xyz_mm": [
+        7.38700149883995,
+        24.23078710502086,
+        -247.09576353216698
+      ],
+      "baseline_native_cell_id": 2541674,
+      "variant_native_cell_id": 2464362,
+      "max_stress_component_difference_MPa": 23.268457846148184
+    }
+  ],
+  "variant_native_GP_reconstruction_check": 5.369214923847162e-12,
+  "hold_scope": "Production/local point-stress accuracy remains unresolved. This is NOT a mesh-validity/CAD hold and does not invalidate the complete quarantined GPU fields. Preserve all comparison values and probe IDs. Global energy or extrema cannot substitute for local stress accuracy.",
+  "production_eligible": false
+}

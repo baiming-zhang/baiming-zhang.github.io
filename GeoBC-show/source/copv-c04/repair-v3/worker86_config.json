@@ -1,0 +1,35 @@
+{
+  "created": "2026-10-27T04:22:29.429747+00:00",
+  "worker_state": "worker86_progress.json",
+  "mesh_attempt": "attempt086_local_accuracy",
+  "curved_attempt": "attempt087_curved_local_accuracy",
+  "environment": {
+    "COPV_C04_VOLUME_ALGORITHM": "1",
+    "COPV_C04_LINEAR_OPTIMIZER": "Netgen",
+    "COPV_C04_COLLAR_FRONTAL": "1",
+    "COPV_C04_MAX_SURFACE_NODES": "700000",
+    "COPV_C04_MATCH_ROOT_CIRCLES": "1",
+    "COPV_C04_FRONTAL_PARTS": "7,8",
+    "COPV_C04_ADJACENT_ROOT_BAND": "1",
+    "COPV_C04_ADJACENT_ROOT_H": ".85",
+    "COPV_C04_MAIN_CHORD_MM": ".045",
+    "COPV_C04_THIN_CHORD_MM": ".015",
+    "COPV_C04_PORT_FACE_H": "2.0",
+    "COPV_C04_ROOT_BAND_MM": ".25",
+    "COPV_C04_ROOT_GROWTH": ".6",
+    "COPV_C04_STOP_ON_BAD_SURFACE": "1",
+    "COPV_C04_PORT_CURVE_REPAIR": "1",
+    "COPV_C04_LOCAL_ACCURACY_REGIONS_JSON": "[{\"parts\":[9],\"radius_mm\":25.323605645688293,\"z_mm\":247.09489050962785,\"h_min_mm\":0.65,\"plateau_mm\":1.0,\"growth_per_mm\":1.0},{\"parts\":[10],\"radius_mm\":25.331775201764064,\"z_mm\":-247.09576353216698,\"h_min_mm\":0.65,\"plateau_mm\":1.0,\"growth_per_mm\":1.0}]"
+  },
+  "parameters": {
+    "h": 6,
+    "shell-h": 6.0,
+    "bond-h": 3,
+    "root-h": 0.18,
+    "max-cells": 3300000,
+    "circle-segments": 80
+  },
+  "scope": "Locally smaller root h .18mm with shorter .25mm fine plateau and growth .6; preserve body6/bond3/thin chord.015/main chord.045/fillet.25. Add axisymmetric graded bands around the two actual Ti-port hotspot locations; synchronize circular curve segmentation. Reuse true partial-circle/narrow-annulus handling previously validated on0002. This is a resource-controlled hypothesis, not guaranteed quality or stress convergence. All original gates remain unchanged; no old mesh, field or failed ID is replaced.",
+  "case_id": "copv_c04_0000",
+  "purpose": "local_stress_accuracy_repair_only"
+}

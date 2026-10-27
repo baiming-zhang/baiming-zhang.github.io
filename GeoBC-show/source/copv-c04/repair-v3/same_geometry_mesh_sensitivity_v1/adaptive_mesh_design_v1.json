@@ -1,0 +1,36 @@
+{
+  "schema": "c04_local_accuracy_mesh_trial_v1",
+  "created": "2026-10-27T04:22:29.429747+00:00",
+  "case_id": "copv_c04_0000",
+  "purpose": "local_stress_accuracy_repair_only",
+  "evidence_hold_sha256": "594b97af48bdcd5200e52023acf74ba059e6540de816fe5e61f93defc14325f9",
+  "unchanged": "Original CAD, material dimensions/angles, pressure, actual cap convention, BC/gauge and P2 solver. Both prior mesh/field versions retained.",
+  "trial": "Locally smaller root h .18mm with shorter .25mm fine plateau and growth .6; preserve body6/bond3/thin chord.015/main chord.045/fillet.25. Add axisymmetric graded bands around the two actual Ti-port hotspot locations; synchronize circular curve segmentation. Reuse true partial-circle/narrow-annulus handling previously validated on0002. This is a resource-controlled hypothesis, not guaranteed quality or stress convergence.",
+  "root_h_mm": 0.18,
+  "root_plateau_mm": 0.25,
+  "root_growth_per_mm": 0.6,
+  "local_accuracy_regions_mm": [
+    {
+      "parts": [
+        9
+      ],
+      "radius_mm": 25.323605645688293,
+      "z_mm": 247.09489050962785,
+      "h_min_mm": 0.65,
+      "plateau_mm": 1.0,
+      "growth_per_mm": 1.0
+    },
+    {
+      "parts": [
+        10
+      ],
+      "radius_mm": 25.331775201764064,
+      "z_mm": -247.09576353216698,
+      "h_min_mm": 0.65,
+      "plateau_mm": 1.0,
+      "growth_per_mm": 1.0
+    }
+  ],
+  "acceptance": "Unchanged full native SICN>=.05, positiveJ, actual CAD, every-material GP-J volume<=.1%, sharedTri6/load/connectivity and GPU2.2M/10MDOFs. CPU3.3M/700k surface. No production release from meshing alone.",
+  "phase": "prepared_not_yet_executed"
+}

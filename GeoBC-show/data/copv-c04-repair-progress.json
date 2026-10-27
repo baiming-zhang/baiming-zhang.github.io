@@ -1,6 +1,6 @@
 {
   "schema": "c04_repair_progress_v3",
-  "updated": "2026-10-27T12:02:09.803770+08:00",
+  "updated": "2026-10-27T12:25:15.111050+08:00",
   "status": "repair_in_progress",
   "historical": {
     "frozen_inputs": 20,
@@ -11,7 +11,7 @@
     ],
     "production_labels": 0
   },
-  "new_FE_labels": 2,
+  "new_FE_labels": 3,
   "new_production_labels": 0,
   "original_quality_targets": {
     "surface_min_SICN": 0.05,
@@ -90022,7 +90022,7 @@
     {
       "attempt": "attempt058_two_cell_patch56",
       "case_id": "copv_c04_0000",
-      "new_FE_labels": 0,
+      "new_FE_labels": 2,
       "production_eligible": false,
       "result.json": {
         "status": "curved_positive_J_mesh_preflight_only",
@@ -93789,7 +93789,7 @@
         "seconds": 11.703893700003391,
         "original_mesh_screen_passed": true
       },
-      "status": "original_mesh_screens_passed_GPU_and_sensitivity_pending"
+      "status": "mesh_and_GPU_checks_completed_local_stress_hold"
     },
     {
       "attempt": "attempt082_same_geometry_root_coarsening",
@@ -103327,7 +103327,7 @@
     {
       "attempt": "attempt085_two_cell_patch84",
       "case_id": "copv_c04_0000",
-      "new_FE_labels": 0,
+      "new_FE_labels": 1,
       "production_eligible": false,
       "result.json": {
         "status": "curved_positive_J_mesh_preflight_only",
@@ -107094,7 +107094,2048 @@
         "seconds": 9.943119900002785,
         "original_mesh_screen_passed": true
       },
-      "status": "original_mesh_screens_passed_GPU_and_sensitivity_pending"
+      "status": "mesh_and_GPU_checks_completed_local_stress_hold"
+    },
+    {
+      "attempt": "attempt086_local_accuracy",
+      "case_id": "copv_c04_0000",
+      "new_FE_labels": 0,
+      "production_eligible": false,
+      "state.json": {
+        "case_id": "copv_c04_0000",
+        "attempt": "attempt086_local_accuracy",
+        "pid": 31608,
+        "phase": "meshing",
+        "started": "2026-10-27T12:22:30.001104+08:00",
+        "command": [
+          "wsl",
+          "-d",
+          "cold-surge-ubuntu-24.04",
+          "--",
+          "bash",
+          "/mnt/c/Users/ASUS/Desktop/GeoBC Neural Operator/data/copv/c04_repair_v3/copv_c04_0000/attempt086_local_accuracy/run_mesh_linux.sh"
+        ],
+        "partition_file": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_pilot_v1\\cases\\copv_c04_0000\\partition_v2\\structural_partition.brep",
+        "backend": "linux",
+        "max_cells": 3300000,
+        "linear_optimizer": "Netgen",
+        "source_sha256": "5d0d977a0a8e5ebe5003fca9151f81afbadf1ed80f65773ef4f934bafc324e4c",
+        "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
+        "new_FE_labels": 0,
+        "elapsed_seconds": 0.03156250000029104,
+        "updated": "2026-10-27T12:22:30.012103+08:00"
+      },
+      "mesh/recipe.json": {
+        "options": {
+          "Mesh.MeshSizeMin": 0.15,
+          "Mesh.MeshSizeMax": 6.0,
+          "Mesh.MeshSizeFromCurvature": 0,
+          "Mesh.MeshSizeFromPoints": 0,
+          "Mesh.MeshSizeExtendFromBoundary": 0,
+          "Mesh.Algorithm": 6,
+          "Mesh.Algorithm3D": 1,
+          "Mesh.MaxNumThreads3D": 1,
+          "Mesh.MaxNumThreads2D": 1,
+          "Mesh.RandomSeed": 1,
+          "Mesh.SecondOrderLinear": 1,
+          "Mesh.Binary": 1,
+          "Mesh.SaveAll": 1
+        },
+        "roots": [
+          [
+            231.13862937044559,
+            65.50271208317147
+          ],
+          [
+            231.13862937038374,
+            65.50271208317147
+          ]
+        ],
+        "circles": [
+          {
+            "curve": 1,
+            "z": -277.0,
+            "radius": 15.000000000000007,
+            "segments": 288
+          },
+          {
+            "curve": 3,
+            "z": -260.0,
+            "radius": 15.000000000000007,
+            "segments": 80
+          },
+          {
+            "curve": 4,
+            "z": -277.0,
+            "radius": 16.00000000000001,
+            "segments": 288
+          },
+          {
+            "curve": 5,
+            "z": -200.0,
+            "radius": 100.00000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 8,
+            "z": -260.0,
+            "radius": 16.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 9,
+            "z": 200.0,
+            "radius": 100.00000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 14,
+            "z": -200.0,
+            "radius": 101.00000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 15,
+            "z": 260.0,
+            "radius": 15.000000000000007,
+            "segments": 80
+          },
+          {
+            "curve": 18,
+            "z": 200.0,
+            "radius": 101.00000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 20,
+            "z": 277.0,
+            "radius": 15.000000000000007,
+            "segments": 288
+          },
+          {
+            "curve": 24,
+            "z": 260.0,
+            "radius": 16.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 25,
+            "z": 277.0,
+            "radius": 16.00000000000001,
+            "segments": 288
+          },
+          {
+            "curve": 29,
+            "z": -200.0,
+            "radius": 101.15000000000005,
+            "segments": 528
+          },
+          {
+            "curve": 31,
+            "z": 200.0,
+            "radius": 101.15000000000005,
+            "segments": 528
+          },
+          {
+            "curve": 36,
+            "z": -200.0,
+            "radius": 101.90000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 38,
+            "z": 200.0,
+            "radius": 101.90000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 43,
+            "z": -200.0,
+            "radius": 102.65000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 45,
+            "z": 200.0,
+            "radius": 102.65000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 50,
+            "z": -200.0,
+            "radius": 103.40000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 52,
+            "z": 200.0,
+            "radius": 103.40000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 59,
+            "z": -200.0,
+            "radius": 104.15000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 60,
+            "z": 200.0,
+            "radius": 104.15000000000006,
+            "segments": 528
+          },
+          {
+            "curve": 66,
+            "z": 247.0,
+            "radius": 39.00000000000002,
+            "segments": 80
+          },
+          {
+            "curve": 67,
+            "z": 247.0,
+            "radius": 33.322949280864215,
+            "segments": 80
+          },
+          {
+            "curve": 68,
+            "z": 250.0,
+            "radius": 44.00000000000002,
+            "segments": 96
+          },
+          {
+            "curve": 70,
+            "z": 254.0,
+            "radius": 44.00000000000002,
+            "segments": 120
+          },
+          {
+            "curve": 72,
+            "z": 256.0,
+            "radius": 38.00000000000002,
+            "segments": 120
+          },
+          {
+            "curve": 74,
+            "z": 277.0,
+            "radius": 18.100000000000012,
+            "segments": 288
+          },
+          {
+            "curve": 75,
+            "z": 262.0,
+            "radius": 26.000000000000014,
+            "segments": 80
+          },
+          {
+            "curve": 77,
+            "z": 277.0,
+            "radius": 18.200000000000006,
+            "segments": 288
+          },
+          {
+            "curve": 79,
+            "z": 264.58,
+            "radius": 25.999999999999975,
+            "segments": 654
+          },
+          {
+            "curve": 80,
+            "z": 281.18391176947586,
+            "radius": 18.199999999999978,
+            "segments": 458
+          },
+          {
+            "curve": 82,
+            "z": 265.42,
+            "radius": 25.999999999999975,
+            "segments": 654
+          },
+          {
+            "curve": 85,
+            "z": 282.0,
+            "radius": 18.940000000000012,
+            "segments": 477
+          },
+          {
+            "curve": 87,
+            "z": 267.58,
+            "radius": 25.999999999999975,
+            "segments": 654
+          },
+          {
+            "curve": 89,
+            "z": 282.81608823052414,
+            "radius": 18.199999999999978,
+            "segments": 458
+          },
+          {
+            "curve": 90,
+            "z": 268.42,
+            "radius": 25.999999999999975,
+            "segments": 654
+          },
+          {
+            "curve": 93,
+            "z": 283.35,
+            "radius": 18.200000000000006,
+            "segments": 80
+          },
+          {
+            "curve": 95,
+            "z": 279.0,
+            "radius": 26.000000000000014,
+            "segments": 80
+          },
+          {
+            "curve": 96,
+            "z": 283.35,
+            "radius": 18.95000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 97,
+            "z": 281.0,
+            "radius": 24.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 99,
+            "z": 284.0,
+            "radius": 18.95000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 101,
+            "z": 289.0,
+            "radius": 24.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 103,
+            "z": 284.0,
+            "radius": 18.200000000000006,
+            "segments": 80
+          },
+          {
+            "curve": 112,
+            "z": 284.18391176947586,
+            "radius": 18.199999999999978,
+            "segments": 458
+          },
+          {
+            "curve": 120,
+            "z": 285.0,
+            "radius": 18.940000000000012,
+            "segments": 477
+          },
+          {
+            "curve": 134,
+            "z": 285.81608823052414,
+            "radius": 18.199999999999978,
+            "segments": 458
+          },
+          {
+            "curve": 135,
+            "z": 288.0,
+            "radius": 18.200000000000006,
+            "segments": 288
+          },
+          {
+            "curve": 137,
+            "z": -247.0,
+            "radius": 39.00000000000002,
+            "segments": 80
+          },
+          {
+            "curve": 138,
+            "z": -247.0,
+            "radius": 33.322949280864215,
+            "segments": 80
+          },
+          {
+            "curve": 139,
+            "z": -250.0,
+            "radius": 44.00000000000002,
+            "segments": 96
+          },
+          {
+            "curve": 141,
+            "z": -254.0,
+            "radius": 44.00000000000002,
+            "segments": 120
+          },
+          {
+            "curve": 143,
+            "z": -256.0,
+            "radius": 38.00000000000002,
+            "segments": 120
+          },
+          {
+            "curve": 145,
+            "z": -277.0,
+            "radius": 18.100000000000012,
+            "segments": 288
+          },
+          {
+            "curve": 146,
+            "z": -262.0,
+            "radius": 26.000000000000014,
+            "segments": 80
+          },
+          {
+            "curve": 148,
+            "z": -277.0,
+            "radius": 18.200000000000006,
+            "segments": 288
+          },
+          {
+            "curve": 150,
+            "z": -264.58,
+            "radius": 25.999999999999975,
+            "segments": 654
+          },
+          {
+            "curve": 155,
+            "z": -265.42,
+            "radius": 25.999999999999975,
+            "segments": 654
+          },
+          {
+            "curve": 157,
+            "z": -282.0,
+            "radius": 18.940000000000012,
+            "segments": 477
+          },
+          {
+            "curve": 159,
+            "z": -267.58,
+            "radius": 25.999999999999975,
+            "segments": 654
+          },
+          {
+            "curve": 164,
+            "z": -268.42,
+            "radius": 25.999999999999975,
+            "segments": 654
+          },
+          {
+            "curve": 166,
+            "z": -283.35,
+            "radius": 18.200000000000006,
+            "segments": 80
+          },
+          {
+            "curve": 168,
+            "z": -279.0,
+            "radius": 26.000000000000014,
+            "segments": 80
+          },
+          {
+            "curve": 169,
+            "z": -283.35,
+            "radius": 18.95000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 170,
+            "z": -281.0,
+            "radius": 24.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 172,
+            "z": -284.0,
+            "radius": 18.95000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 174,
+            "z": -285.0,
+            "radius": 24.00000000000001,
+            "segments": 477
+          },
+          {
+            "curve": 176,
+            "z": -284.0,
+            "radius": 18.200000000000006,
+            "segments": 80
+          },
+          {
+            "curve": 194,
+            "z": -285.0,
+            "radius": 18.940000000000012,
+            "segments": 477
+          },
+          {
+            "curve": 195,
+            "z": -286.0,
+            "radius": 18.200000000000006,
+            "segments": 288
+          },
+          {
+            "curve": 200,
+            "z": 277.0,
+            "radius": 10.200000000000008,
+            "segments": 288
+          },
+          {
+            "curve": 202,
+            "z": 302.0,
+            "radius": 10.200000000000008,
+            "segments": 80
+          },
+          {
+            "curve": 204,
+            "z": 281.1802439387232,
+            "radius": 18.099999999999984,
+            "segments": 455
+          },
+          {
+            "curve": 205,
+            "z": 302.0,
+            "radius": 11.000000000000007,
+            "segments": 80
+          },
+          {
+            "curve": 206,
+            "z": 282.8197560612768,
+            "radius": 18.099999999999984,
+            "segments": 455
+          },
+          {
+            "curve": 208,
+            "z": 301.0,
+            "radius": 16.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 211,
+            "z": 283.35,
+            "radius": 18.100000000000012,
+            "segments": 80
+          },
+          {
+            "curve": 212,
+            "z": 293.0,
+            "radius": 16.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 214,
+            "z": 283.35,
+            "radius": 17.300000000000008,
+            "segments": 80
+          },
+          {
+            "curve": 221,
+            "z": 284.0,
+            "radius": 17.300000000000008,
+            "segments": 80
+          },
+          {
+            "curve": 229,
+            "z": 284.0,
+            "radius": 18.100000000000012,
+            "segments": 80
+          },
+          {
+            "curve": 230,
+            "z": 288.0,
+            "radius": 18.100000000000012,
+            "segments": 288
+          },
+          {
+            "curve": 232,
+            "z": 284.1802439387232,
+            "radius": 18.099999999999984,
+            "segments": 455
+          },
+          {
+            "curve": 233,
+            "z": 285.8197560612768,
+            "radius": 18.099999999999984,
+            "segments": 455
+          },
+          {
+            "curve": 236,
+            "z": -277.0,
+            "radius": 8.250000000000005,
+            "segments": 288
+          },
+          {
+            "curve": 238,
+            "z": -295.0,
+            "radius": 8.250000000000005,
+            "segments": 80
+          },
+          {
+            "curve": 240,
+            "z": -281.1802439387232,
+            "radius": 18.099999999999984,
+            "segments": 455
+          },
+          {
+            "curve": 241,
+            "z": -295.0,
+            "radius": 9.050000000000006,
+            "segments": 80
+          },
+          {
+            "curve": 243,
+            "z": -282.8197560612768,
+            "radius": 18.099999999999984,
+            "segments": 455
+          },
+          {
+            "curve": 244,
+            "z": -294.0,
+            "radius": 16.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 247,
+            "z": -283.35,
+            "radius": 18.100000000000012,
+            "segments": 80
+          },
+          {
+            "curve": 248,
+            "z": -292.0,
+            "radius": 16.00000000000001,
+            "segments": 80
+          },
+          {
+            "curve": 250,
+            "z": -283.35,
+            "radius": 17.300000000000008,
+            "segments": 80
+          },
+          {
+            "curve": 251,
+            "z": -291.0,
+            "radius": 17.050000000000026,
+            "segments": 80
+          },
+          {
+            "curve": 253,
+            "z": -284.0,
+            "radius": 17.300000000000008,
+            "segments": 80
+          },
+          {
+            "curve": 261,
+            "z": -284.0,
+            "radius": 18.100000000000012,
+            "segments": 80
+          },
+          {
+            "curve": 269,
+            "z": -284.1802439387232,
+            "radius": 18.099999999999984,
+            "segments": 455
+          },
+          {
+            "curve": 270,
+            "z": -286.0,
+            "radius": 18.100000000000012,
+            "segments": 288
+          },
+          {
+            "curve": 272,
+            "z": -285.8197560612768,
+            "radius": 18.099999999999984,
+            "segments": 455
+          },
+          {
+            "curve": 274,
+            "z": 231.13864339144175,
+            "radius": 65.50271208317147,
+            "segments": 2288
+          },
+          {
+            "curve": 275,
+            "z": 231.68673374296012,
+            "radius": 64.23297310531906,
+            "segments": 1128
+          },
+          {
+            "curve": 277,
+            "z": 232.23714434812956,
+            "radius": 62.962169524430365,
+            "segments": 576
+          },
+          {
+            "curve": 279,
+            "z": 232.78998785883329,
+            "radius": 61.69127742424691,
+            "segments": 384
+          },
+          {
+            "curve": 282,
+            "z": 246.69579099752738,
+            "radius": 33.80980622942989,
+            "segments": 80
+          },
+          {
+            "curve": 283,
+            "z": 233.34535358572978,
+            "radius": 60.42127967279483,
+            "segments": 288
+          },
+          {
+            "curve": 285,
+            "z": 246.10762946308796,
+            "radius": 34.774226244942355,
+            "segments": 80
+          },
+          {
+            "curve": 287,
+            "z": 233.90330803330934,
+            "radius": 59.15316575528398,
+            "segments": 224
+          },
+          {
+            "curve": 289,
+            "z": 245.51801931920667,
+            "radius": 35.76373463003245,
+            "segments": 80
+          },
+          {
+            "curve": 291,
+            "z": 234.4638953660064,
+            "radius": 57.88793161945705,
+            "segments": 184
+          },
+          {
+            "curve": 293,
+            "z": 244.92739550650535,
+            "radius": 36.77722996374152,
+            "segments": 80
+          },
+          {
+            "curve": 295,
+            "z": 235.0271378088914,
+            "radius": 56.6265795333666,
+            "segments": 152
+          },
+          {
+            "curve": 297,
+            "z": 244.33616314771032,
+            "radius": 37.81361241581008,
+            "segments": 80
+          },
+          {
+            "curve": 299,
+            "z": 235.59303598587744,
+            "radius": 55.37011795537559,
+            "segments": 136
+          },
+          {
+            "curve": 301,
+            "z": 243.74469924399943,
+            "radius": 38.87178480044772,
+            "segments": 80
+          },
+          {
+            "curve": 303,
+            "z": 236.16156919779655,
+            "radius": 54.11956141600678,
+            "segments": 112
+          },
+          {
+            "curve": 305,
+            "z": 243.15335411530506,
+            "radius": 39.950653356043155,
+            "segments": 80
+          },
+          {
+            "curve": 307,
+            "z": 236.7326956421109,
+            "radius": 52.87593041108793,
+            "segments": 104
+          },
+          {
+            "curve": 309,
+            "z": 242.5624526154337,
+            "radius": 41.049128319072835,
+            "segments": 80
+          },
+          {
+            "curve": 311,
+            "z": 237.30635257538532,
+            "radius": 51.640251305429956,
+            "segments": 88
+          },
+          {
+            "curve": 313,
+            "z": 241.97229515096936,
+            "radius": 42.16612434472184,
+            "segments": 80
+          },
+          {
+            "curve": 315,
+            "z": 237.88245641894542,
+            "radius": 50.413556246014515,
+            "segments": 80
+          },
+          {
+            "curve": 317,
+            "z": 241.3831585301436,
+            "radius": 43.30056081448537,
+            "segments": 80
+          },
+          {
+            "curve": 319,
+            "z": 238.46090280734023,
+            "radius": 49.196883083322035,
+            "segments": 80
+          },
+          {
+            "curve": 321,
+            "z": 240.79529666469836,
+            "radius": 44.451362061537274,
+            "segments": 80
+          },
+          {
+            "curve": 323,
+            "z": 239.04156657830026,
+            "radius": 47.991275298976916,
+            "segments": 80
+          },
+          {
+            "curve": 325,
+            "z": 240.20894114452946,
+            "radius": 45.61745753733161,
+            "segments": 80
+          },
+          {
+            "curve": 327,
+            "z": 239.62430170179618,
+            "radius": 46.79778193727362,
+            "segments": 80
+          },
+          {
+            "curve": 330,
+            "z": -231.13864339144175,
+            "radius": 65.50271208317147,
+            "segments": 2288
+          },
+          {
+            "curve": 332,
+            "z": -246.69579099752738,
+            "radius": 33.80980622942989,
+            "segments": 80
+          },
+          {
+            "curve": 333,
+            "z": -231.68673374296012,
+            "radius": 64.23297310531906,
+            "segments": 1128
+          },
+          {
+            "curve": 335,
+            "z": -246.10762946308796,
+            "radius": 34.774226244942355,
+            "segments": 80
+          },
+          {
+            "curve": 337,
+            "z": -232.23714434812956,
+            "radius": 62.962169524430365,
+            "segments": 576
+          },
+          {
+            "curve": 339,
+            "z": -245.51801931920667,
+            "radius": 35.76373463003245,
+            "segments": 80
+          },
+          {
+            "curve": 341,
+            "z": -232.78998785883329,
+            "radius": 61.69127742424691,
+            "segments": 384
+          },
+          {
+            "curve": 343,
+            "z": -244.92739550650535,
+            "radius": 36.77722996374152,
+            "segments": 80
+          },
+          {
+            "curve": 345,
+            "z": -233.34535358572978,
+            "radius": 60.42127967279483,
+            "segments": 288
+          },
+          {
+            "curve": 347,
+            "z": -244.33616314771032,
+            "radius": 37.81361241581008,
+            "segments": 80
+          },
+          {
+            "curve": 349,
+            "z": -233.90330803330934,
+            "radius": 59.15316575528398,
+            "segments": 224
+          },
+          {
+            "curve": 351,
+            "z": -243.74469924399943,
+            "radius": 38.87178480044772,
+            "segments": 80
+          },
+          {
+            "curve": 353,
+            "z": -234.4638953660064,
+            "radius": 57.88793161945705,
+            "segments": 184
+          },
+          {
+            "curve": 355,
+            "z": -243.15335411530506,
+            "radius": 39.950653356043155,
+            "segments": 80
+          },
+          {
+            "curve": 357,
+            "z": -235.0271378088914,
+            "radius": 56.6265795333666,
+            "segments": 152
+          },
+          {
+            "curve": 359,
+            "z": -242.5624526154337,
+            "radius": 41.049128319072835,
+            "segments": 80
+          },
+          {
+            "curve": 361,
+            "z": -235.59303598587744,
+            "radius": 55.37011795537559,
+            "segments": 136
+          },
+          {
+            "curve": 363,
+            "z": -241.97229515096936,
+            "radius": 42.16612434472184,
+            "segments": 80
+          },
+          {
+            "curve": 365,
+            "z": -236.16156919779655,
+            "radius": 54.11956141600678,
+            "segments": 112
+          },
+          {
+            "curve": 367,
+            "z": -241.3831585301436,
+            "radius": 43.30056081448537,
+            "segments": 80
+          },
+          {
+            "curve": 369,
+            "z": -236.7326956421109,
+            "radius": 52.87593041108793,
+            "segments": 104
+          },
+          {
+            "curve": 371,
+            "z": -240.79529666469836,
+            "radius": 44.451362061537274,
+            "segments": 80
+          },
+          {
+            "curve": 373,
+            "z": -237.30635257538532,
+            "radius": 51.640251305429956,
+            "segments": 88
+          },
+          {
+            "curve": 375,
+            "z": -240.20894114452946,
+            "radius": 45.61745753733161,
+            "segments": 80
+          },
+          {
+            "curve": 377,
+            "z": -237.88245641894542,
+            "radius": 50.413556246014515,
+            "segments": 80
+          },
+          {
+            "curve": 379,
+            "z": -239.62430170179618,
+            "radius": 46.79778193727362,
+            "segments": 80
+          },
+          {
+            "curve": 381,
+            "z": -238.46090280734023,
+            "radius": 49.196883083322035,
+            "segments": 80
+          },
+          {
+            "curve": 383,
+            "z": -239.04156657830026,
+            "radius": 47.991275298976916,
+            "segments": 80
+          }
+        ],
+        "torus_surface_only_size_mm": 0.25,
+        "torus_faces": [
+          52,
+          53,
+          55,
+          56,
+          72,
+          79,
+          92,
+          93,
+          95,
+          96,
+          112,
+          114,
+          120,
+          137,
+          142,
+          159
+        ],
+        "torus_boundary_controls": [
+          {
+            "curve": 79,
+            "type": "Circle",
+            "length_mm": 163.36281798666909,
+            "max_curvature_per_mm": 0.038461538461538464,
+            "segments": 654,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 80,
+            "type": "Circle",
+            "length_mm": 114.35397259066833,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 458,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 82,
+            "type": "Circle",
+            "length_mm": 163.36281798666909,
+            "max_curvature_per_mm": 0.038461538461538464,
+            "segments": 654,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 83,
+            "type": "Circle",
+            "length_mm": 1.3194689145077327,
+            "max_curvature_per_mm": 2.3809523809523814,
+            "segments": 25,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 84,
+            "type": "Circle",
+            "length_mm": 1.2079255327155556,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 12,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 85,
+            "type": "Circle",
+            "length_mm": 119.00352971798144,
+            "max_curvature_per_mm": 0.052798310454065474,
+            "segments": 477,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 87,
+            "type": "Circle",
+            "length_mm": 163.36281798666909,
+            "max_curvature_per_mm": 0.038461538461538464,
+            "segments": 654,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 88,
+            "type": "Circle",
+            "length_mm": 1.207925532715556,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 12,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 89,
+            "type": "Circle",
+            "length_mm": 114.35397259066833,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 458,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 90,
+            "type": "Circle",
+            "length_mm": 163.36281798666909,
+            "max_curvature_per_mm": 0.038461538461538464,
+            "segments": 654,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 91,
+            "type": "Circle",
+            "length_mm": 1.3194689145077327,
+            "max_curvature_per_mm": 2.3809523809523814,
+            "segments": 25,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 112,
+            "type": "Circle",
+            "length_mm": 114.35397259066833,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 458,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 119,
+            "type": "Circle",
+            "length_mm": 1.2079255327155556,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 12,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 120,
+            "type": "Circle",
+            "length_mm": 119.00352971798144,
+            "max_curvature_per_mm": 0.052798310454065474,
+            "segments": 477,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 133,
+            "type": "Circle",
+            "length_mm": 1.207925532715556,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 12,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 134,
+            "type": "Circle",
+            "length_mm": 114.35397259066833,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 458,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 150,
+            "type": "Circle",
+            "length_mm": 163.36281798666909,
+            "max_curvature_per_mm": 0.038461538461538464,
+            "segments": 654,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 151,
+            "type": "Circle",
+            "length_mm": 57.17698629533417,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 229,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 152,
+            "type": "Circle",
+            "length_mm": 57.176986295334174,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 229,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 154,
+            "type": "Circle",
+            "length_mm": 1.3194689145077327,
+            "max_curvature_per_mm": 2.3809523809523814,
+            "segments": 25,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 155,
+            "type": "Circle",
+            "length_mm": 163.36281798666909,
+            "max_curvature_per_mm": 0.038461538461538464,
+            "segments": 654,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 156,
+            "type": "Circle",
+            "length_mm": 1.2079255327155478,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 12,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 157,
+            "type": "Circle",
+            "length_mm": 119.00352971798144,
+            "max_curvature_per_mm": 0.052798310454065474,
+            "segments": 477,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 159,
+            "type": "Circle",
+            "length_mm": 163.36281798666909,
+            "max_curvature_per_mm": 0.038461538461538464,
+            "segments": 654,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 160,
+            "type": "Circle",
+            "length_mm": 1.2079255327155556,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 12,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 161,
+            "type": "Circle",
+            "length_mm": 57.176986295334174,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 229,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 162,
+            "type": "Circle",
+            "length_mm": 57.17698629533417,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 229,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 163,
+            "type": "Circle",
+            "length_mm": 1.3194689145077327,
+            "max_curvature_per_mm": 2.3809523809523814,
+            "segments": 25,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 164,
+            "type": "Circle",
+            "length_mm": 163.36281798666909,
+            "max_curvature_per_mm": 0.038461538461538464,
+            "segments": 654,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 185,
+            "type": "Circle",
+            "length_mm": 57.17698629533417,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 229,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 186,
+            "type": "Circle",
+            "length_mm": 57.176986295334174,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 229,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 193,
+            "type": "Circle",
+            "length_mm": 1.2079255327155478,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 12,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 194,
+            "type": "Circle",
+            "length_mm": 119.00352971798144,
+            "max_curvature_per_mm": 0.052798310454065474,
+            "segments": 477,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 196,
+            "type": "Circle",
+            "length_mm": 1.2079255327155556,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 12,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 197,
+            "type": "Circle",
+            "length_mm": 57.176986295334174,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 229,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 198,
+            "type": "Circle",
+            "length_mm": 57.17698629533417,
+            "max_curvature_per_mm": 0.05494505494505496,
+            "segments": 229,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 204,
+            "type": "Circle",
+            "length_mm": 113.7256540599504,
+            "max_curvature_per_mm": 0.05524861878453039,
+            "segments": 455,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 206,
+            "type": "Circle",
+            "length_mm": 113.7256540599504,
+            "max_curvature_per_mm": 0.05524861878453039,
+            "segments": 455,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 207,
+            "type": "Circle",
+            "length_mm": 2.53610200898829,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 24,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 232,
+            "type": "Circle",
+            "length_mm": 113.7256540599504,
+            "max_curvature_per_mm": 0.05524861878453039,
+            "segments": 455,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 233,
+            "type": "Circle",
+            "length_mm": 113.7256540599504,
+            "max_curvature_per_mm": 0.05524861878453039,
+            "segments": 455,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 235,
+            "type": "Circle",
+            "length_mm": 2.53610200898829,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 24,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 240,
+            "type": "Circle",
+            "length_mm": 113.7256540599504,
+            "max_curvature_per_mm": 0.05524861878453039,
+            "segments": 455,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 242,
+            "type": "Circle",
+            "length_mm": 2.53610200898829,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 24,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 243,
+            "type": "Circle",
+            "length_mm": 113.7256540599504,
+            "max_curvature_per_mm": 0.05524861878453039,
+            "segments": 455,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 269,
+            "type": "Circle",
+            "length_mm": 113.7256540599504,
+            "max_curvature_per_mm": 0.05524861878453039,
+            "segments": 455,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 271,
+            "type": "Circle",
+            "length_mm": 2.53610200898829,
+            "max_curvature_per_mm": 1.2195121951219514,
+            "segments": 24,
+            "target_max_edge_mm": 0.25
+          },
+          {
+            "curve": 272,
+            "type": "Circle",
+            "length_mm": 113.7256540599504,
+            "max_curvature_per_mm": 0.05524861878453039,
+            "segments": 455,
+            "target_max_edge_mm": 0.25
+          }
+        ],
+        "collar_frontal": true,
+        "root_band_mm": 0.25,
+        "matched_root_circle_sizing": true,
+        "linear_optimizer": "Netgen",
+        "meridian_curvature_size_controls": [
+          [
+            200.4897470226667,
+            1.9098960297216079
+          ],
+          [
+            201.495756136,
+            1.9142443823025046
+          ],
+          [
+            202.4995422115555,
+            1.9454586131022065
+          ],
+          [
+            203.50098838488884,
+            2.0057011202821897
+          ],
+          [
+            204.500109272,
+            2.0958207244775675
+          ],
+          [
+            205.49683973333333,
+            2.2129457752239112
+          ],
+          [
+            206.502193052,
+            2.3587133576556747
+          ],
+          [
+            207.5049678848889,
+            2.53286597686956
+          ],
+          [
+            208.50519549155553,
+            2.730546306412483
+          ],
+          [
+            209.50303285600003,
+            2.9550891059491335
+          ],
+          [
+            210.49857408266666,
+            3.2009746585924637
+          ],
+          [
+            211.50229800800003,
+            3.4729338490675374
+          ],
+          [
+            212.50389620622218,
+            3.7714218153961143
+          ],
+          [
+            213.50357968222227,
+            4.090535177219334
+          ],
+          [
+            214.50167606,
+            4.437440065210316
+          ],
+          [
+            215.49847105066667,
+            4.806418768985554
+          ],
+          [
+            216.50405730400004,
+            5.206810138286199
+          ],
+          [
+            217.5089428595556,
+            5.6422951443595695
+          ],
+          [
+            242.4910571404444,
+            5.642295144359156
+          ],
+          [
+            243.49594269599996,
+            5.206810138285982
+          ],
+          [
+            244.50152894933336,
+            4.806418768985404
+          ],
+          [
+            245.49832394,
+            4.437440065210316
+          ],
+          [
+            246.49642031777782,
+            4.090535177220179
+          ],
+          [
+            247.49610379377776,
+            3.771421815395928
+          ],
+          [
+            248.49770199199997,
+            3.4729338490695802
+          ],
+          [
+            249.50142591733334,
+            3.2009746585923478
+          ],
+          [
+            250.49696714400005,
+            2.9550891059472475
+          ],
+          [
+            251.49480450844436,
+            2.730546306412631
+          ],
+          [
+            252.4950321151111,
+            2.532865976870986
+          ],
+          [
+            253.49780694799998,
+            2.358713357655503
+          ],
+          [
+            254.50316026666664,
+            2.2129457752238397
+          ],
+          [
+            255.499890728,
+            2.095820724477958
+          ],
+          [
+            256.4990116151111,
+            2.005701120282123
+          ],
+          [
+            257.50045778844446,
+            1.945458613102525
+          ],
+          [
+            258.504243864,
+            1.9142443823020878
+          ],
+          [
+            259.49830792800003,
+            1.9098960297214818
+          ],
+          [
+            260.0,
+            1.921929400135483
+          ]
+        ],
+        "nominal_meridian_chord_target_mm": 0.045,
+        "shell_h": 6.0,
+        "bond_h": 3.0,
+        "root_h": 0.18,
+        "scope": "Same BREP/materials. Explicit torus-boundary segmentation removes under-resolved transverse fillet chords; not a fully swept/multiblock layer topology.",
+        "source_sha256": "5d0d977a0a8e5ebe5003fca9151f81afbadf1ed80f65773ef4f934bafc324e4c",
+        "partition_sha256": "1ae3997d16957aab08a609949b53a0880b51cc94b57c869d463ef538df3023b1",
+        "frontal_part_ids": [
+          7,
+          8
+        ],
+        "root_size_growth_per_mm": 0.6,
+        "adjacent_outer_ply_root_band": true,
+        "adjacent_outer_ply_root_h_mm": 0.85,
+        "thin_layer_chord_target_mm": 0.015,
+        "thin_layer_curvature_sizes": [
+          [
+            200.4897470226667,
+            1.102678986883968
+          ],
+          [
+            201.495756136,
+            1.10518950941708
+          ],
+          [
+            202.4995422115555,
+            1.123211053971835
+          ],
+          [
+            203.50098838488884,
+            1.1579920817088563
+          ],
+          [
+            204.500109272,
+            1.21002265945032
+          ],
+          [
+            205.49683973333333,
+            1.2776448390275703
+          ],
+          [
+            206.502193052,
+            1.3618037919836699
+          ],
+          [
+            207.5049678848889,
+            1.462350853566885
+          ],
+          [
+            208.50519549155553,
+            1.5764816450419852
+          ],
+          [
+            209.50303285600003,
+            1.7061214907990627
+          ],
+          [
+            210.49857408266666,
+            1.8480835808075295
+          ],
+          [
+            211.50229800800003,
+            2.0050992926369062
+          ],
+          [
+            212.50389620622218,
+            2.1774314003465736
+          ],
+          [
+            213.50357968222227,
+            2.3616715856972164
+          ],
+          [
+            214.50167606,
+            2.561957216162006
+          ],
+          [
+            215.49847105066667,
+            2.7749871701118796
+          ],
+          [
+            216.50405730400004,
+            3.0061532349588096
+          ],
+          [
+            217.5089428595556,
+            3.2575806204433158
+          ],
+          [
+            218.50404354044446,
+            3.52689413653208
+          ],
+          [
+            219.4995358471111,
+            3.817017717506215
+          ],
+          [
+            220.49596755288886,
+            4.138471688577915
+          ],
+          [
+            221.49387490000004,
+            4.492254440469046
+          ],
+          [
+            222.493886668,
+            4.895617218714983
+          ],
+          [
+            223.4966313928889,
+            5.357090800605962
+          ],
+          [
+            224.50282285511113,
+            5.911188322271171
+          ],
+          [
+            235.4971771448889,
+            5.911188322269779
+          ],
+          [
+            236.5033686071111,
+            5.357090800605446
+          ],
+          [
+            237.506113332,
+            4.895617218714218
+          ],
+          [
+            238.50612509999996,
+            4.492254440467245
+          ],
+          [
+            239.50403244711114,
+            4.138471688577919
+          ],
+          [
+            240.50046415288887,
+            3.817017717505465
+          ],
+          [
+            241.49595645955557,
+            3.526894136532947
+          ],
+          [
+            242.4910571404444,
+            3.2575806204430764
+          ],
+          [
+            243.49594269599996,
+            3.0061532349586844
+          ],
+          [
+            244.50152894933336,
+            2.774987170111793
+          ],
+          [
+            245.49832394,
+            2.561957216162006
+          ],
+          [
+            246.49642031777782,
+            2.361671585697704
+          ],
+          [
+            247.49610379377776,
+            2.177431400346466
+          ],
+          [
+            248.49770199199997,
+            2.0050992926380853
+          ],
+          [
+            249.50142591733334,
+            1.8480835808074625
+          ],
+          [
+            250.49696714400005,
+            1.7061214907979738
+          ],
+          [
+            251.49480450844436,
+            1.576481645042071
+          ],
+          [
+            252.4950321151111,
+            1.4623508535677083
+          ],
+          [
+            253.49780694799998,
+            1.3618037919835706
+          ],
+          [
+            254.50316026666664,
+            1.2776448390275288
+          ],
+          [
+            255.499890728,
+            1.2100226594505454
+          ],
+          [
+            256.4990116151111,
+            1.1579920817088176
+          ],
+          [
+            257.50045778844446,
+            1.1232110539720188
+          ],
+          [
+            258.504243864,
+            1.1051895094168394
+          ],
+          [
+            259.49830792800003,
+            1.1026789868838949
+          ],
+          [
+            260.0,
+            1.1096264565316771
+          ]
+        ],
+        "smooth_port_face_h_mm": 2.0,
+        "chord_scope": "Linear boundary sizing heuristic only. Actual curved CAD-distance, Jacobian, SICN, material-volume and GPU resource criteria remain unchanged; torus .25mm boundary/surface controls retained.",
+        "port_curve_repair": true,
+        "narrow_annuli": [
+          {
+            "surface": 49,
+            "width_2A_over_P_mm": 0.09999999999999419,
+            "target_edge_mm": 0.39999999999997676,
+            "curves": [
+              74,
+              77
+            ]
+          },
+          {
+            "surface": 89,
+            "width_2A_over_P_mm": 0.10000000000001613,
+            "target_edge_mm": 0.4000000000000645,
+            "curves": [
+              145,
+              148
+            ]
+          },
+          {
+            "surface": 134,
+            "width_2A_over_P_mm": 0.09999999999999419,
+            "target_edge_mm": 0.39999999999997676,
+            "curves": [
+              230,
+              135
+            ]
+          },
+          {
+            "surface": 158,
+            "width_2A_over_P_mm": 0.09999999999997625,
+            "target_edge_mm": 0.399999999999905,
+            "curves": [
+              195,
+              270
+            ]
+          }
+        ],
+        "partial_circle_controls": [
+          {
+            "curve": 105,
+            "length_mm": 23.038346126325422,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.04719755119661,
+            "segments": 14
+          },
+          {
+            "curve": 106,
+            "length_mm": 23.038346126324758,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511965799,
+            "segments": 14
+          },
+          {
+            "curve": 107,
+            "length_mm": 23.0383461263252,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511966,
+            "segments": 14
+          },
+          {
+            "curve": 108,
+            "length_mm": 23.03834612632519,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511965996,
+            "segments": 14
+          },
+          {
+            "curve": 109,
+            "length_mm": 23.03834612632499,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511965903,
+            "segments": 14
+          },
+          {
+            "curve": 110,
+            "length_mm": 23.038346126325415,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511966098,
+            "segments": 14
+          },
+          {
+            "curve": 151,
+            "length_mm": 57.17698629533417,
+            "true_radius_mm": 18.2,
+            "sweep_radians": 3.1415926535897896,
+            "segments": 40
+          },
+          {
+            "curve": 152,
+            "length_mm": 57.176986295334174,
+            "true_radius_mm": 18.2,
+            "sweep_radians": 3.1415926535897896,
+            "segments": 40
+          },
+          {
+            "curve": 161,
+            "length_mm": 57.176986295334174,
+            "true_radius_mm": 18.2,
+            "sweep_radians": 3.1415926535897896,
+            "segments": 40
+          },
+          {
+            "curve": 162,
+            "length_mm": 57.17698629533417,
+            "true_radius_mm": 18.2,
+            "sweep_radians": 3.1415926535897896,
+            "segments": 40
+          },
+          {
+            "curve": 178,
+            "length_mm": 23.0383461263252,
+            "true_radius_mm": 21.999999999999996,
+            "sweep_radians": 1.0471975511966003,
+            "segments": 14
+          },
+          {
+            "curve": 179,
+            "length_mm": 23.0383461263252,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511966,
+            "segments": 14
+          },
+          {
+            "curve": 180,
+            "length_mm": 23.038346126324978,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511965899,
+            "segments": 14
+          },
+          {
+            "curve": 181,
+            "length_mm": 23.03834612632519,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511965996,
+            "segments": 14
+          },
+          {
+            "curve": 182,
+            "length_mm": 23.038346126325198,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511965999,
+            "segments": 14
+          },
+          {
+            "curve": 183,
+            "length_mm": 23.0383461263252,
+            "true_radius_mm": 22.0,
+            "sweep_radians": 1.0471975511966,
+            "segments": 14
+          },
+          {
+            "curve": 185,
+            "length_mm": 57.17698629533417,
+            "true_radius_mm": 18.2,
+            "sweep_radians": 3.1415926535897896,
+            "segments": 40
+          },
+          {
+            "curve": 186,
+            "length_mm": 57.176986295334174,
+            "true_radius_mm": 18.2,
+            "sweep_radians": 3.1415926535897896,
+            "segments": 40
+          },
+          {
+            "curve": 197,
+            "length_mm": 57.176986295334174,
+            "true_radius_mm": 18.2,
+            "sweep_radians": 3.1415926535897896,
+            "segments": 40
+          },
+          {
+            "curve": 198,
+            "length_mm": 57.17698629533417,
+            "true_radius_mm": 18.2,
+            "sweep_radians": 3.1415926535897896,
+            "segments": 40
+          }
+        ],
+        "local_accuracy_regions_mm": [
+          {
+            "parts": [
+              9
+            ],
+            "radius_mm": 25.323605645688293,
+            "z_mm": 247.09489050962785,
+            "h_min_mm": 0.65,
+            "plateau_mm": 1.0,
+            "growth_per_mm": 1.0
+          },
+          {
+            "parts": [
+              10
+            ],
+            "radius_mm": 25.331775201764064,
+            "z_mm": -247.09576353216698,
+            "h_min_mm": 0.65,
+            "plateau_mm": 1.0,
+            "growth_per_mm": 1.0
+          }
+        ],
+        "max_surface_nodes": 700000
+      },
+      "mesh/surface_quality_review.json": {
+        "min_SICN": 0.13588718204561143,
+        "original_threshold": 0.05,
+        "bad_faces": [],
+        "passed": true,
+        "scope": "Actual retained linear2D checkpoint, before volume generation. Final curved surface gate still required."
+      },
+      "mesh/stages.json": [
+        {
+          "stage": "surface_generated",
+          "seconds": 18.321619489000113,
+          "nodes": 428292
+        },
+        {
+          "stage": "selected_Delaunay_generated",
+          "seconds": 76.82192860800001,
+          "part_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            9,
+            10,
+            14,
+            18
+          ]
+        },
+        {
+          "stage": "selected_Frontal_generated",
+          "seconds": 112.05751506399997,
+          "part_ids": [
+            7,
+            8
+          ]
+        },
+        {
+          "stage": "linear_generated",
+          "seconds": 113.38550913600011,
+          "cells": 1993427,
+          "min_J": 1.1958614397135554e-05,
+          "nonpositive": 0,
+          "min_SICN": 0.00036774660556990115,
+          "below_005": 157
+        },
+        {
+          "stage": "straight_order2_canonicalized",
+          "seconds": 137.70433052299995,
+          "cells": 1993427,
+          "min_J": 1.1958614360439071e-05,
+          "nonpositive": 0,
+          "min_SICN": 0.00036774660489572304,
+          "below_005": 157
+        },
+        {
+          "stage": "linear_checkpoint",
+          "seconds": 140.61486602900004,
+          "cells": 1993427,
+          "min_J": 1.1958614397135554e-05,
+          "nonpositive": 0,
+          "min_SICN": 0.00036774660556990115,
+          "below_005": 157
+        }
+      ],
+      "status": "meshing"
     },
     {
       "attempt": "attempt064_scaled_template58_linear",
@@ -170357,21 +172398,36 @@
       "candidate": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt085_two_cell_patch84",
       "candidate_FE_validation_allowed": true,
       "original_volume_SICN_target_passed": true
+    },
+    "worker86_progress": {
+      "pid": 23684,
+      "started": "2026-10-27T12:22:29.576070+08:00",
+      "status": "active",
+      "config": "data\\copv\\c04_repair_v3\\worker86_config.json",
+      "new_FE_labels": 0,
+      "new_production_labels": 0,
+      "case_id": "copv_c04_0000",
+      "phase": "attempt086_local_accuracy",
+      "seconds": 0.02059929999813903,
+      "updated": "2026-10-27T12:22:29.576070+08:00"
     }
   },
   "explanation": "Candidate validity, CAD distance, volume and production shape gates are separate. No failed ID is replaced. Original viewers retain their true 3D BC/load switches. Attempt013 old preflight is superseded by its explicit local_geometry_hold and must not enter GPU.",
   "latest_update": {
-    "updated": "2026-10-27T04:02:09.720684+00:00",
-    "summary": "0000/058真实8阶GPU-P2完整场已完成，含原生核验887秒；6/8比较显示最大节点位移差4.44e-7mm、材料应力体积L2相对差最大0.00392%。三维查看器已新增6/8切换并通过本地QA。085同几何敏感性8阶正在本地5090运行；当前新增2份积分场仍仅1个独立几何，生产0。",
+    "updated": "2026-10-27T04:25:15.031999+00:00",
+    "summary": "0000基准与085的三份真实GPU字段均已完成，6/8积分差异很小；同几何网格比较却发现下端钛通口应力采样相对L2差51.8%，不能确认局部应力收敛，生产继续0。235探针全部原位匹配，085自检504GP通过。保留全部结果，正在新086/087候选中验证局部加密，不替换原ID。",
     "paragraphs": [
       "四个原目标ID0000/058、0011/063、0002/081、0018/078已通过全部原网格筛查并独立冻结；各自实际全网格最小SICN约0.0500077、0.0500170、0.0500547、0.0500217，低质单元均为0。实际CAD、表面、逐材料GP-J体积、共享Tri6、单连通、真实Tri6载荷及GPU容量均通过。原20输入/18研究场/2失败/生产0历史完整保留，失败ID和旧版本未替换。网格通过不能自动当作生产放行。",
       "0000/058 q6已完成734.78秒，原生数据保持不可变。新增q8 attempt004经五次间隔2秒采样通过后启动，完成整个队列原生核验耗时887.18秒，求解器本体809.35秒、峰值线性求解317.81秒。真实CUDA seqaijcusparse/seqcuda、2150456曲边P2单元/9946329自由度，8阶装配45点，真实相对残差1.00761835e-10、能量/外功误差1.15384591e-10。原14GP局部/全局应力、实际GP坐标权重、原节点、实际载荷及6锁定分量全部保存并通过ID/有限值核验。",
       "真实同网格6/8全场比较已执行17.75秒：原节点/单元ID、14GP坐标和权重、四类实际节点载荷、6个锁定分量全部一致，GP坐标和节点载荷差均为0。最大节点位移向量差4.4392336e-7mm；节点位移无权L2相对差1.1292177e-7(此量不是有限元体积范数)。能量相对差2.1080072e-8，逐材料应力张量体积L2相对差最大3.9215137e-5，约0.00392%，剪切分量按对称张量范数计双权。8阶只是比较参考而非真值，这说明该精确网格上的积分阶数差异较小，不能替代网格/局部应力敏感性或直接放行生产。",
       "原q8 attempts001/002/003全部保留，分别因资源保护中止，无完整场、无数值发散证据。用户将利用率门槛从10%明确改为30%，独立gpu_utilization_30_amendment_v1和V4冻结记录证明仅资源util literal变化，数值物理、FP64、容差、内存/显存门槛不改。q6的V3、全部旧run和旧执行合同不可变；比较器逐run核对完整合同及source SHA，再核对相同物理输入与唯一资源literal修订。旧合同遗留P1/直边描述的勘误独立记录，实际执行命令/冻结源/summary/raw均真实曲边P2。",
       "q8显示数据已从真实原生场独立导出并核对实际节点载荷；在软件WebGL中通过6阶→8阶双向切换、位移/纤维应力、三维实体BC/压力箭头、模型旋转、剖面裁剪和网格开关检查，并人工检查四张参考图。显示6个实际约束分量、28个真实Tri6中心压力方向采样及上下端口积分端力。箭头随模型转动、没有白框；裁剪不生成仿射插值填面。q6压缩数据逐文件SHA保持不变，原18个研究查看器和生产访问guard保持。",
-      "同几何085敏感性网格有1965041单元/3030014节点=9090042自由度，比基准058约少8.62%单元。保留同一原始CAD/材料/载荷及0.25mm最小根部尺寸，仅将根部细网格平台0.75→0.5mm、增长率0.4→0.6。其全部原实际筛查已通过，逐材料体积最大误差0.0270004%，最小SICN0.0500077。085的真实8阶算例在主0000/058完整验证完成后单通道启动，当前运行中，没有085完整字段或跨网格结果；它是同一几何的网格变体，不能算第五个独立几何。",
       "网格比较器已用真实q6的504GP核对P2反解/位移梯度/应力重建，源hash锁定；首次反解容差验证失败也保留。公共物理探针计划已冻结：每材料4个确定性单元内部GP采样，加上从基准q8全部单元扫描得到的每材料前三个内部应力峰值点(碳纤维按|σ11|，其他材料按von Mises)。不根据085差异择点；实际同材料二次包含反解后比较，保留未定位和单元边界梯度歧义探针ID/理由，不最近GP替代、不换点或填零。报告原位移差及6自由度刚体对齐差、点应力采样范数(不是体积L2)、能量和原始GP峰值诊断。两个非均匀网格不能证明h极限或峰值收敛。",
-      "当前新增GPU字段变体为0000同一原始几何的q6和q8两份，独立完成GPU几何ID仍只有0000。085完成后继续0011/0002/0018各自冻结网格及自身合同的6/8单通道验证，再做跨几何分析和最终网站交付。按最新安排，C04使用本地RTX5090，V100留给最后TS3/网络训练，本轮不提交远端C04迁移、不启动TS3。所有生产资格保持false。"
+      "085真实8阶场已完成：队列原生核验680.75秒，求解器620.36秒，真实相对残差9.9131e-11、能量/外功误差1.6419e-10。1965041单元、9090042自由度；它与058是同一原始CAD的两套数值网格，不增加独立几何数量。现在新增GPU字段变体共3份(058q6、058q8、085q8)，独立完成GPU几何仍只有0000，所有生产资格为false。",
+      "实际同几何网格比较耗时约5.7秒，235/235公共物理探针全部匹配、无替换和零填充；能量相对差7.3344e-6，刚体对齐后最大探针位移差2.9684e-5mm。但是，下端钛通口part10的应力张量采样相对L2差约51.8%，part6/7/8约7.78%/9.51%/10.78%，part9约7.37%；这些是公共点采样范数，不是体积范数。最大单分量差23.27MPa，原生热点ID/坐标和全部235组比较值完整保留。整体能量与原始GP峰值稳定并不能抵消局部差异，不能宣称局部应力已收敛。",
+      "针对新出现的局部差异，额外核对了085自身原始14GP：12材料分区各3个单元共504点，P2反解/梯度应力重建相对差5.369e-12、最大单分量误差1.608e-9MPa，核对通过。原始字段未改变，首次验证及描述标签勘误也独立保留。局部应力hold是生产/点应力准确性暂缓验收，不是CAD/网格有效性失败，不删除正确的隔离GPU场。",
+      "新086/087局部精度候选使用同一个原始CAD/材料/载荷：补强最小网格0.25→0.18mm，细网格平台缩至0.25mm以控制总规模；上下钛通口在实际热点半径约25.33mm、轴向约±247.095mm附近设置0.65mm目标的环带局部网格，并同步圆弧分段。保留主体6mm、薄层弦尺寸0.015mm、圆角0.25mm和实际曲边检查。当前只启动一条有界CPU线，实际成本、质量和应力改善尚未得出，不保证通过；原SICN0.05、材料体积0.1%、实际CAD/接口/载荷、GPU2.2M单元/10M自由度上限不放宽。",
+      "0011/0002/0018后续真实GPU验证仍待推进；最新一次GPU稳定采样出现33%/31%超过用户30%门槛，未启动新GPU作业。若CPU局部网格线仍占用主机内存，GPU启动继续检查原RAM保护。按最新安排本地5090用于C04，V100留给最后TS3/网络训练，本轮不迁移远端C04、不启动TS3；原20/18/2/0历史和全部失败版本不改。"
     ]
   },
   "same_mesh_quadrature_comparison": {
@@ -170577,17 +172633,94 @@
       "scope": "Full executed sources match except the authorized GPU utilization guard 10% to 30%; numerical code is byte-identical."
     }
   },
+  "local_stress_sensitivity_hold": {
+    "schema": "c04_local_stress_sensitivity_hold_v1",
+    "created": "2026-10-27T04:22:29.429747+00:00",
+    "case_id": "copv_c04_0000",
+    "baseline": "attempt058_two_cell_patch56",
+    "variant": "attempt085_two_cell_patch84",
+    "comparison_sha256": "24f5d0cdf62bf6b7b924bf72540ad40752f2f26e7d0aee8ce6fbcb67817492e8",
+    "matched_probe_IDs": 235,
+    "failed_probe_IDs": 0,
+    "energy_relative_difference": 7.334398397951247e-06,
+    "part10_tensor_sample_relative_L2": 0.5180009443873418,
+    "hotspots": [
+      {
+        "part_id": 6,
+        "probe_id": "p6-cell2143442-GP6",
+        "xyz_mm": [
+          -64.44910962791808,
+          -11.21960084773479,
+          231.11096373711808
+        ],
+        "baseline_native_cell_id": 2143442,
+        "variant_native_cell_id": 1978108,
+        "max_stress_component_difference_MPa": 13.39407935965987
+      },
+      {
+        "part_id": 7,
+        "probe_id": "p7-cell2925461-GP9",
+        "xyz_mm": [
+          52.2123014100735,
+          -39.392668167547924,
+          231.1487236807041
+        ],
+        "baseline_native_cell_id": 2925461,
+        "variant_native_cell_id": 2712623,
+        "max_stress_component_difference_MPa": 10.557545208932211
+      },
+      {
+        "part_id": 8,
+        "probe_id": "p8-cell2990064-GP6",
+        "xyz_mm": [
+          24.430358240982642,
+          60.65156809328144,
+          -231.15674476277135
+        ],
+        "baseline_native_cell_id": 2990064,
+        "variant_native_cell_id": 2785018,
+        "max_stress_component_difference_MPa": 21.86749284727516
+      },
+      {
+        "part_id": 9,
+        "probe_id": "p9-cell2427867-GP6",
+        "xyz_mm": [
+          -6.342635267427363,
+          -24.51644306914693,
+          247.09489050962785
+        ],
+        "baseline_native_cell_id": 2427867,
+        "variant_native_cell_id": 2255158,
+        "max_stress_component_difference_MPa": 2.1191856044094877
+      },
+      {
+        "part_id": 10,
+        "probe_id": "p10-cell2541674-GP7",
+        "xyz_mm": [
+          7.38700149883995,
+          24.23078710502086,
+          -247.09576353216698
+        ],
+        "baseline_native_cell_id": 2541674,
+        "variant_native_cell_id": 2464362,
+        "max_stress_component_difference_MPa": 23.268457846148184
+      }
+    ],
+    "variant_native_GP_reconstruction_check": 5.369214923847162e-12,
+    "hold_scope": "Production/local point-stress accuracy remains unresolved. This is NOT a mesh-validity/CAD hold and does not invalidate the complete quarantined GPU fields. Preserve all comparison values and probe IDs. Global energy or extrema cannot substitute for local stress accuracy.",
+    "production_eligible": false
+  },
   "new_screened_mesh_geometry_IDs": [
     "copv_c04_0000",
     "copv_c04_0002",
     "copv_c04_0011",
     "copv_c04_0018"
   ],
-  "new_GPU_field_variants": 2,
+  "new_GPU_field_variants": 3,
   "new_unique_GPU_geometry_IDs": [
     "copv_c04_0000"
   ],
-  "GPU_queue_status": "running",
+  "GPU_queue_status": "waiting_resources",
   "GPU_queues": [
     {
       "case_id": "copv_c04_0000",
@@ -170598,8 +172731,8 @@
     {
       "case_id": "copv_c04_0000",
       "candidate": "data/copv/c04_repair_v3/copv_c04_0000/attempt085_two_cell_patch84",
-      "status": "running",
-      "new_FE_labels": 0
+      "status": "completed_candidate_validation",
+      "new_FE_labels": 1
     },
     {
       "case_id": "copv_c04_0002",
