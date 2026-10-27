@@ -1,0 +1,57 @@
+{
+  "created": "2026-10-27T04:51:55.381091+00:00",
+  "failed_faces": [
+    {
+      "surface": 92,
+      "type": "Torus",
+      "part_ids": [
+        10
+      ],
+      "nodes": 17213,
+      "triangles": 7928,
+      "max_node_CAD_distance_mm": 0.021387971860554703,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 0.003633119814954334,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.3502879904987563,
+      "below_005": 0,
+      "passed": false
+    },
+    {
+      "surface": 96,
+      "type": "Torus",
+      "part_ids": [
+        10
+      ],
+      "nodes": 24465,
+      "triangles": 11118,
+      "max_node_CAD_distance_mm": 0.021467457647535024,
+      "sampled_interior_points": 512,
+      "max_sampled_interior_CAD_distance_mm": 7.750795805001945e-05,
+      "project_screen_tolerance_mm": 0.015,
+      "min_surface_SICN": 0.504361426896053,
+      "below_005": 0,
+      "passed": false
+    }
+  ],
+  "repaired_face56": {
+    "surface": 56,
+    "type": "Torus",
+    "part_ids": [
+      9
+    ],
+    "nodes": 47677,
+    "triangles": 22724,
+    "max_node_CAD_distance_mm": 0.00626265639476429,
+    "sampled_interior_points": 512,
+    "max_sampled_interior_CAD_distance_mm": 1.4871712146697284e-05,
+    "project_screen_tolerance_mm": 0.015,
+    "min_surface_SICN": 0.598235728412943,
+    "below_005": 0,
+    "passed": true
+  },
+  "geometry_review_sha256": "d9f8808e585289802de1c1c120541f3f517e32ce6857605e8c51f0bcfb04ce75",
+  "preflight_sha256": "0d40d35c289bfd5e2f5b279fabcbf5a47b771b68ff75dcab4cdf4364b7a14acc",
+  "GPU_allowed": false,
+  "reason": "Upper torus56 CAD screen now passes. Lower titanium torus92/96 still off CAD after guarded curving. Restore those boundary maps before any fixed-boundary interior quality optimization. All original attempts retained."
+}

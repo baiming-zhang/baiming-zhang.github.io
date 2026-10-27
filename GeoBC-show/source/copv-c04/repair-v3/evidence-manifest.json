@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T12:38:12.744050+08:00",
+  "updated": "2026-10-27T12:52:32.142136+08:00",
   "files": {
     "attempt001/mesh/failure.json": {
       "bytes": 263,
@@ -1350,16 +1350,60 @@
       "sha256": "daa7bbdc9767759ee15b53534d358fdbe38fc835a96c9eb5d871ba52f984e625"
     },
     "attempt088_torus56_refined/mesh/stages.json": {
-      "bytes": 101,
-      "sha256": "1fb2c55cdd11e8e5618c4d6629be547ef823718363a5e2c32df1d64792559efe"
+      "bytes": 1939,
+      "sha256": "fc65648401f7b4e8315b8ed14d1bb3963d95b2d77962aef981f37ae3b1c6b819"
     },
     "attempt088_torus56_refined/mesh/surface_quality_review.json": {
       "bytes": 224,
       "sha256": "74568fdf0f60e6039e7828b185f29fe95780d6dbccd78681c29d3ab1e85577ad"
     },
     "attempt088_torus56_refined/state.json": {
-      "bytes": 947,
-      "sha256": "c2183e664f7274eb87f388280a6ea022f1c9a2592dcd18a65f4534dad199b233"
+      "bytes": 1540,
+      "sha256": "41040f4cf92da2519d07d3249908100633098282c4fb01438fdec8584fe43fbb"
+    },
+    "attempt089_curved_torus56_refined/curving_guard_policy.json": {
+      "bytes": 341,
+      "sha256": "8ac3a66a0f1c9a5268fd1d0d422725c8746f83aef468d46dbe32ac382675f3c1"
+    },
+    "attempt089_curved_torus56_refined/geometry_check/review.json": {
+      "bytes": 100366,
+      "sha256": "d9f8808e585289802de1c1c120541f3f517e32ce6857605e8c51f0bcfb04ce75"
+    },
+    "attempt089_curved_torus56_refined/local_geometry_hold_v1.json": {
+      "bytes": 1882,
+      "sha256": "5d36375b1e5e8c0b929abea0ffae6f6a3b5fce22a164ab0e1bcd654c64ff469d"
+    },
+    "attempt089_curved_torus56_refined/preflight/review.json": {
+      "bytes": 1522,
+      "sha256": "0d40d35c289bfd5e2f5b279fabcbf5a47b771b68ff75dcab4cdf4364b7a14acc"
+    },
+    "attempt089_curved_torus56_refined/projection_summary.json": {
+      "bytes": 562,
+      "sha256": "4cbf685f1315d7dd697d795487f9034d9bb87e199129a41a1d3b988397e4350f"
+    },
+    "attempt089_curved_torus56_refined/result.json": {
+      "bytes": 3489,
+      "sha256": "446af97d3c817f6e4ac5d292acdbc63b68c3b79df234074b0e9dc6af8f8a4eef"
+    },
+    "attempt089_curved_torus56_refined/stages.json": {
+      "bytes": 701,
+      "sha256": "e2d9ec3d74b042e8e2304167db807ec2fb0aab9ee7b05cae6fde0a2fb12f16b1"
+    },
+    "attempt090_lower_tori_refined/mesh/recipe.json": {
+      "bytes": 39368,
+      "sha256": "047038b433242dc28df85f7b52a1f51ec5f02d74f77b29955731136f5767f7d9"
+    },
+    "attempt090_lower_tori_refined/mesh/stages.json": {
+      "bytes": 101,
+      "sha256": "6b3a5b90c749a3aa6a8d918f75c23d9b12106ca23c0a56926b2ddc2fcb0c8e98"
+    },
+    "attempt090_lower_tori_refined/mesh/surface_quality_review.json": {
+      "bytes": 224,
+      "sha256": "74568fdf0f60e6039e7828b185f29fe95780d6dbccd78681c29d3ab1e85577ad"
+    },
+    "attempt090_lower_tori_refined/state.json": {
+      "bytes": 953,
+      "sha256": "f71cb080c31b03b0d9f3e9a763024dc8b9980386dcfbab9acffa56a074c4a20d"
     },
     "compact_frame_validation_v1/helper_identity.json": {
       "bytes": 363,
@@ -1777,6 +1821,10 @@
       "bytes": 2614,
       "sha256": "594b97af48bdcd5200e52023acf74ba059e6540de816fe5e61f93defc14325f9"
     },
+    "same_geometry_mesh_sensitivity_v1/lower_tori_repair_design_v1.json": {
+      "bytes": 922,
+      "sha256": "0a2681a3a89319b1385f28a3d71400c180d4291b659c8eca009beb58e93acae2"
+    },
     "same_geometry_mesh_sensitivity_v1/probe_sampling_addendum_v1.json": {
       "bytes": 678,
       "sha256": "77f64d9f5b0332e44e0c9c99db6e95fea4055072b4d0c6f1d31884fa18b1b9c5"
@@ -1924,6 +1972,10 @@
     "tools/prepare_c04_torus88.py": {
       "bytes": 3188,
       "sha256": "1abff18e39c4f9789f4929b51b8d8a8bcae6ac4543ea19bd9ace4486f5f02878"
+    },
+    "tools/prepare_c04_torus90.py": {
+      "bytes": 2787,
+      "sha256": "2746aeadfa160fd00dc7f60fbba6a6076dc74acbf0146207de835baf7d8400bc"
     },
     "tools/promote_c04_curved_q8_viewer.py": {
       "bytes": 1978,
@@ -2080,6 +2132,10 @@
     "worker88_config.json": {
       "bytes": 1820,
       "sha256": "62d9c631f5bb404dba97395f5c5571ec4ab22df6ad77161f6e4e4e39d86fea15"
+    },
+    "worker90_config.json": {
+      "bytes": 1719,
+      "sha256": "e05fdee55ffdf4bc48592b520122cb789568ad170d36edb7b12f694becd7b223"
     }
   }
 }
