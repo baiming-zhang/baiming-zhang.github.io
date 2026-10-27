@@ -1,0 +1,19 @@
+{
+  "schema": "c04_GPU_resource_interruption_v1",
+  "created": "2026-10-27T08:18:59.827880+08:00",
+  "degree": 8,
+  "failed_run": "data\\copv\\c04_repair_v3\\copv_c04_0000\\attempt058_two_cell_patch56\\GPU_q8_attempt001",
+  "resource_stage": "before_assembly",
+  "actual_resources": {
+    "stage": "before_assembly",
+    "host_available_bytes": 26809147392,
+    "host_required_bytes": 4366754240,
+    "GPU_free_MiB": 29200,
+    "GPU_utilization_percent": 74,
+    "GPU_required_MiB": 24576
+  },
+  "reason": "GPU utilization exceeded unchanged idle guard after the CPU/domain preparation. Host RAM and GPU free-memory gates passed. No completed q8 field.",
+  "numerical_divergence_observed": false,
+  "completed_q6_retained": true,
+  "retry_policy": "Wait for original resource gates; NEW q8 attempt002 only, never overwrite attempt001 or rerun completed q6. No GPU/host guard or source changes."
+}
