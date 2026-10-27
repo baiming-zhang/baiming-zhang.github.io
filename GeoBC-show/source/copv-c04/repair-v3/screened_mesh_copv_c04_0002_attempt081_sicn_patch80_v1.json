@@ -1,0 +1,30 @@
+{
+  "schema": "c04_screened_mesh_v1",
+  "created": "2026-10-27T09:44:03.051004+08:00",
+  "case_id": "copv_c04_0002",
+  "candidate": "data/copv/c04_repair_v3/copv_c04_0002/attempt081_sicn_patch80",
+  "mesh_sha256": "89e58568bc63e80a117f44cafc4681f5c7641d2a2936e090b94090133856ca50",
+  "original_mesh_screen_passed": true,
+  "production_eligible": false,
+  "GPU_status": "not_started",
+  "evidence_sha256": {
+    "data/copv/c04_repair_v3/copv_c04_0002/attempt081_sicn_patch80/mesh/mesh.npz": "89e58568bc63e80a117f44cafc4681f5c7641d2a2936e090b94090133856ca50",
+    "data/copv/c04_repair_v3/copv_c04_0002/attempt081_sicn_patch80/preflight/review.json": "6c03270d864f124e7fe98f0ba5d8afcb4720ebecd7ff80f5659125b5d7d35258",
+    "data/copv/c04_repair_v3/copv_c04_0002/attempt081_sicn_patch80/geometry_check/review.json": "9403814d837762832d48c99e537edf8a653f6f5d9f58d002c7d073830ebec998",
+    "data/copv/c04_repair_v3/copv_c04_0002/attempt081_sicn_patch80/result.json": "b55c996c0b72e85e4a31e1dad167cc752d1ff36f5ca5e051cb1d4ae651874148",
+    "data/copv/c04_repair_v3/worker79_config.json": "877676eb7e9c8b6e1f65492c79f0485fb8a014891ced89dc127f27c0c08b2d38",
+    "data/copv/c04_repair_v3/worker81_config.json": "02e883c97bcb6511280ae3a9e3eae6ee1773eb22021e43ec2a5e55fb44f4c062",
+    "notes/c04_shape_objective.py": "f9a43898baf3e6e284ffb7cd8f86e4ae03948fa6d41208792618774f4a55e032",
+    "data/copv/c04_repair_v3/sicn_objective_validation_v1/review.json": "754b70fb27bb0a168f24432b2d4e8243d12a3f44118e3f422a2a0a433b744efd"
+  },
+  "original_quality_targets": {
+    "surface_min_SICN": 0.05,
+    "volume_min_SICN": 0.05,
+    "total_volume_relative_error_max": 0.001,
+    "material_region_volume_relative_error_max": 0.001,
+    "positive_Jacobians": true,
+    "one_connected_component": true,
+    "shared_Tri6_interfaces": true
+  },
+  "scope": "Exact original-ID mesh screening only; actual GPU fields and same-geometry sensitivity pending. Active GPU queue and original history untouched."
+}

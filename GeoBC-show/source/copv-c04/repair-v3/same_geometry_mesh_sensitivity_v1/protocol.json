@@ -1,0 +1,32 @@
+{
+  "schema": "c04_same_geometry_mesh_sensitivity_v1",
+  "created": "2026-10-27T10:01:26.693653+08:00",
+  "case_id": "copv_c04_0000",
+  "baseline": "attempt058_two_cell_patch56",
+  "variant_lineage": [
+    "attempt082_same_geometry_root_coarsening",
+    "attempt083_curved_root_coarsening",
+    "attempt084_sicn_patch83"
+  ],
+  "scope": "Nonuniform root-mesh sensitivity only. Baseline root plateau .75mm/growth .4 changes to .5mm/.6, preserving minimum root/fillet .25mm and every CAD/material/load input. Not uniform h-refinement or proof of point-peak convergence.",
+  "mesh_screens": "Every original SICN .05, positiveJ, actual CAD, each-material GP-J volume .1%, sharedTri6, connectivity, actual loads and GPU capacity gate must pass before GPU.",
+  "GPU": {
+    "reference_assembly_degree": 8,
+    "variant_assembly_degrees": [
+      8
+    ],
+    "same_frozen_solver_v3": true,
+    "original_14_GP_and_native_nodes": true,
+    "one_lane": true
+  },
+  "comparison": [
+    "Actual energy/external work, material volumes and volume-weighted field statistics.",
+    "Common physical probes require actual quadratic isoparametric inversion and correct material IDs; no nearest-node/GP substitution.",
+    "Evaluate true P2 displacement and displacement-gradient stress. Check evaluator against saved original GP fields before using cross-mesh probes.",
+    "Gauge locations may differ: retain raw displacement differences and independently report a six-DOF rigid-motion-aligned displacement difference; stress/strain are gauge invariant.",
+    "Retain every unlocated probe with original ID/reason, never replace or zero-fill.",
+    "Report local point-stress sensitivity separately from volume norms; unchanged minimum root size limits convergence claims."
+  ],
+  "analysis_status": "Protocol frozen before any variant GPU field; no numerical sensitivity results yet.",
+  "production_eligible": false
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "c04_legacy_contract_metadata_errata_v1",
+  "created": "2026-10-27T09:28:46.528786+08:00",
+  "legacy_contract_sha256": "f967841dea0b9a91eebb60097a512fd708769fc482b87460940c8474cdee4604",
+  "affected_runs": [
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/GPU_q6_attempt001",
+    "data/copv/c04_repair_v3/copv_c04_0000/attempt058_two_cell_patch56/GPU_q8_attempt001"
+  ],
+  "correction": "Legacy C02 discretization/geometry/equivalent-cap descriptive text remained in copied metadata. Actual run CLI, frozen executed solver, summary and raw native schema prove isoparametric P2 with actual quadratic cap-edge integration; q6 used assembly degree6 and output14GP. Original executed contracts and outputs remain immutable.",
+  "actual_completed_run": {
+    "displacement_degree": 2,
+    "assembly_degree": 6,
+    "output_degree": 4,
+    "output_points": 14,
+    "geometry_mapping": "curved quadratic TET10 isoparametric CAD geometry; requires curved Tri6 loads and GP-Jacobian volume integration",
+    "cap_convention": "quadratic-opening-edge",
+    "solver_sha256": "412e0611865fb5e821683f3836b57be7940a079123f712ba16c6e88383b0eef6",
+    "run_script_sha256": "35b95a7ecd1de1686614da0d0e28d19940ea3f6ac60642f4d95df97622348582"
+  },
+  "physical_input_identity_sha256": "5345555e55de595078a2b13fe0f2af4ee5ee6890bc5bd730620033a300ab9fbd",
+  "next_contract_schema": "c04_curved_P2_validation_contract_v2",
+  "numerical_solver_source_unchanged": true,
+  "old_outputs_rewritten": false,
+  "production_eligible": false
+}
