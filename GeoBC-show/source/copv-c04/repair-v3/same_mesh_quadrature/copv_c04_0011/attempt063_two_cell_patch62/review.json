@@ -1,0 +1,203 @@
+{
+  "schema": "c04_same_mesh_quadrature_field_comparison_v1",
+  "created": "2026-10-27T13:56:30.963495+08:00",
+  "case_id": "copv_c04_0011",
+  "mesh_sha256": "74d8f3be2cb100ae0ce84385ebde21bafb72cd7d2d92e684fc95ff25c3508dbc",
+  "runs": [
+    "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0011\\attempt063_two_cell_patch62\\GPU_q6_attempt001",
+    "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\copv\\c04_repair_v3\\copv_c04_0011\\attempt063_two_cell_patch62\\GPU_q8_attempt001"
+  ],
+  "summary_sha256": [
+    "1e7b00cf6ff029fa17cc62ae07b5f615ec17d7a2e449cf4da98e64ec18ffd9d6",
+    "1a7d0d5af5fe164bc01c6c093d9afa3c02872b20dd0b8b4b846a74ce9bd0e71c"
+  ],
+  "assembly_degrees": [
+    6,
+    8
+  ],
+  "output_GP_points": 14,
+  "displacement": {
+    "relative_nodal_L2": 2.613912544654046e-07,
+    "max_vector_difference_mm": 5.083988624563805e-07,
+    "max_vector_difference_over_q8_peak": 1.1004094414706525e-06,
+    "q6_peak_U_mm": 0.46200890003535316,
+    "q8_peak_U_mm": 0.46200881535233473,
+    "scope": "Same native nodes. Nodal L2 is unweighted, not an FE volume norm."
+  },
+  "strain_energy_Nmm": [
+    8841.487489458528,
+    8841.486764650574
+  ],
+  "strain_energy_relative_difference_to_q8": 8.19780625029586e-08,
+  "load_max_abs_component_differences_N": {
+    "consistent_load_N": 0.0,
+    "pressure_load_N": 0.0,
+    "upper_cap_load_N": 0.0,
+    "lower_cap_load_N": 0.0
+  },
+  "GP_coordinate_max_difference_mm": 0.0,
+  "GP_volume_weight_max_difference_mm3": 0.0,
+  "parts": {
+    "1": {
+      "cells": 252388,
+      "volume_mm3": 267699.99200800864,
+      "local_tensor_diff_squared_volume": 0.002734276809361403,
+      "local_tensor_q8_squared_volume": 459182736.1680158,
+      "global_tensor_diff_squared_volume": 0.002734276809361403,
+      "global_tensor_q8_squared_volume": 459182736.1680158,
+      "max_abs_local_component_difference_MPa": 0.0018718082801427727,
+      "max_abs_global_component_difference_MPa": 0.0018718082801427727,
+      "local_tensor_volume_L2_relative": 2.4402170863622488e-06,
+      "global_tensor_volume_L2_relative": 2.4402170863622488e-06
+    },
+    "2": {
+      "cells": 321203,
+      "volume_mm3": 49403.97539803033,
+      "local_tensor_diff_squared_volume": 0.00040977869952491685,
+      "local_tensor_q8_squared_volume": 323641.03547172947,
+      "global_tensor_diff_squared_volume": 0.00040977869952491685,
+      "global_tensor_q8_squared_volume": 323641.03547172947,
+      "max_abs_local_component_difference_MPa": 0.0030784900738325405,
+      "max_abs_global_component_difference_MPa": 0.0030784900738325405,
+      "local_tensor_volume_L2_relative": 3.558302771707616e-05,
+      "global_tensor_volume_L2_relative": 3.558302771707616e-05
+    },
+    "3": {
+      "cells": 237532,
+      "volume_mm3": 248356.29799149133,
+      "local_tensor_diff_squared_volume": 0.07139824480291751,
+      "local_tensor_q8_squared_volume": 233445570.43519357,
+      "global_tensor_diff_squared_volume": 0.07139824480291751,
+      "global_tensor_q8_squared_volume": 233445570.43519363,
+      "max_abs_local_component_difference_MPa": 0.024929726387007634,
+      "max_abs_global_component_difference_MPa": 0.017077891621244845,
+      "local_tensor_volume_L2_relative": 1.7488435069165308e-05,
+      "global_tensor_volume_L2_relative": 1.7488435069165308e-05
+    },
+    "4": {
+      "cells": 136759,
+      "volume_mm3": 250571.38931054441,
+      "local_tensor_diff_squared_volume": 0.14369818818710028,
+      "local_tensor_q8_squared_volume": 252927178.79345644,
+      "global_tensor_diff_squared_volume": 0.14369818818710028,
+      "global_tensor_q8_squared_volume": 252927178.7934565,
+      "max_abs_local_component_difference_MPa": 0.026009218018471003,
+      "max_abs_global_component_difference_MPa": 0.016735189049462917,
+      "local_tensor_volume_L2_relative": 2.3835699209174573e-05,
+      "global_tensor_volume_L2_relative": 2.383569920917457e-05
+    },
+    "5": {
+      "cells": 147709,
+      "volume_mm3": 252769.32371240007,
+      "local_tensor_diff_squared_volume": 0.2115825571065369,
+      "local_tensor_q8_squared_volume": 285747517.34719807,
+      "global_tensor_diff_squared_volume": 0.2115825571065377,
+      "global_tensor_q8_squared_volume": 285747517.3471981,
+      "max_abs_local_component_difference_MPa": 0.03381568437956162,
+      "max_abs_global_component_difference_MPa": 0.024219421213850012,
+      "local_tensor_volume_L2_relative": 2.7211262875415613e-05,
+      "global_tensor_volume_L2_relative": 2.721126287541566e-05
+    },
+    "6": {
+      "cells": 369846,
+      "volume_mm3": 254946.45067101257,
+      "local_tensor_diff_squared_volume": 0.41797482058765195,
+      "local_tensor_q8_squared_volume": 325394617.2024943,
+      "global_tensor_diff_squared_volume": 0.4179748205876519,
+      "global_tensor_q8_squared_volume": 325394617.2024943,
+      "max_abs_local_component_difference_MPa": 0.04100324252514298,
+      "max_abs_global_component_difference_MPa": 0.029640854991221488,
+      "local_tensor_volume_L2_relative": 3.5840154884628014e-05,
+      "global_tensor_volume_L2_relative": 3.584015488462801e-05
+    },
+    "7": {
+      "cells": 176975,
+      "volume_mm3": 4390.524293016245,
+      "local_tensor_diff_squared_volume": 0.0013216595544639335,
+      "local_tensor_q8_squared_volume": 5287514.072909547,
+      "global_tensor_diff_squared_volume": 0.00132165955446399,
+      "global_tensor_q8_squared_volume": 5287514.072909546,
+      "max_abs_local_component_difference_MPa": 0.012690252852724626,
+      "max_abs_global_component_difference_MPa": 0.007035272182907448,
+      "local_tensor_volume_L2_relative": 1.581007870074497e-05,
+      "global_tensor_volume_L2_relative": 1.581007870074531e-05
+    },
+    "8": {
+      "cells": 176778,
+      "volume_mm3": 4390.520880663545,
+      "local_tensor_diff_squared_volume": 0.0012342336979593862,
+      "local_tensor_q8_squared_volume": 5234653.536475919,
+      "global_tensor_diff_squared_volume": 0.0012342336979593881,
+      "global_tensor_q8_squared_volume": 5234653.536475919,
+      "max_abs_local_component_difference_MPa": 0.009944876602272501,
+      "max_abs_global_component_difference_MPa": 0.007047102877496769,
+      "local_tensor_volume_L2_relative": 1.5355173521876814e-05,
+      "global_tensor_volume_L2_relative": 1.5355173521876824e-05
+    },
+    "9": {
+      "cells": 106234,
+      "volume_mm3": 84355.284668025,
+      "local_tensor_diff_squared_volume": 5.845525408613378e-05,
+      "local_tensor_q8_squared_volume": 3358047.7079680194,
+      "global_tensor_diff_squared_volume": 5.845525408613378e-05,
+      "global_tensor_q8_squared_volume": 3358047.7079680194,
+      "max_abs_local_component_difference_MPa": 0.014266490680619803,
+      "max_abs_global_component_difference_MPa": 0.014266490680619803,
+      "local_tensor_volume_L2_relative": 4.172230997638665e-06,
+      "global_tensor_volume_L2_relative": 4.172230997638665e-06
+    },
+    "10": {
+      "cells": 116479,
+      "volume_mm3": 81713.2415030179,
+      "local_tensor_diff_squared_volume": 5.8486899799794436e-05,
+      "local_tensor_q8_squared_volume": 3355712.0061671375,
+      "global_tensor_diff_squared_volume": 5.8486899799794436e-05,
+      "global_tensor_q8_squared_volume": 3355712.0061671375,
+      "max_abs_local_component_difference_MPa": 0.017866315781003728,
+      "max_abs_global_component_difference_MPa": 0.017866315781003728,
+      "local_tensor_volume_L2_relative": 4.174812352989879e-06,
+      "global_tensor_volume_L2_relative": 4.174812352989879e-06
+    },
+    "14": {
+      "cells": 54295,
+      "volume_mm3": 16164.298184928995,
+      "local_tensor_diff_squared_volume": 2.303320877815402e-07,
+      "local_tensor_q8_squared_volume": 57026.23721722421,
+      "global_tensor_diff_squared_volume": 2.303320877815402e-07,
+      "global_tensor_q8_squared_volume": 57026.23721722421,
+      "max_abs_local_component_difference_MPa": 0.002581051182128924,
+      "max_abs_global_component_difference_MPa": 0.002581051182128924,
+      "local_tensor_volume_L2_relative": 2.009739942274483e-06,
+      "global_tensor_volume_L2_relative": 2.009739942274483e-06
+    },
+    "18": {
+      "cells": 53120,
+      "volume_mm3": 14387.384416194764,
+      "local_tensor_diff_squared_volume": 2.8376371719388085e-06,
+      "local_tensor_q8_squared_volume": 34350.9954306912,
+      "global_tensor_diff_squared_volume": 2.8376371719388085e-06,
+      "global_tensor_q8_squared_volume": 34350.9954306912,
+      "max_abs_local_component_difference_MPa": 0.013306851099200045,
+      "max_abs_global_component_difference_MPa": 0.013306851099200045,
+      "local_tensor_volume_L2_relative": 9.088846504326055e-06,
+      "global_tensor_volume_L2_relative": 9.088846504326055e-06
+    }
+  },
+  "production_eligible": false,
+  "scope": "Actual native-node/14GP same-mesh integration-degree differences. q8 is a comparison reference, not known truth. No automatic production acceptance, mesh convergence, or point-peak stress accuracy claim. Tensor L2 includes factor2 for the three symmetric shear components; no averaging across materials.",
+  "seconds": 14.884925599995768,
+  "executed_contract_sha256": [
+    "a54697b452c9af9873376f32fbecefec34753ce9b1b40c1d8a19c99e6134c86b",
+    "f7322469cfaaa2d454d39c6591b651d831a4b3f5afa1ac1e3da8a794a07341e1"
+  ],
+  "physical_input_identity_sha256": "9cb77a8173629c64155c03c748e68bcc1f7b7b0ab237aabeb8c79f0898bdaa93",
+  "contract_identity_scope": "Per-run discretization degree and corrected legacy descriptive metadata may differ; each complete executed contract hash is bound to its summary, all physical inputs and actual native load/lock/geometry identities must match.",
+  "solver_identity": {
+    "solver_sha256": [
+      "c6ec8d3c92af624c13f32ed2d32a776a3dda489c95e2c71fdb48c04780335a57",
+      "c6ec8d3c92af624c13f32ed2d32a776a3dda489c95e2c71fdb48c04780335a57"
+    ],
+    "resource_amendment": "gpu_utilization_30_amendment_v1.json",
+    "scope": "Full executed sources match except the authorized GPU utilization guard 10% to 30%; numerical code is byte-identical."
+  }
+}

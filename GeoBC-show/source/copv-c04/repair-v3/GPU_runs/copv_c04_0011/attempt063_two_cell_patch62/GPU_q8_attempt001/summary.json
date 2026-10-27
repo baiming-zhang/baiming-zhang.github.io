@@ -1,0 +1,212 @@
+{
+  "status": "completed",
+  "case_id": "copv_c04_0011",
+  "backend": "CPU FFCx assembly; CUDA P2 FGMRES/Jacobi-Chebyshev and exact P1 transfer; CUDA P1 GAMG coarse correction; tiny CPU SVD at final coarse level, explicit in KSP view",
+  "preconditioner": "p1-gamg",
+  "dolfinx": "0.11.0",
+  "petsc": [
+    3,
+    25,
+    6
+  ],
+  "matrix_type": "seqaijcusparse",
+  "vector_type": "seqcuda",
+  "geometry_mapping": "curved quadratic TET10 isoparametric CAD geometry; requires curved Tri6 loads and GP-Jacobian volume integration",
+  "nodes": 3314113,
+  "geometry_nodes": 3314113,
+  "cells": 2149318,
+  "dofs": 9942339,
+  "displacement_degree": 2,
+  "cap_convention": "quadratic-opening-edge",
+  "geometry_parameters_mm": {
+    "inner_radius_mm": 100.0,
+    "straight_length_mm": 400.0,
+    "dome_depth_mm": 60.0,
+    "boss_bore_radius_mm": 15.0,
+    "neck_length_mm": 20.0,
+    "liner_thickness_mm": 0.8,
+    "overwrap_thickness_mm": 3.0
+  },
+  "research_pilot": true,
+  "dataset_release": "quarantined_repair_validation_only",
+  "research_validation_only": true,
+  "native_schema_saved": true,
+  "production_eligible": false,
+  "raw_GP_saved": true,
+  "local_GP_saved": true,
+  "structural_parts": 12,
+  "display_only_seals": 6,
+  "pressure_MPa": 1.0,
+  "true_relative_residual": 1.0016912156954058e-10,
+  "peak_iterations": 2038,
+  "peak_reason": 2,
+  "peak_solve_seconds": 255.43194997499995,
+  "max_U_mm": 0.46200881535233473,
+  "strain_energy_Nmm": 8841.486764650574,
+  "external_work_Nmm": 17682.973529361552,
+  "energy_work_relative_error": 3.416045224469144e-12,
+  "force_balance_N": [
+    6.37328098629375e-09,
+    -7.52929586733675e-09,
+    7.90772998081835e-10
+  ],
+  "moment_balance_Nmm": [
+    7.727110836431717e-06,
+    -7.07884860322848e-07,
+    1.7708251865734834e-06
+  ],
+  "load_resultant_N": [
+    2.7876867481069212e-11,
+    8.22986123694136e-12,
+    -5.474837009517559e-10
+  ],
+  "gauge_reactions_N": [
+    6.345404118812681e-09,
+    9.410034401691192e-08,
+    -6.134647735937457e-07,
+    -1.0163786974548561e-07,
+    -4.841484633442972e-07,
+    1.0989514936370764e-06
+  ],
+  "cap_forces_N": {
+    "upper": 326.8512737741734,
+    "lower": 213.82463303781884
+  },
+  "cap_areas_mm2": {
+    "top": 53.28140718194844,
+    "bottom": 43.47963887960968
+  },
+  "min_GP_Jacobian_mm3": 0.0001544996024921959,
+  "material_frame_det_max_error": 1.5543122344752192e-15,
+  "half_load_relative_error": 1.3679440653146346e-09,
+  "zero_load_U_norm": 0.0,
+  "part_statistics": {
+    "1": {
+      "material": "aluminum",
+      "name": "\u91d1\u5c5e\u6c14\u5bc6\u5185\u886c",
+      "max_GP_von_Mises_MPa": 123.83460125242406,
+      "max_abs_fiber_sigma11_MPa": 56.07410651134071,
+      "volume_mm3": 267699.99200800835
+    },
+    "2": {
+      "material": "adhesive",
+      "name": "\u73af\u6c27\u7c98\u63a5\u5c42 0.15 mm",
+      "max_GP_von_Mises_MPa": 10.789604156402492,
+      "max_abs_fiber_sigma11_MPa": 7.066611766692269,
+      "volume_mm3": 49403.97539803029
+    },
+    "3": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 1 / +55\u00b0",
+      "max_GP_von_Mises_MPa": 38.79822352651847,
+      "max_abs_fiber_sigma11_MPa": 40.119357664704644,
+      "volume_mm3": 248356.29799149118
+    },
+    "4": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 2 / -55\u00b0",
+      "max_GP_von_Mises_MPa": 45.45555825179274,
+      "max_abs_fiber_sigma11_MPa": 47.61364310893747,
+      "volume_mm3": 250571.3893105441
+    },
+    "5": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 3 / -55\u00b0",
+      "max_GP_von_Mises_MPa": 55.43535071381857,
+      "max_abs_fiber_sigma11_MPa": 58.997165034161135,
+      "volume_mm3": 252769.32371240022
+    },
+    "6": {
+      "material": "carbon",
+      "name": "\u5305\u8986\u94fa\u5c42 4 / +55\u00b0",
+      "max_GP_von_Mises_MPa": 91.70992674384324,
+      "max_abs_fiber_sigma11_MPa": 100.99463663318956,
+      "volume_mm3": 254946.45067101237
+    },
+    "7": {
+      "material": "carbon",
+      "name": "\u4e0a\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+      "max_GP_von_Mises_MPa": 126.03541852678825,
+      "max_abs_fiber_sigma11_MPa": 122.98394043142467,
+      "volume_mm3": 4390.524293016244
+    },
+    "8": {
+      "material": "carbon",
+      "name": "\u4e0b\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+      "max_GP_von_Mises_MPa": 125.28434265376845,
+      "max_abs_fiber_sigma11_MPa": 124.23839015789241,
+      "volume_mm3": 4390.520880663544
+    },
+    "9": {
+      "material": "titanium",
+      "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+      "max_GP_von_Mises_MPa": 31.040505102849316,
+      "max_abs_fiber_sigma11_MPa": 22.0117170833834,
+      "volume_mm3": 84355.28466802501
+    },
+    "10": {
+      "material": "titanium",
+      "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+      "max_GP_von_Mises_MPa": 36.527056729210614,
+      "max_abs_fiber_sigma11_MPa": 20.858883507247718,
+      "volume_mm3": 81713.24150301791
+    },
+    "14": {
+      "material": "steel",
+      "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+      "max_GP_von_Mises_MPa": 8.12319700715058,
+      "max_abs_fiber_sigma11_MPa": 6.9658640218529,
+      "volume_mm3": 16164.298184928992
+    },
+    "18": {
+      "material": "steel",
+      "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+      "max_GP_von_Mises_MPa": 7.087756726920355,
+      "max_abs_fiber_sigma11_MPa": 6.178327864046321,
+      "volume_mm3": 14387.38441619476
+    }
+  },
+  "mesh_sha256": "74d8f3be2cb100ae0ce84385ebde21bafb72cd7d2d92e684fc95ff25c3508dbc",
+  "contract_sha256": "f7322469cfaaa2d454d39c6591b651d831a4b3f5afa1ac1e3da8a794a07341e1",
+  "solver_sha256": "c6ec8d3c92af624c13f32ed2d32a776a3dda489c95e2c71fdb48c04780335a57",
+  "total_seconds": 771.4089529909998,
+  "limitations": [
+    "Linear elastic ideal bonds; no seal compression/contact/friction/damage/yield",
+    "curved quadratic TET10 isoparametric CAD geometry; requires curved Tri6 loads and GP-Jacobian volume integration; repair candidate only, new same-geometry sensitivity not yet certified",
+    "von Mises for composites is a diagnostic, not a failure criterion",
+    "20 displayed states use exact linear superposition, validated at half and zero load; not 20 nonlinear integrations"
+  ],
+  "assembly_frame_storage": "compact_exact_axisymmetric_frame",
+  "assembly_quadrature_degree": 8,
+  "output_quadrature_degree": 4,
+  "repair_preflight": {
+    "schema": "c04_curved_mesh_preflight_v2",
+    "created": "2026-10-27T07:30:57.566587+08:00",
+    "case_id": "copv_c04_0011",
+    "mesh_sha256": "74d8f3be2cb100ae0ce84385ebde21bafb72cd7d2d92e684fc95ff25c3508dbc",
+    "native_vectors_sha256": "70c16717cfd2a3cc3c4a0a9db285d2fd7fd398d7dd2e5e7a06e4762c11606663",
+    "closure_sha256": "2bdecb25581e1c71dc7e8c5f4d585c23421d5159fbf848b912fda0ff436fa4b3",
+    "topology_passed": true,
+    "shared_Tri6_interfaces": true,
+    "connected_components": 1,
+    "positive_Jacobians": true,
+    "max_material_volume_error": 0.00020802182481649556,
+    "material_volume_passed": true,
+    "resource_guard_passed": true,
+    "resource_policy_file": "data\\copv\\c04_repair_v3\\resource_amendment_v1.json",
+    "resource_policy_sha256": "7af6051e7218bd6eb3b00afb636eebea1e23ccdf6d30b99f3d5a9df31b9222be",
+    "local_geometry_screen_passed": true,
+    "local_geometry_review_sha256": "c77d8abde56d79d9e3e8656765783056a10e12a6e39f45dda7ca2a7a63698938",
+    "quadratic_load_closure_passed": true,
+    "original_volume_SICN_target_passed": true,
+    "original_surface_SICN_target_passed": true,
+    "original_mesh_release_passed": false,
+    "candidate_FE_validation_allowed": true,
+    "production_eligible": false,
+    "scope": "All original mesh screening gates passed; actual GPU field verification and same-geometry sensitivity acceptance remain pending. Production release remains false.",
+    "seconds": 11.04447970000183,
+    "original_mesh_screen_passed": true
+  },
+  "candidate_verification_only": true,
+  "original_shape_target_unresolved": false
+}
