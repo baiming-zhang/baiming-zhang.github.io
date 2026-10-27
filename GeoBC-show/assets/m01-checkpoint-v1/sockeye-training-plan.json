@@ -1,6 +1,6 @@
 {
   "protocol": "m01_sockeye_full_v1",
-  "phase": "prepared_not_submitted",
+  "phase": "deferred_user_selected_local_ts3_precision",
   "slurm_job_ids": [],
   "splits": {
     "train": 800,
@@ -61,5 +61,6 @@
   "checkpoint_selection": "minimum validation mean equal-case joint relative squared L2",
   "test_policy": "once, only after fixed training budget and frozen validation-selected checkpoint",
   "target": "Uxyz + reference-volume-weighted nodal projection of element four-GP maximum VM",
-  "hardware": "UBC Sockeye V100; actual native GPU probe required before production"
+  "hardware": "UBC Sockeye V100; actual native GPU probe required before production",
+  "current_plan": "local-ts3-precision-plan.json"
 }

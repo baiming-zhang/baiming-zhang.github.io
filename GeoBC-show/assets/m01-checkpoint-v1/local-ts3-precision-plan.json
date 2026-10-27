@@ -1,0 +1,50 @@
+{
+  "execution": "local RTX 5090",
+  "method": "TS3",
+  "parameters": 11882756,
+  "phase": "waiting_for_exclusive_gpu",
+  "precision_order": [
+    "FP32",
+    "FP64"
+  ],
+  "epochs_each": 20,
+  "train_cases": 800,
+  "validation_cases": 100,
+  "test_cases": 100,
+  "test_labels_read": false,
+  "AMP": false,
+  "TF32": false,
+  "initialization": "same saved FP32 initial values, exactly promoted to FP64 for the second independent arm",
+  "finished_arms": 0,
+  "current_precision": "fp32",
+  "epoch_completed": 0,
+  "case_cursor": 0,
+  "active_seconds": 0,
+  "waiting_seconds": 335.5849666595459,
+  "remaining_training_seconds_estimate": null,
+  "updated_unix": 1793088761.3418272,
+  "error_threshold": null,
+  "early_stopping": false,
+  "exclusive_GPU_policy": "Wait for the existing compute workflow and its following validation, then three idle observations; yield own run if contention returns",
+  "cpu_dtype_check": {
+    "fp32": {
+      "parameters": 11882756,
+      "parameter_dtype": "torch.float32",
+      "observed_floating_module_outputs": [
+        "torch.float32"
+      ],
+      "finite_forward_backward": true,
+      "scope": "CPU synthetic 19-node dtype check; not GPU timing"
+    },
+    "fp64": {
+      "parameters": 11882756,
+      "parameter_dtype": "torch.float64",
+      "observed_floating_module_outputs": [
+        "torch.float64"
+      ],
+      "finite_forward_backward": true,
+      "scope": "CPU synthetic 19-node dtype check; not GPU timing"
+    }
+  },
+  "source_config_sha256": "47369eb28682d7fa8c44bbe5eadd3ff10791bcdb77c45b25682a44355bc8486d"
+}
