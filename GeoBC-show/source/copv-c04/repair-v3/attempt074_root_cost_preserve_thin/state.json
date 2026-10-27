@@ -2,7 +2,7 @@
   "case_id": "copv_c04_0018",
   "attempt": "attempt074_root_cost_preserve_thin",
   "pid": 30400,
-  "phase": "meshing",
+  "phase": "mesh_quality_rejected_retained",
   "started": "2026-10-27T08:28:32.903836+08:00",
   "command": [
     "wsl",
@@ -19,6 +19,24 @@
   "source_sha256": "4a64cadacc509222b3ffd792ed1fb99cf21f4f874f2e855eb76cf13f8cfed3a4",
   "partition_sha256": "00c70bb72eeabb00a7e475ae1d4b665a18562e74c278570fe33ce3e72cd08544",
   "new_FE_labels": 0,
-  "elapsed_seconds": 0.02175540000462206,
-  "updated": "2026-10-27T08:28:32.910833+08:00"
+  "elapsed_seconds": 317.59627349999937,
+  "updated": "2026-10-27T08:33:50.484683+08:00",
+  "quality": {
+    "cells": 2007522,
+    "nodes": 3085492,
+    "min_volume_sicn": 0.04918002421677116,
+    "min_surface_sicn": 0.08684449979584616,
+    "below_005": 1,
+    "max_part_relative_volume_error": 0.01486105576342489,
+    "total_relative_volume_error": 0.00040408678407555243,
+    "production_gate": {
+      "reference": "R03",
+      "SICN_threshold": 0.05,
+      "volume_tolerance": 0.001,
+      "passed": false,
+      "status": "quality_rejected_no_FE",
+      "connected_components": 1,
+      "independent_load_closure_passed": true
+    }
+  }
 }
