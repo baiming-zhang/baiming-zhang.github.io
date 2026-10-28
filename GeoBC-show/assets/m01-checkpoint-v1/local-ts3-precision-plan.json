@@ -2,7 +2,7 @@
   "execution": "local RTX 5090",
   "method": "TS3",
   "parameters": 11882756,
-  "phase": "waiting_for_exclusive_gpu",
+  "phase": "training",
   "precision_order": [
     "FP32",
     "FP64"
@@ -17,12 +17,12 @@
   "initialization": "same saved FP32 initial values, exactly promoted to FP64 for the second independent arm",
   "finished_arms": 0,
   "current_precision": "fp32",
-  "epoch_completed": 0,
-  "case_cursor": 0,
-  "active_seconds": 0,
-  "waiting_seconds": 335.5849666595459,
-  "remaining_training_seconds_estimate": null,
-  "updated_unix": 1793088761.3418272,
+  "epoch_completed": 2,
+  "case_cursor": 144,
+  "active_seconds": 581.7284198969992,
+  "waiting_seconds": null,
+  "remaining_training_seconds_estimate": 4464.035324733048,
+  "updated_unix": 1793192568.9954522,
   "error_threshold": null,
   "early_stopping": false,
   "exclusive_GPU_policy": "Wait for the existing compute workflow and its following validation, then three idle observations; yield own run if contention returns",
@@ -46,5 +46,43 @@
       "scope": "CPU synthetic 19-node dtype check; not GPU timing"
     }
   },
-  "source_config_sha256": "47369eb28682d7fa8c44bbe5eadd3ff10791bcdb77c45b25682a44355bc8486d"
+  "source_config_sha256": "47369eb28682d7fa8c44bbe5eadd3ff10791bcdb77c45b25682a44355bc8486d",
+  "timers": {
+    "train_wall_seconds": 546.1053315329991,
+    "forward_backward_gpu_seconds": 489.40024452209525,
+    "optimizer_gpu_seconds": 0.9123510675430297,
+    "checkpoint_seconds": 4.63211711799886,
+    "validation_seconds": 28.847337418999814
+  },
+  "peak_allocated_bytes": 5376729088,
+  "optimizer_updates": 218,
+  "epoch_curves": {
+    "fp32": [
+      {
+        "epoch": 1,
+        "precision": "fp32",
+        "active_seconds": 292.53119877399877,
+        "online_training_objective": 5.85199445605278,
+        "cumulative_train_wall_seconds": 273.14319286299906,
+        "cumulative_forward_backward_gpu_seconds": 224.85664277648962,
+        "cumulative_optimizer_gpu_seconds": 0.5114034843444824,
+        "cumulative_validation_seconds": 16.62708620199919,
+        "mean_validation_U_L2": 1.733009358626251,
+        "mean_validation_VM_L2": 0.746308618321712
+      },
+      {
+        "epoch": 2,
+        "precision": "fp32",
+        "active_seconds": 540.7274279059984,
+        "online_training_objective": 1.7634325486421585,
+        "cumulative_train_wall_seconds": 505.7502845580002,
+        "cumulative_forward_backward_gpu_seconds": 449.76951963806226,
+        "cumulative_optimizer_gpu_seconds": 0.85177746796608,
+        "cumulative_validation_seconds": 28.847337418999814,
+        "mean_validation_U_L2": 1.064205498875448,
+        "mean_validation_VM_L2": 0.7068550219802887
+      }
+    ],
+    "fp64": []
+  }
 }
