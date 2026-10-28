@@ -63,57 +63,57 @@
       "phase": "training",
       "pid": 364,
       "precision": "fp32",
-      "epoch_completed": 10,
-      "case_cursor": 8,
+      "epoch_completed": 16,
+      "case_cursor": 256,
       "total_epochs": 20,
-      "completed_train_case_passes": 8008,
+      "completed_train_case_passes": 13056,
       "total_train_case_passes": 16000,
-      "optimizer_updates": 1001,
-      "active_seconds": 4821.593159210002,
+      "optimizer_updates": 1632,
+      "active_seconds": 8251.998133426001,
       "timers": {
-        "train_wall_seconds": 4608.03159131499,
-        "forward_backward_gpu_seconds": 4646.920851196305,
-        "optimizer_gpu_seconds": 3.187567457914352,
-        "checkpoint_seconds": 22.22525259601389,
-        "validation_seconds": 180.81982893000531
+        "train_wall_seconds": 7860.755320005905,
+        "forward_backward_gpu_seconds": 7653.250724365264,
+        "optimizer_gpu_seconds": 5.3922610909938795,
+        "checkpoint_seconds": 47.00732269200671,
+        "validation_seconds": 320.53828155202063
       },
       "peak_allocated_bytes": 8831659008,
-      "remaining_training_seconds_estimate": 4598.824734988686,
+      "remaining_training_seconds_estimate": 1772.5232584327039,
       "error_threshold": null,
-      "updated_unix": 1793227796.2615318
+      "updated_unix": 1793231399.3488352
     },
     "resources": {
-      "utilization_percent": 98,
-      "memory_used_MiB": 11422,
+      "utilization_percent": 0,
+      "memory_used_MiB": 15030,
       "memory_total_MiB": 32607,
       "reserved_existing_workflows": [],
       "other_compute_clients": [],
-      "updated_unix": 1793227798.6380928
+      "updated_unix": 1793231402.6627533
     },
-    "updated_unix": 1793227798.6380928
+    "updated_unix": 1793231402.6627533
   },
   "status": {
     "phase": "training",
     "pid": 364,
     "precision": "fp32",
-    "epoch_completed": 10,
-    "case_cursor": 56,
+    "epoch_completed": 16,
+    "case_cursor": 272,
     "total_epochs": 20,
-    "completed_train_case_passes": 8056,
+    "completed_train_case_passes": 13072,
     "total_train_case_passes": 16000,
-    "optimizer_updates": 1007,
-    "active_seconds": 4850.540296742001,
+    "optimizer_updates": 1634,
+    "active_seconds": 8269.472889297002,
     "timers": {
-      "train_wall_seconds": 4636.90169312698,
-      "forward_backward_gpu_seconds": 4676.285967346204,
-      "optimizer_gpu_seconds": 3.2058887379169456,
-      "checkpoint_seconds": 22.22525259601389,
-      "validation_seconds": 180.81982893000531
+      "train_wall_seconds": 7877.928327123904,
+      "forward_backward_gpu_seconds": 7664.247104492216,
+      "optimizer_gpu_seconds": 5.400520866870878,
+      "checkpoint_seconds": 47.00732269200671,
+      "validation_seconds": 320.53828155202063
     },
     "peak_allocated_bytes": 8831659008,
-    "remaining_training_seconds_estimate": 4572.436326986187,
+    "remaining_training_seconds_estimate": 1764.5788052186956,
     "error_threshold": null,
-    "updated_unix": 1793227825.2086902
+    "updated_unix": 1793231416.8235388
   },
   "curve": [
     {
@@ -235,6 +235,78 @@
       "cumulative_validation_seconds": 180.81982893000531,
       "mean_validation_U_L2": 0.3285058524020776,
       "mean_validation_VM_L2": 0.39641591055166187
+    },
+    {
+      "epoch": 11,
+      "precision": "fp32",
+      "active_seconds": 5297.094173239006,
+      "online_training_objective": 0.20220635771751405,
+      "cumulative_train_wall_seconds": 5062.35038875397,
+      "cumulative_forward_backward_gpu_seconds": 5106.46683047487,
+      "cumulative_optimizer_gpu_seconds": 3.4898569619655606,
+      "cumulative_validation_seconds": 199.038627714006,
+      "mean_validation_U_L2": 0.3420129692311507,
+      "mean_validation_VM_L2": 0.3803361863386865
+    },
+    {
+      "epoch": 12,
+      "precision": "fp32",
+      "active_seconds": 5786.196177823003,
+      "online_training_objective": 0.12722508177161218,
+      "cumulative_train_wall_seconds": 5530.200044486992,
+      "cumulative_forward_backward_gpu_seconds": 5573.255372070322,
+      "cumulative_optimizer_gpu_seconds": 3.7996894748210903,
+      "cumulative_validation_seconds": 217.0145882640063,
+      "mean_validation_U_L2": 0.27468203706734934,
+      "mean_validation_VM_L2": 0.37155393443566403
+    },
+    {
+      "epoch": 13,
+      "precision": "fp32",
+      "active_seconds": 6263.945143202,
+      "online_training_objective": 0.1110228830948472,
+      "cumulative_train_wall_seconds": 5987.273814591004,
+      "cumulative_forward_backward_gpu_seconds": 6036.837025299089,
+      "cumulative_optimizer_gpu_seconds": 4.1042536990642535,
+      "cumulative_validation_seconds": 234.25090413101134,
+      "mean_validation_U_L2": 0.2791990792051972,
+      "mean_validation_VM_L2": 0.3549721494449268
+    },
+    {
+      "epoch": 14,
+      "precision": "fp32",
+      "active_seconds": 6743.291465882001,
+      "online_training_objective": 0.09053095791488885,
+      "cumulative_train_wall_seconds": 6445.745822122,
+      "cumulative_forward_backward_gpu_seconds": 6500.332757568376,
+      "cumulative_optimizer_gpu_seconds": 4.403427427530285,
+      "cumulative_validation_seconds": 251.73503426301613,
+      "mean_validation_U_L2": 0.2189386762548493,
+      "mean_validation_VM_L2": 0.33444096369716036
+    },
+    {
+      "epoch": 15,
+      "precision": "fp32",
+      "active_seconds": 7226.2056286020015,
+      "online_training_objective": 0.07679472424089909,
+      "cumulative_train_wall_seconds": 6903.05682103298,
+      "cumulative_forward_backward_gpu_seconds": 6964.747975830107,
+      "cumulative_optimizer_gpu_seconds": 4.7243988521099025,
+      "cumulative_validation_seconds": 274.175533303016,
+      "mean_validation_U_L2": 0.2255240495693808,
+      "mean_validation_VM_L2": 0.3305317705275925
+    },
+    {
+      "epoch": 16,
+      "precision": "fp32",
+      "active_seconds": 7974.670608919005,
+      "online_training_objective": 0.06490279603749513,
+      "cumulative_train_wall_seconds": 7590.2169506989085,
+      "cumulative_forward_backward_gpu_seconds": 7481.542423370395,
+      "cumulative_optimizer_gpu_seconds": 5.2515997145175906,
+      "cumulative_validation_seconds": 320.53828155202063,
+      "mean_validation_U_L2": 0.2082629080964686,
+      "mean_validation_VM_L2": 0.32832507432750513
     }
   ],
   "TS3_FP64_paused_by_user": {
@@ -253,6 +325,6 @@
     "native_worker_and_windows_supervisor_exit_confirmed": true
   },
   "test_labels_read": false,
-  "updated_unix": 1793227828.716303,
+  "updated_unix": 1793231418.8591,
   "summary": null
 }
