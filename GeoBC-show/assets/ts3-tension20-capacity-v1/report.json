@@ -1,0 +1,775 @@
+{
+  "completed_new_runs": 0,
+  "total_new_runs": 4,
+  "rows": [
+    {
+      "variant": "W128_S004",
+      "layers": 8,
+      "width": 128,
+      "heads": 8,
+      "slices": 4,
+      "parameters": 982884,
+      "phase": "queued",
+      "epoch": 0,
+      "best_checkpoint_epoch": null,
+      "mean_U_percent": null,
+      "worst_U_percent": null,
+      "mean_VM_percent": null,
+      "worst_VM_percent": null,
+      "elapsed_seconds": null
+    },
+    {
+      "variant": "W128_S008",
+      "layers": 8,
+      "width": 128,
+      "heads": 8,
+      "slices": 8,
+      "parameters": 983428,
+      "phase": "queued",
+      "epoch": 0,
+      "best_checkpoint_epoch": null,
+      "mean_U_percent": null,
+      "worst_U_percent": null,
+      "mean_VM_percent": null,
+      "worst_VM_percent": null,
+      "elapsed_seconds": null
+    },
+    {
+      "variant": "W192_S004",
+      "layers": 8,
+      "width": 192,
+      "heads": 8,
+      "slices": 4,
+      "parameters": 2191588,
+      "phase": "queued",
+      "epoch": 0,
+      "best_checkpoint_epoch": null,
+      "mean_U_percent": null,
+      "worst_U_percent": null,
+      "mean_VM_percent": null,
+      "worst_VM_percent": null,
+      "elapsed_seconds": null
+    },
+    {
+      "variant": "W192_S008",
+      "layers": 8,
+      "width": 192,
+      "heads": 8,
+      "slices": 8,
+      "parameters": 2192388,
+      "phase": "queued",
+      "epoch": 0,
+      "best_checkpoint_epoch": null,
+      "mean_U_percent": null,
+      "worst_U_percent": null,
+      "mean_VM_percent": null,
+      "worst_VM_percent": null,
+      "elapsed_seconds": null
+    }
+  ],
+  "curves": {
+    "W128_S004": [],
+    "W128_S008": [],
+    "W192_S004": [],
+    "W192_S008": []
+  },
+  "export_reviews": {},
+  "protocol": {
+    "schema": "ts3_tension20_capacity_ablation_v1",
+    "phase": "prepared_waiting_for_MGN_full_completion",
+    "fresh_runs": [
+      "W128_S004",
+      "W128_S008",
+      "W192_S004",
+      "W192_S008"
+    ],
+    "variants": {
+      "W128_S004": {
+        "variant": "W128_S004",
+        "layers": 8,
+        "width": 128,
+        "heads": 8,
+        "slices": 4,
+        "parameters": 982884,
+        "relative_to_original_TS3": 0.12887962978989223,
+        "relative_to_previous_half_model": 0.25238782438102475,
+        "CPU_19node_forward_finite": true,
+        "config_sha256": "9f81957cc458a6d526e72ab5c0ce40fb763cbbe1eda516ec7efe365c6894191a",
+        "manifest_sha256": "52892b0976e55c155a50d9bcd81536e14aa40ced0f7c633f2dbca9e1573b1199",
+        "initialization_sha256": "b15c2c338bd0d574bf14b3a062ff7caa4fc535bbe853d298b7471e7d3ef403ad"
+      },
+      "W128_S008": {
+        "variant": "W128_S008",
+        "layers": 8,
+        "width": 128,
+        "heads": 8,
+        "slices": 8,
+        "parameters": 983428,
+        "relative_to_original_TS3": 0.12895096121720787,
+        "relative_to_previous_half_model": 0.25252751428996956,
+        "CPU_19node_forward_finite": true,
+        "config_sha256": "3bbf67f2d2da9c8982bcd97e6391e4c139a8dd8c817bd84db13605c26c442237",
+        "manifest_sha256": "52892b0976e55c155a50d9bcd81536e14aa40ced0f7c633f2dbca9e1573b1199",
+        "initialization_sha256": "2e8cfc4935ef9e3e205b82add018f915bdce2fe58cb5a9c73ea6426efa095d62"
+      },
+      "W192_S004": {
+        "variant": "W192_S004",
+        "layers": 8,
+        "width": 192,
+        "heads": 8,
+        "slices": 4,
+        "parameters": 2191588,
+        "relative_to_original_TS3": 0.2873696693526096,
+        "relative_to_previous_half_model": 0.562762367949383,
+        "CPU_19node_forward_finite": true,
+        "config_sha256": "8bec9459c8ad71c149e956e8eaf7ee17b45203af51c439560c4957164f1c142b",
+        "manifest_sha256": "52892b0976e55c155a50d9bcd81536e14aa40ced0f7c633f2dbca9e1573b1199",
+        "initialization_sha256": "e47863a096e475862aaf8ef36051e3ce7dea64f41336ca31a4fbf92de5bfcac9"
+      },
+      "W192_S008": {
+        "variant": "W192_S008",
+        "layers": 8,
+        "width": 192,
+        "heads": 8,
+        "slices": 8,
+        "parameters": 2192388,
+        "relative_to_original_TS3": 0.2874745685104267,
+        "relative_to_previous_half_model": 0.5629677942860665,
+        "CPU_19node_forward_finite": true,
+        "config_sha256": "0cbe4514240565ab4fccd74f7697d13b834922c02d9a79ca610dc9fc4d17dce4",
+        "manifest_sha256": "52892b0976e55c155a50d9bcd81536e14aa40ced0f7c633f2dbca9e1573b1199",
+        "initialization_sha256": "e2dbe5fcf4c6e689bb0d82023a4ed144d73d1abf63339239fdab74da29df3992"
+      }
+    },
+    "cases": 20,
+    "epochs_each": 2000,
+    "total_new_runs": 4,
+    "seed": 20261029,
+    "AMP": false,
+    "TF32": true,
+    "full_native_nodes": true,
+    "error_threshold": null,
+    "early_stop_on_error": false,
+    "initialization": "Same seed; shared same-shape values and nested slice rows within each width; different widths independently initialized",
+    "dataset_manifest_sha256": "52892b0976e55c155a50d9bcd81536e14aa40ced0f7c633f2dbca9e1573b1199",
+    "worker_source_sha256": "d9715aa3ffc8dcd62dcb8b4377d7910df6843e815625f104992df9c7e31e0559",
+    "coordinator_sha256": "ca005770dd52cec492c501fcb7d340ad7a04bbd78507f00cd35ad11af9b332c1",
+    "model_source_sha256": "4241224442e2ef5cadb64511ce82b5ae383ad53ef18d873e4414b27e0d0dcb6e",
+    "reused_training_loop": "Independent derivative of frozen slice_capacity_v2; same mathematical loop/AdamW/LR/full20 accumulation.",
+    "prerequisite": "MGN full fixed20 summary and native/supervisor exit, then 3 exclusive GPU observations.",
+    "cancelled_old_2000_epoch_extensions": true,
+    "automatic_TS3_FP64_resume": false,
+    "FE_solves": 0,
+    "comparison_scope": "All four use same pure axial tension subset; old mixed-load20 results are historical and not a same-data capacity baseline.",
+    "created_unix": 1793226499.9977825,
+    "pinned_TS3_source_sha256": "49292aa1ee7be2e143db5b9c75d0128f8767f8a2ae74479cdc06aeb9d41fb71a",
+    "prelaunch_preparation_revision": {
+      "initial_coordinator_sha256": "3b647b36d4885e76ea0163c0ce955e2338ca1c49a94ea1e04202e9ce2b6eb49b",
+      "note": "Added model/pinned-source guards before any coordinator or GPU run; mathematical worker unchanged."
+    }
+  },
+  "configs": {
+    "W128_S004": {
+      "seed": 20261029,
+      "subset_sizes": [
+        1,
+        5,
+        20
+      ],
+      "epochs": 2000,
+      "evaluation_every_epochs": 50,
+      "learning_rate": 0.0003,
+      "minimum_learning_rate": 1e-05,
+      "warmup_epochs": 50,
+      "error_threshold": null,
+      "early_stop_on_error": false,
+      "loss": "Equal-case mean of 0.5*(relative full-vector U squared L2 + projected VM relative squared L2)",
+      "gradient_accumulation": "Every optimizer step accumulates the entire selected subset; no inter-case forgetting from sequential optimizer updates.",
+      "independent_initialization_per_subset": true,
+      "precision": "FP32, TF32 CUDA matmul allowed",
+      "ts3": {
+        "n_layers": 8,
+        "n_hidden": 128,
+        "n_head": 8,
+        "slice_num": 4,
+        "mlp_ratio": 2,
+        "dropout": 0.0
+      },
+      "mgn": {
+        "latent_size": 256,
+        "message_passing_steps": 15,
+        "hidden_layers": 2,
+        "edge_channels": 4,
+        "output_channels": 4,
+        "chunk_size": 65536,
+        "checkpoint_blocks": true
+      },
+      "user_directive": "No user-specified error threshold. Report actual curves, mean/worst per-case errors and checkpoints; never invent pass/fail or early-stop thresholds. Larger networks requested."
+    },
+    "W128_S008": {
+      "seed": 20261029,
+      "subset_sizes": [
+        1,
+        5,
+        20
+      ],
+      "epochs": 2000,
+      "evaluation_every_epochs": 50,
+      "learning_rate": 0.0003,
+      "minimum_learning_rate": 1e-05,
+      "warmup_epochs": 50,
+      "error_threshold": null,
+      "early_stop_on_error": false,
+      "loss": "Equal-case mean of 0.5*(relative full-vector U squared L2 + projected VM relative squared L2)",
+      "gradient_accumulation": "Every optimizer step accumulates the entire selected subset; no inter-case forgetting from sequential optimizer updates.",
+      "independent_initialization_per_subset": true,
+      "precision": "FP32, TF32 CUDA matmul allowed",
+      "ts3": {
+        "n_layers": 8,
+        "n_hidden": 128,
+        "n_head": 8,
+        "slice_num": 8,
+        "mlp_ratio": 2,
+        "dropout": 0.0
+      },
+      "mgn": {
+        "latent_size": 256,
+        "message_passing_steps": 15,
+        "hidden_layers": 2,
+        "edge_channels": 4,
+        "output_channels": 4,
+        "chunk_size": 65536,
+        "checkpoint_blocks": true
+      },
+      "user_directive": "No user-specified error threshold. Report actual curves, mean/worst per-case errors and checkpoints; never invent pass/fail or early-stop thresholds. Larger networks requested."
+    },
+    "W192_S004": {
+      "seed": 20261029,
+      "subset_sizes": [
+        1,
+        5,
+        20
+      ],
+      "epochs": 2000,
+      "evaluation_every_epochs": 50,
+      "learning_rate": 0.0003,
+      "minimum_learning_rate": 1e-05,
+      "warmup_epochs": 50,
+      "error_threshold": null,
+      "early_stop_on_error": false,
+      "loss": "Equal-case mean of 0.5*(relative full-vector U squared L2 + projected VM relative squared L2)",
+      "gradient_accumulation": "Every optimizer step accumulates the entire selected subset; no inter-case forgetting from sequential optimizer updates.",
+      "independent_initialization_per_subset": true,
+      "precision": "FP32, TF32 CUDA matmul allowed",
+      "ts3": {
+        "n_layers": 8,
+        "n_hidden": 192,
+        "n_head": 8,
+        "slice_num": 4,
+        "mlp_ratio": 2,
+        "dropout": 0.0
+      },
+      "mgn": {
+        "latent_size": 256,
+        "message_passing_steps": 15,
+        "hidden_layers": 2,
+        "edge_channels": 4,
+        "output_channels": 4,
+        "chunk_size": 65536,
+        "checkpoint_blocks": true
+      },
+      "user_directive": "No user-specified error threshold. Report actual curves, mean/worst per-case errors and checkpoints; never invent pass/fail or early-stop thresholds. Larger networks requested."
+    },
+    "W192_S008": {
+      "seed": 20261029,
+      "subset_sizes": [
+        1,
+        5,
+        20
+      ],
+      "epochs": 2000,
+      "evaluation_every_epochs": 50,
+      "learning_rate": 0.0003,
+      "minimum_learning_rate": 1e-05,
+      "warmup_epochs": 50,
+      "error_threshold": null,
+      "early_stop_on_error": false,
+      "loss": "Equal-case mean of 0.5*(relative full-vector U squared L2 + projected VM relative squared L2)",
+      "gradient_accumulation": "Every optimizer step accumulates the entire selected subset; no inter-case forgetting from sequential optimizer updates.",
+      "independent_initialization_per_subset": true,
+      "precision": "FP32, TF32 CUDA matmul allowed",
+      "ts3": {
+        "n_layers": 8,
+        "n_hidden": 192,
+        "n_head": 8,
+        "slice_num": 8,
+        "mlp_ratio": 2,
+        "dropout": 0.0
+      },
+      "mgn": {
+        "latent_size": 256,
+        "message_passing_steps": 15,
+        "hidden_layers": 2,
+        "edge_channels": 4,
+        "output_channels": 4,
+        "chunk_size": 65536,
+        "checkpoint_blocks": true
+      },
+      "user_directive": "No user-specified error threshold. Report actual curves, mean/worst per-case errors and checkpoints; never invent pass/fail or early-stop thresholds. Larger networks requested."
+    }
+  },
+  "selected_samples": [
+    {
+      "sample_id": "normal_rodv2_0021__tension",
+      "geometry_case_id": "rodv2_0021",
+      "nodes": 60882,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 34.0195441960149,
+          "rod_center_distance_mm": 136.0781767840596,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0026__tension",
+      "geometry_case_id": "rodv2_0026",
+      "nodes": 35388,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 52.17928483865551,
+          "rod_center_distance_mm": 208.71713935462205,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0036__tension",
+      "geometry_case_id": "rodv2_0036",
+      "nodes": 31152,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 50.40348050831487,
+          "rod_center_distance_mm": 201.61392203325948,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0039__tension",
+      "geometry_case_id": "rodv2_0039",
+      "nodes": 36054,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 46.867606868979465,
+          "rod_center_distance_mm": 187.47042747591786,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0045__tension",
+      "geometry_case_id": "rodv2_0045",
+      "nodes": 69969,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 31.928994571562768,
+          "rod_center_distance_mm": 127.71597828625107,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0052__tension",
+      "geometry_case_id": "rodv2_0052",
+      "nodes": 46208,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 37.68695255481884,
+          "rod_center_distance_mm": 150.74781021927535,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0074__tension",
+      "geometry_case_id": "rodv2_0074",
+      "nodes": 35764,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 48.908270478414785,
+          "rod_center_distance_mm": 195.63308191365914,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0088__tension",
+      "geometry_case_id": "rodv2_0088",
+      "nodes": 71232,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 32.45268897388037,
+          "rod_center_distance_mm": 129.81075589552148,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0091__tension",
+      "geometry_case_id": "rodv2_0091",
+      "nodes": 62002,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 30.35886044757322,
+          "rod_center_distance_mm": 121.43544179029288,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0093__tension",
+      "geometry_case_id": "rodv2_0093",
+      "nodes": 37319,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 46.80961584585356,
+          "rod_center_distance_mm": 187.23846338341423,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0095__tension",
+      "geometry_case_id": "rodv2_0095",
+      "nodes": 69290,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 32.49307076158761,
+          "rod_center_distance_mm": 129.97228304635044,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0107__tension",
+      "geometry_case_id": "rodv2_0107",
+      "nodes": 75211,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 30.014297745253838,
+          "rod_center_distance_mm": 120.05719098101535,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0126__tension",
+      "geometry_case_id": "rodv2_0126",
+      "nodes": 45635,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 43.68089978931362,
+          "rod_center_distance_mm": 174.72359915725448,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0127__tension",
+      "geometry_case_id": "rodv2_0127",
+      "nodes": 73790,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 30.32261417786048,
+          "rod_center_distance_mm": 121.29045671144192,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0129__tension",
+      "geometry_case_id": "rodv2_0129",
+      "nodes": 67767,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 31.40103111996089,
+          "rod_center_distance_mm": 125.60412447984356,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0137__tension",
+      "geometry_case_id": "rodv2_0137",
+      "nodes": 56621,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 34.844671764105414,
+          "rod_center_distance_mm": 139.37868705642165,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0148__tension",
+      "geometry_case_id": "rodv2_0148",
+      "nodes": 47400,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 43.25045661646131,
+          "rod_center_distance_mm": 173.00182646584523,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0159__tension",
+      "geometry_case_id": "rodv2_0159",
+      "nodes": 38249,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 49.24711349945755,
+          "rod_center_distance_mm": 196.9884539978302,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0163__tension",
+      "geometry_case_id": "rodv2_0163",
+      "nodes": 75666,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 31.39395322313674,
+          "rod_center_distance_mm": 125.57581289254696,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "sample_id": "normal_rodv2_0170__tension",
+      "geometry_case_id": "rodv2_0170",
+      "nodes": 47670,
+      "scenario": {
+        "id": "tension",
+        "width_skew": 0.0,
+        "engine": {
+          "crank_radius_mm": 41.126127278057524,
+          "rod_center_distance_mm": 164.5045091122301,
+          "rpm": 3000.0,
+          "piston_bore_mm": 80.0,
+          "piston_assembly_mass_kg": 0.45,
+          "pressure_note": "Net pressure snapshots, no measured pressure trace; no full-cycle/fatigue claim."
+        },
+        "small_force_N": [
+          -6100.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "queue": {
+    "phase": "waiting_for_MGN_full_completion",
+    "supervisor_pid": 34592,
+    "updated_unix": 1793226702.6078534,
+    "predecessor_status": {
+      "phase": "training",
+      "pid": 364,
+      "precision": "fp32",
+      "epoch_completed": 7,
+      "case_cursor": 720,
+      "total_epochs": 20,
+      "completed_train_case_passes": 6320,
+      "total_train_case_passes": 16000,
+      "optimizer_updates": 790,
+      "active_seconds": 3773.6289550400033,
+      "timers": {
+        "train_wall_seconds": 3621.0408811079906,
+        "forward_backward_gpu_seconds": 3659.46912963868,
+        "optimizer_gpu_seconds": 2.52960451221466,
+        "checkpoint_seconds": 16.989980928025034,
+        "validation_seconds": 127.25611346500227
+      },
+      "peak_allocated_bytes": 8831659008,
+      "remaining_training_seconds_estimate": 5546.1512229628715,
+      "error_threshold": null,
+      "updated_unix": 1793226697.9038424
+    },
+    "predecessor_supervisor_live": true,
+    "training_started": false
+  },
+  "updated_unix": 1793226704.9609187,
+  "validation_test_used": false
+}
