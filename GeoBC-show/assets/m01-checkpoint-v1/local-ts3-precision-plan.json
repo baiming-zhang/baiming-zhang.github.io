@@ -2,7 +2,7 @@
   "execution": "local RTX 5090",
   "method": "TS3",
   "parameters": 11882756,
-  "phase": "training",
+  "phase": "paused_by_user",
   "precision_order": [
     "FP32",
     "FP64"
@@ -17,12 +17,12 @@
   "initialization": "same saved FP32 initial values, exactly promoted to FP64 for the second independent arm",
   "finished_arms": 1,
   "current_precision": "fp64",
-  "epoch_completed": 5,
-  "case_cursor": 232,
-  "active_seconds": 21004.661188556,
+  "epoch_completed": 6,
+  "case_cursor": 200,
+  "active_seconds": 24733.596707858003,
   "waiting_seconds": null,
-  "remaining_training_seconds_estimate": 56404.824686502994,
-  "updated_unix": 1793218706.774635,
+  "remaining_training_seconds_estimate": 52520.94612309611,
+  "updated_unix": 1793222795.3321445,
   "error_threshold": null,
   "early_stopping": false,
   "exclusive_GPU_policy": "Wait for the existing compute workflow and its following validation, then three idle observations; yield own run if contention returns",
@@ -48,14 +48,14 @@
   },
   "source_config_sha256": "47369eb28682d7fa8c44bbe5eadd3ff10791bcdb77c45b25682a44355bc8486d",
   "timers": {
-    "train_wall_seconds": 20284.263942325008,
-    "forward_backward_gpu_seconds": 20499.98216918949,
-    "optimizer_gpu_seconds": 2.446001944303513,
-    "checkpoint_seconds": 21.98010820199488,
-    "validation_seconds": 690.1484406580021
+    "train_wall_seconds": 23873.15732868005,
+    "forward_backward_gpu_seconds": 24232.90661572266,
+    "optimizer_gpu_seconds": 2.858162168741229,
+    "checkpoint_seconds": 27.13966263698603,
+    "validation_seconds": 823.6099257249989
   },
   "peak_allocated_bytes": 10687886336,
-  "optimizer_updates": 529,
+  "optimizer_updates": 625,
   "epoch_curves": {
     "fp32": [
       {
@@ -359,8 +359,20 @@
         "cumulative_validation_seconds": 690.1484406580021,
         "mean_validation_U_L2": 0.6866762056340682,
         "mean_validation_VM_L2": 0.5372744462963331
+      },
+      {
+        "epoch": 6,
+        "precision": "fp64",
+        "active_seconds": 23796.389159351,
+        "online_training_objective": 0.5081765485082549,
+        "cumulative_train_wall_seconds": 22939.03599232604,
+        "cumulative_forward_backward_gpu_seconds": 23249.87496166991,
+        "cumulative_optimizer_gpu_seconds": 2.75207276105881,
+        "cumulative_validation_seconds": 823.6099257249989,
+        "mean_validation_U_L2": 0.8024834755435609,
+        "mean_validation_VM_L2": 0.5582116859123153
       }
     ]
   },
-  "completed_train_case_passes": 4232
+  "completed_train_case_passes": 5000
 }

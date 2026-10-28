@@ -1,0 +1,137 @@
+{
+  "method": "MGN",
+  "config": {
+    "schema": "m01_local_mgn_fp32_v1",
+    "seed": 20261027,
+    "splits": {
+      "train": 800,
+      "validation": 100,
+      "test": 100
+    },
+    "epochs": 20,
+    "gradient_accumulation_cases": 8,
+    "learning_rate": 0.0001,
+    "minimum_learning_rate": 1e-06,
+    "warmup_epochs": 5,
+    "weight_decay": 1e-05,
+    "gradient_clip_norm": 1.0,
+    "precision": "pure fp32; AMP and TF32 disabled to match TS3 FP32",
+    "validation_every_epochs": 1,
+    "checkpoint_every_updates": 25,
+    "checkpoint_selection": "validation reporting only; final-epoch weights used for speed study",
+    "error_threshold": null,
+    "early_stopping": false,
+    "node_sampling": false,
+    "test_policy": "test labels untouched during precision timing study",
+    "mgn": {
+      "latent_size": 288,
+      "message_passing_steps": 15,
+      "hidden_layers": 2,
+      "chunk_size": 32768,
+      "checkpoint_blocks": true,
+      "output_channels": 4
+    },
+    "methods": [
+      "mgn"
+    ],
+    "precisions": [
+      "fp32"
+    ],
+    "execution": "local RTX 5090, exclusive GPU; user paused TS3 FP64 to prioritize MGN",
+    "initialization": "Independent MGN initialization with same seed; different architecture cannot share TS3 weights",
+    "warmup": "one full-largest-TRAIN forward/backward per arm, no optimizer update; excluded from timings",
+    "sources": {
+      "tools/train_m01_mgn_comparison.py": "df7ac1345c73bd6833e5ef44add07a949624e0b988188dbeb68b2553d442a5cf",
+      "tools/train_rod_m01_sockeye.py": "153d0bbc666ec918a33cf4bfd7b486d8304bdea78e47f36e6added6add5eeb86",
+      "geobc/rod_m01_models.py": "96317e7764b686ef5bdb027e05921f69ca66c63e3eaa44b812a23b2789319c5c",
+      "geobc/overfit_meshgraphnet.py": "d8b180153c3080507e9aa35587e6bcf353ba29a4754732377ac74527b0e1451a",
+      "geobc/native_fno.py": "b90fe48d292d52e9acf465b35e486c02db82a553315cadca63d7c2ddd6acc639",
+      "geobc/fno.py": "45314639765e68379dc0726141f59c72d84413c8d348818bba5f3bafb6290fb4"
+    },
+    "baseline_TS3_config_sha256": "47369eb28682d7fa8c44bbe5eadd3ff10791bcdb77c45b25682a44355bc8486d",
+    "baseline_TS3_fp32_summary_sha256": "bd1fb954fbb3c4d60370bd267ba78069de6529dbd4719f68055fc13b0b1350e1",
+    "comparison_caveat": "MGN additionally receives original TET10 graph connectivity; parameter counts differ. Fixed 20 epochs, not convergence.",
+    "parameters": 11760196,
+    "initial_weights_sha256": "ad2dab965bb775dab1201993bb96933ce4ca9d2e834f204582da58236917edfb"
+  },
+  "queue": {
+    "phase": "training",
+    "precision": "fp32",
+    "supervisor_pid": 22404,
+    "windows_child_pid": 34972,
+    "worker": {
+      "phase": "training",
+      "pid": 364,
+      "precision": "fp32",
+      "epoch_completed": 0,
+      "case_cursor": 32,
+      "total_epochs": 20,
+      "completed_train_case_passes": 32,
+      "total_train_case_passes": 16000,
+      "optimizer_updates": 4,
+      "active_seconds": 19.805295101999945,
+      "timers": {
+        "train_wall_seconds": 19.7657817779982,
+        "forward_backward_gpu_seconds": 19.83726742553711,
+        "optimizer_gpu_seconds": 0.133503262758255,
+        "checkpoint_seconds": 0.0,
+        "validation_seconds": 0.0
+      },
+      "peak_allocated_bytes": 8692349952,
+      "remaining_training_seconds_estimate": 9863.125107221102,
+      "error_threshold": null,
+      "updated_unix": 1793222781.1801286
+    },
+    "resources": {
+      "utilization_percent": 98,
+      "memory_used_MiB": 11088,
+      "memory_total_MiB": 32607,
+      "reserved_existing_workflows": [],
+      "other_compute_clients": [],
+      "updated_unix": 1793222785.72362
+    },
+    "updated_unix": 1793222785.7246199
+  },
+  "status": {
+    "phase": "training",
+    "pid": 364,
+    "precision": "fp32",
+    "epoch_completed": 0,
+    "case_cursor": 48,
+    "total_epochs": 20,
+    "completed_train_case_passes": 48,
+    "total_train_case_passes": 16000,
+    "optimizer_updates": 6,
+    "active_seconds": 29.69851084000402,
+    "timers": {
+      "train_wall_seconds": 29.62464139599615,
+      "forward_backward_gpu_seconds": 29.28487020874023,
+      "optimizer_gpu_seconds": 0.13867321467399596,
+      "checkpoint_seconds": 0.0,
+      "validation_seconds": 0.0
+    },
+    "peak_allocated_bytes": 8692349952,
+    "remaining_training_seconds_estimate": 9845.255823936053,
+    "error_threshold": null,
+    "updated_unix": 1793222791.0733504
+  },
+  "curve": [],
+  "TS3_FP64_paused_by_user": {
+    "paused_by_user": true,
+    "resume_requires_user": true,
+    "checkpoint": "fp64/last.pt",
+    "checkpoint_sha256": "524dcdf588b73e597fad0919ccc039eee557164fe24a95977d4b139ff35e96b0",
+    "epoch": 6,
+    "cursor": 200,
+    "optimizer_updates": 625,
+    "optimizer_and_all_RNG_present": true,
+    "source_identity_unchanged": true,
+    "checkpoint_model_dtype": "torch.float64",
+    "active_seconds": 24733.596707858003,
+    "updated_unix": 1793222675.5875793,
+    "native_worker_and_windows_supervisor_exit_confirmed": true
+  },
+  "test_labels_read": false,
+  "updated_unix": 1793222795.9030952,
+  "summary": null
+}
