@@ -1,0 +1,58 @@
+{
+  "checkpoint_epoch": 20,
+  "precision": "fp32",
+  "checkpoint_sha256": "f92cd0cc9ecfd9f8c015e3d9885401510d480b978c5e67545d6b0c866ad8a99d",
+  "train_cases": 800,
+  "validation_cases": 100,
+  "test_labels_read": false,
+  "reference_selection": "median of squared U+VM relative errors, worst U, worst node VM in the full100 GPU validation records",
+  "references": [
+    {
+      "role": "median_joint",
+      "sample_id": "normal_rodv2_0050__tension_skew",
+      "native_nodes": 34221,
+      "surface_nodes": 16678,
+      "original_node_mapping": true,
+      "geometry_load_sha_match": true,
+      "original_load_arrows_in_all6panels": true,
+      "pressure_arrows": 12,
+      "body_force_zero": true,
+      "reference_undeformed": true,
+      "negative_VM_predictions_retained": true,
+      "relative_U_L2": 0.10138137082060616,
+      "relative_VM_L2": 0.28452853454816096
+    },
+    {
+      "role": "worst_U",
+      "sample_id": "normal_supp2_rodv2_0135__tension_new_bias_m025",
+      "native_nodes": 35683,
+      "surface_nodes": 17502,
+      "original_node_mapping": true,
+      "geometry_load_sha_match": true,
+      "original_load_arrows_in_all6panels": true,
+      "pressure_arrows": 12,
+      "body_force_zero": true,
+      "reference_undeformed": true,
+      "negative_VM_predictions_retained": true,
+      "relative_U_L2": 0.9080952450388061,
+      "relative_VM_L2": 0.2871537837789663
+    },
+    {
+      "role": "worst_VM",
+      "sample_id": "normal_rodv2_0123__compression_skew",
+      "native_nodes": 35686,
+      "surface_nodes": 16990,
+      "original_node_mapping": true,
+      "geometry_load_sha_match": true,
+      "original_load_arrows_in_all6panels": true,
+      "pressure_arrows": 12,
+      "body_force_zero": true,
+      "reference_undeformed": true,
+      "negative_VM_predictions_retained": true,
+      "relative_U_L2": 0.6662326016109488,
+      "relative_VM_L2": 0.4332247820286392
+    }
+  ],
+  "numeric_export_complete": false,
+  "note": "CPU FP32 predictions from the same finished epoch20 model. No GPU job interruption, new training, FE solve or test labels."
+}
