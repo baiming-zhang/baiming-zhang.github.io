@@ -17,12 +17,12 @@
   "initialization": "same saved FP32 initial values, exactly promoted to FP64 for the second independent arm",
   "finished_arms": 1,
   "current_precision": "fp64",
-  "epoch_completed": 0,
-  "case_cursor": 352,
-  "active_seconds": 1701.5531044070012,
+  "epoch_completed": 1,
+  "case_cursor": 24,
+  "active_seconds": 4158.652633836999,
   "waiting_seconds": null,
-  "remaining_training_seconds_estimate": 75573.85543915966,
-  "updated_unix": 1793199141.187978,
+  "remaining_training_seconds_estimate": 73876.6494258052,
+  "updated_unix": 1793201596.8999646,
   "error_threshold": null,
   "early_stopping": false,
   "exclusive_GPU_policy": "Wait for the existing compute workflow and its following validation, then three idle observations; yield own run if contention returns",
@@ -48,14 +48,14 @@
   },
   "source_config_sha256": "47369eb28682d7fa8c44bbe5eadd3ff10791bcdb77c45b25682a44355bc8486d",
   "timers": {
-    "train_wall_seconds": 1700.0253779770064,
-    "forward_backward_gpu_seconds": 1698.6140881347674,
-    "optimizer_gpu_seconds": 0.3422449848651886,
-    "checkpoint_seconds": 0.8049152140010847,
-    "validation_seconds": 0.0
+    "train_wall_seconds": 4011.225561865016,
+    "forward_backward_gpu_seconds": 4005.6964028320344,
+    "optimizer_gpu_seconds": 0.6017089517116545,
+    "checkpoint_seconds": 4.192078594998748,
+    "validation_seconds": 141.597910212
   },
   "peak_allocated_bytes": 10686843392,
-  "optimizer_updates": 44,
+  "optimizer_updates": 103,
   "epoch_curves": {
     "fp32": [
       {
@@ -299,7 +299,20 @@
         "mean_validation_VM_L2": 0.27737759340475754
       }
     ],
-    "fp64": []
+    "fp64": [
+      {
+        "epoch": 1,
+        "precision": "fp64",
+        "active_seconds": 4033.2218505029996,
+        "online_training_objective": 5.85198136816027,
+        "cumulative_train_wall_seconds": 3886.741387455015,
+        "cumulative_forward_backward_gpu_seconds": 3881.407590332035,
+        "cumulative_optimizer_gpu_seconds": 0.5894270639419554,
+        "cumulative_validation_seconds": 141.597910212,
+        "mean_validation_U_L2": 1.7329939664268215,
+        "mean_validation_VM_L2": 0.746308475856751
+      }
+    ]
   },
-  "completed_train_case_passes": 352
+  "completed_train_case_passes": 824
 }
