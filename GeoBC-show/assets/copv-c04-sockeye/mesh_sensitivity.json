@@ -1,0 +1,664 @@
+{
+  "reference": "058 q8; not certified h-converged",
+  "variants": {
+    "085": {
+      "schema": "c04_same_geometry_nonuniform_mesh_sensitivity_v1",
+      "created": "2026-10-28T18:38:09.963289+08:00",
+      "case_id": "copv_c04_0000",
+      "baseline_mesh_sha256": "43f29c4b9d012c4693dd8c426f3e01820f05a00838ad8a2327b0b9d9bd78f36c",
+      "variant_mesh_sha256": "77a904cd977e4e90f8043409bb94afede93ef9b7337908fd3150480c989f22d8",
+      "source_summary_sha256": [
+        "445ff8f4328332eca1711b41b5c8ab3d234f89e2b574bde27327b3366cf5aa23",
+        "e99ad57f72f68f9c6638811a4b1e2d06d0b9f6ff575c7c4f23197cb37c394f9d"
+      ],
+      "same_CAD_and_numerical_physics": true,
+      "quadrature_degree": 8,
+      "energy_relative_difference_to_baseline": 7.334353985921638e-06,
+      "displacement": {
+        "raw_common_probe_L2_mm": 0.0003827697543543801,
+        "rigid_aligned_common_probe_L2_mm": 8.996906674174007e-05,
+        "max_raw_vector_difference_mm": 6.203246507126009e-05,
+        "max_rigid_aligned_vector_difference_mm": 2.968415332087385e-05,
+        "least_squares_translation_mm": [
+          -2.8315998216101074e-07,
+          -1.7866700001731616e-05,
+          -1.0590225032328012e-06
+        ],
+        "least_squares_infinitesimal_rotation": [
+          6.87391829789389e-08,
+          -6.801066288911916e-09,
+          3.878516304088548e-09
+        ],
+        "fitting_center_mm": [
+          0.2671544017084797,
+          -2.4593612285867494,
+          -9.001848323323038
+        ],
+        "scope": "Equal-weight common physical probes. Raw and six-DOF rigid-aligned differences retained; no nearest node/GP substitution."
+      },
+      "parts": {
+        "1": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 3.1566045934333433e-05,
+          "max_absolute_stress_component_difference_MPa": 0.0030411176469016254,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "2": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.0010879420537246722,
+          "max_absolute_stress_component_difference_MPa": 0.01392651104292253,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "3": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.004052988120092513,
+          "max_absolute_stress_component_difference_MPa": 0.1580834325495326,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "4": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.0036045015796570246,
+          "max_absolute_stress_component_difference_MPa": 0.2070271180592762,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "5": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.004752354036614787,
+          "max_absolute_stress_component_difference_MPa": 0.3603812729882634,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "6": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.07784243491213282,
+          "max_absolute_stress_component_difference_MPa": 13.394079360251112,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "7": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.09508638383162561,
+          "max_absolute_stress_component_difference_MPa": 10.557545194548823,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "8": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.10781163591325167,
+          "max_absolute_stress_component_difference_MPa": 21.86749284021912,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "9": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.07368667918954679,
+          "max_absolute_stress_component_difference_MPa": 2.119185604098716,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "10": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.5180009443955278,
+          "max_absolute_stress_component_difference_MPa": 23.268457846182766,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "14": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.06253313437594214,
+          "max_absolute_stress_component_difference_MPa": 0.4779253841477553,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "18": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.11219804228721389,
+          "max_absolute_stress_component_difference_MPa": 0.8175413466988815,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        }
+      },
+      "requested_probes": 235,
+      "matched_probes": 235,
+      "failed_or_ambiguous_probes": [],
+      "material_volume_and_raw_GP_peak_diagnostics": [
+        {
+          "part_id": 1,
+          "baseline": {
+            "material": "aluminum",
+            "name": "\u91d1\u5c5e\u6c14\u5bc6\u5185\u886c",
+            "max_GP_von_Mises_MPa": 111.0259160586448,
+            "max_abs_fiber_sigma11_MPa": 49.12930002575985,
+            "volume_mm3": 335082.47492998105
+          },
+          "variant": {
+            "material": "aluminum",
+            "name": "\u91d1\u5c5e\u6c14\u5bc6\u5185\u886c",
+            "max_GP_von_Mises_MPa": 111.0263655517394,
+            "max_abs_fiber_sigma11_MPa": 49.14632426359755,
+            "volume_mm3": 335082.4749299843
+          }
+        },
+        {
+          "part_id": 2,
+          "baseline": {
+            "material": "adhesive",
+            "name": "\u73af\u6c27\u7c98\u63a5\u5c42 0.15 mm",
+            "max_GP_von_Mises_MPa": 10.47329670017106,
+            "max_abs_fiber_sigma11_MPa": 6.6919848613249195,
+            "volume_mm3": 49523.00055947788
+          },
+          "variant": {
+            "material": "adhesive",
+            "name": "\u73af\u6c27\u7c98\u63a5\u5c42 0.15 mm",
+            "max_GP_von_Mises_MPa": 10.472723863216267,
+            "max_abs_fiber_sigma11_MPa": 6.690851080822711,
+            "volume_mm3": 49523.000559477885
+          }
+        },
+        {
+          "part_id": 3,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 1 / +55\u00b0",
+            "max_GP_von_Mises_MPa": 37.0199932407263,
+            "max_abs_fiber_sigma11_MPa": 38.440177048311774,
+            "volume_mm3": 248948.75513350643
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 1 / +55\u00b0",
+            "max_GP_von_Mises_MPa": 37.0200769266363,
+            "max_abs_fiber_sigma11_MPa": 38.44109598473641,
+            "volume_mm3": 248948.75513350655
+          }
+        },
+        {
+          "part_id": 4,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 2 / -55\u00b0",
+            "max_GP_von_Mises_MPa": 43.04307928679717,
+            "max_abs_fiber_sigma11_MPa": 45.11366170135735,
+            "volume_mm3": 251159.10895800064
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 2 / -55\u00b0",
+            "max_GP_von_Mises_MPa": 43.053573805029885,
+            "max_abs_fiber_sigma11_MPa": 45.10211408387784,
+            "volume_mm3": 251159.1089580004
+          }
+        },
+        {
+          "part_id": 5,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 3 / -55\u00b0",
+            "max_GP_von_Mises_MPa": 51.8321252918869,
+            "max_abs_fiber_sigma11_MPa": 55.29082833268487,
+            "volume_mm3": 253352.0171391111
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 3 / -55\u00b0",
+            "max_GP_von_Mises_MPa": 51.864163907403224,
+            "max_abs_fiber_sigma11_MPa": 55.23415335286011,
+            "volume_mm3": 253351.8972228353
+          }
+        },
+        {
+          "part_id": 6,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 4 / +55\u00b0",
+            "max_GP_von_Mises_MPa": 84.6354250391479,
+            "max_abs_fiber_sigma11_MPa": 92.9202760158107,
+            "volume_mm3": 255523.47299910313
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 4 / +55\u00b0",
+            "max_GP_von_Mises_MPa": 85.36834131513986,
+            "max_abs_fiber_sigma11_MPa": 93.9782761050087,
+            "volume_mm3": 255523.431897725
+          }
+        },
+        {
+          "part_id": 7,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u4e0a\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+            "max_GP_von_Mises_MPa": 117.49523680778118,
+            "max_abs_fiber_sigma11_MPa": 114.51928831257274,
+            "volume_mm3": 4318.804267564008
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u4e0a\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+            "max_GP_von_Mises_MPa": 116.54005286033883,
+            "max_abs_fiber_sigma11_MPa": 114.93044451950831,
+            "volume_mm3": 4318.793556488232
+          }
+        },
+        {
+          "part_id": 8,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u4e0b\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+            "max_GP_von_Mises_MPa": 112.14553853464732,
+            "max_abs_fiber_sigma11_MPa": 108.93232235373853,
+            "volume_mm3": 4318.808983593884
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u4e0b\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+            "max_GP_von_Mises_MPa": 111.58076142822684,
+            "max_abs_fiber_sigma11_MPa": 110.67123964536634,
+            "volume_mm3": 4318.797923857713
+          }
+        },
+        {
+          "part_id": 9,
+          "baseline": {
+            "material": "titanium",
+            "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+            "max_GP_von_Mises_MPa": 32.67527727334417,
+            "max_abs_fiber_sigma11_MPa": 24.776935505555333,
+            "volume_mm3": 83609.95155687959
+          },
+          "variant": {
+            "material": "titanium",
+            "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+            "max_GP_von_Mises_MPa": 35.41074456692041,
+            "max_abs_fiber_sigma11_MPa": 23.741095009349323,
+            "volume_mm3": 83609.94970989146
+          }
+        },
+        {
+          "part_id": 10,
+          "baseline": {
+            "material": "titanium",
+            "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+            "max_GP_von_Mises_MPa": 33.783482119181855,
+            "max_abs_fiber_sigma11_MPa": 21.38427272759151,
+            "volume_mm3": 80967.90621253531
+          },
+          "variant": {
+            "material": "titanium",
+            "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+            "max_GP_von_Mises_MPa": 32.26099339911317,
+            "max_abs_fiber_sigma11_MPa": 20.808418180951836,
+            "volume_mm3": 80967.90558180735
+          }
+        },
+        {
+          "part_id": 14,
+          "baseline": {
+            "material": "steel",
+            "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+            "max_GP_von_Mises_MPa": 8.093179564736102,
+            "max_abs_fiber_sigma11_MPa": 7.419058410497825,
+            "volume_mm3": 16164.2980848972
+          },
+          "variant": {
+            "material": "steel",
+            "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+            "max_GP_von_Mises_MPa": 8.248910457448567,
+            "max_abs_fiber_sigma11_MPa": 7.024604027511625,
+            "volume_mm3": 16164.29794548686
+          }
+        },
+        {
+          "part_id": 18,
+          "baseline": {
+            "material": "steel",
+            "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+            "max_GP_von_Mises_MPa": 7.101477775968065,
+            "max_abs_fiber_sigma11_MPa": 6.215310426053457,
+            "volume_mm3": 14387.384172502147
+          },
+          "variant": {
+            "material": "steel",
+            "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+            "max_GP_von_Mises_MPa": 7.117530212777299,
+            "max_abs_fiber_sigma11_MPa": 6.20970613126426,
+            "volume_mm3": 14387.384414248083
+          }
+        }
+      ],
+      "production_eligible": false,
+      "limitations": [
+        "Two nonuniform meshes, unchanged minimum root/fillet size. This does not establish global h-limit or point-peak convergence.",
+        "Every failed/ambiguous original probe retained, with no substituted point or zero-filled field.",
+        "Raw GP maxima may occur on material/element boundaries and are mesh-dependent diagnostics.",
+        "Same nominal pressure is checked; actual per-run boundary integration/load verification remains bound to each completed run."
+      ],
+      "seconds": 11.385671040974557,
+      "probe_sampling": "Four deterministic source cells per material with interior GP samples, plus globally scanned top-three interior absolute fiber sigma11 probes for carbon or von Mises probes for other materials. Selected entirely from baseline q8; no selection based on variant differences.",
+      "analysis_source_sha256": "2ef16d65a1947bf8655ca28223c3e7d0b8aea1c0158b8cd3f66f503b1c379161"
+    },
+    "092": {
+      "schema": "c04_same_geometry_nonuniform_mesh_sensitivity_v1",
+      "created": "2026-10-28T18:38:20.080608+08:00",
+      "case_id": "copv_c04_0000",
+      "baseline_mesh_sha256": "43f29c4b9d012c4693dd8c426f3e01820f05a00838ad8a2327b0b9d9bd78f36c",
+      "variant_mesh_sha256": "283899075240e2023d413455a8c3158f545e36ca5d973a141031fb6823741ac5",
+      "source_summary_sha256": [
+        "445ff8f4328332eca1711b41b5c8ab3d234f89e2b574bde27327b3366cf5aa23",
+        "8da864f94f1fb59f7c08ae599c7095d1e224037ea845c750d95212acbfe4883d"
+      ],
+      "same_CAD_and_numerical_physics": true,
+      "quadrature_degree": 8,
+      "energy_relative_difference_to_baseline": 2.4592737390971564e-06,
+      "displacement": {
+        "raw_common_probe_L2_mm": 0.00044086089526470184,
+        "rigid_aligned_common_probe_L2_mm": 0.00012342347984082788,
+        "max_raw_vector_difference_mm": 7.825108913333874e-05,
+        "max_rigid_aligned_vector_difference_mm": 4.366749311600766e-05,
+        "least_squares_translation_mm": [
+          -9.256486068039692e-06,
+          1.799285856498782e-05,
+          -1.775593864797851e-07
+        ],
+        "least_squares_infinitesimal_rotation": [
+          -6.91814702583187e-08,
+          -3.904166336682729e-08,
+          3.5911584053336715e-09
+        ],
+        "fitting_center_mm": [
+          0.2671544017084797,
+          -2.4593612285867494,
+          -9.001848323323038
+        ],
+        "scope": "Equal-weight common physical probes. Raw and six-DOF rigid-aligned differences retained; no nearest node/GP substitution."
+      },
+      "parts": {
+        "1": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.011966987032495702,
+          "max_absolute_stress_component_difference_MPa": 1.7770114062759745,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "2": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.04078850339439035,
+          "max_absolute_stress_component_difference_MPa": 0.41685862381383276,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "3": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.00809277566499463,
+          "max_absolute_stress_component_difference_MPa": 0.33832308955813417,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "4": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.010826085713973298,
+          "max_absolute_stress_component_difference_MPa": 0.4777789547175608,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "5": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.004606632822744465,
+          "max_absolute_stress_component_difference_MPa": 0.280989436095048,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "6": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.032452904684315546,
+          "max_absolute_stress_component_difference_MPa": 3.854689722261618,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "7": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.1319950625433786,
+          "max_absolute_stress_component_difference_MPa": 20.025724836229102,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "8": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.1726876792332647,
+          "max_absolute_stress_component_difference_MPa": 32.44980652731941,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "9": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.5374509606449107,
+          "max_absolute_stress_component_difference_MPa": 18.77013346317943,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "10": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.7649967148242193,
+          "max_absolute_stress_component_difference_MPa": 20.857392622305724,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "14": {
+          "matched_probes": 19,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.07493531575017928,
+          "max_absolute_stress_component_difference_MPa": 0.5074177273590497,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        },
+        "18": {
+          "matched_probes": 20,
+          "stress_tensor_sample_L2_relative_to_baseline": 0.09668315949351412,
+          "max_absolute_stress_component_difference_MPa": 0.6580385476619179,
+          "scope": "Unweighted common-point sample norm; not a volume norm."
+        }
+      },
+      "requested_probes": 235,
+      "matched_probes": 235,
+      "failed_or_ambiguous_probes": [],
+      "material_volume_and_raw_GP_peak_diagnostics": [
+        {
+          "part_id": 1,
+          "baseline": {
+            "material": "aluminum",
+            "name": "\u91d1\u5c5e\u6c14\u5bc6\u5185\u886c",
+            "max_GP_von_Mises_MPa": 111.0259160586448,
+            "max_abs_fiber_sigma11_MPa": 49.12930002575985,
+            "volume_mm3": 335082.47492998105
+          },
+          "variant": {
+            "material": "aluminum",
+            "name": "\u91d1\u5c5e\u6c14\u5bc6\u5185\u886c",
+            "max_GP_von_Mises_MPa": 110.77740834543484,
+            "max_abs_fiber_sigma11_MPa": 49.0866552916399,
+            "volume_mm3": 335082.46676741744
+          }
+        },
+        {
+          "part_id": 2,
+          "baseline": {
+            "material": "adhesive",
+            "name": "\u73af\u6c27\u7c98\u63a5\u5c42 0.15 mm",
+            "max_GP_von_Mises_MPa": 10.47329670017106,
+            "max_abs_fiber_sigma11_MPa": 6.6919848613249195,
+            "volume_mm3": 49523.00055947788
+          },
+          "variant": {
+            "material": "adhesive",
+            "name": "\u73af\u6c27\u7c98\u63a5\u5c42 0.15 mm",
+            "max_GP_von_Mises_MPa": 10.231746938185069,
+            "max_abs_fiber_sigma11_MPa": 6.740216493547398,
+            "volume_mm3": 49522.996982978344
+          }
+        },
+        {
+          "part_id": 3,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 1 / +55\u00b0",
+            "max_GP_von_Mises_MPa": 37.0199932407263,
+            "max_abs_fiber_sigma11_MPa": 38.440177048311774,
+            "volume_mm3": 248948.75513350643
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 1 / +55\u00b0",
+            "max_GP_von_Mises_MPa": 37.059534856026424,
+            "max_abs_fiber_sigma11_MPa": 38.45706902233634,
+            "volume_mm3": 248948.76409373927
+          }
+        },
+        {
+          "part_id": 4,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 2 / -55\u00b0",
+            "max_GP_von_Mises_MPa": 43.04307928679717,
+            "max_abs_fiber_sigma11_MPa": 45.11366170135735,
+            "volume_mm3": 251159.10895800064
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 2 / -55\u00b0",
+            "max_GP_von_Mises_MPa": 42.891872588962826,
+            "max_abs_fiber_sigma11_MPa": 45.11087343777088,
+            "volume_mm3": 251159.1153487742
+          }
+        },
+        {
+          "part_id": 5,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 3 / -55\u00b0",
+            "max_GP_von_Mises_MPa": 51.8321252918869,
+            "max_abs_fiber_sigma11_MPa": 55.29082833268487,
+            "volume_mm3": 253352.0171391111
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 3 / -55\u00b0",
+            "max_GP_von_Mises_MPa": 51.90943327656015,
+            "max_abs_fiber_sigma11_MPa": 55.2780062686721,
+            "volume_mm3": 253351.88524432242
+          }
+        },
+        {
+          "part_id": 6,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 4 / +55\u00b0",
+            "max_GP_von_Mises_MPa": 84.6354250391479,
+            "max_abs_fiber_sigma11_MPa": 92.9202760158107,
+            "volume_mm3": 255523.47299910313
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u5305\u8986\u94fa\u5c42 4 / +55\u00b0",
+            "max_GP_von_Mises_MPa": 92.51050881602775,
+            "max_abs_fiber_sigma11_MPa": 101.31163863891847,
+            "volume_mm3": 255523.46285261828
+          }
+        },
+        {
+          "part_id": 7,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u4e0a\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+            "max_GP_von_Mises_MPa": 117.49523680778118,
+            "max_abs_fiber_sigma11_MPa": 114.51928831257274,
+            "volume_mm3": 4318.804267564008
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u4e0a\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+            "max_GP_von_Mises_MPa": 131.62073050158097,
+            "max_abs_fiber_sigma11_MPa": 128.90049474929413,
+            "volume_mm3": 4318.8079409320035
+          }
+        },
+        {
+          "part_id": 8,
+          "baseline": {
+            "material": "carbon",
+            "name": "\u4e0b\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+            "max_GP_von_Mises_MPa": 112.14553853464732,
+            "max_abs_fiber_sigma11_MPa": 108.93232235373853,
+            "volume_mm3": 4318.808983593884
+          },
+          "variant": {
+            "material": "carbon",
+            "name": "\u4e0b\u6781\u533a\u5c40\u90e8\u8865\u5f3a",
+            "max_GP_von_Mises_MPa": 121.59470552703173,
+            "max_abs_fiber_sigma11_MPa": 120.36558818790866,
+            "volume_mm3": 4318.803921203514
+          }
+        },
+        {
+          "part_id": 9,
+          "baseline": {
+            "material": "titanium",
+            "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+            "max_GP_von_Mises_MPa": 32.67527727334417,
+            "max_abs_fiber_sigma11_MPa": 24.776935505555333,
+            "volume_mm3": 83609.95155687959
+          },
+          "variant": {
+            "material": "titanium",
+            "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+            "max_GP_von_Mises_MPa": 40.22336936069643,
+            "max_abs_fiber_sigma11_MPa": 29.840700673948906,
+            "volume_mm3": 83609.94512152352
+          }
+        },
+        {
+          "part_id": 10,
+          "baseline": {
+            "material": "titanium",
+            "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+            "max_GP_von_Mises_MPa": 33.783482119181855,
+            "max_abs_fiber_sigma11_MPa": 21.38427272759151,
+            "volume_mm3": 80967.90621253531
+          },
+          "variant": {
+            "material": "titanium",
+            "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u5d4c\u5165\u6cd5\u5170\u4e0e\u8f66\u524a boss",
+            "max_GP_von_Mises_MPa": 43.449614604800374,
+            "max_abs_fiber_sigma11_MPa": 32.72950699092251,
+            "volume_mm3": 80967.89624698796
+          }
+        },
+        {
+          "part_id": 14,
+          "baseline": {
+            "material": "steel",
+            "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+            "max_GP_von_Mises_MPa": 8.093179564736102,
+            "max_abs_fiber_sigma11_MPa": 7.419058410497825,
+            "volume_mm3": 16164.2980848972
+          },
+          "variant": {
+            "material": "steel",
+            "name": "\u4e0a\u7aef\u5145\u88c5\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+            "max_GP_von_Mises_MPa": 8.120053854750129,
+            "max_abs_fiber_sigma11_MPa": 8.852746062919145,
+            "volume_mm3": 16164.297989675812
+          }
+        },
+        {
+          "part_id": 18,
+          "baseline": {
+            "material": "steel",
+            "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+            "max_GP_von_Mises_MPa": 7.101477775968065,
+            "max_abs_fiber_sigma11_MPa": 6.215310426053457,
+            "volume_mm3": 14387.384172502147
+          },
+          "variant": {
+            "material": "steel",
+            "name": "\u4e0b\u7aef\u670d\u52a1\u53e3 \u00b7 \u4e2d\u7a7a\u63a5\u53e3\u5957 / \u516d\u89d2\u6273\u624b\u4f4d",
+            "max_GP_von_Mises_MPa": 7.0459447207580475,
+            "max_abs_fiber_sigma11_MPa": 6.1819010970165635,
+            "volume_mm3": 14387.383593499319
+          }
+        }
+      ],
+      "production_eligible": false,
+      "limitations": [
+        "Two nonuniform meshes, unchanged minimum root/fillet size. This does not establish global h-limit or point-peak convergence.",
+        "Every failed/ambiguous original probe retained, with no substituted point or zero-filled field.",
+        "Raw GP maxima may occur on material/element boundaries and are mesh-dependent diagnostics.",
+        "Same nominal pressure is checked; actual per-run boundary integration/load verification remains bound to each completed run."
+      ],
+      "seconds": 9.537505627027713,
+      "probe_sampling": "Four deterministic source cells per material with interior GP samples, plus globally scanned top-three interior absolute fiber sigma11 probes for carbon or von Mises probes for other materials. Selected entirely from baseline q8; no selection based on variant differences.",
+      "analysis_source_sha256": "2ef16d65a1947bf8655ca28223c3e7d0b8aea1c0158b8cd3f66f503b1c379161"
+    }
+  },
+  "production_eligible": false
+}
