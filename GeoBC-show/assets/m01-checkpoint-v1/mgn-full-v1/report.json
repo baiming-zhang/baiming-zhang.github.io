@@ -63,59 +63,84 @@
       "phase": "training",
       "pid": 364,
       "precision": "fp32",
-      "epoch_completed": 0,
-      "case_cursor": 32,
+      "epoch_completed": 2,
+      "case_cursor": 536,
       "total_epochs": 20,
-      "completed_train_case_passes": 32,
+      "completed_train_case_passes": 2136,
       "total_train_case_passes": 16000,
-      "optimizer_updates": 4,
-      "active_seconds": 19.805295101999945,
+      "optimizer_updates": 267,
+      "active_seconds": 1270.0817534829985,
       "timers": {
-        "train_wall_seconds": 19.7657817779982,
-        "forward_backward_gpu_seconds": 19.83726742553711,
-        "optimizer_gpu_seconds": 0.133503262758255,
-        "checkpoint_seconds": 0.0,
-        "validation_seconds": 0.0
+        "train_wall_seconds": 1224.9256146739353,
+        "forward_backward_gpu_seconds": 1230.2736370544435,
+        "optimizer_gpu_seconds": 0.9108130888938899,
+        "checkpoint_seconds": 5.449784521995753,
+        "validation_seconds": 36.81482926299941
       },
-      "peak_allocated_bytes": 8692349952,
-      "remaining_training_seconds_estimate": 9863.125107221102,
+      "peak_allocated_bytes": 8831659008,
+      "remaining_training_seconds_estimate": 7950.547154419214,
       "error_threshold": null,
-      "updated_unix": 1793222781.1801286
+      "updated_unix": 1793224083.8747547
     },
     "resources": {
-      "utilization_percent": 98,
-      "memory_used_MiB": 11088,
+      "utilization_percent": 99,
+      "memory_used_MiB": 11173,
       "memory_total_MiB": 32607,
       "reserved_existing_workflows": [],
       "other_compute_clients": [],
-      "updated_unix": 1793222785.72362
+      "updated_unix": 1793224084.0120535
     },
-    "updated_unix": 1793222785.7246199
+    "updated_unix": 1793224084.0120535
   },
   "status": {
     "phase": "training",
     "pid": 364,
     "precision": "fp32",
-    "epoch_completed": 0,
-    "case_cursor": 48,
+    "epoch_completed": 2,
+    "case_cursor": 544,
     "total_epochs": 20,
-    "completed_train_case_passes": 48,
+    "completed_train_case_passes": 2144,
     "total_train_case_passes": 16000,
-    "optimizer_updates": 6,
-    "active_seconds": 29.69851084000402,
+    "optimizer_updates": 268,
+    "active_seconds": 1274.355023175005,
     "timers": {
-      "train_wall_seconds": 29.62464139599615,
-      "forward_backward_gpu_seconds": 29.28487020874023,
-      "optimizer_gpu_seconds": 0.13867321467399596,
-      "checkpoint_seconds": 0.0,
-      "validation_seconds": 0.0
+      "train_wall_seconds": 1229.1856204659343,
+      "forward_backward_gpu_seconds": 1234.589562438965,
+      "optimizer_gpu_seconds": 0.9139146888256068,
+      "checkpoint_seconds": 5.449784521995753,
+      "validation_seconds": 36.81482926299941
     },
-    "peak_allocated_bytes": 8692349952,
-    "remaining_training_seconds_estimate": 9845.255823936053,
+    "peak_allocated_bytes": 8831659008,
+    "remaining_training_seconds_estimate": 7943.8413979365605,
     "error_threshold": null,
-    "updated_unix": 1793222791.0733504
+    "updated_unix": 1793224088.1480005
   },
-  "curve": [],
+  "curve": [
+    {
+      "epoch": 1,
+      "precision": "fp32",
+      "active_seconds": 483.9597181400022,
+      "online_training_objective": 2.1601591420173647,
+      "cumulative_train_wall_seconds": 462.4911599619372,
+      "cumulative_forward_backward_gpu_seconds": 458.99998355102525,
+      "cumulative_optimizer_gpu_seconds": 0.40723606395721434,
+      "cumulative_validation_seconds": 18.499876002999372,
+      "mean_validation_U_L2": 1.0225841381433625,
+      "mean_validation_VM_L2": 0.7914426663451075
+    },
+    {
+      "epoch": 2,
+      "precision": "fp32",
+      "active_seconds": 961.3441921699996,
+      "online_training_objective": 0.9981587058305741,
+      "cumulative_train_wall_seconds": 918.1293344589285,
+      "cumulative_forward_backward_gpu_seconds": 920.2124930114766,
+      "cumulative_optimizer_gpu_seconds": 0.7012764487266541,
+      "cumulative_validation_seconds": 36.81482926299941,
+      "mean_validation_U_L2": 1.2199489339832135,
+      "mean_validation_VM_L2": 0.7259746398733503
+    }
+  ],
   "TS3_FP64_paused_by_user": {
     "paused_by_user": true,
     "resume_requires_user": true,
@@ -132,6 +157,6 @@
     "native_worker_and_windows_supervisor_exit_confirmed": true
   },
   "test_labels_read": false,
-  "updated_unix": 1793222795.9030952,
+  "updated_unix": 1793224091.627052,
   "summary": null
 }
