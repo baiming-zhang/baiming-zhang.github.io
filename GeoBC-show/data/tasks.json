@@ -442,7 +442,7 @@
       "review": "核对数据字段和样本对应关系，确认后启动批量任务",
       "dependencies": "C03",
       "start": "2026-10-31",
-      "issues": "Sockeye V100本批次已完成7/10份FP64曲边P2场，通过原生检查；新增统一色标对比图及三维模型。网格局部应力收敛尚未认证，粗网格未通过筛查，生产标签0。",
+      "issues": "Sockeye V100本轮10/10份FP64曲边P2场及全部分析完成并通过执行/原生字段核验。058/085和058/092下端Ti探针应力差51.8%/76.5%，局部应力h收敛仍未认证，粗网格未通过筛查，生产标签0。",
       "page": "C04.html",
       "results": [
         {
@@ -506,7 +506,7 @@
       "completed": "2026-10-26",
       "production_release": false,
       "sockeye_recompute_snapshot": {
-        "created_utc": "2026-10-28T09:55:33Z",
+        "created_utc": "2026-10-28T10:58:22Z",
         "fields": [
           "058_q6",
           "058_q8",
@@ -514,10 +514,15 @@
           "063_q8",
           "081_q6",
           "081_q8",
-          "078_q6"
+          "078_q6",
+          "078_q8",
+          "085_q8",
+          "092_q8"
         ],
+        "all_computations_and_analysis_complete": true,
         "production_eligible": false
-      }
+      },
+      "sockeye_recompute_status": "completed_accuracy_hold"
     },
     {
       "id": "C05",
