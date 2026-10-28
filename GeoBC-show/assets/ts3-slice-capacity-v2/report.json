@@ -1,5 +1,5 @@
 {
-  "updated_unix": 1793157102.4534662,
+  "updated_unix": 1793157132.4829965,
   "cases": 20,
   "epochs_each": 2000,
   "rows": [
@@ -100,16 +100,16 @@
         "pid": 363,
         "method": "ts3",
         "count": 20,
-        "step": 1135,
+        "step": 1150,
         "total_steps": 2000,
-        "updates_per_case": 1135,
-        "native_case_forward_backward_count": 22700,
-        "elapsed_seconds": 2053.336268424988,
-        "seconds_per_epoch": 1.809106844427302,
-        "remaining_seconds_estimate": 1564.8774204296162,
-        "loss": 0.07441218020394444,
+        "updates_per_case": 1150,
+        "native_case_forward_backward_count": 23000,
+        "elapsed_seconds": 2080.9502413272858,
+        "seconds_per_epoch": 1.8095219489802485,
+        "remaining_seconds_estimate": 1538.0936566332114,
+        "loss": 0.06925943214446305,
         "peak_gpu_bytes": 2314277888,
-        "learning_rate": 0.00012943767777857048,
+        "learning_rate": 0.00012599627440247358,
         "error_threshold": null
       }
     },
@@ -816,6 +816,17 @@
           "worst_relative_U_L2": 0.5639600532736129,
           "mean_relative_VM_L2": 0.2561759738459108,
           "worst_relative_VM_L2": 0.38075807077800466
+        },
+        {
+          "step": 1150,
+          "elapsed_seconds": 2081.5413262844086,
+          "loss": 0.06925943214446305,
+          "learning_rate": 0.00012599627440247358,
+          "mean_training_objective": 0.0720235263765687,
+          "mean_relative_U_L2": 0.2122731099034924,
+          "worst_relative_U_L2": 0.5493920109937113,
+          "mean_relative_VM_L2": 0.25057801670084456,
+          "worst_relative_VM_L2": 0.3799743134857815
         }
       ]
     },
@@ -1269,7 +1280,7 @@
   "queue": {
     "phase": "training",
     "supervisor_pid": 7036,
-    "updated_unix": 1793157090.2026734,
+    "updated_unix": 1793157120.3759778,
     "variant": "H064",
     "slice_count": 64,
     "worker": {
@@ -1277,26 +1288,26 @@
       "pid": 363,
       "method": "ts3",
       "count": 20,
-      "step": 1130,
+      "step": 1145,
       "total_steps": 2000,
-      "updates_per_case": 1130,
-      "native_case_forward_backward_count": 22600,
-      "elapsed_seconds": 2045.1879041194916,
-      "seconds_per_epoch": 1.8099008001057448,
-      "remaining_seconds_estimate": 1574.613696091998,
-      "loss": 0.07245179135352373,
+      "updates_per_case": 1145,
+      "native_case_forward_backward_count": 22900,
+      "elapsed_seconds": 2072.7626423835754,
+      "seconds_per_epoch": 1.8102730501166597,
+      "remaining_seconds_estimate": 1547.783457849744,
+      "loss": 0.07216915013268589,
       "peak_gpu_bytes": 2314277888,
-      "learning_rate": 0.0001305882290046794,
+      "learning_rate": 0.0001271416259837123,
       "error_threshold": null
     },
     "windows_child_pid": 24304,
     "resources": {
       "utilization_percent": 89,
-      "memory_used_MiB": 4193,
+      "memory_used_MiB": 4153,
       "memory_total_MiB": 32607,
       "reserved_existing_workflows": [],
       "other_compute_clients": [],
-      "updated_unix": 1793157090.2016754
+      "updated_unix": 1793157120.374974
     }
   },
   "error_threshold": null,
