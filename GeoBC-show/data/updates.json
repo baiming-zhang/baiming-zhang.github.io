@@ -525,6 +525,23 @@
           "url": "viewers/copv-c04-curved.html?case=copv_c04_0002&q=8&bc=1&loads=1"
         }
       ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-28",
+      "title": "Sockeye V100：7份真实复算场、统一色标对比与三维模型",
+      "summary": "058/063/081的q6与q8，加078 q6，均通过原生检查。可查看位移、纤维应力、金属von Mises应力的PNG/PDF和三维BC/载荷，三组同网格积分敏感性指标来自实际FP64全场。",
+      "review": "q6/q8为装配积分阶数；应力显示为原单元积分点体积均值。积分差异不代表真值误差或网格h收敛，生产标签仍0，粗网格未替换。",
+      "links": [
+        {
+          "label": "统一色标对比与积分敏感性",
+          "url": "C04.html#sockeye-results"
+        },
+        {
+          "label": "已完成场三维模型",
+          "url": "viewers/copv-c04-sockeye.html?case=058_q8&bc=1&loads=0"
+        }
+      ]
     }
   ]
 }
