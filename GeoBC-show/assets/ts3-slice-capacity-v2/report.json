@@ -1,5 +1,5 @@
 {
-  "updated_unix": 1793138876.4959629,
+  "updated_unix": 1793155139.642268,
   "cases": 20,
   "epochs_each": 2000,
   "rows": [
@@ -94,8 +94,24 @@
       "slices": 64,
       "parameters": 3894340,
       "role": "half_parameter_comparison",
-      "phase": "waiting_for_exclusive_GPU",
-      "training_status": null
+      "phase": "training",
+      "training_status": {
+        "phase": "training",
+        "pid": 363,
+        "method": "ts3",
+        "count": 20,
+        "step": 50,
+        "total_steps": 2000,
+        "updates_per_case": 50,
+        "native_case_forward_backward_count": 1000,
+        "elapsed_seconds": 87.36619162559509,
+        "seconds_per_epoch": 1.7473238325119018,
+        "remaining_seconds_estimate": 3407.2814733982086,
+        "loss": 2.484228190779686,
+        "peak_gpu_bytes": 2314277888,
+        "learning_rate": 0.0003,
+        "error_threshold": null
+      }
     },
     {
       "model": "MGN",
@@ -112,32 +128,37 @@
   ],
   "half_parameter_ratio": 0.5106412328168624,
   "queue": {
-    "phase": "waiting_for_exclusive_GPU",
-    "supervisor_pid": 3636,
-    "updated_unix": 1793138851.8953242,
+    "phase": "training",
+    "supervisor_pid": 7036,
+    "updated_unix": 1793155127.9566693,
     "variant": "H064",
     "slice_count": 64,
-    "resources": {
-      "utilization_percent": 99,
-      "memory_used_MiB": 3904,
-      "memory_total_MiB": 32607,
-      "reserved_existing_workflows": [
-        {
-          "pid": 35148,
-          "created_native_FILETIME": "134375558937455286",
-          "label": "existing_GPU_workflow"
-        }
-      ],
-      "other_compute_clients": [
-        {
-          "platform": "windows",
-          "pid": 8028,
-          "name": "c:\\users\\asus\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
-        }
-      ],
-      "updated_unix": 1793138851.8953242
+    "worker": {
+      "phase": "training",
+      "pid": 363,
+      "method": "ts3",
+      "count": 20,
+      "step": 45,
+      "total_steps": 2000,
+      "updates_per_case": 45,
+      "native_case_forward_backward_count": 900,
+      "elapsed_seconds": 79.14435410499573,
+      "seconds_per_epoch": 1.7587634245554606,
+      "remaining_seconds_estimate": 3438.3824950059256,
+      "loss": 3.5362023010849954,
+      "peak_gpu_bytes": 2314277888,
+      "learning_rate": 0.0002715,
+      "error_threshold": null
     },
-    "consecutive_idle_observations": 0
+    "windows_child_pid": 24304,
+    "resources": {
+      "utilization_percent": 88,
+      "memory_used_MiB": 4114,
+      "memory_total_MiB": 32607,
+      "reserved_existing_workflows": [],
+      "other_compute_clients": [],
+      "updated_unix": 1793155127.9566693
+    }
   },
   "error_threshold": null,
   "note": "Nominal trainable parameters; one-slice softmax is identically1. Original64 baseline reused; no new training result is invented."
