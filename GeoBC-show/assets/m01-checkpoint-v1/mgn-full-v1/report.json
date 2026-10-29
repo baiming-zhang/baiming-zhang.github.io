@@ -55,65 +55,33 @@
     "initial_weights_sha256": "ad2dab965bb775dab1201993bb96933ce4ca9d2e834f204582da58236917edfb"
   },
   "queue": {
-    "phase": "training",
-    "precision": "fp32",
-    "supervisor_pid": 22404,
-    "windows_child_pid": 34972,
-    "worker": {
-      "phase": "training",
-      "pid": 364,
-      "precision": "fp32",
-      "epoch_completed": 16,
-      "case_cursor": 256,
-      "total_epochs": 20,
-      "completed_train_case_passes": 13056,
-      "total_train_case_passes": 16000,
-      "optimizer_updates": 1632,
-      "active_seconds": 8251.998133426001,
-      "timers": {
-        "train_wall_seconds": 7860.755320005905,
-        "forward_backward_gpu_seconds": 7653.250724365264,
-        "optimizer_gpu_seconds": 5.3922610909938795,
-        "checkpoint_seconds": 47.00732269200671,
-        "validation_seconds": 320.53828155202063
-      },
-      "peak_allocated_bytes": 8831659008,
-      "remaining_training_seconds_estimate": 1772.5232584327039,
-      "error_threshold": null,
-      "updated_unix": 1793231399.3488352
-    },
-    "resources": {
-      "utilization_percent": 0,
-      "memory_used_MiB": 15030,
-      "memory_total_MiB": 32607,
-      "reserved_existing_workflows": [],
-      "other_compute_clients": [],
-      "updated_unix": 1793231402.6627533
-    },
-    "updated_unix": 1793231402.6627533
+    "phase": "completed",
+    "method": "mgn",
+    "updated_unix": 1793233648.1469796,
+    "summary_file": "fp32/summary.json"
   },
   "status": {
-    "phase": "training",
+    "phase": "completed",
     "pid": 364,
     "precision": "fp32",
-    "epoch_completed": 16,
-    "case_cursor": 272,
+    "epoch_completed": 20,
+    "case_cursor": 0,
     "total_epochs": 20,
-    "completed_train_case_passes": 13072,
+    "completed_train_case_passes": 16000,
     "total_train_case_passes": 16000,
-    "optimizer_updates": 1634,
-    "active_seconds": 8269.472889297002,
+    "optimizer_updates": 2000,
+    "active_seconds": 10342.943429834006,
     "timers": {
-      "train_wall_seconds": 7877.928327123904,
-      "forward_backward_gpu_seconds": 7664.247104492216,
-      "optimizer_gpu_seconds": 5.400520866870878,
-      "checkpoint_seconds": 47.00732269200671,
-      "validation_seconds": 320.53828155202063
+      "train_wall_seconds": 9827.759577089899,
+      "forward_backward_gpu_seconds": 9422.337779541038,
+      "optimizer_gpu_seconds": 6.711993669271473,
+      "checkpoint_seconds": 64.42403165299038,
+      "validation_seconds": 418.19867544501903
     },
     "peak_allocated_bytes": 8831659008,
-    "remaining_training_seconds_estimate": 1764.5788052186956,
+    "remaining_training_seconds_estimate": 0.0,
     "error_threshold": null,
-    "updated_unix": 1793231416.8235388
+    "updated_unix": 1793233625.3616104
   },
   "curve": [
     {
@@ -307,6 +275,54 @@
       "cumulative_validation_seconds": 320.53828155202063,
       "mean_validation_U_L2": 0.2082629080964686,
       "mean_validation_VM_L2": 0.32832507432750513
+    },
+    {
+      "epoch": 17,
+      "precision": "fp32",
+      "active_seconds": 8873.595557990004,
+      "online_training_objective": 0.056844388730823994,
+      "cumulative_train_wall_seconds": 8422.517844044894,
+      "cumulative_forward_backward_gpu_seconds": 8018.083972534209,
+      "cumulative_optimizer_gpu_seconds": 5.7419854748249035,
+      "cumulative_validation_seconds": 366.54765780102025,
+      "mean_validation_U_L2": 0.19183623046042872,
+      "mean_validation_VM_L2": 0.315795079144885
+    },
+    {
+      "epoch": 18,
+      "precision": "fp32",
+      "active_seconds": 9413.655772760001,
+      "online_training_objective": 0.052661262955516576,
+      "cumulative_train_wall_seconds": 8939.998309281887,
+      "cumulative_forward_backward_gpu_seconds": 8495.190962188759,
+      "cumulative_optimizer_gpu_seconds": 6.098302628278732,
+      "cumulative_validation_seconds": 383.6237897050232,
+      "mean_validation_U_L2": 0.1896385151061663,
+      "mean_validation_VM_L2": 0.31402242197981106
+    },
+    {
+      "epoch": 19,
+      "precision": "fp32",
+      "active_seconds": 9877.999603144002,
+      "online_training_objective": 0.04965715546160936,
+      "cumulative_train_wall_seconds": 9383.660713512909,
+      "cumulative_forward_backward_gpu_seconds": 8958.634118499795,
+      "cumulative_optimizer_gpu_seconds": 6.403032133340838,
+      "cumulative_validation_seconds": 401.1018038470211,
+      "mean_validation_U_L2": 0.18713099861727575,
+      "mean_validation_VM_L2": 0.31424038628939616
+    },
+    {
+      "epoch": 20,
+      "precision": "fp32",
+      "active_seconds": 10342.403060896999,
+      "online_training_objective": 0.0480322159267962,
+      "cumulative_train_wall_seconds": 9827.759577089899,
+      "cumulative_forward_backward_gpu_seconds": 9422.337779541038,
+      "cumulative_optimizer_gpu_seconds": 6.711993669271473,
+      "cumulative_validation_seconds": 418.19867544501903,
+      "mean_validation_U_L2": 0.1837506348080824,
+      "mean_validation_VM_L2": 0.31308651953881866
     }
   ],
   "TS3_FP64_paused_by_user": {
@@ -325,6 +341,199 @@
     "native_worker_and_windows_supervisor_exit_confirmed": true
   },
   "test_labels_read": false,
-  "updated_unix": 1793231418.8591,
-  "summary": null
+  "updated_unix": 1793233734.1556315,
+  "summary": {
+    "completed": true,
+    "precision": "fp32",
+    "epochs": 20,
+    "train_cases": 800,
+    "train_case_forward_backward_passes": 16000,
+    "optimizer_updates": 2000,
+    "parameters": 11760196,
+    "active_seconds": 10342.941920461999,
+    "timers": {
+      "train_wall_seconds": 9827.759577089899,
+      "forward_backward_gpu_seconds": 9422.337779541038,
+      "optimizer_gpu_seconds": 6.711993669271473,
+      "checkpoint_seconds": 64.42403165299038,
+      "validation_seconds": 418.19867544501903
+    },
+    "seconds_per_train_epoch": 491.3879788544949,
+    "forward_backward_gpu_seconds_per_case": 0.5888961112213149,
+    "peak_allocated_bytes": 8831659008,
+    "peak_reserved_bytes": 9833545728,
+    "validation": {
+      "mean_U_L2": 0.1837506348080824,
+      "mean_VM_L2": 0.31308651953881866
+    },
+    "test_labels_read": false,
+    "AMP": false,
+    "TF32": false,
+    "identity": {
+      "method": "mgn",
+      "graph_topology": "original TET10 quadratic halfedges, directed and deduplicated, all nodes",
+      "protocol": "m01_local_mgn_fp32_v1",
+      "precision": "fp32",
+      "parameter_dtype": "torch.float32",
+      "parameters": 11760196,
+      "config_sha256": "98a18fe2691dd6ebe12790d0f1ff02b8cb1327af6fe2714c59308a8e0bf0364d",
+      "initial_weights_sha256": "ad2dab965bb775dab1201993bb96933ce4ca9d2e834f204582da58236917edfb",
+      "data_sha256": "1573d1710d137fffcaa362e4d059d59d976436a68fe62e4a60ac575bf47ad355",
+      "normalization_sha256": "25155791e0d293c5c8519ebdcaa24f380a079c319fe2fc4e9accda781974f85e",
+      "torch_version": "2.14.1+cu130",
+      "GPU": "NVIDIA GeForce RTX 5090",
+      "AMP": false,
+      "TF32": false,
+      "sources": {
+        "tools/train_m01_mgn_comparison.py": "df7ac1345c73bd6833e5ef44add07a949624e0b988188dbeb68b2553d442a5cf",
+        "tools/train_rod_m01_sockeye.py": "153d0bbc666ec918a33cf4bfd7b486d8304bdea78e47f36e6added6add5eeb86",
+        "geobc/rod_m01_models.py": "96317e7764b686ef5bdb027e05921f69ca66c63e3eaa44b812a23b2789319c5c",
+        "geobc/overfit_meshgraphnet.py": "d8b180153c3080507e9aa35587e6bcf353ba29a4754732377ac74527b0e1451a",
+        "geobc/native_fno.py": "b90fe48d292d52e9acf465b35e486c02db82a553315cadca63d7c2ddd6acc639",
+        "geobc/fno.py": "45314639765e68379dc0726141f59c72d84413c8d348818bba5f3bafb6290fb4"
+      },
+      "cache_features": "original R06 float32 known features, normalized in float64 then cast to arm dtype",
+      "training_target_dtype": "torch.float32",
+      "metric_reference": "common CPU float64 physical-space errors",
+      "test_labels_read": false
+    }
+  },
+  "export_review": {
+    "precision": "fp32",
+    "completed_epochs": 20,
+    "optimizer_updates": 2000,
+    "train_case_passes": 16000,
+    "parameters": 11760196,
+    "dtype": "torch.float32",
+    "weights_only_CPU_and_strict_model_load": true,
+    "finite_inference_parameters": true,
+    "validation_rows": 100,
+    "validation_aggregate_max_difference": 0.0,
+    "source_identity_and_normalization_match": true,
+    "inference_sha256": "0283348bc78a790d14cf88a0612974cec9cd45dbb852d5fdbe233d96c1017a19",
+    "test_labels_read": false,
+    "CUDA_initialized": false,
+    "updated_unix": 1793233654.6372564,
+    "note": "Export/aggregate consistency only; no fit-error pass/fail and no extra training or validation inference."
+  },
+  "comparison": {
+    "TS3_FP32": {
+      "completed": true,
+      "precision": "fp32",
+      "epochs": 20,
+      "train_cases": 800,
+      "train_case_forward_backward_passes": 16000,
+      "optimizer_updates": 2000,
+      "parameters": 11882756,
+      "active_seconds": 5257.299777646998,
+      "timers": {
+        "train_wall_seconds": 4923.018869042902,
+        "forward_backward_gpu_seconds": 4494.2936603546195,
+        "optimizer_gpu_seconds": 6.9325837092399345,
+        "checkpoint_seconds": 47.03540746699218,
+        "validation_seconds": 265.03405312700124
+      },
+      "seconds_per_train_epoch": 246.1509434521451,
+      "forward_backward_gpu_seconds_per_case": 0.28089335377216373,
+      "peak_allocated_bytes": 5376729088,
+      "peak_reserved_bytes": 6306136064,
+      "validation": {
+        "mean_U_L2": 0.14407541536861024,
+        "mean_VM_L2": 0.27737759340475754
+      },
+      "test_labels_read": false,
+      "AMP": false,
+      "TF32": false,
+      "identity": {
+        "protocol": "m01_local_ts3_precision_v1",
+        "precision": "fp32",
+        "parameter_dtype": "torch.float32",
+        "parameters": 11882756,
+        "config_sha256": "47369eb28682d7fa8c44bbe5eadd3ff10791bcdb77c45b25682a44355bc8486d",
+        "initial_weights_sha256": "c7ec55cd145c14f1a1693d362f17b78c7c631712e0cee80256b91c9e7caef8a7",
+        "data_sha256": "1573d1710d137fffcaa362e4d059d59d976436a68fe62e4a60ac575bf47ad355",
+        "normalization_sha256": "25155791e0d293c5c8519ebdcaa24f380a079c319fe2fc4e9accda781974f85e",
+        "torch_version": "2.14.1+cu130",
+        "GPU": "NVIDIA GeForce RTX 5090",
+        "AMP": false,
+        "TF32": false,
+        "sources": {
+          "tools/train_m01_ts3_precision.py": "0021748000579e0649923fc667048f56f6b398993383c90d45ce0d04c4876d6a",
+          "tools/train_rod_m01_sockeye.py": "153d0bbc666ec918a33cf4bfd7b486d8304bdea78e47f36e6added6add5eeb86",
+          "geobc/overfit_transformers.py": "4241224442e2ef5cadb64511ce82b5ae383ad53ef18d873e4414b27e0d0dcb6e",
+          "geobc/rod_m01_models.py": "96317e7764b686ef5bdb027e05921f69ca66c63e3eaa44b812a23b2789319c5c",
+          "geobc/overfit_meshgraphnet.py": "d8b180153c3080507e9aa35587e6bcf353ba29a4754732377ac74527b0e1451a",
+          "geobc/native_fno.py": "b90fe48d292d52e9acf465b35e486c02db82a553315cadca63d7c2ddd6acc639",
+          "geobc/fno.py": "45314639765e68379dc0726141f59c72d84413c8d348818bba5f3bafb6290fb4",
+          "pinned_TS3_source": "49292aa1ee7be2e143db5b9c75d0128f8767f8a2ae74479cdc06aeb9d41fb71a"
+        },
+        "cache_features": "original R06 float32 known features, normalized in float64 then cast to arm dtype",
+        "training_target_dtype": "torch.float32",
+        "metric_reference": "common CPU float64 physical-space errors",
+        "test_labels_read": false
+      }
+    },
+    "MGN_FP32": {
+      "completed": true,
+      "precision": "fp32",
+      "epochs": 20,
+      "train_cases": 800,
+      "train_case_forward_backward_passes": 16000,
+      "optimizer_updates": 2000,
+      "parameters": 11760196,
+      "active_seconds": 10342.941920461999,
+      "timers": {
+        "train_wall_seconds": 9827.759577089899,
+        "forward_backward_gpu_seconds": 9422.337779541038,
+        "optimizer_gpu_seconds": 6.711993669271473,
+        "checkpoint_seconds": 64.42403165299038,
+        "validation_seconds": 418.19867544501903
+      },
+      "seconds_per_train_epoch": 491.3879788544949,
+      "forward_backward_gpu_seconds_per_case": 0.5888961112213149,
+      "peak_allocated_bytes": 8831659008,
+      "peak_reserved_bytes": 9833545728,
+      "validation": {
+        "mean_U_L2": 0.1837506348080824,
+        "mean_VM_L2": 0.31308651953881866
+      },
+      "test_labels_read": false,
+      "AMP": false,
+      "TF32": false,
+      "identity": {
+        "method": "mgn",
+        "graph_topology": "original TET10 quadratic halfedges, directed and deduplicated, all nodes",
+        "protocol": "m01_local_mgn_fp32_v1",
+        "precision": "fp32",
+        "parameter_dtype": "torch.float32",
+        "parameters": 11760196,
+        "config_sha256": "98a18fe2691dd6ebe12790d0f1ff02b8cb1327af6fe2714c59308a8e0bf0364d",
+        "initial_weights_sha256": "ad2dab965bb775dab1201993bb96933ce4ca9d2e834f204582da58236917edfb",
+        "data_sha256": "1573d1710d137fffcaa362e4d059d59d976436a68fe62e4a60ac575bf47ad355",
+        "normalization_sha256": "25155791e0d293c5c8519ebdcaa24f380a079c319fe2fc4e9accda781974f85e",
+        "torch_version": "2.14.1+cu130",
+        "GPU": "NVIDIA GeForce RTX 5090",
+        "AMP": false,
+        "TF32": false,
+        "sources": {
+          "tools/train_m01_mgn_comparison.py": "df7ac1345c73bd6833e5ef44add07a949624e0b988188dbeb68b2553d442a5cf",
+          "tools/train_rod_m01_sockeye.py": "153d0bbc666ec918a33cf4bfd7b486d8304bdea78e47f36e6added6add5eeb86",
+          "geobc/rod_m01_models.py": "96317e7764b686ef5bdb027e05921f69ca66c63e3eaa44b812a23b2789319c5c",
+          "geobc/overfit_meshgraphnet.py": "d8b180153c3080507e9aa35587e6bcf353ba29a4754732377ac74527b0e1451a",
+          "geobc/native_fno.py": "b90fe48d292d52e9acf465b35e486c02db82a553315cadca63d7c2ddd6acc639",
+          "geobc/fno.py": "45314639765e68379dc0726141f59c72d84413c8d348818bba5f3bafb6290fb4"
+        },
+        "cache_features": "original R06 float32 known features, normalized in float64 then cast to arm dtype",
+        "training_target_dtype": "torch.float32",
+        "metric_reference": "common CPU float64 physical-space errors",
+        "test_labels_read": false
+      }
+    },
+    "MGN_over_TS3_train_wall": 1.9962872047655875,
+    "MGN_over_TS3_GPU_forward_backward": 2.0965113745588164,
+    "MGN_over_TS3_peak_allocated": 1.6425709503777772,
+    "queue_wait_seconds": null,
+    "queue_timing_note": "No cumulative queue counter was recorded; preserve independent GPU, host train-wall, validation, checkpoint and active counters without subtracting them to infer queue time.",
+    "scope": "Same 800 TRAIN and 100 validation, final epoch20; no test labels. MGN additionally uses native graph connectivity and has a different initialization/parameter count."
+  }
 }

@@ -1,0 +1,120 @@
+{
+  "TS3_FP32": {
+    "completed": true,
+    "precision": "fp32",
+    "epochs": 20,
+    "train_cases": 800,
+    "train_case_forward_backward_passes": 16000,
+    "optimizer_updates": 2000,
+    "parameters": 11882756,
+    "active_seconds": 5257.299777646998,
+    "timers": {
+      "train_wall_seconds": 4923.018869042902,
+      "forward_backward_gpu_seconds": 4494.2936603546195,
+      "optimizer_gpu_seconds": 6.9325837092399345,
+      "checkpoint_seconds": 47.03540746699218,
+      "validation_seconds": 265.03405312700124
+    },
+    "seconds_per_train_epoch": 246.1509434521451,
+    "forward_backward_gpu_seconds_per_case": 0.28089335377216373,
+    "peak_allocated_bytes": 5376729088,
+    "peak_reserved_bytes": 6306136064,
+    "validation": {
+      "mean_U_L2": 0.14407541536861024,
+      "mean_VM_L2": 0.27737759340475754
+    },
+    "test_labels_read": false,
+    "AMP": false,
+    "TF32": false,
+    "identity": {
+      "protocol": "m01_local_ts3_precision_v1",
+      "precision": "fp32",
+      "parameter_dtype": "torch.float32",
+      "parameters": 11882756,
+      "config_sha256": "47369eb28682d7fa8c44bbe5eadd3ff10791bcdb77c45b25682a44355bc8486d",
+      "initial_weights_sha256": "c7ec55cd145c14f1a1693d362f17b78c7c631712e0cee80256b91c9e7caef8a7",
+      "data_sha256": "1573d1710d137fffcaa362e4d059d59d976436a68fe62e4a60ac575bf47ad355",
+      "normalization_sha256": "25155791e0d293c5c8519ebdcaa24f380a079c319fe2fc4e9accda781974f85e",
+      "torch_version": "2.14.1+cu130",
+      "GPU": "NVIDIA GeForce RTX 5090",
+      "AMP": false,
+      "TF32": false,
+      "sources": {
+        "tools/train_m01_ts3_precision.py": "0021748000579e0649923fc667048f56f6b398993383c90d45ce0d04c4876d6a",
+        "tools/train_rod_m01_sockeye.py": "153d0bbc666ec918a33cf4bfd7b486d8304bdea78e47f36e6added6add5eeb86",
+        "geobc/overfit_transformers.py": "4241224442e2ef5cadb64511ce82b5ae383ad53ef18d873e4414b27e0d0dcb6e",
+        "geobc/rod_m01_models.py": "96317e7764b686ef5bdb027e05921f69ca66c63e3eaa44b812a23b2789319c5c",
+        "geobc/overfit_meshgraphnet.py": "d8b180153c3080507e9aa35587e6bcf353ba29a4754732377ac74527b0e1451a",
+        "geobc/native_fno.py": "b90fe48d292d52e9acf465b35e486c02db82a553315cadca63d7c2ddd6acc639",
+        "geobc/fno.py": "45314639765e68379dc0726141f59c72d84413c8d348818bba5f3bafb6290fb4",
+        "pinned_TS3_source": "49292aa1ee7be2e143db5b9c75d0128f8767f8a2ae74479cdc06aeb9d41fb71a"
+      },
+      "cache_features": "original R06 float32 known features, normalized in float64 then cast to arm dtype",
+      "training_target_dtype": "torch.float32",
+      "metric_reference": "common CPU float64 physical-space errors",
+      "test_labels_read": false
+    }
+  },
+  "MGN_FP32": {
+    "completed": true,
+    "precision": "fp32",
+    "epochs": 20,
+    "train_cases": 800,
+    "train_case_forward_backward_passes": 16000,
+    "optimizer_updates": 2000,
+    "parameters": 11760196,
+    "active_seconds": 10342.941920461999,
+    "timers": {
+      "train_wall_seconds": 9827.759577089899,
+      "forward_backward_gpu_seconds": 9422.337779541038,
+      "optimizer_gpu_seconds": 6.711993669271473,
+      "checkpoint_seconds": 64.42403165299038,
+      "validation_seconds": 418.19867544501903
+    },
+    "seconds_per_train_epoch": 491.3879788544949,
+    "forward_backward_gpu_seconds_per_case": 0.5888961112213149,
+    "peak_allocated_bytes": 8831659008,
+    "peak_reserved_bytes": 9833545728,
+    "validation": {
+      "mean_U_L2": 0.1837506348080824,
+      "mean_VM_L2": 0.31308651953881866
+    },
+    "test_labels_read": false,
+    "AMP": false,
+    "TF32": false,
+    "identity": {
+      "method": "mgn",
+      "graph_topology": "original TET10 quadratic halfedges, directed and deduplicated, all nodes",
+      "protocol": "m01_local_mgn_fp32_v1",
+      "precision": "fp32",
+      "parameter_dtype": "torch.float32",
+      "parameters": 11760196,
+      "config_sha256": "98a18fe2691dd6ebe12790d0f1ff02b8cb1327af6fe2714c59308a8e0bf0364d",
+      "initial_weights_sha256": "ad2dab965bb775dab1201993bb96933ce4ca9d2e834f204582da58236917edfb",
+      "data_sha256": "1573d1710d137fffcaa362e4d059d59d976436a68fe62e4a60ac575bf47ad355",
+      "normalization_sha256": "25155791e0d293c5c8519ebdcaa24f380a079c319fe2fc4e9accda781974f85e",
+      "torch_version": "2.14.1+cu130",
+      "GPU": "NVIDIA GeForce RTX 5090",
+      "AMP": false,
+      "TF32": false,
+      "sources": {
+        "tools/train_m01_mgn_comparison.py": "df7ac1345c73bd6833e5ef44add07a949624e0b988188dbeb68b2553d442a5cf",
+        "tools/train_rod_m01_sockeye.py": "153d0bbc666ec918a33cf4bfd7b486d8304bdea78e47f36e6added6add5eeb86",
+        "geobc/rod_m01_models.py": "96317e7764b686ef5bdb027e05921f69ca66c63e3eaa44b812a23b2789319c5c",
+        "geobc/overfit_meshgraphnet.py": "d8b180153c3080507e9aa35587e6bcf353ba29a4754732377ac74527b0e1451a",
+        "geobc/native_fno.py": "b90fe48d292d52e9acf465b35e486c02db82a553315cadca63d7c2ddd6acc639",
+        "geobc/fno.py": "45314639765e68379dc0726141f59c72d84413c8d348818bba5f3bafb6290fb4"
+      },
+      "cache_features": "original R06 float32 known features, normalized in float64 then cast to arm dtype",
+      "training_target_dtype": "torch.float32",
+      "metric_reference": "common CPU float64 physical-space errors",
+      "test_labels_read": false
+    }
+  },
+  "MGN_over_TS3_train_wall": 1.9962872047655875,
+  "MGN_over_TS3_GPU_forward_backward": 2.0965113745588164,
+  "MGN_over_TS3_peak_allocated": 1.6425709503777772,
+  "queue_wait_seconds": null,
+  "queue_timing_note": "No cumulative queue counter was recorded; preserve independent GPU, host train-wall, validation, checkpoint and active counters without subtracting them to infer queue time.",
+  "scope": "Same 800 TRAIN and 100 validation, final epoch20; no test labels. MGN additionally uses native graph connectivity and has a different initialization/parameter count."
+}
