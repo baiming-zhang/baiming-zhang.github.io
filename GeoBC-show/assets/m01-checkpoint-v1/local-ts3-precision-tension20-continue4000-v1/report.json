@@ -761,39 +761,23 @@
   },
   "queue": {
     "phase": "waiting_for_tension20_ablation_completion",
-    "supervisor_pid": 36320,
-    "updated_unix": 1793241400.7615306,
+    "supervisor_pid": 32168,
+    "updated_unix": 1793247210.3028271,
     "predecessor_status": {
-      "phase": "training",
-      "supervisor_pid": 31784,
-      "updated_unix": 1793241385.5607624,
-      "variant": "W192_S004",
-      "slice_count": 4,
-      "worker": {
-        "phase": "training",
-        "pid": 390,
-        "method": "ts3",
-        "count": 20,
-        "step": 230,
-        "total_steps": 2000,
-        "updates_per_case": 230,
-        "native_case_forward_backward_count": 4600,
-        "elapsed_seconds": 844.3358814716339,
-        "seconds_per_epoch": 3.6710255716158,
-        "remaining_seconds_estimate": 6497.715261759966,
-        "loss": 0.048581904452294114,
-        "peak_gpu_bytes": 1837613056,
-        "learning_rate": 0.00029394564522082907,
-        "error_threshold": null
-      },
-      "windows_child_pid": 18112,
+      "phase": "launching",
+      "supervisor_pid": 28052,
+      "updated_unix": 1793247188.149577,
+      "variant": "W192_S008",
+      "slice_count": 8,
+      "worker": {},
+      "windows_child_pid": 34572,
       "resources": {
-        "utilization_percent": 61,
-        "memory_used_MiB": 7463,
+        "utilization_percent": 1,
+        "memory_used_MiB": 1285,
         "memory_total_MiB": 32607,
         "reserved_existing_workflows": [],
         "other_compute_clients": [],
-        "updated_unix": 1793241385.559591
+        "updated_unix": 1793247188.149577
       }
     },
     "predecessor_supervisor_live": true,
@@ -1244,5 +1228,5 @@
     }
   ],
   "validation_test_used": false,
-  "updated_unix": 1793241405.3801582
+  "updated_unix": 1793247227.9857433
 }

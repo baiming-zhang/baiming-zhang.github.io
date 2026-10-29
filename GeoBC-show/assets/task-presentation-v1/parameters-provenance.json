@@ -1,0 +1,100 @@
+{
+  "sources": {
+    "old_config": {
+      "path": "assets\\r06-r08-overfit-large-v2\\config.json",
+      "sha256": "0e85b194e923c4e4deea73b2e196f66d4ca1f38d160fc1a2805e0110948ebda2"
+    },
+    "old_results": {
+      "path": "assets\\r06-r08-overfit-large-v2\\results.json",
+      "sha256": "c0ca5fd5f85caae6acaad9e915a8031379219822edcde91b6fc90aeb2ee43d80"
+    },
+    "interface": {
+      "path": "assets\\r06-r08-overfit-large-v2\\interface.json",
+      "sha256": "437f7286ea157965bf037f5a1d6de8429225f8eb9d3438c1fcb058f2aee2760d"
+    },
+    "full_mgn": {
+      "path": "assets\\m01-checkpoint-v1\\mgn-full-v1\\report.json",
+      "sha256": "00880ee34fd5cd2a0c8001cfdc9660de862f2043b0467b90cd95e3311863416f"
+    },
+    "full_ts3": {
+      "path": "assets\\m01-checkpoint-v1\\ts3-precision-results.json",
+      "sha256": "68af4e439dd205dc0b945d7551a8c51f204c1404504c2f9efbd02c3e0faeec9b"
+    },
+    "tension": {
+      "path": "assets\\ts3-tension20-capacity-v1\\report.json",
+      "sha256": "1ce6469e9ca4b3857fce1acb01ade13b1996472e40aeeb6d8663d9fc45f0ec10"
+    }
+  },
+  "figures": {
+    "M01": {
+      "title": "M01 | full-data comparison and separate tension study",
+      "panels": [
+        {
+          "heading": "TS3 | full TRAIN",
+          "text": "11,882,756 parameters\n800 TRAIN / 100 validation\n20 complete epochs\nFP32 | no AMP / TF32"
+        },
+        {
+          "heading": "MGN | full TRAIN",
+          "text": "11,760,196 parameters\n15 MP steps | width 288\n800 TRAIN | 20 epochs\nFP32 | no AMP / TF32"
+        },
+        {
+          "heading": "TS3 | tension20",
+          "text": "8 layers | 8 heads\nwidth 128 / 192 | 4 / 8 slices\n20 TRAIN | 2000 epochs / arm\nW128 S004: continuation to 4000"
+        }
+      ]
+    },
+    "R07": {
+      "title": "R07 | training configuration, with dataset scopes kept separate",
+      "panels": [
+        {
+          "heading": "Original mixed-load TS3",
+          "text": "7,626,372 parameters\n16 layers | width 256\n8 heads | 64 slices\n1 / 5 / 20 TRAIN | 2000 epochs"
+        },
+        {
+          "heading": "New pure-tension TS3",
+          "text": "8 layers | 8 heads | MLP ratio 2\nwidth 128 / 192 | 4 / 8 slices\n0.983M / 2.192M parameters\n20 TRAIN | 2000 epochs / arm"
+        },
+        {
+          "heading": "Shared fit protocol",
+          "text": "AdamW | LR 0.0003 to 1e-05\nfull subset per update\nFP32 | TF32 allowed | no AMP\nno error gate or error early stop"
+        }
+      ]
+    },
+    "R08": {
+      "title": "R08 | MGN configurations belong to different training budgets",
+      "panels": [
+        {
+          "heading": "Original mixed-load fit",
+          "text": "9,298,436 parameters\n15 MP steps | width 256\n1 / 5 / 20 TRAIN | 2000 epochs\nFP32 | TF32 allowed"
+        },
+        {
+          "heading": "M01 full-data comparison",
+          "text": "11,760,196 parameters\n15 MP steps | width 288\n800 TRAIN / 100 validation\n20 epochs | no AMP / TF32"
+        },
+        {
+          "heading": "Physical interface",
+          "text": "all native TET10 nodes\nreal native-mesh graph edges\nU vector + projected node VM\nTRAIN fitting vs validation: separate"
+        }
+      ]
+    },
+    "R06": {
+      "title": "R06 | physical input interface",
+      "panels": [
+        {
+          "heading": "Known inputs",
+          "text": "56 input channels per native node\ngeometry + material + loads + BC\nnormalization from TRAIN only\nno response / sample-ID features"
+        },
+        {
+          "heading": "Model paths",
+          "text": "TS3: node features -> slice tokens\nMGN: node + real graph edge features\nfull native nodes; no node sampling\nindependent model initialization"
+        },
+        {
+          "heading": "Physical outputs",
+          "text": "4 output channels per native node\nUx, Uy, Uz in mm\nprojected node VM in MPa\noriginal-node alignment retained"
+        }
+      ]
+    }
+  },
+  "no_new_training_or_FE": true,
+  "tension_parameter_counts": "982884, 983428, 2191588, 2192388"
+}
