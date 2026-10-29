@@ -1,0 +1,18 @@
+{
+  "TS3": {
+    "source": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\r06_r08_overfit_large_v2\\formal\\ts3\\20\\curve.json",
+    "curve_sha256": "4ae7153c743d04dc249d864832d5eec36f8ba8512054bb15844732c7615d4fc7",
+    "logged_points": 40,
+    "final_epoch": 2000,
+    "final_training_loss": 0.04663099129684269
+  },
+  "MGN": {
+    "source": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\r06_r08_overfit_large_v2\\formal\\mgn\\20\\curve.json",
+    "curve_sha256": "a338a18eb989d8ff3b368fb2688b60921706bcd7452c6cbd7a84a912d75e9a8f",
+    "logged_points": 40,
+    "final_epoch": 2000,
+    "final_training_loss": 0.0068663904210552575
+  },
+  "loss_definition": "Equal mean over the same 20 TRAIN cases: 0.5*(full-vector U relative squared L2 + projected native-node VM relative squared L2); recorded before optimizer update. Not validation loss.",
+  "scope": "Original TS3 16x256/64-slice and MGN 15x256 fits; not the current 800-case M01 study."
+}
