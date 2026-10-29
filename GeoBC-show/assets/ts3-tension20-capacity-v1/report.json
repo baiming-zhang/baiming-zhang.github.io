@@ -9,14 +9,14 @@
       "heads": 8,
       "slices": 4,
       "parameters": 982884,
-      "phase": "queued",
-      "epoch": 0,
+      "phase": "training",
+      "epoch": 70,
       "best_checkpoint_epoch": null,
       "mean_U_percent": null,
       "worst_U_percent": null,
       "mean_VM_percent": null,
       "worst_VM_percent": null,
-      "elapsed_seconds": null
+      "elapsed_seconds": 105.49134731292725
     },
     {
       "variant": "W128_S008",
@@ -68,7 +68,19 @@
     }
   ],
   "curves": {
-    "W128_S004": [],
+    "W128_S004": [
+      {
+        "step": 50,
+        "elapsed_seconds": 76.09867024421692,
+        "loss": 0.07933271825313569,
+        "learning_rate": 0.0003,
+        "mean_training_objective": 0.08252766541838985,
+        "mean_relative_U_L2": 0.23206223573659504,
+        "worst_relative_U_L2": 0.3523037173791289,
+        "mean_relative_VM_L2": 0.3255629758251578,
+        "worst_relative_VM_L2": 0.38841467218111253
+      }
+    ],
     "W128_S008": [],
     "W192_S004": [],
     "W192_S008": []
@@ -152,8 +164,8 @@
     "early_stop_on_error": false,
     "initialization": "Same seed; shared same-shape values and nested slice rows within each width; different widths independently initialized",
     "dataset_manifest_sha256": "52892b0976e55c155a50d9bcd81536e14aa40ced0f7c633f2dbca9e1573b1199",
-    "worker_source_sha256": "d9715aa3ffc8dcd62dcb8b4377d7910df6843e815625f104992df9c7e31e0559",
-    "coordinator_sha256": "ca005770dd52cec492c501fcb7d340ad7a04bbd78507f00cd35ad11af9b332c1",
+    "worker_source_sha256": "d2ce02ec199ad120b5855ac8cd93b10b2abf705e208c9eb93fe9a267c7d6a8ad",
+    "coordinator_sha256": "6c7746cba28360f0a41138c0fb50697283da590e3d5e6b689436e39190a7b855",
     "model_source_sha256": "4241224442e2ef5cadb64511ce82b5ae383ad53ef18d873e4414b27e0d0dcb6e",
     "reused_training_loop": "Independent derivative of frozen slice_capacity_v2; same mathematical loop/AdamW/LR/full20 accumulation.",
     "prerequisite": "MGN full fixed20 summary and native/supervisor exit, then 3 exclusive GPU observations.",
@@ -166,6 +178,18 @@
     "prelaunch_preparation_revision": {
       "initial_coordinator_sha256": "3b647b36d4885e76ea0163c0ce955e2338ca1c49a94ea1e04202e9ce2b6eb49b",
       "note": "Added model/pinned-source guards before any coordinator or GPU run; mathematical worker unchanged."
+    },
+    "worker_module": "tools.train_ts3_tension20_capacity_v2",
+    "coordinator_file": "D:\\GeoBC\\GeoBC Neural Operator\\notes\\run_ts3_tension20_ablation_v2.py",
+    "startup_metadata_recovery": {
+      "reason": "Pre-CUDA status metadata parsed W128_S004 as old S004 naming; ValueError before model/GPU initialization.",
+      "prior_worker_sha256": "d9715aa3ffc8dcd62dcb8b4377d7910df6843e815625f104992df9c7e31e0559",
+      "prior_coordinator_sha256": "ca005770dd52cec492c501fcb7d340ad7a04bbd78507f00cd35ad11af9b332c1",
+      "GPU_training_updates_before_recovery": 0,
+      "numerical_loop_unchanged": true,
+      "configuration_manifest_initialization_unchanged": true,
+      "metadata_parse_test_all_four_configs": true,
+      "updated_unix": 1793233880.787602
     }
   },
   "configs": {
@@ -741,35 +765,38 @@
     }
   ],
   "queue": {
-    "phase": "waiting_for_MGN_full_completion",
-    "supervisor_pid": 34592,
-    "updated_unix": 1793226702.6078534,
-    "predecessor_status": {
+    "phase": "training",
+    "supervisor_pid": 31784,
+    "updated_unix": 1793234038.0351377,
+    "variant": "W128_S004",
+    "slice_count": 4,
+    "worker": {
       "phase": "training",
-      "pid": 364,
-      "precision": "fp32",
-      "epoch_completed": 7,
-      "case_cursor": 720,
-      "total_epochs": 20,
-      "completed_train_case_passes": 6320,
-      "total_train_case_passes": 16000,
-      "optimizer_updates": 790,
-      "active_seconds": 3773.6289550400033,
-      "timers": {
-        "train_wall_seconds": 3621.0408811079906,
-        "forward_backward_gpu_seconds": 3659.46912963868,
-        "optimizer_gpu_seconds": 2.52960451221466,
-        "checkpoint_seconds": 16.989980928025034,
-        "validation_seconds": 127.25611346500227
-      },
-      "peak_allocated_bytes": 8831659008,
-      "remaining_training_seconds_estimate": 5546.1512229628715,
-      "error_threshold": null,
-      "updated_unix": 1793226697.9038424
+      "pid": 369,
+      "method": "ts3",
+      "count": 20,
+      "step": 55,
+      "total_steps": 2000,
+      "updates_per_case": 55,
+      "native_case_forward_backward_count": 1100,
+      "elapsed_seconds": 83.24773120880127,
+      "seconds_per_epoch": 1.5135951128872958,
+      "remaining_seconds_estimate": 2943.94249456579,
+      "loss": 0.09067166578024628,
+      "peak_gpu_bytes": 1334809600,
+      "learning_rate": 0.00029999529557889654,
+      "error_threshold": null
     },
-    "predecessor_supervisor_live": true,
-    "training_started": false
+    "windows_child_pid": 21760,
+    "resources": {
+      "utilization_percent": 45,
+      "memory_used_MiB": 3152,
+      "memory_total_MiB": 32607,
+      "reserved_existing_workflows": [],
+      "other_compute_clients": [],
+      "updated_unix": 1793234038.0351377
+    }
   },
-  "updated_unix": 1793226704.9609187,
+  "updated_unix": 1793234066.9897685,
   "validation_test_used": false
 }
