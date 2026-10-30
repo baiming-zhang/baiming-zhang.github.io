@@ -593,6 +593,53 @@
           "url": "assets/copv-rod-mesh-v1/FINAL_VERIFICATION.json"
         }
       ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-30",
+      "title": "C04完成：四模型20例真实结果归档",
+      "summary": "四模型均已完成6000次全20例FP64更新并通过独立CPU审核；这是固定预算完成，未达到全部20例位移和节点VM各≤1%。",
+      "review": "同一均匀等效壁几何、3.5–70 MPa的20个压力幅值，仅TRAIN拟合。平均为逐例相对L2的算术平均，最差为逐例最大；位移采用完整三分量向量。高压为线弹性数学外推，生产标签仍为0。 TS3 p01负VM保留原值。",
+      "links": [
+        {
+          "label": "四模型结果与下载",
+          "url": "viewers/copv-train20.html"
+        }
+      ]
+    },
+    {
+      "task": "C05",
+      "date": "2026-10-30",
+      "title": "1000例COPV数据生成进行中",
+      "summary": "已冻结1000个不同几何与压力的设计，800/100/100划分；每例48,977原生节点、11,520个Quad9。先GPU求解验证，再以4个独立GPU分片生成真实FE标签。",
+      "review": "输入设计已核验；最终FE有效数和测试结果待真实完成后报告。",
+      "links": [
+        {
+          "label": "1000例几何与采样设计",
+          "url": "assets/copv-supervised1000-v1/dataset_design.png"
+        },
+        {
+          "label": "设计与800/100/100划分",
+          "url": "assets/copv-supervised1000-v1/experiment_spec.json"
+        }
+      ]
+    },
+    {
+      "task": "C06",
+      "date": "2026-10-30",
+      "title": "四模型训练与对比进行中",
+      "summary": "四模型20例固定预算结果已完成并归档至C04；新1000例几何与压力实验仍进行中，尚无最终测试误差。",
+      "review": "20例TRAIN结果已归档；1000例使用同一800/100/100划分，验证集选模型、测试集独立评估。",
+      "links": [
+        {
+          "label": "已完成20例TRAIN结果（C04）",
+          "url": "viewers/copv-train20.html"
+        },
+        {
+          "label": "1000例几何与采样设计",
+          "url": "assets/copv-supervised1000-v1/dataset_design.png"
+        }
+      ]
     }
   ]
 }

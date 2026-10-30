@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T03:24:39.968363+00:00",
+  "updated": "2026-10-30",
   "tasks": [
     {
       "id": "R01",
@@ -263,7 +263,7 @@
     },
     {
       "id": "M01",
-      "phase": "第1周",
+      "phase": "第3周",
       "title": "Connecting rod checkpoint",
       "due": "2026-10-27",
       "status": "进行中",
@@ -437,14 +437,18 @@
       "phase": "第2周",
       "title": "COPV 小批量试跑",
       "due": "2026-11-01",
-      "status": "进行中",
-      "deliverables": "建议先试跑 20–50 个几何",
+      "status": "已完成",
+      "deliverables": "20个原生粗网格V100有限元场、四模型TRAIN20实际结果、逐例指标与图表",
       "review": "核对数据字段和样本对应关系，确认后启动批量任务",
       "dependencies": "C03",
       "start": "2026-10-31",
-      "issues": "简化均匀等效壁通过本轮网格对照并完成20个V100内压幅值场；高压仅线弹性外推。原详细分层装配版局部应力未放行，生产标签0。 新增 48,977 节点原生粗网格检查器，粗网格对照与20个实际V100内压场核验通过；神经网络训练另行进行。",
+      "issues": "四模型均已完成6000次全20例FP64更新并通过独立CPU审核；这是固定预算完成，未达到全部20例位移和节点VM各≤1%。 同一均匀等效壁几何、3.5–70 MPa的20个压力幅值，仅TRAIN拟合。平均为逐例相对L2的算术平均，最差为逐例最大；位移采用完整三分量向量。高压为线弹性数学外推，生产标签仍为0。",
       "page": "C04.html",
       "results": [
+        {
+          "label": "四模型完成结果 · 平均/最差、曲线与FE预测对照",
+          "url": "viewers/copv-train20.html"
+        },
         {
           "label": "当前训练网格 · 原生/三维检查",
           "url": "viewers/copv-rod-mesh.html"
@@ -511,7 +515,7 @@
         }
       ],
       "actual_start": "2026-10-26",
-      "completed": "2026-10-26",
+      "completed": "2026-10-30",
       "production_release": false,
       "sockeye_recompute_snapshot": {
         "created_utc": "2026-10-28T10:58:22Z",
@@ -537,18 +541,27 @@
       "phase": "第2周",
       "title": "COPV 批量数据",
       "due": "2026-11-03",
-      "status": "未开始",
+      "status": "进行中",
       "deliverables": "初期目标约 1000 个有效样本",
       "review": "汇总有效/失败数量，保留可复现配置和完整场数据",
       "dependencies": "C04",
       "start": "2026-11-01",
-      "issues": "",
+      "issues": "已冻结1000个不同几何与压力的设计，800/100/100划分；每例48,977原生节点、11,520个Quad9。先GPU求解验证，再以4个独立GPU分片生成真实FE标签。",
       "page": "C05.html",
-      "results": []
+      "results": [
+        {
+          "label": "1000例几何与采样设计",
+          "url": "assets/copv-supervised1000-v1/dataset_design.png"
+        },
+        {
+          "label": "设计与800/100/100划分",
+          "url": "assets/copv-supervised1000-v1/experiment_spec.json"
+        }
+      ]
     },
     {
       "id": "M02",
-      "phase": "第2周",
+      "phase": "第3周",
       "title": "COPV 数据 checkpoint",
       "due": "2026-11-03",
       "status": "未开始",
@@ -562,17 +575,26 @@
     },
     {
       "id": "C06",
-      "phase": "第3周",
-      "title": "COPV 两模型 overfitting",
+      "phase": "第2周",
+      "title": "COPV 四模型训练与对比",
       "due": "2026-11-06",
-      "status": "未开始",
-      "deliverables": "TS3 / MGN 曲线、误差图与 checkpoint",
-      "review": "固定同一小样本子集，记录两模型拟合表现与失败现象",
+      "status": "进行中",
+      "deliverables": "MGN / TS3 / FNO / PointNet编码FNO的曲线、平均/最差误差与checkpoint",
+      "review": "20例TRAIN结果已归档；1000例使用同一800/100/100划分，验证集选模型、测试集独立评估。",
       "dependencies": "M02、R06",
       "start": "2026-11-04",
-      "issues": "",
+      "issues": "四模型20例固定预算结果已完成并归档至C04；新1000例几何与压力实验仍进行中，尚无最终测试误差。",
       "page": "C06.html",
-      "results": []
+      "results": [
+        {
+          "label": "已完成20例TRAIN结果（C04）",
+          "url": "viewers/copv-train20.html"
+        },
+        {
+          "label": "1000例几何与采样设计",
+          "url": "assets/copv-supervised1000-v1/dataset_design.png"
+        }
+      ]
     },
     {
       "id": "E01",
