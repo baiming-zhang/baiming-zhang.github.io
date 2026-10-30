@@ -1,0 +1,356 @@
+{
+  "status": "passed_declared_mesh_convergence_gates",
+  "passed": true,
+  "candidate": "R8_cosine",
+  "independent_distribution": "R8_cosine_alt",
+  "cells": 11520,
+  "nodes": 48977,
+  "native_node_reduction_factor": 5.705882352941177,
+  "fixed_point_comparisons": [
+    {
+      "left": "R8_cosine",
+      "right": "ref_E",
+      "physical_points": 11683,
+      "all_points_matched": true,
+      "maximum_tensor_relative_change": 0.0034606417284403974,
+      "worst_point_rz_mm": [
+        100.95222119883518,
+        200.78566021636027
+      ],
+      "group_maximum_tensor_relative_change": {
+        "dense_end_probes.json": 0.0007618708503207431,
+        "end_face": 0.0008973529880254729,
+        "frozen_probes.json": 0.0034606417284403974,
+        "polar_interface_probes.json": 0.00044405284141851734
+      },
+      "global_metrics": {
+        "U_relative_L2": 2.056559784913771e-06,
+        "max_U_difference_mm": 1.9982513782877528e-06,
+        "energy_relative_change": 1.420447021005522e-06,
+        "end_extension_relative_change": 1.6448782640399173e-06,
+        "stress_RMS_relative_change": 3.286179894868013e-08,
+        "max_absolute_utheta_mm": 0.0,
+        "physical_displacement_points": 3916
+      },
+      "regional_GP_VM_peak_relative_changes": {
+        "end/-1": 0.0012409197236931124,
+        "cylinder/-1": 0.0011287700237929688,
+        "neck/-1": 0.0023600061043120846,
+        "neck_transition/-1": 0.0015784998572121456,
+        "neck_transition/1": 0.0015785001435383306,
+        "dome/-1": 0.0016050400061607961,
+        "dome/1": 0.0016050401429680283,
+        "cylinder_transition/1": 0.0034929325364198016,
+        "cylinder/1": 0.0011287700831206227,
+        "cylinder_transition/-1": 0.003492932336224386,
+        "neck/1": 0.002360007840864542,
+        "end/1": 0.001240919104623095
+      },
+      "end_face_peak_relative_change": 1.1929419666101282e-05,
+      "passed": true
+    },
+    {
+      "left": "R8_cosine",
+      "right": "ref_E_alt",
+      "physical_points": 11683,
+      "all_points_matched": true,
+      "maximum_tensor_relative_change": 0.0036149675753850193,
+      "worst_point_rz_mm": [
+        100.86967934927863,
+        201.56319782380473
+      ],
+      "group_maximum_tensor_relative_change": {
+        "dense_end_probes.json": 0.0007620179101487149,
+        "end_face": 0.0008975196324250885,
+        "frozen_probes.json": 0.0036149675753850193,
+        "polar_interface_probes.json": 0.0004441332508427737
+      },
+      "global_metrics": {
+        "U_relative_L2": 1.953044492966489e-06,
+        "max_U_difference_mm": 1.9273310747059215e-06,
+        "energy_relative_change": 1.4230696416817068e-06,
+        "end_extension_relative_change": 1.6475018561612487e-06,
+        "stress_RMS_relative_change": 3.436732198824899e-08,
+        "max_absolute_utheta_mm": 0.0,
+        "physical_displacement_points": 3916
+      },
+      "regional_GP_VM_peak_relative_changes": {
+        "end/-1": 0.001240948762136207,
+        "cylinder/-1": 0.0011117739095259926,
+        "neck/-1": 0.0023638669637603416,
+        "neck_transition/-1": 0.002157720713891198,
+        "neck_transition/1": 0.002157720850487266,
+        "dome/-1": 0.0015889428739020994,
+        "dome/1": 0.0015889429533112454,
+        "cylinder_transition/1": 0.0034556843933011283,
+        "cylinder/1": 0.001111773927801818,
+        "cylinder_transition/-1": 0.0034556843066307907,
+        "neck/1": 0.0023638679478911184,
+        "end/1": 0.0012409481817516888
+      },
+      "end_face_peak_relative_change": 1.1675441271230547e-05,
+      "passed": true
+    },
+    {
+      "left": "R8_cosine",
+      "right": "ref_F",
+      "physical_points": 11683,
+      "all_points_matched": true,
+      "maximum_tensor_relative_change": 0.0035510064861648794,
+      "worst_point_rz_mm": [
+        100.86967934927863,
+        201.56319782380473
+      ],
+      "group_maximum_tensor_relative_change": {
+        "dense_end_probes.json": 0.0007624203640984049,
+        "end_face": 0.0009020269672629659,
+        "frozen_probes.json": 0.0035510064861648794,
+        "polar_interface_probes.json": 0.00044006171288422897
+      },
+      "global_metrics": {
+        "U_relative_L2": 2.057471270303063e-06,
+        "max_U_difference_mm": 2.0171964457102346e-06,
+        "energy_relative_change": 1.4268614088042142e-06,
+        "end_extension_relative_change": 1.6492893294417499e-06,
+        "stress_RMS_relative_change": 3.5609195148111894e-08,
+        "max_absolute_utheta_mm": 0.0,
+        "physical_displacement_points": 3937
+      },
+      "regional_GP_VM_peak_relative_changes": {
+        "end/-1": 0.0016152547931538308,
+        "cylinder/-1": 0.0014458059377573385,
+        "neck/-1": 0.0031389476315080156,
+        "neck_transition/-1": 0.0005657527314859578,
+        "neck_transition/1": 0.0005657495602964246,
+        "dome/-1": 0.0020702847448498263,
+        "dome/1": 0.0020702858331331786,
+        "cylinder_transition/1": 0.004496092801128393,
+        "cylinder/1": 0.001445806545004813,
+        "cylinder_transition/-1": 0.0044960910556899325,
+        "neck/1": 0.003138958577329931,
+        "end/1": 0.0016152535444343696
+      },
+      "end_face_peak_relative_change": 1.405636808771149e-05,
+      "passed": true
+    },
+    {
+      "left": "R8_cosine",
+      "right": "R8_cosine_alt",
+      "physical_points": 11683,
+      "all_points_matched": true,
+      "maximum_tensor_relative_change": 0.001021510037763449,
+      "worst_point_rz_mm": [
+        99.36041845661588,
+        208.0832491935084
+      ],
+      "group_maximum_tensor_relative_change": {
+        "dense_end_probes.json": 9.428304691424964e-07,
+        "end_face": 6.587861175614335e-07,
+        "frozen_probes.json": 0.001021510037763449,
+        "polar_interface_probes.json": 6.358288640368608e-07
+      },
+      "global_metrics": {
+        "U_relative_L2": 3.692262444641455e-08,
+        "max_U_difference_mm": 4.981266164472451e-08,
+        "energy_relative_change": 2.7171875860432237e-09,
+        "end_extension_relative_change": 2.418625522082607e-09,
+        "stress_RMS_relative_change": 1.474067978790572e-09,
+        "max_absolute_utheta_mm": 0.0,
+        "physical_displacement_points": 3528
+      },
+      "regional_GP_VM_peak_relative_changes": {
+        "end/-1": 2.422133760227041e-08,
+        "cylinder/-1": 2.0319666533819003e-06,
+        "neck/-1": 3.097974303234441e-05,
+        "neck_transition/-1": 0.0005804867196510521,
+        "neck_transition/1": 0.0005804867058319951,
+        "dome/-1": 1.5248528057121291e-05,
+        "dome/1": 1.5248521324062736e-05,
+        "cylinder_transition/1": 2.9937751507613797e-05,
+        "cylinder/1": 2.031966011339925e-06,
+        "cylinder_transition/-1": 2.99377505423859e-05,
+        "neck/1": 3.098034630877322e-05,
+        "end/1": 2.375373397978109e-08
+      },
+      "end_face_peak_relative_change": 2.4268474030364473e-07,
+      "passed": true
+    },
+    {
+      "left": "R8_cosine_alt",
+      "right": "ref_F",
+      "physical_points": 11683,
+      "all_points_matched": true,
+      "maximum_tensor_relative_change": 0.0034326531381153103,
+      "worst_point_rz_mm": [
+        100.95222119883518,
+        200.78566021636027
+      ],
+      "group_maximum_tensor_relative_change": {
+        "dense_end_probes.json": 0.0007625615519839086,
+        "end_face": 0.000901861325227628,
+        "frozen_probes.json": 0.0034326531381153103,
+        "polar_interface_probes.json": 0.0004399804251028257
+      },
+      "global_metrics": {
+        "U_relative_L2": 2.046860891709005e-06,
+        "max_U_difference_mm": 2.017356916011832e-06,
+        "energy_relative_change": 1.4241442251039516e-06,
+        "end_extension_relative_change": 1.6468707079164702e-06,
+        "stress_RMS_relative_change": 3.4135127280343625e-08,
+        "max_absolute_utheta_mm": 0.0,
+        "physical_displacement_points": 3937
+      },
+      "regional_GP_VM_peak_relative_changes": {
+        "end/-1": 0.0016152306109392667,
+        "cylinder/-1": 0.0014437769048105675,
+        "neck/-1": 0.003108064175505132,
+        "neck_transition/-1": 0.0011469052143826541,
+        "neck_transition/1": 0.0011469020275083341,
+        "dome/-1": 0.0020855014720790876,
+        "dome/1": 0.00208550255362705,
+        "cylinder_transition/1": 0.00452589505751444,
+        "cylinder/1": 0.001443777512700306,
+        "cylinder_transition/-1": 0.004525893311167373,
+        "neck/1": 0.0031080745202461957,
+        "end/1": 0.0016152298290681433
+      },
+      "end_face_peak_relative_change": 1.4299049357791027e-05,
+      "passed": true
+    }
+  ],
+  "all_GP_comparisons": [
+    {
+      "left": "R8_cosine",
+      "right": "ref_E",
+      "n_points": 103680,
+      "all_positive_J_containing_cells_matched": true,
+      "maximum_tensor_relative_change": 0.004267573543312655,
+      "worst_point_rz_mm": [
+        101.61731656431253,
+        -200.00027979355323
+      ],
+      "stress_tensor_volume_L2": 0.0005661593023372186,
+      "U_volume_relative_L2": 1.8932445114781881e-06,
+      "maximum_inverse_map_residual_mm": 1.757785650632539e-13,
+      "passed": true,
+      "method": "Every native source volume GP, same physical target location, positive-J containing cell, native Q2 derivative; no smoothing/extrapolation"
+    },
+    {
+      "left": "ref_E",
+      "right": "R8_cosine",
+      "n_points": 622080,
+      "all_positive_J_containing_cells_matched": true,
+      "maximum_tensor_relative_change": 0.008034208907610018,
+      "worst_point_rz_mm": [
+        102.75939180544827,
+        -196.46897313725964
+      ],
+      "stress_tensor_volume_L2": 0.0005759040640593444,
+      "U_volume_relative_L2": 1.9394420512506495e-06,
+      "maximum_inverse_map_residual_mm": 1.7112135109858138e-13,
+      "passed": true,
+      "method": "Every native source volume GP, same physical target location, positive-J containing cell, native Q2 derivative; no smoothing/extrapolation"
+    },
+    {
+      "left": "R8_cosine_alt",
+      "right": "ref_E_alt",
+      "n_points": 103680,
+      "all_positive_J_containing_cells_matched": true,
+      "maximum_tensor_relative_change": 0.004263218616943714,
+      "worst_point_rz_mm": [
+        101.61731083294035,
+        -200.01161164067932
+      ],
+      "stress_tensor_volume_L2": 0.0005661586477168774,
+      "U_volume_relative_L2": 1.893499421195672e-06,
+      "maximum_inverse_map_residual_mm": 1.757785650632539e-13,
+      "passed": true,
+      "method": "Every native source volume GP, same physical target location, positive-J containing cell, native Q2 derivative; no smoothing/extrapolation"
+    },
+    {
+      "left": "ref_E_alt",
+      "right": "R8_cosine_alt",
+      "n_points": 622080,
+      "all_positive_J_containing_cells_matched": true,
+      "maximum_tensor_relative_change": 0.008033638525940523,
+      "worst_point_rz_mm": [
+        102.75939180544827,
+        -196.48036382938463
+      ],
+      "stress_tensor_volume_L2": 0.0005759054863053945,
+      "U_volume_relative_L2": 1.9396908819823178e-06,
+      "maximum_inverse_map_residual_mm": 1.797546735911271e-13,
+      "passed": true,
+      "method": "Every native source volume GP, same physical target location, positive-J containing cell, native Q2 derivative; no smoothing/extrapolation"
+    },
+    {
+      "left": "ref_F",
+      "right": "R8_cosine",
+      "n_points": 1105920,
+      "all_positive_J_containing_cells_matched": true,
+      "maximum_tensor_relative_change": 0.00834462483388387,
+      "worst_point_rz_mm": [
+        100.15625,
+        -188.71829690062035
+      ],
+      "stress_tensor_volume_L2": 0.0005822451156729744,
+      "U_volume_relative_L2": 1.943733795268826e-06,
+      "maximum_inverse_map_residual_mm": 1.7288250917028504e-13,
+      "passed": true,
+      "method": "Every native source volume GP, same physical target location, positive-J containing cell, native Q2 derivative; no smoothing/extrapolation"
+    },
+    {
+      "left": "ref_F",
+      "right": "R8_cosine_alt",
+      "n_points": 1105920,
+      "all_positive_J_containing_cells_matched": true,
+      "maximum_tensor_relative_change": 0.008801625602721101,
+      "worst_point_rz_mm": [
+        100.15625,
+        -188.71829690062035
+      ],
+      "stress_tensor_volume_L2": 0.000582019148372676,
+      "U_volume_relative_L2": 1.940808640341978e-06,
+      "maximum_inverse_map_residual_mm": 2.2740142932498854e-13,
+      "passed": true,
+      "method": "Every native source volume GP, same physical target location, positive-J containing cell, native Q2 derivative; no smoothing/extrapolation"
+    },
+    {
+      "left": "R8_cosine",
+      "right": "R8_cosine_alt",
+      "n_points": 103680,
+      "all_positive_J_containing_cells_matched": true,
+      "maximum_tensor_relative_change": 0.005896211299462295,
+      "worst_point_rz_mm": [
+        100.01715780691084,
+        199.99966473822846
+      ],
+      "stress_tensor_volume_L2": 0.00010040984669323578,
+      "U_volume_relative_L2": 4.5550437217564844e-08,
+      "maximum_inverse_map_residual_mm": 1.7086299886288783e-13,
+      "passed": true,
+      "method": "Every native source volume GP, same physical target location, positive-J containing cell, native Q2 derivative; no smoothing/extrapolation"
+    },
+    {
+      "left": "R8_cosine_alt",
+      "right": "R8_cosine",
+      "n_points": 103680,
+      "all_positive_J_containing_cells_matched": true,
+      "maximum_tensor_relative_change": 0.0045080835639278345,
+      "worst_point_rz_mm": [
+        70.50972204597247,
+        224.40231994372266
+      ],
+      "stress_tensor_volume_L2": 0.00010164287538802578,
+      "U_volume_relative_L2": 4.837897711692741e-08,
+      "maximum_inverse_map_residual_mm": 2.274846706538671e-13,
+      "passed": true,
+      "method": "Every native source volume GP, same physical target location, positive-J containing cell, native Q2 derivative; no smoothing/extrapolation"
+    }
+  ],
+  "all_numerical_and_quality_gates_passed": true,
+  "physics_unchanged": true,
+  "production_eligible": false,
+  "relative_mesh_differences_are_not_true_errors": true,
+  "cloud_FE_and_training_not_replaced_by_this_CPU_verification": true
+}
