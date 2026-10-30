@@ -16,6 +16,7 @@
  let content=detail.querySelector(':scope > .details-content');
  if(!content){content=document.createElement('div');content.className='details-content';detail.append(content);}
  let stage=originalChildren.find(n=>n.matches('.delivery-stage')&&n.querySelector('iframe'));
+ if(task==='M01')stage=main.querySelector('section[data-model-case="0095"]')||stage;
  // M01 reuses the already delivered native FE viewer, clearly labelled as FE context.
  if(!stage&&task==='M01'){
   stage=document.createElement('section');stage.className='delivery-stage task-model-context';
@@ -25,15 +26,17 @@
  if(frame){
   model=document.createElement('section');model.className='task-priority-model';
   const tools=document.createElement('div');tools.className='task-model-tools';
-  const label=document.createElement('strong');label.textContent=task==='M01'?'原始FE模型 · 交互查看':'模型 · 旋转、缩放与场查看';tools.append(label);
+  const label=document.createElement('strong');label.textContent=task==='M01'?(frame.getAttribute('src').includes('m01-case0095')?'0095 · 真值 / TS3 / MGN / 误差':'原始FE模型 · 交互查看'):'模型 · 旋转、缩放与场查看';tools.append(label);
   const choices=[{src:frame.getAttribute('src'),title:frame.title||'当前模型'}];
   originalFrames.forEach(f=>{const src=f.getAttribute('src');if(src&&!choices.some(x=>x.src===src))choices.push({src,title:f.title||'其他模型视图'});});
+  if(task==='M01'&&!choices.some(x=>x.src.includes('r05-models-20')))choices.push({src:'viewers/r05-models-20.html?v=loads-v1',title:'原始FE20例模型 · 上下文参考'});
   if(task==='R07'){
    const slices=main.querySelector('a[href*="viewers/ts3-slices.html"]');
    if(slices)choices.push({src:slices.getAttribute('href'),title:'64 slices空间分配 · 可旋转模型'});
   }
-  const full=document.createElement('a');full.href=frame.getAttribute('src');full.target='_blank';full.rel='noopener';full.textContent='全屏打开 ↗';
-  if(choices.length>1){const select=document.createElement('select');select.setAttribute('aria-label','选择模型视图');choices.forEach(v=>{const o=document.createElement('option');o.value=v.src;o.textContent=v.title;select.append(o);});select.addEventListener('change',()=>{frame.src=select.value;full.href=select.value;frame.title=select.selectedOptions[0].textContent;});tools.append(select);}
+  const fullModelURL=src=>{if(src.includes('m01-case0095')){const u=new URL(src,location.href);u.searchParams.delete('embed');return u.href;}return src;};
+  const full=document.createElement('a');full.href=fullModelURL(frame.getAttribute('src'));full.target='_blank';full.rel='noopener';full.textContent='全屏打开 ↗';
+  if(choices.length>1){const select=document.createElement('select');select.setAttribute('aria-label','选择模型视图');choices.forEach(v=>{const o=document.createElement('option');o.value=v.src;o.textContent=v.title;select.append(o);});select.addEventListener('change',()=>{frame.src=select.value;full.href=fullModelURL(select.value);frame.title=select.selectedOptions[0].textContent;if(task==='M01')label.textContent=select.selectedOptions[0].textContent;});tools.append(select);}
   tools.append(full);model.append(tools,stage);frame.loading='eager';
  }
  const brief=document.createElement('section');brief.className='task-presentation-brief';
