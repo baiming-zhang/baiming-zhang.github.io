@@ -525,6 +525,74 @@
           "url": "viewers/copv-c04-curved.html?case=copv_c04_0002&q=8&bc=1&loads=1"
         }
       ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-28",
+      "title": "Sockeye V100：7份真实复算场、统一色标对比与三维模型",
+      "summary": "058/063/081的q6与q8，加078 q6，均通过原生检查。可查看位移、纤维应力、金属von Mises应力的PNG/PDF和三维BC/载荷，三组同网格积分敏感性指标来自实际FP64全场。",
+      "review": "q6/q8为装配积分阶数；应力显示为原单元积分点体积均值。积分差异不代表真值误差或网格h收敛，生产标签仍0，粗网格未替换。",
+      "links": [
+        {
+          "label": "统一色标对比与积分敏感性",
+          "url": "C04.html#sockeye-results"
+        },
+        {
+          "label": "已完成场三维模型",
+          "url": "viewers/copv-c04-sockeye.html?case=058_q8&bc=1&loads=0"
+        }
+      ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-28",
+      "title": "Sockeye全部10场与分析完成：新增3模型，局部应力仍hold",
+      "summary": "058/063/081/078各q6/q8，加085/092各q8，全部完成并通过原生检查。新增078 q8、085 q8、092 q8模型，更新10场统一色标PNG/PDF及四组积分对照；已有7模型保持不变。",
+      "review": "058/085、058/092各235物理探针全部匹配，但下端Ti应力张量采样L2差51.8%/76.5%；这些是网格间差异，不是真值误差。局部应力h收敛未认证，生产标签0。",
+      "links": [
+        {
+          "label": "10场对比图与最终网格敏感性",
+          "url": "C04.html#sockeye-results"
+        },
+        {
+          "label": "全部完成场三维模型",
+          "url": "viewers/copv-c04-sockeye.html?case=092_q8&bc=1&loads=0"
+        }
+      ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-29",
+      "title": "均匀等效壁收敛研究与V100内压幅值场",
+      "summary": "当前简化分支完成不同网格／分布对照及20个实际压力求解；模型、同色标对比与收敛证据已更新。",
+      "review": "AI审阅 · Codex：仅限均匀等效正交各向异性线弹性模型。高压场为数学外推，未认证本几何额定承压能力；原详细装配版仍单独hold。",
+      "links": [
+        {
+          "label": "查看模型与详情",
+          "url": "C04.html"
+        },
+        {
+          "label": "逐例核验",
+          "url": "assets/copv-pressure20-v1/FINAL_VERIFICATION.json"
+        }
+      ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-30",
+      "title": "Rod量级原生网格与C03风格检查器",
+      "summary": "新增48,977原生节点／11,520 Quad9网格的三维剖切、完整二维节点及粗细同步检查；保留原E历史场。",
+      "review": "AI审阅 · Codex：同几何材料，粗网格与不同分布检查通过，最大积分点张量差0.8802%是网格间差异而非真值误差。20个粗网格V100场已核验，网络训练未宣称完成。",
+      "links": [
+        {
+          "label": "打开网格检查器",
+          "url": "viewers/copv-rod-mesh.html"
+        },
+        {
+          "label": "完整网格核验",
+          "url": "assets/copv-rod-mesh-v1/FINAL_VERIFICATION.json"
+        }
+      ]
     }
   ]
 }
