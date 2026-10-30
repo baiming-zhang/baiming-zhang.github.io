@@ -1,0 +1,383 @@
+{
+  "schema": "m01_case0095_interactive4000_v1",
+  "sample_id": "normal_rodv2_0095__tension",
+  "training_budget": 4000,
+  "best_epochs": {
+    "ts3": 3950,
+    "mgn": 4000
+  },
+  "parameters": {
+    "ts3": 982884,
+    "mgn": 985540
+  },
+  "native_nodes": 69290,
+  "surface_nodes": 27730,
+  "surface_triangles": 55464,
+  "geometry_center_mm": [
+    69.762660450306,
+    5.009326287108706e-13,
+    2.5002222514558525e-12
+  ],
+  "bounds_centered": [
+    [
+      -94.044488491467,
+      -36.880003826010494,
+      -13.3173045695725
+    ],
+    [
+      94.04448849146699,
+      36.880003826010494,
+      13.3173045695725
+    ]
+  ],
+  "arrays": {
+    "position": {
+      "dtype": "<f4",
+      "shape": [
+        27730,
+        3
+      ],
+      "raw_bytes": 332760,
+      "parts": [
+        "position-00.bin.gz",
+        "position-01.bin.gz",
+        "position-02.bin.gz"
+      ]
+    },
+    "triangles": {
+      "dtype": "<u4",
+      "shape": [
+        55464,
+        3
+      ],
+      "raw_bytes": 665568,
+      "parts": [
+        "triangles-00.bin.gz",
+        "triangles-01.bin.gz",
+        "triangles-02.bin.gz",
+        "triangles-03.bin.gz",
+        "triangles-04.bin.gz",
+        "triangles-05.bin.gz"
+      ]
+    },
+    "node_ids": {
+      "dtype": "<u4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "node_ids-00.bin.gz"
+      ]
+    },
+    "vm_truth": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "vm_truth-00.bin.gz"
+      ]
+    },
+    "vm_ts3": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "vm_ts3-00.bin.gz"
+      ]
+    },
+    "vm_mgn": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "vm_mgn-00.bin.gz"
+      ]
+    },
+    "vm_ts3_error": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "vm_ts3_error-00.bin.gz"
+      ]
+    },
+    "vm_mgn_error": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "vm_mgn_error-00.bin.gz"
+      ]
+    },
+    "u_truth": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "u_truth-00.bin.gz"
+      ]
+    },
+    "u_ts3": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "u_ts3-00.bin.gz"
+      ]
+    },
+    "u_mgn": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "u_mgn-00.bin.gz"
+      ]
+    },
+    "u_ts3_error": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "u_ts3_error-00.bin.gz"
+      ]
+    },
+    "u_mgn_error": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "u_mgn_error-00.bin.gz"
+      ]
+    }
+  },
+  "ranges": {
+    "vm": {
+      "field": [
+        -0.27281986799540875,
+        530.4149044514818
+      ],
+      "error": [
+        0,
+        529.2868239227084
+      ],
+      "unit": "MPa"
+    },
+    "u": {
+      "field": [
+        0,
+        67.34762568524746
+      ],
+      "error": [
+        0,
+        5.18504885068264
+      ],
+      "unit": "μm"
+    }
+  },
+  "web_float32_max_abs_display_error": {
+    "vm_truth": 1.4185425243340433e-05,
+    "vm_ts3": 3.8136607685146373e-06,
+    "vm_mgn": 3.8127577539626145e-06,
+    "vm_ts3_error": 1.9723489685929962e-05,
+    "vm_mgn_error": 2.0374474161144462e-05,
+    "u_truth": 3.8088312379613853e-06,
+    "u_ts3": 3.802704867439388e-06,
+    "u_mgn": 3.8072220576168547e-06,
+    "u_ts3_error": 2.349921439659397e-07,
+    "u_mgn_error": 2.0632419595045803e-07
+  },
+  "metrics": {
+    "ts3": {
+      "sample_id": "normal_rodv2_0095__tension",
+      "nodes": 69290,
+      "relative_U_L2": 0.017433632483610417,
+      "relative_VM_L2": 0.2194732899161125,
+      "U_RMSE_mm": 0.0002479611806363005,
+      "VM_RMSE_MPa": 6.2931504538483365,
+      "predicted_VM_min_MPa": -0.07189235411161912,
+      "Ux_relative_L2": 0.012659683459972485,
+      "Uy_relative_L2": 0.07598338049370461,
+      "Uz_relative_L2": 0.6009917756877916
+    },
+    "mgn": {
+      "sample_id": "normal_rodv2_0095__tension",
+      "nodes": 69290,
+      "relative_U_L2": 0.02282902103066189,
+      "relative_VM_L2": 0.21599714620936764,
+      "U_RMSE_mm": 0.00032470060458459043,
+      "VM_RMSE_MPa": 6.193475931476594,
+      "predicted_VM_min_MPa": -0.27281986799540875,
+      "Ux_relative_L2": 0.014142224147287852,
+      "Uy_relative_L2": 0.10523777327138716,
+      "Uz_relative_L2": 1.0048847380840682
+    }
+  },
+  "peak_A": {
+    "surface_index": 4075,
+    "original_node_id": 4076,
+    "xyz_mm": [
+      150.2732025836,
+      26.467892716338,
+      13.31730275910522
+    ],
+    "values": {
+      "vm": [
+        530.4149044514818,
+        1.128080528773373,
+        2.3885779246638537,
+        529.2868239227084,
+        528.0263265268179
+      ],
+      "u": [
+        0.3395338299736775,
+        0.33943404624562346,
+        0.3783781375761424,
+        0.039395099258252735,
+        0.3377722976274302
+      ]
+    }
+  },
+  "source": {
+    "ts3": {
+      "prediction_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\ts3_tension20_W128S004_continue4000_v1\\W128_S004\\formal\\ts3\\20\\predictions\\normal_rodv2_0095__tension.npz",
+      "sha256": "8ba1dc63a9a00f89d1b0d6c3bd5c05b90588e15d95c2c72d341badf3eab5d033",
+      "best_epoch": 3950
+    },
+    "mgn": {
+      "prediction_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\m01_mgn_tension20_matched4000_v1\\formal\\mgn\\20\\predictions\\normal_rodv2_0095__tension.npz",
+      "sha256": "0fe14948bfb0a679265e799a9e80d9bc47c4c9ca885d6be62055e145152b2c9d",
+      "best_epoch": 4000
+    }
+  },
+  "geometry_sha256": "5bdcb46ba8ebfe1ff47e88c618b0c29829790d3936b5336fa6784ac906ce224f",
+  "truth_cache_sha256": "1e29aad30476735ab64820c31cb6e8db4959270faef6b74e57fdb3b3d9ad3c37",
+  "original_node_mapping_exact": true,
+  "no_inference_FE_or_new_training": true,
+  "error_definitions": {
+    "vm": "abs(predicted_VM-truth_VM),MPa",
+    "u": "norm(predicted_U_vector-truth_U_vector),μm"
+  },
+  "files": [
+    {
+      "name": "position-00.bin.gz",
+      "bytes": 68952,
+      "sha256": "df2da240c2bbc737d0d6076eaa65e0220f848e424939d4fd4590d0cf176e216d"
+    },
+    {
+      "name": "position-01.bin.gz",
+      "bytes": 78560,
+      "sha256": "7401e455a3652b94e37acfc44e800f6d466e4c2cba291d18f1f859db4aeb0550"
+    },
+    {
+      "name": "position-02.bin.gz",
+      "bytes": 55434,
+      "sha256": "80fed1f5a3e14f77e89bce0ab7d9ce1ea7993c1e4336ddf525e63d117cbd984c"
+    },
+    {
+      "name": "triangles-00.bin.gz",
+      "bytes": 59087,
+      "sha256": "e1a6b890ff63e3b89cac345f5f846c6bb24da0650b55a5fa037d12c2069afc88"
+    },
+    {
+      "name": "triangles-01.bin.gz",
+      "bytes": 59308,
+      "sha256": "a0d66a6a98c1313cf7d55b1406524f5f2b15a872b45acb48599963bba5248cc9"
+    },
+    {
+      "name": "triangles-02.bin.gz",
+      "bytes": 58400,
+      "sha256": "7b5d4a72cdc6096e548269fd9430ced86e18af58528a91c3a816e6d321ecf1e3"
+    },
+    {
+      "name": "triangles-03.bin.gz",
+      "bytes": 56985,
+      "sha256": "5b36ca63f56df1e442384263d5ca7cdf848feaa9dc0e2593ee7b87fe993bc212"
+    },
+    {
+      "name": "triangles-04.bin.gz",
+      "bytes": 55990,
+      "sha256": "4a33b41dc2337b079d82540d6b1c555916f4251af8fb48389e70a5f069bb784e"
+    },
+    {
+      "name": "triangles-05.bin.gz",
+      "bytes": 4242,
+      "sha256": "73c69f7ccda4de6476e0895c6046b7475456927ee07ef651039b5b3daaed7412"
+    },
+    {
+      "name": "node_ids-00.bin.gz",
+      "bytes": 38419,
+      "sha256": "6b41574550d3a9233f475be679357ef2dbd0f8b229e586722f5984f26c1dab68"
+    },
+    {
+      "name": "vm_truth-00.bin.gz",
+      "bytes": 99165,
+      "sha256": "4b7f85d819ab43c182031c967dff218076c16f8756cf8ca0e7c8adfd94175aba"
+    },
+    {
+      "name": "vm_ts3-00.bin.gz",
+      "bytes": 99096,
+      "sha256": "75dad5c816f561402e6edfbbb755e6d325a8da2f8ea7541dfec96e558099886c"
+    },
+    {
+      "name": "vm_mgn-00.bin.gz",
+      "bytes": 99593,
+      "sha256": "6b6e26cc24858f24a103b155f8c15c55a2356109247501448c2a5684ad009c60"
+    },
+    {
+      "name": "vm_ts3_error-00.bin.gz",
+      "bytes": 101008,
+      "sha256": "21859486165d3efe623e2c9fc3acda14cd1b0f3ecaeeb145563b7db4e1e0cb5d"
+    },
+    {
+      "name": "vm_mgn_error-00.bin.gz",
+      "bytes": 100912,
+      "sha256": "42bd5f44322774d36a6305ef192736fbb7e93556d9b08e623180470e9bb33fe2"
+    },
+    {
+      "name": "u_truth-00.bin.gz",
+      "bytes": 99415,
+      "sha256": "79d589f695e4bbb29adf3e2bac4c3c2bcea54fa0073551793d011d97df02108d"
+    },
+    {
+      "name": "u_ts3-00.bin.gz",
+      "bytes": 99573,
+      "sha256": "f835e2d7349acdb3be20e81627bb6926cb3f68476cebbf4fb5e37b1093200225"
+    },
+    {
+      "name": "u_mgn-00.bin.gz",
+      "bytes": 99754,
+      "sha256": "b8267fb015fc705751a4226c2ed9bee38220f611fc39698602353ea4c9943480"
+    },
+    {
+      "name": "u_ts3_error-00.bin.gz",
+      "bytes": 99085,
+      "sha256": "b47c8beea3ce7ad1baae40a97977c13a8a78be0438e7d3aa9808f9db246e8e90"
+    },
+    {
+      "name": "u_mgn_error-00.bin.gz",
+      "bytes": 98878,
+      "sha256": "7bbd0bf0a451ff1eb7f7fee2b6d540f553f6ce6804b5cd2d3249cda04349ce0d"
+    }
+  ]
+}
