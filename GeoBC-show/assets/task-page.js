@@ -1,5 +1,5 @@
 /* Shared model-first layout for every task; original task HTML remains intact. */
-(()=>{if(!document.body.dataset.task)return;const css=document.createElement('link');css.rel='stylesheet';css.href='assets/task-presentation.css?v=20261029-2';document.head.append(css);const js=document.createElement('script');js.src='assets/task-presentation.js?v=20261029-2';document.head.append(js);})();
+(()=>{if(!document.body.dataset.task)return;const css=document.createElement('link');css.rel='stylesheet';css.href='assets/task-presentation.css?v=20261029-2';document.head.append(css);const js=document.createElement('script');js.src='assets/task-presentation.js?v='+(document.body.dataset.task==='M01'?'20261030-0095':'20261029-2');document.head.append(js);})();
 /* Comments are persistent additions; browser-held identity permits editing only one's own. */
 (()=>{
  const task=document.body.dataset.task;if(!task)return;
