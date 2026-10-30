@@ -597,13 +597,13 @@
     {
       "task": "C04",
       "date": "2026-10-30",
-      "title": "C04完成：四模型20例真实结果归档",
-      "summary": "四模型均已完成6000次全20例FP64更新并通过独立CPU审核；这是固定预算完成，未达到全部20例位移和节点VM各≤1%。",
-      "review": "同一均匀等效壁几何、3.5–70 MPa的20个压力幅值，仅TRAIN拟合。平均为逐例相对L2的算术平均，最差为逐例最大；位移采用完整三分量向量。高压为线弹性数学外推，生产标签仍为0。 TS3 p01负VM保留原值。",
+      "title": "C04完成：COPV模型与内压场交付",
+      "summary": "原生粗网格与实际内压有限元模型已交付；C04保留模型查看。",
+      "review": "本页保留COPV模型查看与有限元依据。结论限于均匀等效壁线弹性模型，高压为数学外推，生产标签仍为0。",
       "links": [
         {
-          "label": "四模型结果与下载",
-          "url": "viewers/copv-train20.html"
+          "label": "COPV模型与内压场",
+          "url": "C04.html"
         }
       ]
     },
@@ -628,15 +628,72 @@
       "task": "C06",
       "date": "2026-10-30",
       "title": "四模型训练与对比进行中",
-      "summary": "四模型20例固定预算结果已完成并归档至C04；新1000例几何与压力实验仍进行中，尚无最终测试误差。",
-      "review": "20例TRAIN结果已归档；1000例使用同一800/100/100划分，验证集选模型、测试集独立评估。",
+      "summary": "已发布MGN、TS3、FNO和PointNet编码FNO的20例完成结果；四种方法各完成6000次实际更新并通过独立CPU审核。1000例实验仍在进行中，C06保持进行中。",
+      "review": "这部分是同一几何、20个压力幅值的TRAIN拟合，四种方法均未达到全20例位移与节点VM各≤1%。平均/最差为逐例相对L2的算术平均/最大值；TS3 p01的负VM保留原值。",
       "links": [
         {
-          "label": "已完成20例TRAIN结果（C04）",
+          "label": "已完成20例四模型结果 · 平均/最差、曲线和场对照",
           "url": "viewers/copv-train20.html"
         },
         {
-          "label": "1000例几何与采样设计",
+          "label": "四模型平均/最差CSV",
+          "url": "assets/copv-train20-v1/summary.csv"
+        },
+        {
+          "label": "全部80条逐例误差CSV",
+          "url": "assets/copv-train20-v1/per_case.csv"
+        },
+        {
+          "label": "四模型对比图PDF",
+          "url": "assets/copv-train20-v1/comparison.pdf"
+        },
+        {
+          "label": "完整实际训练曲线PDF",
+          "url": "assets/copv-train20-v1/curves.pdf"
+        },
+        {
+          "label": "指标定义与审核来源JSON",
+          "url": "assets/copv-train20-v1/summary.json"
+        },
+        {
+          "label": "进行中的1000例设计",
+          "url": "assets/copv-supervised1000-v1/dataset_design.png"
+        }
+      ]
+    },
+    {
+      "task": "C06",
+      "date": "2026-10-30",
+      "title": "C06先发布已完成的四模型20例阶段结果",
+      "summary": "已发布MGN、TS3、FNO和PointNet编码FNO的20例完成结果；四种方法各完成6000次实际更新并通过独立CPU审核。1000例实验仍在进行中，C06保持进行中。",
+      "review": "这部分是同一几何、20个压力幅值的TRAIN拟合，四种方法均未达到全20例位移与节点VM各≤1%。平均/最差为逐例相对L2的算术平均/最大值；TS3 p01的负VM保留原值。",
+      "links": [
+        {
+          "label": "已完成20例四模型结果 · 平均/最差、曲线和场对照",
+          "url": "viewers/copv-train20.html"
+        },
+        {
+          "label": "四模型平均/最差CSV",
+          "url": "assets/copv-train20-v1/summary.csv"
+        },
+        {
+          "label": "全部80条逐例误差CSV",
+          "url": "assets/copv-train20-v1/per_case.csv"
+        },
+        {
+          "label": "四模型对比图PDF",
+          "url": "assets/copv-train20-v1/comparison.pdf"
+        },
+        {
+          "label": "完整实际训练曲线PDF",
+          "url": "assets/copv-train20-v1/curves.pdf"
+        },
+        {
+          "label": "指标定义与审核来源JSON",
+          "url": "assets/copv-train20-v1/summary.json"
+        },
+        {
+          "label": "进行中的1000例设计",
           "url": "assets/copv-supervised1000-v1/dataset_design.png"
         }
       ]
