@@ -576,6 +576,23 @@
           "url": "assets/copv-pressure20-v1/FINAL_VERIFICATION.json"
         }
       ]
+    },
+    {
+      "task": "C04",
+      "date": "2026-10-30",
+      "title": "Rod量级原生网格与C03风格检查器",
+      "summary": "新增48,977原生节点／11,520 Quad9网格的三维剖切、完整二维节点及粗细同步检查；保留原E历史场。",
+      "review": "AI审阅 · Codex：同几何材料，粗网格与不同分布检查通过，最大积分点张量差0.8802%是网格间差异而非真值误差。20个粗网格V100场已核验，网络训练未宣称完成。",
+      "links": [
+        {
+          "label": "打开网格检查器",
+          "url": "viewers/copv-rod-mesh.html"
+        },
+        {
+          "label": "完整网格核验",
+          "url": "assets/copv-rod-mesh-v1/FINAL_VERIFICATION.json"
+        }
+      ]
     }
   ]
 }
