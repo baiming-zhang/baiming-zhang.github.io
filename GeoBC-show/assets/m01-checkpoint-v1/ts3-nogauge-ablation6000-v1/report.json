@@ -1,0 +1,452 @@
+{
+  "models": {
+    "FULL_COEFF": {
+      "parameters": 982884,
+      "input_channels": 56,
+      "current_epoch": 6000,
+      "phase": "completed",
+      "best_epoch": 6000,
+      "mean_U_percent": 1.3970678945023693,
+      "mean_VM_percent": 7.515014535159212,
+      "elapsed_seconds": 9223.930426597595
+    },
+    "HALF_COEFF": {
+      "parameters": 515636,
+      "input_channels": 56,
+      "current_epoch": 6000,
+      "phase": "completed",
+      "best_epoch": 6000,
+      "mean_U_percent": 2.0525888191770947,
+      "mean_VM_percent": 8.868679848296502,
+      "elapsed_seconds": 4649.905957221985
+    },
+    "HALF_NOCOEFF": {
+      "parameters": 514100,
+      "input_channels": 50,
+      "current_epoch": 6000,
+      "phase": "completed",
+      "best_epoch": 6000,
+      "mean_U_percent": 2.016789962707569,
+      "mean_VM_percent": 8.892518858171258,
+      "elapsed_seconds": 4961.736012935638,
+      "export_review": {
+        "steps": 6000,
+        "optimizer_updates": 6000,
+        "cases": 20,
+        "total_original_nodes": 1083269,
+        "parameters": 514100,
+        "actual_best_epoch": 6000,
+        "weights_only_CPU_load_and_strict_model_load": true,
+        "source_initial_normalization_and_LR_match": true,
+        "original_node_ids_and_saved_prediction_metrics_match": true,
+        "max_metric_recompute_difference": 1.3877787807814457e-17,
+        "input_channels": 50,
+        "integral_coefficient_inputs_removed": true,
+        "uniform_node_weights": true,
+        "added_points": 0,
+        "interpolated_features_or_labels": false,
+        "neural_forwards": 0,
+        "CUDA_initialized": false,
+        "inference_bytes": 2088222,
+        "inference_sha256": "1aad14d78e483a83a931fa60ec3c76fb6068d1aad8151b3bcac715cbc4ddfa9c",
+        "updated_unix": 1793432560.6148844
+      },
+      "weight_filename": "TS3_HALF_NOCOEFF50_epoch6000_inference.pt"
+    },
+    "FULL_NOCOEFF": {
+      "parameters": 981348,
+      "input_channels": 50,
+      "current_epoch": 6000,
+      "phase": "completed",
+      "best_epoch": 6000,
+      "mean_U_percent": 1.388845388909362,
+      "mean_VM_percent": 7.49102756061477,
+      "elapsed_seconds": 9270.221410512924,
+      "export_review": {
+        "steps": 6000,
+        "optimizer_updates": 6000,
+        "cases": 20,
+        "total_original_nodes": 1083269,
+        "parameters": 981348,
+        "actual_best_epoch": 6000,
+        "weights_only_CPU_load_and_strict_model_load": true,
+        "source_initial_normalization_and_LR_match": true,
+        "original_node_ids_and_saved_prediction_metrics_match": true,
+        "max_metric_recompute_difference": 3.469446951953614e-18,
+        "input_channels": 50,
+        "integral_coefficient_inputs_removed": true,
+        "uniform_node_weights": true,
+        "added_points": 0,
+        "interpolated_features_or_labels": false,
+        "neural_forwards": 0,
+        "CUDA_initialized": false,
+        "inference_bytes": 3979595,
+        "inference_sha256": "6b13d11ff0ff1a3169c7ab38804559b39d1833432ae84f068bbe9b58220f4d51",
+        "updated_unix": 1793441758.5850012
+      },
+      "weight_filename": "TS3_FULL_NOCOEFF50_epoch6000_inference.pt"
+    }
+  },
+  "target_epoch": 6000,
+  "epoch_comparison": [
+    {
+      "method": "FULL_COEFF",
+      "epoch": 2000,
+      "mean_U_percent": 2.178207296966283,
+      "mean_VM_percent": 9.635928431754557
+    },
+    {
+      "method": "FULL_COEFF",
+      "epoch": 4000,
+      "mean_U_percent": 1.6691244651708994,
+      "mean_VM_percent": 8.17355845807368
+    },
+    {
+      "method": "FULL_COEFF",
+      "epoch": 6000,
+      "mean_U_percent": 1.3970678945023693,
+      "mean_VM_percent": 7.515014535159212
+    },
+    {
+      "method": "HALF_COEFF",
+      "epoch": 2000,
+      "mean_U_percent": 2.5063354283375703,
+      "mean_VM_percent": 11.881471784157464
+    },
+    {
+      "method": "HALF_COEFF",
+      "epoch": 4000,
+      "mean_U_percent": 2.4158994157035756,
+      "mean_VM_percent": 10.246571787305712
+    },
+    {
+      "method": "HALF_COEFF",
+      "epoch": 6000,
+      "mean_U_percent": 2.0525888191770947,
+      "mean_VM_percent": 8.868679848296502
+    },
+    {
+      "method": "HALF_NOCOEFF",
+      "epoch": 2000,
+      "mean_U_percent": 2.520952537931286,
+      "mean_VM_percent": 11.694726567339744
+    },
+    {
+      "method": "HALF_NOCOEFF",
+      "epoch": 4000,
+      "mean_U_percent": 2.3888379056223554,
+      "mean_VM_percent": 9.958478869798896
+    },
+    {
+      "method": "HALF_NOCOEFF",
+      "epoch": 6000,
+      "mean_U_percent": 2.016789962707569,
+      "mean_VM_percent": 8.892518858171258
+    },
+    {
+      "method": "FULL_NOCOEFF",
+      "epoch": 2000,
+      "mean_U_percent": 2.163435165504738,
+      "mean_VM_percent": 9.898113118354154
+    },
+    {
+      "method": "FULL_NOCOEFF",
+      "epoch": 4000,
+      "mean_U_percent": 1.6977632862421992,
+      "mean_VM_percent": 8.109510707822807
+    },
+    {
+      "method": "FULL_NOCOEFF",
+      "epoch": 6000,
+      "mean_U_percent": 1.388845388909362,
+      "mean_VM_percent": 7.49102756061477
+    }
+  ],
+  "evaluation_schedule": [
+    2000,
+    4000,
+    6000
+  ],
+  "group_protocol": {
+    "schema": "m01_ts3_nogauge_ablation6000_v1",
+    "sequence": [
+      "HALF",
+      "FULL"
+    ],
+    "dependency": "m01_ts3_half_tension20_6000_v1 completed6000",
+    "coordinator_sha256": "ac9b7a894b5c4860263724a312510871dc265b2f1a70373e63b2d3ff86565a91",
+    "worker_source_sha256": "e266dc955ac90565db0851357832ed440d0d927e17bc812a34aed260282e2655",
+    "admission_source_sha256": "42dbf76cf274d9e413855d00651afdb78fa3e8b9c33f7104ee165910f83d59e6",
+    "variant_protocol_sha256": {
+      "HALF": "6c347ad3cf71538cf6a84245d1f0cdb3a77cd9c5abf2a899a582010a9702f511",
+      "FULL": "08efaf945d6c9fd55c3badd3efc204a106963e7c52fd605851d3b23899fffd8f"
+    },
+    "variants": {
+      "HALF": {
+        "prepared": true,
+        "variant": "HALF",
+        "architecture": {
+          "n_layers": 4,
+          "n_hidden": 128,
+          "n_head": 8,
+          "slice_num": 4,
+          "mlp_ratio": 2,
+          "dropout": 0.0
+        },
+        "parameters": 514100,
+        "input_channels": 50,
+        "removed_features": [
+          "N_mean_tangent_x",
+          "N_mean_tangent_y",
+          "N_mean_tangent_z",
+          "N_mean_axial_x",
+          "N_mean_axial_y",
+          "N_mean_axial_z"
+        ],
+        "untrained_initial": true,
+        "remaining_input_projection_columns_identical": true,
+        "other_retained_tensors_identical": true,
+        "CPU_only": true,
+        "neural_forwards": 0,
+        "optimizer_updates": 0,
+        "CUDA_initialized": false
+      },
+      "FULL": {
+        "prepared": true,
+        "variant": "FULL",
+        "architecture": {
+          "n_layers": 8,
+          "n_hidden": 128,
+          "n_head": 8,
+          "slice_num": 4,
+          "mlp_ratio": 2,
+          "dropout": 0.0
+        },
+        "parameters": 981348,
+        "input_channels": 50,
+        "removed_features": [
+          "N_mean_tangent_x",
+          "N_mean_tangent_y",
+          "N_mean_tangent_z",
+          "N_mean_axial_x",
+          "N_mean_axial_y",
+          "N_mean_axial_z"
+        ],
+        "untrained_initial": true,
+        "remaining_input_projection_columns_identical": true,
+        "other_retained_tensors_identical": true,
+        "CPU_only": true,
+        "neural_forwards": 0,
+        "optimizer_updates": 0,
+        "CUDA_initialized": false
+      }
+    },
+    "created_unix": 1793426135.0229442,
+    "preparation_seconds": 0.2756974697113037
+  },
+  "updated_unix": 1793442070.0811093,
+  "limitations": [
+    "20TRAIN geometries/single seed",
+    "Only six integral coefficient channels26..31 are absent; radial-normal and load inputs remain",
+    "No zero placeholders or substitute channels;50-input inference requires recorded kept-column selection and normalization",
+    "Original FE boundary conditions/nodes/labels and uniform loss unchanged",
+    "Retained untrained weights match by depth, with the input projection columns selected",
+    "Actual best export may differ from exact6000; only saved scheduled metrics are published"
+  ],
+  "case0095_native_regions": {
+    "FULL_COEFF": {
+      "all": {
+        "nodes": 69290,
+        "relative_U_L2": 0.014144373666846082,
+        "relative_VM_L2": 0.21714072155270545,
+        "U_RMSE_um": 0.2011775570633011
+      },
+      "small": {
+        "nodes": 8656,
+        "relative_U_L2": 0.018715357604815394,
+        "relative_VM_L2": 0.09908334971716633,
+        "U_RMSE_um": 0.3726202056051291
+      },
+      "big": {
+        "nodes": 12800,
+        "relative_U_L2": 0.19839277413394002,
+        "relative_VM_L2": 0.11271908710662719,
+        "U_RMSE_um": 0.17601070785865142
+      },
+      "bore": {
+        "nodes": 2900,
+        "relative_U_L2": 0.5223407459118999,
+        "relative_VM_L2": 0.08279919836680677,
+        "U_RMSE_um": 0.101710159997758
+      }
+    },
+    "HALF_COEFF": {
+      "all": {
+        "nodes": 69290,
+        "relative_U_L2": 0.02163102719217658,
+        "relative_VM_L2": 0.22162711542417024,
+        "U_RMSE_um": 0.30766135778016823
+      },
+      "small": {
+        "nodes": 8656,
+        "relative_U_L2": 0.031971721585954994,
+        "relative_VM_L2": 0.11352563822158579,
+        "U_RMSE_um": 0.6365525961333084
+      },
+      "big": {
+        "nodes": 12800,
+        "relative_U_L2": 0.31405739456968246,
+        "relative_VM_L2": 0.1344431435514077,
+        "U_RMSE_um": 0.27862639941278494
+      },
+      "bore": {
+        "nodes": 2900,
+        "relative_U_L2": 0.7958842438770423,
+        "relative_VM_L2": 0.0799951667088607,
+        "U_RMSE_um": 0.15497453418669715
+      }
+    },
+    "HALF_NOCOEFF": {
+      "all": {
+        "nodes": 69290,
+        "relative_U_L2": 0.021087436667701936,
+        "relative_VM_L2": 0.22158937043059432,
+        "U_RMSE_um": 0.29992978787595254
+      },
+      "small": {
+        "nodes": 8656,
+        "relative_U_L2": 0.03193316737344626,
+        "relative_VM_L2": 0.11416051877371935,
+        "U_RMSE_um": 0.6357849870448102
+      },
+      "big": {
+        "nodes": 12800,
+        "relative_U_L2": 0.2670530258290806,
+        "relative_VM_L2": 0.1327524116735255,
+        "U_RMSE_um": 0.23692491985740097
+      },
+      "bore": {
+        "nodes": 2900,
+        "relative_U_L2": 0.619651400732339,
+        "relative_VM_L2": 0.07450042264858608,
+        "U_RMSE_um": 0.12065848510686755
+      }
+    },
+    "FULL_NOCOEFF": {
+      "all": {
+        "nodes": 69290,
+        "relative_U_L2": 0.013421856357403311,
+        "relative_VM_L2": 0.21677221277807887,
+        "U_RMSE_um": 0.19090108454685795
+      },
+      "small": {
+        "nodes": 8656,
+        "relative_U_L2": 0.018098280457157636,
+        "relative_VM_L2": 0.09681055881207516,
+        "U_RMSE_um": 0.36033428414481466
+      },
+      "big": {
+        "nodes": 12800,
+        "relative_U_L2": 0.1935811572284687,
+        "relative_VM_L2": 0.11306305802011075,
+        "U_RMSE_um": 0.1717419228629595
+      },
+      "bore": {
+        "nodes": 2900,
+        "relative_U_L2": 0.42734377637699333,
+        "relative_VM_L2": 0.07278022866920868,
+        "U_RMSE_um": 0.08321235555435899
+      }
+    }
+  },
+  "case0095_saved_prediction_sources": {
+    "FULL_COEFF": {
+      "prediction_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\m01_tension20_matched_continue6000_v1\\TS3_W128_S004\\formal\\ts3\\20\\predictions\\normal_rodv2_0095__tension.npz",
+      "snapshot_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\results\\m01_case0095_nogauge_html_v1\\ts3_saved_prediction.npz",
+      "sha256": "ef5f115ed5c830d0bb85a407ea2343afed2a24b54c7a73ffcd833e87dd026d79",
+      "actual_checkpoint_epoch": 6000,
+      "training_budget": 6000,
+      "parameters": 982884,
+      "effective_minutes": 153.73217377662658
+    },
+    "HALF_COEFF": {
+      "prediction_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\m01_ts3_half_tension20_6000_v1\\formal\\ts3\\20\\predictions\\normal_rodv2_0095__tension.npz",
+      "snapshot_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\results\\m01_case0095_nogauge_html_v1\\curv_saved_prediction.npz",
+      "sha256": "46ea293b3643acab63af08a52a4f1744b9b6c9343d4547eaed7f6c350b73f062",
+      "actual_checkpoint_epoch": 6000,
+      "training_budget": 6000,
+      "parameters": 515636,
+      "effective_minutes": 77.49843262036642
+    },
+    "HALF_NOCOEFF": {
+      "prediction_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\m01_ts3_nogauge_ablation6000_v1\\HALF\\formal\\ts3\\20\\predictions\\normal_rodv2_0095__tension.npz",
+      "snapshot_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\results\\m01_case0095_nogauge_html_v1\\asm2_saved_prediction.npz",
+      "sha256": "fe88ac419d71abcd07101685b5ab9e5c2e9492971eaa2307b0d64fbbf86f7c4c",
+      "actual_checkpoint_epoch": 6000,
+      "training_budget": 6000,
+      "parameters": 514100,
+      "effective_minutes": 82.69560021559397
+    },
+    "FULL_NOCOEFF": {
+      "prediction_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\runs\\m01_ts3_nogauge_ablation6000_v1\\FULL\\formal\\ts3\\20\\predictions\\normal_rodv2_0095__tension.npz",
+      "snapshot_file": "D:\\GeoBC\\GeoBC Neural Operator\\publication\\GeoBC-Neural-Operator\\results\\m01_case0095_nogauge_html_v1\\dens10_saved_prediction.npz",
+      "sha256": "f5bac2ded3d27d384f0bbacda84a7039d8740123ac8af1c1de46614caa25366f",
+      "actual_checkpoint_epoch": 6000,
+      "training_budget": 6000,
+      "parameters": 981348,
+      "effective_minutes": 154.5036901752154
+    }
+  },
+  "case0095_bore_spots": {
+    "FULL_COEFF": {
+      "actual_epoch": 6000,
+      "prediction_sha256": "ef5f115ed5c830d0bb85a407ea2343afed2a24b54c7a73ffcd833e87dd026d79",
+      "bore_VM_midpoint_deviation_median_MPa": 0.17461709611483278,
+      "bore_U_RMSE_um": 0.101710159997758,
+      "bore_relative_U_L2": 0.5223407459118999,
+      "bore_relative_VM_L2": 0.08279919836680677,
+      "global_relative_U_L2": 0.014144373666846082,
+      "global_relative_VM_L2": 0.21714072155270545
+    },
+    "HALF_COEFF": {
+      "actual_epoch": 6000,
+      "prediction_sha256": "46ea293b3643acab63af08a52a4f1744b9b6c9343d4547eaed7f6c350b73f062",
+      "bore_VM_midpoint_deviation_median_MPa": 0.1549885550238146,
+      "bore_U_RMSE_um": 0.15497453418669715,
+      "bore_relative_U_L2": 0.7958842438770423,
+      "bore_relative_VM_L2": 0.0799951667088607,
+      "global_relative_U_L2": 0.02163102719217658,
+      "global_relative_VM_L2": 0.22162711542417024
+    },
+    "HALF_NOCOEFF": {
+      "actual_epoch": 6000,
+      "prediction_sha256": "fe88ac419d71abcd07101685b5ab9e5c2e9492971eaa2307b0d64fbbf86f7c4c",
+      "bore_VM_midpoint_deviation_median_MPa": 0.004535123157355159,
+      "bore_U_RMSE_um": 0.12065848510686755,
+      "bore_relative_U_L2": 0.619651400732339,
+      "bore_relative_VM_L2": 0.07450042264858608,
+      "global_relative_U_L2": 0.021087436667701936,
+      "global_relative_VM_L2": 0.22158937043059432
+    },
+    "FULL_NOCOEFF": {
+      "actual_epoch": 6000,
+      "prediction_sha256": "f5bac2ded3d27d384f0bbacda84a7039d8740123ac8af1c1de46614caa25366f",
+      "bore_VM_midpoint_deviation_median_MPa": 0.0031117325296665665,
+      "bore_U_RMSE_um": 0.08321235555435899,
+      "bore_relative_U_L2": 0.42734377637699333,
+      "bore_relative_VM_L2": 0.07278022866920868,
+      "global_relative_U_L2": 0.013421856357403311,
+      "global_relative_VM_L2": 0.21677221277807887
+    }
+  },
+  "publication": {
+    "inference_weights_pending": false,
+    "weights_pending": [],
+    "snapshot_epochs": {
+      "FULL_COEFF": 6000,
+      "HALF_COEFF": 6000,
+      "HALF_NOCOEFF": 6000,
+      "FULL_NOCOEFF": 6000
+    }
+  }
+}
