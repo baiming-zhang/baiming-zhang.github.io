@@ -1,0 +1,24 @@
+{
+  "author": "AI审阅 · Codex",
+  "date": "2026-10-29",
+  "scope": "Homogeneous 4mm equivalent orthotropic wall, uniform internal pressure only; not original detailed or ply model",
+  "numerical_evidence": [
+    "homogeneous_FINAL_VERIFICATION.json",
+    "FINAL_VERIFICATION.json",
+    "manifest.json"
+  ],
+  "presentation": {
+    "single_primary_interactive_model": true,
+    "details_collapsed_by_default": true,
+    "default_case": "p20 (highest prescribed pressure, not selected by appearance)",
+    "common_absolute_color_ranges": true,
+    "load_arrows": "Saved actual nodal load directions; orange; schematic length; deformed anchors",
+    "mesh_independent_toggle": true,
+    "raw_FP64_unchanged": true,
+    "display_only_float32_quantization": "Bounds in manifest.json",
+    "old_results_retained": true,
+    "comments_UI_unchanged": true
+  },
+  "physical_interpretation": "Linear operator load-amplitude benchmark. High-pressure small-strain predictions are mathematical extrapolations, not service-pressure certification.",
+  "production_labels_released": 0
+}
