@@ -1,0 +1,150 @@
+{
+  "schema": "COPV_native_FP64_supervised1000_preparation_v1",
+  "prepared_at_UTC": "2026-10-30T22:55:54.744170+00:00",
+  "status": "GPU_pilot_running_not_yet_verified",
+  "user_authorized_cases": 1000,
+  "user_authorized_methods": [
+    "mgn",
+    "ts3",
+    "fno",
+    "pointnet_fno"
+  ],
+  "case_design": {
+    "seed": 20261030,
+    "case_count": 1000,
+    "split_counts": {
+      "train": 800,
+      "validation": 100,
+      "test": 100
+    },
+    "sampling": "Three-dimensional Latin hypercube, unique geometry per case",
+    "ranges": {
+      "radius_mm": [
+        85,
+        115
+      ],
+      "straight_length_mm": [
+        320,
+        480
+      ],
+      "pressure_MPa": [
+        3.5,
+        70
+      ]
+    },
+    "fixed": {
+      "wall_thickness_mm": 4,
+      "dome_depth_mm": 60,
+      "bore_radius_mm": 15,
+      "neck_length_mm": 20
+    }
+  },
+  "split_counts": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "split_seed": 20261030,
+  "model_seed": 20261029,
+  "split_materialization_pending_case_definition": false,
+  "source_provenance": {
+    "FE_solver": {
+      "path": "C:\\Users\\张柏铭\\Desktop\\GeoBC\\COPV\\experiments\\copv_axisym_simplified_v1\\pressure_sweep_20_rod_scale_v1\\cloud\\axisym_pressure_sweep_v11.py",
+      "sha256": "81a2b9b54cbfd96644f363f1bd7e9a35b44cb7343035d1941d05beab3fcfec1a"
+    },
+    "FE_mesh_input": {
+      "path": "C:\\Users\\张柏铭\\Desktop\\GeoBC\\COPV\\experiments\\copv_axisym_simplified_v1\\pressure_sweep_20_rod_scale_v1\\cloud\\homogeneous_E_input.npz",
+      "sha256": "1efaf353a896663e371d54bed6ca6981feadf66e48545a5e771c7437cc506022"
+    },
+    "FE_material_contract": {
+      "path": "C:\\Users\\张柏铭\\Desktop\\GeoBC\\COPV\\experiments\\copv_axisym_simplified_v1\\pressure_sweep_20_rod_scale_v1\\cloud\\material_contract.json",
+      "sha256": "1ab61de63adf2517e3a7651d0b7db9cbae30af7383b4b74afb01d68bbda8aaee"
+    },
+    "MGN_model": {
+      "path": "C:\\Users\\张柏铭\\Desktop\\GeoBC\\COPV\\experiments\\copv_axisym_simplified_v1\\overfit_pressure20_rod_scale_fp64_v1\\cloud\\geobc\\overfit_meshgraphnet.py",
+      "sha256": "d8b180153c3080507e9aa35587e6bcf353ba29a4754732377ac74527b0e1451a"
+    },
+    "TS3_model": {
+      "path": "C:\\Users\\张柏铭\\Desktop\\GeoBC\\COPV\\experiments\\copv_axisym_simplified_v1\\overfit_pressure20_rod_scale_fp64_v1\\cloud\\vendor\\Transolver_chunk_opt_matrix_mul.py",
+      "sha256": "2dc6476d64613b66e0da285e676bd87ffd6110b49ff4c2d53ed4e9013309562c"
+    },
+    "FNO_model": {
+      "path": "C:\\Users\\张柏铭\\Desktop\\GeoBC\\COPV\\experiments\\copv_axisym_simplified_v1\\overfit_pressure20_fno_fp64_v3_native_fixture\\cloud\\fno_model.py",
+      "sha256": "0051ecbaedfe4bbbcdc84889a42ac8cb2e611502a4299735e9d1ed1e29436bf1"
+    },
+    "PointNet_encoder": {
+      "path": "C:\\Users\\张柏铭\\Desktop\\GeoBC\\COPV\\experiments\\copv_axisym_simplified_v1\\overfit_pressure20_pointnet_fno_fp64_v1\\cloud\\pointnet_encoder.py",
+      "sha256": "b026b0cd6fcbefd2effbf0551fb64f00e8e8ff8761d6a255ed8fffea517c53d3"
+    },
+    "PointNet_FNO_model": {
+      "path": "C:\\Users\\张柏铭\\Desktop\\GeoBC\\COPV\\experiments\\copv_axisym_simplified_v1\\overfit_pressure20_pointnet_fno_fp64_v1\\cloud\\pointnet_fno_model.py",
+      "sha256": "6fa94c914068cbb68fc2aff7fc07fe00938b1d90221ef7fc1e8c4e5fc6580c79"
+    }
+  },
+  "mesh_reference": {
+    "nodes": 48977,
+    "Quad9_cells": 11520,
+    "directed_edges": 190112,
+    "nearby_mesh_request": true,
+    "no_node_sampling": true
+  },
+  "model_parameters": {
+    "mgn": 985540,
+    "ts3": 982884,
+    "fno": 984668,
+    "pointnet_fno": {
+      "FNO_body_excluding_encoder": 984668,
+      "PointNet_encoder": 81760,
+      "total": 1066428
+    }
+  },
+  "precision": {
+    "FE": "float64",
+    "models": "float64",
+    "inputs_labels_gradients_Adam": "float64",
+    "FFT": "complex128",
+    "TF32": false,
+    "AMP": false
+  },
+  "FE_plan": {
+    "proposed_concurrent_GPU_shards": 4,
+    "one_GPU_per_shard": true,
+    "independent_case_solves": true,
+    "CUDA_matrix_and_vector_required": true,
+    "CPU_assembly_and_postprocessing_allowed": true,
+    "preserve_true_residual_gate": 1e-08,
+    "preserve_matrix_and_GP_energy_gate": 1e-08,
+    "no_scaled_old_labels_as_new_solves": true,
+    "actual_resources_and_runtime_preflight_required": true
+  },
+  "training_plan": {
+    "status": "fixed_6000_updates_effective_batch20_150_train_passes",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0,
+    "gradient_clip": 1,
+    "proposed_optimizer_update_budget": 6000,
+    "proposed_equal_weight_cases_per_update": 20,
+    "budget_unit": "actual optimizer updates, not 6000 passes over 800 cases",
+    "warmup_updates": 50,
+    "cosine_end_update": 2000,
+    "minimum_learning_rate": 1e-05,
+    "train_only_normalization": true,
+    "validation_checkpoint_selection": true,
+    "test_isolation": true,
+    "fresh_initialization": true,
+    "old_completed_checkpoints_not_loaded": true
+  },
+  "launch": {
+    "submitted": true,
+    "jobs": [
+      "13802704"
+    ],
+    "existing_SSH_service_and_environments_only": true,
+    "old_experiments_preserved": true,
+    "monitor_every_minutes_after_launch": 30,
+    "monitor_automation_id": "copv-1000-case-gpu-fe",
+    "authoritative_live_receipt": "cloud/execution.json"
+  },
+  "physical_scope": "Small-strain homogeneous equivalent-wall research; production eligibility remains false"
+}

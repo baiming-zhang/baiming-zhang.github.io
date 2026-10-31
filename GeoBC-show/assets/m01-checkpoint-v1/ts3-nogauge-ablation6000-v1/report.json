@@ -1,0 +1,220 @@
+{
+  "models": {
+    "FULL_COEFF": {
+      "parameters": 982884,
+      "input_channels": 56,
+      "current_epoch": 6000,
+      "phase": "completed",
+      "best_epoch": 6000,
+      "mean_U_percent": 1.3970678945023693,
+      "mean_VM_percent": 7.515014535159212,
+      "elapsed_seconds": 9223.930426597595
+    },
+    "HALF_COEFF": {
+      "parameters": 515636,
+      "input_channels": 56,
+      "current_epoch": 6000,
+      "phase": "completed",
+      "best_epoch": 6000,
+      "mean_U_percent": 2.0525888191770947,
+      "mean_VM_percent": 8.868679848296502,
+      "elapsed_seconds": 4649.905957221985
+    },
+    "HALF_NOCOEFF": {
+      "parameters": 514100,
+      "input_channels": 50,
+      "current_epoch": 2055,
+      "phase": "training",
+      "best_epoch": null,
+      "mean_U_percent": null,
+      "mean_VM_percent": null,
+      "elapsed_seconds": 1663.038322687149
+    },
+    "FULL_NOCOEFF": {
+      "parameters": 981348,
+      "input_channels": 50,
+      "current_epoch": 0,
+      "phase": "queued",
+      "best_epoch": null,
+      "mean_U_percent": null,
+      "mean_VM_percent": null,
+      "elapsed_seconds": null
+    }
+  },
+  "target_epoch": 6000,
+  "epoch_comparison": [
+    {
+      "method": "FULL_COEFF",
+      "epoch": 2000,
+      "mean_U_percent": 2.178207296966283,
+      "mean_VM_percent": 9.635928431754557
+    },
+    {
+      "method": "FULL_COEFF",
+      "epoch": 4000,
+      "mean_U_percent": 1.6691244651708994,
+      "mean_VM_percent": 8.17355845807368
+    },
+    {
+      "method": "FULL_COEFF",
+      "epoch": 6000,
+      "mean_U_percent": 1.3970678945023693,
+      "mean_VM_percent": 7.515014535159212
+    },
+    {
+      "method": "HALF_COEFF",
+      "epoch": 2000,
+      "mean_U_percent": 2.5063354283375703,
+      "mean_VM_percent": 11.881471784157464
+    },
+    {
+      "method": "HALF_COEFF",
+      "epoch": 4000,
+      "mean_U_percent": 2.4158994157035756,
+      "mean_VM_percent": 10.246571787305712
+    },
+    {
+      "method": "HALF_COEFF",
+      "epoch": 6000,
+      "mean_U_percent": 2.0525888191770947,
+      "mean_VM_percent": 8.868679848296502
+    },
+    {
+      "method": "HALF_NOCOEFF",
+      "epoch": 2000,
+      "mean_U_percent": 2.520952537931286,
+      "mean_VM_percent": 11.694726567339744
+    },
+    {
+      "method": "HALF_NOCOEFF",
+      "epoch": 4000,
+      "mean_U_percent": null,
+      "mean_VM_percent": null
+    },
+    {
+      "method": "HALF_NOCOEFF",
+      "epoch": 6000,
+      "mean_U_percent": null,
+      "mean_VM_percent": null
+    },
+    {
+      "method": "FULL_NOCOEFF",
+      "epoch": 2000,
+      "mean_U_percent": null,
+      "mean_VM_percent": null
+    },
+    {
+      "method": "FULL_NOCOEFF",
+      "epoch": 4000,
+      "mean_U_percent": null,
+      "mean_VM_percent": null
+    },
+    {
+      "method": "FULL_NOCOEFF",
+      "epoch": 6000,
+      "mean_U_percent": null,
+      "mean_VM_percent": null
+    }
+  ],
+  "evaluation_schedule": [
+    2000,
+    4000,
+    6000
+  ],
+  "group_protocol": {
+    "schema": "m01_ts3_nogauge_ablation6000_v1",
+    "sequence": [
+      "HALF",
+      "FULL"
+    ],
+    "dependency": "m01_ts3_half_tension20_6000_v1 completed6000",
+    "coordinator_sha256": "ac9b7a894b5c4860263724a312510871dc265b2f1a70373e63b2d3ff86565a91",
+    "worker_source_sha256": "e266dc955ac90565db0851357832ed440d0d927e17bc812a34aed260282e2655",
+    "admission_source_sha256": "42dbf76cf274d9e413855d00651afdb78fa3e8b9c33f7104ee165910f83d59e6",
+    "variant_protocol_sha256": {
+      "HALF": "6c347ad3cf71538cf6a84245d1f0cdb3a77cd9c5abf2a899a582010a9702f511",
+      "FULL": "08efaf945d6c9fd55c3badd3efc204a106963e7c52fd605851d3b23899fffd8f"
+    },
+    "variants": {
+      "HALF": {
+        "prepared": true,
+        "variant": "HALF",
+        "architecture": {
+          "n_layers": 4,
+          "n_hidden": 128,
+          "n_head": 8,
+          "slice_num": 4,
+          "mlp_ratio": 2,
+          "dropout": 0.0
+        },
+        "parameters": 514100,
+        "input_channels": 50,
+        "removed_features": [
+          "N_mean_tangent_x",
+          "N_mean_tangent_y",
+          "N_mean_tangent_z",
+          "N_mean_axial_x",
+          "N_mean_axial_y",
+          "N_mean_axial_z"
+        ],
+        "untrained_initial": true,
+        "remaining_input_projection_columns_identical": true,
+        "other_retained_tensors_identical": true,
+        "CPU_only": true,
+        "neural_forwards": 0,
+        "optimizer_updates": 0,
+        "CUDA_initialized": false
+      },
+      "FULL": {
+        "prepared": true,
+        "variant": "FULL",
+        "architecture": {
+          "n_layers": 8,
+          "n_hidden": 128,
+          "n_head": 8,
+          "slice_num": 4,
+          "mlp_ratio": 2,
+          "dropout": 0.0
+        },
+        "parameters": 981348,
+        "input_channels": 50,
+        "removed_features": [
+          "N_mean_tangent_x",
+          "N_mean_tangent_y",
+          "N_mean_tangent_z",
+          "N_mean_axial_x",
+          "N_mean_axial_y",
+          "N_mean_axial_z"
+        ],
+        "untrained_initial": true,
+        "remaining_input_projection_columns_identical": true,
+        "other_retained_tensors_identical": true,
+        "CPU_only": true,
+        "neural_forwards": 0,
+        "optimizer_updates": 0,
+        "CUDA_initialized": false
+      }
+    },
+    "created_unix": 1793426135.0229442,
+    "preparation_seconds": 0.2756974697113037
+  },
+  "updated_unix": 1793428958.0626829,
+  "limitations": [
+    "20TRAIN geometries/single seed",
+    "Only six integral coefficient channels26..31 are absent; radial-normal and load inputs remain",
+    "No zero placeholders or substitute channels;50-input inference requires recorded kept-column selection and normalization",
+    "Original FE boundary conditions/nodes/labels and uniform loss unchanged",
+    "Retained untrained weights match by depth, with the input projection columns selected",
+    "Actual best export may differ from exact6000; only saved scheduled metrics are published"
+  ],
+  "publication": {
+    "inference_weights_pending": false,
+    "weights_pending": [],
+    "snapshot_epochs": {
+      "FULL_COEFF": 6000,
+      "HALF_COEFF": 6000,
+      "HALF_NOCOEFF": 2055,
+      "FULL_NOCOEFF": 0
+    }
+  }
+}
