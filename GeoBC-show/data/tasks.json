@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T03:24:39.968363+00:00",
+  "updated": "2026-10-30",
   "tasks": [
     {
       "id": "R01",
@@ -263,7 +263,7 @@
     },
     {
       "id": "M01",
-      "phase": "第1周",
+      "phase": "第3周",
       "title": "Connecting rod checkpoint",
       "due": "2026-10-27",
       "status": "进行中",
@@ -437,14 +437,30 @@
       "phase": "第2周",
       "title": "COPV 小批量试跑",
       "due": "2026-11-01",
-      "status": "进行中",
-      "deliverables": "建议先试跑 20–50 个几何",
+      "status": "已完成",
+      "deliverables": "COPV原生粗网格与三维有限元模型",
       "review": "核对数据字段和样本对应关系，确认后启动批量任务",
       "dependencies": "C03",
       "start": "2026-10-31",
-      "issues": "0018六阶已完成515.21秒并通过原生核验；八阶attempt001在装配前因GPU利用率85%超过授权30%保护中止，RAM/空闲显存通过，无数值发散证据。失败完整保留，队列待资源后只建新attempt002，绝不重算六阶。新增完成场8份/独立GPU几何4个，生产0。",
+      "issues": "COPV模型与实际内压场查看已交付；神经网络训练阶段结果统一在C06展示。高压仅线弹性外推，生产标签0。",
       "page": "C04.html",
       "results": [
+        {
+          "label": "当前训练网格 · 原生/三维检查",
+          "url": "viewers/copv-rod-mesh.html"
+        },
+        {
+          "label": "简化等效壁 · 实际内压场",
+          "url": "viewers/copv-pressure20.html"
+        },
+        {
+          "label": "Sockeye V100 已完成场：对比图片与指标",
+          "url": "C04.html#sockeye-results"
+        },
+        {
+          "label": "Sockeye V100 三维场与实际BC/载荷",
+          "url": "viewers/copv-c04-sockeye.html?case=058_q8&bc=1&loads=0"
+        },
         {
           "label": "20 几何与全部成功 GPU 场",
           "url": "viewers/copv-c04-pilot.html?v=c04-3"
@@ -495,26 +511,53 @@
         }
       ],
       "actual_start": "2026-10-26",
-      "completed": "2026-10-26",
-      "production_release": false
+      "completed": "2026-10-30",
+      "production_release": false,
+      "sockeye_recompute_snapshot": {
+        "created_utc": "2026-10-28T10:58:22Z",
+        "fields": [
+          "058_q6",
+          "058_q8",
+          "063_q6",
+          "063_q8",
+          "081_q6",
+          "081_q8",
+          "078_q6",
+          "078_q8",
+          "085_q8",
+          "092_q8"
+        ],
+        "all_computations_and_analysis_complete": true,
+        "production_eligible": false
+      },
+      "sockeye_recompute_status": "completed_accuracy_hold"
     },
     {
       "id": "C05",
       "phase": "第2周",
       "title": "COPV 批量数据",
       "due": "2026-11-03",
-      "status": "未开始",
+      "status": "进行中",
       "deliverables": "初期目标约 1000 个有效样本",
       "review": "汇总有效/失败数量，保留可复现配置和完整场数据",
       "dependencies": "C04",
       "start": "2026-11-01",
-      "issues": "",
+      "issues": "已冻结1000个不同几何与压力的设计，800/100/100划分；每例48,977原生节点、11,520个Quad9。先GPU求解验证，再以4个独立GPU分片生成真实FE标签。",
       "page": "C05.html",
-      "results": []
+      "results": [
+        {
+          "label": "1000例几何与采样设计",
+          "url": "assets/copv-supervised1000-v1/dataset_design.png"
+        },
+        {
+          "label": "设计与800/100/100划分",
+          "url": "assets/copv-supervised1000-v1/experiment_spec.json"
+        }
+      ]
     },
     {
       "id": "M02",
-      "phase": "第2周",
+      "phase": "第3周",
       "title": "COPV 数据 checkpoint",
       "due": "2026-11-03",
       "status": "未开始",
@@ -528,17 +571,46 @@
     },
     {
       "id": "C06",
-      "phase": "第3周",
-      "title": "COPV 两模型 overfitting",
+      "phase": "第2周",
+      "title": "COPV 四模型训练与对比",
       "due": "2026-11-06",
-      "status": "未开始",
-      "deliverables": "TS3 / MGN 曲线、误差图与 checkpoint",
-      "review": "固定同一小样本子集，记录两模型拟合表现与失败现象",
+      "status": "进行中",
+      "deliverables": "MGN / TS3 / FNO / PointNet编码FNO的曲线、平均/最差误差与checkpoint",
+      "review": "20例TRAIN结果已归档；1000例使用同一800/100/100划分，验证集选模型、测试集独立评估。",
       "dependencies": "M02、R06",
       "start": "2026-11-04",
-      "issues": "",
+      "issues": "已发布MGN、TS3、FNO和PointNet编码FNO的20例完成结果；四种方法各完成6000次实际更新并通过独立CPU审核。1000例实验仍在进行中，C06保持进行中。 这部分是同一几何、20个压力幅值的TRAIN拟合，四种方法均未达到全20例位移与节点VM各≤1%。平均/最差为逐例相对L2的算术平均/最大值；TS3 p01的负VM保留原值。",
       "page": "C06.html",
-      "results": []
+      "results": [
+        {
+          "label": "已完成20例四模型结果 · 平均/最差、曲线和场对照",
+          "url": "viewers/copv-train20.html"
+        },
+        {
+          "label": "四模型平均/最差CSV",
+          "url": "assets/copv-train20-v1/summary.csv"
+        },
+        {
+          "label": "全部80条逐例误差CSV",
+          "url": "assets/copv-train20-v1/per_case.csv"
+        },
+        {
+          "label": "四模型对比图PDF",
+          "url": "assets/copv-train20-v1/comparison.pdf"
+        },
+        {
+          "label": "完整实际训练曲线PDF",
+          "url": "assets/copv-train20-v1/curves.pdf"
+        },
+        {
+          "label": "指标定义与审核来源JSON",
+          "url": "assets/copv-train20-v1/summary.json"
+        },
+        {
+          "label": "进行中的1000例设计",
+          "url": "assets/copv-supervised1000-v1/dataset_design.png"
+        }
+      ]
     },
     {
       "id": "E01",
