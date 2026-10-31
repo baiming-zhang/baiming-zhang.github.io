@@ -1,0 +1,117 @@
+{
+  "models": [
+    {
+      "method": "mgn",
+      "label": "MGN",
+      "body_parameters": 985540,
+      "encoder_parameters": 0,
+      "total_parameters": 985540,
+      "actual_updates": 6000,
+      "case_count": 20,
+      "mean_U_relative_L2": 0.007932761618726119,
+      "max_U_relative_L2": 0.014188152722056322,
+      "mean_VM_relative_L2": 0.011013339126545887,
+      "max_VM_relative_L2": 0.0152438708203991,
+      "negative_VM_cases": 0,
+      "minimum_pred_VM_MPa": 4.939946482705264,
+      "status": "budget_exhausted_report_actual_metrics_not_automatic_overfit_pass",
+      "all_cases_each_U_VM_at_most_one_percent": false,
+      "independent_CPU_verification_passed": true
+    },
+    {
+      "method": "ts3",
+      "label": "TS3",
+      "body_parameters": 982884,
+      "encoder_parameters": 0,
+      "total_parameters": 982884,
+      "actual_updates": 6000,
+      "case_count": 20,
+      "mean_U_relative_L2": 0.01148368508373529,
+      "max_U_relative_L2": 0.021820684400912962,
+      "mean_VM_relative_L2": 0.026594206919571504,
+      "max_VM_relative_L2": 0.04495335113246245,
+      "negative_VM_cases": 1,
+      "minimum_pred_VM_MPa": -0.060037448414722396,
+      "status": "budget_exhausted_report_actual_metrics_not_automatic_overfit_pass",
+      "all_cases_each_U_VM_at_most_one_percent": false,
+      "independent_CPU_verification_passed": true
+    },
+    {
+      "method": "fno",
+      "label": "FNO",
+      "body_parameters": 984668,
+      "encoder_parameters": 0,
+      "total_parameters": 984668,
+      "actual_updates": 6000,
+      "case_count": 20,
+      "mean_U_relative_L2": 0.013922768742252147,
+      "max_U_relative_L2": 0.021201569791569355,
+      "mean_VM_relative_L2": 0.011277765015258808,
+      "max_VM_relative_L2": 0.019576260854228075,
+      "negative_VM_cases": 0,
+      "minimum_pred_VM_MPa": 0.649922049450855,
+      "status": "budget_exhausted_report_actual_metrics_not_automatic_overfit_pass",
+      "all_cases_each_U_VM_at_most_one_percent": false,
+      "independent_CPU_verification_passed": true
+    },
+    {
+      "method": "pointnet_fno",
+      "label": "PointNet → FNO",
+      "body_parameters": 984668,
+      "encoder_parameters": 81760,
+      "total_parameters": 1066428,
+      "actual_updates": 6000,
+      "case_count": 20,
+      "mean_U_relative_L2": 0.008506464234603205,
+      "max_U_relative_L2": 0.021635927179636603,
+      "mean_VM_relative_L2": 0.007039652351540612,
+      "max_VM_relative_L2": 0.01219251735465048,
+      "negative_VM_cases": 0,
+      "minimum_pred_VM_MPa": 3.865081304081987,
+      "status": "budget_exhausted_report_actual_metrics_not_automatic_overfit_pass",
+      "all_cases_each_U_VM_at_most_one_percent": false,
+      "independent_CPU_verification_passed": true
+    }
+  ],
+  "TRAIN_only": true,
+  "geometry_count": 1,
+  "pressures_MPa": [
+    3.5,
+    70
+  ],
+  "native_nodes": 48977,
+  "Quad9_cells": 11520,
+  "directed_edges": 190112,
+  "precision": "FP64; FFT complex128; AMP/TF32 disabled",
+  "averaging": "Arithmetic mean of 20 per-case relative L2 values; worst is maximum over those 20 cases",
+  "U_definition": "Full three-component displacement vector relative L2",
+  "VM_definition": "Adjacent original-element volume-weighted nodal recovery from each element 9-GP maximum VM",
+  "production_eligible": false,
+  "generalization_claim": false,
+  "sources": {
+    "mgn": {
+      "branch": "mgn_accelerated_training_v1",
+      "verification_SHA256": "13679f14367a2ff2b284899668921f045f74a39aab7210b873f2280ade0459e0",
+      "delivery_SHA256": "79065b8333e4e11d501fabfbc13a950fa2967f2b509f9f55d760cd74ec07b628",
+      "actual_curve_SHA256": "b35b3ae740a806629467e3d1e4de972936f9a77d3e17b73bc5f24dfc39013a9c"
+    },
+    "ts3": {
+      "branch": "overfit_pressure20_rod_scale_fp64_v1",
+      "verification_SHA256": "a57f8e91a77e32322ac6f5dcd3879e586ea6c073452c6e4cc2c733d8150c4b62",
+      "delivery_SHA256": "e73cdf48800f0828f1d39b612e4db63f9e1dd300e1288a8b00a3b70a18fc9e45",
+      "actual_curve_SHA256": "6ec69fed575d9b6eb813dba2a250d639b94751860b07fb9b535df25beef9d351"
+    },
+    "fno": {
+      "branch": "overfit_pressure20_fno_fp64_v3_native_fixture",
+      "verification_SHA256": "74a2578a46f984c1f0e92062f605e556ffa5c42e4b3e49d1ee6f5ccb1b91416c",
+      "delivery_SHA256": "87de3e284d93d8fbfe1c7cd50f0b08454bdc5bda9b6d11acbabb190fcd2edd97",
+      "actual_curve_SHA256": "38e59a4c3b15c6ffeeb3ab20084373f55c4c4ce48ed543b56a3805388ff284fc"
+    },
+    "pointnet_fno": {
+      "branch": "overfit_pressure20_pointnet_fno_fp64_v1",
+      "verification_SHA256": "d6b42e47c6a86cc607328436206f875cf5e01bf1d1d22c0461b795cfdddc9815",
+      "delivery_SHA256": "a55ec220828994f79ff1d4c49f7ccfe950d3db47082dd8221df287a39e499d20",
+      "actual_curve_SHA256": "a0e10a64084e95614708783ae5fcf6e3549596ef80553a9ec75d40f977a2a229"
+    }
+  }
+}
