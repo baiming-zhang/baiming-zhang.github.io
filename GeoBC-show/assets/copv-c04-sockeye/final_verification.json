@@ -1,0 +1,115 @@
+{
+  "verified_utc": "2026-10-28T10:55:11Z",
+  "computations_complete": true,
+  "all_10_native_checks_passed": true,
+  "all_10_raw_GP_file_sizes_match_FP64_shapes": true,
+  "all_saved_evidence_SHA256_verified": true,
+  "analysis_job": "13755466",
+  "analysis_exit": "COMPLETED 0:0",
+  "fields": [
+    {
+      "id": "058_q6",
+      "max_U_mm": 0.40932454477394825,
+      "true_relative_residual": 1.0067186495592142e-10,
+      "production_eligible": false
+    },
+    {
+      "id": "058_q8",
+      "max_U_mm": 0.40932452032178385,
+      "true_relative_residual": 1.0109604739679419e-10,
+      "production_eligible": false
+    },
+    {
+      "id": "063_q6",
+      "max_U_mm": 0.4620089000648255,
+      "true_relative_residual": 1.01288047163325e-10,
+      "production_eligible": false
+    },
+    {
+      "id": "063_q8",
+      "max_U_mm": 0.46200881533531296,
+      "true_relative_residual": 1.0090324140258726e-10,
+      "production_eligible": false
+    },
+    {
+      "id": "078_q6",
+      "max_U_mm": 0.41917070840812043,
+      "true_relative_residual": 1.0001715544501787e-10,
+      "production_eligible": false
+    },
+    {
+      "id": "078_q8",
+      "max_U_mm": 0.41917069344978103,
+      "true_relative_residual": 1.0039712048445567e-10,
+      "production_eligible": false
+    },
+    {
+      "id": "081_q6",
+      "max_U_mm": 0.45286032724639924,
+      "true_relative_residual": 1.0059728259027e-10,
+      "production_eligible": false
+    },
+    {
+      "id": "081_q8",
+      "max_U_mm": 0.45286030241983366,
+      "true_relative_residual": 1.0093282940620126e-10,
+      "production_eligible": false
+    },
+    {
+      "id": "085_q8",
+      "max_U_mm": 0.409322188223443,
+      "true_relative_residual": 9.95485855223735e-11,
+      "production_eligible": false
+    },
+    {
+      "id": "092_q8",
+      "max_U_mm": 0.40932727239771244,
+      "true_relative_residual": 1.0067702185108701e-10,
+      "production_eligible": false
+    }
+  ],
+  "quadrature": [
+    {
+      "mesh": "058",
+      "max_material_stress_volume_relative_L2": 3.9215136582996394e-05,
+      "U_nodal_relative_L2": 1.1279067659769847e-07
+    },
+    {
+      "mesh": "063",
+      "max_material_stress_volume_relative_L2": 3.5840154860857396e-05,
+      "U_nodal_relative_L2": 2.623275774300424e-07
+    },
+    {
+      "mesh": "081",
+      "max_material_stress_volume_relative_L2": 4.164128651364886e-05,
+      "U_nodal_relative_L2": 1.4274432869671006e-07
+    },
+    {
+      "mesh": "078",
+      "max_material_stress_volume_relative_L2": 3.453566758621322e-05,
+      "U_nodal_relative_L2": 1.6364754241059326e-07
+    }
+  ],
+  "mesh_sensitivity": [
+    {
+      "variant": "085",
+      "common_probes": 235,
+      "worst_material_part": 10,
+      "worst_stress_sample_relative_L2": 0.5180009443955278,
+      "energy_relative_difference": 7.334353985921638e-06,
+      "local_stress_converged": false
+    },
+    {
+      "variant": "092",
+      "common_probes": 235,
+      "worst_material_part": 10,
+      "worst_stress_sample_relative_L2": 0.7649967148242193,
+      "energy_relative_difference": 2.4592737390971564e-06,
+      "local_stress_converged": false
+    }
+  ],
+  "production_eligible": false,
+  "production_labels": 0,
+  "coarse_FE_runs": 0,
+  "scope": "Completed recomputation and evidence verification; relative differences are not errors to known truth. Local stress mesh convergence remains unresolved."
+}
