@@ -1,0 +1,195 @@
+{
+  "schema": "COPV-native-axisymmetric-mesh-inspector-v1",
+  "meshes": [
+    {
+      "id": "R8",
+      "label": "当前粗网格",
+      "nodes": 48977,
+      "cells": 11520,
+      "radial_cells": 8,
+      "meridian_cells": 1440,
+      "file": "R8.bin.gz",
+      "bytes": 691723,
+      "sha256": "b26a6709c69e1db743a3e79cbbabd94ef99e040301ef2a977b4a515bae4a51bc",
+      "arrays": {
+        "xy": {
+          "offset": 0,
+          "shape": [
+            48977,
+            2
+          ],
+          "dtype": "<f8"
+        },
+        "cells": {
+          "offset": 783632,
+          "shape": [
+            11520,
+            9
+          ],
+          "dtype": "<u4"
+        },
+        "boundary": {
+          "offset": 1198352,
+          "shape": [
+            2896,
+            3
+          ],
+          "dtype": "<u4"
+        },
+        "node_ij": {
+          "offset": 1233104,
+          "shape": [
+            48977,
+            2
+          ],
+          "dtype": "<u4"
+        },
+        "boundary_nodes": {
+          "offset": 1624920,
+          "shape": [
+            48977
+          ],
+          "dtype": "|u1"
+        }
+      },
+      "original_mesh_sha256": "d34ad1516cfedd8ecd3b247ce273dbf1ae691a44d5dd43a0be9f117091916cff",
+      "coordinate_payload": "Lossless native FP64 r/z, all original nodes and Quad9 connectivity",
+      "webgl_float32_max_coordinate_rounding_mm": 1.5255331334174116e-05,
+      "native_boundary_quadratic_edges": 2896,
+      "all_81_point_J_positive": true
+    },
+    {
+      "id": "R8_alt",
+      "label": "粗网格 · 不同轴向分布",
+      "nodes": 48977,
+      "cells": 11520,
+      "radial_cells": 8,
+      "meridian_cells": 1440,
+      "file": "R8_alt.bin.gz",
+      "bytes": 694289,
+      "sha256": "389f91a2b1ca0cf44cac6b72e043a71e26a8b51f5c78c070f0522641dd3add10",
+      "arrays": {
+        "xy": {
+          "offset": 0,
+          "shape": [
+            48977,
+            2
+          ],
+          "dtype": "<f8"
+        },
+        "cells": {
+          "offset": 783632,
+          "shape": [
+            11520,
+            9
+          ],
+          "dtype": "<u4"
+        },
+        "boundary": {
+          "offset": 1198352,
+          "shape": [
+            2896,
+            3
+          ],
+          "dtype": "<u4"
+        },
+        "node_ij": {
+          "offset": 1233104,
+          "shape": [
+            48977,
+            2
+          ],
+          "dtype": "<u4"
+        },
+        "boundary_nodes": {
+          "offset": 1624920,
+          "shape": [
+            48977
+          ],
+          "dtype": "|u1"
+        }
+      },
+      "original_mesh_sha256": "a79208e65443c1b9bb3cd919d6849c0c75dd1b4bd9a93f6469eadf2033463957",
+      "coordinate_payload": "Lossless native FP64 r/z, all original nodes and Quad9 connectivity",
+      "webgl_float32_max_coordinate_rounding_mm": 1.5227252674776537e-05,
+      "native_boundary_quadratic_edges": 2896,
+      "all_81_point_J_positive": true
+    },
+    {
+      "id": "E",
+      "label": "原 E 细网格",
+      "nodes": 279457,
+      "cells": 69120,
+      "radial_cells": 48,
+      "meridian_cells": 1440,
+      "file": "E.bin.gz",
+      "bytes": 3948447,
+      "sha256": "2c3ee601911a82ba1ba78643da543b29494f597ca2ee6ef94b78c33f1af951b1",
+      "arrays": {
+        "xy": {
+          "offset": 0,
+          "shape": [
+            279457,
+            2
+          ],
+          "dtype": "<f8"
+        },
+        "cells": {
+          "offset": 4471312,
+          "shape": [
+            69120,
+            9
+          ],
+          "dtype": "<u4"
+        },
+        "boundary": {
+          "offset": 6959632,
+          "shape": [
+            2976,
+            3
+          ],
+          "dtype": "<u4"
+        },
+        "node_ij": {
+          "offset": 6995344,
+          "shape": [
+            279457,
+            2
+          ],
+          "dtype": "<u4"
+        },
+        "boundary_nodes": {
+          "offset": 9231000,
+          "shape": [
+            279457
+          ],
+          "dtype": "|u1"
+        }
+      },
+      "original_mesh_sha256": "f3d3d9df76f305ed53d0d1bedf2bb3396f6e92a5b5bbfdd6f3858ed915f83033",
+      "coordinate_payload": "Lossless native FP64 r/z, all original nodes and Quad9 connectivity",
+      "webgl_float32_max_coordinate_rounding_mm": 1.5256603944635572e-05,
+      "native_boundary_quadratic_edges": 2976,
+      "all_81_point_J_positive": true
+    }
+  ],
+  "default_mesh": "R8",
+  "default_compare": "E",
+  "scope": "Same simplified homogeneous equivalent orthotropic wall. Native 2D meridian FE mesh; 3D is revolution for display only.",
+  "native_node_sampling": false,
+  "geometry_or_physics_changed_by_viewer": false,
+  "display": {
+    "angular_sectors": 48,
+    "angular_lines_are_display_only": true,
+    "quadratic_edge": "Corner-midside-corner segments use the real native midside point",
+    "cut_faces": "Original Quad9 cells, tessellated only for display; mesh overlay contains only actual cell perimeter, no triangle diagonals"
+  },
+  "comparison": {
+    "maximum_frozen_point_tensor_change": 0.0036149675753850193,
+    "maximum_all_GP_tensor_change": 0.008801625602721101,
+    "maximum_regional_VM_peak_change": 0.00452589505751444,
+    "stress_gate": 0.01,
+    "not_true_solution_error": true
+  },
+  "production_eligible": false
+}

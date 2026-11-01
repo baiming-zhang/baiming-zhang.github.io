@@ -1,0 +1,166 @@
+{
+  "schema": "homogeneous-orthotropic-wall-v1",
+  "user_authorization": "Uniform equivalent orthotropic wall; establish mesh convergence first",
+  "wall_thickness_mm": 4,
+  "frame": [
+    "negative meridian tangent",
+    "circumferential",
+    "outward wall normal"
+  ],
+  "Voigt_order": [
+    "11",
+    "22",
+    "33",
+    "23",
+    "13",
+    "12"
+  ],
+  "strain_convention": "engineering shear",
+  "thickness_fractions": [
+    0.25,
+    0.1875,
+    0.1875,
+    0.1875,
+    0.1875
+  ],
+  "original_angles_deg": [
+    0,
+    55,
+    -55,
+    -55,
+    55
+  ],
+  "C_MPa": [
+    [
+      41530.40387136299,
+      28886.287625652396,
+      8501.888556444415,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      28886.287625652396,
+      68525.0158088365,
+      8525.632158181457,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      8501.888556444415,
+      8525.632158181457,
+      17425.40859033514,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      6305.051729489477,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      5450.076974321801,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      26737.118668856456
+    ]
+  ],
+  "engineering": {
+    "E1_MPa": 27881.615587482203,
+    "E2_MPa": 47998.25254380397,
+    "E3_MPa": 15544.061786899094,
+    "G23_MPa": 6305.051729489477,
+    "G13_MPa": 5450.076974321801,
+    "G12_MPa": 26737.118668856452,
+    "nu12": 0.38422974327234805,
+    "nu13": 0.29991188292540155,
+    "nu23": 0.16654066773641643
+  },
+  "method": "3D quasistatic laminate homogenization: continuous in-plane strains and through-thickness tractions, averaged normal strains and in-plane stresses",
+  "checks": {
+    "KKT_stiffness_relative": 1.9093887188464075e-16,
+    "KKT_energy_relative": 2.8803335819907286e-16,
+    "compatibility_max": 5.551115123125783e-16,
+    "traction_continuity_MPa": 1.0913936421275139e-11,
+    "balanced_coupling_roundoff_MPa": 0.0,
+    "min_eigenvalue_MPa": 5450.076974321801,
+    "Voigt_upper_min_eigenvalue_MPa": -3.686929363808468e-12,
+    "Reuss_lower_min_eigenvalue_MPa": 0.0,
+    "identical_layer_recovery_relative": 1.2350804049627332e-16
+  },
+  "original_material_provenance": {
+    "source": "Actual completed 058 q8 executed material contract",
+    "executed_contract_path": "Local frozen 058_q8/executed_contract.json; original retained in audit",
+    "executed_contract_sha256": "eabf935be75dfb55babcebdace20846258a1b8bc49a46f85db52e80f7313f274",
+    "constants_MPa": {
+      "1": {
+        "E1": 69000.0,
+        "E2": 69000.0,
+        "E3": 69000.0,
+        "G12": 25939.84962406015,
+        "G13": 25939.84962406015,
+        "G23": 25939.84962406015,
+        "nu12": 0.33,
+        "nu13": 0.33,
+        "nu23": 0.33
+      },
+      "2": {
+        "E1": 114452.9710665888,
+        "E2": 10342.135939752,
+        "E3": 10342.135939752,
+        "G12": 5998.43884505616,
+        "G13": 5998.43884505616,
+        "G23": 3792.1165112424,
+        "nu12": 0.33,
+        "nu13": 0.33,
+        "nu23": 0.47
+      }
+    },
+    "source_material_records": {
+      "aluminum": {
+        "grade": "Al 6061-T6",
+        "model": "isotropic_linear",
+        "E_MPa": 69000.0,
+        "nu": 0.33,
+        "source": "configs/copv_material_candidates.json -> elastic_control_candidate.liner; NASA 20180003005 Table 4"
+      },
+      "carbon": {
+        "grade": "AS4/3501-6 numerical lamina benchmark",
+        "model": "orthotropic_linear_3D",
+        "E1": 114452.9710665888,
+        "E2": 10342.135939752,
+        "E3": 10342.135939752,
+        "G12": 5998.43884505616,
+        "G13": 5998.43884505616,
+        "G23": 3792.1165112424,
+        "nu12": 0.33,
+        "nu13": 0.33,
+        "nu23": 0.47,
+        "source": "configs/copv_material_candidates.json -> elastic_control_candidate.overwrap; NASA-TM-109108 Table 1, upstream citation not independently retrieved"
+      }
+    },
+    "original_reference_PDFs_rechecked_this_run": false,
+    "scope": "Retained numerical elastic assumptions, no manufacturing certification"
+  },
+  "scope": "New homogeneous continuum. Equivalent wall stresses; not constituent-ply/interlaminar stresses, no detailed C04 port validation, no manufacturing certification.",
+  "production_eligible": false,
+  "references": [
+    "https://journals.sagepub.com/doi/10.1177/002199830003400605",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0263822314000403"
+  ]
+}

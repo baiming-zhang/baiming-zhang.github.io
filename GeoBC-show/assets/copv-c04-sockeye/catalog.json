@@ -1,0 +1,384 @@
+{
+  "snapshot": {
+    "created_utc": "2026-10-28T10:58:22Z",
+    "fields": [
+      "058_q6",
+      "058_q8",
+      "063_q6",
+      "063_q8",
+      "081_q6",
+      "081_q8",
+      "078_q6",
+      "078_q8",
+      "085_q8",
+      "092_q8"
+    ],
+    "all_computations_and_analysis_complete": true,
+    "production_eligible": false
+  },
+  "fields": [
+    {
+      "id": "058_q6",
+      "mesh": "058",
+      "q": 6,
+      "case_id": "copv_c04_0000",
+      "nodes": 3315443,
+      "cells": 2150456,
+      "max_U_mm": 0.40932454477394825,
+      "strain_energy_Nmm": 8112.563718688689,
+      "total_seconds": 2239.695572932018,
+      "true_relative_residual": 1.0067186495592142e-10,
+      "native_passed": true
+    },
+    {
+      "id": "058_q8",
+      "mesh": "058",
+      "q": 8,
+      "case_id": "copv_c04_0000",
+      "nodes": 3315443,
+      "cells": 2150456,
+      "max_U_mm": 0.40932452032178385,
+      "strain_energy_Nmm": 8112.563546964169,
+      "total_seconds": 3011.990011746995,
+      "true_relative_residual": 1.0109604739679419e-10,
+      "native_passed": true
+    },
+    {
+      "id": "063_q6",
+      "mesh": "063",
+      "q": 6,
+      "case_id": "copv_c04_0011",
+      "nodes": 3314113,
+      "cells": 2149318,
+      "max_U_mm": 0.4620089000648255,
+      "strain_energy_Nmm": 8841.487489484542,
+      "total_seconds": 2530.550895749009,
+      "true_relative_residual": 1.01288047163325e-10,
+      "native_passed": true
+    },
+    {
+      "id": "063_q8",
+      "mesh": "063",
+      "q": 8,
+      "case_id": "copv_c04_0011",
+      "nodes": 3314113,
+      "cells": 2149318,
+      "max_U_mm": 0.46200881533531296,
+      "strain_energy_Nmm": 8841.48676469208,
+      "total_seconds": 2918.0933206100017,
+      "true_relative_residual": 1.0090324140258726e-10,
+      "native_passed": true
+    },
+    {
+      "id": "081_q6",
+      "mesh": "081",
+      "q": 6,
+      "case_id": "copv_c04_0002",
+      "nodes": 3194952,
+      "cells": 2071970,
+      "max_U_mm": 0.45286032724639924,
+      "strain_energy_Nmm": 10836.23651605178,
+      "total_seconds": 2041.0635995019693,
+      "true_relative_residual": 1.0059728259027e-10,
+      "native_passed": true
+    },
+    {
+      "id": "081_q8",
+      "mesh": "081",
+      "q": 8,
+      "case_id": "copv_c04_0002",
+      "nodes": 3194952,
+      "cells": 2071970,
+      "max_U_mm": 0.45286030241983366,
+      "strain_energy_Nmm": 10836.23632794385,
+      "total_seconds": 2640.1123034829507,
+      "true_relative_residual": 1.0093282940620126e-10,
+      "native_passed": true
+    },
+    {
+      "id": "078_q6",
+      "mesh": "078",
+      "q": 6,
+      "case_id": "copv_c04_0018",
+      "nodes": 3085492,
+      "cells": 2007522,
+      "max_U_mm": 0.41917070840812043,
+      "strain_energy_Nmm": 8635.183316664079,
+      "total_seconds": 1787.9384291460738,
+      "true_relative_residual": 1.0001715544501787e-10,
+      "native_passed": true
+    },
+    {
+      "id": "078_q8",
+      "mesh": "078",
+      "q": 8,
+      "case_id": "copv_c04_0018",
+      "nodes": 3085492,
+      "cells": 2007522,
+      "max_U_mm": 0.41917069344978103,
+      "strain_energy_Nmm": 8635.18325459243,
+      "total_seconds": 1970.655815830105,
+      "true_relative_residual": 1.0039712048445567e-10,
+      "native_passed": true
+    },
+    {
+      "id": "085_q8",
+      "mesh": "085",
+      "q": 8,
+      "case_id": "copv_c04_0000",
+      "nodes": 3030014,
+      "cells": 1965041,
+      "max_U_mm": 0.409322188223443,
+      "strain_energy_Nmm": 8112.504046551383,
+      "total_seconds": 2034.3362597069936,
+      "true_relative_residual": 9.95485855223735e-11,
+      "native_passed": true
+    },
+    {
+      "id": "092_q8",
+      "mesh": "092",
+      "q": 8,
+      "case_id": "copv_c04_0000",
+      "nodes": 3292808,
+      "cells": 2116924,
+      "max_U_mm": 0.40932727239771244,
+      "strain_energy_Nmm": 8112.583497978658,
+      "total_seconds": 2391.780218650005,
+      "true_relative_residual": 1.0067702185108701e-10,
+      "native_passed": true
+    }
+  ],
+  "common_ranges": {
+    "U_mm": 0.4620089000648255,
+    "fiber_MPa": 96.55189870426655,
+    "metal_VM_MPa": 111.42410955348245
+  },
+  "integration_comparisons": {
+    "reference": "q8, same mesh; differences are not errors to exact solution",
+    "pairs": [
+      {
+        "mesh": "058",
+        "U_nodal_relative_L2": 1.1279067659769847e-07,
+        "energy_relative_difference": 2.116772565640511e-08,
+        "parts": {
+          "1": {
+            "stress_xyz_volume_L2": 2.318776577533717e-06,
+            "stress_local_volume_L2": 2.318776577533717e-06
+          },
+          "2": {
+            "stress_xyz_volume_L2": 3.9215136582996394e-05,
+            "stress_local_volume_L2": 3.9215136582996394e-05
+          },
+          "3": {
+            "stress_xyz_volume_L2": 1.814575465352181e-05,
+            "stress_local_volume_L2": 1.814575465352178e-05
+          },
+          "4": {
+            "stress_xyz_volume_L2": 2.3930698259620822e-05,
+            "stress_local_volume_L2": 2.393069825962082e-05
+          },
+          "5": {
+            "stress_xyz_volume_L2": 2.7244301182620018e-05,
+            "stress_local_volume_L2": 2.72443011826201e-05
+          },
+          "6": {
+            "stress_xyz_volume_L2": 3.56295551892327e-05,
+            "stress_local_volume_L2": 3.562955518923272e-05
+          },
+          "7": {
+            "stress_xyz_volume_L2": 1.5260188701057082e-05,
+            "stress_local_volume_L2": 1.5260188701057048e-05
+          },
+          "8": {
+            "stress_xyz_volume_L2": 1.5719857447118255e-05,
+            "stress_local_volume_L2": 1.5719857447118234e-05
+          },
+          "9": {
+            "stress_xyz_volume_L2": 3.558052010143723e-06,
+            "stress_local_volume_L2": 3.558052010143723e-06
+          },
+          "10": {
+            "stress_xyz_volume_L2": 3.560357582019538e-06,
+            "stress_local_volume_L2": 3.560357582019538e-06
+          },
+          "14": {
+            "stress_xyz_volume_L2": 7.419533373835761e-06,
+            "stress_local_volume_L2": 7.419533373835761e-06
+          },
+          "18": {
+            "stress_xyz_volume_L2": 1.457152955242085e-05,
+            "stress_local_volume_L2": 1.457152955242085e-05
+          }
+        }
+      },
+      {
+        "mesh": "063",
+        "U_nodal_relative_L2": 2.623275774300424e-07,
+        "energy_relative_difference": 8.197631027094549e-08,
+        "parts": {
+          "1": {
+            "stress_xyz_volume_L2": 2.4402170743838832e-06,
+            "stress_local_volume_L2": 2.4402170743838832e-06
+          },
+          "2": {
+            "stress_xyz_volume_L2": 3.5583027788560855e-05,
+            "stress_local_volume_L2": 3.5583027788560855e-05
+          },
+          "3": {
+            "stress_xyz_volume_L2": 1.7488435023038262e-05,
+            "stress_local_volume_L2": 1.7488435023038255e-05
+          },
+          "4": {
+            "stress_xyz_volume_L2": 2.383569916476115e-05,
+            "stress_local_volume_L2": 2.3835699164761173e-05
+          },
+          "5": {
+            "stress_xyz_volume_L2": 2.721126283367181e-05,
+            "stress_local_volume_L2": 2.721126283367191e-05
+          },
+          "6": {
+            "stress_xyz_volume_L2": 3.5840154860857396e-05,
+            "stress_local_volume_L2": 3.584015486085745e-05
+          },
+          "7": {
+            "stress_xyz_volume_L2": 1.5810078800956977e-05,
+            "stress_local_volume_L2": 1.5810078800956723e-05
+          },
+          "8": {
+            "stress_xyz_volume_L2": 1.5355173969492642e-05,
+            "stress_local_volume_L2": 1.5355173969492442e-05
+          },
+          "9": {
+            "stress_xyz_volume_L2": 4.172231756441142e-06,
+            "stress_local_volume_L2": 4.172231756441142e-06
+          },
+          "10": {
+            "stress_xyz_volume_L2": 4.174812824519627e-06,
+            "stress_local_volume_L2": 4.174812824519627e-06
+          },
+          "14": {
+            "stress_xyz_volume_L2": 2.009740249918821e-06,
+            "stress_local_volume_L2": 2.009740249918821e-06
+          },
+          "18": {
+            "stress_xyz_volume_L2": 9.088866752409974e-06,
+            "stress_local_volume_L2": 9.088866752409974e-06
+          }
+        }
+      },
+      {
+        "mesh": "081",
+        "U_nodal_relative_L2": 1.4274432869671006e-07,
+        "energy_relative_difference": 1.7359157185532274e-08,
+        "parts": {
+          "1": {
+            "stress_xyz_volume_L2": 2.2881166452101047e-06,
+            "stress_local_volume_L2": 2.2881166452101047e-06
+          },
+          "2": {
+            "stress_xyz_volume_L2": 4.164128651364886e-05,
+            "stress_local_volume_L2": 4.164128651364886e-05
+          },
+          "3": {
+            "stress_xyz_volume_L2": 1.8751078002443572e-05,
+            "stress_local_volume_L2": 1.8751078002443582e-05
+          },
+          "4": {
+            "stress_xyz_volume_L2": 2.44715376608816e-05,
+            "stress_local_volume_L2": 2.4471537660881572e-05
+          },
+          "5": {
+            "stress_xyz_volume_L2": 2.7551067693473756e-05,
+            "stress_local_volume_L2": 2.7551067693473884e-05
+          },
+          "6": {
+            "stress_xyz_volume_L2": 3.4906887861830776e-05,
+            "stress_local_volume_L2": 3.490688786183082e-05
+          },
+          "7": {
+            "stress_xyz_volume_L2": 1.8451086047506878e-05,
+            "stress_local_volume_L2": 1.8451086047507126e-05
+          },
+          "8": {
+            "stress_xyz_volume_L2": 1.7767604013818458e-05,
+            "stress_local_volume_L2": 1.7767604013818584e-05
+          },
+          "9": {
+            "stress_xyz_volume_L2": 4.4476738121815455e-06,
+            "stress_local_volume_L2": 4.4476738121815455e-06
+          },
+          "10": {
+            "stress_xyz_volume_L2": 4.587234936973554e-06,
+            "stress_local_volume_L2": 4.587234936973554e-06
+          },
+          "14": {
+            "stress_xyz_volume_L2": 2.6592613938056425e-07,
+            "stress_local_volume_L2": 2.6592613938056425e-07
+          },
+          "18": {
+            "stress_xyz_volume_L2": 6.342998241176621e-07,
+            "stress_local_volume_L2": 6.342998241176621e-07
+          }
+        }
+      },
+      {
+        "mesh": "078",
+        "U_nodal_relative_L2": 1.6364754241059326e-07,
+        "energy_relative_difference": 7.188226042677006e-09,
+        "parts": {
+          "1": {
+            "stress_xyz_volume_L2": 2.128998206104685e-06,
+            "stress_local_volume_L2": 2.128998206104685e-06
+          },
+          "2": {
+            "stress_xyz_volume_L2": 3.361141029758872e-05,
+            "stress_local_volume_L2": 3.361141029758872e-05
+          },
+          "3": {
+            "stress_xyz_volume_L2": 1.948130138597422e-05,
+            "stress_local_volume_L2": 1.948130138597423e-05
+          },
+          "4": {
+            "stress_xyz_volume_L2": 2.4043282573257965e-05,
+            "stress_local_volume_L2": 2.404328257325792e-05
+          },
+          "5": {
+            "stress_xyz_volume_L2": 2.6735138499805158e-05,
+            "stress_local_volume_L2": 2.67351384998051e-05
+          },
+          "6": {
+            "stress_xyz_volume_L2": 3.453566758621322e-05,
+            "stress_local_volume_L2": 3.4535667586213314e-05
+          },
+          "7": {
+            "stress_xyz_volume_L2": 1.5106740911620692e-05,
+            "stress_local_volume_L2": 1.5106740911620751e-05
+          },
+          "8": {
+            "stress_xyz_volume_L2": 1.5201907529659077e-05,
+            "stress_local_volume_L2": 1.5201907529659007e-05
+          },
+          "9": {
+            "stress_xyz_volume_L2": 3.699655650569285e-06,
+            "stress_local_volume_L2": 3.699655650569285e-06
+          },
+          "10": {
+            "stress_xyz_volume_L2": 3.6793194692997797e-06,
+            "stress_local_volume_L2": 3.6793194692997797e-06
+          },
+          "14": {
+            "stress_xyz_volume_L2": 3.6093268800795004e-07,
+            "stress_local_volume_L2": 3.6093268800795004e-07
+          },
+          "18": {
+            "stress_xyz_volume_L2": 4.062716059176371e-06,
+            "stress_local_volume_L2": 4.062716059176371e-06
+          }
+        }
+      }
+    ],
+    "production_eligible": false
+  },
+  "production_eligible": false,
+  "display_method": "Actual Tri6 exterior; four triangles per native curved face. U is saved P2 nodal U; stresses are native owner-cell GP volume means, no cross-material averaging. Display quantization only; original FP64 retained remotely."
+}

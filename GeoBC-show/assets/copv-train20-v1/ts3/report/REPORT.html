@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TS3 TRAIN20 actual result</title>
+<style>body{max-width:1150px;margin:30px auto;padding:20px;font:16px/1.7 system-ui;color:#283c55}img{max-width:100%}</style>
+<h1>TS3: 6000 actual FP64 TRAIN updates</h1><p>All 20 native-node predictions independently checked on CPU. Worst vector U relative L2: 2.182068%; worst recovered VM relative L2: 4.495335%. All-case 1% target passed: False. Negative-VM cases: 1.</p>
+<p>Actual terminal status: budget_exhausted_report_actual_metrics_not_automatic_overfit_pass. A completed budget does not establish an overfit pass. Negative-VM predictions remain unchanged; their case minima are recorded in the CSV and verification JSON. One homogeneous equivalent-wall geometry, pressure-amplitude TRAIN fitting only; no generalization or rated-pressure claim.</p>
+<h2>All twenty actual cases</h2><img src="all_case_fit.png"><p><a href="case_metrics.csv">All-case CSV</a> · <a href="all_case_fit.pdf">Figure PDF</a> · <a href="FINAL_VERIFICATION.json">Independent verification</a></p>
+<h2>Actual training history</h2><img src="../figures/training_progress.png"><p><a href="../figures/training_progress.pdf">History PDF</a></p>
+<h2>Same-case FE, prediction and signed difference</h2><p>Worst case p01, 3.5 MPa. The native meridian is displayed using physical arc length and wall-normal distance. Display interpolation leaves labels and metrics unchanged. Predictions are not clipped.</p>
+<img src="native_field_comparison.png"><p><a href="native_field_comparison.pdf">Field PDF</a></p><img src="worst_VM_location_zoom.png"><p><a href="worst_VM_location_zoom.pdf">Local difference PDF</a></p></html>

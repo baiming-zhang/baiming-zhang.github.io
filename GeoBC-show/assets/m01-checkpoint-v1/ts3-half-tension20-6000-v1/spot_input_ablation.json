@@ -1,0 +1,249 @@
+{
+  "sample_id": "normal_rodv2_0095__tension",
+  "checkpoint_epoch": 6000,
+  "parameters": 982884,
+  "weights_sha256": "d5ece6fdf4bf09124a55c6c317d53199afcfcaaef11e9e9019c762ee86c2d8f0",
+  "cache_sha256": "1e29aad30476735ab64820c31cb6e8db4959270faef6b74e57fdb3b3d9ad3c37",
+  "device": "CPU",
+  "threads": 2,
+  "optimizer_updates": 0,
+  "new_FE_solves": 0,
+  "neural_forwards": 5,
+  "original_nodes": 69290,
+  "changed_feature_indices": {
+    "tangent": [
+      26,
+      27,
+      28
+    ],
+    "axial": [
+      29,
+      30,
+      31
+    ]
+  },
+  "uniform_gauge_coefficient": 23.893102645874023,
+  "variants": {
+    "original": {
+      "seconds": 1.2338511943817139,
+      "metrics": {
+        "bore": {
+          "nodes": 2900,
+          "relative_U_L2": 0.5212965608980533,
+          "relative_VM_L2": 0.08284673318046566,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.17515558729799174,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 0.3230949702369841,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.16285948823171037,
+          "truth_VM_midpoint_deviation_median_MPa": 0.015331636328565157,
+          "truth_VM_midpoint_deviation_RMS_MPa": 0.14897835835793033,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.0020121890312231943
+        },
+        "big_top": {
+          "nodes": 2677,
+          "relative_U_L2": 0.3055948790982311,
+          "relative_VM_L2": 0.9906292070449444,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.0009341625560792544,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 0.06032870186994783,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.004726801253195517,
+          "truth_VM_midpoint_deviation_median_MPa": 0.014400070192843728,
+          "truth_VM_midpoint_deviation_RMS_MPa": 25.77721219817076,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.004031156878775946
+        },
+        "all": {
+          "nodes": 69290,
+          "relative_U_L2": 0.014149308395573434,
+          "relative_VM_L2": 0.21712701900544504
+        },
+        "small_joint": {
+          "nodes": 8656,
+          "relative_U_L2": 0.018743244603480553,
+          "relative_VM_L2": 0.0989954497655145
+        },
+        "big_joint": {
+          "nodes": 12800,
+          "relative_U_L2": 0.19815170685793637,
+          "relative_VM_L2": 0.11272517763465331
+        }
+      },
+      "changed_input_entries": 0,
+      "CPU_vs_saved_GPU_max_abs_U_mm": 0.00020576167822555086,
+      "CPU_vs_saved_GPU_max_abs_VM_MPa": 1.4328755051920012
+    },
+    "uniform_axial_only": {
+      "seconds": 0.9290404319763184,
+      "metrics": {
+        "bore": {
+          "nodes": 2900,
+          "relative_U_L2": 0.6362070182396841,
+          "relative_VM_L2": 0.2007183917094896,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.17528549714807706,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 1.8323757951885389,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.33080651024663327,
+          "truth_VM_midpoint_deviation_median_MPa": 0.015331636328565157,
+          "truth_VM_midpoint_deviation_RMS_MPa": 0.14897835835793033,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.0020121890312231943
+        },
+        "big_top": {
+          "nodes": 2677,
+          "relative_U_L2": 0.3053457759594088,
+          "relative_VM_L2": 0.9906286396767247,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.0009424811078102557,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 0.060945360641034146,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.004766212338476008,
+          "truth_VM_midpoint_deviation_median_MPa": 0.014400070192843728,
+          "truth_VM_midpoint_deviation_RMS_MPa": 25.77721219817076,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.004031156878775946
+        },
+        "all": {
+          "nodes": 69290,
+          "relative_U_L2": 0.014197903712400258,
+          "relative_VM_L2": 0.21724998172831153
+        },
+        "small_joint": {
+          "nodes": 8656,
+          "relative_U_L2": 0.018757434409158093,
+          "relative_VM_L2": 0.09911648533223508
+        },
+        "big_joint": {
+          "nodes": 12800,
+          "relative_U_L2": 0.20036542597357834,
+          "relative_VM_L2": 0.1152619142236818
+        }
+      },
+      "changed_input_entries": 2900
+    },
+    "uniform_tangent_only": {
+      "seconds": 0.9512913227081299,
+      "metrics": {
+        "bore": {
+          "nodes": 2900,
+          "relative_U_L2": 0.6916070373604162,
+          "relative_VM_L2": 0.17693817774836387,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.2611451587569149,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 1.5459129039571393,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.3595051475458219,
+          "truth_VM_midpoint_deviation_median_MPa": 0.015331636328565157,
+          "truth_VM_midpoint_deviation_RMS_MPa": 0.14897835835793033,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.0020121890312231943
+        },
+        "big_top": {
+          "nodes": 2677,
+          "relative_U_L2": 0.3055846328892876,
+          "relative_VM_L2": 0.9906285626217362,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.0009370794508420932,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 0.06048722701101679,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.004738603817689368,
+          "truth_VM_midpoint_deviation_median_MPa": 0.014400070192843728,
+          "truth_VM_midpoint_deviation_RMS_MPa": 25.77721219817076,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.004031156878775946
+        },
+        "all": {
+          "nodes": 69290,
+          "relative_U_L2": 0.014213673091770806,
+          "relative_VM_L2": 0.21721276185042138
+        },
+        "small_joint": {
+          "nodes": 8656,
+          "relative_U_L2": 0.018761158052055343,
+          "relative_VM_L2": 0.09908537374357827
+        },
+        "big_joint": {
+          "nodes": 12800,
+          "relative_U_L2": 0.20165903274261646,
+          "relative_VM_L2": 0.11457722503318868
+        }
+      },
+      "changed_input_entries": 5800
+    },
+    "uniform_both_gauges": {
+      "seconds": 0.8892836570739746,
+      "metrics": {
+        "bore": {
+          "nodes": 2900,
+          "relative_U_L2": 0.3794189263843829,
+          "relative_VM_L2": 0.0878136664602235,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.0009740808010740842,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 0.05169563316188333,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.003597650673395856,
+          "truth_VM_midpoint_deviation_median_MPa": 0.015331636328565157,
+          "truth_VM_midpoint_deviation_RMS_MPa": 0.14897835835793033,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.0020121890312231943
+        },
+        "big_top": {
+          "nodes": 2677,
+          "relative_U_L2": 0.3055700574600728,
+          "relative_VM_L2": 0.9906295896739794,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.0009429132403677709,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 0.06097036024631,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.004769351407532168,
+          "truth_VM_midpoint_deviation_median_MPa": 0.014400070192843728,
+          "truth_VM_midpoint_deviation_RMS_MPa": 25.77721219817076,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.004031156878775946
+        },
+        "all": {
+          "nodes": 69290,
+          "relative_U_L2": 0.01414079606059171,
+          "relative_VM_L2": 0.21716526751140677
+        },
+        "small_joint": {
+          "nodes": 8656,
+          "relative_U_L2": 0.018792033909349828,
+          "relative_VM_L2": 0.09921472985933764
+        },
+        "big_joint": {
+          "nodes": 12800,
+          "relative_U_L2": 0.1959394461427195,
+          "relative_VM_L2": 0.11279685783447431
+        }
+      },
+      "changed_input_entries": 8700
+    },
+    "zero_both_gauges": {
+      "seconds": 0.913480281829834,
+      "metrics": {
+        "bore": {
+          "nodes": 2900,
+          "relative_U_L2": 0.579647427483019,
+          "relative_VM_L2": 0.09184937156847835,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.0012240154689926452,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 0.04591969781259679,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.0031685146789259045,
+          "truth_VM_midpoint_deviation_median_MPa": 0.015331636328565157,
+          "truth_VM_midpoint_deviation_RMS_MPa": 0.14897835835793033,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.0020121890312231943
+        },
+        "big_top": {
+          "nodes": 2677,
+          "relative_U_L2": 0.3111580823340894,
+          "relative_VM_L2": 0.9906253350697015,
+          "prediction_VM_midpoint_deviation_median_MPa": 0.0009219548113312825,
+          "prediction_VM_midpoint_deviation_RMS_MPa": 0.059037921719470005,
+          "prediction_U_vector_midpoint_deviation_RMS_um": 0.004650590940957777,
+          "truth_VM_midpoint_deviation_median_MPa": 0.014400070192843728,
+          "truth_VM_midpoint_deviation_RMS_MPa": 25.77721219817076,
+          "truth_U_vector_midpoint_deviation_RMS_um": 0.004031156878775946
+        },
+        "all": {
+          "nodes": 69290,
+          "relative_U_L2": 0.014406971217745342,
+          "relative_VM_L2": 0.21720926772136817
+        },
+        "small_joint": {
+          "nodes": 8656,
+          "relative_U_L2": 0.019090290505653307,
+          "relative_VM_L2": 0.09943224125252909
+        },
+        "big_joint": {
+          "nodes": 12800,
+          "relative_U_L2": 0.1993047787113318,
+          "relative_VM_L2": 0.11292393779325954
+        }
+      },
+      "changed_input_entries": 10002
+    }
+  },
+  "scope": "Counterfactual inference sensitivity at fixed trained weights. Modified inputs are not retrained models and may be out of distribution; this does not prove a new encoding improves a retrained model.",
+  "elapsed_seconds": 5.520620107650757,
+  "completed": true,
+  "CUDA_initialized": false
+}
