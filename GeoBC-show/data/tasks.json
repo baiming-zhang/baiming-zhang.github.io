@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-01",
   "tasks": [
     {
       "id": "R01",
@@ -545,21 +545,25 @@
       "phase": "第2周",
       "title": "COPV 批量数据",
       "due": "2026-11-03",
-      "status": "进行中",
-      "deliverables": "初期目标约 1000 个有效样本",
+      "status": "已完成",
+      "deliverables": "1000 例 FE 场数据、800/100/100 划分与质控放行记录",
       "review": "汇总有效/失败数量，保留可复现配置和完整场数据",
       "dependencies": "C04",
       "start": "2026-11-01",
-      "issues": "已冻结1000个不同几何与压力的设计，800/100/100划分；每例48,977原生节点、11,520个Quad9。先GPU求解验证，再以4个独立GPU分片生成真实FE标签。",
+      "issues": "1000 个不同几何与压力的 FE 样本及模型输入已生成、审核并放行，固定划分为 800 train / 100 validation / 100 test；每例 48,977 个原生节点、11,520 个 Quad9。 全 1000 例独立 FE 审核通过。最大 MPC 残差 1.415e-9、能量功误差 5.589e-10、节点 VM 恢复相对差 6.402e-17；训练尺度仅由 800 个训练样本统计。高压为线弹性数学外推，生产资格未放行。",
       "page": "C05.html",
       "results": [
         {
-          "label": "1000例几何与采样设计",
-          "url": "assets/copv-supervised1000-v1/dataset_design.png"
+          "label": "数据设计与固定划分",
+          "url": "assets/copv-completed-20261102-v1/dataset/dataset_design.pdf"
         },
         {
-          "label": "设计与800/100/100划分",
-          "url": "assets/copv-supervised1000-v1/experiment_spec.json"
+          "label": "1000例FE放行审核",
+          "url": "assets/copv-completed-20261102-v1/dataset/FE_RELEASE_PROOF_VERIFICATION.json"
+        },
+        {
+          "label": "1000例模型输入放行审核",
+          "url": "assets/copv-completed-20261102-v1/dataset/PREPARED_RELEASE_PROOF_VERIFICATION.json"
         }
       ]
     },
@@ -568,28 +572,53 @@
       "phase": "第3周",
       "title": "COPV 数据 checkpoint",
       "due": "2026-11-03",
-      "status": "未开始",
+      "status": "进行中",
       "deliverables": "COPV 数据集与质控可视化",
       "review": "人工 review 工况、mesh、求解参数和批量数据质量",
       "dependencies": "C05",
       "start": "2026-11-03",
-      "issues": "",
+      "issues": "COPV 数据与结果 checkpoint 进入人工 review：1000 例数据和四模型独立测试结果已交付；损失、几何与容量消融继续推进，目前 13/19 组交付。 审核数据划分、质控与模型误差，比较已有结果并记录下一步。M02 保持进行中；不将训练集消融与独立测试混合汇总。",
       "page": "M02.html",
-      "results": []
+      "results": [
+        {
+          "label": "1000例数据与质控",
+          "url": "C05.html"
+        },
+        {
+          "label": "四模型独立100test最终结果",
+          "url": "C06.html#test100-results"
+        },
+        {
+          "label": "13/19组TRAIN20消融结果",
+          "url": "viewers/copv-final-results.html?scope=train20"
+        }
+      ]
     },
     {
       "id": "C06",
       "phase": "第2周",
       "title": "COPV 四模型训练与对比",
       "due": "2026-11-06",
-      "status": "进行中",
+      "status": "已完成",
       "deliverables": "MGN / TS3 / FNO / PointNet编码FNO的曲线、平均/最差误差与checkpoint",
       "review": "20例TRAIN结果已归档；1000例使用同一800/100/100划分，验证集选模型、测试集独立评估。",
       "dependencies": "M02、R06",
       "start": "2026-11-04",
-      "issues": "已发布MGN、TS3、FNO和PointNet编码FNO的20例完成结果；四种方法各完成6000次实际更新并通过独立CPU审核。1000例实验仍在进行中，C06保持进行中。 这部分是同一几何、20个压力幅值的TRAIN拟合，四种方法均未达到全20例位移与节点VM各≤1%。平均/最差为逐例相对L2的算术平均/最大值；TS3 p01的负VM保留原值。",
+      "issues": "MGN、TS3、FNO、PointNet 编码 FNO 均完成 6000 次实际更新。下列为验证集选定 checkpoint 在独立 100-test 上的最终结果，原始逐例指标、曲线及场对照已发布。 任务完成表示固定训练预算与结果交付完成；四种方法均未达到全部测试样本 U、VM 各 ≤1%。负 VM 保留原值。结论限于本几何族和均匀等效壁线弹性 FE 模型，生产资格未放行。",
       "page": "C06.html",
       "results": [
+        {
+          "label": "独立100test四模型完整结果",
+          "url": "viewers/copv-final-results.html?scope=test100"
+        },
+        {
+          "label": "100test平均与最差CSV",
+          "url": "assets/copv-completed-20261102-v1/combined_test_mean_worst.csv"
+        },
+        {
+          "label": "独立TRAIN20消融：13/19组",
+          "url": "C06.html#train20-ablation-results"
+        },
         {
           "label": "已完成20例四模型结果 · 平均/最差、曲线和场对照",
           "url": "viewers/copv-train20.html"
@@ -613,10 +642,6 @@
         {
           "label": "指标定义与审核来源JSON",
           "url": "assets/copv-train20-v1/summary.json"
-        },
-        {
-          "label": "进行中的1000例设计",
-          "url": "assets/copv-supervised1000-v1/dataset_design.png"
         }
       ]
     },

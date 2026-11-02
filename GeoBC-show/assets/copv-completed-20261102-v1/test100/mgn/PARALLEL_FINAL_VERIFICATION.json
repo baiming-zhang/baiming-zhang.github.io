@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checked_at_UTC": "2026-11-01T21:05:14.876540+00:00",
+  "job_id": "13819866",
+  "final_verification_SHA256": "cd766fc47af578ff76eea95b98f0f7fd66a86bd018cf529cfde36a2940e70316",
+  "download_manifest_SHA256": "d57181f4ac5c5b6ee858196875fe5363611076adb50369e545fdc99ddd8489e7",
+  "states": {
+    "last": {
+      "step": 6001,
+      "next_case": 0,
+      "checkpoint_SHA256": "011c0e7c9643b0f0c9480110e6d01f5a8a5330a4bc8acf0cc86d10152ef5a5da",
+      "rank_count": 3
+    },
+    "best": {
+      "step": 5901,
+      "next_case": 0,
+      "checkpoint_SHA256": "f2b363f34df42ccecdfb158b7e449411fee2d6b85274e5f89b0a980007b107ba",
+      "rank_count": 3
+    }
+  },
+  "strict_original_model_and_Adam_shape_load": true,
+  "all_three_rank_CPU_numpy_Python_RNG_restored_into_isolated_generators": true,
+  "CUDA_RNG_structure_only": true,
+  "exact_5085_recovery_history_in_last_and_best": true,
+  "recovery_checkpoint_SHA256": "14487cb96b3f7d531fdbb54bf806e24532c3b38f0018ee4df8b825019f505804",
+  "frozen_parallel_sources_SHA_verified": true,
+  "actual_exec_launcher_SHA256": "6ae02d1a0d0297f3f57da6782b17c9c3e27611353340a5059a3be2c6a08abcd0",
+  "actual_current_job_FP64_world3_crossrank_exact": {
+    "passed": true,
+    "job_id": "13819866",
+    "update": 6000,
+    "world_size": 3,
+    "cross_rank_parameters_exact": true,
+    "parameters_inputs_targets_outputs_gradients_Adam": "float64",
+    "AMP": false,
+    "TF32": false,
+    "deterministic_algorithms": true
+  },
+  "scope": "Independent local CPU saved-state audit, source and history checks; no replay of CUDA optimizer updates, no additional FE solve, no full-model CPU forward."
+}

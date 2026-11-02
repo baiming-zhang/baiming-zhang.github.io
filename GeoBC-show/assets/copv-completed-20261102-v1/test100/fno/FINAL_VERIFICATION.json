@@ -1,0 +1,481 @@
+{
+  "passed": true,
+  "method": "fno",
+  "job_id": "13806141",
+  "actual_optimizer_updates": 6000,
+  "selected_by": "validation_only",
+  "selected_update": 5900,
+  "parameters": 984668,
+  "FNO_body_parameters": 984668,
+  "PointNet_encoder_parameters": 0,
+  "split_counts": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "test_mean_U_relative_L2": 0.16653678609261058,
+  "test_worst_U_relative_L2": 0.45330039477871553,
+  "test_mean_VM_relative_L2": 0.12037334623605947,
+  "test_worst_VM_relative_L2": 0.5811890837689092,
+  "all_test_each_U_VM_at_most_1_percent": false,
+  "negative_test_VM_cases": 46,
+  "minimum_test_pred_VM_MPa": -33.57325981981288,
+  "negative_VM_preserved": [
+    {
+      "case": "c0016",
+      "radius_mm": 99.18502127751235,
+      "straight_length_mm": 359.18515480898577,
+      "pressure_MPa": 7.582351774725553,
+      "U_relative_L2": 0.08415720983368447,
+      "VM_relative_L2": 0.09660131930248081,
+      "pred_VM_min_MPa": -14.323514781046361
+    },
+    {
+      "case": "c0063",
+      "radius_mm": 89.89466323192359,
+      "straight_length_mm": 479.37950346364744,
+      "pressure_MPa": 26.049351153741704,
+      "U_relative_L2": 0.1147337671968135,
+      "VM_relative_L2": 0.08850535221175636,
+      "pred_VM_min_MPa": -15.007471929134814
+    },
+    {
+      "case": "c0076",
+      "radius_mm": 93.53043811346622,
+      "straight_length_mm": 333.6137730348231,
+      "pressure_MPa": 14.621716473388176,
+      "U_relative_L2": 0.12229180169994779,
+      "VM_relative_L2": 0.23539057399258181,
+      "pred_VM_min_MPa": -17.718828592977083
+    },
+    {
+      "case": "c0087",
+      "radius_mm": 90.57148261511685,
+      "straight_length_mm": 367.2680327437533,
+      "pressure_MPa": 15.788907375286206,
+      "U_relative_L2": 0.10228487096354864,
+      "VM_relative_L2": 0.2543964233737385,
+      "pred_VM_min_MPa": -17.639911502348745
+    },
+    {
+      "case": "c0090",
+      "radius_mm": 99.03082153318353,
+      "straight_length_mm": 329.66738905958374,
+      "pressure_MPa": 7.379830730416073,
+      "U_relative_L2": 0.10012056391418149,
+      "VM_relative_L2": 0.11129399190497455,
+      "pred_VM_min_MPa": -13.33535549044254
+    },
+    {
+      "case": "c0095",
+      "radius_mm": 93.92434950531477,
+      "straight_length_mm": 420.8198237431369,
+      "pressure_MPa": 29.37580047012352,
+      "U_relative_L2": 0.05074998596580451,
+      "VM_relative_L2": 0.05075407478888277,
+      "pred_VM_min_MPa": -7.60984809348089
+    },
+    {
+      "case": "c0110",
+      "radius_mm": 113.46429809022291,
+      "straight_length_mm": 436.6220114497771,
+      "pressure_MPa": 6.692633462637396,
+      "U_relative_L2": 0.17640633466672695,
+      "VM_relative_L2": 0.4495579971470593,
+      "pred_VM_min_MPa": -30.269951804794186
+    },
+    {
+      "case": "c0124",
+      "radius_mm": 87.36501731847875,
+      "straight_length_mm": 417.6963761104075,
+      "pressure_MPa": 30.798202061673894,
+      "U_relative_L2": 0.20370062048341556,
+      "VM_relative_L2": 0.08829164043212837,
+      "pred_VM_min_MPa": -3.4959760413942855
+    },
+    {
+      "case": "c0205",
+      "radius_mm": 93.1969832443834,
+      "straight_length_mm": 336.4116089013684,
+      "pressure_MPa": 9.996340215972,
+      "U_relative_L2": 0.18152679264166,
+      "VM_relative_L2": 0.2681869318664767,
+      "pred_VM_min_MPa": -11.794870900032572
+    },
+    {
+      "case": "c0252",
+      "radius_mm": 92.81545292073633,
+      "straight_length_mm": 471.50950646275555,
+      "pressure_MPa": 10.867311177702172,
+      "U_relative_L2": 0.10592598461147552,
+      "VM_relative_L2": 0.20431307228792997,
+      "pred_VM_min_MPa": -16.012909957060774
+    },
+    {
+      "case": "c0259",
+      "radius_mm": 85.70641543744638,
+      "straight_length_mm": 371.0896739022096,
+      "pressure_MPa": 17.18607682260879,
+      "U_relative_L2": 0.10171982942830507,
+      "VM_relative_L2": 0.3142688412260331,
+      "pred_VM_min_MPa": -15.046424897298586
+    },
+    {
+      "case": "c0304",
+      "radius_mm": 90.09898318346191,
+      "straight_length_mm": 433.77668229343084,
+      "pressure_MPa": 10.159674799937825,
+      "U_relative_L2": 0.14489043574933433,
+      "VM_relative_L2": 0.26364127298276324,
+      "pred_VM_min_MPa": -11.879258038665172
+    },
+    {
+      "case": "c0314",
+      "radius_mm": 90.1008776747991,
+      "straight_length_mm": 321.8451625435709,
+      "pressure_MPa": 25.408570878315615,
+      "U_relative_L2": 0.09347626849174473,
+      "VM_relative_L2": 0.12375122623377646,
+      "pred_VM_min_MPa": -16.275628839337585
+    },
+    {
+      "case": "c0360",
+      "radius_mm": 91.45548721074154,
+      "straight_length_mm": 477.80541532897644,
+      "pressure_MPa": 16.344204992282226,
+      "U_relative_L2": 0.0711209319062768,
+      "VM_relative_L2": 0.17667361575016038,
+      "pred_VM_min_MPa": -22.996439582360775
+    },
+    {
+      "case": "c0384",
+      "radius_mm": 112.1978622289113,
+      "straight_length_mm": 382.8941909579786,
+      "pressure_MPa": 31.36788927544661,
+      "U_relative_L2": 0.2935118394453052,
+      "VM_relative_L2": 0.09775353923962314,
+      "pred_VM_min_MPa": -7.5175488669468775
+    },
+    {
+      "case": "c0389",
+      "radius_mm": 106.1077484373462,
+      "straight_length_mm": 387.4861594142227,
+      "pressure_MPa": 15.098801190098897,
+      "U_relative_L2": 0.12207867628367455,
+      "VM_relative_L2": 0.049694423365898834,
+      "pred_VM_min_MPa": -29.31066705871161
+    },
+    {
+      "case": "c0394",
+      "radius_mm": 110.3380256059593,
+      "straight_length_mm": 383.48215642749153,
+      "pressure_MPa": 31.6928630867732,
+      "U_relative_L2": 0.26644115255651607,
+      "VM_relative_L2": 0.0869769997366482,
+      "pred_VM_min_MPa": -6.786075574296696
+    },
+    {
+      "case": "c0460",
+      "radius_mm": 109.60757861557596,
+      "straight_length_mm": 451.08999106551425,
+      "pressure_MPa": 29.648606750247122,
+      "U_relative_L2": 0.2519872933842082,
+      "VM_relative_L2": 0.08158257458241601,
+      "pred_VM_min_MPa": -4.8862641634262305
+    },
+    {
+      "case": "c0467",
+      "radius_mm": 107.86675518635225,
+      "straight_length_mm": 417.933981070446,
+      "pressure_MPa": 18.45945379835043,
+      "U_relative_L2": 0.16421797299045562,
+      "VM_relative_L2": 0.061758931690653836,
+      "pred_VM_min_MPa": -29.26112718528644
+    },
+    {
+      "case": "c0494",
+      "radius_mm": 94.34660056469507,
+      "straight_length_mm": 360.3286001812146,
+      "pressure_MPa": 9.088935696618758,
+      "U_relative_L2": 0.15263586473489557,
+      "VM_relative_L2": 0.22202360242469601,
+      "pred_VM_min_MPa": -12.012695053134351
+    },
+    {
+      "case": "c0506",
+      "radius_mm": 108.94218868800172,
+      "straight_length_mm": 460.8496333346384,
+      "pressure_MPa": 4.63044431092635,
+      "U_relative_L2": 0.3883094556917145,
+      "VM_relative_L2": 0.5811890837689092,
+      "pred_VM_min_MPa": -22.374857513883807
+    },
+    {
+      "case": "c0522",
+      "radius_mm": 112.67240047729491,
+      "straight_length_mm": 339.05610363092865,
+      "pressure_MPa": 18.960672809672637,
+      "U_relative_L2": 0.22351909742427478,
+      "VM_relative_L2": 0.09067651526734645,
+      "pred_VM_min_MPa": -33.57325981981288
+    },
+    {
+      "case": "c0526",
+      "radius_mm": 92.22004195333614,
+      "straight_length_mm": 325.4684038867512,
+      "pressure_MPa": 10.71654191867718,
+      "U_relative_L2": 0.19458162084055475,
+      "VM_relative_L2": 0.29571000563593236,
+      "pred_VM_min_MPa": -11.7106819139095
+    },
+    {
+      "case": "c0548",
+      "radius_mm": 91.42174220651852,
+      "straight_length_mm": 449.47384372184973,
+      "pressure_MPa": 16.90343664594952,
+      "U_relative_L2": 0.06604028100408538,
+      "VM_relative_L2": 0.18036585744110517,
+      "pred_VM_min_MPa": -22.462316165899804
+    },
+    {
+      "case": "c0561",
+      "radius_mm": 109.74161161434387,
+      "straight_length_mm": 323.2984100969127,
+      "pressure_MPa": 28.92767904828308,
+      "U_relative_L2": 0.24459951321258402,
+      "VM_relative_L2": 0.09036302557831924,
+      "pred_VM_min_MPa": -18.126780648529998
+    },
+    {
+      "case": "c0576",
+      "radius_mm": 97.27404395808232,
+      "straight_length_mm": 342.521312692292,
+      "pressure_MPa": 33.91351258577555,
+      "U_relative_L2": 0.041452374496755116,
+      "VM_relative_L2": 0.041707381599182275,
+      "pred_VM_min_MPa": -1.6095678025609264
+    },
+    {
+      "case": "c0582",
+      "radius_mm": 110.90027078827273,
+      "straight_length_mm": 457.68831835556523,
+      "pressure_MPa": 7.18555186028384,
+      "U_relative_L2": 0.13440690761353238,
+      "VM_relative_L2": 0.3447876023752753,
+      "pred_VM_min_MPa": -28.852342997969437
+    },
+    {
+      "case": "c0596",
+      "radius_mm": 108.784832059779,
+      "straight_length_mm": 414.693682750275,
+      "pressure_MPa": 14.541330515980972,
+      "U_relative_L2": 0.13198252116533507,
+      "VM_relative_L2": 0.07900222236899908,
+      "pred_VM_min_MPa": -31.329657635057288
+    },
+    {
+      "case": "c0599",
+      "radius_mm": 86.90830387788718,
+      "straight_length_mm": 373.979113753764,
+      "pressure_MPa": 17.402216451657914,
+      "U_relative_L2": 0.0895702040565569,
+      "VM_relative_L2": 0.2862577064107981,
+      "pred_VM_min_MPa": -16.385240478502787
+    },
+    {
+      "case": "c0611",
+      "radius_mm": 86.62536154634374,
+      "straight_length_mm": 347.89327645448066,
+      "pressure_MPa": 17.358245686641112,
+      "U_relative_L2": 0.09967069411197782,
+      "VM_relative_L2": 0.30593636764708537,
+      "pred_VM_min_MPa": -15.262746448906718
+    },
+    {
+      "case": "c0638",
+      "radius_mm": 86.59987346794475,
+      "straight_length_mm": 345.5294790686386,
+      "pressure_MPa": 10.271185293796684,
+      "U_relative_L2": 0.21802362507914216,
+      "VM_relative_L2": 0.3494094170793172,
+      "pred_VM_min_MPa": -8.189680803593994
+    },
+    {
+      "case": "c0687",
+      "radius_mm": 107.20472831297883,
+      "straight_length_mm": 456.8215017096387,
+      "pressure_MPa": 10.07458146461813,
+      "U_relative_L2": 0.04891937991290623,
+      "VM_relative_L2": 0.12933038911317193,
+      "pred_VM_min_MPa": -28.945105793077552
+    },
+    {
+      "case": "c0692",
+      "radius_mm": 92.62633406365077,
+      "straight_length_mm": 423.76841144454215,
+      "pressure_MPa": 4.690432971828317,
+      "U_relative_L2": 0.17817019664154016,
+      "VM_relative_L2": 0.15937660515675028,
+      "pred_VM_min_MPa": -9.546333079874103
+    },
+    {
+      "case": "c0701",
+      "radius_mm": 99.37941897380111,
+      "straight_length_mm": 454.9523654653864,
+      "pressure_MPa": 5.194566276749745,
+      "U_relative_L2": 0.1707914585731821,
+      "VM_relative_L2": 0.191964613805374,
+      "pred_VM_min_MPa": -13.69754564149578
+    },
+    {
+      "case": "c0720",
+      "radius_mm": 100.82762024235676,
+      "straight_length_mm": 328.51404665453697,
+      "pressure_MPa": 6.989353104098491,
+      "U_relative_L2": 0.07690826855265254,
+      "VM_relative_L2": 0.07405860172521071,
+      "pred_VM_min_MPa": -14.561118178434787
+    },
+    {
+      "case": "c0743",
+      "radius_mm": 89.5601193936714,
+      "straight_length_mm": 352.286009106294,
+      "pressure_MPa": 9.271996779199341,
+      "U_relative_L2": 0.19353839614144874,
+      "VM_relative_L2": 0.29448546510266016,
+      "pred_VM_min_MPa": -8.894614787668559
+    },
+    {
+      "case": "c0768",
+      "radius_mm": 90.27721507046988,
+      "straight_length_mm": 360.816667225821,
+      "pressure_MPa": 31.006452586454188,
+      "U_relative_L2": 0.13724972597181026,
+      "VM_relative_L2": 0.07378670975200216,
+      "pred_VM_min_MPa": -5.108585289654047
+    },
+    {
+      "case": "c0808",
+      "radius_mm": 113.2504330941844,
+      "straight_length_mm": 393.45884683708545,
+      "pressure_MPa": 31.31960528837257,
+      "U_relative_L2": 0.30936075704791954,
+      "VM_relative_L2": 0.10345226663677627,
+      "pred_VM_min_MPa": -6.423713739594089
+    },
+    {
+      "case": "c0821",
+      "radius_mm": 105.97432679392335,
+      "straight_length_mm": 443.2171929033886,
+      "pressure_MPa": 22.441442654602824,
+      "U_relative_L2": 0.16638737120467362,
+      "VM_relative_L2": 0.05887269239828432,
+      "pred_VM_min_MPa": -22.508086508837284
+    },
+    {
+      "case": "c0856",
+      "radius_mm": 95.74565708167567,
+      "straight_length_mm": 375.91486251072,
+      "pressure_MPa": 12.904332618770077,
+      "U_relative_L2": 0.11453888687226632,
+      "VM_relative_L2": 0.19168857819856314,
+      "pred_VM_min_MPa": -19.14583224384993
+    },
+    {
+      "case": "c0867",
+      "radius_mm": 92.37255057086328,
+      "straight_length_mm": 412.394059182726,
+      "pressure_MPa": 5.125332283798372,
+      "U_relative_L2": 0.11159424256766308,
+      "VM_relative_L2": 0.08949793642647026,
+      "pred_VM_min_MPa": -9.352821833122704
+    },
+    {
+      "case": "c0893",
+      "radius_mm": 89.88632960927467,
+      "straight_length_mm": 427.83691486788445,
+      "pressure_MPa": 10.524894030465976,
+      "U_relative_L2": 0.15036459868556312,
+      "VM_relative_L2": 0.274497465058409,
+      "pred_VM_min_MPa": -11.953360458988797
+    },
+    {
+      "case": "c0942",
+      "radius_mm": 98.36493574147454,
+      "straight_length_mm": 407.4285457576342,
+      "pressure_MPa": 21.905016014282968,
+      "U_relative_L2": 0.06628796253594124,
+      "VM_relative_L2": 0.06169007611736664,
+      "pred_VM_min_MPa": -22.882350945194837
+    },
+    {
+      "case": "c0947",
+      "radius_mm": 100.00497244198817,
+      "straight_length_mm": 474.38303378913736,
+      "pressure_MPa": 19.924603585193296,
+      "U_relative_L2": 0.08059670566299211,
+      "VM_relative_L2": 0.05874143135300055,
+      "pred_VM_min_MPa": -25.20194821049515
+    },
+    {
+      "case": "c0955",
+      "radius_mm": 106.9082794777218,
+      "straight_length_mm": 427.61675776972015,
+      "pressure_MPa": 18.878289718854784,
+      "U_relative_L2": 0.15640718214964075,
+      "VM_relative_L2": 0.05831043586369399,
+      "pred_VM_min_MPa": -28.33676388519151
+    },
+    {
+      "case": "c0990",
+      "radius_mm": 100.4586182773447,
+      "straight_length_mm": 344.91959917538765,
+      "pressure_MPa": 34.756207015669176,
+      "U_relative_L2": 0.09432417960681773,
+      "VM_relative_L2": 0.0423602256179257,
+      "pred_VM_min_MPa": -0.42323393898829026
+    }
+  ],
+  "recorded_all_split_summaries": {
+    "train": {
+      "U_mean": 0.18572823247282166,
+      "U_worst": 0.6591838450606533,
+      "VM_mean": 0.11596035005328055,
+      "VM_worst": 0.9406310317337566
+    },
+    "validation": {
+      "U_mean": 0.19025661880408148,
+      "U_worst": 0.4974828184996272,
+      "VM_mean": 0.10475032583070887,
+      "VM_worst": 0.4710387238706021
+    },
+    "test": {
+      "U_mean": 0.16653678609261052,
+      "U_worst": 0.453300394778716,
+      "VM_mean": 0.1203733462360595,
+      "VM_worst": 0.5811890837689095
+    }
+  },
+  "train_validation_metric_scope": "Saved all-case evaluations, independently reaggregated; original-node predictions independently rechecked for all 100 test cases",
+  "original_test_FE_and_prediction_CPU_cases": 100,
+  "FP64_model_and_Adam": true,
+  "FFT_complex128_audit": true,
+  "CPU_numpy_Python_RNG_restore": true,
+  "CUDA_RNG_structure_only": true,
+  "original_target_not_cast": true,
+  "normalized_export_target_roundtrip_max_absolute_difference": 4.547473508864641e-13,
+  "raw_FE_VM_recovery_max": 6.309438093516782e-17,
+  "independent_test_FE_residual_max": 1.1860871889762125e-09,
+  "independent_test_FE_GP_energy_error_max": 2.74846145842389e-10,
+  "verifier_SHA256": "99728bf6e29e8d8ee94b66c398fd72aa3fd7ea50eb8c0b644900bf67203c1561",
+  "download_manifest_SHA256": "36e1e503575a2551720fceef6d2a3faafc4052db2389ec481e2265f9573d844c",
+  "production_eligible": false,
+  "status": "fixed_budget_exhausted_actual_test_metrics_no_automatic_accuracy_pass",
+  "worst_case_selected_best_CPU_forward_replay": {
+    "passed": true,
+    "case": "c0506",
+    "native_nodes": 48977,
+    "CPU_best_checkpoint_prediction_relative_difference": 6.8779091699882e-16,
+    "tolerance": 1e-08
+  }
+}
