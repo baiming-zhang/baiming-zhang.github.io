@@ -1,0 +1,26 @@
+{
+  "loss": {
+    "image": "loss_geometry.png",
+    "alt": "四组损失及几何特征的六项物理误差",
+    "caption": "只连接三次实际评估点；所有误差均回到原节点物理量计算。点击图片查看原图。",
+    "table": "<div class=\"m01-table-scroll\"><table class=\"m01-compact-table\"><thead><tr><th>6000步 · 误差 (%)</th><th>U</th><th>VM</th><th>top5% VM</th><th>峰幅偏差</th></tr></thead><tbody><tr><td>MSE / slice4</td><td>1.500</td><td>7.669</td><td>10.023</td><td>24.474</td></tr><tr><td>LOG</td><td>1.208</td><td>10.744</td><td>15.117</td><td>31.403</td></tr><tr><td>PEAK</td><td>1.622</td><td>7.706</td><td>8.216</td><td>18.820</td></tr><tr><td>+GEOM</td><td>1.379</td><td>7.400</td><td>9.257</td><td>21.877</td></tr></tbody></table></div>"
+  },
+  "capacity": {
+    "image": "capacity.png",
+    "alt": "固定6000步的TS3切片数与FNO模态数对照",
+    "caption": "均为真实6000步结果；相同步数未配平参数、FLOPs和时间。",
+    "table": "<div class=\"m01-table-scroll\"><table class=\"m01-compact-table\"><thead><tr><th>6000步 · 误差 (%)</th><th>U</th><th>VM</th><th>top5% VM</th><th>峰幅偏差</th></tr></thead><tbody><tr><td>MSE / slice4</td><td>1.500</td><td>7.669</td><td>10.023</td><td>24.474</td></tr><tr><td>slice16</td><td>1.468</td><td>7.637</td><td>9.673</td><td>24.289</td></tr><tr><td>slice64</td><td>1.490</td><td>7.672</td><td>9.743</td><td>24.497</td></tr><tr><td>FNO m4</td><td>3.435</td><td>16.103</td><td>20.738</td><td>34.462</td></tr><tr><td>FNO m7</td><td>2.582</td><td>12.226</td><td>15.201</td><td>29.833</td></tr><tr><td>FNO m10</td><td>2.174</td><td>10.751</td><td>13.480</td><td>27.070</td></tr></tbody></table></div>"
+  },
+  "peak": {
+    "image": "case0095_peak.png",
+    "alt": "0095真实峰值附近全部原surface节点的XY投影及九组预测",
+    "caption": "0095单例；同一原节点窗口、全厚度XY投影和完整共同色标。空心圈为真实峰值位置；全场均值不能代替局部峰值精度。",
+    "table": ""
+  },
+  "connections": {
+    "image": "case0095_connections.png",
+    "alt": "0095固定小端和大端连接窗口的原surface节点XY投影",
+    "caption": "固定几何窗口内全部原surface节点，保留全厚度并采用共同完整物理色标；无新点、FE或标签插值。",
+    "table": ""
+  }
+}
