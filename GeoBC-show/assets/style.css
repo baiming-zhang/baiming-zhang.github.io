@@ -4,3 +4,7 @@
     
 /* Planned tasks use a red background, including milestone cards. */
 .task-card[data-status="未开始"]{background:#fff0f0;border-color:#edcccc}
+
+/* Completed status takes precedence over milestone styling. */
+.task-card[data-status="已完成"]{background:#fff;border-color:#dbe4df}
+.task-card[data-status="已完成"] .pill{color:#23614c;background:#e4f0e8}
