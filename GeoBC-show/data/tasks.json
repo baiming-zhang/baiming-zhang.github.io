@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "tasks": [
     {
       "id": "R01",
@@ -572,12 +572,12 @@
       "phase": "第3周",
       "title": "COPV 数据 checkpoint",
       "due": "2026-11-03",
-      "status": "进行中",
+      "status": "已完成",
       "deliverables": "COPV 数据集与质控可视化",
       "review": "人工 review 工况、mesh、求解参数和批量数据质量",
       "dependencies": "C05",
       "start": "2026-11-03",
-      "issues": "数据和计算结果已全部交付；M02人工review保持进行中。所有配置均未达到每例U、VM同时≤1%；负VM保留原值。TRAIN20为单seed固定预算拟合，不能外推普遍因果或泛化。",
+      "issues": "2026-11-04按执行人收尾指示，M02已完成。1000例FE数据与质控、四模型独立100-test、19/19组TRAIN20消融及最终结论均已交付；代码与重要结果已归档GitHub。全部配置仍未达到每例U、VM同时≤1%；负VM保留原值。TRAIN20为单seed固定预算拟合，不外推普遍因果或泛化，生产资格未放行。",
       "page": "M02.html",
       "results": [
         {
@@ -596,7 +596,8 @@
           "label": "19/19组TRAIN20消融结果",
           "url": "viewers/copv-final-results.html?scope=train20"
         }
-      ]
+      ],
+      "completed": "2026-11-04"
     },
     {
       "id": "C06",
