@@ -80,6 +80,7 @@
 
     .side-nav a {
       position: relative;
+      isolation: isolate;
       display: block;
       padding: 9px 10px 9px 24px;
       border-radius: 9px;
@@ -88,7 +89,22 @@
       line-height: 1.3;
       transform: scale(1);
       transform-origin: left center;
-      transition: color 140ms ease, background-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+      transition: color 350ms ease, background-color 350ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .side-nav a::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(232, 232, 227, 0.96) 0%, rgba(242, 242, 238, 0.65) 58%, rgba(255, 255, 255, 0) 100%);
+      box-shadow: 0 3px 10px rgba(20, 20, 18, 0.035);
+      content: "";
+      pointer-events: none;
+      opacity: 0;
+      transform: scaleX(0.35);
+      transform-origin: left center;
+      transition: opacity 900ms ease, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .side-nav a::before {
@@ -114,9 +130,13 @@
     .side-nav a.active {
       color: #171715;
       font-weight: 800;
-      background: linear-gradient(90deg, rgba(232, 232, 227, 0.96) 0%, rgba(247, 247, 244, 0.45) 40%, rgba(255, 255, 255, 0) 70%);
-      box-shadow: 0 3px 10px rgba(20, 20, 18, 0.035);
+      background: transparent;
       transform: translateX(4px) scale(1.13);
+    }
+
+    .side-nav a.active::after {
+      opacity: 1;
+      transform: scaleX(1);
     }
 
     .side-nav a.active::before {
@@ -705,7 +725,8 @@
       }
 
       .side-nav a,
-      .side-nav a::before {
+      .side-nav a::before,
+      .side-nav a::after {
         transition: none;
       }
     }
