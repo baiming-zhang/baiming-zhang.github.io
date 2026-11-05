@@ -1046,6 +1046,62 @@
         "checkpoint_wall_seconds": 12.353617661974567
       },
       "source_run": "m01_operator_matched1m_v1"
+    },
+    {
+      "id": "OFORMER_1M",
+      "name": "OFormer_1M",
+      "parameters": 991359,
+      "source_run": "m01_oformer_matched1m_v1",
+      "state": "6000步完成",
+      "saved_step": 6000,
+      "evaluations": [
+        {
+          "step": 2000,
+          "elapsed_seconds": 1779.1069099903107,
+          "learning_rate": 1e-05,
+          "mean_relative_U_L2": 0.016238872005996035,
+          "mean_relative_VM_L2": 0.07783354289400976,
+          "mean_physical_objective": 0.003715172093202479,
+          "mean_training_objective": 0.0038796620443463325,
+          "mean_peak_relative_VM_L2": 0.09934194199401844,
+          "mean_top1_relative_VM_L2": 0.13027329680654956,
+          "mean_high_curvature_relative_VM_L2": 0.08372222475137435,
+          "mean_abs_max_VM_relative_bias": 0.2329529139853986
+        },
+        {
+          "step": 4000,
+          "elapsed_seconds": 3558.7128257751465,
+          "learning_rate": 1e-05,
+          "mean_relative_U_L2": 0.013830555920868645,
+          "mean_relative_VM_L2": 0.0726362884005284,
+          "mean_physical_objective": 0.0033115526815909306,
+          "mean_training_objective": 0.0034595733275637032,
+          "mean_peak_relative_VM_L2": 0.09383576712553694,
+          "mean_top1_relative_VM_L2": 0.12276092335836823,
+          "mean_high_curvature_relative_VM_L2": 0.07840163398918179,
+          "mean_abs_max_VM_relative_bias": 0.20586328475211713
+        },
+        {
+          "step": 6000,
+          "elapsed_seconds": 5477.159104347229,
+          "learning_rate": 1e-05,
+          "mean_relative_U_L2": 0.011748058996396788,
+          "mean_relative_VM_L2": 0.06879592596992438,
+          "mean_physical_objective": 0.003028811627324031,
+          "mean_training_objective": 0.0031602122413460164,
+          "mean_peak_relative_VM_L2": 0.0906296064362532,
+          "mean_top1_relative_VM_L2": 0.11974707026451166,
+          "mean_high_curvature_relative_VM_L2": 0.07448396993515569,
+          "mean_abs_max_VM_relative_bias": 0.1903084793067334
+        }
+      ],
+      "actual_best_epoch": 6000,
+      "active_seconds": 5479.080099582672,
+      "timing": {
+        "training_wall_seconds": 4998.508079664018,
+        "evaluation_wall_seconds": 2.360290542997973,
+        "checkpoint_wall_seconds": 17.781207304040436
+      }
     }
   ],
   "MGN": {
@@ -1118,5 +1174,14 @@
   "scope": "20TRAIN单seed拟合；各配置参数见表；FLOPs和耗时未配平。",
   "neural_forwards": 0,
   "new_FE_solves": 0,
-  "completion_scope": "M01按用户最新决定完成；不表示所有模型均6000步，也不表示达到误差阈值。"
+  "completion_scope": "M01按用户最新决定完成；不表示所有模型均6000步，也不表示达到误差阈值。",
+  "oformer_matched_revision": {
+    "parameters": 991359,
+    "width": 109,
+    "same_forward": true,
+    "untrained_initial": true,
+    "actualbest": 6000,
+    "old_OFORMER_parameters": 1363588,
+    "scope": "Width-only capacity match; same TRAIN/50inputs/loss/seed/updates, not equal FLOPs/time."
+  }
 }

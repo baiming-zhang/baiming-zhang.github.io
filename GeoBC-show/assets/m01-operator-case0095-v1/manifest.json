@@ -1,1 +1,2966 @@
-{"schema":"m01_all_operator_saved_predictions_v1","sample_id":"normal_rodv2_0095__tension","native_nodes":69290,"surface_nodes":27730,"surface_triangles":55464,"geometry_center_mm":[69.762660450306,5.009326287108706e-13,2.5002222514558525e-12],"bounds_centered":[[-94.044488491467,-36.880003826010494,-13.3173045695725],[94.04448849146699,36.880003826010494,13.3173045695725]],"arrays":{"position":{"dtype":"<f4","shape":[27730,3],"raw_bytes":332760,"parts":["position.bin.gz"],"sha256":"6cb9a27b99841aed6fdaf5f71fd1b0bf7864fbe7b51810dc5f628fece922b29a"},"triangles":{"dtype":"<u4","shape":[55464,3],"raw_bytes":665568,"parts":["triangles.bin.gz"],"sha256":"f2e703796e1a8f9a410d2a63a0a53747ec33c663698407519a4c52ac1fea3fef"},"node_ids":{"dtype":"<u4","shape":[27730],"raw_bytes":110920,"parts":["node_ids.bin.gz"],"sha256":"6b41574550d3a9233f475be679357ef2dbd0f8b229e586722f5984f26c1dab68"},"vm_truth":{"dtype":"<f4","shape":[27730],"raw_bytes":110920,"parts":["vm_truth.bin.gz"],"sha256":"4b7f85d819ab43c182031c967dff218076c16f8756cf8ca0e7c8adfd94175aba"},"u_truth":{"dtype":"<f4","shape":[27730],"raw_bytes":110920,"parts":["u_truth.bin.gz"],"sha256":"79d589f695e4bbb29adf3e2bac4c3c2bcea54fa0073551793d011d97df02108d"}},"peak_A":{"surface_index":4075},"models":[{"id":"TRANSOLVER","name":"Transolver","parameters":985156,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TRANSOLVER-2000.bin.gz"],"sha256":"0b279cfa41c769234abcaa1afb344e934a06e9cf4273863c85b3014bbd425883"},"relative_U_L2":0.02313673296687984,"relative_VM_L2":0.2275379422211304,"source_prediction_sha256":"bee3099043e408ac90bcef7802b8aeb3f1ce15631970acb56baa9e5cf8f204a0","ranges":{"vm":{"field":[0.4643045961856842,96.0298080444336],"error":[0.00012295294436626136,529.052001953125]},"u":{"field":[0.09956807643175125,65.8905029296875],"error":[0.007891885936260223,3.8939661979675293]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TRANSOLVER-4000.bin.gz"],"sha256":"48a7fd1ea462ec30f8786fe78d7cd01930d3ba67097a0d3683154daecf8b572d"},"relative_U_L2":0.018796115819780922,"relative_VM_L2":0.22045470645459614,"source_prediction_sha256":"589a7900b60df1290822da8bfbb823ff3d5fc0cfecfc85c78cc0b961273e617d","ranges":{"vm":{"field":[0.03621119633316994,103.4922866821289],"error":[1.8819389424606925e-07,529.0695190429688]},"u":{"field":[0.056065671145915985,65.8415298461914],"error":[0.009263343177735806,3.698704719543457]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TRANSOLVER-6000.bin.gz"],"sha256":"09fec049c42f2f9804bba1bc9d0ea503a7e8ad6887cca0969b0d04f4ba099985"},"relative_U_L2":0.016057721976284203,"relative_VM_L2":0.21766082684490054,"source_prediction_sha256":"d8e69ef752bde122938ae0ca73758127d8d8181502bb3ea3f8e045f062608a15","ranges":{"vm":{"field":[-0.02889648824930191,109.48722076416016],"error":[1.3261607819003984e-05,529.04296875]},"u":{"field":[0.02690085582435131,65.91950225830078],"error":[0.011519728228449821,2.811899423599243]}}}]},{"id":"TRANSOLVER_PP","name":"Transolver++","parameters":858188,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TRANSOLVER_PP-2000.bin.gz"],"sha256":"3800911c6740c21d66f51fc3dee6c838b2f9a8012bbb123131d5f32b76a6bc72"},"relative_U_L2":0.023136651139255733,"relative_VM_L2":0.23254738290277394,"source_prediction_sha256":"e458d500366f19980ad35c365ce2c05d6dbc8cf4ed6c0ff44c82c0b079f2c4e3","ranges":{"vm":{"field":[0.5638213753700256,90.90050506591797],"error":[3.896186899510212e-05,529.1201171875]},"u":{"field":[0.00793655589222908,66.17993927001953],"error":[0.007348434533923864,3.3939714431762695]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TRANSOLVER_PP-4000.bin.gz"],"sha256":"d2dabe98a558daa8f0b7438d97e355926a1a4d1d5edbfebdc28ce4dae84b6534"},"relative_U_L2":0.019326831169710647,"relative_VM_L2":0.22219904593208417,"source_prediction_sha256":"be58d3f5991f2194ac89ceee06890c980beb707e3a4d704c7bd28fe764723762","ranges":{"vm":{"field":[0.14184357225894928,99.8264389038086],"error":[3.648991696536541e-05,529.031005859375]},"u":{"field":[0.027213657274842262,66.01229095458984],"error":[0.016825564205646515,3.4220306873321533]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TRANSOLVER_PP-6000.bin.gz"],"sha256":"bad681304852c038f01b637f04304f524df9da88c3f3813981642c5d1fe73155"},"relative_U_L2":0.01523884068175867,"relative_VM_L2":0.2181663236480468,"source_prediction_sha256":"b745fcfcd0f1517ff088606d0f184a8e049ea100205ccbe980436aadace8a338","ranges":{"vm":{"field":[0.06488089263439178,107.43193054199219],"error":[2.3752585548209026e-05,529.1616821289062]},"u":{"field":[0.028431648388504982,66.36177825927734],"error":[0.00816243514418602,2.678995132446289]}}}]},{"id":"TFNO_R1","name":"TFNO","parameters":514685,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TFNO_R1-2000.bin.gz"],"sha256":"493d07c0335965614c3bdc21efd13ac0fe0c921cc42df5f08f8a667f4bcbf1a6"},"relative_U_L2":0.0469874548583127,"relative_VM_L2":0.2527440244691208,"source_prediction_sha256":"f1785ede9e8819b0f6f0434e4acfadbacdd03677c49a7bc32e6d61ddd1198744","ranges":{"vm":{"field":[-0.8303574919700623,90.40093994140625],"error":[0.0001475591561757028,528.641845703125]},"u":{"field":[0.015127883292734623,68.65885162353516],"error":[0.0018996999133378267,5.807579517364502]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TFNO_R1-4000.bin.gz"],"sha256":"ddc840ad4fa1eccecdcb509900b76c55a2085cae67c6fb792b741acc3005da8e"},"relative_U_L2":0.04095367456994813,"relative_VM_L2":0.2471852460304515,"source_prediction_sha256":"5b177bbd4ae07c71f332b28f471778d287111e6055a312c069885329e751032d","ranges":{"vm":{"field":[-0.3183693289756775,89.15574645996094],"error":[2.232215592812281e-05,528.6764526367188]},"u":{"field":[0.01130143366754055,68.123046875],"error":[0.01165859680622816,5.207049369812012]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TFNO_R1-6000.bin.gz"],"sha256":"c0e5292b0b3b0965b58e6055557a335634e56a1eef10b71533ae1656b0b1059d"},"relative_U_L2":0.03387523204332473,"relative_VM_L2":0.24195217734766922,"source_prediction_sha256":"475b9f8adbdc0f75fb01134b57bdb869344511122607d9d9bad501aeb5e90b96","ranges":{"vm":{"field":[-0.15535441040992737,89.49636840820312],"error":[9.13418443815317e-06,528.70263671875]},"u":{"field":[0.03196970373392105,67.8761978149414],"error":[0.011502623558044434,4.0556960105896]}}}]},{"id":"UNO","name":"UNO","parameters":7331021,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["UNO-2000.bin.gz"],"sha256":"e121b6c21c50a6317bcae442d9fd3d8d8d01552f5a995ab3fb370e8c0e07fa18"},"relative_U_L2":0.03528031869921301,"relative_VM_L2":0.22838168344544812,"source_prediction_sha256":"ae20816d4df5913017053bdf0deebdd547a32c8a024d9966d3affeab80759304","ranges":{"vm":{"field":[-0.6059495806694031,94.37146759033203],"error":[4.678848199546337e-06,528.9110717773438]},"u":{"field":[0.008445273153483868,66.77056884765625],"error":[0.009360712952911854,5.9674553871154785]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["UNO-4000.bin.gz"],"sha256":"a3e572f3154dd1d19282e772310af6a8a5769440e7634a9b7cf585baee330c92"},"relative_U_L2":0.03180946390529762,"relative_VM_L2":0.22626998909779156,"source_prediction_sha256":"ca95bb44dd50378ef32e679610a4286561fcf5ab9b34dbb824f7a12958a5a86f","ranges":{"vm":{"field":[-0.7631202936172485,96.9095687866211],"error":[5.17401349497959e-05,528.7247314453125]},"u":{"field":[0.01248020026832819,66.53214263916016],"error":[0.0071197254583239555,6.900373935699463]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["UNO-6000.bin.gz"],"sha256":"07bd3c915aa0e673a5cae98fc9fa24fcd71898f81bdf026db446d7c0d360f0dc"},"relative_U_L2":0.027459984745578397,"relative_VM_L2":0.2244076110652635,"source_prediction_sha256":"3f80b840d833eb242111203ba16b3b531b0ad605644bc9271edb81925e65aa7b","ranges":{"vm":{"field":[-0.8311659693717957,98.95362091064453],"error":[3.000598371727392e-05,528.6074829101562]},"u":{"field":[0.004077834542840719,66.53296661376953],"error":[0.006440290715545416,6.615262508392334]}}}]},{"id":"DEEPONET","name":"DEEPONET","parameters":419332,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["DEEPONET-2000.bin.gz"],"sha256":"d97823efe798df9212565621f1fb877588df5ac23bd09ff8ab75424cfab34d2a"},"relative_U_L2":0.09842708661598935,"relative_VM_L2":0.3567226745224011,"source_prediction_sha256":"0a39b923e6d3ffb2be9ab0eccfec1c3bf3351650c8815a7dc46503f6a3f7b39d","ranges":{"vm":{"field":[-0.8320031762123108,54.403255462646484],"error":[9.69998154687346e-07,529.3890380859375]},"u":{"field":[0.007168111391365528,67.84912109375],"error":[0.005441191606223583,10.791280746459961]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["DEEPONET-4000.bin.gz"],"sha256":"5a7537e62a3c8b0d0827735ca557f7c330d16946317ada2de12238d9c301bc6f"},"relative_U_L2":0.08119800783817165,"relative_VM_L2":0.3489682575256459,"source_prediction_sha256":"9eaee717b8a8a8c7d39285e34ef9642d272ebf1c3b02637710bd50c5d2e2ca38","ranges":{"vm":{"field":[-1.4551082849502563,54.60285568237305],"error":[3.108246744432108e-07,529.2310791015625]},"u":{"field":[0.0030741277150809765,72.20819854736328],"error":[0.007796365302056074,8.322152137756348]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["DEEPONET-6000.bin.gz"],"sha256":"622489dba4613e2721a90f8026fb4a25d72ad13ef44f98772bc78a5c01cc9687"},"relative_U_L2":0.0567391480202716,"relative_VM_L2":0.3220726206087805,"source_prediction_sha256":"a78814124811140fc3a5512760bb3088958ae96cb34fddd05c5520868009af46","ranges":{"vm":{"field":[-2.19252872467041,57.87119674682617],"error":[2.8521988497232087e-05,528.966796875]},"u":{"field":[0.012929093092679977,69.83743286132812],"error":[0.0072061894461512566,6.4503912925720215]}}}]},{"id":"GNOT","name":"GNOT","parameters":3877268,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNOT-2000.bin.gz"],"sha256":"48db08f771965defcaf55b45fcc25ef5b565ce2b5e42a95c6269e7a2c340977b"},"relative_U_L2":0.01889081547982322,"relative_VM_L2":0.21779321681849284,"source_prediction_sha256":"796dc8520ee250ea5daf72dc9ac32145f66ee316454a4efaae52d1b98b46c1c9","ranges":{"vm":{"field":[-0.4483623802661896,99.9968490600586],"error":[5.776649913968868e-07,529.0125122070312]},"u":{"field":[0.01618630811572075,66.29668426513672],"error":[0.0032409997656941414,3.322087287902832]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNOT-4000.bin.gz"],"sha256":"9a048d7949aa44f83929c0fc5203f260598c4c5b16a8e45c499be1d750de72ef"},"relative_U_L2":0.01640012141857154,"relative_VM_L2":0.21610142071041877,"source_prediction_sha256":"6f1b86908d7d74026e4a42a27513481a1b56b08168bd04ca50f25965a2ed28b1","ranges":{"vm":{"field":[-0.4462520480155945,104.55935668945312],"error":[4.147986328462139e-05,528.92138671875]},"u":{"field":[0.023684276267886162,66.27677154541016],"error":[0.0015023007290437818,3.2049012184143066]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNOT-6000.bin.gz"],"sha256":"7ea338555270ea5b9aafdc4687200e102a4ca47cd9f73a42d5dbafbcf3a366ab"},"relative_U_L2":0.014160637187251185,"relative_VM_L2":0.2143865478786901,"source_prediction_sha256":"54ab595e9d9758984799850db948b3d5a562c8fd70b32048ab5cd2e5af51a8ff","ranges":{"vm":{"field":[-0.5444639325141907,112.59642791748047],"error":[8.94268032425316e-06,528.8424682617188]},"u":{"field":[0.014490971341729164,66.05219268798828],"error":[0.0037298761308193207,2.4980063438415527]}}}]},{"id":"ONO","name":"ONO","parameters":1608452,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["ONO-2000.bin.gz"],"sha256":"95ce33174756bf5beb6db00571804ffc829a7b15cc8bd1786fcf8cbb07f7ffd7"},"relative_U_L2":0.9429525294839596,"relative_VM_L2":1.0903255583303872,"source_prediction_sha256":"d8c62dbb0bc09483523836c6580297d74ecf0a0e0b7dfd1ba5e6d75fd1ab58b6","ranges":{"vm":{"field":[39.830020904541016,40.05126190185547],"error":[0.002488509751856327,490.5792236328125]},"u":{"field":[2.9969773292541504,3.558863401412964],"error":[1.1174874305725098,62.9468879699707]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["ONO-4000.bin.gz"],"sha256":"af85a3507406f506d2c8e743c12db803961922dbb5e0b6de6cfeac1e5825f022"},"relative_U_L2":0.9993150699800842,"relative_VM_L2":1.0090308457938681,"source_prediction_sha256":"92977d1db327acdc8b73edb36b015d9eb2dd5a7a7975c274fbddd2483b14124c","ranges":{"vm":{"field":[-0.47032707929611206,-0.40767303109169006],"error":[0.43468302488327026,530.8388671875]},"u":{"field":[0.6025140285491943,0.6109350919723511],"error":[0.1825699657201767,65.74505615234375]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["ONO-6000.bin.gz"],"sha256":"a995f275a0a70b2ff9583fb7192b5ef397a1aa05faa28f970cf73dee046d79f1"},"relative_U_L2":0.9711178231367752,"relative_VM_L2":1.0230194715514584,"source_prediction_sha256":"661affd6a0284fbbc51b845ef92e35f9d3b61875c9bf86e2f35658a981cf93b6","ranges":{"vm":{"field":[-1.0383987426757812,-1.0328748226165771],"error":[1.0530003309249878,531.4512939453125]},"u":{"field":[1.3632042407989502,1.3718794584274292],"error":[0.11531554162502289,64.4762191772461]}}}]},{"id":"GNO","name":"GNO","parameters":32740,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNO-2000.bin.gz"],"sha256":"8bd257335f9000d5b73f80edea8498d45b584ddcc9259619a3db424414976f40"},"relative_U_L2":0.10865402952596492,"relative_VM_L2":0.34513419474151563,"source_prediction_sha256":"8f081d3593c37d12f97831a092f313fa8a1291031abeab6d137f85b98f3a1e8a","ranges":{"vm":{"field":[-2.623952627182007,57.66685104370117],"error":[8.705654181540012e-05,528.956787109375]},"u":{"field":[0.04777013510465622,64.67186737060547],"error":[0.02374385856091976,11.199292182922363]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNO-4000.bin.gz"],"sha256":"86d3bc629b9d3cc978a4dcc09e92a29949fea12175e3a3cf66ee0af478714d82"},"relative_U_L2":0.10624788309470094,"relative_VM_L2":0.3362893206467236,"source_prediction_sha256":"8f78fe352117ace449830bbbf68dbc30bcdee89a997758f3782c37a837187543","ranges":{"vm":{"field":[-1.8825284242630005,58.88347625732422],"error":[0.0002590616059023887,528.8717041015625]},"u":{"field":[0.07820559293031693,64.24891662597656],"error":[0.02453659661114216,9.91182804107666]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNO-6000.bin.gz"],"sha256":"77d2723852f9a02ec53b8ff2d915a209a3d7dcbc8cbc3cef9bcbb09a1329ec5b"},"relative_U_L2":0.0954310693123623,"relative_VM_L2":0.30745294879066043,"source_prediction_sha256":"6effd98e9d3c4735bf5b772bf7e6f4cd56fe88eb97a2429a13e0cab00b7e5977","ranges":{"vm":{"field":[-1.4982715845108032,64.1597671508789],"error":[9.366889571538195e-06,528.5711059570312]},"u":{"field":[0.022199660539627075,65.9313735961914],"error":[0.029756687581539154,9.419905662536621]}}}]},{"id":"GINO","name":"GINO","parameters":1616150,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GINO-2000.bin.gz"],"sha256":"04aaab3343c534383ac539fef6ce3f825308870c7965f991dd4920457e142d0b"},"relative_U_L2":0.10086907678340483,"relative_VM_L2":0.298570424796139,"source_prediction_sha256":"73a53023542364995d1ad019bb5c89ec2c8f4e039da7db7f17d649f3af15361d","ranges":{"vm":{"field":[-1.823353886604309,72.97198486328125],"error":[2.1119712982908823e-05,527.4762573242188]},"u":{"field":[0.03546176478266716,78.62857055664062],"error":[0.015347561798989773,25.57529640197754]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GINO-4000.bin.gz"],"sha256":"afa5911fd2435bc508f562aeecbebb6f173652e5922b81d9e9e130dce9c30be1"},"relative_U_L2":0.09679493018557797,"relative_VM_L2":0.29145796275381514,"source_prediction_sha256":"72a355c1be04c9e41dcdb4da73122e67e6b86ebba02bc8b5715c6e290574a5cd","ranges":{"vm":{"field":[-1.729111671447754,74.74815368652344],"error":[1.3811082681058906e-05,527.154541015625]},"u":{"field":[0.014354287646710873,78.6222915649414],"error":[0.016373811289668083,23.962316513061523]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GINO-6000.bin.gz"],"sha256":"f550724d77568ac87d9d77ec8f16aaa350642514520563a8a0a6eb6adf3aec87"},"relative_U_L2":0.09056889824386699,"relative_VM_L2":0.2835280654798988,"source_prediction_sha256":"5a6bcc661b04a3ae6b8099c2572db50979ad5b87039831aa8f7706a7ec9db4d5","ranges":{"vm":{"field":[-1.125332236289978,76.99455261230469],"error":[4.594492565956898e-05,527.24169921875]},"u":{"field":[0.012644153088331223,78.32170104980469],"error":[0.01349515188485384,21.92586326599121]}}}]},{"id":"FNOGNO","name":"FNOGNO","parameters":1619588,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["FNOGNO-2000.bin.gz"],"sha256":"14feabc377fc10429ee005b33afc3b854b90cbe52372317fe12cac168a6d8b7a"},"relative_U_L2":0.0982014315593022,"relative_VM_L2":0.29457277811043625,"source_prediction_sha256":"0b726ba0264fb2e79c0136ad5344588393e9ca5ec86466745babe91882c42005","ranges":{"vm":{"field":[-2.4565420150756836,77.40475463867188],"error":[1.3903977560403291e-05,529.1593627929688]},"u":{"field":[0.020919596776366234,77.56050872802734],"error":[0.01938106119632721,22.809341430664062]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["FNOGNO-4000.bin.gz"],"sha256":"4c4e4abd4a4109374e57bfe1cab814d4bdf91bcd0e6bafc765fce468699990ee"},"relative_U_L2":0.09609204523783027,"relative_VM_L2":0.28447336364765724,"source_prediction_sha256":"d648d6bb3dea0a7e2dfd13791652d0db8ad275ba6233ca02b60da6d08899e925","ranges":{"vm":{"field":[-2.74897837638855,79.00035095214844],"error":[4.5637774746865034e-05,528.9133911132812]},"u":{"field":[0.044784851372241974,77.7255630493164],"error":[0.01815631613135338,23.075790405273438]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["FNOGNO-6000.bin.gz"],"sha256":"156e31cc11c9f645f44309838c81c346446cd5b81585aa2245e42d295f5ed693"},"relative_U_L2":0.09117372729073431,"relative_VM_L2":0.2752026370916909,"source_prediction_sha256":"9496cf8cdfe05208a5b88f35ce8d6fbe7add0aca42ec12dcc61af0af031ff963","ranges":{"vm":{"field":[-2.7793824672698975,80.48062896728516],"error":[7.7586475526914e-05,528.883544921875]},"u":{"field":[0.037400394678115845,77.14048767089844],"error":[0.010015755891799927,21.475841522216797]}}}]},{"id":"GINOT","name":"GINOT","parameters":2862917,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GINOT-2000.bin.gz"],"sha256":"62b363db69c0677ddf1d443a22a69174e50980f32b97ae04b20711528169fd57"},"relative_U_L2":0.07034065101296924,"relative_VM_L2":0.22491339588042808,"source_prediction_sha256":"2642266168ea42d201e92d8f0f722170095556b29984972ae33c71b70ee80c35","ranges":{"vm":{"field":[0.5460224747657776,103.75164031982422],"error":[2.765828321571462e-05,529.1206665039062]},"u":{"field":[0.20601384341716766,70.51020812988281],"error":[0.009821278974413872,10.897047996520996]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GINOT-4000.bin.gz"],"sha256":"6cab78335f2a056efb00e6f3e5e8065c90300df8a2d5a16e23a26f4836a19feb"},"relative_U_L2":0.04686112825058563,"relative_VM_L2":0.22099746799831355,"source_prediction_sha256":"e7f0acd15a542a8743bb30e74e141608db39e8c4eb0403f08c13c37d3b44f2ef","ranges":{"vm":{"field":[0.23829339444637299,110.08316802978516],"error":[1.1829173672595061e-05,528.96630859375]},"u":{"field":[0.0809093564748764,69.96798706054688],"error":[0.007001542020589113,7.6206769943237305]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GINOT-6000.bin.gz"],"sha256":"c54c6bc7ab642ba3aba2db6c8c8cd47f1ec26c6db3d4e174d7cd71b2c7554edc"},"relative_U_L2":0.03669073384109352,"relative_VM_L2":0.21866278864667046,"source_prediction_sha256":"725d72540d8226eca1eccac5685da39c5a4275fcb527bd2df290ec6ac54dd3d7","ranges":{"vm":{"field":[0.04267222434282303,115.64564514160156],"error":[1.21869015856646e-05,528.747314453125]},"u":{"field":[0.04855837672948837,69.60076904296875],"error":[0.004311191849410534,6.395899295806885]}}}]},{"id":"PCNO","name":"PCNO","parameters":3008996,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["PCNO-2000.bin.gz"],"sha256":"3276bab242b289b834c88515dd30172bbbf8128ca8c70e0292b82e425f373bee"},"relative_U_L2":0.051445755953594824,"relative_VM_L2":0.23213324998729595,"source_prediction_sha256":"eceb20bfa72147dee3471cdea62df33aaee306e25fd9278091a18fed809309cf","ranges":{"vm":{"field":[-2.59714412689209,80.9605712890625],"error":[9.451709047425538e-06,526.2448120117188]},"u":{"field":[0.02860008180141449,69.50579833984375],"error":[0.007036659866571426,31.194921493530273]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["PCNO-4000.bin.gz"],"sha256":"9b94d4e0f3bb2e69c364eacea65fffaaa3b195e8914b2d6c11c61e733396bb39"},"relative_U_L2":0.04582806118305976,"relative_VM_L2":0.22824707053651141,"source_prediction_sha256":"9d9f4ba35e6f361bc7daf96e6dc51ba037a5aae0078ff94d212488f411003672","ranges":{"vm":{"field":[-3.128148317337036,82.81134033203125],"error":[4.175567300990224e-05,525.1986083984375]},"u":{"field":[0.01695072278380394,68.54792022705078],"error":[0.01849578134715557,31.10514259338379]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["PCNO-6000.bin.gz"],"sha256":"281eb01fc1f40ac6f1dbfc3f5877846925dc9a05d6a66c56c7e7f7d9869a555f"},"relative_U_L2":0.040858682927670954,"relative_VM_L2":0.22462133423706063,"source_prediction_sha256":"b4707a4a327adf9ad6ca19e97d20ea8e1804c0e2a8dac327d7d2001f23aaa085","ranges":{"vm":{"field":[-2.761425018310547,85.5863037109375],"error":[1.7879252482089214e-05,522.5703735351562]},"u":{"field":[0.02534734271466732,68.35939025878906],"error":[0.014072286896407604,28.828664779663086]}}}]},{"id":"LSM","name":"LSM","parameters":937661,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["LSM-2000.bin.gz"],"sha256":"1245a592ba1c628e87bf05c7a922a798f0a0a36a7cdb46f3e78222a874cc2cdf"},"relative_U_L2":0.26137214471516146,"relative_VM_L2":0.3529389279888264,"source_prediction_sha256":"f0de961f4c03d66893119219a48dbe542aa331e5dca727bdbb3bc904e713e80b","ranges":{"vm":{"field":[-0.49296092987060547,101.41365814208984],"error":[6.20834543951787e-05,529.92724609375]},"u":{"field":[0.023269983008503914,51.06627655029297],"error":[0.005866481456905603,21.548734664916992]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["LSM-4000.bin.gz"],"sha256":"8a9f3f836867565020f4d2a43de7929eda11d8f24572ce7e6344582af1200b2c"},"relative_U_L2":0.3355149486995492,"relative_VM_L2":0.40525704366178883,"source_prediction_sha256":"9cd2cb6c6ba82714cddfe4ec661b9bdd0a68061e1a758f6cc626f06635f201d1","ranges":{"vm":{"field":[-0.41456982493400574,104.86624145507812],"error":[0.00015546563372481614,529.8329467773438]},"u":{"field":[0.013342790305614471,47.94852066040039],"error":[0.004399049561470747,26.588125228881836]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["LSM-6000.bin.gz"],"sha256":"782e92ec0cbb35047b053a88c46120b8e8b30bdb0f160c05cc316f2580d5e45e"},"relative_U_L2":0.34345786496322167,"relative_VM_L2":0.4346073775437332,"source_prediction_sha256":"1a0449d76226958e6968a721efd539a4535f9dcccdb9f35a55ee888c2dc8ef3c","ranges":{"vm":{"field":[-0.4321298599243164,115.64974975585938],"error":[6.24256645096466e-05,529.950927734375]},"u":{"field":[0.009428010322153568,47.74713897705078],"error":[0.009082180447876453,28.42371940612793]}}}]},{"id":"OFORMER","name":"OFormer","parameters":1363588,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["OFORMER-2000.bin.gz"],"sha256":"4c5e165f74e2d2af08c7d06135b9f80501fc950274264d04da59d4dd33865cf0"},"relative_U_L2":0.016680947571402448,"relative_VM_L2":0.21821463501684815,"source_prediction_sha256":"e6e80df6b2648d3827760c259e8458bbc628d2aa987a109a5f30537b549997dc","ranges":{"vm":{"field":[-0.44762882590293884,110.46052551269531],"error":[7.66209777793847e-05,528.7200317382812]},"u":{"field":[0.031493548303842545,66.09293365478516],"error":[0.003999585751444101,3.028855323791504]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["OFORMER-4000.bin.gz"],"sha256":"08c7b0dcec154a98b38641e21e8503858a3178c9f2930734177f96b18ce8ccea"},"relative_U_L2":0.01429114998065286,"relative_VM_L2":0.21635488905139064,"source_prediction_sha256":"e5004f26765f487609f79cee5301080a5678189a3eef00f8cad99d1e22799b6a","ranges":{"vm":{"field":[-0.423917293548584,115.02806854248047],"error":[4.149569576838985e-05,528.6698608398438]},"u":{"field":[0.016895389184355736,66.02166748046875],"error":[0.00432013813406229,2.168131113052368]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["OFORMER-6000.bin.gz"],"sha256":"8fd79952bd93ffb1963d30f2dd3c61c80b2cea639fa5cb0c1d97f2882b41c635"},"relative_U_L2":0.012008937699281522,"relative_VM_L2":0.21505161308449197,"source_prediction_sha256":"9b0936ad029b3c2f0992e5c7db19cab747f27005a60a8295719416732859bbe2","ranges":{"vm":{"field":[-0.49546635150909424,115.15289306640625],"error":[6.477423448814079e-05,528.5750122070312]},"u":{"field":[0.005003690719604492,66.0343246459961],"error":[0.0038283467292785645,1.5557780265808105]}}}]},{"id":"TS3_MSE","name":"TS3 MSE","parameters":981348,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TS3_MSE-2000.bin.gz"],"sha256":"d754e1ce677bdb497e9f63682933610981a43862469efd31642024c3e7ebb6c1"},"relative_U_L2":0.022019498184467103,"relative_VM_L2":0.22761783941606967,"source_prediction_sha256":"212a814d54a408e01c27863d96bab10d1c590d16829e5923a40d3e10298e517f","ranges":{"vm":{"field":[0.3767264783382416,97.14387512207031],"error":[7.434852886945009e-05,529.349365234375]},"u":{"field":[0.011636351235210896,66.93143463134766],"error":[0.0023487438447773457,3.893622636795044]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TS3_MSE-4000.bin.gz"],"sha256":"e9d5742e176d07e6d6f3e09de486296760a1a10887a97d36cfb5abf785302829"},"relative_U_L2":0.01784578810888474,"relative_VM_L2":0.21920338898097766,"source_prediction_sha256":"8ae9aff3168e4f05a181aa519bd999bb7b26621265b71818de0dcb3e772b6e43","ranges":{"vm":{"field":[0.1044943779706955,105.91877746582031],"error":[4.924372842651792e-05,529.2513427734375]},"u":{"field":[0.006850616540759802,67.32389068603516],"error":[0.0029865065589547157,3.47202730178833]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["TS3_MSE-6000.bin.gz"],"sha256":"b2ef71a6f50537c352ca54c4c9366a692054102923b6869ef1401501e3285a4c"},"relative_U_L2":0.01484476614528626,"relative_VM_L2":0.21726203662201596,"source_prediction_sha256":"cd6d179937be2a681d5e6472e2f143b326ce3975c3f1fc6977160f770e393fa0","ranges":{"vm":{"field":[-0.11803501099348068,110.44625854492188],"error":[2.1303176254150458e-06,529.2552490234375]},"u":{"field":[0.0029531531035900116,66.76058197021484],"error":[0.0035934424959123135,3.4549975395202637]}}}]},{"id":"FNO_MSE_M07","name":"FNO M07","parameters":981310,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["FNO_MSE_M07-2000.bin.gz"],"sha256":"076f5a31d35e0ecb01bb74dfcfc4ad9a5771073c00e1b0db0f57b9de4955f526"},"relative_U_L2":0.03148680737296519,"relative_VM_L2":0.2574952987850453,"source_prediction_sha256":"f33b8ea5982d2d5db5faa46a7a1207a65eec86dae8b38964df66c5b281864d88","ranges":{"vm":{"field":[-0.9548696875572205,87.02201843261719],"error":[6.497135927929776e-06,524.4993896484375]},"u":{"field":[0.020919008180499077,66.57703399658203],"error":[0.01677999645471573,4.589378833770752]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["FNO_MSE_M07-4000.bin.gz"],"sha256":"557b343d84a44eee29d1a9e6f8c1b8db96064fb2d561fb7a06014963e6290b46"},"relative_U_L2":0.028350452598349393,"relative_VM_L2":0.25279453834258026,"source_prediction_sha256":"978184429633fd86968f85d893fa45aa5dd66dd97e0d900fb904bf038e14cdcb","ranges":{"vm":{"field":[-1.1944003105163574,87.95674896240234],"error":[1.6827720173751004e-05,522.9520874023438]},"u":{"field":[0.022653302177786827,66.83454132080078],"error":[0.013914915733039379,3.8800771236419678]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["FNO_MSE_M07-6000.bin.gz"],"sha256":"b05d8c102eb655f646ed24921c118610b73e251385aac3fb03840ac9e5673955"},"relative_U_L2":0.025076384454199435,"relative_VM_L2":0.24695097304084704,"source_prediction_sha256":"12658ea260d1a79df11a18545c3cbb1f3c6867ec3c4296392cf264a30394f78b","ranges":{"vm":{"field":[-1.3269848823547363,86.88956451416016],"error":[1.3692897482542321e-05,520.9196166992188]},"u":{"field":[0.016712939366698265,67.15424346923828],"error":[0.016016338020563126,2.899116277694702]}}}]},{"id":"GNO_1M","name":"GNO_1M","parameters":1002885,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNO_1M-2000.bin.gz"],"sha256":"c40fabf8dc43f66ec042ef073e7cd2afe24169af3db38c0c823820248d22e325"},"relative_U_L2":0.0346636805096179,"relative_VM_L2":0.2554197960149545,"source_prediction_sha256":"62f85ca38956afc13d9dbdf476d4d5e69014f329480b1666b73768ab676155fb","ranges":{"vm":{"field":[-1.1837773323059082,77.0418930053711],"error":[4.963067112839781e-05,527.0995483398438]},"u":{"field":[0.03634963929653168,68.16456604003906],"error":[0.007919789291918278,3.7858405113220215]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNO_1M-4000.bin.gz"],"sha256":"2189010046bd03fa6e6022329c27e8f84b0569e7059ec145d5baa4d0cf316267"},"relative_U_L2":0.03173256382741077,"relative_VM_L2":0.24843942650945144,"source_prediction_sha256":"6101c1ba1c6ee892bb102e92ec7e9b3cee047485d6e15fdbd654efc14e77ac69","ranges":{"vm":{"field":[-1.4027657508850098,77.9365234375],"error":[6.61037029203726e-06,526.7838745117188]},"u":{"field":[0.01617465168237686,67.31317901611328],"error":[0.023855939507484436,3.7042014598846436]}}}]},{"id":"GNOT_1M","name":"GNOT_1M","parameters":984276,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNOT_1M-2000.bin.gz"],"sha256":"369a5d326fc4061653030693947ed60809d052454720833b4bf31301f0ebc023"},"relative_U_L2":0.02743193653647737,"relative_VM_L2":0.22530269429066271,"source_prediction_sha256":"5a58db09c33526d96ba7ca7376ba8055c727f122d5e4cdca0bd43c99a9b56a3a","ranges":{"vm":{"field":[-0.04751167818903923,97.21012115478516],"error":[7.422589078487363e-06,528.7257690429688]},"u":{"field":[0.011358074843883514,66.71306610107422],"error":[0.018194109201431274,3.6769142150878906]}}},{"budget":4000,"actual_step":4000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNOT_1M-4000.bin.gz"],"sha256":"eb2e42e810ce42b61a7c7f9f5c5ae25650198d4b5c808fcdcd9bc286b78bce49"},"relative_U_L2":0.02626953282581793,"relative_VM_L2":0.21982782235999604,"source_prediction_sha256":"416002d276265446a4e70c51d4e1b1386f16371a44f88987afe9d78d7026e907","ranges":{"vm":{"field":[0.3199152946472168,102.67513275146484],"error":[4.9336598749505356e-05,528.810546875]},"u":{"field":[0.055186912417411804,66.60441589355469],"error":[0.015942217782139778,4.137030124664307]}}},{"budget":6000,"actual_step":6000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GNOT_1M-6000.bin.gz"],"sha256":"983beb2e41d3a3e38fdfd677b2c80f19940fe8cfe7a079283fba708483db3120"},"relative_U_L2":0.020379682008145418,"relative_VM_L2":0.21692139643878738,"source_prediction_sha256":"bcbe46242db7eee6a4877c9b6524492aaeb1572a151dc71aee46598f7a5b57cf","ranges":{"vm":{"field":[-0.1951180100440979,109.80558776855469],"error":[9.675779438111931e-06,528.7616577148438]},"u":{"field":[0.04952854663133621,66.38838958740234],"error":[0.013252444565296173,3.288874864578247]}}}]},{"id":"WNO_980K","name":"WNO_980K","parameters":979968,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["WNO_980K-2000.bin.gz"],"sha256":"488c57173a7d64da6e0f0494b771158d4d477158f72b5ce97f8e828027686166"},"relative_U_L2":0.07164715422240193,"relative_VM_L2":0.3000441326787065,"source_prediction_sha256":"6350efda956b3f8edcd95f92312f2e2b27d5ef79d61bca27835cba57238c9cb3","ranges":{"vm":{"field":[-3.4908900260925293,73.49718475341797],"error":[1.0607294825604185e-05,527.6885986328125]},"u":{"field":[0.011208764277398586,69.51996612548828],"error":[0.015530752949416637,11.44754409790039]}}}]},{"id":"GAOT_980K","name":"GAOT_980K","parameters":980590,"loss":"normalized MSE；50维输入","snapshots":[{"budget":2000,"actual_step":2000,"selection":"exact","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["GAOT_980K-2000.bin.gz"],"sha256":"be126a6652f09eb10b6fbce5a18f47dfae869eb5c113255cd5e9353e40586c80"},"relative_U_L2":0.04888482787740908,"relative_VM_L2":0.2963667577368547,"source_prediction_sha256":"9db3e4c84e2f843b4e05f1820e6ef4f874c1aa824d55260408193b58d2a31fd4","ranges":{"vm":{"field":[-3.086796998977661,73.85884857177734],"error":[5.0558617658680305e-05,529.3305053710938]},"u":{"field":[0.017468944191932678,69.31165313720703],"error":[0.018723776564002037,13.370978355407715]}}}]},{"id":"MGN_REFERENCE","name":"MGN（历史参考）","parameters":985540,"loss":"物理相对平方损失；56维历史输入，与统一MSE协议不同","snapshots":[{"budget":4000,"actual_step":4000,"selection":"actualbest","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["MGN_REFERENCE-4000.bin.gz"],"sha256":"9b444024d6600e10eb3c560f37847bdec4f0add8ef7b5e320d197d2e822bf579"},"relative_U_L2":0.02282902103066189,"relative_VM_L2":0.21599714620936764,"source_prediction_sha256":"0fe14948bfb0a679265e799a9e80d9bc47c4c9ca885d6be62055e145152b2c9d","ranges":{"vm":{"field":[-0.2728198766708374,128.81019592285156],"error":[2.2574422473553568e-05,528.0263061523438]},"u":{"field":[0.0024527956265956163,67.1346664428711],"error":[0.005524522624909878,5.185049057006836]}}},{"budget":6000,"actual_step":5950,"selection":"actualbest","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["MGN_REFERENCE-6000.bin.gz"],"sha256":"1989fd13f22bd99615d09cd012dc9eddbe05524838fb9222b903c1cd064dee5f"},"relative_U_L2":0.02104365183798123,"relative_VM_L2":0.21312116933057282,"source_prediction_sha256":"c9a656bb53ccca562a101e434067fab91fa0c47511f5f1a98c90b1d69752e749","ranges":{"vm":{"field":[-0.32075610756874084,133.12916564941406],"error":[0.00018124800408259034,527.316162109375]},"u":{"field":[0.017742587253451347,66.7998275756836],"error":[0.006184600293636322,4.814669609069824]}}}]},{"id":"HIST_PNFNO","name":"PointNet+FNO（历史56维）","parameters":982883,"loss":"56维历史输入与原历史训练目标，非本轮50维normalized MSE协议；独立历史参考","snapshots":[{"budget":6000,"actual_step":6000,"selection":"actualbest","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["HIST_PNFNO-6000.bin.gz"],"sha256":"52b1d61af6b05587250eeef53c119783486ffb69ebd1809affc90b8f8a519506"},"relative_U_L2":0.030846679587223643,"relative_VM_L2":0.24845566124945237,"source_prediction_sha256":"f1df2e29f9c2c368261f16bc8549721766e7cea04c6c5deb58ab7a590e0d06a2","ranges":{"vm":{"field":[-1.0506925582885742,87.43436431884766],"error":[8.531240382581018e-06,527.6719360351562]},"u":{"field":[0.011226141825318336,67.9942855834961],"error":[0.010948010720312595,3.9761102199554443]}}}]},{"id":"HIST_FNO","name":"FNO（历史56维）","parameters":982942,"loss":"56维历史输入与原历史训练目标，非本轮50维normalized MSE协议；独立历史参考","snapshots":[{"budget":6000,"actual_step":6000,"selection":"actualbest","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["HIST_FNO-6000.bin.gz"],"sha256":"7b558f2126920b3c38d8913dae42ae8279bb6ec78b3f830bfe66014f1bb87a10"},"relative_U_L2":0.02499460582296967,"relative_VM_L2":0.23964965762488194,"source_prediction_sha256":"d4c7e9f2cba3d0950e54522bd93cc4c019cf85b61841356097e1e6402f0dfc09","ranges":{"vm":{"field":[-1.2107399702072144,85.30775451660156],"error":[3.927249417756684e-05,522.4246826171875]},"u":{"field":[0.004521929658949375,66.81961822509766],"error":[0.003503939835354686,2.644240140914917]}}}]},{"id":"HIST_TS3","name":"TS3（历史56维）","parameters":982884,"loss":"56维历史输入与原历史训练目标，非本轮50维normalized MSE协议；独立历史参考","snapshots":[{"budget":6000,"actual_step":6000,"selection":"actualbest","arrays":{"dtype":"<f4","shape":[4,27730],"raw_bytes":443680,"parts":["HIST_TS3-6000.bin.gz"],"sha256":"71258b6ddd29f3391a8c266434fc4ef9c75d1ee230e485f4b5ade2857140cd55"},"relative_U_L2":0.014144373666846082,"relative_VM_L2":0.21714072155270545,"source_prediction_sha256":"ef5f115ed5c830d0bb85a407ea2343afed2a24b54c7a73ffcd833e87dd026d79","ranges":{"vm":{"field":[-0.21271242201328278,108.59400939941406],"error":[1.7348786059301347e-05,529.2822265625]},"u":{"field":[0.01582425646483898,66.63726806640625],"error":[0.001499281032010913,4.579579830169678]}}}]}],"neural_forwards":0,"new_FE_solves":0,"scope":"All original TRI6 surface nodes, no filtering, interpolation or new FE. Scalar displacement is vector norm; displacement error is norm of vector error. Full-volume metrics use all original nodes.","unavailable":[{"id":"WNO_ORIGINAL","name":"WNO 原配置","parameters":4591485,"reason":"原配置零步失败，没有预测输出；重跑配置见WNO_980K"},{"id":"GAOT_ORIGINAL","name":"GAOT 原配置","parameters":1587806,"reason":"原配置零步失败，没有预测输出；重跑配置见GAOT_980K"},{"id":"GeoFNO","name":"GeoFNO","reason":"原实现2D warp不适用于本3D算例"},{"id":"RIGNO","name":"RIGNO","reason":"原三角形预处理不适用于真四面体"},{"id":"CNO","name":"CNO","reason":"原实现仅1D/2D"}]}
+{
+  "schema": "m01_all_operator_saved_predictions_v1",
+  "sample_id": "normal_rodv2_0095__tension",
+  "native_nodes": 69290,
+  "surface_nodes": 27730,
+  "surface_triangles": 55464,
+  "geometry_center_mm": [
+    69.762660450306,
+    5.009326287108706e-13,
+    2.5002222514558525e-12
+  ],
+  "bounds_centered": [
+    [
+      -94.044488491467,
+      -36.880003826010494,
+      -13.3173045695725
+    ],
+    [
+      94.04448849146699,
+      36.880003826010494,
+      13.3173045695725
+    ]
+  ],
+  "arrays": {
+    "position": {
+      "dtype": "<f4",
+      "shape": [
+        27730,
+        3
+      ],
+      "raw_bytes": 332760,
+      "parts": [
+        "position.bin.gz"
+      ],
+      "sha256": "6cb9a27b99841aed6fdaf5f71fd1b0bf7864fbe7b51810dc5f628fece922b29a"
+    },
+    "triangles": {
+      "dtype": "<u4",
+      "shape": [
+        55464,
+        3
+      ],
+      "raw_bytes": 665568,
+      "parts": [
+        "triangles.bin.gz"
+      ],
+      "sha256": "f2e703796e1a8f9a410d2a63a0a53747ec33c663698407519a4c52ac1fea3fef"
+    },
+    "node_ids": {
+      "dtype": "<u4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "node_ids.bin.gz"
+      ],
+      "sha256": "6b41574550d3a9233f475be679357ef2dbd0f8b229e586722f5984f26c1dab68"
+    },
+    "vm_truth": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "vm_truth.bin.gz"
+      ],
+      "sha256": "4b7f85d819ab43c182031c967dff218076c16f8756cf8ca0e7c8adfd94175aba"
+    },
+    "u_truth": {
+      "dtype": "<f4",
+      "shape": [
+        27730
+      ],
+      "raw_bytes": 110920,
+      "parts": [
+        "u_truth.bin.gz"
+      ],
+      "sha256": "79d589f695e4bbb29adf3e2bac4c3c2bcea54fa0073551793d011d97df02108d"
+    }
+  },
+  "peak_A": {
+    "surface_index": 4075
+  },
+  "models": [
+    {
+      "id": "TRANSOLVER",
+      "name": "Transolver",
+      "parameters": 985156,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TRANSOLVER-2000.bin.gz"
+            ],
+            "sha256": "0b279cfa41c769234abcaa1afb344e934a06e9cf4273863c85b3014bbd425883"
+          },
+          "relative_U_L2": 0.02313673296687984,
+          "relative_VM_L2": 0.2275379422211304,
+          "source_prediction_sha256": "bee3099043e408ac90bcef7802b8aeb3f1ce15631970acb56baa9e5cf8f204a0",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.4643045961856842,
+                96.0298080444336
+              ],
+              "error": [
+                0.00012295294436626136,
+                529.052001953125
+              ]
+            },
+            "u": {
+              "field": [
+                0.09956807643175125,
+                65.8905029296875
+              ],
+              "error": [
+                0.007891885936260223,
+                3.8939661979675293
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TRANSOLVER-4000.bin.gz"
+            ],
+            "sha256": "48a7fd1ea462ec30f8786fe78d7cd01930d3ba67097a0d3683154daecf8b572d"
+          },
+          "relative_U_L2": 0.018796115819780922,
+          "relative_VM_L2": 0.22045470645459614,
+          "source_prediction_sha256": "589a7900b60df1290822da8bfbb823ff3d5fc0cfecfc85c78cc0b961273e617d",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.03621119633316994,
+                103.4922866821289
+              ],
+              "error": [
+                1.8819389424606925e-07,
+                529.0695190429688
+              ]
+            },
+            "u": {
+              "field": [
+                0.056065671145915985,
+                65.8415298461914
+              ],
+              "error": [
+                0.009263343177735806,
+                3.698704719543457
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TRANSOLVER-6000.bin.gz"
+            ],
+            "sha256": "09fec049c42f2f9804bba1bc9d0ea503a7e8ad6887cca0969b0d04f4ba099985"
+          },
+          "relative_U_L2": 0.016057721976284203,
+          "relative_VM_L2": 0.21766082684490054,
+          "source_prediction_sha256": "d8e69ef752bde122938ae0ca73758127d8d8181502bb3ea3f8e045f062608a15",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.02889648824930191,
+                109.48722076416016
+              ],
+              "error": [
+                1.3261607819003984e-05,
+                529.04296875
+              ]
+            },
+            "u": {
+              "field": [
+                0.02690085582435131,
+                65.91950225830078
+              ],
+              "error": [
+                0.011519728228449821,
+                2.811899423599243
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "TRANSOLVER_PP",
+      "name": "Transolver++",
+      "parameters": 858188,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TRANSOLVER_PP-2000.bin.gz"
+            ],
+            "sha256": "3800911c6740c21d66f51fc3dee6c838b2f9a8012bbb123131d5f32b76a6bc72"
+          },
+          "relative_U_L2": 0.023136651139255733,
+          "relative_VM_L2": 0.23254738290277394,
+          "source_prediction_sha256": "e458d500366f19980ad35c365ce2c05d6dbc8cf4ed6c0ff44c82c0b079f2c4e3",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.5638213753700256,
+                90.90050506591797
+              ],
+              "error": [
+                3.896186899510212e-05,
+                529.1201171875
+              ]
+            },
+            "u": {
+              "field": [
+                0.00793655589222908,
+                66.17993927001953
+              ],
+              "error": [
+                0.007348434533923864,
+                3.3939714431762695
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TRANSOLVER_PP-4000.bin.gz"
+            ],
+            "sha256": "d2dabe98a558daa8f0b7438d97e355926a1a4d1d5edbfebdc28ce4dae84b6534"
+          },
+          "relative_U_L2": 0.019326831169710647,
+          "relative_VM_L2": 0.22219904593208417,
+          "source_prediction_sha256": "be58d3f5991f2194ac89ceee06890c980beb707e3a4d704c7bd28fe764723762",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.14184357225894928,
+                99.8264389038086
+              ],
+              "error": [
+                3.648991696536541e-05,
+                529.031005859375
+              ]
+            },
+            "u": {
+              "field": [
+                0.027213657274842262,
+                66.01229095458984
+              ],
+              "error": [
+                0.016825564205646515,
+                3.4220306873321533
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TRANSOLVER_PP-6000.bin.gz"
+            ],
+            "sha256": "bad681304852c038f01b637f04304f524df9da88c3f3813981642c5d1fe73155"
+          },
+          "relative_U_L2": 0.01523884068175867,
+          "relative_VM_L2": 0.2181663236480468,
+          "source_prediction_sha256": "b745fcfcd0f1517ff088606d0f184a8e049ea100205ccbe980436aadace8a338",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.06488089263439178,
+                107.43193054199219
+              ],
+              "error": [
+                2.3752585548209026e-05,
+                529.1616821289062
+              ]
+            },
+            "u": {
+              "field": [
+                0.028431648388504982,
+                66.36177825927734
+              ],
+              "error": [
+                0.00816243514418602,
+                2.678995132446289
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "TFNO_R1",
+      "name": "TFNO",
+      "parameters": 514685,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TFNO_R1-2000.bin.gz"
+            ],
+            "sha256": "493d07c0335965614c3bdc21efd13ac0fe0c921cc42df5f08f8a667f4bcbf1a6"
+          },
+          "relative_U_L2": 0.0469874548583127,
+          "relative_VM_L2": 0.2527440244691208,
+          "source_prediction_sha256": "f1785ede9e8819b0f6f0434e4acfadbacdd03677c49a7bc32e6d61ddd1198744",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.8303574919700623,
+                90.40093994140625
+              ],
+              "error": [
+                0.0001475591561757028,
+                528.641845703125
+              ]
+            },
+            "u": {
+              "field": [
+                0.015127883292734623,
+                68.65885162353516
+              ],
+              "error": [
+                0.0018996999133378267,
+                5.807579517364502
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TFNO_R1-4000.bin.gz"
+            ],
+            "sha256": "ddc840ad4fa1eccecdcb509900b76c55a2085cae67c6fb792b741acc3005da8e"
+          },
+          "relative_U_L2": 0.04095367456994813,
+          "relative_VM_L2": 0.2471852460304515,
+          "source_prediction_sha256": "5b177bbd4ae07c71f332b28f471778d287111e6055a312c069885329e751032d",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.3183693289756775,
+                89.15574645996094
+              ],
+              "error": [
+                2.232215592812281e-05,
+                528.6764526367188
+              ]
+            },
+            "u": {
+              "field": [
+                0.01130143366754055,
+                68.123046875
+              ],
+              "error": [
+                0.01165859680622816,
+                5.207049369812012
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TFNO_R1-6000.bin.gz"
+            ],
+            "sha256": "c0e5292b0b3b0965b58e6055557a335634e56a1eef10b71533ae1656b0b1059d"
+          },
+          "relative_U_L2": 0.03387523204332473,
+          "relative_VM_L2": 0.24195217734766922,
+          "source_prediction_sha256": "475b9f8adbdc0f75fb01134b57bdb869344511122607d9d9bad501aeb5e90b96",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.15535441040992737,
+                89.49636840820312
+              ],
+              "error": [
+                9.13418443815317e-06,
+                528.70263671875
+              ]
+            },
+            "u": {
+              "field": [
+                0.03196970373392105,
+                67.8761978149414
+              ],
+              "error": [
+                0.011502623558044434,
+                4.0556960105896
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "UNO",
+      "name": "UNO",
+      "parameters": 7331021,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "UNO-2000.bin.gz"
+            ],
+            "sha256": "e121b6c21c50a6317bcae442d9fd3d8d8d01552f5a995ab3fb370e8c0e07fa18"
+          },
+          "relative_U_L2": 0.03528031869921301,
+          "relative_VM_L2": 0.22838168344544812,
+          "source_prediction_sha256": "ae20816d4df5913017053bdf0deebdd547a32c8a024d9966d3affeab80759304",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.6059495806694031,
+                94.37146759033203
+              ],
+              "error": [
+                4.678848199546337e-06,
+                528.9110717773438
+              ]
+            },
+            "u": {
+              "field": [
+                0.008445273153483868,
+                66.77056884765625
+              ],
+              "error": [
+                0.009360712952911854,
+                5.9674553871154785
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "UNO-4000.bin.gz"
+            ],
+            "sha256": "a3e572f3154dd1d19282e772310af6a8a5769440e7634a9b7cf585baee330c92"
+          },
+          "relative_U_L2": 0.03180946390529762,
+          "relative_VM_L2": 0.22626998909779156,
+          "source_prediction_sha256": "ca95bb44dd50378ef32e679610a4286561fcf5ab9b34dbb824f7a12958a5a86f",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.7631202936172485,
+                96.9095687866211
+              ],
+              "error": [
+                5.17401349497959e-05,
+                528.7247314453125
+              ]
+            },
+            "u": {
+              "field": [
+                0.01248020026832819,
+                66.53214263916016
+              ],
+              "error": [
+                0.0071197254583239555,
+                6.900373935699463
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "UNO-6000.bin.gz"
+            ],
+            "sha256": "07bd3c915aa0e673a5cae98fc9fa24fcd71898f81bdf026db446d7c0d360f0dc"
+          },
+          "relative_U_L2": 0.027459984745578397,
+          "relative_VM_L2": 0.2244076110652635,
+          "source_prediction_sha256": "3f80b840d833eb242111203ba16b3b531b0ad605644bc9271edb81925e65aa7b",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.8311659693717957,
+                98.95362091064453
+              ],
+              "error": [
+                3.000598371727392e-05,
+                528.6074829101562
+              ]
+            },
+            "u": {
+              "field": [
+                0.004077834542840719,
+                66.53296661376953
+              ],
+              "error": [
+                0.006440290715545416,
+                6.615262508392334
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "DEEPONET",
+      "name": "DEEPONET",
+      "parameters": 419332,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "DEEPONET-2000.bin.gz"
+            ],
+            "sha256": "d97823efe798df9212565621f1fb877588df5ac23bd09ff8ab75424cfab34d2a"
+          },
+          "relative_U_L2": 0.09842708661598935,
+          "relative_VM_L2": 0.3567226745224011,
+          "source_prediction_sha256": "0a39b923e6d3ffb2be9ab0eccfec1c3bf3351650c8815a7dc46503f6a3f7b39d",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.8320031762123108,
+                54.403255462646484
+              ],
+              "error": [
+                9.69998154687346e-07,
+                529.3890380859375
+              ]
+            },
+            "u": {
+              "field": [
+                0.007168111391365528,
+                67.84912109375
+              ],
+              "error": [
+                0.005441191606223583,
+                10.791280746459961
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "DEEPONET-4000.bin.gz"
+            ],
+            "sha256": "5a7537e62a3c8b0d0827735ca557f7c330d16946317ada2de12238d9c301bc6f"
+          },
+          "relative_U_L2": 0.08119800783817165,
+          "relative_VM_L2": 0.3489682575256459,
+          "source_prediction_sha256": "9eaee717b8a8a8c7d39285e34ef9642d272ebf1c3b02637710bd50c5d2e2ca38",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.4551082849502563,
+                54.60285568237305
+              ],
+              "error": [
+                3.108246744432108e-07,
+                529.2310791015625
+              ]
+            },
+            "u": {
+              "field": [
+                0.0030741277150809765,
+                72.20819854736328
+              ],
+              "error": [
+                0.007796365302056074,
+                8.322152137756348
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "DEEPONET-6000.bin.gz"
+            ],
+            "sha256": "622489dba4613e2721a90f8026fb4a25d72ad13ef44f98772bc78a5c01cc9687"
+          },
+          "relative_U_L2": 0.0567391480202716,
+          "relative_VM_L2": 0.3220726206087805,
+          "source_prediction_sha256": "a78814124811140fc3a5512760bb3088958ae96cb34fddd05c5520868009af46",
+          "ranges": {
+            "vm": {
+              "field": [
+                -2.19252872467041,
+                57.87119674682617
+              ],
+              "error": [
+                2.8521988497232087e-05,
+                528.966796875
+              ]
+            },
+            "u": {
+              "field": [
+                0.012929093092679977,
+                69.83743286132812
+              ],
+              "error": [
+                0.0072061894461512566,
+                6.4503912925720215
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "GNOT",
+      "name": "GNOT",
+      "parameters": 3877268,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNOT-2000.bin.gz"
+            ],
+            "sha256": "48db08f771965defcaf55b45fcc25ef5b565ce2b5e42a95c6269e7a2c340977b"
+          },
+          "relative_U_L2": 0.01889081547982322,
+          "relative_VM_L2": 0.21779321681849284,
+          "source_prediction_sha256": "796dc8520ee250ea5daf72dc9ac32145f66ee316454a4efaae52d1b98b46c1c9",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.4483623802661896,
+                99.9968490600586
+              ],
+              "error": [
+                5.776649913968868e-07,
+                529.0125122070312
+              ]
+            },
+            "u": {
+              "field": [
+                0.01618630811572075,
+                66.29668426513672
+              ],
+              "error": [
+                0.0032409997656941414,
+                3.322087287902832
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNOT-4000.bin.gz"
+            ],
+            "sha256": "9a048d7949aa44f83929c0fc5203f260598c4c5b16a8e45c499be1d750de72ef"
+          },
+          "relative_U_L2": 0.01640012141857154,
+          "relative_VM_L2": 0.21610142071041877,
+          "source_prediction_sha256": "6f1b86908d7d74026e4a42a27513481a1b56b08168bd04ca50f25965a2ed28b1",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.4462520480155945,
+                104.55935668945312
+              ],
+              "error": [
+                4.147986328462139e-05,
+                528.92138671875
+              ]
+            },
+            "u": {
+              "field": [
+                0.023684276267886162,
+                66.27677154541016
+              ],
+              "error": [
+                0.0015023007290437818,
+                3.2049012184143066
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNOT-6000.bin.gz"
+            ],
+            "sha256": "7ea338555270ea5b9aafdc4687200e102a4ca47cd9f73a42d5dbafbcf3a366ab"
+          },
+          "relative_U_L2": 0.014160637187251185,
+          "relative_VM_L2": 0.2143865478786901,
+          "source_prediction_sha256": "54ab595e9d9758984799850db948b3d5a562c8fd70b32048ab5cd2e5af51a8ff",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.5444639325141907,
+                112.59642791748047
+              ],
+              "error": [
+                8.94268032425316e-06,
+                528.8424682617188
+              ]
+            },
+            "u": {
+              "field": [
+                0.014490971341729164,
+                66.05219268798828
+              ],
+              "error": [
+                0.0037298761308193207,
+                2.4980063438415527
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ONO",
+      "name": "ONO",
+      "parameters": 1608452,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "ONO-2000.bin.gz"
+            ],
+            "sha256": "95ce33174756bf5beb6db00571804ffc829a7b15cc8bd1786fcf8cbb07f7ffd7"
+          },
+          "relative_U_L2": 0.9429525294839596,
+          "relative_VM_L2": 1.0903255583303872,
+          "source_prediction_sha256": "d8c62dbb0bc09483523836c6580297d74ecf0a0e0b7dfd1ba5e6d75fd1ab58b6",
+          "ranges": {
+            "vm": {
+              "field": [
+                39.830020904541016,
+                40.05126190185547
+              ],
+              "error": [
+                0.002488509751856327,
+                490.5792236328125
+              ]
+            },
+            "u": {
+              "field": [
+                2.9969773292541504,
+                3.558863401412964
+              ],
+              "error": [
+                1.1174874305725098,
+                62.9468879699707
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "ONO-4000.bin.gz"
+            ],
+            "sha256": "af85a3507406f506d2c8e743c12db803961922dbb5e0b6de6cfeac1e5825f022"
+          },
+          "relative_U_L2": 0.9993150699800842,
+          "relative_VM_L2": 1.0090308457938681,
+          "source_prediction_sha256": "92977d1db327acdc8b73edb36b015d9eb2dd5a7a7975c274fbddd2483b14124c",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.47032707929611206,
+                -0.40767303109169006
+              ],
+              "error": [
+                0.43468302488327026,
+                530.8388671875
+              ]
+            },
+            "u": {
+              "field": [
+                0.6025140285491943,
+                0.6109350919723511
+              ],
+              "error": [
+                0.1825699657201767,
+                65.74505615234375
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "ONO-6000.bin.gz"
+            ],
+            "sha256": "a995f275a0a70b2ff9583fb7192b5ef397a1aa05faa28f970cf73dee046d79f1"
+          },
+          "relative_U_L2": 0.9711178231367752,
+          "relative_VM_L2": 1.0230194715514584,
+          "source_prediction_sha256": "661affd6a0284fbbc51b845ef92e35f9d3b61875c9bf86e2f35658a981cf93b6",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.0383987426757812,
+                -1.0328748226165771
+              ],
+              "error": [
+                1.0530003309249878,
+                531.4512939453125
+              ]
+            },
+            "u": {
+              "field": [
+                1.3632042407989502,
+                1.3718794584274292
+              ],
+              "error": [
+                0.11531554162502289,
+                64.4762191772461
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "GNO",
+      "name": "GNO",
+      "parameters": 32740,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNO-2000.bin.gz"
+            ],
+            "sha256": "8bd257335f9000d5b73f80edea8498d45b584ddcc9259619a3db424414976f40"
+          },
+          "relative_U_L2": 0.10865402952596492,
+          "relative_VM_L2": 0.34513419474151563,
+          "source_prediction_sha256": "8f081d3593c37d12f97831a092f313fa8a1291031abeab6d137f85b98f3a1e8a",
+          "ranges": {
+            "vm": {
+              "field": [
+                -2.623952627182007,
+                57.66685104370117
+              ],
+              "error": [
+                8.705654181540012e-05,
+                528.956787109375
+              ]
+            },
+            "u": {
+              "field": [
+                0.04777013510465622,
+                64.67186737060547
+              ],
+              "error": [
+                0.02374385856091976,
+                11.199292182922363
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNO-4000.bin.gz"
+            ],
+            "sha256": "86d3bc629b9d3cc978a4dcc09e92a29949fea12175e3a3cf66ee0af478714d82"
+          },
+          "relative_U_L2": 0.10624788309470094,
+          "relative_VM_L2": 0.3362893206467236,
+          "source_prediction_sha256": "8f78fe352117ace449830bbbf68dbc30bcdee89a997758f3782c37a837187543",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.8825284242630005,
+                58.88347625732422
+              ],
+              "error": [
+                0.0002590616059023887,
+                528.8717041015625
+              ]
+            },
+            "u": {
+              "field": [
+                0.07820559293031693,
+                64.24891662597656
+              ],
+              "error": [
+                0.02453659661114216,
+                9.91182804107666
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNO-6000.bin.gz"
+            ],
+            "sha256": "77d2723852f9a02ec53b8ff2d915a209a3d7dcbc8cbc3cef9bcbb09a1329ec5b"
+          },
+          "relative_U_L2": 0.0954310693123623,
+          "relative_VM_L2": 0.30745294879066043,
+          "source_prediction_sha256": "6effd98e9d3c4735bf5b772bf7e6f4cd56fe88eb97a2429a13e0cab00b7e5977",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.4982715845108032,
+                64.1597671508789
+              ],
+              "error": [
+                9.366889571538195e-06,
+                528.5711059570312
+              ]
+            },
+            "u": {
+              "field": [
+                0.022199660539627075,
+                65.9313735961914
+              ],
+              "error": [
+                0.029756687581539154,
+                9.419905662536621
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "GINO",
+      "name": "GINO",
+      "parameters": 1616150,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GINO-2000.bin.gz"
+            ],
+            "sha256": "04aaab3343c534383ac539fef6ce3f825308870c7965f991dd4920457e142d0b"
+          },
+          "relative_U_L2": 0.10086907678340483,
+          "relative_VM_L2": 0.298570424796139,
+          "source_prediction_sha256": "73a53023542364995d1ad019bb5c89ec2c8f4e039da7db7f17d649f3af15361d",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.823353886604309,
+                72.97198486328125
+              ],
+              "error": [
+                2.1119712982908823e-05,
+                527.4762573242188
+              ]
+            },
+            "u": {
+              "field": [
+                0.03546176478266716,
+                78.62857055664062
+              ],
+              "error": [
+                0.015347561798989773,
+                25.57529640197754
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GINO-4000.bin.gz"
+            ],
+            "sha256": "afa5911fd2435bc508f562aeecbebb6f173652e5922b81d9e9e130dce9c30be1"
+          },
+          "relative_U_L2": 0.09679493018557797,
+          "relative_VM_L2": 0.29145796275381514,
+          "source_prediction_sha256": "72a355c1be04c9e41dcdb4da73122e67e6b86ebba02bc8b5715c6e290574a5cd",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.729111671447754,
+                74.74815368652344
+              ],
+              "error": [
+                1.3811082681058906e-05,
+                527.154541015625
+              ]
+            },
+            "u": {
+              "field": [
+                0.014354287646710873,
+                78.6222915649414
+              ],
+              "error": [
+                0.016373811289668083,
+                23.962316513061523
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GINO-6000.bin.gz"
+            ],
+            "sha256": "f550724d77568ac87d9d77ec8f16aaa350642514520563a8a0a6eb6adf3aec87"
+          },
+          "relative_U_L2": 0.09056889824386699,
+          "relative_VM_L2": 0.2835280654798988,
+          "source_prediction_sha256": "5a6bcc661b04a3ae6b8099c2572db50979ad5b87039831aa8f7706a7ec9db4d5",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.125332236289978,
+                76.99455261230469
+              ],
+              "error": [
+                4.594492565956898e-05,
+                527.24169921875
+              ]
+            },
+            "u": {
+              "field": [
+                0.012644153088331223,
+                78.32170104980469
+              ],
+              "error": [
+                0.01349515188485384,
+                21.92586326599121
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "FNOGNO",
+      "name": "FNOGNO",
+      "parameters": 1619588,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "FNOGNO-2000.bin.gz"
+            ],
+            "sha256": "14feabc377fc10429ee005b33afc3b854b90cbe52372317fe12cac168a6d8b7a"
+          },
+          "relative_U_L2": 0.0982014315593022,
+          "relative_VM_L2": 0.29457277811043625,
+          "source_prediction_sha256": "0b726ba0264fb2e79c0136ad5344588393e9ca5ec86466745babe91882c42005",
+          "ranges": {
+            "vm": {
+              "field": [
+                -2.4565420150756836,
+                77.40475463867188
+              ],
+              "error": [
+                1.3903977560403291e-05,
+                529.1593627929688
+              ]
+            },
+            "u": {
+              "field": [
+                0.020919596776366234,
+                77.56050872802734
+              ],
+              "error": [
+                0.01938106119632721,
+                22.809341430664062
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "FNOGNO-4000.bin.gz"
+            ],
+            "sha256": "4c4e4abd4a4109374e57bfe1cab814d4bdf91bcd0e6bafc765fce468699990ee"
+          },
+          "relative_U_L2": 0.09609204523783027,
+          "relative_VM_L2": 0.28447336364765724,
+          "source_prediction_sha256": "d648d6bb3dea0a7e2dfd13791652d0db8ad275ba6233ca02b60da6d08899e925",
+          "ranges": {
+            "vm": {
+              "field": [
+                -2.74897837638855,
+                79.00035095214844
+              ],
+              "error": [
+                4.5637774746865034e-05,
+                528.9133911132812
+              ]
+            },
+            "u": {
+              "field": [
+                0.044784851372241974,
+                77.7255630493164
+              ],
+              "error": [
+                0.01815631613135338,
+                23.075790405273438
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "FNOGNO-6000.bin.gz"
+            ],
+            "sha256": "156e31cc11c9f645f44309838c81c346446cd5b81585aa2245e42d295f5ed693"
+          },
+          "relative_U_L2": 0.09117372729073431,
+          "relative_VM_L2": 0.2752026370916909,
+          "source_prediction_sha256": "9496cf8cdfe05208a5b88f35ce8d6fbe7add0aca42ec12dcc61af0af031ff963",
+          "ranges": {
+            "vm": {
+              "field": [
+                -2.7793824672698975,
+                80.48062896728516
+              ],
+              "error": [
+                7.7586475526914e-05,
+                528.883544921875
+              ]
+            },
+            "u": {
+              "field": [
+                0.037400394678115845,
+                77.14048767089844
+              ],
+              "error": [
+                0.010015755891799927,
+                21.475841522216797
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "GINOT",
+      "name": "GINOT",
+      "parameters": 2862917,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GINOT-2000.bin.gz"
+            ],
+            "sha256": "62b363db69c0677ddf1d443a22a69174e50980f32b97ae04b20711528169fd57"
+          },
+          "relative_U_L2": 0.07034065101296924,
+          "relative_VM_L2": 0.22491339588042808,
+          "source_prediction_sha256": "2642266168ea42d201e92d8f0f722170095556b29984972ae33c71b70ee80c35",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.5460224747657776,
+                103.75164031982422
+              ],
+              "error": [
+                2.765828321571462e-05,
+                529.1206665039062
+              ]
+            },
+            "u": {
+              "field": [
+                0.20601384341716766,
+                70.51020812988281
+              ],
+              "error": [
+                0.009821278974413872,
+                10.897047996520996
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GINOT-4000.bin.gz"
+            ],
+            "sha256": "6cab78335f2a056efb00e6f3e5e8065c90300df8a2d5a16e23a26f4836a19feb"
+          },
+          "relative_U_L2": 0.04686112825058563,
+          "relative_VM_L2": 0.22099746799831355,
+          "source_prediction_sha256": "e7f0acd15a542a8743bb30e74e141608db39e8c4eb0403f08c13c37d3b44f2ef",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.23829339444637299,
+                110.08316802978516
+              ],
+              "error": [
+                1.1829173672595061e-05,
+                528.96630859375
+              ]
+            },
+            "u": {
+              "field": [
+                0.0809093564748764,
+                69.96798706054688
+              ],
+              "error": [
+                0.007001542020589113,
+                7.6206769943237305
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GINOT-6000.bin.gz"
+            ],
+            "sha256": "c54c6bc7ab642ba3aba2db6c8c8cd47f1ec26c6db3d4e174d7cd71b2c7554edc"
+          },
+          "relative_U_L2": 0.03669073384109352,
+          "relative_VM_L2": 0.21866278864667046,
+          "source_prediction_sha256": "725d72540d8226eca1eccac5685da39c5a4275fcb527bd2df290ec6ac54dd3d7",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.04267222434282303,
+                115.64564514160156
+              ],
+              "error": [
+                1.21869015856646e-05,
+                528.747314453125
+              ]
+            },
+            "u": {
+              "field": [
+                0.04855837672948837,
+                69.60076904296875
+              ],
+              "error": [
+                0.004311191849410534,
+                6.395899295806885
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "PCNO",
+      "name": "PCNO",
+      "parameters": 3008996,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "PCNO-2000.bin.gz"
+            ],
+            "sha256": "3276bab242b289b834c88515dd30172bbbf8128ca8c70e0292b82e425f373bee"
+          },
+          "relative_U_L2": 0.051445755953594824,
+          "relative_VM_L2": 0.23213324998729595,
+          "source_prediction_sha256": "eceb20bfa72147dee3471cdea62df33aaee306e25fd9278091a18fed809309cf",
+          "ranges": {
+            "vm": {
+              "field": [
+                -2.59714412689209,
+                80.9605712890625
+              ],
+              "error": [
+                9.451709047425538e-06,
+                526.2448120117188
+              ]
+            },
+            "u": {
+              "field": [
+                0.02860008180141449,
+                69.50579833984375
+              ],
+              "error": [
+                0.007036659866571426,
+                31.194921493530273
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "PCNO-4000.bin.gz"
+            ],
+            "sha256": "9b94d4e0f3bb2e69c364eacea65fffaaa3b195e8914b2d6c11c61e733396bb39"
+          },
+          "relative_U_L2": 0.04582806118305976,
+          "relative_VM_L2": 0.22824707053651141,
+          "source_prediction_sha256": "9d9f4ba35e6f361bc7daf96e6dc51ba037a5aae0078ff94d212488f411003672",
+          "ranges": {
+            "vm": {
+              "field": [
+                -3.128148317337036,
+                82.81134033203125
+              ],
+              "error": [
+                4.175567300990224e-05,
+                525.1986083984375
+              ]
+            },
+            "u": {
+              "field": [
+                0.01695072278380394,
+                68.54792022705078
+              ],
+              "error": [
+                0.01849578134715557,
+                31.10514259338379
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "PCNO-6000.bin.gz"
+            ],
+            "sha256": "281eb01fc1f40ac6f1dbfc3f5877846925dc9a05d6a66c56c7e7f7d9869a555f"
+          },
+          "relative_U_L2": 0.040858682927670954,
+          "relative_VM_L2": 0.22462133423706063,
+          "source_prediction_sha256": "b4707a4a327adf9ad6ca19e97d20ea8e1804c0e2a8dac327d7d2001f23aaa085",
+          "ranges": {
+            "vm": {
+              "field": [
+                -2.761425018310547,
+                85.5863037109375
+              ],
+              "error": [
+                1.7879252482089214e-05,
+                522.5703735351562
+              ]
+            },
+            "u": {
+              "field": [
+                0.02534734271466732,
+                68.35939025878906
+              ],
+              "error": [
+                0.014072286896407604,
+                28.828664779663086
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "LSM",
+      "name": "LSM",
+      "parameters": 937661,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "LSM-2000.bin.gz"
+            ],
+            "sha256": "1245a592ba1c628e87bf05c7a922a798f0a0a36a7cdb46f3e78222a874cc2cdf"
+          },
+          "relative_U_L2": 0.26137214471516146,
+          "relative_VM_L2": 0.3529389279888264,
+          "source_prediction_sha256": "f0de961f4c03d66893119219a48dbe542aa331e5dca727bdbb3bc904e713e80b",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.49296092987060547,
+                101.41365814208984
+              ],
+              "error": [
+                6.20834543951787e-05,
+                529.92724609375
+              ]
+            },
+            "u": {
+              "field": [
+                0.023269983008503914,
+                51.06627655029297
+              ],
+              "error": [
+                0.005866481456905603,
+                21.548734664916992
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "LSM-4000.bin.gz"
+            ],
+            "sha256": "8a9f3f836867565020f4d2a43de7929eda11d8f24572ce7e6344582af1200b2c"
+          },
+          "relative_U_L2": 0.3355149486995492,
+          "relative_VM_L2": 0.40525704366178883,
+          "source_prediction_sha256": "9cd2cb6c6ba82714cddfe4ec661b9bdd0a68061e1a758f6cc626f06635f201d1",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.41456982493400574,
+                104.86624145507812
+              ],
+              "error": [
+                0.00015546563372481614,
+                529.8329467773438
+              ]
+            },
+            "u": {
+              "field": [
+                0.013342790305614471,
+                47.94852066040039
+              ],
+              "error": [
+                0.004399049561470747,
+                26.588125228881836
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "LSM-6000.bin.gz"
+            ],
+            "sha256": "782e92ec0cbb35047b053a88c46120b8e8b30bdb0f160c05cc316f2580d5e45e"
+          },
+          "relative_U_L2": 0.34345786496322167,
+          "relative_VM_L2": 0.4346073775437332,
+          "source_prediction_sha256": "1a0449d76226958e6968a721efd539a4535f9dcccdb9f35a55ee888c2dc8ef3c",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.4321298599243164,
+                115.64974975585938
+              ],
+              "error": [
+                6.24256645096466e-05,
+                529.950927734375
+              ]
+            },
+            "u": {
+              "field": [
+                0.009428010322153568,
+                47.74713897705078
+              ],
+              "error": [
+                0.009082180447876453,
+                28.42371940612793
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "OFORMER",
+      "name": "OFormer",
+      "parameters": 1363588,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "OFORMER-2000.bin.gz"
+            ],
+            "sha256": "4c5e165f74e2d2af08c7d06135b9f80501fc950274264d04da59d4dd33865cf0"
+          },
+          "relative_U_L2": 0.016680947571402448,
+          "relative_VM_L2": 0.21821463501684815,
+          "source_prediction_sha256": "e6e80df6b2648d3827760c259e8458bbc628d2aa987a109a5f30537b549997dc",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.44762882590293884,
+                110.46052551269531
+              ],
+              "error": [
+                7.66209777793847e-05,
+                528.7200317382812
+              ]
+            },
+            "u": {
+              "field": [
+                0.031493548303842545,
+                66.09293365478516
+              ],
+              "error": [
+                0.003999585751444101,
+                3.028855323791504
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "OFORMER-4000.bin.gz"
+            ],
+            "sha256": "08c7b0dcec154a98b38641e21e8503858a3178c9f2930734177f96b18ce8ccea"
+          },
+          "relative_U_L2": 0.01429114998065286,
+          "relative_VM_L2": 0.21635488905139064,
+          "source_prediction_sha256": "e5004f26765f487609f79cee5301080a5678189a3eef00f8cad99d1e22799b6a",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.423917293548584,
+                115.02806854248047
+              ],
+              "error": [
+                4.149569576838985e-05,
+                528.6698608398438
+              ]
+            },
+            "u": {
+              "field": [
+                0.016895389184355736,
+                66.02166748046875
+              ],
+              "error": [
+                0.00432013813406229,
+                2.168131113052368
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "OFORMER-6000.bin.gz"
+            ],
+            "sha256": "8fd79952bd93ffb1963d30f2dd3c61c80b2cea639fa5cb0c1d97f2882b41c635"
+          },
+          "relative_U_L2": 0.012008937699281522,
+          "relative_VM_L2": 0.21505161308449197,
+          "source_prediction_sha256": "9b0936ad029b3c2f0992e5c7db19cab747f27005a60a8295719416732859bbe2",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.49546635150909424,
+                115.15289306640625
+              ],
+              "error": [
+                6.477423448814079e-05,
+                528.5750122070312
+              ]
+            },
+            "u": {
+              "field": [
+                0.005003690719604492,
+                66.0343246459961
+              ],
+              "error": [
+                0.0038283467292785645,
+                1.5557780265808105
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "OFORMER_1M",
+      "name": "OFormer_1M",
+      "parameters": 991359,
+      "loss": "normalized MSE；50维输入；width109，原forward不变",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "OFORMER_1M-2000.bin.gz"
+            ],
+            "sha256": "8af52884fdc7e3c26a64d57e6aa6d715deb62bfae560ba76b0f226f35d2968ba"
+          },
+          "relative_U_L2": 0.016961297713449515,
+          "relative_VM_L2": 0.2181512913291308,
+          "source_prediction_sha256": "89c03f94cc4446bfe1d52b3dccd86971e186b30232a172c24dc3eb50eedafc54",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.7042196393013,
+                112.42523193359375
+              ],
+              "error": [
+                5.9166982282476965e-06,
+                528.5618896484375
+              ]
+            },
+            "u": {
+              "field": [
+                0.009333491325378418,
+                65.84403228759766
+              ],
+              "error": [
+                0.008504677563905716,
+                2.2928991317749023
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "OFORMER_1M-4000.bin.gz"
+            ],
+            "sha256": "3e6a2b44b093469702541fbec2d0dbb69b65d33fff636b93908e18ddb11afc53"
+          },
+          "relative_U_L2": 0.014330548075062424,
+          "relative_VM_L2": 0.21642417487864324,
+          "source_prediction_sha256": "d61053645fd044fdb2986de87232ea57491793d04e6839df66c79f636f24f7ef",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.6392878293991089,
+                116.09339904785156
+              ],
+              "error": [
+                1.6883006537682377e-05,
+                528.62548828125
+              ]
+            },
+            "u": {
+              "field": [
+                0.007134887855499983,
+                65.8717041015625
+              ],
+              "error": [
+                0.005243521183729172,
+                1.782278299331665
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "OFORMER_1M-6000.bin.gz"
+            ],
+            "sha256": "074a77525d782e734ad49f84be00c39ca26c75c686c4a1574a68f93d77228597"
+          },
+          "relative_U_L2": 0.012191864896922928,
+          "relative_VM_L2": 0.21510051459164725,
+          "source_prediction_sha256": "823018efe0eda108824b32d205ad80e55990fb78f31ded890f73974e1d0a2c1c",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.6547408699989319,
+                115.74034118652344
+              ],
+              "error": [
+                5.626197162200697e-05,
+                528.6129150390625
+              ]
+            },
+            "u": {
+              "field": [
+                0.01638314127922058,
+                65.94558715820312
+              ],
+              "error": [
+                0.004185949917882681,
+                1.7221935987472534
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "TS3_MSE",
+      "name": "TS3 MSE",
+      "parameters": 981348,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TS3_MSE-2000.bin.gz"
+            ],
+            "sha256": "d754e1ce677bdb497e9f63682933610981a43862469efd31642024c3e7ebb6c1"
+          },
+          "relative_U_L2": 0.022019498184467103,
+          "relative_VM_L2": 0.22761783941606967,
+          "source_prediction_sha256": "212a814d54a408e01c27863d96bab10d1c590d16829e5923a40d3e10298e517f",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.3767264783382416,
+                97.14387512207031
+              ],
+              "error": [
+                7.434852886945009e-05,
+                529.349365234375
+              ]
+            },
+            "u": {
+              "field": [
+                0.011636351235210896,
+                66.93143463134766
+              ],
+              "error": [
+                0.0023487438447773457,
+                3.893622636795044
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TS3_MSE-4000.bin.gz"
+            ],
+            "sha256": "e9d5742e176d07e6d6f3e09de486296760a1a10887a97d36cfb5abf785302829"
+          },
+          "relative_U_L2": 0.01784578810888474,
+          "relative_VM_L2": 0.21920338898097766,
+          "source_prediction_sha256": "8ae9aff3168e4f05a181aa519bd999bb7b26621265b71818de0dcb3e772b6e43",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.1044943779706955,
+                105.91877746582031
+              ],
+              "error": [
+                4.924372842651792e-05,
+                529.2513427734375
+              ]
+            },
+            "u": {
+              "field": [
+                0.006850616540759802,
+                67.32389068603516
+              ],
+              "error": [
+                0.0029865065589547157,
+                3.47202730178833
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "TS3_MSE-6000.bin.gz"
+            ],
+            "sha256": "b2ef71a6f50537c352ca54c4c9366a692054102923b6869ef1401501e3285a4c"
+          },
+          "relative_U_L2": 0.01484476614528626,
+          "relative_VM_L2": 0.21726203662201596,
+          "source_prediction_sha256": "cd6d179937be2a681d5e6472e2f143b326ce3975c3f1fc6977160f770e393fa0",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.11803501099348068,
+                110.44625854492188
+              ],
+              "error": [
+                2.1303176254150458e-06,
+                529.2552490234375
+              ]
+            },
+            "u": {
+              "field": [
+                0.0029531531035900116,
+                66.76058197021484
+              ],
+              "error": [
+                0.0035934424959123135,
+                3.4549975395202637
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "FNO_MSE_M07",
+      "name": "FNO M07",
+      "parameters": 981310,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "FNO_MSE_M07-2000.bin.gz"
+            ],
+            "sha256": "076f5a31d35e0ecb01bb74dfcfc4ad9a5771073c00e1b0db0f57b9de4955f526"
+          },
+          "relative_U_L2": 0.03148680737296519,
+          "relative_VM_L2": 0.2574952987850453,
+          "source_prediction_sha256": "f33b8ea5982d2d5db5faa46a7a1207a65eec86dae8b38964df66c5b281864d88",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.9548696875572205,
+                87.02201843261719
+              ],
+              "error": [
+                6.497135927929776e-06,
+                524.4993896484375
+              ]
+            },
+            "u": {
+              "field": [
+                0.020919008180499077,
+                66.57703399658203
+              ],
+              "error": [
+                0.01677999645471573,
+                4.589378833770752
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "FNO_MSE_M07-4000.bin.gz"
+            ],
+            "sha256": "557b343d84a44eee29d1a9e6f8c1b8db96064fb2d561fb7a06014963e6290b46"
+          },
+          "relative_U_L2": 0.028350452598349393,
+          "relative_VM_L2": 0.25279453834258026,
+          "source_prediction_sha256": "978184429633fd86968f85d893fa45aa5dd66dd97e0d900fb904bf038e14cdcb",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.1944003105163574,
+                87.95674896240234
+              ],
+              "error": [
+                1.6827720173751004e-05,
+                522.9520874023438
+              ]
+            },
+            "u": {
+              "field": [
+                0.022653302177786827,
+                66.83454132080078
+              ],
+              "error": [
+                0.013914915733039379,
+                3.8800771236419678
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "FNO_MSE_M07-6000.bin.gz"
+            ],
+            "sha256": "b05d8c102eb655f646ed24921c118610b73e251385aac3fb03840ac9e5673955"
+          },
+          "relative_U_L2": 0.025076384454199435,
+          "relative_VM_L2": 0.24695097304084704,
+          "source_prediction_sha256": "12658ea260d1a79df11a18545c3cbb1f3c6867ec3c4296392cf264a30394f78b",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.3269848823547363,
+                86.88956451416016
+              ],
+              "error": [
+                1.3692897482542321e-05,
+                520.9196166992188
+              ]
+            },
+            "u": {
+              "field": [
+                0.016712939366698265,
+                67.15424346923828
+              ],
+              "error": [
+                0.016016338020563126,
+                2.899116277694702
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "GNO_1M",
+      "name": "GNO_1M",
+      "parameters": 1002885,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNO_1M-2000.bin.gz"
+            ],
+            "sha256": "c40fabf8dc43f66ec042ef073e7cd2afe24169af3db38c0c823820248d22e325"
+          },
+          "relative_U_L2": 0.0346636805096179,
+          "relative_VM_L2": 0.2554197960149545,
+          "source_prediction_sha256": "62f85ca38956afc13d9dbdf476d4d5e69014f329480b1666b73768ab676155fb",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.1837773323059082,
+                77.0418930053711
+              ],
+              "error": [
+                4.963067112839781e-05,
+                527.0995483398438
+              ]
+            },
+            "u": {
+              "field": [
+                0.03634963929653168,
+                68.16456604003906
+              ],
+              "error": [
+                0.007919789291918278,
+                3.7858405113220215
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNO_1M-4000.bin.gz"
+            ],
+            "sha256": "2189010046bd03fa6e6022329c27e8f84b0569e7059ec145d5baa4d0cf316267"
+          },
+          "relative_U_L2": 0.03173256382741077,
+          "relative_VM_L2": 0.24843942650945144,
+          "source_prediction_sha256": "6101c1ba1c6ee892bb102e92ec7e9b3cee047485d6e15fdbd654efc14e77ac69",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.4027657508850098,
+                77.9365234375
+              ],
+              "error": [
+                6.61037029203726e-06,
+                526.7838745117188
+              ]
+            },
+            "u": {
+              "field": [
+                0.01617465168237686,
+                67.31317901611328
+              ],
+              "error": [
+                0.023855939507484436,
+                3.7042014598846436
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "GNOT_1M",
+      "name": "GNOT_1M",
+      "parameters": 984276,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNOT_1M-2000.bin.gz"
+            ],
+            "sha256": "369a5d326fc4061653030693947ed60809d052454720833b4bf31301f0ebc023"
+          },
+          "relative_U_L2": 0.02743193653647737,
+          "relative_VM_L2": 0.22530269429066271,
+          "source_prediction_sha256": "5a58db09c33526d96ba7ca7376ba8055c727f122d5e4cdca0bd43c99a9b56a3a",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.04751167818903923,
+                97.21012115478516
+              ],
+              "error": [
+                7.422589078487363e-06,
+                528.7257690429688
+              ]
+            },
+            "u": {
+              "field": [
+                0.011358074843883514,
+                66.71306610107422
+              ],
+              "error": [
+                0.018194109201431274,
+                3.6769142150878906
+              ]
+            }
+          }
+        },
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNOT_1M-4000.bin.gz"
+            ],
+            "sha256": "eb2e42e810ce42b61a7c7f9f5c5ae25650198d4b5c808fcdcd9bc286b78bce49"
+          },
+          "relative_U_L2": 0.02626953282581793,
+          "relative_VM_L2": 0.21982782235999604,
+          "source_prediction_sha256": "416002d276265446a4e70c51d4e1b1386f16371a44f88987afe9d78d7026e907",
+          "ranges": {
+            "vm": {
+              "field": [
+                0.3199152946472168,
+                102.67513275146484
+              ],
+              "error": [
+                4.9336598749505356e-05,
+                528.810546875
+              ]
+            },
+            "u": {
+              "field": [
+                0.055186912417411804,
+                66.60441589355469
+              ],
+              "error": [
+                0.015942217782139778,
+                4.137030124664307
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GNOT_1M-6000.bin.gz"
+            ],
+            "sha256": "983beb2e41d3a3e38fdfd677b2c80f19940fe8cfe7a079283fba708483db3120"
+          },
+          "relative_U_L2": 0.020379682008145418,
+          "relative_VM_L2": 0.21692139643878738,
+          "source_prediction_sha256": "bcbe46242db7eee6a4877c9b6524492aaeb1572a151dc71aee46598f7a5b57cf",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.1951180100440979,
+                109.80558776855469
+              ],
+              "error": [
+                9.675779438111931e-06,
+                528.7616577148438
+              ]
+            },
+            "u": {
+              "field": [
+                0.04952854663133621,
+                66.38838958740234
+              ],
+              "error": [
+                0.013252444565296173,
+                3.288874864578247
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "WNO_980K",
+      "name": "WNO_980K",
+      "parameters": 979968,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "WNO_980K-2000.bin.gz"
+            ],
+            "sha256": "488c57173a7d64da6e0f0494b771158d4d477158f72b5ce97f8e828027686166"
+          },
+          "relative_U_L2": 0.07164715422240193,
+          "relative_VM_L2": 0.3000441326787065,
+          "source_prediction_sha256": "6350efda956b3f8edcd95f92312f2e2b27d5ef79d61bca27835cba57238c9cb3",
+          "ranges": {
+            "vm": {
+              "field": [
+                -3.4908900260925293,
+                73.49718475341797
+              ],
+              "error": [
+                1.0607294825604185e-05,
+                527.6885986328125
+              ]
+            },
+            "u": {
+              "field": [
+                0.011208764277398586,
+                69.51996612548828
+              ],
+              "error": [
+                0.015530752949416637,
+                11.44754409790039
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "GAOT_980K",
+      "name": "GAOT_980K",
+      "parameters": 980590,
+      "loss": "normalized MSE；50维输入",
+      "snapshots": [
+        {
+          "budget": 2000,
+          "actual_step": 2000,
+          "selection": "exact",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "GAOT_980K-2000.bin.gz"
+            ],
+            "sha256": "be126a6652f09eb10b6fbce5a18f47dfae869eb5c113255cd5e9353e40586c80"
+          },
+          "relative_U_L2": 0.04888482787740908,
+          "relative_VM_L2": 0.2963667577368547,
+          "source_prediction_sha256": "9db3e4c84e2f843b4e05f1820e6ef4f874c1aa824d55260408193b58d2a31fd4",
+          "ranges": {
+            "vm": {
+              "field": [
+                -3.086796998977661,
+                73.85884857177734
+              ],
+              "error": [
+                5.0558617658680305e-05,
+                529.3305053710938
+              ]
+            },
+            "u": {
+              "field": [
+                0.017468944191932678,
+                69.31165313720703
+              ],
+              "error": [
+                0.018723776564002037,
+                13.370978355407715
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "MGN_REFERENCE",
+      "name": "MGN（历史参考）",
+      "parameters": 985540,
+      "loss": "物理相对平方损失；56维历史输入，与统一MSE协议不同",
+      "snapshots": [
+        {
+          "budget": 4000,
+          "actual_step": 4000,
+          "selection": "actualbest",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "MGN_REFERENCE-4000.bin.gz"
+            ],
+            "sha256": "9b444024d6600e10eb3c560f37847bdec4f0add8ef7b5e320d197d2e822bf579"
+          },
+          "relative_U_L2": 0.02282902103066189,
+          "relative_VM_L2": 0.21599714620936764,
+          "source_prediction_sha256": "0fe14948bfb0a679265e799a9e80d9bc47c4c9ca885d6be62055e145152b2c9d",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.2728198766708374,
+                128.81019592285156
+              ],
+              "error": [
+                2.2574422473553568e-05,
+                528.0263061523438
+              ]
+            },
+            "u": {
+              "field": [
+                0.0024527956265956163,
+                67.1346664428711
+              ],
+              "error": [
+                0.005524522624909878,
+                5.185049057006836
+              ]
+            }
+          }
+        },
+        {
+          "budget": 6000,
+          "actual_step": 5950,
+          "selection": "actualbest",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "MGN_REFERENCE-6000.bin.gz"
+            ],
+            "sha256": "1989fd13f22bd99615d09cd012dc9eddbe05524838fb9222b903c1cd064dee5f"
+          },
+          "relative_U_L2": 0.02104365183798123,
+          "relative_VM_L2": 0.21312116933057282,
+          "source_prediction_sha256": "c9a656bb53ccca562a101e434067fab91fa0c47511f5f1a98c90b1d69752e749",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.32075610756874084,
+                133.12916564941406
+              ],
+              "error": [
+                0.00018124800408259034,
+                527.316162109375
+              ]
+            },
+            "u": {
+              "field": [
+                0.017742587253451347,
+                66.7998275756836
+              ],
+              "error": [
+                0.006184600293636322,
+                4.814669609069824
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "HIST_PNFNO",
+      "name": "PointNet+FNO（历史56维）",
+      "parameters": 982883,
+      "loss": "56维历史输入与原历史训练目标，非本轮50维normalized MSE协议；独立历史参考",
+      "snapshots": [
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "actualbest",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "HIST_PNFNO-6000.bin.gz"
+            ],
+            "sha256": "52b1d61af6b05587250eeef53c119783486ffb69ebd1809affc90b8f8a519506"
+          },
+          "relative_U_L2": 0.030846679587223643,
+          "relative_VM_L2": 0.24845566124945237,
+          "source_prediction_sha256": "f1df2e29f9c2c368261f16bc8549721766e7cea04c6c5deb58ab7a590e0d06a2",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.0506925582885742,
+                87.43436431884766
+              ],
+              "error": [
+                8.531240382581018e-06,
+                527.6719360351562
+              ]
+            },
+            "u": {
+              "field": [
+                0.011226141825318336,
+                67.9942855834961
+              ],
+              "error": [
+                0.010948010720312595,
+                3.9761102199554443
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "HIST_FNO",
+      "name": "FNO（历史56维）",
+      "parameters": 982942,
+      "loss": "56维历史输入与原历史训练目标，非本轮50维normalized MSE协议；独立历史参考",
+      "snapshots": [
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "actualbest",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "HIST_FNO-6000.bin.gz"
+            ],
+            "sha256": "7b558f2126920b3c38d8913dae42ae8279bb6ec78b3f830bfe66014f1bb87a10"
+          },
+          "relative_U_L2": 0.02499460582296967,
+          "relative_VM_L2": 0.23964965762488194,
+          "source_prediction_sha256": "d4c7e9f2cba3d0950e54522bd93cc4c019cf85b61841356097e1e6402f0dfc09",
+          "ranges": {
+            "vm": {
+              "field": [
+                -1.2107399702072144,
+                85.30775451660156
+              ],
+              "error": [
+                3.927249417756684e-05,
+                522.4246826171875
+              ]
+            },
+            "u": {
+              "field": [
+                0.004521929658949375,
+                66.81961822509766
+              ],
+              "error": [
+                0.003503939835354686,
+                2.644240140914917
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "HIST_TS3",
+      "name": "TS3（历史56维）",
+      "parameters": 982884,
+      "loss": "56维历史输入与原历史训练目标，非本轮50维normalized MSE协议；独立历史参考",
+      "snapshots": [
+        {
+          "budget": 6000,
+          "actual_step": 6000,
+          "selection": "actualbest",
+          "arrays": {
+            "dtype": "<f4",
+            "shape": [
+              4,
+              27730
+            ],
+            "raw_bytes": 443680,
+            "parts": [
+              "HIST_TS3-6000.bin.gz"
+            ],
+            "sha256": "71258b6ddd29f3391a8c266434fc4ef9c75d1ee230e485f4b5ade2857140cd55"
+          },
+          "relative_U_L2": 0.014144373666846082,
+          "relative_VM_L2": 0.21714072155270545,
+          "source_prediction_sha256": "ef5f115ed5c830d0bb85a407ea2343afed2a24b54c7a73ffcd833e87dd026d79",
+          "ranges": {
+            "vm": {
+              "field": [
+                -0.21271242201328278,
+                108.59400939941406
+              ],
+              "error": [
+                1.7348786059301347e-05,
+                529.2822265625
+              ]
+            },
+            "u": {
+              "field": [
+                0.01582425646483898,
+                66.63726806640625
+              ],
+              "error": [
+                0.001499281032010913,
+                4.579579830169678
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "neural_forwards": 0,
+  "new_FE_solves": 0,
+  "scope": "All original TRI6 surface nodes, no filtering, interpolation or new FE. Scalar displacement is vector norm; displacement error is norm of vector error. Full-volume metrics use all original nodes.",
+  "unavailable": [
+    {
+      "id": "WNO_ORIGINAL",
+      "name": "WNO 原配置",
+      "parameters": 4591485,
+      "reason": "原配置零步失败，没有预测输出；重跑配置见WNO_980K"
+    },
+    {
+      "id": "GAOT_ORIGINAL",
+      "name": "GAOT 原配置",
+      "parameters": 1587806,
+      "reason": "原配置零步失败，没有预测输出；重跑配置见GAOT_980K"
+    },
+    {
+      "id": "GeoFNO",
+      "name": "GeoFNO",
+      "reason": "原实现2D warp不适用于本3D算例"
+    },
+    {
+      "id": "RIGNO",
+      "name": "RIGNO",
+      "reason": "原三角形预处理不适用于真四面体"
+    },
+    {
+      "id": "CNO",
+      "name": "CNO",
+      "reason": "原实现仅1D/2D"
+    }
+  ]
+}

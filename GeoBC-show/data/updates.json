@@ -3,6 +3,23 @@
     {
       "task": "M01",
       "date": "2026-11-05",
+      "title": "OFormer近百万参数补充实验完成",
+      "summary": "991359参数，2000/4000/6000步均完成；6000步U=1.175%、VM=6.880%，actualbest6000。新增到参数分组、可排序表格与0095模型选择；原1363588参数结果保留。",
+      "review": "同20TRAIN、50输入、损失、seed与更新预算；仅改变宽度，参数匹配不代表等FLOPs/耗时，不作泛化结论。",
+      "links": [
+        {
+          "label": "最终参数与预算对照",
+          "url": "M01.html#m01-final-results"
+        },
+        {
+          "label": "OFormer近百万0095对比",
+          "url": "viewers/m01-operators-case0095.html?modelA=OFORMER_1M&modelB=TS3_MSE"
+        }
+      ]
+    },
+    {
+      "task": "M01",
+      "date": "2026-11-05",
       "title": "M01结项：最新算子结果与停止预算",
       "summary": "同步原14组及近百万配置的实际结果；GNO在4852步用户终止，WNO/GAOT在2000步条件停止。未完成预算统一-，参数量与不公平比较项单列。",
       "review": "按用户最新范围完成，不等于全部配置6000步；MGN训练损失不同，不宣称等算力或泛化。",
