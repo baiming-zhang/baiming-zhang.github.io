@@ -1,0 +1,38 @@
+name: Publish bounded research site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages-production
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Stage site and check Pages size budget
+        run: python tools/build_pages.py --source "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/geobc-pages" --repository "$GITHUB_REPOSITORY" --commit "$GITHUB_SHA"
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload bounded Pages site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/geobc-pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
