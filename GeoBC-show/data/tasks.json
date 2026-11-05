@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05 UTC",
   "tasks": [
     {
       "id": "R01",
@@ -266,14 +266,22 @@
       "phase": "第3周",
       "title": "Connecting rod checkpoint",
       "due": "2026-10-27",
-      "status": "进行中",
-      "deliverables": "1000场数据与已有模型结果汇总 + V100全量1000场训练结果",
-      "review": "汇总数据、模型结果与遗留问题；V100全量1000场训练完成后再结项，不设误差通过线。",
+      "status": "已完成",
+      "deliverables": "连杆数据与模型结果汇总、统一算子对照、近百万参数比较与用户停止记录",
+      "review": "按用户最新训练范围结项；固定步数结果、参数差异与未执行预算明确展示，不设精度通过线。",
       "dependencies": "R05、R07、R08",
       "start": "2026-10-27",
-      "issues": "新增20TRAIN九组6000步损失、几何特征与容量对照已交付；峰值加权及几何特征改善拟合，但0095尖峰仍明显漏掉。仅单seed TRAIN结果；V100全量1000场训练要求仍待完成。",
+      "issues": "原14组算子及近百万GNOT完成6000步；GNO近百万由用户在4852步终止，WNO/GAOT在2000步因U、VM均差于TS3/GNOT/MGN停止。未完成栏为-；MGN损失不同、旧新输入与容量差异均已展示，不称等算力或泛化比较。原V100全量训练不计作已完成。",
       "page": "M01.html",
       "results": [
+        {
+          "label": "最终参数与固定预算对照",
+          "url": "M01.html#m01-final-results"
+        },
+        {
+          "label": "完整六项指标JSON",
+          "url": "assets/m01-operator-final-20261105-v1/comparison.json"
+        },
         {
           "label": "四页离线PDF",
           "url": "assets/m01-checkpoint-v1/GeoBC_M01_summary.pdf?v=m01-progress-v2"
@@ -294,7 +302,8 @@
           "label": "九组完整物理指标",
           "url": "assets/m01-loss-geometry-capacity6000-v1/report.json"
         }
-      ]
+      ],
+      "completed": "2026-11-05"
     },
     {
       "id": "C01",
