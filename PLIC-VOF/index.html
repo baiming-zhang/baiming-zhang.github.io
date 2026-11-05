@@ -23,13 +23,14 @@ details{border-top:1px solid var(--line);margin-top:18px;padding:16px 0 0}summar
 @media print{nav,.movie-tabs,.links,video{display:none}.screen{max-height:260px}.screen img{display:block!important}.shell{max-width:none;padding:0}details{display:block}details>*{display:block}section{break-inside:avoid}a{color:inherit}}
 </style></head>
 <body>
-<header><div class="shell top"><div><div class="wordmark">PLIC-VOF <span class="date">/ 实验结果与可视化</span></div></div><nav aria-label="报告导航"><a href="#videos">看视频</a><a href="#results">看结果</a><a href="#scope">实验范围</a><a href="#files">下载</a><a href="#supplement">补充实验</a></nav></div></header>
+<header><div class="shell top"><div><div class="wordmark">PLIC-VOF <span class="date">/ 实验结果与可视化</span></div></div><nav aria-label="报告导航"><a href="#methods">方法与创新点</a><a href="#videos">看视频</a><a href="#results">看结果</a><a href="#scope">实验范围</a><a href="#files">下载</a><a href="#supplement">补充实验</a></nav></div></header>
 <main class="shell">
 <div class="intro"><div class="eyebrow">SUPPLEMENTARY EXPERIMENTS · 2026.11.05</div>
 <h1>压力后端更快，界面精度仍有短板。</h1>
 <p class="lead">这轮把两件事分开验证：同一个神经模型换压力求解器，能省多少时间；神经界面与传统方法相比，误差到底在哪里。视频和数据都保留表现较差的算例。</p>
 <div class="findings"><div class="finding"><strong>1.10–1.87×</strong><p><em>本机推进时间收益</em><br>14 / 14 配置的 compact 中位数更快；每项 3 次。</p></div><div class="finding"><strong>4 / 4</strong><p><em>对流精度仍落后</em><br>本次四项 128² 被动对流，神经末态 MAE 均高于 Aphros。</p></div><div class="finding"><strong>0.0154</strong><p><em>两后端最大已存 VOF 场差</em><br>长轨迹会分歧，不能说“换后端后结果完全一样”。</p></div></div></div>
 
+<section id="methods"><h2>方法：从体积分数到完整两相流</h2><p>按步骤解释训练标签、共享网络、64个正通量分箱、容量投影、曲率与表面张力，以及紧凑压力求解。提供符号表、28组公式、4幅矢量方法图、实际实验图和可拖动的通量例子。</p><p>另列完整训练课程、实验验证流程及创新点，说明结构性质的适用范围和仍需验证的改进方向。</p><div class="downloads"><a class="download" href="methods/">阅读详细方法与创新点</a><a class="download" href="methods/methods.md" download>下载方法文字与公式</a></div></section>
 <section id="videos"><h2>先看真实的界面演化</h2><p class="sub">7 段静音短片，每段 10–14 秒。三列依次是神经模型 + AMGCL、同模型 + compact、独立 Aphros。对流片只比较神经与 Aphros。</p>
 <div class="movie-tabs" role="group" aria-label="选择对比视频"><button type="button" data-movie="rising-bubble" aria-pressed="true"><span>01</span>上升气泡</button><button type="button" data-movie="capillary-wave" aria-pressed="false"><span>02</span>毛细波</button><button type="button" data-movie="falling-drop" aria-pressed="false"><span>03</span>落滴入池</button><button type="button" data-movie="dam-break" aria-pressed="false"><span>04</span>溃坝</button><button type="button" data-movie="static-drop" aria-pressed="false"><span>05</span>静态液滴</button><button type="button" data-movie="vortex-advection" aria-pressed="false"><span>06</span>涡旋对流</button><button type="button" data-movie="reversed-advection" aria-pressed="false"><span>07</span>反向对流</button></div>
 <div class="screen"><video id="movie" controls playsinline preload="metadata" poster="previews/rising-bubble.png" aria-label="实验对比视频"></video><img id="poster" src="previews/rising-bubble.png" alt="上升气泡对比参考帧" hidden></div>

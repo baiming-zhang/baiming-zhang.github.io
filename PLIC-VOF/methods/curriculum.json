@@ -1,0 +1,253 @@
+{
+  "description": "Retained 64-bin curriculum through edges64_v4_weak. Historical bootstrap is explicitly preserved; final architecture [256,256,128], range [0.002,0.998]. See docs/HANDOFF_CN.md for limitations.",
+  "initial_checkpoint": "runs/joint_1m/best.pt",
+  "replay": "data/synthetic_joint_1m.npz",
+  "bootstrap": {
+    "seed": 42,
+    "output_dir": "runs/joint_1m",
+    "data": {
+      "train_path": "data/synthetic_joint_1m.npz",
+      "val_path": null,
+      "train_fraction": 0.9,
+      "batch_size": 256,
+      "num_workers": 0
+    },
+    "model": {
+      "architecture": "flux_curvature_v3",
+      "hidden_dims": [
+        128,
+        128,
+        64
+      ],
+      "num_bins": 64,
+      "enforce_row_swap_symmetry": true,
+      "minimum_mass": 1e-06
+    },
+    "optimizer": {
+      "learning_rate": 0.001,
+      "weight_decay": 1e-06
+    },
+    "training": {
+      "epochs": 60,
+      "device": "cuda",
+      "grad_clip_norm": 1.0,
+      "complement_loss_weight": 0.1,
+      "curvature_loss_weight": 1.0,
+      "curvature_complement_loss_weight": 0.1,
+      "curvature_rotation90_loss_weight": 0.1
+    },
+    "evaluation": {
+      "constraint_samples": 64,
+      "courant_grid_size": 33
+    }
+  },
+  "datasets": {
+    "balanced": {
+      "count": 180000,
+      "seed": 20261020,
+      "profile": "balanced",
+      "low_courant_fraction": 0.0,
+      "center_fraction_min": 0.02,
+      "edge_fraction": 0.0
+    },
+    "weak": {
+      "count": 600000,
+      "seed": 20261021,
+      "profile": "weak",
+      "low_courant_fraction": 0.3,
+      "center_fraction_min": 0.02,
+      "edge_fraction": 0.0
+    },
+    "capillary": {
+      "count": 600000,
+      "seed": 20261023,
+      "profile": "capillary",
+      "low_courant_fraction": 0.3,
+      "center_fraction_min": 0.02,
+      "edge_fraction": 0.0
+    },
+    "edges": {
+      "count": 400000,
+      "seed": 20261024,
+      "profile": "capillary",
+      "low_courant_fraction": 0.5,
+      "center_fraction_min": 0.002,
+      "edge_fraction": 0.6
+    }
+  },
+  "stages": [
+    {
+      "name": "v1",
+      "dataset": "balanced",
+      "steps": 6000,
+      "eval_every": 500,
+      "lr": 0.0001,
+      "smooth_fraction": 0.9,
+      "device": "cuda"
+    },
+    {
+      "name": "v2",
+      "dataset": "weak",
+      "steps": 30000,
+      "eval_every": 2500,
+      "lr": 0.0002,
+      "smooth_fraction": 0.98,
+      "device": "cuda"
+    },
+    {
+      "name": "v3",
+      "dataset": "weak",
+      "steps": 30000,
+      "eval_every": 2500,
+      "lr": 0.0001,
+      "smooth_fraction": 0.98,
+      "sampling_scale": 0.003,
+      "device": "cuda"
+    },
+    {
+      "name": "v4_wide",
+      "dataset": "weak",
+      "steps": 20000,
+      "eval_every": 2500,
+      "lr": 5e-05,
+      "smooth_fraction": 0.98,
+      "sampling_scale": 0.003,
+      "widen": 2,
+      "device": "cuda"
+    },
+    {
+      "name": "v8",
+      "dataset": "weak",
+      "steps": 30000,
+      "eval_every": 2500,
+      "lr": 0.0001,
+      "smooth_fraction": 0.98,
+      "sampling_scale": 0.002,
+      "sampling_power": 4,
+      "curvature_weight": 100,
+      "device": "cuda"
+    },
+    {
+      "name": "v11",
+      "dataset": "capillary",
+      "steps": 30000,
+      "eval_every": 5000,
+      "lr": 2e-05,
+      "min_lr": 1e-07,
+      "smooth_fraction": 0.98,
+      "sampling_scale": 0.002,
+      "sampling_power": 4,
+      "paired_phase": true,
+      "device": "cuda"
+    },
+    {
+      "name": "v12",
+      "dataset": "capillary",
+      "steps": 30000,
+      "eval_every": 5000,
+      "batch_size": 1024,
+      "lr": 1e-05,
+      "min_lr": 1e-07,
+      "smooth_fraction": 0.96,
+      "sampling_scale": 0.002,
+      "sampling_power": 4,
+      "paired_phase": true,
+      "paired_transpose": true,
+      "curvature_weight": 1000,
+      "device": "cuda"
+    },
+    {
+      "name": "v13_flux",
+      "dataset": "capillary",
+      "steps": 20000,
+      "eval_every": 2500,
+      "lr": 0.0002,
+      "min_lr": 1e-06,
+      "smooth_fraction": 0.5,
+      "paired_phase": true,
+      "train_flux_only": true,
+      "device": "cuda"
+    },
+    {
+      "name": "face_flux",
+      "dataset": "capillary",
+      "steps": 15000,
+      "eval_every": 2500,
+      "batch_size": 1024,
+      "lr": 0.0002,
+      "min_lr": 1e-06,
+      "smooth_fraction": 0.8,
+      "paired_phase": true,
+      "paired_transpose": true,
+      "train_flux_only": true,
+      "face_average_weight": 1,
+      "device": "cuda"
+    },
+    {
+      "name": "edges",
+      "dataset": "edges",
+      "steps": 20000,
+      "eval_every": 2500,
+      "batch_size": 1024,
+      "lr": 2e-05,
+      "min_lr": 1e-07,
+      "smooth_fraction": 0.98,
+      "sampling_scale": 0.003,
+      "sampling_power": 2,
+      "paired_phase": true,
+      "paired_transpose": true,
+      "face_average_weight": 1,
+      "device": "cuda"
+    },
+    {
+      "name": "planar",
+      "dataset": "edges",
+      "steps": 15000,
+      "eval_every": 2500,
+      "batch_size": 1024,
+      "lr": 2e-05,
+      "min_lr": 1e-07,
+      "smooth_fraction": 0.95,
+      "sampling_scale": 0.01,
+      "sampling_power": 2,
+      "paired_phase": true,
+      "paired_transpose": true,
+      "face_average_weight": 1,
+      "planar_profile_weight": 1000,
+      "planar_profile_strength": 0.006,
+      "device": "cuda"
+    },
+    {
+      "name": "flux_replay",
+      "dataset": "edges",
+      "steps": 15000,
+      "eval_every": 2500,
+      "batch_size": 2048,
+      "lr": 0.0002,
+      "min_lr": 1e-06,
+      "smooth_fraction": 0.5,
+      "paired_phase": true,
+      "train_flux_only": true,
+      "face_average_weight": 1,
+      "device": "cuda"
+    },
+    {
+      "name": "weak",
+      "dataset": "edges",
+      "steps": 15000,
+      "eval_every": 2500,
+      "batch_size": 1024,
+      "lr": 1e-05,
+      "min_lr": 1e-07,
+      "smooth_fraction": 0.95,
+      "sampling_scale": 0.002,
+      "sampling_power": 3,
+      "paired_phase": true,
+      "paired_transpose": true,
+      "face_average_weight": 1,
+      "planar_profile_weight": 1000,
+      "planar_profile_strength": 0.006,
+      "device": "cuda"
+    }
+  ]
+}
