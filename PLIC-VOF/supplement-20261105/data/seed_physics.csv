@@ -1,0 +1,22 @@
+model,scene,n,reused,sampled_peak_speed,primary_error,metric,rise_velocity_rmse,reference_end,outside_gate_minority_area,mixed_cells
+baseline,static,128,True,0.001018508527438082,0.05173620658301037,relative Laplace jump error,,,,
+baseline,wave,64,True,0.08603710398378568,0.00016876775865485842,positive amplitude RMS,,,,
+baseline,wave,128,True,0.08901683513899268,0.0007644592031618419,positive amplitude RMS,,,,
+baseline,bubble,128,True,0.4809147375681193,0.010489080930671116,centroid RMSE to MooNMD numerical benchmark,0.008566204062120357,3.0,,
+baseline,bubble,256,True,0.5645748580704351,0.01986275982677589,centroid RMSE to MooNMD numerical benchmark,0.0153027137301279,3.0,,
+202611051,static,128,False,0.001196614876411783,0.042098080151798944,relative Laplace jump error,,,,
+202611051,wave,64,False,0.08666172006989319,0.00041861820000856445,positive amplitude RMS,,,,
+202611051,wave,128,False,0.11685059310466767,0.0032338158652742903,positive amplitude RMS,,,,
+202611051,bubble,128,False,0.4441524859194112,0.05106173342556716,centroid RMSE to MooNMD numerical benchmark,0.04674176366976087,3.0,,
+202611051,bubble,256,False,0.40518565710721965,0.13183888158742646,centroid RMSE to MooNMD numerical benchmark,0.11101716989309712,3.0,,
+202611052,static,128,False,0.0012704143579786095,0.03805174066779671,relative Laplace jump error,,,,
+202611052,wave,64,False,0.08454266371828045,0.0004582304322931825,positive amplitude RMS,,,,
+202611052,wave,128,False,0.08709071031832297,0.0005213862537401105,positive amplitude RMS,,,,
+202611052,bubble,128,False,0.5309153876899729,0.007931321731908081,centroid RMSE to MooNMD numerical benchmark,0.007556600640782632,3.0,,
+202611052,bubble,256,False,0.5510589400467067,0.01322172358160734,centroid RMSE to MooNMD numerical benchmark,0.008687653180155422,3.0,,
+baseline,translation,128,,,0.0005791472945711878,VOF MAE to exact cell averages,,,2.3868055282097773e-05,965
+baseline,vortex_return,128,,,0.011839451476241544,VOF MAE to exact cell averages,,,0.00038620445923095883,7565
+202611051,translation,128,,,0.0005512392382990206,VOF MAE to exact cell averages,,,2.2278528121763914e-05,867
+202611051,vortex_return,128,,,0.004880294830495978,VOF MAE to exact cell averages,,,0.000351956152708178,7264
+202611052,translation,128,,,0.0008562470923172075,VOF MAE to exact cell averages,,,2.57020914327025e-05,1054
+202611052,vortex_return,128,,,0.017544845264463378,VOF MAE to exact cell averages,,,0.0003315232644099991,7851
