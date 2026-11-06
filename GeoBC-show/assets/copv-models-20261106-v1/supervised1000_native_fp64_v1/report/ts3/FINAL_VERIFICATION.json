@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "method": "ts3",
+  "job_id": "13806137",
+  "actual_optimizer_updates": 6000,
+  "selected_by": "validation_only",
+  "selected_update": 5800,
+  "parameters": 982884,
+  "FNO_body_parameters": null,
+  "PointNet_encoder_parameters": 0,
+  "split_counts": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "test_mean_U_relative_L2": 0.01953314331044109,
+  "test_worst_U_relative_L2": 0.093247025444662,
+  "test_mean_VM_relative_L2": 0.03916718667709562,
+  "test_worst_VM_relative_L2": 0.0835571402546727,
+  "all_test_each_U_VM_at_most_1_percent": false,
+  "negative_test_VM_cases": 0,
+  "minimum_test_pred_VM_MPa": 4.794610578867403,
+  "negative_VM_preserved": [],
+  "recorded_all_split_summaries": {
+    "train": {
+      "U_mean": 0.019753919441655367,
+      "U_worst": 0.16979646858210495,
+      "VM_mean": 0.0391491013774188,
+      "VM_worst": 0.12633470368669425
+    },
+    "validation": {
+      "U_mean": 0.0204345234787208,
+      "U_worst": 0.18804935885402205,
+      "VM_mean": 0.039095244869577696,
+      "VM_worst": 0.14087179646142622
+    },
+    "test": {
+      "U_mean": 0.019533143310441085,
+      "U_worst": 0.0932470254446619,
+      "VM_mean": 0.03916718667709562,
+      "VM_worst": 0.0835571402546727
+    }
+  },
+  "train_validation_metric_scope": "Saved all-case evaluations, independently reaggregated; original-node predictions independently rechecked for all 100 test cases",
+  "original_test_FE_and_prediction_CPU_cases": 100,
+  "FP64_model_and_Adam": true,
+  "FFT_complex128_audit": false,
+  "CPU_numpy_Python_RNG_restore": true,
+  "CUDA_RNG_structure_only": true,
+  "original_target_not_cast": true,
+  "normalized_export_target_roundtrip_max_absolute_difference": 4.547473508864641e-13,
+  "raw_FE_VM_recovery_max": 6.309438093516782e-17,
+  "independent_test_FE_residual_max": 1.1860871889762125e-09,
+  "independent_test_FE_GP_energy_error_max": 2.74846145842389e-10,
+  "verifier_SHA256": "99728bf6e29e8d8ee94b66c398fd72aa3fd7ea50eb8c0b644900bf67203c1561",
+  "download_manifest_SHA256": "0e87ec692e35eb43d159cc556f005d4ff0ff5a70d8d023ac5b3ac75a8314d983",
+  "production_eligible": false,
+  "status": "fixed_budget_exhausted_actual_test_metrics_no_automatic_accuracy_pass",
+  "worst_case_selected_best_CPU_forward_replay": null
+}

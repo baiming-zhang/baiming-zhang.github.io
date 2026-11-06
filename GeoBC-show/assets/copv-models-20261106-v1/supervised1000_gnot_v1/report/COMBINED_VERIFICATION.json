@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "checked_at_UTC": "2026-11-06T20:07:07.683473+00:00",
+  "all_four_complete": true,
+  "completed_independent_CPU_methods": [
+    "ts3",
+    "mgn",
+    "fno",
+    "gnot"
+  ],
+  "reused_three_completed_models_not_retrained": true,
+  "source_deliveries": {
+    "ts3": {
+      "DELIVERY_SHA256": "904ceeb8824b18d2f6de38575dc2b35813ef09438b5049ace8033d6b179d9850",
+      "FINAL_VERIFICATION_SHA256": "0111636dbfb97a46fa51c686726dd5cb5fd7144896e4a2d7cedf99678170b87d"
+    },
+    "mgn": {
+      "DELIVERY_SHA256": "6f39adea322065b83b8458dcc63ac2f14d68d7ad9ffa592f0e736c20208f9218",
+      "FINAL_VERIFICATION_SHA256": "cd766fc47af578ff76eea95b98f0f7fd66a86bd018cf529cfde36a2940e70316"
+    },
+    "fno": {
+      "DELIVERY_SHA256": "5b88bc27eac266e721fea379db989185d499c87095ad44e3deb72621cd5e27fc",
+      "FINAL_VERIFICATION_SHA256": "71214dd070a4c6642c93bb492c4002305b078fc81433686be02d19101078692a"
+    },
+    "gnot": {
+      "DELIVERY_SHA256": "9f9a4ef988e765e04bb721a3babeb7328d5997933a9e5d164b9877e43db6d567",
+      "FINAL_VERIFICATION_SHA256": "3f0dff4bcc97062253b8f97a7641a5d940dfe835976512e7201e0af2ceaed02c"
+    }
+  },
+  "rows": [
+    {
+      "method": "TS3",
+      "parameters": 982884,
+      "actual_updates": 6000,
+      "selected_update": 5800,
+      "test_U_mean_percent": 1.9533143310441088,
+      "test_U_worst_percent": 9.3247025444662,
+      "test_VM_mean_percent": 3.9167186677095622,
+      "test_VM_worst_percent": 8.35571402546727,
+      "negative_VM_test_cases": 0,
+      "minimum_VM_MPa": 4.794610578867403,
+      "all_test_each_U_VM_at_most_1_percent": false
+    },
+    {
+      "method": "MGN",
+      "parameters": 985540,
+      "actual_updates": 6000,
+      "selected_update": 5900,
+      "test_U_mean_percent": 2.239080920365576,
+      "test_U_worst_percent": 4.834412206462047,
+      "test_VM_mean_percent": 2.939767779323359,
+      "test_VM_worst_percent": 5.45958521083097,
+      "negative_VM_test_cases": 2,
+      "minimum_VM_MPa": -4.8879763216894565,
+      "all_test_each_U_VM_at_most_1_percent": false
+    },
+    {
+      "method": "FNO",
+      "parameters": 984668,
+      "actual_updates": 6000,
+      "selected_update": 5900,
+      "test_U_mean_percent": 16.653678609261057,
+      "test_U_worst_percent": 45.33003947787155,
+      "test_VM_mean_percent": 12.037334623605947,
+      "test_VM_worst_percent": 58.11890837689092,
+      "negative_VM_test_cases": 46,
+      "minimum_VM_MPa": -33.57325981981288,
+      "all_test_each_U_VM_at_most_1_percent": false
+    },
+    {
+      "method": "GNOT",
+      "parameters": 982170,
+      "actual_updates": 6000,
+      "selected_update": 6000,
+      "test_U_mean_percent": 2.5550975454575573,
+      "test_U_worst_percent": 5.030193108972639,
+      "test_VM_mean_percent": 8.79580387467392,
+      "test_VM_worst_percent": 11.56412415125591,
+      "negative_VM_test_cases": 6,
+      "minimum_VM_MPa": -10.069373499296484,
+      "all_test_each_U_VM_at_most_1_percent": false
+    }
+  ],
+  "final_human_conclusions": [
+    "TS3 has the lowest mean test U error (1.9533%) and no negative-VM test cases. Its worst U error (9.3247%) is higher than MGN (4.8344%) and GNOT (5.0302%); mean accuracy and worst-case accuracy give different rankings.",
+    "MGN has the lowest mean and worst test VM errors (2.9398% and5.4596%) and the lowest worst test U error (4.8344%). Two cases still have raw negative VM; low relative error alone does not guarantee physical nonnegativity.",
+    "GNOT test U is2.5551% mean /5.0302% worst; test VM is8.7958% mean /11.5641% worst, with6 negative-VM cases. It improves over FNO on these U/VM metrics but has higher mean U and VM errors than TS3 and MGN in this fixed setup. Its worst U is lower than TS3, so it is not worse on every criterion.",
+    "FNO has the largest mean and worst U/VM errors among these four models and46 negative-VM test cases. This specific fixed logical-grid FNO result should not be generalized to all Fourier-operator formulations.",
+    "None meets U and VM <=1% on every one of the100 test cases. All four used the same800/100/100 split, seed20261029, original56 inputs/4 outputs,48977 native nodes, train800-only scales and6000 AdamW updates with20 equal cases per update (150 train passes). Only validation selected checkpoints; test predictions were evaluated after training and selection. These are single-seed fixed-budget results for the specified geometry/linear-FE family, not universal causal conclusions or production eligibility."
+  ],
+  "production_eligible": false
+}

@@ -1,0 +1,158 @@
+{
+  "passed": true,
+  "method": "gnot",
+  "job_id": "13931914",
+  "actual_optimizer_updates": 6000,
+  "selected_by": "validation_only",
+  "selected_update": 6000,
+  "parameters": 982170,
+  "split_counts": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "test_mean_U_relative_L2": 0.02555097545457557,
+  "test_worst_U_relative_L2": 0.05030193108972639,
+  "test_mean_VM_relative_L2": 0.0879580387467392,
+  "test_worst_VM_relative_L2": 0.1156412415125591,
+  "all_test_each_U_VM_at_most_1_percent": false,
+  "negative_test_VM_cases": 6,
+  "minimum_test_pred_VM_MPa": -10.069373499296484,
+  "negative_VM_preserved": [
+    {
+      "case": "c0110",
+      "radius_mm": 113.46429809022291,
+      "straight_length_mm": 436.6220114497771,
+      "pressure_MPa": 6.692633462637396,
+      "U_relative_L2": 0.03469289694753104,
+      "VM_relative_L2": 0.09533285172352188,
+      "pred_VM_min_MPa": -9.85090095176088
+    },
+    {
+      "case": "c0506",
+      "radius_mm": 108.94218868800172,
+      "straight_length_mm": 460.8496333346384,
+      "pressure_MPa": 4.63044431092635,
+      "U_relative_L2": 0.05024376530535398,
+      "VM_relative_L2": 0.10242299408606824,
+      "pred_VM_min_MPa": -10.069373499296484
+    },
+    {
+      "case": "c0582",
+      "radius_mm": 110.90027078827273,
+      "straight_length_mm": 457.68831835556523,
+      "pressure_MPa": 7.18555186028384,
+      "U_relative_L2": 0.03420888417589389,
+      "VM_relative_L2": 0.0940097345377303,
+      "pred_VM_min_MPa": -5.304419481653187
+    },
+    {
+      "case": "c0692",
+      "radius_mm": 92.62633406365077,
+      "straight_length_mm": 423.76841144454215,
+      "pressure_MPa": 4.690432971828317,
+      "U_relative_L2": 0.05030193108972639,
+      "VM_relative_L2": 0.09233924489703557,
+      "pred_VM_min_MPa": -5.780484909143064
+    },
+    {
+      "case": "c0701",
+      "radius_mm": 99.37941897380111,
+      "straight_length_mm": 454.9523654653864,
+      "pressure_MPa": 5.194566276749745,
+      "U_relative_L2": 0.04070740601178383,
+      "VM_relative_L2": 0.09168047721305222,
+      "pred_VM_min_MPa": -8.187316449385687
+    },
+    {
+      "case": "c0867",
+      "radius_mm": 92.37255057086328,
+      "straight_length_mm": 412.394059182726,
+      "pressure_MPa": 5.125332283798372,
+      "U_relative_L2": 0.04440713309136792,
+      "VM_relative_L2": 0.08876741585285114,
+      "pred_VM_min_MPa": -4.218695974076618
+    }
+  ],
+  "recorded_all_split_summaries": {
+    "train": {
+      "U_mean": 0.02507075122682684,
+      "U_worst": 0.0943498867554509,
+      "VM_mean": 0.08836434633928626,
+      "VM_worst": 0.13173098584904128
+    },
+    "validation": {
+      "U_mean": 0.024764907982559668,
+      "U_worst": 0.07497403827857275,
+      "VM_mean": 0.08928821534412343,
+      "VM_worst": 0.14981621378420837
+    },
+    "test": {
+      "U_mean": 0.02555097545457557,
+      "U_worst": 0.050301931089726346,
+      "VM_mean": 0.08795803874673919,
+      "VM_worst": 0.11564124151255908
+    }
+  },
+  "train_validation_metric_scope": "Saved all-case evaluations independently reaggregated; original-node predictions independently rechecked for all100 test cases",
+  "original_test_FE_and_prediction_CPU_cases": 100,
+  "last_checkpoint_CPU": {
+    "passed": true,
+    "checkpoint_SHA256": "be694a9bcbf5a0ce8a51b7815adee383849ce6586fe5b895916ab11d97e4efd0",
+    "optimizer_updates": 6000,
+    "step": 6001,
+    "next_case": 0,
+    "parameters": 982170,
+    "frozen_parameters": 0,
+    "history_prefix_SHA256": "06be6b2e9f1bb7adc3c87bf7141f79357f158a558977519c4307c54a634a0485",
+    "best_step": 6000,
+    "best_score": 0.05702656166334155,
+    "CPU_model_Adam_gradients_restore_exact": true,
+    "FP64_finite": true,
+    "CPU_numpy_Python_RNG_restore_exact": true,
+    "CUDA_RNG_structure_only": true,
+    "complete_history_LR_and_best_selection_verified": true
+  },
+  "best_checkpoint_CPU": {
+    "passed": true,
+    "checkpoint_SHA256": "b47dd8c66f71ce78913fb46495c60024d312712b70f265247d026c69396e5c9c",
+    "optimizer_updates": 6000,
+    "step": 6001,
+    "next_case": 0,
+    "parameters": 982170,
+    "frozen_parameters": 0,
+    "history_prefix_SHA256": "06be6b2e9f1bb7adc3c87bf7141f79357f158a558977519c4307c54a634a0485",
+    "best_step": 6000,
+    "best_score": 0.05702656166334155,
+    "CPU_model_Adam_gradients_restore_exact": true,
+    "FP64_finite": true,
+    "CPU_numpy_Python_RNG_restore_exact": true,
+    "CUDA_RNG_structure_only": true,
+    "complete_history_LR_and_best_selection_verified": true
+  },
+  "all_recovery_prefixes_verified": [
+    {
+      "proof_SHA256": "32f2d4b996c11ec526d47aaace414b7b73971479857e8fc8f8da11a7e2a292a2",
+      "preserved_updates": 1915,
+      "prefix_SHA256": "0ff9c615ccb1bb417d3e1fecaf4b5ce4d115f2c242dc2051fec8827975b95975"
+    },
+    {
+      "proof_SHA256": "f86bb3e33e61ee6c4410187dd389b20f427f9e1b72a6863078dc17981c55b8c0",
+      "preserved_updates": 4735,
+      "prefix_SHA256": "3b1791c288a627d6ba038271a8f9e8aca3e31e55d3e80bc5de675f306d08d525"
+    }
+  ],
+  "CPU_numpy_Python_RNG_restore": true,
+  "CUDA_RNG_structure_only": true,
+  "original_target_not_cast": true,
+  "normalized_export_target_roundtrip_max_absolute_difference": 4.547473508864641e-13,
+  "raw_FE_VM_recovery_max": 6.309438093516782e-17,
+  "independent_test_FE_residual_max": 1.1860871889762125e-09,
+  "independent_test_FE_GP_energy_error_max": 2.74846145842389e-10,
+  "verifier_SHA256": "714d2f13420263cdb718435cbe85021cdd1e4385fdf298a79d15b179726f33c9",
+  "download_manifest_SHA256": "da528f60c50263b94a3b364c45b15a221c61fca4489e27f693cbf655943a9213",
+  "production_eligible": false,
+  "scope": "Fixed-budget800/100/100, one seed. Exact CPU model/Adam/gradient/history/RNG restoration, independent original FP64 test metrics and preserved FE residual/energy/labels. No full-node model forward or CUDA update replay, and no FE re-solve.",
+  "actual_all100_native_GNOT_inputs_and_targets_equal_baseline": true,
+  "data_loader_equivalence_SHA256": "1355bbd10ce48feb2425e6a870cdc839983d18344ce3d5330f38f62f031ffa7a"
+}

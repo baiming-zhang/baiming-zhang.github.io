@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "method": "mgn",
+  "job_id": "13819866",
+  "actual_optimizer_updates": 6000,
+  "selected_by": "validation_only",
+  "selected_update": 5900,
+  "parameters": 985540,
+  "FNO_body_parameters": null,
+  "PointNet_encoder_parameters": 0,
+  "split_counts": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "test_mean_U_relative_L2": 0.02239080920365576,
+  "test_worst_U_relative_L2": 0.04834412206462047,
+  "test_mean_VM_relative_L2": 0.02939767779323359,
+  "test_worst_VM_relative_L2": 0.0545958521083097,
+  "all_test_each_U_VM_at_most_1_percent": false,
+  "negative_test_VM_cases": 2,
+  "minimum_test_pred_VM_MPa": -4.8879763216894565,
+  "negative_VM_preserved": [
+    {
+      "case": "c0110",
+      "radius_mm": 113.46429809022291,
+      "straight_length_mm": 436.6220114497771,
+      "pressure_MPa": 6.692633462637396,
+      "U_relative_L2": 0.035950238815930104,
+      "VM_relative_L2": 0.04400715545212724,
+      "pred_VM_min_MPa": -4.8879763216894565
+    },
+    {
+      "case": "c0582",
+      "radius_mm": 110.90027078827273,
+      "straight_length_mm": 457.68831835556523,
+      "pressure_MPa": 7.18555186028384,
+      "U_relative_L2": 0.03586600946776032,
+      "VM_relative_L2": 0.043770636998239354,
+      "pred_VM_min_MPa": -3.196160087266165
+    }
+  ],
+  "recorded_all_split_summaries": {
+    "train": {
+      "U_mean": 0.0211690199744809,
+      "U_worst": 0.06471866720299614,
+      "VM_mean": 0.028445941523467022,
+      "VM_worst": 0.06371547376922458
+    },
+    "validation": {
+      "U_mean": 0.020741020257000836,
+      "U_worst": 0.04771931769212109,
+      "VM_mean": 0.02845688000732045,
+      "VM_worst": 0.05528037859397902
+    },
+    "test": {
+      "U_mean": 0.02239080920365576,
+      "U_worst": 0.04834412206462044,
+      "VM_mean": 0.02939767779323359,
+      "VM_worst": 0.05459585210830972
+    }
+  },
+  "train_validation_metric_scope": "Saved all-case evaluations, independently reaggregated; original-node predictions independently rechecked for all 100 test cases",
+  "original_test_FE_and_prediction_CPU_cases": 100,
+  "FP64_model_and_Adam": true,
+  "FFT_complex128_audit": false,
+  "CPU_numpy_Python_RNG_restore": true,
+  "CUDA_RNG_structure_only": true,
+  "original_target_not_cast": true,
+  "normalized_export_target_roundtrip_max_absolute_difference": 0.0,
+  "raw_FE_VM_recovery_max": 6.309438093516782e-17,
+  "independent_test_FE_residual_max": 1.1860871889762125e-09,
+  "independent_test_FE_GP_energy_error_max": 2.74846145842389e-10,
+  "verifier_SHA256": "99728bf6e29e8d8ee94b66c398fd72aa3fd7ea50eb8c0b644900bf67203c1561",
+  "download_manifest_SHA256": "d57181f4ac5c5b6ee858196875fe5363611076adb50369e545fdc99ddd8489e7",
+  "production_eligible": false,
+  "status": "fixed_budget_exhausted_actual_test_metrics_no_automatic_accuracy_pass",
+  "worst_case_selected_best_CPU_forward_replay": null
+}
