@@ -1,0 +1,154 @@
+{
+  "scope": "Same 20 cases and exact same 100 original nodes per case",
+  "parameters": 991359,
+  "global_model": "Original full-context OFormer_1M trained 6000 steps on all original nodes with U+VM loss",
+  "local_model": "From-scratch OFormer_1M; 100-node input per case; local normalization and VM-only loss",
+  "comparison_limits": "Input context, loss, normalization and extended step budget differ; no isolated causal claim",
+  "mean": {
+    "global6000_VM_relative_L2": 0.16856297312805357,
+    "local6000_VM_relative_L2": 0.14458330826468319,
+    "local20000_VM_relative_L2": 0.1282204929785719
+  },
+  "rows": [
+    {
+      "case": "normal_rodv2_0021__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.08449401097887854,
+      "local6000_VM_relative_L2": 0.06964546265431716,
+      "local20000_VM_relative_L2": 0.04889246951319486
+    },
+    {
+      "case": "normal_rodv2_0026__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.09879205179872146,
+      "local6000_VM_relative_L2": 0.10956539529983464,
+      "local20000_VM_relative_L2": 0.0903458708560601
+    },
+    {
+      "case": "normal_rodv2_0036__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.13424735853680517,
+      "local6000_VM_relative_L2": 0.0901928691660754,
+      "local20000_VM_relative_L2": 0.08495049314561777
+    },
+    {
+      "case": "normal_rodv2_0039__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.28222344324733245,
+      "local6000_VM_relative_L2": 0.3009181682531521,
+      "local20000_VM_relative_L2": 0.2863710990312676
+    },
+    {
+      "case": "normal_rodv2_0045__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.11903703174160497,
+      "local6000_VM_relative_L2": 0.10856033240077739,
+      "local20000_VM_relative_L2": 0.07391741947564248
+    },
+    {
+      "case": "normal_rodv2_0052__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.35553240947060155,
+      "local6000_VM_relative_L2": 0.2985845672568815,
+      "local20000_VM_relative_L2": 0.29835037144647236
+    },
+    {
+      "case": "normal_rodv2_0074__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.2162471269100075,
+      "local6000_VM_relative_L2": 0.21274339442152082,
+      "local20000_VM_relative_L2": 0.2120897891658621
+    },
+    {
+      "case": "normal_rodv2_0088__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.28623030502302815,
+      "local6000_VM_relative_L2": 0.2628393621269316,
+      "local20000_VM_relative_L2": 0.2313829114859471
+    },
+    {
+      "case": "normal_rodv2_0091__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.26323989614963555,
+      "local6000_VM_relative_L2": 0.20221247570680287,
+      "local20000_VM_relative_L2": 0.1812520511852489
+    },
+    {
+      "case": "normal_rodv2_0093__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.022131515867996797,
+      "local6000_VM_relative_L2": 0.015399169659681732,
+      "local20000_VM_relative_L2": 0.014404562883945843
+    },
+    {
+      "case": "normal_rodv2_0095__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.2043795412385342,
+      "local6000_VM_relative_L2": 0.17630175909298065,
+      "local20000_VM_relative_L2": 0.17010720385269207
+    },
+    {
+      "case": "normal_rodv2_0107__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.2668149988263347,
+      "local6000_VM_relative_L2": 0.21292614426244483,
+      "local20000_VM_relative_L2": 0.20474035340775953
+    },
+    {
+      "case": "normal_rodv2_0126__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.1785090655642551,
+      "local6000_VM_relative_L2": 0.17048481188741538,
+      "local20000_VM_relative_L2": 0.16102903483122866
+    },
+    {
+      "case": "normal_rodv2_0127__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.22279458410793382,
+      "local6000_VM_relative_L2": 0.18100392624333517,
+      "local20000_VM_relative_L2": 0.14426307913415606
+    },
+    {
+      "case": "normal_rodv2_0129__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.17074237160347275,
+      "local6000_VM_relative_L2": 0.10802256434383349,
+      "local20000_VM_relative_L2": 0.06179704970865346
+    },
+    {
+      "case": "normal_rodv2_0137__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.14053102806193887,
+      "local6000_VM_relative_L2": 0.11296882232192977,
+      "local20000_VM_relative_L2": 0.10236186565105677
+    },
+    {
+      "case": "normal_rodv2_0148__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.028180029763287383,
+      "local6000_VM_relative_L2": 0.01715528931884559,
+      "local20000_VM_relative_L2": 0.014622853974068567
+    },
+    {
+      "case": "normal_rodv2_0159__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.03264026276740871,
+      "local6000_VM_relative_L2": 0.024044264921409333,
+      "local20000_VM_relative_L2": 0.015699368529581648
+    },
+    {
+      "case": "normal_rodv2_0163__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.08590818714924046,
+      "local6000_VM_relative_L2": 0.06638785095553118,
+      "local20000_VM_relative_L2": 0.05084571219056414
+    },
+    {
+      "case": "normal_rodv2_0170__tension",
+      "nodes": 100,
+      "global6000_VM_relative_L2": 0.17858424375405377,
+      "local6000_VM_relative_L2": 0.15170953499996367,
+      "local20000_VM_relative_L2": 0.11698630010241763
+    }
+  ]
+}
