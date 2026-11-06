@@ -1,0 +1,127 @@
+{
+  "created_UTC": "2026-11-06T21:10:44.384128+00:00",
+  "case": "normal_rodv2_0095__tension",
+  "force_N": 6100,
+  "view": "Orthographic XY from negative Z; same physical limits in every column; undeformed geometry",
+  "stress": "Each stored quadratic surface triangle is constant-filled by max of4 saved GP VM in its unique owning TET10. No nodal recovery, three-vertex mean, scalar interpolation, or stress smoothing.",
+  "displacement": "Each of6 original P2 surface nodes owns a geometric color sector, split into2 display triangles. Its raw stored nodal displacement magnitude is repeated, never interpolated. Display partition vertices are not physical FE nodes.",
+  "color_limits": {
+    "VM_MPa": [
+      0.0,
+      787.6257930019827
+    ],
+    "U_mm": [
+      0.0,
+      0.06585075158674042
+    ]
+  },
+  "node15_xyz_mm": [
+    22.184064447575,
+    9.872915354966,
+    -8.037898767457
+  ],
+  "junction_window_xy_mm": [
+    18.3,
+    29.2,
+    1.7,
+    13.9
+  ],
+  "sharp_window_xy_mm": [
+    20.984064447575,
+    23.384064447575,
+    8.672915354966001,
+    11.072915354966
+  ],
+  "cases": [
+    {
+      "label": "原网格",
+      "nodes": 69290,
+      "cells": 41162,
+      "nfaces": 13866,
+      "VM_max": 530.4149044514818,
+      "U_max": 0.06578646402391265,
+      "PEEQ_max": 0.0,
+      "branch": "原始保存解",
+      "geometry": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\cases\\rodv2_0095\\geometry.npz",
+      "fields": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\data\\rod_fenicsx_r05_batch_v1\\recovery_v2\\attempts\\normal_rodv2_0095__tension\\cpu_direct\\fenicsx\\fields.npz",
+      "junction_mesh_stats": {
+        "surface_faces": 340,
+        "median_two_chord_edge_mm": 2.087370276199655
+      },
+      "sharp_mesh_stats": {
+        "surface_faces": 50,
+        "median_two_chord_edge_mm": 1.7306660396723679
+      }
+    },
+    {
+      "label": "C05",
+      "nodes": 312548,
+      "cells": 215000,
+      "nfaces": 20762,
+      "VM_max": 530.4128067826816,
+      "U_max": 0.0658444609968013,
+      "PEEQ_max": 0.0,
+      "branch": "弹性分支",
+      "geometry": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\notes\\fe_case0095_fullrod_refinement_20261106\\convergence_v1\\regional_compact_v1\\C05\\geometry.npz",
+      "fields": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\notes\\fe_case0095_fullrod_refinement_20261106\\convergence_v1\\regional_compact_v1\\C05\\fe\\fields.npz",
+      "junction_mesh_stats": {
+        "surface_faces": 6680,
+        "median_two_chord_edge_mm": 0.22523503894864869
+      },
+      "sharp_mesh_stats": {
+        "surface_faces": 1178,
+        "median_two_chord_edge_mm": 0.1520301012857583
+      }
+    },
+    {
+      "label": "A10",
+      "nodes": 702170,
+      "cells": 495397,
+      "nfaces": 29576,
+      "VM_max": 635.7666011806313,
+      "U_max": 0.06585037982305508,
+      "PEEQ_max": 0.0,
+      "branch": "弹性分支",
+      "geometry": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\notes\\fe_case0095_fullrod_refinement_20261106\\convergence_v1\\regional_compact_v1\\A10\\geometry.npz",
+      "fields": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\notes\\fe_case0095_fullrod_refinement_20261106\\convergence_v1\\regional_compact_v1\\A10\\fe\\fields.npz",
+      "junction_mesh_stats": {
+        "surface_faces": 14961,
+        "median_two_chord_edge_mm": 0.14186372811183534
+      },
+      "sharp_mesh_stats": {
+        "surface_faces": 4061,
+        "median_two_chord_edge_mm": 0.07562237215729462
+      }
+    },
+    {
+      "label": "A11",
+      "nodes": 773201,
+      "cells": 546217,
+      "nfaces": 31614,
+      "VM_max": 787.6257930019827,
+      "U_max": 0.06585075158674042,
+      "PEEQ_max": 6.181902207875009e-06,
+      "branch": "完整 J2",
+      "geometry": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\notes\\fe_case0095_fullrod_refinement_20261106\\convergence_v1\\regional_compact_v1\\j2_extension_v1\\A11\\geometry.npz",
+      "fields": "C:\\Users\\ASUS\\Desktop\\GeoBC Neural Operator\\notes\\fe_case0095_fullrod_refinement_20261106\\convergence_v1\\regional_compact_v1\\j2_extension_v1\\A11\\fe\\fields.npz",
+      "junction_mesh_stats": {
+        "surface_faces": 16894,
+        "median_two_chord_edge_mm": 0.13049654507781872
+      },
+      "sharp_mesh_stats": {
+        "surface_faces": 5369,
+        "median_two_chord_edge_mm": 0.05755198329696798
+      }
+    }
+  ],
+  "outputs": [
+    "whole_rod_triangle_blocks.png",
+    "junction_triangle_blocks.png",
+    "corner_triangle_blocks.png"
+  ],
+  "FE_equilibrium_solves": 0,
+  "constitutive_updates": 0,
+  "NN_operations": 0,
+  "training_data_or_running_solver_modified": false,
+  "seconds": 13.530489444732666
+}
