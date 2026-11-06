@@ -1,0 +1,36 @@
+{
+  "model": "OFormer_1M",
+  "parameters": 991359,
+  "architecture": {
+    "width": 109,
+    "dim_head": 109,
+    "heads": 1,
+    "encoder_layers": 4,
+    "decoder_layers": 4
+  },
+  "starting_weights": "Pure untrained initial weights",
+  "starting_weights_sha256": "679d84a3c8adfc46c39f71eb77adcf2937657140139058159d01fe665f825a4e",
+  "cases": 20,
+  "nodes_per_case": 100,
+  "input_channels": 50,
+  "normalization_nodes": 2000,
+  "loss": "Mean normalized VM MSE over 20 x 100 selected original nodes; U loss weight 0",
+  "input_scope": "Only 100 selected native nodes per case; no padding or full-mesh inference",
+  "selection": "Geometry-only densest connected shoulder/junction patch on original surface mesh; no GT/error ranking",
+  "seed": 20261029,
+  "optimizer": "AdamW",
+  "weight_decay": 0,
+  "gradient_clip": 1,
+  "learning_rate": {
+    "initial": 0.0003,
+    "warmup_steps": 50,
+    "cosine_end_step": 6000,
+    "minimum": 1e-05,
+    "extension_6000_to_20000": "Continue same model/optimizer/scheduler/RNG at 1e-5"
+  },
+  "steps": 20000,
+  "device": "CPU, 4 threads, FP32, no AMP",
+  "elapsed_seconds": 1587.0194437503815,
+  "full_mesh_forwards": 0,
+  "scope": "Training-set local stress fitting only; no generalization claim; not an equal-task ranking against M01 full-mesh results"
+}

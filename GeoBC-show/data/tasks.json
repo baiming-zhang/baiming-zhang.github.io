@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05 UTC",
+  "updated": "2026-11-06 Asia/Shanghai",
   "tasks": [
     {
       "id": "R01",
@@ -694,16 +694,38 @@
     {
       "id": "M03",
       "phase": "第3周",
-      "title": "三周最终 checkpoint",
-      "due": "2026-11-10",
-      "status": "未开始",
-      "deliverables": "两类数据集、两模型结果和下一步建议",
-      "review": "确认交付链接完整，模型结构及结论已由执行人 review",
-      "dependencies": "F01",
-      "start": "2026-11-10",
-      "issues": "",
+      "title": "局部训练",
+      "due": "2026-11-06",
+      "status": "已完成",
+      "deliverables": "OFormer近百万参数：20例各100原节点，从头训练20000步；局部GT/预测/误差、完整曲线与逐点数据",
+      "review": "固定训练预算完成；局部误差、未达到1%及与M01全网格任务差异明确展示。",
+      "dependencies": "M01",
+      "start": "2026-11-06",
+      "issues": "991359参数；20×100点局部VM-only训练，20000步平均VM相对L2为12.822%，未达1%；区域外GT/预测灰色。仅TRAIN拟合，不与M01全网格结果直接排名。",
       "page": "M03.html",
-      "results": []
+      "results": [
+        {
+          "label": "局部节点GT / prediction交互对比",
+          "url": "viewers/m03-local-case0095.html?focus=local"
+        },
+        {
+          "label": "20例局部拟合固定步数结果",
+          "url": "M03.html#results"
+        },
+        {
+          "label": "2000点GT / prediction CSV",
+          "url": "assets/m03-local-training-v1/all_2000_training_nodes.csv"
+        },
+        {
+          "label": "配置与比较边界",
+          "url": "assets/m03-local-training-v1/experiment.json"
+        },
+        {
+          "label": "完整结果JSON",
+          "url": "assets/m03-local-training-v1/comparison.json"
+        }
+      ],
+      "completed": "2026-11-06"
     }
   ]
 }

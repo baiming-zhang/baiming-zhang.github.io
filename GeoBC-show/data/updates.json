@@ -1,6 +1,27 @@
 {
   "updates": [
     {
+      "task": "M03",
+      "date": "2026-11-06",
+      "title": "局部训练：20×100原节点，从头完成20000步",
+      "summary": "OFormer_1M 991359参数，只输入局部节点；6000→20000步平均VM相对L2从14.458%降至12.822%，仍未达1%。灰色mask、顶点原值分块和逐点相对误差已交付。",
+      "review": "几何选区，不按GT/误差选点；只优化VM、无全网格前向，不与M01全网格输入/U+VM损失作公平排名。保留原6000步和近邻应力陡变诊断。",
+      "links": [
+        {
+          "label": "局部节点GT / prediction交互对比",
+          "url": "viewers/m03-local-case0095.html?focus=local"
+        },
+        {
+          "label": "20例局部拟合固定步数结果",
+          "url": "M03.html#results"
+        },
+        {
+          "label": "2000点GT / prediction CSV",
+          "url": "assets/m03-local-training-v1/all_2000_training_nodes.csv"
+        }
+      ]
+    },
+    {
       "task": "M01",
       "date": "2026-11-05",
       "title": "OFormer近百万参数补充实验完成",
