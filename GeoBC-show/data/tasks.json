@@ -697,13 +697,25 @@
       "title": "局部训练",
       "due": "2026-11-06",
       "status": "已完成",
-      "deliverables": "OFormer近百万参数：20例各100原节点，从头训练20000步；局部GT/预测/误差、完整曲线与逐点数据",
+      "deliverables": "OFormer近百万参数：20例各100原节点，从头训练20000步；局部GT/预测/误差、完整曲线与逐点数据；新增XYZ-only同区域20000步对照",
       "review": "固定训练预算完成；局部误差、未达到1%及与M01全网格任务差异明确展示。",
       "dependencies": "M01",
       "start": "2026-11-06",
-      "issues": "991359参数；20×100点局部VM-only训练，20000步平均VM相对L2为12.822%，未达1%；区域外GT/预测灰色。仅TRAIN拟合，不与M01全网格结果直接排名。",
+      "issues": "991359参数；20×100点局部VM-only训练，20000步平均VM相对L2为12.822%，未达1%；区域外GT/预测灰色。仅TRAIN拟合，不与M01全网格结果直接排名。 XYZ-only相同节点20000步平均VM相对L2 12.756%；补零导致5123个输入权重无梯度，坐标预处理也有变化。 0095节点GT由单元4GP最大VM的相邻体积平均产生，局部应力收敛尚未验证。 新增0095单例XYZ100点20000步，相对L2 11.808%。",
       "page": "M03.html",
       "results": [
+        {
+          "label": "0095单例XYZ-only拟合",
+          "url": "M03.html#xyz-single0095"
+        },
+        {
+          "label": "0095有限元与节点GT诊断",
+          "url": "M03.html#fe-diagnosis"
+        },
+        {
+          "label": "XYZ-only / 50维输入对照",
+          "url": "M03.html#xyz-only"
+        },
         {
           "label": "局部节点GT / prediction交互对比",
           "url": "viewers/m03-local-case0095.html?focus=local"

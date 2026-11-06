@@ -1,0 +1,111 @@
+{
+  "case": "normal_rodv2_0095__tension",
+  "original_saved_U_unchanged": true,
+  "new_solutions": 0,
+  "NN_forwards": 0,
+  "original_internal_force_reproduced_relative_L2": 3.315338546994191e-11,
+  "quadrature_sensitivity_at_frozen_U": [
+    {
+      "rule": "Original symmetric4",
+      "quadrature_points": 4,
+      "energy_Nmm": 178.37372635641125,
+      "max_sampled_VM_MPa": 530.414885277898,
+      "min_detF": 0.9997240685539672,
+      "min_geometry_detJ": 7.036899812399297e-10,
+      "free_residual_relative": 4.3268954059078196e-11,
+      "internal_force_difference_vs_original4pt": 0.0,
+      "energy_relative_difference_vs_original4pt": 0.0
+    },
+    {
+      "rule": "Positive Duffy Gauss 2^3",
+      "quadrature_points": 8,
+      "energy_Nmm": 177.80423442711762,
+      "max_sampled_VM_MPa": 598.4636398479274,
+      "min_detF": 0.9996533573290399,
+      "min_geometry_detJ": 4.405757643407062e-10,
+      "free_residual_relative": 0.6794257113230984,
+      "internal_force_difference_vs_original4pt": 0.5493199068438419,
+      "energy_relative_difference_vs_original4pt": 0.0031926895340837523
+    },
+    {
+      "rule": "Positive Duffy Gauss 3^3",
+      "quadrature_points": 27,
+      "energy_Nmm": 178.37903254155069,
+      "max_sampled_VM_MPa": 922.394520087933,
+      "min_detF": 0.9994146899768006,
+      "min_geometry_detJ": 2.978326782916361e-10,
+      "free_residual_relative": 0.03168823039079898,
+      "internal_force_difference_vs_original4pt": 0.025620200422158436,
+      "energy_relative_difference_vs_original4pt": 2.974757128092648e-05
+    },
+    {
+      "rule": "Positive Duffy Gauss 5^3",
+      "quadrature_points": 125,
+      "energy_Nmm": 178.37956096433177,
+      "max_sampled_VM_MPa": 1463.4312741606295,
+      "min_detF": 0.9991546751483851,
+      "min_geometry_detJ": 1.9178066309404587e-10,
+      "free_residual_relative": 0.03332324561268775,
+      "internal_force_difference_vs_original4pt": 0.026942119862219813,
+      "energy_relative_difference_vs_original4pt": 3.271001867652389e-05
+    }
+  ],
+  "nodal_derivative_recovery_pair": [
+    {
+      "node": 6956,
+      "current_GT_MPa": 77.30296632025981,
+      "direct_element_side_nodal_VM_volume_average_MPa": 84.32560671310624,
+      "incident_element_nodal_VM_MPa": [
+        115.93271782956518,
+        90.61197028157137,
+        82.76566351890028
+      ],
+      "incident_cell_ids": [
+        15787,
+        52269,
+        52270
+      ]
+    },
+    {
+      "node": 6954,
+      "current_GT_MPa": 132.47359635132582,
+      "direct_element_side_nodal_VM_volume_average_MPa": 113.94807899022831,
+      "incident_element_nodal_VM_MPa": [
+        115.72258770154454,
+        112.18246218365667
+      ],
+      "incident_cell_ids": [
+        15787,
+        48947
+      ]
+    }
+  ],
+  "nodal_sample_max_VM_MPa": 2909.190972691641,
+  "nodal_sample_min_detF": 0.9987273235513108,
+  "nodal_sample_min_geometry_detJ": 1.0682165512140153e-10,
+  "selected100_maxlabel_vs_direct_nodal_recovery_relative_L2": 0.21858438106220607,
+  "dense125_global_peak": {
+    "cell_id": 50297,
+    "cell_index": 36430,
+    "xyz_mm": [
+      150.27030419592285,
+      26.467940092268993,
+      -13.317303586624172
+    ],
+    "VM_MPa": 1463.4312741606295
+  },
+  "nodal_sample_global_peak": {
+    "cell_id": 50306,
+    "cell_index": 36439,
+    "xyz_mm": [
+      150.27014354038,
+      26.467892716338,
+      13.317304569575
+    ],
+    "VM_MPa": 2909.190972691641
+  },
+  "selected100_incident_cells_dense125_max_VM_MPa": 255.8291060371189,
+  "selected100_incident_cells_node_sample_max_VM_MPa": 304.1352079147055,
+  "seconds": 18.500843286514282,
+  "caution": "Alternative postprocessing is diagnostic; no labels or original model results replaced. Frozen-U residual sensitivity is not a re-solved quadrature convergence result."
+}

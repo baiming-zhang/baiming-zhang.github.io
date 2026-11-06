@@ -1,0 +1,311 @@
+{
+  "completed": true,
+  "steps": 20000,
+  "from_scratch": true,
+  "parameters": 991359,
+  "zero_input_weight_count": 5123,
+  "raw_input_shape": [
+    20,
+    100,
+    3
+  ],
+  "same_initial_weights": true,
+  "same_nodes_and_GT": true,
+  "coordinate_preprocessing": "XYZ-only uses absolute mm, pooled normalization over 2000 nodes; prior50-feature coordinates were x/L,y/L,z/L, then pooled normalization. Not a pure deletion-only comparison.",
+  "loss": "Same normalized VM MSE and target scale",
+  "learning_rate": "Same warmup50/cosine to6000, then fixed1e-5 to20000",
+  "elapsed_seconds": 1620.3349061012268,
+  "cases_below_one_percent": 0,
+  "metrics": [
+    {
+      "step": 0,
+      "features50_mean_VM_L2": 1.7771445348829673,
+      "xyz_mean_VM_L2": 1.1466647142655952,
+      "xyz_pooled_VM_L2": 1.1753231902392263
+    },
+    {
+      "step": 500,
+      "features50_mean_VM_L2": 0.24393832924267117,
+      "xyz_mean_VM_L2": 0.25726418097011333,
+      "xyz_pooled_VM_L2": 0.22515242037027172
+    },
+    {
+      "step": 2000,
+      "features50_mean_VM_L2": 0.20986197687039984,
+      "xyz_mean_VM_L2": 0.2062470836134091,
+      "xyz_pooled_VM_L2": 0.16126054434549653
+    },
+    {
+      "step": 4000,
+      "features50_mean_VM_L2": 0.17355732154961223,
+      "xyz_mean_VM_L2": 0.17221931832534326,
+      "xyz_pooled_VM_L2": 0.13372861660312163
+    },
+    {
+      "step": 6000,
+      "features50_mean_VM_L2": 0.14458330826468319,
+      "xyz_mean_VM_L2": 0.15309376219055065,
+      "xyz_pooled_VM_L2": 0.11347960752493298
+    },
+    {
+      "step": 10000,
+      "features50_mean_VM_L2": 0.13708335103473282,
+      "xyz_mean_VM_L2": 0.14207303608058658,
+      "xyz_pooled_VM_L2": 0.10360516848793612
+    },
+    {
+      "step": 16000,
+      "features50_mean_VM_L2": 0.12888528786828396,
+      "xyz_mean_VM_L2": 0.13230715296845735,
+      "xyz_pooled_VM_L2": 0.09678467138601769
+    },
+    {
+      "step": 20000,
+      "features50_mean_VM_L2": 0.1282204929785719,
+      "xyz_mean_VM_L2": 0.12755707430726898,
+      "xyz_pooled_VM_L2": 0.09451506346391628
+    }
+  ],
+  "rows": [
+    {
+      "case": "normal_rodv2_0021__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.13656635840514122,
+      "xyz_2000_VM_relative_L2": 0.13162379991607837,
+      "features50_4000_VM_relative_L2": 0.124999896910089,
+      "xyz_4000_VM_relative_L2": 0.11419849797238672,
+      "features50_6000_VM_relative_L2": 0.06964546265431716,
+      "xyz_6000_VM_relative_L2": 0.10679022713438387,
+      "features50_20000_VM_relative_L2": 0.04889246951319486,
+      "xyz_20000_VM_relative_L2": 0.07078310802002453
+    },
+    {
+      "case": "normal_rodv2_0026__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.20905190076653313,
+      "xyz_2000_VM_relative_L2": 0.17130278095543708,
+      "features50_4000_VM_relative_L2": 0.15739185199313355,
+      "xyz_4000_VM_relative_L2": 0.15441288469001913,
+      "features50_6000_VM_relative_L2": 0.10956539529983464,
+      "xyz_6000_VM_relative_L2": 0.14699792414047055,
+      "features50_20000_VM_relative_L2": 0.0903458708560601,
+      "xyz_20000_VM_relative_L2": 0.1170191177138164
+    },
+    {
+      "case": "normal_rodv2_0036__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.1626106846072803,
+      "xyz_2000_VM_relative_L2": 0.13862342591970347,
+      "features50_4000_VM_relative_L2": 0.0960439641823536,
+      "xyz_4000_VM_relative_L2": 0.10113611941606687,
+      "features50_6000_VM_relative_L2": 0.0901928691660754,
+      "xyz_6000_VM_relative_L2": 0.08748823382385892,
+      "features50_20000_VM_relative_L2": 0.08495049314561777,
+      "xyz_20000_VM_relative_L2": 0.07751421727181701
+    },
+    {
+      "case": "normal_rodv2_0039__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.38065278705240063,
+      "xyz_2000_VM_relative_L2": 0.32238320476769605,
+      "features50_4000_VM_relative_L2": 0.32636492101413594,
+      "xyz_4000_VM_relative_L2": 0.28646160656213954,
+      "features50_6000_VM_relative_L2": 0.3009181682531521,
+      "xyz_6000_VM_relative_L2": 0.2625559569776691,
+      "features50_20000_VM_relative_L2": 0.2863710990312676,
+      "xyz_20000_VM_relative_L2": 0.23936621868420652
+    },
+    {
+      "case": "normal_rodv2_0045__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.1837232033383487,
+      "xyz_2000_VM_relative_L2": 0.18716246019674718,
+      "features50_4000_VM_relative_L2": 0.14450935832885672,
+      "xyz_4000_VM_relative_L2": 0.18606190276149875,
+      "features50_6000_VM_relative_L2": 0.10856033240077739,
+      "xyz_6000_VM_relative_L2": 0.0971020168445223,
+      "features50_20000_VM_relative_L2": 0.07391741947564248,
+      "xyz_20000_VM_relative_L2": 0.03932584656647123
+    },
+    {
+      "case": "normal_rodv2_0052__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.3812503629139185,
+      "xyz_2000_VM_relative_L2": 0.3688958085642153,
+      "features50_4000_VM_relative_L2": 0.33629663868770104,
+      "xyz_4000_VM_relative_L2": 0.33598087675981686,
+      "features50_6000_VM_relative_L2": 0.2985845672568815,
+      "xyz_6000_VM_relative_L2": 0.31810174013714,
+      "features50_20000_VM_relative_L2": 0.29835037144647236,
+      "xyz_20000_VM_relative_L2": 0.29591231215867053
+    },
+    {
+      "case": "normal_rodv2_0074__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.2563179759387758,
+      "xyz_2000_VM_relative_L2": 0.2605916569441067,
+      "features50_4000_VM_relative_L2": 0.22364023204142106,
+      "xyz_4000_VM_relative_L2": 0.23087229377221788,
+      "features50_6000_VM_relative_L2": 0.21274339442152082,
+      "xyz_6000_VM_relative_L2": 0.2280253392764426,
+      "features50_20000_VM_relative_L2": 0.2120897891658621,
+      "xyz_20000_VM_relative_L2": 0.21718523710226847
+    },
+    {
+      "case": "normal_rodv2_0088__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.278842825509582,
+      "xyz_2000_VM_relative_L2": 0.2850066947503364,
+      "features50_4000_VM_relative_L2": 0.27153680648296225,
+      "xyz_4000_VM_relative_L2": 0.26255654594842615,
+      "features50_6000_VM_relative_L2": 0.2628393621269316,
+      "xyz_6000_VM_relative_L2": 0.24668259259786826,
+      "features50_20000_VM_relative_L2": 0.2313829114859471,
+      "xyz_20000_VM_relative_L2": 0.22076010287185518
+    },
+    {
+      "case": "normal_rodv2_0091__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.25975208682638856,
+      "xyz_2000_VM_relative_L2": 0.2588579539227549,
+      "features50_4000_VM_relative_L2": 0.23064293352214058,
+      "xyz_4000_VM_relative_L2": 0.2042844499530259,
+      "features50_6000_VM_relative_L2": 0.20221247570680287,
+      "xyz_6000_VM_relative_L2": 0.18288950076635777,
+      "features50_20000_VM_relative_L2": 0.1812520511852489,
+      "xyz_20000_VM_relative_L2": 0.15593655999589057
+    },
+    {
+      "case": "normal_rodv2_0093__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.019509542991970268,
+      "xyz_2000_VM_relative_L2": 0.03927724317540213,
+      "features50_4000_VM_relative_L2": 0.01957805278669318,
+      "xyz_4000_VM_relative_L2": 0.01551018941454249,
+      "features50_6000_VM_relative_L2": 0.015399169659681732,
+      "xyz_6000_VM_relative_L2": 0.014070528534689939,
+      "features50_20000_VM_relative_L2": 0.014404562883945843,
+      "xyz_20000_VM_relative_L2": 0.012345324504319634
+    },
+    {
+      "case": "normal_rodv2_0095__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.23379829811325162,
+      "xyz_2000_VM_relative_L2": 0.19088878232862547,
+      "features50_4000_VM_relative_L2": 0.1928386193347975,
+      "xyz_4000_VM_relative_L2": 0.17055440491984716,
+      "features50_6000_VM_relative_L2": 0.17630175909298065,
+      "xyz_6000_VM_relative_L2": 0.1458343667253835,
+      "features50_20000_VM_relative_L2": 0.17010720385269207,
+      "xyz_20000_VM_relative_L2": 0.1402881826081879
+    },
+    {
+      "case": "normal_rodv2_0107__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.2934141770145042,
+      "xyz_2000_VM_relative_L2": 0.3305782292455243,
+      "features50_4000_VM_relative_L2": 0.2768787149029675,
+      "xyz_4000_VM_relative_L2": 0.2867804331483756,
+      "features50_6000_VM_relative_L2": 0.21292614426244483,
+      "xyz_6000_VM_relative_L2": 0.2808432008898734,
+      "features50_20000_VM_relative_L2": 0.20474035340775953,
+      "xyz_20000_VM_relative_L2": 0.25725560176831486
+    },
+    {
+      "case": "normal_rodv2_0126__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.21417364090149038,
+      "xyz_2000_VM_relative_L2": 0.22510343395607166,
+      "features50_4000_VM_relative_L2": 0.19460799900702533,
+      "xyz_4000_VM_relative_L2": 0.19892651837917874,
+      "features50_6000_VM_relative_L2": 0.17048481188741538,
+      "xyz_6000_VM_relative_L2": 0.16852325893489925,
+      "features50_20000_VM_relative_L2": 0.16102903483122866,
+      "xyz_20000_VM_relative_L2": 0.155488048076001
+    },
+    {
+      "case": "normal_rodv2_0127__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.25973812102441907,
+      "xyz_2000_VM_relative_L2": 0.3162625475791802,
+      "features50_4000_VM_relative_L2": 0.2233648176411138,
+      "xyz_4000_VM_relative_L2": 0.2506874388730338,
+      "features50_6000_VM_relative_L2": 0.18100392624333517,
+      "xyz_6000_VM_relative_L2": 0.24328879995780645,
+      "features50_20000_VM_relative_L2": 0.14426307913415606,
+      "xyz_20000_VM_relative_L2": 0.22592807548039406
+    },
+    {
+      "case": "normal_rodv2_0129__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.23662005703054154,
+      "xyz_2000_VM_relative_L2": 0.14880017436414178,
+      "features50_4000_VM_relative_L2": 0.13439338442551188,
+      "xyz_4000_VM_relative_L2": 0.11991714953140922,
+      "features50_6000_VM_relative_L2": 0.10802256434383349,
+      "xyz_6000_VM_relative_L2": 0.10758271158690019,
+      "features50_20000_VM_relative_L2": 0.06179704970865346,
+      "xyz_20000_VM_relative_L2": 0.05264634839581915
+    },
+    {
+      "case": "normal_rodv2_0137__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.21664448769143388,
+      "xyz_2000_VM_relative_L2": 0.23924787819886423,
+      "features50_4000_VM_relative_L2": 0.13819146321972772,
+      "xyz_4000_VM_relative_L2": 0.11978376542674206,
+      "features50_6000_VM_relative_L2": 0.11296882232192977,
+      "xyz_6000_VM_relative_L2": 0.10595964942443828,
+      "features50_20000_VM_relative_L2": 0.10236186565105677,
+      "xyz_20000_VM_relative_L2": 0.07529016458837316
+    },
+    {
+      "case": "normal_rodv2_0148__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.04203407571214466,
+      "xyz_2000_VM_relative_L2": 0.044968089784186725,
+      "features50_4000_VM_relative_L2": 0.024582965526517318,
+      "xyz_4000_VM_relative_L2": 0.024047651734766234,
+      "features50_6000_VM_relative_L2": 0.01715528931884559,
+      "xyz_6000_VM_relative_L2": 0.01570998441630237,
+      "features50_20000_VM_relative_L2": 0.014622853974068567,
+      "xyz_20000_VM_relative_L2": 0.013474016747292237
+    },
+    {
+      "case": "normal_rodv2_0159__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.031307901046557174,
+      "xyz_2000_VM_relative_L2": 0.05787747402384157,
+      "features50_4000_VM_relative_L2": 0.026265220678678057,
+      "xyz_4000_VM_relative_L2": 0.043088151275946215,
+      "features50_6000_VM_relative_L2": 0.024044264921409333,
+      "xyz_6000_VM_relative_L2": 0.02452059463422995,
+      "features50_20000_VM_relative_L2": 0.015699368529581648,
+      "xyz_20000_VM_relative_L2": 0.015554459687594538
+    },
+    {
+      "case": "normal_rodv2_0163__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.15420949910165366,
+      "xyz_2000_VM_relative_L2": 0.14914677262924025,
+      "features50_4000_VM_relative_L2": 0.13015660702927762,
+      "xyz_4000_VM_relative_L2": 0.13439011913075674,
+      "features50_6000_VM_relative_L2": 0.06638785095553118,
+      "xyz_6000_VM_relative_L2": 0.11632896457691125,
+      "features50_20000_VM_relative_L2": 0.05084571219056414,
+      "xyz_20000_VM_relative_L2": 0.06377148988880897
+    },
+    {
+      "case": "normal_rodv2_0170__tension",
+      "nodes": 100,
+      "features50_2000_VM_relative_L2": 0.24702155142166127,
+      "xyz_2000_VM_relative_L2": 0.25834326104602856,
+      "features50_4000_VM_relative_L2": 0.19886198327714097,
+      "xyz_4000_VM_relative_L2": 0.20473536683666976,
+      "features50_6000_VM_relative_L2": 0.15170953499996367,
+      "xyz_6000_VM_relative_L2": 0.1625796524308652,
+      "features50_20000_VM_relative_L2": 0.11698630010241763,
+      "xyz_20000_VM_relative_L2": 0.10529705401525277
+    }
+  ]
+}

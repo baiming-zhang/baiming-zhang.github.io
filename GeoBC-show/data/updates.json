@@ -951,6 +951,57 @@
           "url": "viewers/copv-final-results.html?scope=train20"
         }
       ]
+    },
+    {
+      "task": "M03",
+      "date": "2026-11-06",
+      "title": "XYZ-only从头训练20000步完成",
+      "summary": "同20例各100原节点、同991359参数OFormer及未训练初值；XYZ-only平均VM相对L2 12.756%，50维组 12.822%。新增同节点点云、GT和逐点CSV。",
+      "review": "仅TRAIN局部拟合；47维固定补零使5123个输入权重无梯度；新XYZ用绝对毫米坐标，旧组先除以L，不能称纯删除特征单因素对照。",
+      "links": [
+        {
+          "label": "XYZ-only / 50维输入结果",
+          "url": "M03.html#xyz-only"
+        },
+        {
+          "label": "0095相同步数点云",
+          "url": "viewers/m03-xyz-only-case0095.html?focus=local&render=nodes"
+        }
+      ]
+    },
+    {
+      "task": "M03",
+      "date": "2026-11-06",
+      "title": "0095有限元检查：区分原积分点应力与节点恢复标签",
+      "summary": "原求解应力和数据编号复算吻合；相距1.43微米的节点标签77.30/132.47MPa受相邻薄单元及体积平均权重显著影响。同一case另做610N两次积分敏感性求解，原标签不替换。",
+      "review": "节点GT为单元4GP最大VM的相邻体积平均；不能把模型1%训练误差等同FE物理精度，也不据此判定所有模型残差只有一个原因。",
+      "links": [
+        {
+          "label": "单case诊断",
+          "url": "M03.html#fe-diagnosis"
+        },
+        {
+          "label": "完整计算与证据",
+          "url": "assets/m03-fe-case0095-v1/report.html"
+        }
+      ]
+    },
+    {
+      "task": "M03",
+      "date": "2026-11-06",
+      "title": "0095单case XYZ-only100点拟合完成",
+      "summary": "991359总参数OFormer同纯初值，从头20000步；单例100点VM相对L2 11.808%，20例XYZ在同点 14.029%。输入100×3，监督应力100×1，mask外灰色。",
+      "review": "单例统计量仅本100点；20例组归一化范围不同。结果为训练拟合，未外推泛化。47个补零通道使5123个输入权重无梯度。",
+      "links": [
+        {
+          "label": "单例结果与同节点对照",
+          "url": "M03.html#xyz-single0095"
+        },
+        {
+          "label": "单例 /20例XYZ点云",
+          "url": "viewers/m03-single0095-xyz.html?focus=local&render=nodes"
+        }
+      ]
     }
   ]
 }

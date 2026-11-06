@@ -1,0 +1,213 @@
+{
+  "case": "normal_rodv2_0095__tension",
+  "scope": "One case only; original files read-only; no solve/NN",
+  "nodes": 69290,
+  "elements": 41162,
+  "source_arrays": {
+    "node_ids": {
+      "shape": [
+        69290
+      ],
+      "dtype": "uint64"
+    },
+    "cell_ids": {
+      "shape": [
+        41162
+      ],
+      "dtype": "uint64"
+    },
+    "U_peak_mm": {
+      "shape": [
+        69290,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "U_unload_mm": {
+      "shape": [
+        69290,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "force_peak_N": {
+      "shape": [
+        69290,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "internal_force_peak_N": {
+      "shape": [
+        69290,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "GP_xyz_mm": {
+      "shape": [
+        41162,
+        4,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "GP_Cauchy_stress_MPa": {
+      "shape": [
+        41162,
+        4,
+        3,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "GP_von_Mises_MPa": {
+      "shape": [
+        41162,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "GP_PEEQ": {
+      "shape": [
+        41162,
+        4
+      ],
+      "dtype": "float64"
+    }
+  },
+  "ID_alignment_pass": true,
+  "force_alignment_pass": true,
+  "cache_label_reproduced_max_abs_MPa": 0.0,
+  "label_rule": "For each curved TET10: maximum of four GP scalar VM values. Give the same cell scalar to all10 nodes, then incident-original-cell-volume average per node.",
+  "independent_constitutive_GP_check": {
+    "physical_point_mapping_max_error_mm": 1.7059038306306462e-13,
+    "stress_max_abs_difference_MPa": 1.6811852958653617e-05,
+    "stress_relative_L2": 5.011491698214955e-09,
+    "VM_max_abs_difference_MPa": 4.202106248385462e-05,
+    "min_detF": 0.9997240685539672
+  },
+  "pair_distance_mm": 0.0014321784707143292,
+  "pair_common_cell_ids": [
+    15787
+  ],
+  "pair": [
+    {
+      "node": 6956,
+      "index": 6955,
+      "xyz_mm": [
+        22.416006851251517,
+        10.076627026179787,
+        -7.990171088578624
+      ],
+      "role": "edge_midpoint",
+      "in_both_corner_and_mid": false,
+      "edge_endpoint_ids": [
+        [
+          6952,
+          16
+        ],
+        [
+          16,
+          6952
+        ]
+      ],
+      "incident_cells": 3,
+      "incident_volume_mm3": 0.19459526085612933,
+      "current_GT_MPa": 77.30296632025981,
+      "cell_mean_GP_recovered_MPa": 67.22507946082337,
+      "cell_rms_GP_recovered_MPa": 67.78724111623329,
+      "U_mm": [
+        -0.035463233418425395,
+        0.0019861427113663584,
+        0.0012684587211670784
+      ],
+      "applied_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "radial_normal": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "node": 6954,
+      "index": 6953,
+      "xyz_mm": [
+        22.414899545830096,
+        10.077443413466042,
+        -7.9897729407737685
+      ],
+      "role": "edge_midpoint",
+      "in_both_corner_and_mid": false,
+      "edge_endpoint_ids": [
+        [
+          455,
+          6952
+        ]
+      ],
+      "incident_cells": 2,
+      "incident_volume_mm3": 0.0002475671408626592,
+      "current_GT_MPa": 132.47359635132582,
+      "cell_mean_GP_recovered_MPa": 103.2782847857313,
+      "cell_rms_GP_recovered_MPa": 107.61536319630996,
+      "U_mm": [
+        -0.035464669588744585,
+        0.0019863289833260637,
+        0.0012683206490182565
+      ],
+      "applied_force_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "radial_normal": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "geometry_GP_detJ": {
+    "min": 7.036899812399297e-10,
+    "p01": 0.2048525960315188,
+    "p50": 12.28398106316936,
+    "p99": 39.9705114453915,
+    "max": 63.40101990761166
+  },
+  "geometry_GP_condition": {
+    "min": 1.1594240252967822,
+    "p01": 1.5460244566661814,
+    "p50": 2.9549110840568433,
+    "p99": 10.99326276183701,
+    "max": 1781742.9525090598
+  },
+  "nearest_neighbor_distance_mm": {
+    "min": 1.5226341005129166e-06,
+    "p01": 0.1252839872259227,
+    "p50": 0.9424663101960232,
+    "p99": 1.5470896085794867,
+    "max": 1.7690980523892936
+  },
+  "selected100_nearest_neighbor_distance_mm": {
+    "min": 0.0014321784707143292,
+    "p01": 0.0014321784707143292,
+    "p50": 0.29542229208358584,
+    "p99": 1.0143765243304674,
+    "max": 1.2055469120497404
+  },
+  "selected100_label_recovery_difference": {
+    "max_vs_GPmean_relative_L2": 0.20041738015384994,
+    "max_abs_MPa": 29.344249331254417
+  },
+  "selected100_VM_current_range": {
+    "min": 12.500832511758222,
+    "p01": 13.182437505292848,
+    "p50": 32.98649380205278,
+    "p99": 130.95029306354928,
+    "max": 132.47359635132582
+  }
+}
