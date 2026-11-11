@@ -1,0 +1,88 @@
+{
+  "scope": "independent saved-CSV arithmetic audit, not physical validation",
+  "cases": {
+    "coarse": {
+      "entropy_identity_reconstruction_error": 6.462348535570529e-27,
+      "minimum_terms": {
+        "viscous_dissipation_nondim": 5.006192967454666e-11,
+        "diffusive_dissipation_nondim": 8.313234156411841e-12,
+        "upwind_dissipation_nondim": 3.967559387588641e-15,
+        "BE_dissipation_nondim": 3.2299337300448206e-13
+      }
+    },
+    "time-coarse": {
+      "entropy_identity_reconstruction_error": 0.0,
+      "minimum_terms": {
+        "viscous_dissipation_nondim": 4.034520559560491e-11,
+        "diffusive_dissipation_nondim": 1.2359363344663027e-11,
+        "upwind_dissipation_nondim": 5.54232974910595e-15,
+        "BE_dissipation_nondim": 1.1776367109102299e-12
+      }
+    },
+    "main": {
+      "entropy_identity_reconstruction_error": 6.462348535570529e-27,
+      "minimum_terms": {
+        "viscous_dissipation_nondim": 3.569663816136626e-11,
+        "diffusive_dissipation_nondim": 1.2745580970698677e-11,
+        "upwind_dissipation_nondim": 5.363256490977143e-15,
+        "BE_dissipation_nondim": 2.4507923170434204e-13
+      }
+    },
+    "time-half": {
+      "entropy_identity_reconstruction_error": 3.2311742677852644e-27,
+      "minimum_terms": {
+        "viscous_dissipation_nondim": 3.3514691631705765e-11,
+        "diffusive_dissipation_nondim": 1.295084914287589e-11,
+        "upwind_dissipation_nondim": 5.261018051182824e-15,
+        "BE_dissipation_nondim": 5.59367578167433e-14
+      }
+    },
+    "fine": {
+      "entropy_identity_reconstruction_error": 1.6155871338926322e-27,
+      "minimum_terms": {
+        "viscous_dissipation_nondim": 2.9623664066706525e-11,
+        "diffusive_dissipation_nondim": 1.3569956599138175e-11,
+        "upwind_dissipation_nondim": 5.355839899294754e-15,
+        "BE_dissipation_nondim": 5.088602117990073e-14
+      }
+    },
+    "no-flow": {
+      "entropy_identity_reconstruction_error": 0.0,
+      "minimum_terms": {
+        "viscous_dissipation_nondim": 0.0,
+        "diffusive_dissipation_nondim": 1.2296956931920336e-11,
+        "upwind_dissipation_nondim": 0.0,
+        "BE_dissipation_nondim": 1.1933017781168198e-15
+      }
+    },
+    "uniform": {
+      "entropy_identity_reconstruction_error": 0.0,
+      "minimum_terms": {
+        "viscous_dissipation_nondim": 0.0,
+        "diffusive_dissipation_nondim": 0.0,
+        "upwind_dissipation_nondim": 0.0,
+        "BE_dissipation_nondim": 0.0
+      }
+    },
+    "strong": {
+      "entropy_identity_reconstruction_error": 8.271806125530277e-25,
+      "minimum_terms": {
+        "viscous_dissipation_nondim": 3.5703093989235573e-09,
+        "diffusive_dissipation_nondim": 1.2728578908035228e-09,
+        "upwind_dissipation_nondim": 5.342562685359247e-12,
+        "BE_dissipation_nondim": 2.4511122213948678e-11
+      }
+    }
+  },
+  "main_solute_per_unit_border_length_mol_m": {
+    "initial": 7.463097848033121e-11,
+    "final": 7.463097848033116e-11,
+    "relative_change": 6.661338147750939e-16
+  },
+  "checks": {
+    "nonnegative_dissipation_terms": true,
+    "reconstructed_entropy_identity": true,
+    "saved_node_amount": true,
+    "105_steps": true
+  }
+}
