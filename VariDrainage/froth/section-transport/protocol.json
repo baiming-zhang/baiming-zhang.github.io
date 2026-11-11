@@ -1,0 +1,63 @@
+{
+  "geometry": "dry equal-tension curved triangular Plateau cross-section, equal arc-length boundary sampling",
+  "radius_m": 0.0004,
+  "D_m2_s": 5e-10,
+  "eta_m": 1e-05,
+  "B_m": 0.001,
+  "initial_c_mol_m3": 0.002,
+  "source_window_m": 1.7888543819998316e-05,
+  "source_definition": "normalized Gaussian boundary loads around all three cusp contacts, 8-point edge quadrature; width is a declared modelling input, not measured",
+  "method": "P1 FE, circumcentric bulk+Henry surface mass, implicit diffusion, no clipping/renormalization",
+  "configs": [
+    [
+      "coarse",
+      96,
+      8,
+      1,
+      1.0
+    ],
+    [
+      "medium",
+      192,
+      16,
+      1,
+      1.0
+    ],
+    [
+      "fine",
+      384,
+      32,
+      1,
+      1.0
+    ],
+    [
+      "time-half",
+      384,
+      32,
+      2,
+      1.0
+    ],
+    [
+      "window-half",
+      384,
+      32,
+      1,
+      0.5
+    ],
+    [
+      "window-double",
+      384,
+      32,
+      1,
+      2.0
+    ]
+  ],
+  "source_replay": "all net molar arrivals from frozen saved local-coupled CSV",
+  "limits": [
+    "no velocity/advection/Marangoni solution",
+    "frozen dry geometry, physical inlets not truncated/resolved",
+    "instant Henry equilibrium; no adsorption-rate evidence",
+    "source-window choice is not a calibrated transition match",
+    "operator validation, not real-border or coupled-foam prediction"
+  ]
+}

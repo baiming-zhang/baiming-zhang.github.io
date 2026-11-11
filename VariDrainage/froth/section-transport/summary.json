@@ -1,0 +1,228 @@
+{
+  "protocol": {
+    "geometry": "dry equal-tension curved triangular Plateau cross-section, equal arc-length boundary sampling",
+    "radius_m": 0.0004,
+    "D_m2_s": 5e-10,
+    "eta_m": 1e-05,
+    "B_m": 0.001,
+    "initial_c_mol_m3": 0.002,
+    "source_window_m": 1.7888543819998316e-05,
+    "source_definition": "normalized Gaussian boundary loads around all three cusp contacts, 8-point edge quadrature; width is a declared modelling input, not measured",
+    "method": "P1 FE, circumcentric bulk+Henry surface mass, implicit diffusion, no clipping/renormalization",
+    "configs": [
+      [
+        "coarse",
+        96,
+        8,
+        1,
+        1.0
+      ],
+      [
+        "medium",
+        192,
+        16,
+        1,
+        1.0
+      ],
+      [
+        "fine",
+        384,
+        32,
+        1,
+        1.0
+      ],
+      [
+        "time-half",
+        384,
+        32,
+        2,
+        1.0
+      ],
+      [
+        "window-half",
+        384,
+        32,
+        1,
+        0.5
+      ],
+      [
+        "window-double",
+        384,
+        32,
+        1,
+        2.0
+      ]
+    ],
+    "source_replay": "all net molar arrivals from frozen saved local-coupled CSV",
+    "limits": [
+      "no velocity/advection/Marangoni solution",
+      "frozen dry geometry, physical inlets not truncated/resolved",
+      "instant Henry equilibrium; no adsorption-rate evidence",
+      "source-window choice is not a calibrated transition match",
+      "operator validation, not real-border or coupled-foam prediction"
+    ]
+  },
+  "runs": [
+    {
+      "name": "coarse",
+      "angular_segments": 96,
+      "radial_layers": 8,
+      "nodes": 829,
+      "triangles": 1500,
+      "substeps": 1,
+      "window_factor": 1.0,
+      "area_relative_error": 0.0017385647102450275,
+      "perimeter_relative_error": -4.4621095026453617e-05,
+      "steady_uniform_relative_error": 1.0842021724855044e-15,
+      "affine_gradient_energy_relative_error": 1.27675647831893e-14,
+      "max_relative_amount_balance": 2.1660958506186525e-15,
+      "minimum_concentration": 0.001999999999999941,
+      "max_quadratic_energy_identity_defect": 7.740697632481178e-30,
+      "max_relative_quadratic_energy_identity_defect": 3.6946992898923184e-14,
+      "threefold_relative_symmetry_error": 3.5344990823027445e-14,
+      "final_contact_c": 0.004963837204635096,
+      "final_capacity_mean_c": 0.002114035363261491,
+      "final_contact_vs_mean_relative_difference": 1.348038869594399,
+      "wall_s": 0.0918501999694854
+    },
+    {
+      "name": "medium",
+      "angular_segments": 192,
+      "radial_layers": 16,
+      "nodes": 3217,
+      "triangles": 6096,
+      "substeps": 1,
+      "window_factor": 1.0,
+      "area_relative_error": 0.00043465863291736184,
+      "perimeter_relative_error": -1.1155385752692482e-05,
+      "steady_uniform_relative_error": 9.324138683375338e-15,
+      "affine_gradient_energy_relative_error": 3.930189507173054e-14,
+      "max_relative_amount_balance": 4.446445133059358e-16,
+      "minimum_concentration": 0.001999999999999962,
+      "max_quadratic_energy_identity_defect": 3.106139814307734e-30,
+      "max_relative_quadratic_energy_identity_defect": 2.3339733122376613e-14,
+      "threefold_relative_symmetry_error": 4.423544863740858e-14,
+      "final_contact_c": 0.005183187228329307,
+      "final_capacity_mean_c": 0.0021141340753389267,
+      "final_contact_vs_mean_relative_difference": 1.4516833103398925,
+      "wall_s": 0.278098699869588
+    },
+    {
+      "name": "fine",
+      "angular_segments": 384,
+      "radial_layers": 32,
+      "nodes": 12607,
+      "triangles": 24510,
+      "substeps": 1,
+      "window_factor": 1.0,
+      "area_relative_error": 0.00010866574922108185,
+      "perimeter_relative_error": -2.788853437185601e-06,
+      "steady_uniform_relative_error": 3.3176586478056436e-14,
+      "affine_gradient_energy_relative_error": 1.4432899320127035e-14,
+      "max_relative_amount_balance": 1.8737007296408848e-15,
+      "minimum_concentration": 0.0019999999999998283,
+      "max_quadratic_energy_identity_defect": 4.067564042545842e-30,
+      "max_relative_quadratic_energy_identity_defect": 3.059263684845294e-14,
+      "threefold_relative_symmetry_error": 1.1058862159352145e-13,
+      "final_contact_c": 0.0052122720740882846,
+      "final_capacity_mean_c": 0.002114158781318758,
+      "final_contact_vs_mean_relative_difference": 1.4654118319519043,
+      "wall_s": 1.1808011000975966
+    },
+    {
+      "name": "time-half",
+      "angular_segments": 384,
+      "radial_layers": 32,
+      "nodes": 12607,
+      "triangles": 24510,
+      "substeps": 2,
+      "window_factor": 1.0,
+      "area_relative_error": 0.00010866574922108185,
+      "perimeter_relative_error": -2.788853437185601e-06,
+      "steady_uniform_relative_error": 3.3176586478056436e-14,
+      "affine_gradient_energy_relative_error": 1.4432899320127035e-14,
+      "max_relative_amount_balance": 2.9263415889896966e-15,
+      "minimum_concentration": 0.0019999999999998157,
+      "max_quadratic_energy_identity_defect": 3.771741203087963e-30,
+      "max_relative_quadratic_energy_identity_defect": 5.812188035140893e-14,
+      "threefold_relative_symmetry_error": 1.4007892068512717e-13,
+      "final_contact_c": 0.005212319253471199,
+      "final_capacity_mean_c": 0.0021141587813187568,
+      "final_contact_vs_mean_relative_difference": 1.4654341478646606,
+      "wall_s": 1.2902035000734031
+    },
+    {
+      "name": "window-half",
+      "angular_segments": 384,
+      "radial_layers": 32,
+      "nodes": 12607,
+      "triangles": 24510,
+      "substeps": 1,
+      "window_factor": 0.5,
+      "area_relative_error": 0.00010866574922108185,
+      "perimeter_relative_error": -2.788853437185601e-06,
+      "steady_uniform_relative_error": 3.3176586478056436e-14,
+      "affine_gradient_energy_relative_error": 1.4432899320127035e-14,
+      "max_relative_amount_balance": 1.4158019558241519e-15,
+      "minimum_concentration": 0.0019999999999998283,
+      "max_quadratic_energy_identity_defect": 5.423418723394456e-30,
+      "max_relative_quadratic_energy_identity_defect": 2.634869697205661e-14,
+      "threefold_relative_symmetry_error": 1.8648277366750676e-13,
+      "final_contact_c": 0.008420401145327442,
+      "final_capacity_mean_c": 0.0021141587813187594,
+      "final_contact_vs_mean_relative_difference": 2.9828612778435715,
+      "wall_s": 1.1224144999869168
+    },
+    {
+      "name": "window-double",
+      "angular_segments": 384,
+      "radial_layers": 32,
+      "nodes": 12607,
+      "triangles": 24510,
+      "substeps": 1,
+      "window_factor": 2.0,
+      "area_relative_error": 0.00010866574922108185,
+      "perimeter_relative_error": -2.788853437185601e-06,
+      "steady_uniform_relative_error": 3.3176586478056436e-14,
+      "affine_gradient_energy_relative_error": 1.4432899320127035e-14,
+      "max_relative_amount_balance": 2.9263415889896966e-15,
+      "minimum_concentration": 0.00199999999999983,
+      "max_quadratic_energy_identity_defect": 5.3987668201062995e-30,
+      "max_relative_quadratic_energy_identity_defect": 4.2782224717328146e-14,
+      "threefold_relative_symmetry_error": 8.651933336434325e-14,
+      "final_contact_c": 0.003564382586886839,
+      "final_capacity_mean_c": 0.002114158781318757,
+      "final_contact_vs_mean_relative_difference": 0.6859578468668612,
+      "wall_s": 1.1563655000645667
+    }
+  ],
+  "source_csv_sha256": "c9da358e66eb631108a69ae72e64ce4152c1e1e8ccdc89766118d8dffdb342e9",
+  "source_commit": "cfc0ad7434f05195737febb719be6f8b5a3b7aa2",
+  "source_sha256": {
+    "foam/scripts/border_section_transport.py": "845883f669c6a328f7f7185129404f39bd0f63b16080664a1931b52ffa59b4ab",
+    "foam/scripts/run_section_transport.py": "c33176531a9da6e1b6261d200651bf351d59f3a21df621c73b1400aea3e8ac66"
+  },
+  "wall_s": 5.218486300203949,
+  "peclet_q_over_D_range": [
+    0.625199553975473,
+    0.7677015237895377
+  ],
+  "decision": "Advection cannot be certified negligible at the retained q/D. This diffusion operator is groundwork; obtain Stokes/Marangoni flow and resolve inlet geometry before using contact concentration as physical transition closure.",
+  "field_sha256": {
+    "fine-node-field.csv": "3dc4f0acd12a4c8d52a6f765b68b49e53d47077d4657444e40ce00dcc3fbd7a0",
+    "fine-triangles.csv": "db3cc204c52686adc075b8fcbecdc80f7eb1864aec3b2109f234ccd37a672efb"
+  },
+  "refinement": {
+    "medium_vs_fine_contact_relative_change": 0.00558007052309617,
+    "fine_vs_time_half_contact_relative_change": 9.051514425761908e-06
+  },
+  "checks": {
+    "all_measured_positive": true,
+    "no_source_induced_undershoot": true,
+    "amount_balance_le_1e-9": true,
+    "constant_state_le_1e-8": true,
+    "affine_gradient_le_1e-7": true,
+    "quadratic_balance_le_1e-9": true,
+    "threefold_symmetry_le_1e-8": true
+  }
+}

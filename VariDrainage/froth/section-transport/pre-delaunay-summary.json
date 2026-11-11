@@ -1,0 +1,216 @@
+{
+  "protocol": {
+    "geometry": "dry equal-tension curved triangular Plateau cross-section, equal arc-length boundary sampling",
+    "radius_m": 0.0004,
+    "D_m2_s": 5e-10,
+    "eta_m": 1e-05,
+    "B_m": 0.001,
+    "initial_c_mol_m3": 0.002,
+    "source_window_m": 1.7888543819998316e-05,
+    "source_definition": "normalized Gaussian boundary loads around all three cusp contacts, 8-point edge quadrature; width is a declared modelling input, not measured",
+    "method": "P1 FE, lumped bulk+Henry surface mass, implicit diffusion, no clipping/renormalization",
+    "configs": [
+      [
+        "coarse",
+        96,
+        8,
+        1,
+        1.0
+      ],
+      [
+        "medium",
+        192,
+        16,
+        1,
+        1.0
+      ],
+      [
+        "fine",
+        384,
+        32,
+        1,
+        1.0
+      ],
+      [
+        "time-half",
+        384,
+        32,
+        2,
+        1.0
+      ],
+      [
+        "window-half",
+        384,
+        32,
+        1,
+        0.5
+      ],
+      [
+        "window-double",
+        384,
+        32,
+        1,
+        2.0
+      ]
+    ],
+    "source_replay": "all net molar arrivals from frozen saved local-coupled CSV",
+    "limits": [
+      "no velocity/advection/Marangoni solution",
+      "frozen dry geometry, physical inlets not truncated/resolved",
+      "instant Henry equilibrium; no adsorption-rate evidence",
+      "source-window choice is not a calibrated transition match",
+      "operator validation, not real-border or coupled-foam prediction"
+    ]
+  },
+  "runs": [
+    {
+      "name": "coarse",
+      "angular_segments": 96,
+      "radial_layers": 8,
+      "nodes": 769,
+      "triangles": 1440,
+      "substeps": 1,
+      "window_factor": 1.0,
+      "area_relative_error": 0.0017385647102408086,
+      "perimeter_relative_error": -4.4621095026453617e-05,
+      "steady_uniform_relative_error": 1.5395670849294163e-14,
+      "affine_gradient_energy_relative_error": 8.615330671091215e-14,
+      "max_relative_amount_balance": 8.72747357288098e-16,
+      "minimum_concentration": 0.0018007134470473523,
+      "max_quadratic_energy_identity_defect": 7.346267179870672e-30,
+      "threefold_relative_symmetry_error": 1.1362438767648086e-13,
+      "final_contact_c": 0.004116767404551334,
+      "final_capacity_mean_c": 0.0021140353632614958,
+      "final_contact_vs_mean_relative_difference": 0.9473503026931673,
+      "wall_s": 0.09378580003976822
+    },
+    {
+      "name": "medium",
+      "angular_segments": 192,
+      "radial_layers": 16,
+      "nodes": 3073,
+      "triangles": 5952,
+      "substeps": 1,
+      "window_factor": 1.0,
+      "area_relative_error": 0.0004346586329286861,
+      "perimeter_relative_error": -1.1155385753358615e-05,
+      "steady_uniform_relative_error": 1.3140530330524314e-13,
+      "affine_gradient_energy_relative_error": 4.489741911584133e-13,
+      "max_relative_amount_balance": 7.051167429940284e-15,
+      "minimum_concentration": 0.0017878842147160772,
+      "max_quadratic_energy_identity_defect": 2.820177736165117e-29,
+      "threefold_relative_symmetry_error": 8.92081547521073e-13,
+      "final_contact_c": 0.004495925816299762,
+      "final_capacity_mean_c": 0.0021141340753389136,
+      "final_contact_vs_mean_relative_difference": 1.1266039220237376,
+      "wall_s": 0.25507449987344444
+    },
+    {
+      "name": "fine",
+      "angular_segments": 384,
+      "radial_layers": 32,
+      "nodes": 12289,
+      "triangles": 24192,
+      "substeps": 1,
+      "window_factor": 1.0,
+      "area_relative_error": 0.00010866574922352434,
+      "perimeter_relative_error": -2.7888534359643558e-06,
+      "steady_uniform_relative_error": 7.281501790412648e-13,
+      "affine_gradient_energy_relative_error": 1.826871987020695e-12,
+      "max_relative_amount_balance": 5.705313457670561e-15,
+      "minimum_concentration": 0.0017949792579147817,
+      "max_quadratic_energy_identity_defect": 8.078428707528924e-29,
+      "threefold_relative_symmetry_error": 3.807934870203589e-12,
+      "final_contact_c": 0.004802841178006986,
+      "final_capacity_mean_c": 0.00211415878131875,
+      "final_contact_vs_mean_relative_difference": 1.2717504571776375,
+      "wall_s": 1.1570935999043286
+    },
+    {
+      "name": "time-half",
+      "angular_segments": 384,
+      "radial_layers": 32,
+      "nodes": 12289,
+      "triangles": 24192,
+      "substeps": 2,
+      "window_factor": 1.0,
+      "area_relative_error": 0.00010866574922352434,
+      "perimeter_relative_error": -2.7888534359643558e-06,
+      "steady_uniform_relative_error": 7.281501790412648e-13,
+      "affine_gradient_energy_relative_error": 1.826871987020695e-12,
+      "max_relative_amount_balance": 1.4800130482444297e-14,
+      "minimum_concentration": 0.0017946468749444249,
+      "max_quadratic_energy_identity_defect": 6.598081915075119e-29,
+      "threefold_relative_symmetry_error": 1.0508087455729509e-12,
+      "final_contact_c": 0.004803766430614935,
+      "final_capacity_mean_c": 0.0021141587813187316,
+      "final_contact_vs_mean_relative_difference": 1.2721881029288298,
+      "wall_s": 1.5398687000852078
+    },
+    {
+      "name": "window-half",
+      "angular_segments": 384,
+      "radial_layers": 32,
+      "nodes": 12289,
+      "triangles": 24192,
+      "substeps": 1,
+      "window_factor": 0.5,
+      "area_relative_error": 0.00010866574922352434,
+      "perimeter_relative_error": -2.7888534359643558e-06,
+      "steady_uniform_relative_error": 7.281501790412648e-13,
+      "affine_gradient_energy_relative_error": 1.826871987020695e-12,
+      "max_relative_amount_balance": 6.379003607653801e-15,
+      "minimum_concentration": 0.0016362561741592816,
+      "max_quadratic_energy_identity_defect": 7.553343167491188e-29,
+      "threefold_relative_symmetry_error": 3.82875155191531e-12,
+      "final_contact_c": 0.006120934584268755,
+      "final_capacity_mean_c": 0.00211415878131875,
+      "final_contact_vs_mean_relative_difference": 1.895210444151549,
+      "wall_s": 1.1645867999177426
+    },
+    {
+      "name": "window-double",
+      "angular_segments": 384,
+      "radial_layers": 32,
+      "nodes": 12289,
+      "triangles": 24192,
+      "substeps": 1,
+      "window_factor": 2.0,
+      "area_relative_error": 0.00010866574922352434,
+      "perimeter_relative_error": -2.7888534359643558e-06,
+      "steady_uniform_relative_error": 7.281501790412648e-13,
+      "affine_gradient_energy_relative_error": 1.826871987020695e-12,
+      "max_relative_amount_balance": 6.379003607653801e-15,
+      "minimum_concentration": 0.0019420913384629785,
+      "max_quadratic_energy_identity_defect": 8.916593419326249e-29,
+      "threefold_relative_symmetry_error": 3.879492213587632e-12,
+      "final_contact_c": 0.003526137481708836,
+      "final_capacity_mean_c": 0.0021141587813187485,
+      "final_contact_vs_mean_relative_difference": 0.6678678597211785,
+      "wall_s": 1.1048673000186682
+    }
+  ],
+  "source_csv_sha256": "c9da358e66eb631108a69ae72e64ce4152c1e1e8ccdc89766118d8dffdb342e9",
+  "source_commit": "67b8dac049bd430f800e6a4ba128a2a6a46deda1",
+  "source_sha256": {
+    "foam/scripts/border_section_transport.py": "6e9afc63fffc1c8825315aa62ad78470b7424a140072ccb5368cd55a0a7c5bac",
+    "foam/scripts/run_section_transport.py": "f0c6becfa3bbd458f7e76be291837a4edc1eaff6e6dbdb6e9745a2f014f9937b"
+  },
+  "wall_s": 5.347900100052357,
+  "peclet_q_over_D_range": [
+    0.625199553975473,
+    0.7677015237895377
+  ],
+  "decision": "Advection cannot be certified negligible at the retained q/D. This diffusion operator is groundwork; obtain Stokes/Marangoni flow and resolve inlet geometry before using contact concentration as physical transition closure.",
+  "refinement": {
+    "medium_vs_fine_contact_relative_change": 0.06390287547142748,
+    "fine_vs_time_half_contact_relative_change": 0.00019260982425217676
+  },
+  "checks": {
+    "all_measured_positive": true,
+    "amount_balance_le_1e-9": true,
+    "constant_state_le_1e-8": true,
+    "affine_gradient_le_1e-7": true,
+    "threefold_symmetry_le_1e-8": true
+  }
+}
