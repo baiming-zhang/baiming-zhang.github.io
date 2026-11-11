@@ -1,0 +1,101 @@
+{
+  "source_csv_sha256": "c9da358e66eb631108a69ae72e64ce4152c1e1e8ccdc89766118d8dffdb342e9",
+  "source_commit": "5bcae2fa7d51362767c49d20e2ff3c23ef8c4b6e",
+  "script_sha256": "7a33e97479d5235b9cb82a9ef3095532b572396632351c6d48854c78caeb810b",
+  "energy": {
+    "model": "ideal dilute bulk and Henry surfaces, RT=slope/eta=2500J/mol; leading clean tension .07",
+    "delta_J": -1.5715057632482467e-11,
+    "max_saved_step_gain_J": -1.7323882146115565e-13,
+    "constrained_gradient_checks": [
+      {
+        "index": 0,
+        "analytic_Pa": -153.6694574948099,
+        "central_difference_Pa": -153.66945957004629,
+        "relative_error": 1.3504546814147034e-08
+      },
+      {
+        "index": 40,
+        "analytic_Pa": -150.51685029812964,
+        "central_difference_Pa": -150.5168515574741,
+        "relative_error": 8.366800585690726e-09
+      },
+      {
+        "index": 80,
+        "analytic_Pa": -147.75088922334243,
+        "central_difference_Pa": -147.75088984564752,
+        "relative_error": 4.211853532609666e-09
+      }
+    ],
+    "limitation": "descent diagnostic only, not full dissipation/work identity; transient transition and surrounding fluid energy absent"
+  },
+  "scales": {
+    "mean_normal_depth_m": 2.0531558168716817e-05,
+    "diffusion_time_s": 0.8430897616708045,
+    "initial_transition_advection_scale_s": 0.027428571428571434,
+    "max_transition_scale_times_cb_relative_rate": 0.016257596426619007,
+    "diffusion_length_at_end_m": 7.0710678118654756e-06,
+    "border_relative_volume_change": 0.0040422058905700275
+  },
+  "diffusion_control": {
+    "assumptions": "frozen slab depth=initial Vb/Sb, surface Henry capacity eta, closed far end; all recorded net molar arrivals injected at surface; NO advection or moving volume. Diagnostic only, not real border prediction",
+    "runs": [
+      {
+        "name": "n32-sub1",
+        "n": 32,
+        "substeps": 1,
+        "final_surface_c": 0.0022215011515085872,
+        "final_mean_c": 0.0021141670191337815,
+        "surface_vs_mean_relative_difference": 0.05076899384173661,
+        "max_relative_amount_balance": 1.588306209036148e-14,
+        "positive": true
+      },
+      {
+        "name": "n64-sub1",
+        "n": 64,
+        "substeps": 1,
+        "final_surface_c": 0.0022215694722917626,
+        "final_mean_c": 0.0021141670191336965,
+        "surface_vs_mean_relative_difference": 0.05080130953990358,
+        "max_relative_amount_balance": 2.6598202485650122e-14,
+        "positive": true
+      },
+      {
+        "name": "n128-sub1",
+        "n": 128,
+        "substeps": 1,
+        "final_surface_c": 0.0022215865532365596,
+        "final_mean_c": 0.0021141670191336696,
+        "surface_vs_mean_relative_difference": 0.05080938881872621,
+        "max_relative_amount_balance": 4.003615352500073e-14,
+        "positive": true
+      },
+      {
+        "name": "n128-sub2",
+        "n": 128,
+        "substeps": 2,
+        "final_surface_c": 0.002221724478538826,
+        "final_mean_c": 0.0021141670191337563,
+        "surface_vs_mean_relative_difference": 0.050874627421413354,
+        "max_relative_amount_balance": 5.225493561924897e-15,
+        "positive": true
+      },
+      {
+        "name": "n128-sub4",
+        "n": 128,
+        "substeps": 4,
+        "final_surface_c": 0.0022217935345327355,
+        "final_mean_c": 0.0021141670191335074,
+        "surface_vs_mean_relative_difference": 0.05090729087399115,
+        "max_relative_amount_balance": 1.211379810175331e-13,
+        "positive": true
+      }
+    ]
+  },
+  "decision": "Do not treat well-mixed mean as established contact concentration. Resolve local transport or provide independently verified circulation/mixing closure before spatial foam claims.",
+  "checks": {
+    "saved_energy_decreases": true,
+    "energy_gradient_fd": true,
+    "diffusion_amount_balance": true,
+    "positive_diffusion_states": true
+  }
+}
