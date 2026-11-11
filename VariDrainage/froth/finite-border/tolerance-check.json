@@ -1,0 +1,82 @@
+{
+  "created_utc": "2026-11-11T10:00:59.570048+00:00",
+  "commit": "b5690c69e5882266b63aa85390d522eb5f53db88",
+  "reason": "reconstructed scaled residual grows with fine-grid stiffness; test a 10x tighter nonlinear tolerance",
+  "source_sha256": {
+    "foam/include/vf/foam/FiniteBorderFilm.h": "0aea95f4ad8eeb69cf88d55c5a510206c161cfcde43a8bf928a49ba92999d904",
+    "foam/bench/finite_border_film.cpp": "3f4204b03c7a1e157ab44e478ab0fe35aaf9747f67fc42568c8da70d4793e144",
+    "foam/scripts/check_finite_border_tolerance.py": "15210fcc090513a0edfc9f32189902cdeca9cc29a79eed71622d21a7a7c26cd8"
+  },
+  "executable_sha256": "efa73dab32ed4eb7e9981a4c0a3d02e78852679aab4b9cf9e17d8887a3565e99",
+  "n": 1280,
+  "dt_s": 6.25e-08,
+  "steps": 16000,
+  "baseline_tolerance": 2e-13,
+  "tight_tolerance": 2e-14,
+  "runs": [
+    {
+      "name": "tight10x1280-finite",
+      "steps": 16000,
+      "n": 1280,
+      "wall_s": 11.104587799869478,
+      "max_relative_balance": 1.3766765505351941e-14,
+      "minimum_h_m": 5.644855444853767e-07,
+      "max_energy_increase_J": 0.0,
+      "max_scaled_nonlinear_residual": 8.267121569496719e-11,
+      "received_volume_m3": 1.2843197702769409e-14,
+      "final_border_pressure_Pa": -689.1091683079169,
+      "received_volume_relative_change_vs_baseline": -8.104628079763643e-15,
+      "max_min_thickness_history_relative_change_vs_baseline": 2.8027025145149764e-10,
+      "csv_sha256": "0b9629501e1b47720c835679b1229d32b3c273736f8306e0557faf6c6ed99b87",
+      "frames_sha256": "3674e565eeb5cf1627b714163970456f14f94fb256f2573e9a914c1fe3c4b175",
+      "command": [
+        "finite_border_film",
+        "1280",
+        "1",
+        "5e-5",
+        "finite",
+        "6.25e-8",
+        "16000",
+        "tight10x1280-finite.csv",
+        "tight10x1280-finite-frames.csv",
+        "2e-14"
+      ]
+    },
+    {
+      "name": "tight10x1280-fixed",
+      "steps": 16000,
+      "n": 1280,
+      "wall_s": 11.311129599809647,
+      "max_relative_balance": 1.5765166949677223e-14,
+      "minimum_h_m": 5.585723580900328e-07,
+      "max_energy_increase_J": 0.0,
+      "max_scaled_nonlinear_residual": 8.403268577979065e-11,
+      "received_volume_m3": 1.2851871059938241e-14,
+      "final_border_pressure_Pa": -700.0,
+      "received_volume_relative_change_vs_baseline": 0.0,
+      "max_min_thickness_history_relative_change_vs_baseline": 0.0,
+      "csv_sha256": "95a2b535110380411c0ba2440b032f019ab5a93cf629b722673d92da2b40322f",
+      "frames_sha256": "cf8ad8693e1ad6230d3e15ae4d922574642d6d7ac1cde5527feeed4c7ec9657e",
+      "command": [
+        "finite_border_film",
+        "1280",
+        "1",
+        "5e-5",
+        "fixed",
+        "6.25e-8",
+        "16000",
+        "tight10x1280-fixed.csv",
+        "tight10x1280-fixed-frames.csv",
+        "2e-14"
+      ]
+    }
+  ],
+  "relative_transfer_effect": -0.0006748711629911419,
+  "effect_relative_change_vs_baseline": 1.2009060412765393e-11,
+  "gates": {
+    "positive": true,
+    "total_volume_le_1e-13": true,
+    "energy_nonincrease_1e-22_J": true,
+    "tightened_effect_change_le_0_1_percent": true
+  }
+}

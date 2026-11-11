@@ -1,0 +1,29 @@
+{
+  "status": "failed, not counted as completed configuration",
+  "n": 1280,
+  "dt_s": 6.25e-08,
+  "tolerance": 2e-15,
+  "completed_steps": 1507,
+  "last_time_s": 9.418749999999999e-05,
+  "failure": "coupled Newton line search failed at strict requested tolerance; attempt incomplete",
+  "log": "results/logs/finite-border/tight1280-finite.txt",
+  "csv_sha256": "5c76371d947c74ee7bf77f806d1dd2efcbd395495b5d29e449232b0c8dc4cd77",
+  "log_sha256": "6f9bf67debbc22efa29dcece6ce28a7286c88014cf42ca30b921cdf7916c446e",
+  "source_sha256": {
+    "foam/include/vf/foam/FiniteBorderFilm.h": "0aea95f4ad8eeb69cf88d55c5a510206c161cfcde43a8bf928a49ba92999d904",
+    "foam/bench/finite_border_film.cpp": "3f4204b03c7a1e157ab44e478ab0fe35aaf9747f67fc42568c8da70d4793e144"
+  },
+  "executable_sha256": "efa73dab32ed4eb7e9981a4c0a3d02e78852679aab4b9cf9e17d8887a3565e99",
+  "command": [
+    "finite_border_film",
+    "1280",
+    "1",
+    "5e-5",
+    "finite",
+    "6.25e-8",
+    "16000",
+    "tight1280-finite.csv",
+    "tight1280-finite-frames.csv",
+    "2e-15"
+  ]
+}
