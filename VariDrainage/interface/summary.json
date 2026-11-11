@@ -1,0 +1,140 @@
+{
+  "native_checks": 151,
+  "cases": 11,
+  "audited_cases": 10,
+  "observational_controls": {
+    "same_binary_on_off": true,
+    "prior_thin_output": true,
+    "prior_thick_output": true
+  },
+  "max_normalized_residual": 5.881498398665256e-14,
+  "material_crossings": 484,
+  "inserted": 354,
+  "merged": 450,
+  "time_step_comparisons": [
+    {
+      "h0_um": 2,
+      "remesh": 0,
+      "final_mean_h_coarse_um": 1.9556,
+      "final_mean_h_fine_um": 1.9523,
+      "relative_mean_thickness_difference": 0.0016903139886288382,
+      "final_inventory_difference_over_initial": 0.006620366677395366,
+      "relative_drainage_transfer_difference": 0.0024309781042231083
+    },
+    {
+      "h0_um": 2,
+      "remesh": 1,
+      "final_mean_h_coarse_um": 1.9588,
+      "final_mean_h_fine_um": 1.9632,
+      "relative_mean_thickness_difference": 0.00224123879380601,
+      "final_inventory_difference_over_initial": 0.0006313771453112435,
+      "relative_drainage_transfer_difference": 0.021333265977376826
+    },
+    {
+      "h0_um": 6,
+      "remesh": 0,
+      "final_mean_h_coarse_um": 4.9122,
+      "final_mean_h_fine_um": 4.9515,
+      "relative_mean_thickness_difference": 0.007936988791275348,
+      "final_inventory_difference_over_initial": 0.012833668664760113,
+      "relative_drainage_transfer_difference": 0.01815646750508455
+    },
+    {
+      "h0_um": 6,
+      "remesh": 1,
+      "final_mean_h_coarse_um": 4.506,
+      "final_mean_h_fine_um": 4.2183,
+      "relative_mean_thickness_difference": 0.06820283052414482,
+      "final_inventory_difference_over_initial": 0.04731365840530392,
+      "relative_drainage_transfer_difference": 0.03763567945405029
+    }
+  ],
+  "source_commit": "abc3214936f56a255c10f78066cf4101b6828ab1",
+  "interpretation": "The inherited moving solver now has audited accounting. This is not the planned resolved-border coupling; no complete coupled energy law or spatial convergence was established.",
+  "report_sha256": "fa7e9aee58897c2d7720be53fc56944caeadda7105d024d0d90c7ff01106ff0d",
+  "refinement": {
+    "cases": 6,
+    "source_commit": "b7e5e889b738eb277698863b2e025aa20a25edbd",
+    "details": [
+      {
+        "name": "refine_fixed1_dt1",
+        "dt_s": 0.001,
+        "period_s": 0.001,
+        "remesh": 1,
+        "mean_h_um": 4.506,
+        "inserted": 119,
+        "merged": 150,
+        "max_residual": 4.3821640837458086e-14
+      },
+      {
+        "name": "refine_fixed1_dt0p5",
+        "dt_s": 0.0005,
+        "period_s": 0.001,
+        "remesh": 1,
+        "mean_h_um": 4.5686,
+        "inserted": 137,
+        "merged": 158,
+        "max_residual": 4.500854271802955e-14
+      },
+      {
+        "name": "refine_fixed1_dt0p25",
+        "dt_s": 0.00025,
+        "period_s": 0.001,
+        "remesh": 1,
+        "mean_h_um": 4.5073,
+        "inserted": 146,
+        "merged": 175,
+        "max_residual": 4.324737962416913e-14
+      },
+      {
+        "name": "refine_fixed1_dt0p125",
+        "dt_s": 0.000125,
+        "period_s": 0.001,
+        "remesh": 1,
+        "mean_h_um": 4.4817,
+        "inserted": 161,
+        "merged": 192,
+        "max_residual": 3.651509061979055e-14
+      },
+      {
+        "name": "refine_step_dt0p25",
+        "dt_s": 0.00025,
+        "period_s": 0.0,
+        "remesh": 1,
+        "mean_h_um": 4.1173,
+        "inserted": 253,
+        "merged": 288,
+        "max_residual": 4.324737962416913e-14
+      },
+      {
+        "name": "refine_none_dt0p25",
+        "dt_s": 0.00025,
+        "period_s": 0.0,
+        "remesh": 0,
+        "mean_h_um": 4.979,
+        "inserted": 0,
+        "merged": 0,
+        "max_residual": 4.324737962416913e-14
+      }
+    ],
+    "fixed_cadence_adjacent_comparisons": [
+      {
+        "coarse_dt_s": 0.001,
+        "fine_dt_s": 0.0005,
+        "relative_mean_h_difference": 0.013702228253731946
+      },
+      {
+        "coarse_dt_s": 0.0005,
+        "fine_dt_s": 0.00025,
+        "relative_mean_h_difference": 0.01360015974086485
+      },
+      {
+        "coarse_dt_s": 0.00025,
+        "fine_dt_s": 0.000125,
+        "relative_mean_h_difference": 0.005712118169444596
+      }
+    ],
+    "original_cadence_control_unchanged": true,
+    "complete_temporal_and_spatial_accuracy_established": false
+  }
+}

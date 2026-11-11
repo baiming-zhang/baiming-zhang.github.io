@@ -1,0 +1,121 @@
+{
+  "source_commit": "abc3214936f56a255c10f78066cf4101b6828ab1",
+  "started_utc": "2026-11-11T10:52:52.729722+00:00",
+  "base_environment": {
+    "VF_THREADS": "2",
+    "VF_SDS": "1",
+    "VF_W_M": ".002",
+    "VF_H_M": ".0025",
+    "VF_DX_M": ".0001",
+    "VF_MU_PA": ".0015",
+    "VF_RHO": "1045",
+    "VF_CDRAG": "1",
+    "VF_EVERY_S": ".001",
+    "VF_REPORT_S": ".001",
+    "VF_STEPLOG": "1"
+  },
+  "cases": [
+    {
+      "name": "h2_dt0.001_remesh0",
+      "h": 2,
+      "dt": 0.001,
+      "T": 0.05,
+      "remesh": 0,
+      "audit": true
+    },
+    {
+      "name": "h2_dt0.001_remesh1",
+      "h": 2,
+      "dt": 0.001,
+      "T": 0.05,
+      "remesh": 1,
+      "audit": true
+    },
+    {
+      "name": "h2_dt0.0005_remesh0",
+      "h": 2,
+      "dt": 0.0005,
+      "T": 0.05,
+      "remesh": 0,
+      "audit": true
+    },
+    {
+      "name": "h2_dt0.0005_remesh1",
+      "h": 2,
+      "dt": 0.0005,
+      "T": 0.05,
+      "remesh": 1,
+      "audit": true
+    },
+    {
+      "name": "h6_dt0.001_remesh0",
+      "h": 6,
+      "dt": 0.001,
+      "T": 0.05,
+      "remesh": 0,
+      "audit": true
+    },
+    {
+      "name": "h6_dt0.001_remesh1",
+      "h": 6,
+      "dt": 0.001,
+      "T": 0.05,
+      "remesh": 1,
+      "audit": true
+    },
+    {
+      "name": "h6_dt0.0005_remesh0",
+      "h": 6,
+      "dt": 0.0005,
+      "T": 0.05,
+      "remesh": 0,
+      "audit": true
+    },
+    {
+      "name": "h6_dt0.0005_remesh1",
+      "h": 6,
+      "dt": 0.0005,
+      "T": 0.05,
+      "remesh": 1,
+      "audit": true
+    },
+    {
+      "name": "control_off",
+      "h": 2,
+      "dt": 0.001,
+      "T": 0.02,
+      "remesh": 1,
+      "audit": false
+    },
+    {
+      "name": "control_on",
+      "h": 2,
+      "dt": 0.001,
+      "T": 0.02,
+      "remesh": 1,
+      "audit": true
+    },
+    {
+      "name": "control_thick",
+      "h": 6,
+      "dt": 0.001,
+      "T": 0.02,
+      "remesh": 1,
+      "audit": true
+    }
+  ],
+  "source_hashes": {
+    "thin_film\\include\\vf\\thinfilm\\Meniscus.h": "973abe6e012a908e936444e28db68265ec4222ccb645a4dc4a73cd2a59fbc03c",
+    "thin_film\\include\\vf\\thinfilm\\InterfaceLedger.h": "635b353fbc59fa5d7784d12792ca340e534df84d740ca2ae4801e43f6f748948",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilm.h": "28db3d0cd8d8faa0d4722929e4f502708b2a915f5801dc351db2e100ea2a3a35",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilmMechanics.h": "bb55e6a4b1d26205adda4c57a1df26eab5d01f95d4fd4d84c362010d18988820",
+    "thin_film\\scripts\\interface_audit\\run.py": "ebc0044c1b0bfd6760c845ec8e5944614cc2818abfae0fcc34a5057e49bf5fd8",
+    "thin_film\\scripts\\interface_audit\\analyze.py": "21b959a69c7492cad9d0634620748e1a76fffc08dcbfe03a11a0cc23218e2fbe",
+    "thin_film\\bench\\tf_bench.cpp": "e57e609782872352af788d026d714bcb2ced2b256e1200767d04813dcf4f262e"
+  },
+  "executable_sha256": "30c2d5f195cd1a2699bbe835ef178e082fb59126471ff4d3c850a7693c42e56b",
+  "total_budget_s": 3300,
+  "per_case_timeout_s": 600,
+  "ledger_gate": 1e-08,
+  "interpretation": "instrument inherited moving film before any new boundary physics; independent material/pair-flux checks, reservoir reset returns, remesh free totals, fixed-position drainage energy; not complete coupled energy or C1 method"
+}

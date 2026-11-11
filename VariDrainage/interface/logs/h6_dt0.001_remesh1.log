@@ -1,0 +1,211 @@
+
+== Framed vertical film with menisci (Meniscus.h): 2 x 2.5 mm inside fibres of radius 125 um, dx 100 um (R 4 dx), 1764 particles (580 free) ==
+   material: mu 0.0015 Pa s, gamma 0.0386 N/m, film Gibbs elasticity 0.6784 N/m (theta0 0.973672); h0 6 um; dt 1 ms; borders with menisci: left right bottom top
+   SDS 19.40 mM (61% in micelles; monomers 7.58 mM, Na+ 10.54 mM), rho 1045 kg/m^3: soluble film elasticity 0.000124 N/m at h0 against the weight rho g h0 H = 0.000154 N/m
+   meniscus: r 0.500 mm at the bottom, 0.375 mm at the top (r_ref 0.500 mm at y 0.00 mm); chemical potential -68.40 Pa; strip width 0.322 -> 0.271 mm; friction 2 zeta 6 -> 8 Pa s/m (c_drag 1)
+   scale (not used by the solver): a strip carrying the film's weight gradient rho g h0 / 2 per face against its friction moves at ~ 8.8 mm/s
+   liquid in the menisci 0.0951 mm^3 against 0.03 mm^3 in the film
+   strip friction (both faces): 272 strip particles, along the border 6.96 Pa s/m on average; across the junction (wedge) on 272 of them, 678 on average, 1.83e+03 at most
+    t (s)      N   film h h centre   h side    pinch   film %  vy strip   vy side vy centre    max|v|     dS/S    to men.   mech   ins/mrg     sec
+                     (um)     (um)     (um)     (um)             (mm/s)    (mm/s)    (mm/s)    (mm/s)          (um^3/um2)  it/cg                  
+    step 1: mech 4 it ok, cg 9, 1 factorizations (0.11 s); drainage 1 it ok; 0.40 s in all
+    0.001   1764   5.9815   6.0008   5.9746   5.9761     53.1    -0.207    -9.349    -9.768     9.792 -2.9e-03  9.920e-03  4/9      0/0        0.4
+          fringes z/H:  0.98 h0 0.836  0.95 h0 0.916  0.90 h0 0.916  0.80 h0 0.916  0.70 h0 0.916  0.50 h0 0.916
+          SDS: film c 19.37 - 19.43 mM (top quarter 19.38, bottom quarter 19.42), tension 38.638 - 38.641 mN/m; film zone's surfactant -2.921e-03; menisci gave +4.364e+00 of all the free particles' (balance 1.5e-15)
+    step 2: mech 4 it ok, cg 7, 1 factorizations (0.10 s); drainage 1 it ok; 0.38 s in all
+    0.002   1764   5.9631   6.0033   5.9508   5.9506     53.1    -0.487   -18.359   -19.449    19.542 -5.8e-03  1.958e-02  4/7      0/0        0.8
+          fringes z/H:  0.98 h0 0.757  0.95 h0 0.757  0.90 h0 0.836  0.80 h0 0.836  0.70 h0 0.836  0.50 h0 0.836
+          SDS: film c 19.32 - 19.47 mM (top quarter 19.35, bottom quarter 19.45), tension 38.636 - 38.644 mN/m; film zone's surfactant -5.766e-03; menisci gave +4.359e+00 of all the free particles' (balance 3.2e-16)
+    step 3: mech 5 it ok, cg 8, 1 factorizations (0.10 s); drainage 1 it ok; 0.41 s in all
+    0.003   1764   5.9432   6.0024   5.9245   5.9324     52.9    -0.807   -26.751   -28.779    29.127 -1.2e-02  2.903e-02  5/8      0/0        1.2
+          fringes z/H:  0.98 h0 0.597  0.95 h0 0.757  0.90 h0 0.757  0.80 h0 0.836  0.70 h0 0.836  0.50 h0 0.836
+          SDS: film c 19.25 - 19.53 mM (top quarter 19.31, bottom quarter 19.48), tension 38.633 - 38.647 mN/m; film zone's surfactant -1.169e-02; menisci gave +4.352e+00 of all the free particles' (balance 4.9e-16)
+    step 4: mech 4 it ok, cg 8, 1 factorizations (0.10 s); drainage 1 it ok; 0.40 s in all
+    0.004   1764   5.9197   5.9885   5.8890   5.9202     52.8    -1.090   -34.446   -37.633    38.259 -1.8e-02  3.856e-02  4/8      0/0        1.6
+          fringes z/H:  0.98 h0 0.518  0.95 h0 0.677  0.90 h0 0.757  0.80 h0 0.836  0.70 h0 0.836  0.50 h0 0.836
+          SDS: film c 19.18 - 19.59 mM (top quarter 19.24, bottom quarter 19.53), tension 38.630 - 38.651 mN/m; film zone's surfactant -1.761e-02; menisci gave +4.342e+00 of all the free particles' (balance 1.3e-15)
+    step 5: mech 4 it ok, cg 8, 1 factorizations (0.09 s); drainage 1 it ok; 0.37 s in all
+    0.005   1761   5.8554   5.9804   5.8580   5.8685     50.9    -1.185   -40.995   -45.245    46.456 -6.4e-02  4.711e-02  4/8      0/3        2.0
+          fringes z/H:  0.98 h0 0.518  0.95 h0 0.597  0.90 h0 0.677  0.80 h0 0.836  0.70 h0 0.836  0.50 h0 0.836
+          SDS: film c 19.09 - 19.62 mM (top quarter 19.17, bottom quarter 19.57), tension 38.539 - 38.656 mN/m; film zone's surfactant -6.388e-02; menisci gave +4.326e+00 of all the free particles' (balance 2.1e-15)
+    step 6: mech 4 it ok, cg 7, 1 factorizations (0.10 s); drainage 1 it ok; 0.39 s in all
+    0.006   1759   5.8256   5.8566   5.7436   5.8221     50.8    -1.019   -45.541   -50.308    53.118 -7.0e-02  5.616e-02  4/7      0/5        2.4
+          fringes z/H:  0.98 h0 0.438  0.95 h0 0.518  0.90 h0 0.597  0.80 h0 0.757  0.70 h0 0.836  0.50 h0 0.836
+          SDS: film c 19.01 - 19.70 mM (top quarter 19.09, bottom quarter 19.61), tension 38.347 - 38.660 mN/m; film zone's surfactant -7.033e-02; menisci gave +4.285e+00 of all the free particles' (balance 1.6e-16)
+    step 7: mech 4 it ok, cg 9, 1 factorizations (0.10 s); drainage 1 it ok; 0.40 s in all
+    0.007   1757   5.7917   5.7688   5.6223   5.6715     50.8    -0.814   -48.159   -53.696    57.753 -7.2e-02  6.599e-02  4/9      0/7        2.8
+          fringes z/H:  0.98 h0 0.438  0.95 h0 0.438  0.90 h0 0.518  0.80 h0 0.677  0.70 h0 0.836  0.50 h0 0.836
+          SDS: film c 18.94 - 19.77 mM (top quarter 19.01, bottom quarter 19.67), tension 38.621 - 38.744 mN/m; film zone's surfactant -7.171e-02; menisci gave +4.281e+00 of all the free particles' (balance 8.2e-16)
+    step 8: mech 4 it ok, cg 9, 1 factorizations (0.10 s); drainage 1 it ok; 0.39 s in all
+    0.008   1756   5.7336   5.5282   5.4046   5.5602     50.6    -0.624   -47.513   -52.618    59.656 -8.7e-02  7.711e-02  4/9      1/9        3.2
+          fringes z/H:  0.98 h0 0.358  0.95 h0 0.438  0.90 h0 0.438  0.80 h0 0.597  0.70 h0 0.757  0.50 h0 0.836
+          SDS: film c 18.86 - 19.83 mM (top quarter 18.94, bottom quarter 19.71), tension 38.618 - 38.755 mN/m; film zone's surfactant -8.667e-02; menisci gave +4.268e+00 of all the free particles' (balance 1.5e-15)
+    step 9: mech 4 it ok, cg 10, 1 factorizations (0.10 s); drainage 1 it ok; 0.40 s in all
+    0.009   1744   5.6338   5.3172   5.1551   5.3545     49.9    -0.366   -43.821   -50.949    58.716 -1.1e-01  8.937e-02  4/10     2/22       3.6
+          fringes z/H:  0.98 h0 0.358  0.95 h0 0.358  0.90 h0 0.438  0.80 h0 0.518  0.70 h0 0.757  0.50 h0 0.836
+          SDS: film c 18.74 - 19.81 mM (top quarter 18.85, bottom quarter 19.71), tension 38.629 - 39.426 mN/m; film zone's surfactant -1.132e-01; menisci gave +4.248e+00 of all the free particles' (balance 2.1e-15)
+    step 10: mech 4 it ok, cg 10, 1 factorizations (0.11 s); drainage 1 it ok; 0.40 s in all
+    0.010   1745   5.5474   5.2414   4.9869   5.0971     49.9    -0.085   -38.766   -48.022    75.060 -1.3e-01  1.013e-01  4/10     8/27       4.0
+          fringes z/H:  0.98 h0 0.358  0.95 h0 0.358  0.90 h0 0.438  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.916
+          SDS: film c 18.64 - 19.86 mM (top quarter 18.79, bottom quarter 19.73), tension 38.616 - 38.814 mN/m; film zone's surfactant -1.279e-01; menisci gave +4.260e+00 of all the free particles' (balance 1.3e-15)
+    step 11: mech 4 it ok, cg 11, 1 factorizations (0.11 s); drainage 1 it ok; 0.42 s in all
+    0.011   1745   5.4854   4.8939   4.7139   4.9888     50.7    +0.100   -32.229   -40.977    72.941 -1.1e-01  1.150e-01  4/11    13/32       4.4
+          fringes z/H:  0.98 h0 0.358  0.95 h0 0.358  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.597  0.50 h0 0.916
+          SDS: film c 18.46 - 19.89 mM (top quarter 18.74, bottom quarter 19.74), tension 38.615 - 39.289 mN/m; film zone's surfactant -1.146e-01; menisci gave +4.239e+00 of all the free particles' (balance 1.3e-15)
+    step 12: mech 4 it ok, cg 10, 1 factorizations (0.10 s); drainage 1 it ok; 0.39 s in all
+    0.012   1736   5.3350   4.8442   4.5906   4.8244     49.9    +0.440   -25.729   -35.071    83.801 -1.7e-01  1.287e-01  4/10    18/46       4.8
+          fringes z/H:  0.98 h0 0.358  0.95 h0 0.358  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.518  0.50 h0 0.836
+          SDS: film c 18.24 - 19.84 mM (top quarter 18.65, bottom quarter 19.70), tension 38.628 - 39.218 mN/m; film zone's surfactant -1.656e-01; menisci gave +4.206e+00 of all the free particles' (balance 1.7e-15)
+    step 13: mech 5 it ok, cg 12, 1 factorizations (0.10 s); drainage 1 it ok; 0.41 s in all
+    0.013   1739   5.2698   4.6406   4.5067   4.7795     50.4    +0.828   -19.467   -28.264    80.781 -1.6e-01  1.410e-01  5/12    26/51       5.2
+          fringes z/H:  0.98 h0 0.358  0.95 h0 0.358  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.518  0.50 h0 0.916
+          SDS: film c 18.24 - 19.85 mM (top quarter 18.61, bottom quarter 19.68), tension 38.617 - 39.153 mN/m; film zone's surfactant -1.589e-01; menisci gave +4.199e+00 of all the free particles' (balance 0.0e+00)
+    step 14: mech 5 it ok, cg 11, 1 factorizations (0.11 s); drainage 1 it ok; 0.41 s in all
+    0.014   1744   5.1657   4.6589   4.5356   4.7204     50.7    +1.527   -13.160   -21.657    62.450 -1.7e-01  1.531e-01  5/11    35/55       5.7
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.358  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.518  0.50 h0 0.916
+          SDS: film c 18.07 - 19.85 mM (top quarter 18.64, bottom quarter 19.66), tension 38.623 - 39.687 mN/m; film zone's surfactant -1.680e-01; menisci gave +4.158e+00 of all the free particles' (balance 1.2e-15)
+    step 15: mech 5 it ok, cg 11, 1 factorizations (0.09 s); drainage 1 it ok; 0.40 s in all
+    0.015   1745   5.0771   4.7240   4.5618   4.6808     50.1    +2.101    -6.869   -16.019    67.056 -2.0e-01  1.643e-01  5/11    41/60       6.1
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.518  0.50 h0 0.916
+          SDS: film c 18.09 - 19.74 mM (top quarter 18.58, bottom quarter 19.60), tension 38.626 - 39.236 mN/m; film zone's surfactant -1.990e-01; menisci gave +4.121e+00 of all the free particles' (balance 1.4e-15)
+    step 16: mech 5 it ok, cg 12, 1 factorizations (0.08 s); drainage 1 it ok; 0.39 s in all
+    0.016   1742   5.0328   4.7145   4.6084   4.7561     49.5    +2.445    -2.366   -13.895    69.824 -2.1e-01  1.735e-01  5/12    47/69       6.5
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.597  0.50 h0 0.916
+          SDS: film c 18.14 - 19.72 mM (top quarter 18.57, bottom quarter 19.57), tension 38.623 - 39.046 mN/m; film zone's surfactant -2.148e-01; menisci gave +4.098e+00 of all the free particles' (balance 1.7e-16)
+    step 17: mech 5 it ok, cg 13, 1 factorizations (0.09 s); drainage 1 it ok; 0.40 s in all
+    0.017   1748   4.9688   4.8239   4.6742   4.8096     50.7    +2.620    +3.101   -10.954    65.723 -2.0e-01  1.820e-01  5/13    59/75       6.9
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.15 - 19.71 mM (top quarter 18.59, bottom quarter 19.54), tension 38.624 - 40.280 mN/m; film zone's surfactant -2.002e-01; menisci gave +4.086e+00 of all the free particles' (balance 2.2e-15)
+    step 18: mech 5 it ok, cg 11, 1 factorizations (0.09 s); drainage 1 it ok; 0.40 s in all
+    0.018   1745   4.9636   4.9165   4.7382   4.8618     50.6    +2.699    +7.134    -8.732    84.844 -2.1e-01  1.899e-01  5/11    60/79       7.3
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.12 - 19.74 mM (top quarter 18.58, bottom quarter 19.52), tension 38.625 - 39.495 mN/m; film zone's surfactant -2.069e-01; menisci gave +4.055e+00 of all the free particles' (balance 1.7e-15)
+    step 19: mech 4 it ok, cg 10, 1 factorizations (0.10 s); drainage 1 it ok; 0.38 s in all
+    0.019   1745   4.9617   4.9821   4.8230   4.9221     50.4    +2.875    +8.732    -7.111   122.122 -2.1e-01  1.973e-01  4/10    65/84       7.7
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.25 - 19.68 mM (top quarter 18.66, bottom quarter 19.49), tension 38.626 - 39.910 mN/m; film zone's surfactant -2.090e-01; menisci gave +4.047e+00 of all the free particles' (balance 1.7e-15)
+    step 20: mech 5 it ok, cg 12, 1 factorizations (0.09 s); drainage 1 it ok; 0.41 s in all
+    0.020   1743   4.9581   5.0203   4.8456   4.9506     50.5    +2.728    +8.480    -6.057    71.925 -2.1e-01  2.042e-01  5/12    69/90       8.1
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.31 - 19.71 mM (top quarter 18.69, bottom quarter 19.48), tension 38.627 - 39.442 mN/m; film zone's surfactant -2.077e-01; menisci gave +4.034e+00 of all the free particles' (balance 3.4e-16)
+    step 21: mech 5 it ok, cg 12, 1 factorizations (0.08 s); drainage 1 it ok; 0.39 s in all
+    0.021   1742   4.9488   5.0387   4.8415   4.9715     50.0    +2.597    +7.513    -5.987    51.609 -2.2e-01  2.106e-01  5/12    70/92       8.5
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.40 - 19.64 mM (top quarter 18.70, bottom quarter 19.45), tension 38.628 - 38.873 mN/m; film zone's surfactant -2.210e-01; menisci gave +4.021e+00 of all the free particles' (balance 1.6e-15)
+    step 22: mech 5 it ok, cg 12, 1 factorizations (0.09 s); drainage 1 it ok; 0.38 s in all
+    0.022   1742   4.9356   5.0223   4.8311   4.9540     50.2    +2.491    +6.527    -6.757    65.642 -2.2e-01  2.167e-01  5/12    73/95       8.9
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.37 - 19.63 mM (top quarter 18.75, bottom quarter 19.45), tension 38.628 - 39.102 mN/m; film zone's surfactant -2.182e-01; menisci gave +3.973e+00 of all the free particles' (balance 3.7e-15)
+    step 23: mech 5 it ok, cg 12, 1 factorizations (0.10 s); drainage 1 it ok; 0.41 s in all
+    0.023   1743   4.9115   5.0476   4.7914   4.8957     50.7    +2.176    +5.480    -8.040    41.791 -2.1e-01  2.227e-01  5/12    77/98       9.3
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.28 - 19.65 mM (top quarter 18.76, bottom quarter 19.45), tension 38.628 - 38.866 mN/m; film zone's surfactant -2.133e-01; menisci gave +3.963e+00 of all the free particles' (balance 1.2e-15)
+    step 24: mech 4 it ok, cg 7, 1 factorizations (0.10 s); drainage 1 it ok; 0.36 s in all
+    0.024   1743   4.8933   5.0499   4.7709   4.8536     50.0    +2.072    +3.805    -9.433    57.871 -2.3e-01  2.283e-01  4/7     78/99       9.7
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.22 - 19.63 mM (top quarter 18.79, bottom quarter 19.44), tension 38.185 - 38.681 mN/m; film zone's surfactant -2.291e-01; menisci gave +3.925e+00 of all the free particles' (balance 1.2e-15)
+    step 25: mech 5 it ok, cg 12, 1 factorizations (0.10 s); drainage 1 it ok; 0.40 s in all
+    0.025   1741   4.8944   5.0432   4.7377   4.8222     49.9    +2.002    +2.597   -10.628    63.031 -2.3e-01  2.340e-01  5/12    79/102     10.1
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.54 - 19.63 mM (top quarter 18.85, bottom quarter 19.45), tension 38.628 - 38.930 mN/m; film zone's surfactant -2.292e-01; menisci gave +3.921e+00 of all the free particles' (balance 2.5e-15)
+    step 26: mech 4 it ok, cg 10, 1 factorizations (0.10 s); drainage 1 it ok; 0.39 s in all
+    0.026   1739   4.8766   5.0309   4.7320   4.8275     49.7    +1.896    +0.801   -12.141    66.156 -2.4e-01  2.395e-01  4/10    81/106     10.5
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.55 - 19.64 mM (top quarter 18.86, bottom quarter 19.44), tension 38.602 - 38.677 mN/m; film zone's surfactant -2.361e-01; menisci gave +3.900e+00 of all the free particles' (balance 1.5e-15)
+    step 27: mech 4 it ok, cg 10, 1 factorizations (0.09 s); drainage 1 it ok; 0.38 s in all
+    0.027   1741   4.8609   5.0334   4.7508   4.8269     49.9    +1.740    -1.276   -13.866    61.024 -2.4e-01  2.449e-01  4/10    83/106     10.9
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.597  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.54 - 19.65 mM (top quarter 18.83, bottom quarter 19.45), tension 38.627 - 39.032 mN/m; film zone's surfactant -2.366e-01; menisci gave +3.894e+00 of all the free particles' (balance 1.6e-15)
+    step 28: mech 5 it ok, cg 11, 1 factorizations (0.09 s); drainage 1 it ok; 0.41 s in all
+    0.028   1742   4.8446   5.0522   4.7576   4.8314     49.7    +1.649    -2.811   -15.537    69.009 -2.4e-01  2.501e-01  5/11    84/106     11.3
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.597  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.49 - 19.66 mM (top quarter 18.80, bottom quarter 19.45), tension 38.627 - 38.736 mN/m; film zone's surfactant -2.408e-01; menisci gave +3.884e+00 of all the free particles' (balance -8.9e-17)
+    step 29: mech 5 it ok, cg 12, 1 factorizations (0.09 s); drainage 1 it ok; 0.39 s in all
+    0.029   1738   4.8430   5.0829   4.7778   4.8426     49.9    +1.628    -4.074   -16.883    41.332 -2.4e-01  2.555e-01  5/12    85/111     11.7
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.35 - 19.67 mM (top quarter 18.79, bottom quarter 19.46), tension 38.086 - 38.682 mN/m; film zone's surfactant -2.351e-01; menisci gave +3.875e+00 of all the free particles' (balance 2.3e-15)
+    step 30: mech 4 it ok, cg 7, 1 factorizations (0.09 s); drainage 1 it ok; 0.36 s in all
+    0.030   1739   4.8247   5.1197   4.7411   4.8411     49.8    +1.729    -4.237   -17.578    45.537 -2.4e-01  2.607e-01  4/7     86/111     12.0
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.29 - 19.67 mM (top quarter 18.79, bottom quarter 19.46), tension 38.626 - 39.421 mN/m; film zone's surfactant -2.412e-01; menisci gave +3.841e+00 of all the free particles' (balance 1.4e-15)
+    step 31: mech 4 it ok, cg 9, 1 factorizations (0.10 s); drainage 1 it ok; 0.38 s in all
+    0.031   1739   4.8046   5.0804   4.7304   4.8107     49.5    +1.793    -3.871   -18.455    56.409 -2.5e-01  2.657e-01  4/9     87/112     12.4
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.41 - 19.68 mM (top quarter 18.79, bottom quarter 19.46), tension 38.626 - 38.770 mN/m; film zone's surfactant -2.509e-01; menisci gave +3.831e+00 of all the free particles' (balance 2.2e-15)
+    step 32: mech 5 it ok, cg 12, 1 factorizations (0.10 s); drainage 1 it ok; 0.40 s in all
+    0.032   1740   4.7940   5.0791   4.7084   4.8185     49.4    +1.903    -2.872   -17.436    48.097 -2.5e-01  2.707e-01  5/12    89/113     12.8
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.677  0.50 h0 0.757
+          SDS: film c 18.43 - 19.68 mM (top quarter 18.82, bottom quarter 19.47), tension 38.573 - 38.682 mN/m; film zone's surfactant -2.507e-01; menisci gave +3.825e+00 of all the free particles' (balance 2.0e-15)
+    step 33: mech 5 it ok, cg 12, 1 factorizations (0.09 s); drainage 1 it ok; 0.38 s in all
+    0.033   1739   4.7907   5.0718   4.6823   4.8241     49.4    +1.968    -1.570   -15.973    63.956 -2.5e-01  2.758e-01  5/12    90/115     13.2
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.56 - 19.68 mM (top quarter 18.82, bottom quarter 19.49), tension 38.587 - 38.683 mN/m; film zone's surfactant -2.524e-01; menisci gave +3.817e+00 of all the free particles' (balance 2.1e-15)
+    step 34: mech 4 it ok, cg 10, 1 factorizations (0.10 s); drainage 1 it ok; 0.38 s in all
+    0.034   1738   4.7805   5.0869   4.6418   4.8047     49.6    +1.977    -0.127   -14.829    52.981 -2.5e-01  2.809e-01  4/10    92/118     13.6
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.57 - 19.69 mM (top quarter 18.80, bottom quarter 19.50), tension 37.433 - 38.683 mN/m; film zone's surfactant -2.521e-01; menisci gave +3.814e+00 of all the free particles' (balance 6.3e-16)
+    step 35: mech 5 it ok, cg 12, 1 factorizations (0.10 s); drainage 1 it ok; 0.40 s in all
+    0.035   1736   4.7683   5.1172   4.6106   4.7868     49.5    +1.983    +1.592   -14.269    45.973 -2.5e-01  2.860e-01  5/12    93/121     14.0
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.438  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.38 - 19.70 mM (top quarter 18.80, bottom quarter 19.50), tension 37.497 - 38.684 mN/m; film zone's surfactant -2.545e-01; menisci gave +3.812e+00 of all the free particles' (balance 7.2e-16)
+    step 36: mech 5 it ok, cg 12, 1 factorizations (0.10 s); drainage 1 it ok; 0.40 s in all
+    0.036   1734   4.7460   5.1262   4.5974   4.7481     49.4    +2.020    +2.964   -14.047    55.294 -2.6e-01  2.911e-01  5/12    95/125     14.4
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.20 - 19.70 mM (top quarter 18.82, bottom quarter 19.49), tension 38.545 - 38.703 mN/m; film zone's surfactant -2.578e-01; menisci gave +3.827e+00 of all the free particles' (balance 2.8e-15)
+    step 37: mech 5 it ok, cg 11, 1 factorizations (0.09 s); drainage 1 it ok; 0.38 s in all
+    0.037   1733   4.7409   5.1189   4.6385   4.7141     49.4    +2.068    +3.860   -13.863    45.289 -2.6e-01  2.959e-01  5/11    96/127     14.8
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.31 - 19.71 mM (top quarter 18.85, bottom quarter 19.49), tension 38.624 - 38.826 mN/m; film zone's surfactant -2.596e-01; menisci gave +3.829e+00 of all the free particles' (balance 1.7e-15)
+    step 38: mech 4 it ok, cg 10, 1 factorizations (0.09 s); drainage 1 it ok; 0.37 s in all
+    0.038   1734   4.7133   5.1142   4.6331   4.7041     49.7    +2.048    +4.703   -13.350    56.862 -2.6e-01  3.007e-01  4/10   100/130     15.2
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.38 - 19.70 mM (top quarter 18.86, bottom quarter 19.49), tension 38.625 - 38.756 mN/m; film zone's surfactant -2.570e-01; menisci gave +3.791e+00 of all the free particles' (balance 2.2e-15)
+    step 39: mech 5 it ok, cg 11, 1 factorizations (0.08 s); drainage 1 it ok; 0.38 s in all
+    0.039   1732   4.7061   5.0668   4.6295   4.6967     49.4    +2.007    +5.007   -13.343    51.556 -2.6e-01  3.054e-01  5/11   100/132     15.6
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.61 - 19.69 mM (top quarter 18.82, bottom quarter 19.48), tension 38.546 - 38.681 mN/m; film zone's surfactant -2.650e-01; menisci gave +3.785e+00 of all the free particles' (balance 1.7e-15)
+    step 40: mech 4 it ok, cg 10, 1 factorizations (0.09 s); drainage 1 it ok; 0.36 s in all
+    0.040   1735   4.6776   5.0981   4.6196   4.7061     49.9    +2.045    +4.946   -12.856    53.703 -2.6e-01  3.100e-01  4/10   103/132     15.9
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.51 - 19.68 mM (top quarter 18.87, bottom quarter 19.47), tension 38.625 - 39.010 mN/m; film zone's surfactant -2.556e-01; menisci gave +3.784e+00 of all the free particles' (balance 1.6e-15)
+    step 41: mech 5 it ok, cg 12, 1 factorizations (0.08 s); drainage 1 it ok; 0.39 s in all
+    0.041   1735   4.6642   5.1279   4.6074   4.7002     49.9    +1.969    +4.487   -12.784    51.991 -2.6e-01  3.146e-01  5/12   105/134     16.3
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.51 - 19.66 mM (top quarter 18.81, bottom quarter 19.46), tension 38.448 - 38.681 mN/m; film zone's surfactant -2.645e-01; menisci gave +3.773e+00 of all the free particles' (balance 1.1e-15)
+    step 42: mech 4 it ok, cg 10, 1 factorizations (0.09 s); drainage 1 it ok; 0.37 s in all
+    0.042   1733   4.6628   5.0789   4.6011   4.6940     50.0    +1.956    +3.840   -13.159    63.503 -2.6e-01  3.193e-01  4/10   106/137     16.7
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.49 - 19.68 mM (top quarter 18.80, bottom quarter 19.47), tension 38.428 - 38.682 mN/m; film zone's surfactant -2.559e-01; menisci gave +3.771e+00 of all the free particles' (balance 9.1e-16)
+    step 43: mech 5 it ok, cg 12, 1 factorizations (0.08 s); drainage 1 it ok; 0.37 s in all
+    0.043   1733   4.6425   5.0661   4.5974   4.6877     49.8    +1.864    +3.526   -13.748    46.120 -2.6e-01  3.237e-01  5/12   107/138     17.1
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.358  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.40 - 19.70 mM (top quarter 18.85, bottom quarter 19.46), tension 38.293 - 38.686 mN/m; film zone's surfactant -2.599e-01; menisci gave +3.766e+00 of all the free particles' (balance 7.3e-16)
+    step 44: mech 5 it ok, cg 12, 1 factorizations (0.09 s); drainage 1 it ok; 0.41 s in all
+    0.044   1732   4.6205   5.0679   4.6122   4.6943     49.6    +1.945    +3.394   -14.279    54.509 -2.7e-01  3.279e-01  5/12   108/140     17.5
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.279  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.757
+          SDS: film c 18.33 - 19.68 mM (top quarter 18.80, bottom quarter 19.44), tension 38.631 - 38.901 mN/m; film zone's surfactant -2.731e-01; menisci gave +3.757e+00 of all the free particles' (balance 2.1e-15)
+    step 45: mech 5 it ok, cg 11, 1 factorizations (0.08 s); drainage 1 it ok; 0.38 s in all
+    0.045   1731   4.5905   5.0621   4.5912   4.6470     49.4    +2.016    +3.593   -14.648    32.558 -2.8e-01  3.320e-01  5/11   109/142     17.9
+          fringes z/H:  0.98 h0 0.279  0.95 h0 0.279  0.90 h0 0.279  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.677
+          SDS: film c 18.35 - 19.62 mM (top quarter 18.79, bottom quarter 19.43), tension 38.121 - 38.689 mN/m; film zone's surfactant -2.834e-01; menisci gave +3.754e+00 of all the free particles' (balance 1.3e-15)
+    step 46: mech 5 it ok, cg 11, 1 factorizations (0.08 s); drainage 1 it ok; 0.37 s in all
+    0.046   1731   4.5701   5.0310   4.5595   4.6138     49.4    +2.027    +3.942   -14.474    33.193 -2.8e-01  3.362e-01  5/11   110/143     18.3
+          fringes z/H:  0.98 h0 0.199  0.95 h0 0.279  0.90 h0 0.279  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.677
+          SDS: film c 18.38 - 19.62 mM (top quarter 18.83, bottom quarter 19.43), tension 38.216 - 38.691 mN/m; film zone's surfactant -2.807e-01; menisci gave +3.711e+00 of all the free particles' (balance 1.5e-15)
+    step 47: mech 4 it ok, cg 10, 1 factorizations (0.09 s); drainage 1 it ok; 0.37 s in all
+    0.047   1732   4.5457   5.0025   4.5193   4.6105     49.7    +1.995    +4.226   -13.795    48.551 -2.8e-01  3.403e-01  4/10   112/144     18.7
+          fringes z/H:  0.98 h0 0.199  0.95 h0 0.279  0.90 h0 0.279  0.80 h0 0.518  0.70 h0 0.597  0.50 h0 0.677
+          SDS: film c 18.12 - 19.63 mM (top quarter 18.80, bottom quarter 19.44), tension 38.628 - 39.117 mN/m; film zone's surfactant -2.838e-01; menisci gave +3.706e+00 of all the free particles' (balance 2.1e-15)
+    step 48: mech 5 it ok, cg 11, 1 factorizations (0.08 s); drainage 1 it ok; 0.39 s in all
+    0.048   1732   4.5373   4.9629   4.4692   4.5589     49.9    +1.886    +4.212   -13.204    57.779 -2.8e-01  3.446e-01  5/11   114/146     19.1
+          fringes z/H:  0.98 h0 0.199  0.95 h0 0.279  0.90 h0 0.279  0.80 h0 0.438  0.70 h0 0.597  0.50 h0 0.677
+          SDS: film c 18.01 - 19.65 mM (top quarter 18.81, bottom quarter 19.45), tension 38.356 - 38.690 mN/m; film zone's surfactant -2.819e-01; menisci gave +3.700e+00 of all the free particles' (balance 1.5e-15)
+    step 49: mech 4 it ok, cg 10, 1 factorizations (0.09 s); drainage 1 it ok; 0.37 s in all
+    0.049   1731   4.5362   4.9216   4.4360   4.5463     50.0    +1.830    +3.752   -13.227    52.816 -2.8e-01  3.490e-01  4/10   116/149     19.4
+          fringes z/H:  0.98 h0 0.199  0.95 h0 0.279  0.90 h0 0.279  0.80 h0 0.438  0.70 h0 0.597  0.50 h0 0.677
+          SDS: film c 18.03 - 19.67 mM (top quarter 18.84, bottom quarter 19.47), tension 38.626 - 38.940 mN/m; film zone's surfactant -2.775e-01; menisci gave +3.695e+00 of all the free particles' (balance 2.1e-15)
+    step 50: mech 5 it ok, cg 10, 1 factorizations (0.09 s); drainage 1 it ok; 0.40 s in all
+    0.050   1733   4.5060   4.9375   4.4044   4.5275     49.8    +1.776    +3.088   -13.575    52.204 -2.8e-01  3.532e-01  5/10   119/150     19.8
+          fringes z/H:  0.98 h0 0.199  0.95 h0 0.279  0.90 h0 0.279  0.80 h0 0.438  0.70 h0 0.597  0.50 h0 0.677
+          SDS: film c 18.11 - 19.68 mM (top quarter 18.90, bottom quarter 19.46), tension 38.375 - 38.683 mN/m; film zone's surfactant -2.790e-01; menisci gave +3.692e+00 of all the free particles' (balance 1.8e-15)
+   Newton failures: mechanics 0, drainage 0; 20 s

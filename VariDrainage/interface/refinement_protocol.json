@@ -1,0 +1,65 @@
+{
+  "started_utc": "2026-11-11T11:03:16.253669+00:00",
+  "source_commit": "b7e5e889b738eb277698863b2e025aa20a25edbd",
+  "executable_sha256": "e8abdaf31df0419037f63f25217d4b76bd4189392817d2ce63677b1ac21518a6",
+  "bench_source_sha256": "eaa673ce739e290ad57b96063bfa1e29f341f697d8dd838671958b56cb754c1c",
+  "script_sha256": "f83bf603424ef86d8b8b463f9bbd384d42d129a9a22c8fe04517fd2c3370d2fd",
+  "analyzer_sha256": "21b959a69c7492cad9d0634620748e1a76fffc08dcbfe03a11a0cc23218e2fbe",
+  "cases": [
+    {
+      "name": "refine_fixed1_dt1",
+      "dt": 0.001,
+      "remesh": 1,
+      "period": 0.001
+    },
+    {
+      "name": "refine_fixed1_dt0p5",
+      "dt": 0.0005,
+      "remesh": 1,
+      "period": 0.001
+    },
+    {
+      "name": "refine_fixed1_dt0p25",
+      "dt": 0.00025,
+      "remesh": 1,
+      "period": 0.001
+    },
+    {
+      "name": "refine_fixed1_dt0p125",
+      "dt": 0.000125,
+      "remesh": 1,
+      "period": 0.001
+    },
+    {
+      "name": "refine_step_dt0p25",
+      "dt": 0.00025,
+      "remesh": 1,
+      "period": 0.0
+    },
+    {
+      "name": "refine_none_dt0p25",
+      "dt": 0.00025,
+      "remesh": 0,
+      "period": 0.0
+    }
+  ],
+  "h0_um": 6,
+  "T_s": 0.05,
+  "base_environment": {
+    "VF_THREADS": "2",
+    "VF_SDS": "1",
+    "VF_W_M": ".002",
+    "VF_H_M": ".0025",
+    "VF_DX_M": ".0001",
+    "VF_MU_PA": ".0015",
+    "VF_RHO": "1045",
+    "VF_CDRAG": "1",
+    "VF_EVERY_S": ".001",
+    "VF_REPORT_S": ".001",
+    "VF_STEPLOG": "1"
+  },
+  "per_case_timeout_s": 600,
+  "total_budget_s": 2700,
+  "hypothesis": "decouple integration dt from remesh-call cadence after the original every-step matrix showed a 4.73% inventory difference",
+  "caution": "fixed-cadence control does not prove a converged remesh operator; the remesh period and spatial resolution need their own checks"
+}
