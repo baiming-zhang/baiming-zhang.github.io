@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06 Asia/Shanghai",
+  "updated": "2026-11-11",
   "tasks": [
     {
       "id": "R01",
@@ -738,6 +738,46 @@
         }
       ],
       "completed": "2026-11-06"
+    },
+    {
+      "id": "B01",
+      "phase": "Plate Benchmarks",
+      "title": "Plate · 板件数据与GT",
+      "due": "2026-11-11",
+      "start": "2026-11-11",
+      "completed": "2026-11-11",
+      "status": "已完成",
+      "deliverables": "5例geometry、20步loading与stress原始数据；GT交互查看器",
+      "review": "原始256²像素、灰色孔洞、无插值、可查逐点值；应力单位未提供",
+      "dependencies": "—",
+      "issues": "原始256²像素、灰色孔洞、无插值、可查逐点值；应力单位未提供",
+      "page": "B01.html",
+      "results": [
+        {
+          "label": "Plate · 板件数据与GT",
+          "url": "B01.html"
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "phase": "Plate Benchmarks",
+      "title": "Plate · 四模型初步训练",
+      "due": "2026-11-11",
+      "start": "2026-11-11",
+      "completed": "2026-11-11",
+      "status": "已完成",
+      "deliverables": "TS3/FNO/GNOT/OFormer近百万参数，20000→40000步；可排序误差表和GT/预测/Relative L2百分比误差图",
+      "review": "全部5例TRAIN拟合；完整加载历史输入，无独立测试；同更新但不等算力",
+      "dependencies": "B01",
+      "issues": "全部5例TRAIN拟合；完整加载历史输入，无独立测试；同更新但不等算力",
+      "page": "B02.html",
+      "results": [
+        {
+          "label": "Plate · 四模型初步训练",
+          "url": "B02.html"
+        }
+      ]
     }
   ]
 }
