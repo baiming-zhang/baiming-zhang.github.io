@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "commit": "b4c0f2cc546e58021cdca0a7b86dae0d5e0535b8",
+    "source_sha256": {
+      "foam/scripts/refine_section_hydro.py": "ad920b424b8b89a93c0a76f8f9ad81bbdacb25f6722ef4152885fb6f827b8d7b",
+      "foam/scripts/border_section_transport.py": "14cee537f0ba9c47e9213c89a7c2a0a179f18a6d55c1cc2c41315f6b0d0134b5",
+      "foam/scripts/coupled_section_relaxation.py": "910ae194b1e6cb61d30474df612ae2c40f452a3a879349047721baa1b4b73c37",
+      "foam/scripts/border_section_stream.py": "5104ddd47a96b70aae91acb4309ba09f03811195c76b63cd75790c2c51db069f",
+      "foam/scripts/section_advection.py": "31e0a5f37a9c97312f5b40787ae7b5ec65e8ab0f59b7d6a43ab27c776748b4b4",
+      "foam/docs/section_hydro_refinement_protocol.md": "e787efff1846bfe533e032a6d42ac655ec1e83fa4b0487ac7179001749f401cc"
+    },
+    "base_protocol": "../section-hydro/protocol.json",
+    "scope": "closed fixed domain; numerical refinement only"
+  },
+  "runs": [
+    {
+      "name": "time-quarter",
+      "n": 96,
+      "dt_s": 0.00025,
+      "nodes": 811,
+      "triangles": 1482,
+      "steps": 40,
+      "initial_entropy": 3.220467369560247e-10,
+      "final_entropy": 8.471412389675903e-11,
+      "final_ratio": 0.2630491608065158,
+      "max_mass_error": 2.220446049250313e-16,
+      "max_entropy_balance_relative": 1.155216161578489e-08,
+      "max_scaled_residual": 1.7255234434860776e-11,
+      "max_entropy_gain": 0.0,
+      "min_ratio": 0.9998943416222185,
+      "max_Re": 0.0010821756501884342,
+      "wall_s": 2.7939422999043018
+    },
+    {
+      "name": "n144",
+      "n": 144,
+      "dt_s": 0.0005,
+      "nodes": 1789,
+      "triangles": 3372,
+      "steps": 20,
+      "initial_entropy": 3.1718860338576325e-10,
+      "final_entropy": 9.044067618632507e-11,
+      "final_ratio": 0.28513217442535777,
+      "max_mass_error": 2.220446049250313e-16,
+      "max_entropy_balance_relative": 4.071856631001104e-08,
+      "max_scaled_residual": 8.281698224283778e-11,
+      "max_entropy_gain": 0.0,
+      "min_ratio": 0.999894370826951,
+      "max_Re": 0.001013866711690777,
+      "wall_s": 4.652843099785969
+    },
+    {
+      "name": "n192",
+      "n": 192,
+      "dt_s": 0.0005,
+      "nodes": 3157,
+      "triangles": 6036,
+      "steps": 20,
+      "initial_entropy": 3.155727081273653e-10,
+      "final_entropy": 9.280773992737055e-11,
+      "final_ratio": 0.29409304904121586,
+      "max_mass_error": 2.220446049250313e-16,
+      "max_entropy_balance_relative": 6.880164286061022e-08,
+      "max_scaled_residual": 7.714203159622454e-11,
+      "max_entropy_gain": 0.0,
+      "min_ratio": 0.9998943975967334,
+      "max_Re": 0.0010146130052442802,
+      "wall_s": 10.979156200075522
+    },
+    {
+      "name": "n288",
+      "n": 288,
+      "dt_s": 0.0005,
+      "nodes": 7039,
+      "triangles": 13662,
+      "steps": 20,
+      "initial_entropy": 3.1447562984165153e-10,
+      "final_entropy": 9.44822828496e-11,
+      "final_ratio": 0.3004438941649464,
+      "max_mass_error": 5.551115123125783e-16,
+      "max_entropy_balance_relative": 2.0573040889442018e-07,
+      "max_scaled_residual": 5.2634472255453904e-11,
+      "max_entropy_gain": 0.0,
+      "min_ratio": 0.9998943769946258,
+      "max_Re": 0.0010136597828377758,
+      "wall_s": 38.93660630006343
+    }
+  ],
+  "comparisons": [
+    {
+      "coarse": "n144",
+      "fine": "n192",
+      "terminal_entropy_relative_change": 0.02550502515089681,
+      "common_bulk_perturbation_relative_L2": 0.07228883346578699,
+      "common_samples": 3483
+    },
+    {
+      "coarse": "n192",
+      "fine": "n288",
+      "terminal_entropy_relative_change": 0.017723353751888604,
+      "common_bulk_perturbation_relative_L2": 0.049658549669406964,
+      "common_samples": 3483
+    }
+  ],
+  "assessment": {
+    "time_half_vs_quarter_relative_change": 0.0061003529411831625,
+    "last_entropy_change_below_1pct": false,
+    "last_bulk_probe_change_below_1pct": false,
+    "boundary_trace_convergence": false
+  },
+  "checks": {
+    "positive": true,
+    "mass": true,
+    "entropy_balance": true,
+    "entropy_nonincrease": true,
+    "nonlinear": true,
+    "creeping": true
+  },
+  "wall_s": 57.56054229987785
+}
