@@ -1,0 +1,44 @@
+{
+  "stage": "E04A inherited fixed-reservoir interface reference; NOT finite-reservoir coupling",
+  "records": [
+    {
+      "time_s": 0.005,
+      "particle_count": 1761,
+      "mean_film_h_um": 1.9938,
+      "drained_to_menisci_equivalent_um": 0.001737
+    },
+    {
+      "time_s": 0.01,
+      "particle_count": 1766,
+      "mean_film_h_um": 1.9687,
+      "drained_to_menisci_equivalent_um": 0.003234
+    },
+    {
+      "time_s": 0.015,
+      "particle_count": 1764,
+      "mean_film_h_um": 1.9646,
+      "drained_to_menisci_equivalent_um": 0.004678
+    },
+    {
+      "time_s": 0.02,
+      "particle_count": 1760,
+      "mean_film_h_um": 1.9592,
+      "drained_to_menisci_equivalent_um": 0.006098
+    }
+  ],
+  "saved_frames": 4,
+  "mechanics_failures": 0,
+  "drainage_failures": 0,
+  "limitations": [
+    "short smoke/reference run, not time/space convergence",
+    "meniscus liquid chemical potential fixed",
+    "net film loss includes surface transport, not solely drainage",
+    "no closed foam-network liquid balance claimed"
+  ],
+  "source_commit": "4f5c3e7a764daaf5a6b6c14f0a02883f000c1cce",
+  "source_hashes": {
+    "thin_film/bench/tf_bench.cpp": "403081c5c789d0625e911f308d0912216531c3fe0e66dca998be0009ae76fe8b",
+    "thin_film/include/vf/thinfilm/Meniscus.h": "7a9b9e9e08d4ff7aebedc8076978e8a684e501d85d670af56fd5b02d0f3eff0a"
+  },
+  "frames_sha256": "f06de66d224d9595eb44651a8d9d626c98a53f25be2523db5283c2c698aef7c8"
+}
