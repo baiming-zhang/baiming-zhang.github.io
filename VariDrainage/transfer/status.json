@@ -1,0 +1,45 @@
+{
+  "state": "completed",
+  "protocol": "protocol.json",
+  "tests": [
+    {
+      "name": "test_overlap_transfer",
+      "returncode": 0,
+      "wall_s": 0.01500000013038516,
+      "counts": [
+        [
+          "14",
+          "0"
+        ]
+      ],
+      "log": "results\\logs\\overlap_transfer_20261111\\test_overlap_transfer.log",
+      "sha256": "19cc7535184eb4986bef9282d34a9f824728f35c48ff8c2cbc8aff8cb6905e12"
+    },
+    {
+      "name": "test_thinfilm",
+      "returncode": 0,
+      "wall_s": 30.75,
+      "counts": [
+        [
+          "41",
+          "0"
+        ]
+      ],
+      "log": "results\\logs\\overlap_transfer_20261111\\test_thinfilm.log",
+      "sha256": "85729c64ea6728de36b53a9a2e7b56f4b8e1bf86af94558adda0b38dc7230e24"
+    }
+  ],
+  "execution": {
+    "command": [
+      "<project>\\build\\windows\\x64\\release\\tf_overlap_bench.exe",
+      "<project>\\results\\local-runs\\overlap_transfer_20261111"
+    ],
+    "returncode": 0,
+    "wall_s": 1.9370000001508743,
+    "stdout_sha256": "57987be4b1e7927225cb13bf1c6cda84bc8b823e82b5ee422bdc3a192e3ddc56",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "wall_s": 32.78099999995902,
+  "necessary_pass": 72,
+  "total": 72
+}

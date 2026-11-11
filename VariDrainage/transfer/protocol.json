@@ -1,0 +1,58 @@
+{
+  "source_commit": "9e2e2ca9fe4dc94274f6aed683cc14de43fcca57",
+  "started_utc": "2026-11-11T12:27:27.477929+00:00",
+  "scope": "passive geometric moving ownership only; no drainage, mechanics or physical time integration",
+  "matrix": {
+    "n": [
+      8,
+      16,
+      32
+    ],
+    "profile": [
+      "constant",
+      "smooth",
+      "localized pinch"
+    ],
+    "velocity": [
+      "uniform",
+      "shear"
+    ],
+    "moving_cut": [
+      false,
+      true
+    ],
+    "transfers": [
+      1,
+      4
+    ]
+  },
+  "gates": {
+    "balance": 1e-10,
+    "constant_fields": 1e-10,
+    "constant_velocity": 1e-10,
+    "boost": 1e-10,
+    "kinetic_increase": 1e-10,
+    "finest_h_L2": 0.02,
+    "finest_depletion_L2": 0.1
+  },
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF_variables": "excluded from child only"
+  },
+  "timeouts_s": {
+    "native_test": 120,
+    "passive": 900
+  },
+  "source_hashes": {
+    "thin_film\\scripts\\overlap_transfer\\run.py": "96ca97d79dfa4e06ff0b058a6c1d6e53fc0a2f4cc186d959195042cf1291f863",
+    "thin_film\\scripts\\overlap_transfer\\README.md": "f4e368b5170d495b1b542d617e0c91a3033c5b16aac9ae3687d4c6fa75f5d751",
+    "thin_film\\include\\vf\\thinfilm\\OverlapTransfer.h": "8a86feacdc31520a7dc574a55517d7c1af7069ef6e3ec00705b6f6fc3b1148d0",
+    "thin_film\\bench\\tf_overlap_bench.cpp": "cdb12a90b33e7878f77dde2d8e5c76b90638b1ddaae6f9eb59785a7dba05a564",
+    "thin_film\\tests\\test_overlap_transfer.cpp": "a374307dd32d94ec1a55263871e6f1ae2cf2c6c3e3e99225e2c1055c9277b808"
+  },
+  "binaries": {
+    "test_overlap_transfer": "d3bfa6aa628e5cd612f9735b183dbda8e8f4752380668b82d6f6883478145cb3",
+    "test_thinfilm": "d280e30e3c98bd8e1a7bc213f9a51fccb6a9ea219a0139442c157337292bce7b",
+    "tf_overlap_bench": "79f7c1d8971be091d9b2bd329a3ab582b1984da396c4ce7f094a0f944c576947"
+  }
+}
