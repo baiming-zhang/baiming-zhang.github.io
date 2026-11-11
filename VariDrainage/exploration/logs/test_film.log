@@ -1,0 +1,75 @@
+[test_film]
+  ok    kernel dW vs FD: max err 1.31e-08
+  ok    kernel d2W vs FD: max err 8.85e-08
+  ok    kernel 2D normalization: integral = 1.000000
+  ok    gradient vs complex-step (area+gas+inertia): worst rel err 1.88e-15
+  ok    templated value matches double value
+  ok    full DOF: FD directional gradient rel err 3.93e-10
+  ok    full DOF: FD Hessian-vector rel err 2.53e-11
+  ok    normal DOF: FD directional gradient rel err 1.25e-10
+  ok    normal DOF: FD Hessian-vector rel err 2.22e-11
+  ok    Hess_Diag matches H_kk (area+inertia): max rel err 0.00e+00
+  ok    Gauss-Newton Hessian PSD on random directions: min v'Hv/|v|^2 = 7.833e-02
+  ok    area+gas: |sum F| / sum|F| = 3.21e-16 (translation invariance)
+  ok    area: |sum x cross F| / sum|x||F| = 1.01e-17 (rotation invariance)
+  ok    PCA-normal volume: FD directional gradient worst rel err 1.59e-10
+  ok    PCA-normal volume, gas only: FD gradient rel err 3.09e-08
+  ok    PCA-normal gas: |sum F| / sum|F| = 2.96e-16
+  ok    PCA-normal gas: |sum x cross F| / sum|x||F| = 1.28e-17 (V rotation invariant)
+  ok    PCA volume normals vs radial on jittered sphere: max angle 4.382e-02 rad
+  ok    PCA normals: gradient vs complex-step (area+gas+inertia): worst rel err 2.85e-15
+  ok    PCA normals: FD Hessian-vector (full, incl. normal chain) worst rel err 2.52e-11
+  ok    PCA normals, gas only: FD Hessian-vector rel err 2.61e-10
+  ok    gas Hessian-vector: central-difference mode vs complex step rel err 3.04e-09
+  ok    gas Hessian-vector: forward-difference mode vs complex step rel err 1.46e-07
+  ok    surfactant + viscosity + hourglass: gradient vs complex-step worst rel err 7.47e-15
+  ok    surfactant + viscosity + hourglass: FD Hessian-vector rel err 2.40e-11
+  ok    full DOFs with fixed particles: FD gradient 1.37e-10, Hessian-vector 2.53e-11
+  ok    full-DOF preconditioner is SPD (960 DOFs)
+  ok    split (material + normal-projected geometric) problem: FD gradient 4.92e-11, Hessian-vector 2.54e-11
+  ok    split-problem preconditioner is SPD (960 DOFs)
+  ok    split problem with an edge band (full motion for 1/3 of the particles): FD gradient 5.25e-11, Hessian-vector 2.54e-11
+  ok    split problem with an edge-polygon line force (20 edge particles): FD gradient 5.07e-11, Hessian-vector 2.54e-11; straight edge force error 0.0e+00
+  ok    split problem with rigid translation: |sum F| / sum|F| = 8.17e-17, FD gradient 8.41e-08, Hessian-vector 2.71e-11
+  ok    split problem, smoothed tangential motion in E_geo: |sum F| / sum|F| = 2.88e-16, FD gradient 9.44e-08, Hessian-vector 3.14e-11
+  ok    surfactant + viscosity + gas: |sum F| / sum|F| = 2.31e-16
+  ok    double bubble with shared wall (625 particles, 11 border): FD gradient 1.27e-08, Hessian-vector 2.90e-10
+  ok    junction double bubble volumes from film pieces: 3.43072 3.42877 (exact 3.53429, closed-sphere sampling error -2.9%)
+  ok    double bubble with junction particles (658 particles, 31 junction, 452 ghosts): FD gradient 2.36e-10, Hessian-vector 2.61e-10
+  ok    triple bubble with a border network (857 particles, 4 curves, 2 vertices; volumes 3.0098 3.0106 3.0082): FD gradient 1.08e-09, Hessian-vector 1.85e-10
+  ok    triple bubble, cone volume with kernel-area first-order work: FD gradient 5.36e-10, Hessian-vector 2.92e-10
+  ok    triple bubble, ghosts reflected through the border line (951 with a tangent): positions at the frame as the point reflections (0.0e+00 dx), FD gradient 1.08e-09, Hessian-vector 1.85e-10
+  ok    double bubble, quasi-static sparse preconditioner: SPD, 7 low-rank terms (gauge, gas), Woodbury solve error 1.2e-15, v'Hv / v'Mv on random vectors in [0.991, 1.035]
+  ok    double bubble, quasi-static relaxation with the sparse preconditioner (3 outer iterations, moved 0.56 dx): max |x - x_Jacobi| / dx = 1.3e-14, 1 factorization(s) in 3 solves (0 after a layout change, 0 after grown CG), CG 127 (Jacobi 392)
+  ok    triple bubble, quasi-static sparse preconditioner: SPD, 9 low-rank terms (gauge, gas), Woodbury solve error 2.4e-15, v'Hv / v'Mv on random vectors in [0.963, 1.026]
+  ok    triple bubble, quasi-static relaxation with the sparse preconditioner (3 outer iterations, moved 0.53 dx): max |x - x_Jacobi| / dx = 2.7e-14, 1 factorization(s) in 3 solves (0 after a layout change, 0 after grown CG), CG 305 (Jacobi 1883)
+  ok    triple bubble from random displacements (0.05 dx), 3 outer iterations: line reflection 0 solve(s) on the motion cap, vertices moved 0.03 h, dE -1.3e-01; point reflection 2 on the cap, 0.03 h, dE -1.3e-01 (without the cap: 3 failed, vertices moved 0.98 h)
+  ok    film corner at a vertex (alpha = 109.47 deg): film + ghosts per 45-degree sector of a disk of 30 dx around the vertex / lattice density 0.975 .. 1.049 (nearest-edge ghosts: down to 0.000)
+  ok    double bubble, foam flow step (1905 DOFs, BDF2): FD gradient 3.53e-09, Hessian-vector 2.13e-11
+  ok    double bubble, foam flow sparse preconditioner: SPD, v'Hv / v'Pv on random vectors in [0.778, 0.780]
+  ok    double bubble, foam flow with the sparse factorization reused over 3 steps: max |x - x_Jacobi| / dx = 1.0e-14, 2 factorization(s) (1 after a layout change, 0 after grown CG), CG 56 (Jacobi 135)
+  ok    double bubble, foam flow corrector pass (midpoint reference): FD gradient 4.85e-09, Hessian-vector 2.13e-11
+  ok    double bubble, foam flow: rigid translation exact (2.5e-16), total non-inertial force along it 5.3e-17 (relative)
+  ok    triple (edge ghosts, 2h slaved) bubble, foam flow step (1290 DOFs, BDF2): FD gradient 7.20e-09, Hessian-vector 5.09e-12
+  ok    triple (edge ghosts, 2h slaved) bubble, foam flow sparse preconditioner: SPD, v'Hv / v'Pv on random vectors in [0.740, 0.752]
+  ok    triple (edge ghosts, 2h slaved) bubble, foam flow: rigid translation exact (4.0e-16), total non-inertial force along it 5.7e-17 (relative)
+  ok    triple (corner cover, 1h slaved) bubble, foam flow step (2150 DOFs, BDF2): FD gradient 2.88e-08, Hessian-vector 8.01e-12
+  ok    triple (corner cover, 1h slaved) bubble, foam flow sparse preconditioner: SPD, v'Hv / v'Pv on random vectors in [0.766, 0.774]
+  ok    triple (corner cover, 1h slaved) bubble, foam flow with the sparse factorization reused over 3 steps: max |x - x_Jacobi| / dx = 1.2e-14, 3 factorization(s) (2 after a layout change, 0 after grown CG), CG 53 (Jacobi 308)
+  ok    triple (corner cover, 1h slaved) bubble, foam flow corrector pass (midpoint reference): FD gradient 5.63e-08, Hessian-vector 7.95e-12
+  ok    triple (corner cover, 1h slaved) bubble, foam flow: rigid translation exact (3.4e-16), total non-inertial force along it 3.4e-17 (relative)
+  ok    periodic images: energy 1.35573954585 vs brute-force periodic 1.35573954585 (rel 3.3e-16)
+  ok    periodic images: FD gradient 1.31e-10, Hessian-vector 3.77e-11
+  ok    periodic-image preconditioner is SPD (288 DOFs)
+  ok    normal-DOF Laplacian preconditioner is SPD (Cholesky ok)
+  ok    v'Hv / v'Pv on random vectors in [1.169, 1.188]
+  ok    backward Euler, dt = T/40: oscillation energy kept after 2 periods 0.122 (theory ~0.14)
+  ok    BDF2, dt = T/40: oscillation energy kept after 2 periods 0.937 (theory ~0.98)
+        [frozen normals]
+        quasi-static Newton |g|_inf history: 7.1e-02 8.5e-04 7.2e-07 2.1e-11 1.2e-15
+  ok    quasi-static Newton converged in 5 iters (neg-curv hits 1)
+        [PCA normals]
+        quasi-static Newton |g|_inf history: 7.1e-02 1.1e-03 9.3e-04 2.5e-04 8.6e-06 9.2e-06 1.3e-08 2.4e-11 7.7e-16
+  ok    quasi-static Newton converged in 9 iters (neg-curv hits 2)
+
+68 passed, 0 failed

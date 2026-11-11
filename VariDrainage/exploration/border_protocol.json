@@ -1,0 +1,141 @@
+{
+  "parameters": {
+    "Lx_m": 0.0002,
+    "Ly_m": 8e-05,
+    "h0_m": 2e-06,
+    "gamma_N_m": 0.0386,
+    "viscosity_Pa_s": 0.0015,
+    "radius_m": 0.0005,
+    "T_s": 0.001,
+    "tangential_fraction": 0.01,
+    "modulation_width_m": 3.5e-05,
+    "interface_m": 6e-05,
+    "per_case_budget_s": 600,
+    "batch_budget_s": 1500,
+    "model": "horizontal immobile interfaces; no gravity, surfactant, inertia, DLVO or resolved meniscus",
+    "boundary": "left potential -gamma/r; right no flux; y periodic; natural film-height gradient",
+    "method": "cell-volume weighted finite volume; frozen mobility; implicit capillary step; shared face flux",
+    "gates": {
+      "open_balance": 1e-09,
+      "compartment_balance": 1e-09,
+      "grand_potential_increase": 1e-09,
+      "field_relative_L2": 0.02,
+      "integrated_flux_relative": 0.1,
+      "depletion_width_relative": 0.1,
+      "boundary_minimum_relative": 0.1
+    },
+    "caution": "internal numerical thresholds, not experimental validation or a completed C1 method"
+  },
+  "cases": [
+    [
+      "crosscheck_1d",
+      5,
+      5,
+      80,
+      60,
+      5e-06
+    ],
+    [
+      "uniform10",
+      10,
+      10,
+      5,
+      60,
+      5e-06
+    ],
+    [
+      "uniform5",
+      5,
+      5,
+      5,
+      60,
+      5e-06
+    ],
+    [
+      "uniform2p5_y5",
+      2.5,
+      2.5,
+      5,
+      60,
+      5e-06
+    ],
+    [
+      "uniform2p5",
+      2.5,
+      2.5,
+      2.5,
+      60,
+      5e-06
+    ],
+    [
+      "reference_dt5",
+      1.25,
+      1.25,
+      2.5,
+      60,
+      5e-06
+    ],
+    [
+      "reference_dt2p5",
+      1.25,
+      1.25,
+      2.5,
+      60,
+      2.5e-06
+    ],
+    [
+      "local5_bulk10",
+      5,
+      10,
+      5,
+      60,
+      5e-06
+    ],
+    [
+      "local2p5_bulk10",
+      2.5,
+      10,
+      2.5,
+      60,
+      5e-06
+    ],
+    [
+      "local1p25_bulk5",
+      1.25,
+      5,
+      2.5,
+      60,
+      5e-06
+    ],
+    [
+      "local1p25_bulk5_dt2p5",
+      1.25,
+      5,
+      2.5,
+      60,
+      2.5e-06
+    ],
+    [
+      "local1p25_patch30",
+      1.25,
+      5,
+      2.5,
+      30,
+      2.5e-06
+    ]
+  ],
+  "source_commit": "6dd72427c7cda1a96f460e308540fe618eadd438",
+  "script_sha256": "37fba2c78d1b1aa4eadebbc2c7735136cc29bfc8731857948cd581d31dfae4a0",
+  "python": "3.11.7",
+  "threads": {
+    "CODEX_THREAD_ID": "01a1c8ee-abdc-7c71-a299-31f9cb5ed265",
+    "VF_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2"
+  },
+  "source_urls": [
+    "https://arxiv.org/abs/cond-mat/0105318"
+  ],
+  "initial_scope": "reduced capillary interface audit; not Aradian asymptotic-law or experiment replication"
+}

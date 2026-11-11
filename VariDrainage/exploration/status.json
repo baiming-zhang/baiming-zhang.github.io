@@ -1,0 +1,81 @@
+{
+  "state": "completed",
+  "runs": [
+    {
+      "name": "test_core",
+      "command": [
+        "test_core.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.09300000010989606,
+      "log": "logs/test_core.log",
+      "sampled_peak_RSS_bytes": 1695744,
+      "sha256": "2205cc0411ecf55b421d5ab6fb440caa11601e107580f783305307afeea8d963"
+    },
+    {
+      "name": "test_film",
+      "command": [
+        "test_film.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 92.46899999980815,
+      "log": "logs/test_film.log",
+      "sampled_peak_RSS_bytes": 151740416,
+      "sha256": "860136ad51f9f7a5bd55005dc360375abd85ab7d0e5a36aed7a6f493df8cae40"
+    },
+    {
+      "name": "test_thinfilm",
+      "command": [
+        "test_thinfilm.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 29.70299999997951,
+      "log": "logs/test_thinfilm.log",
+      "sampled_peak_RSS_bytes": 155979776,
+      "sha256": "d93cc339a149a3e79f05f62709ce8ee729a932c75cc9550785e2b7a64f80571f"
+    },
+    {
+      "name": "test_surface_exchange",
+      "command": [
+        "test_surface_exchange.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.10900000017136335,
+      "log": "logs/test_surface_exchange.log",
+      "sampled_peak_RSS_bytes": 3256320,
+      "sha256": "2cb439940a3504bedb96b3388ff4645140c5daca9264d4ae2ec6c3273c34fd50"
+    },
+    {
+      "name": "response_matrix",
+      "command": [
+        "tf_response_bench.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 1.3129999998491257,
+      "log": "local raw CSV: results/local-runs/exploration_20261111/response.csv",
+      "sampled_peak_RSS_bytes": 3547136,
+      "sha256": "4af7f3d7e4387b62a4ccbb30faaf54ef1fcb21b555dab67937131fa452830568",
+      "data_sha256": "4af7f3d7e4387b62a4ccbb30faaf54ef1fcb21b555dab67937131fa452830568"
+    },
+    {
+      "name": "border_patch",
+      "command": [
+        "python.exe",
+        "border_patch.py"
+      ],
+      "returncode": 0,
+      "wall_s": 53.609999999869615,
+      "log": "logs/border_patch.log",
+      "sampled_peak_RSS_bytes": 62533632,
+      "sha256": "a2e9ac2077cfd4db0b4807105f145fb67a8984661cdb300b47a3a27fb22c1cb5"
+    }
+  ],
+  "completed_utc": "2026-11-11T09:47:40.443157+00:00",
+  "holdout": {
+    "state": "completed",
+    "cases": 4,
+    "wall_s": 188.76499999989755,
+    "source_commit": "63ba6af69e3c6826274f2efda6f131330ab347d4",
+    "log": "logs/holdout.log"
+  }
+}

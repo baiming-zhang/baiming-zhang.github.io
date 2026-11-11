@@ -1,0 +1,53 @@
+{
+  "started_utc": "2026-11-11T09:44:42.658071+00:00",
+  "source_commit": "6dd72427c7cda1a96f460e308540fe618eadd438",
+  "source_hashes": {
+    "thin_film/include/vf/thinfilm/Units.h": "00c7b29cfcbe5742288a240790a1699216c38d2674e615d6fb919e3a036a8e85",
+    "thin_film/include/vf/thinfilm/Solution.h": "1688ff48927574c1ca03ab1f524d9f0e42e1bade69904798d40316f7bf34e9a0",
+    "thin_film/include/vf/thinfilm/SurfaceExchange.h": "00997bae84e3058315ebe28061320f80113513fc9c5b2237afaefc4b8c4f46bc",
+    "thin_film/scripts/phase2/border_patch.py": "37fba2c78d1b1aa4eadebbc2c7735136cc29bfc8731857948cd581d31dfae4a0",
+    "thin_film/scripts/phase2/run.py": "af6984979c65d3f6bfbcc711798144ddbf6b789b1c4497e0eea0b067a5082c35"
+  },
+  "binary_hashes": {
+    "test_core": "d001e5aacfc60e4e03c04bdd3b58544c58e9e4abaa57e63fc99a9072856e5ba8",
+    "test_film": "9b8476b50eda323aa59096c806ff708d4dfe63eacf3b221369d328512e4e07bb",
+    "test_thinfilm": "194efbdeeaa8446e0560bc947fd58f4b0e0e77e106b9564f613d853655aaa35c",
+    "test_surface_exchange": "e537a93e46b6e00b85c9e78005d33ffe4a04e395b2a61c5f32339dfef398fcb2",
+    "tf_response_bench": "07725d8df6bb87769bb536c5183d4bf5819fc8bb635be2c19beed4e16323130c"
+  },
+  "environment": {
+    "VF_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2"
+  },
+  "python": "3.11.7",
+  "per_native_timeout_s": 300,
+  "border_timeout_s": 1800,
+  "total_hard_bound_s": 3300,
+  "response_matrix": {
+    "thickness_um": [
+      2,
+      6
+    ],
+    "area_ratios": [
+      0.99,
+      0.999,
+      1.001,
+      1.01
+    ],
+    "tau_bath_s": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1
+    ],
+    "dt": "min(tau/20,50 us) and half",
+    "T_s": 0.02
+  },
+  "citations": [
+    "https://arxiv.org/abs/2509.20110",
+    "https://doi.org/10.1103/PhysRevFluids.1.083903",
+    "https://arxiv.org/abs/cond-mat/0105318"
+  ]
+}

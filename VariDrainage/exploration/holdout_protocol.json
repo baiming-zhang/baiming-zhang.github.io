@@ -1,0 +1,74 @@
+{
+  "parameters": {
+    "Lx_m": 0.0002,
+    "Ly_m": 8e-05,
+    "h0_m": 2e-06,
+    "gamma_N_m": 0.0386,
+    "viscosity_Pa_s": 0.0015,
+    "radius_m": 0.0005,
+    "T_s": 0.01,
+    "tangential_fraction": 0.01,
+    "modulation_width_m": 3.5e-05,
+    "interface_m": 6e-05,
+    "per_case_budget_s": 600,
+    "batch_budget_s": 2100,
+    "model": "horizontal immobile interfaces; no gravity, surfactant, inertia, DLVO or resolved meniscus",
+    "boundary": "left potential -gamma/r; right no flux; y periodic; natural film-height gradient",
+    "method": "cell-volume weighted finite volume; frozen mobility; implicit capillary step; shared face flux",
+    "gates": {
+      "open_balance": 1e-09,
+      "compartment_balance": 1e-09,
+      "grand_potential_increase": 1e-09,
+      "field_relative_L2": 0.02,
+      "integrated_flux_relative": 0.1,
+      "depletion_width_relative": 0.1,
+      "boundary_minimum_relative": 0.1
+    },
+    "caution": "internal numerical thresholds, not experimental validation or a completed C1 method"
+  },
+  "cases": [
+    [
+      "holdout_ref_dt10",
+      1.25,
+      1.25,
+      2.5,
+      60,
+      1e-05
+    ],
+    [
+      "holdout_ref_dt5",
+      1.25,
+      1.25,
+      2.5,
+      60,
+      5e-06
+    ],
+    [
+      "holdout_local60",
+      1.25,
+      5,
+      2.5,
+      60,
+      5e-06
+    ],
+    [
+      "holdout_local30",
+      1.25,
+      5,
+      2.5,
+      30,
+      5e-06
+    ]
+  ],
+  "source_commit": "63ba6af69e3c6826274f2efda6f131330ab347d4",
+  "script_sha256": "a59b631a2d5344058afbe6165222722825eb891ff759ef61e5dee6d97ace8a61",
+  "operator_sha256": "37fba2c78d1b1aa4eadebbc2c7735136cc29bfc8731857948cd581d31dfae4a0",
+  "threads": {
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2"
+  },
+  "frozen_question": "Does 30/60 um local refinement retain accuracy when the time horizon grows from 1 to 10 ms?",
+  "acceptance": "same predeclared conservation and accuracy gates; report depletion error independently; no retuning",
+  "caution": "fixed-cell reduced capillary reference, not physical border regeneration or a learned model"
+}

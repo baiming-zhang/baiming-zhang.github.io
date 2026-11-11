@@ -13,11 +13,14 @@
 <tr><td>E0 · 分析协议</td><td>现有条纹分析器能否恢复已知规律？</td><td><span class="badge">3 组理想场通过</span></td><td><a href="phase1/synthetic_audit.json">分析器审计</a></td></tr>
 <tr><td>前置 · 基线与短跑</td><td>继承二进制、单位和短时算例能否运行？</td><td><span class="badge">115 检查 / 5 算例</span></td><td><a href="phase1/">双栏回放与结果</a></td></tr>
 <tr><td>E1a · 局部边缘</td><td>开放边界的质量、能量和离散误差是否可控？</td><td><span class="badge">6 组简化参照完成</span></td><td><a href="border/">参照剖面与守恒</a></td></tr>
+<tr><td>前置 · 二维边缘与E2响应</td><td>局部加密能否保留通量与厚度场；有限速率响应是否可区分？</td><td><span class="badge">135检查 / 80组诊断</span></td><td><a href="exploration/">二维守恒、响应与十倍时长检查</a></td></tr>
 <tr><td>E1b · 二维局部</td><td>夹缩如何生成薄膜元，如何守恒接入整膜？</td><td><span class="badge pending">未实现</span></td><td>局部收敛 → 接口收支 → 整膜对照</td></tr>
 <tr><td>E3–E4 · 主验证</td><td>能否预测完整条纹轨迹与保留工况？</td><td><span class="badge pending">未执行</span></td><td>同装置、同材料与冻结参数</td></tr>
 <tr><td>E5–E6 · 黑膜与成本</td><td>能否形成可信的 SI 黑膜，代价是否合理？</td><td><span class="badge pending">未验证</span></td><td>压力—厚度、动态前沿、全成本</td></tr>
-</tbody></table></div><p class="note">实验编号沿用完整规划；表活响应诊断（E2）尚未执行。相邻两档误差小，不等于已经证明整体模型收敛。</p></section>
+</tbody></table></div><p class="note">实验编号沿用完整规划；E2均匀响应诊断已执行，交换率仍未物理标定；二维运动粒子接口尚未实现。相邻两档误差小，不等于已经证明整体模型收敛。</p></section>
 <section id="results"><div class="sectionhead"><div><div class="eyebrow">03 / Recorded progress</div><h2>已经运行的结果，与它们的边界。</h2></div><span class="badge">数值诊断 · 非实验验证</span></div>
+<div class="result"><img src="exploration/holdout_convergence.png" alt="十倍时长下均匀细网格与局部加密的厚度及变薄量对照"><div><span class="label">BATCH 03 / LOCAL EDGE &amp; SURFACE RESPONSE</span><h3>从短时通过，推进到保留时间检查。</h3><ul><li>135项原生检查通过；64组均匀界面响应与16组边缘诊断完成。</li><li>预选局部网格2432个单元，对照5120个，单元减少52.5%。</li><li>延长到10 ms后，相对同方程细参考，积分通量差0.00395%，变薄量L2差0.0816%。</li><li>固定单元、静止界面、未解析弯月面；交换率为未标定敏感性输入，尚未接入运动膜。</li></ul><a href="exploration/">打开80组计算、保存状态与PNG/PDF图 ↗</a></div></div>
+
 <div class="result"><img src="phase1/thinning.png" alt="五个短时框架膜算例的平均厚度时间序列"><div><span class="label">BATCH 01 / FRAMED FILMS</span><h3>短时可运行，长时规律仍待检验。</h3><ul><li>时间步 5 / 2.5 ms：0.1 s 的平均厚度为 1.9225 / 1.9345 μm，差约 0.62%。</li><li>dx100 / 50 μm：共同 0.05 s 时刻均值差约 0.56%。</li><li>6 μm 初态在 2 × 2.5 mm 框架中，于 0.05 s 降至 4.5746 μm。</li><li>五例均报告零次 mechanics / drainage Newton 失败。不溶性对照的热力学不同，不是只关闭 SDS 交换。</li></ul><a href="phase1/">打开完整双栏回放 ↗</a></div></div>
 <details><summary>展开同一保存时刻的光学圆盘 / 真实粒子交互回放</summary><iframe title="DRIFT recorded states" src="phase1/" loading="lazy"></iframe></details>
 <div class="result"><img src="assets/border.png" alt="一维固定液体势边界排液的三档剖面与厚度曲线"><div><span class="label">BATCH 02 / INDEPENDENT 1D REFERENCE</span><h3>先检验离散收支，再讨论边缘机制。</h3><ul><li>dx = 5、2.5、1.25 μm；dt = 10、5 μs，运行到 1 ms。</li><li>开放液量收支最大相对误差约 5.9 × 10⁻¹⁴；各例厚度为正、巨势不升。</li><li>细时间步下，最小厚度为 1.67135、1.65613、1.65221 μm。</li><li>固定液体势、无表活/惯性/DLVO；不是已解析弯月面，也不是二维边缘再生。</li></ul><a href="border/">打开参照参数与完整结果 ↗</a></div></div></section>
