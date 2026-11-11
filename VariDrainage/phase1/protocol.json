@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-11",
+  "stage": "E0-E2 startup diagnostics, not Monier or black-film validation",
+  "source_commit": "afcdf5a3e8618dd9df89cf4c842e3edab640c49e",
+  "binary_provenance": "inherited release executables; no fresh rebuild claimed",
+  "binary_hashes": {
+    "test_core.exe": "886f868aa1f182bbb250d1c47f8a77f165a644a12d910c0a6e33870e4248b9cc",
+    "test_film.exe": "d198d477b88835dca5f449a20484bdb4cdc64f18c765f5dd596a9602ef31c550",
+    "test_thinfilm.exe": "382b27042dd1f6c3f0ac17e8986258f90e85554fff637f4cd24140370476ed6b",
+    "tf_bench.exe": "ee5e965b3d7c69d3b5a18b405a6332a1c1f016cb86267a064867016071417613"
+  },
+  "solver_hashes": {
+    "Meniscus.h": "7a9b9e9e08d4ff7aebedc8076978e8a684e501d85d670af56fd5b02d0f3eff0a",
+    "Particles.h": "317af668d4614d943a2a87eff0c292784cf41ba5ecb5662ae92851e638b948d6",
+    "Solution.h": "1688ff48927574c1ca03ab1f524d9f0e42e1bade69904798d40316f7bf34e9a0",
+    "ThinFilm.h": "28db3d0cd8d8faa0d4722929e4f502708b2a915f5801dc351db2e100ea2a3a35",
+    "ThinFilmMechanics.h": "bb55e6a4b1d26205adda4c57a1df26eab5d01f95d4fd4d84c362010d18988820",
+    "Units.h": "b547c418da2cb144ebd4d74ee7fe957f897ac3597ee7cf254420636009c6d51f"
+  },
+  "base_environment": {
+    "VF_W_M": "0.002",
+    "VF_H_M": "0.0025",
+    "VF_DX_M": "0.0001",
+    "VF_DT_S": "0.005",
+    "VF_TMAX_S": "0.1",
+    "VF_REPORT_S": "0.005",
+    "VF_EVERY_S": "0.005",
+    "VF_H0_M": "0.000002",
+    "VF_MU_PA": "0.0015",
+    "VF_RHO": "1045",
+    "VF_CDRAG": "1",
+    "VF_SDS": "1"
+  },
+  "cases": [
+    {
+      "name": "sds_dt5",
+      "overrides": {}
+    },
+    {
+      "name": "sds_dt2p5",
+      "overrides": {
+        "VF_DT_S": "0.0025"
+      }
+    },
+    {
+      "name": "insoluble",
+      "overrides": {
+        "VF_SDS": "0"
+      }
+    },
+    {
+      "name": "sds_dx50",
+      "overrides": {
+        "VF_DX_M": "0.00005",
+        "VF_TMAX_S": "0.05"
+      }
+    },
+    {
+      "name": "sds_thick6",
+      "overrides": {
+        "VF_H0_M": "0.000006",
+        "VF_TMAX_S": "0.05"
+      }
+    }
+  ],
+  "per_case_timeout_s": 600,
+  "batch_bound_s": 4800,
+  "threads": 2,
+  "limitations": [
+    "short horizons cannot estimate asymptotic fringe exponents",
+    "insoluble material differs in thermodynamics, not a matched SDS intervention",
+    "exported frames have rounded fields and no stable material-particle IDs",
+    "cannot infer full liquid balance from rounded frames",
+    "no dynamic border model or finite-rate exchange implemented"
+  ]
+}

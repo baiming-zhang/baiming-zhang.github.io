@@ -1,0 +1,109 @@
+{
+  "protocol": {
+    "L_m": 0.0002,
+    "h0_m": 2e-06,
+    "gamma_N_per_m": 0.0386,
+    "viscosity_Pa_s": 0.0015,
+    "reservoir_radius_m": 0.0005,
+    "T_s": 0.001,
+    "interpretation": "controlled horizontal immobile-surface capillary-drainage reference, not physical marginal regeneration validation",
+    "boundary": "left fixed liquid potential -gamma/r; free thickness gradient at both film ends; right zero liquid flux",
+    "material_source": "same illustrative SI gamma/viscosity as inherited SDS baseline; surfactant is not evolved",
+    "source_commit": "4b3fac6e599d3010684e767f352e532ec60a8e3a"
+  },
+  "results": [
+    {
+      "N": 40,
+      "dx_um": 5.0,
+      "dt_s": 1e-05,
+      "final_min_h_um": 1.6712976492633922,
+      "final_mean_h_um": 1.9791071100019053,
+      "max_relative_open_volume_balance": 7.754818242684634e-16,
+      "max_relative_grand_potential_increase": 0.0,
+      "accepted_steps": 100,
+      "halvings": 0,
+      "passed": true
+    },
+    {
+      "N": 40,
+      "dx_um": 5.0,
+      "dt_s": 5e-06,
+      "final_min_h_um": 1.6713469762415254,
+      "final_mean_h_um": 1.9791228782596373,
+      "max_relative_open_volume_balance": 9.04728794979874e-16,
+      "max_relative_grand_potential_increase": 0.0,
+      "accepted_steps": 200,
+      "halvings": 0,
+      "passed": true
+    },
+    {
+      "N": 80,
+      "dx_um": 2.5,
+      "dt_s": 1e-05,
+      "final_min_h_um": 1.6560659223205765,
+      "final_mean_h_um": 1.978746602922267,
+      "max_relative_open_volume_balance": 1.6802106192483373e-15,
+      "max_relative_grand_potential_increase": 0.0,
+      "accepted_steps": 100,
+      "halvings": 0,
+      "passed": true
+    },
+    {
+      "N": 80,
+      "dx_um": 2.5,
+      "dt_s": 5e-06,
+      "final_min_h_um": 1.6561282367358112,
+      "final_mean_h_um": 1.9787640644250992,
+      "max_relative_open_volume_balance": 2.584939414228211e-15,
+      "max_relative_grand_potential_increase": 0.0,
+      "accepted_steps": 200,
+      "halvings": 0,
+      "passed": true
+    },
+    {
+      "N": 160,
+      "dx_um": 1.25,
+      "dt_s": 1e-05,
+      "final_min_h_um": 1.6521452992255552,
+      "final_mean_h_um": 1.9786555656311733,
+      "max_relative_open_volume_balance": 5.867812470298039e-14,
+      "max_relative_grand_potential_increase": 0.0,
+      "accepted_steps": 100,
+      "halvings": 0,
+      "passed": true
+    },
+    {
+      "N": 160,
+      "dx_um": 1.25,
+      "dt_s": 5e-06,
+      "final_min_h_um": 1.6522111733473193,
+      "final_mean_h_um": 1.9786734987497898,
+      "max_relative_open_volume_balance": 1.3183191012563877e-14,
+      "max_relative_grand_potential_increase": 0.0,
+      "accepted_steps": 200,
+      "halvings": 0,
+      "passed": true
+    }
+  ],
+  "comparisons": [
+    {
+      "dt_s": 1e-05,
+      "successive_min_thickness_relative_differences": [
+        0.009197536606195078,
+        0.002373049813995825
+      ],
+      "caution": "only this simplified boundary reference; not convergence of the full framed solver"
+    },
+    {
+      "dt_s": 5e-06,
+      "successive_min_thickness_relative_differences": [
+        0.009189348486509681,
+        0.0023708006892098014
+      ],
+      "caution": "only this simplified boundary reference; not convergence of the full framed solver"
+    }
+  ],
+  "wall_s": 0.4059999999590218,
+  "script_sha256": "50bc5ce8b6970a471f76429d3e823e0d6fb424a301c0c3a925eabde0b55ca67c",
+  "claim": "discrete open-volume balance and grand-potential descent only"
+}
