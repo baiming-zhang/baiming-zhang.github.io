@@ -1,0 +1,98 @@
+{
+  "base_protocol": {
+    "created_utc": "2026-11-11T11:57:35.585696+00:00",
+    "commit": "dcd7582efc8d29f77d665adf40590ff711f12530",
+    "source_sha256": {
+      "foam/scripts/border_section_transport.py": "14cee537f0ba9c47e9213c89a7c2a0a179f18a6d55c1cc2c41315f6b0d0134b5",
+      "foam/scripts/border_section_stokes_hdiv.py": "b61bf8a01fce39d2c77ffd51b99b37c0971b93c0291ae12b4413ea48f897818d",
+      "foam/scripts/border_section_stream.py": "5104ddd47a96b70aae91acb4309ba09f03811195c76b63cd75790c2c51db069f",
+      "foam/scripts/section_advection.py": "31e0a5f37a9c97312f5b40787ae7b5ec65e8ab0f59b7d6a43ab27c776748b4b4",
+      "foam/scripts/coupled_section_relaxation.py": "910ae194b1e6cb61d30474df612ae2c40f452a3a879349047721baa1b4b73c37",
+      "foam/scripts/run_section_hydro.py": "42375a9ef2d2bdd7415f81fcb6bf450fc044cd8793009fdfe0f6020e530d8ba0",
+      "foam/docs/section_hydro_protocol.md": "c7e4fe079bd0cb71b07e2b418c4f5b25e2452caebc50d6dd24109d9e8a50839b"
+    },
+    "versions": {
+      "python": "3.11.7",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "scikit_fem": "12.0.2"
+    },
+    "inputs": {
+      "radius_m": 0.0004,
+      "full_inlet_h_m": 8e-07,
+      "eta_m": 1e-05,
+      "D_m2_s": 5e-10,
+      "mu_Pa_s": 0.001,
+      "rho_kg_m3": 998.2,
+      "RT_J_mol": 2500.0,
+      "c_star_mol_m3": 0.002,
+      "B_m": 0.001
+    },
+    "scope": "sealed fixed-shape section; instantaneous Henry equilibrium; no feeding films, shape evolution, gas or rupture; not experimental validation"
+  },
+  "git_base": "607f7d64a3fdd05266a63c28b5e5ee616a3acb99",
+  "source_sha256": {
+    "foam/scripts/run_section_normal.py": "335b521475c681d10dbbb1d239d4d10a525e50be711b0681360ed08cc81376be",
+    "foam/scripts/border_section_transport.py": "eed020a62a5893a68a5e8e62901e952d70def57da381984f16e2f802cba5eab5",
+    "foam/scripts/border_section_stream.py": "5104ddd47a96b70aae91acb4309ba09f03811195c76b63cd75790c2c51db069f",
+    "foam/scripts/coupled_section_relaxation.py": "910ae194b1e6cb61d30474df612ae2c40f452a3a879349047721baa1b4b73c37",
+    "foam/scripts/section_advection.py": "31e0a5f37a9c97312f5b40787ae7b5ec65e8ab0f59b7d6a43ab27c776748b4b4",
+    "foam/docs/section_normal_protocol.md": "219cc11f3a482bbf68239ff34f67be51559331d4e0479db418c81b0a259ab393"
+  },
+  "python": "3.11.7",
+  "scope": "closed fixed geometry; dilute instantaneous-Henry model; no moving foam, film feed, gas or rupture",
+  "resume_source": {
+    "base_protocol": {
+      "created_utc": "2026-11-11T11:57:35.585696+00:00",
+      "commit": "dcd7582efc8d29f77d665adf40590ff711f12530",
+      "source_sha256": {
+        "foam/scripts/border_section_transport.py": "14cee537f0ba9c47e9213c89a7c2a0a179f18a6d55c1cc2c41315f6b0d0134b5",
+        "foam/scripts/border_section_stokes_hdiv.py": "b61bf8a01fce39d2c77ffd51b99b37c0971b93c0291ae12b4413ea48f897818d",
+        "foam/scripts/border_section_stream.py": "5104ddd47a96b70aae91acb4309ba09f03811195c76b63cd75790c2c51db069f",
+        "foam/scripts/section_advection.py": "31e0a5f37a9c97312f5b40787ae7b5ec65e8ab0f59b7d6a43ab27c776748b4b4",
+        "foam/scripts/coupled_section_relaxation.py": "910ae194b1e6cb61d30474df612ae2c40f452a3a879349047721baa1b4b73c37",
+        "foam/scripts/run_section_hydro.py": "42375a9ef2d2bdd7415f81fcb6bf450fc044cd8793009fdfe0f6020e530d8ba0",
+        "foam/docs/section_hydro_protocol.md": "c7e4fe079bd0cb71b07e2b418c4f5b25e2452caebc50d6dd24109d9e8a50839b"
+      },
+      "versions": {
+        "python": "3.11.7",
+        "numpy": "1.26.4",
+        "scipy": "1.13.1",
+        "scikit_fem": "12.0.2"
+      },
+      "inputs": {
+        "radius_m": 0.0004,
+        "full_inlet_h_m": 8e-07,
+        "eta_m": 1e-05,
+        "D_m2_s": 5e-10,
+        "mu_Pa_s": 0.001,
+        "rho_kg_m3": 998.2,
+        "RT_J_mol": 2500.0,
+        "c_star_mol_m3": 0.002,
+        "B_m": 0.001
+      },
+      "scope": "sealed fixed-shape section; instantaneous Henry equilibrium; no feeding films, shape evolution, gas or rupture; not experimental validation"
+    },
+    "git_base": "607f7d64a3fdd05266a63c28b5e5ee616a3acb99",
+    "source_sha256": {
+      "foam/scripts/run_section_normal.py": "a00d5e0a02feccbf5bcdea63858152e4e446094cc67a989765fca3af6cd9592c",
+      "foam/scripts/border_section_transport.py": "eed020a62a5893a68a5e8e62901e952d70def57da381984f16e2f802cba5eab5",
+      "foam/scripts/border_section_stream.py": "5104ddd47a96b70aae91acb4309ba09f03811195c76b63cd75790c2c51db069f",
+      "foam/scripts/coupled_section_relaxation.py": "910ae194b1e6cb61d30474df612ae2c40f452a3a879349047721baa1b4b73c37",
+      "foam/scripts/section_advection.py": "dd5de46e64b336362683b75067b880e774380ed6e71a8144aea962c34bef128f",
+      "foam/docs/section_normal_protocol.md": "219cc11f3a482bbf68239ff34f67be51559331d4e0479db418c81b0a259ab393"
+    },
+    "python": "3.11.7",
+    "scope": "closed fixed geometry; dilute instantaneous-Henry model; no moving foam, film feed, gas or rupture"
+  },
+  "completed_before_resume": [
+    "N1",
+    "N05",
+    "N025",
+    "T025",
+    "uniform",
+    "A288",
+    "D288"
+  ],
+  "resume_reason": "bounded point location after verified scratch-memory growth; no equations changed"
+}
