@@ -1,0 +1,243 @@
+{
+  "stage": "M1 single-border numerical verification only",
+  "cross_section": [
+    {
+      "resolution": 256,
+      "liquid_cells": 2646,
+      "area_error": 0.0015165015095743861,
+      "C": 0.02194861397844334
+    },
+    {
+      "resolution": 512,
+      "liquid_cells": 10556,
+      "area_error": 0.0011330130446838282,
+      "C": 0.02089386653835365
+    },
+    {
+      "resolution": 1024,
+      "liquid_cells": 42266,
+      "area_error": 0.00013944508683705337,
+      "C": 0.02048853499038909
+    },
+    {
+      "resolution": 2048,
+      "liquid_cells": 169074,
+      "area_error": 8.030413696513694e-05,
+      "C": 0.020299805881811187
+    }
+  ],
+  "conductance_relative_change_last_two": 0.009211449655450399,
+  "parameters": {
+    "gamma_N_per_m": 0.035,
+    "gamma_status": "illustrative, not calibrated surfactant solution",
+    "rho_kg_per_m3": 998.2,
+    "mu_Pa_s": 0.001002,
+    "radius_m": 0.0001,
+    "length_m": 0.005,
+    "interface": "rigid, no-slip",
+    "boundary": "closed zero flux at both ends"
+  },
+  "runs": [
+    {
+      "name": "coarse32",
+      "n": 32,
+      "dt": 0.002,
+      "steps": 1000,
+      "gravity": 9.81,
+      "duration_s": 2.0,
+      "wall_seconds": 0.061211900087073445,
+      "max_balance": 5.551115123125783e-16,
+      "max_energy_gain_J": -5.566410188960256e-18,
+      "minimum_area_ratio": 0.8009630546655606,
+      "iterations": 2007,
+      "command": [
+        "border_drainage",
+        "32",
+        "0.002",
+        "1000",
+        "0.020299805881811187",
+        "9.81",
+        "coarse32.csv",
+        "coarse32-frames.csv"
+      ]
+    },
+    {
+      "name": "main64",
+      "n": 64,
+      "dt": 0.002,
+      "steps": 1000,
+      "gravity": 9.81,
+      "duration_s": 2.0,
+      "wall_seconds": 0.06251590000465512,
+      "max_balance": 6.661338147750939e-16,
+      "max_energy_gain_J": -5.541349925122349e-18,
+      "minimum_area_ratio": 0.8002409087589655,
+      "iterations": 2007,
+      "command": [
+        "border_drainage",
+        "64",
+        "0.002",
+        "1000",
+        "0.020299805881811187",
+        "9.81",
+        "main64.csv",
+        "main64-frames.csv"
+      ]
+    },
+    {
+      "name": "fine128",
+      "n": 128,
+      "dt": 0.002,
+      "steps": 1000,
+      "gravity": 9.81,
+      "duration_s": 2.0,
+      "wall_seconds": 0.10593460011295974,
+      "max_balance": 1.1102230246251565e-15,
+      "max_energy_gain_J": -5.535096439691448e-18,
+      "minimum_area_ratio": 0.8000602362607592,
+      "iterations": 2008,
+      "command": [
+        "border_drainage",
+        "128",
+        "0.002",
+        "1000",
+        "0.020299805881811187",
+        "9.81",
+        "fine128.csv",
+        "fine128-frames.csv"
+      ]
+    },
+    {
+      "name": "time64",
+      "n": 64,
+      "dt": 0.001,
+      "steps": 2000,
+      "gravity": 9.81,
+      "duration_s": 2.0,
+      "wall_seconds": 0.1111347998958081,
+      "max_balance": 6.661338147750939e-16,
+      "max_energy_gain_J": -2.7380646076821903e-18,
+      "minimum_area_ratio": 0.8002409087589655,
+      "iterations": 3679,
+      "command": [
+        "border_drainage",
+        "64",
+        "0.001",
+        "2000",
+        "0.020299805881811187",
+        "9.81",
+        "time64.csv",
+        "time64-frames.csv"
+      ]
+    },
+    {
+      "name": "reference512",
+      "n": 512,
+      "dt": 0.0005,
+      "steps": 4000,
+      "gravity": 9.81,
+      "duration_s": 2.0,
+      "wall_seconds": 0.5648715000133961,
+      "max_balance": 2.220446049250313e-15,
+      "max_energy_gain_J": -1.358901409288852e-18,
+      "minimum_area_ratio": 0.8000037649434798,
+      "iterations": 6972,
+      "command": [
+        "border_drainage",
+        "512",
+        "0.0005",
+        "4000",
+        "0.020299805881811187",
+        "9.81",
+        "reference512.csv",
+        "reference512-frames.csv"
+      ]
+    },
+    {
+      "name": "equilibrium64",
+      "n": 64,
+      "dt": 0.05,
+      "steps": 4000,
+      "gravity": 9.81,
+      "duration_s": 200.0,
+      "wall_seconds": 0.1010634999256581,
+      "max_balance": 5.551115123125783e-16,
+      "max_energy_gain_J": 4.963083675318166e-24,
+      "minimum_area_ratio": 0.8002409087589655,
+      "iterations": 4110,
+      "command": [
+        "border_drainage",
+        "64",
+        "0.05",
+        "4000",
+        "0.020299805881811187",
+        "9.81",
+        "equilibrium64.csv",
+        "equilibrium64-frames.csv"
+      ]
+    },
+    {
+      "name": "zero64",
+      "n": 64,
+      "dt": 0.05,
+      "steps": 4000,
+      "gravity": 0,
+      "duration_s": 200.0,
+      "wall_seconds": 0.1184022999368608,
+      "max_balance": 4.440892098500626e-16,
+      "max_energy_gain_J": 2.481541837659083e-24,
+      "minimum_area_ratio": 0.8002409087589655,
+      "iterations": 4045,
+      "command": [
+        "border_drainage",
+        "64",
+        "0.05",
+        "4000",
+        "0.020299805881811187",
+        "0",
+        "zero64.csv",
+        "zero64-frames.csv"
+      ]
+    }
+  ],
+  "area_field_relative_errors": {
+    "coarse32": 1.114589305916872e-05,
+    "main64": 8.346315337938002e-06,
+    "fine128": 7.647054285149441e-06,
+    "time64": 3.3893119965087794e-06
+  },
+  "dt_halving_relative_error": 4.957013944485112e-06,
+  "hydrostatic_pressure_spread_relative_to_gamma_over_r": 4.4013047175082775e-14,
+  "zero_gravity_uniform_area_error": 4.463096558993129e-14,
+  "limitations": [
+    "no film-border exchange",
+    "no moving geometry",
+    "no surfactant dynamics",
+    "no gas DOFs, rupture or coarsening",
+    "finite-grid cross-section staircase uncertainty",
+    "reference uses same PDE and is not an experiment"
+  ],
+  "source_commit_before_run": "b348de43fe7e2d819604aa414ad2f2a53813e28e",
+  "source_sha256": {
+    "foam\\include\\vf\\foam\\BorderDrainage.h": "c9e29e8beaafa0f93728e409d911606cb488bcbb59bb0ca240339e42a19504e2",
+    "foam\\bench\\border_drainage.cpp": "50f5ec4a80c7627df1cd125dca7ef09f791a1447530302cac455e5559c1017f2",
+    "foam\\scripts\\run_border_experiments.py": "c326eb798322549131818ddf10f1f36a91de63aa0ab099c44008045748b36a75"
+  },
+  "checks": {
+    "1000_step_balance": true,
+    "all_positive": true,
+    "energy_nonincreasing": true,
+    "field_error_below_one_percent": true,
+    "time_halving_below_two_percent": true,
+    "hydrostatic_equilibrium": true,
+    "zero_gravity_equilibrium": true,
+    "conductance_last_grid_change_below_one_percent": true
+  },
+  "wall_seconds": 4.829874699935317,
+  "max_saved_transient_area_errors": {
+    "coarse32": 0.0006354420974619403,
+    "main64": 0.0004213537168803414,
+    "fine128": 0.00037274504506408897,
+    "time64": 0.00018771840987234518
+  }
+}
