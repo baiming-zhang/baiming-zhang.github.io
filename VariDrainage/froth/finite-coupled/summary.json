@@ -1,0 +1,106 @@
+{
+  "scope": "three uniform films + finite well-mixed border + quasi-steady Henry transition; not spatial moving foam or experimental validation",
+  "inputs": {
+    "B_m": 0.001,
+    "L_m": 0.01,
+    "eta_m": 1e-05,
+    "D_m2_s": 5e-10,
+    "mu_Pa_s": 0.001,
+    "gamma_N_m": 0.07,
+    "h_scale_m": 1e-06,
+    "initial_r_m": 0.0004,
+    "initial_h_m": 8e-07,
+    "initial_cb_mol_m3": 0.002,
+    "abs_dgamma_dc": 0.025
+  },
+  "runs": [
+    {
+      "dt_s": 0.01,
+      "steps": 10,
+      "BVP_calls": 20,
+      "max_BVP_rms": 9.994745899999318e-08,
+      "max_relative_liquid_balance": 0.0,
+      "max_relative_total_solute_balance": 2.220446049250313e-16,
+      "max_uniform_film_invariant_error": 2.220446049250313e-16,
+      "final_h_m": 7.964796392196589e-07,
+      "final_border_concentration_mol_m3": 0.002107040109848389,
+      "film_volume_loss_fraction": 0.0044479688576452014,
+      "history": "dt-0.01.csv"
+    },
+    {
+      "dt_s": 0.005,
+      "steps": 20,
+      "BVP_calls": 40,
+      "max_BVP_rms": 9.995456979706115e-08,
+      "max_relative_liquid_balance": 0.0,
+      "max_relative_total_solute_balance": 2.220446049250313e-16,
+      "max_uniform_film_invariant_error": 2.220446049250313e-16,
+      "final_h_m": 7.96479487881526e-07,
+      "final_border_concentration_mol_m3": 0.002107044695729084,
+      "film_volume_loss_fraction": 0.004448160061868878,
+      "history": "dt-0.005.csv"
+    },
+    {
+      "dt_s": 0.0025,
+      "steps": 40,
+      "BVP_calls": 80,
+      "max_BVP_rms": 9.999734492859327e-08,
+      "max_relative_liquid_balance": 0.0,
+      "max_relative_total_solute_balance": 2.220446049250313e-16,
+      "max_uniform_film_invariant_error": 3.3306690738754696e-16,
+      "final_h_m": 7.964794503397933e-07,
+      "final_border_concentration_mol_m3": 0.002107045833326553,
+      "film_volume_loss_fraction": 0.00444820749299335,
+      "history": "dt-0.0025.csv"
+    },
+    {
+      "dt_s": 0.00125,
+      "steps": 80,
+      "BVP_calls": 160,
+      "max_BVP_rms": 9.999726440573088e-08,
+      "max_relative_liquid_balance": 0.0,
+      "max_relative_total_solute_balance": 5.551115123125783e-16,
+      "max_uniform_film_invariant_error": 4.440892098500626e-16,
+      "final_h_m": 7.964794409906213e-07,
+      "final_border_concentration_mol_m3": 0.002107046116627104,
+      "film_volume_loss_fraction": 0.0044482193049613095,
+      "history": "dt-0.00125.csv"
+    }
+  ],
+  "commit": "69356e447e5af8a5e306b11d44d21ee2403b9532",
+  "source_sha256": {
+    "foam/scripts/transition_bvp.py": "bc34e7e35fa1ff4d297970c41202826b638ffeb0378d883cbf3d17af89a08814",
+    "foam/scripts/run_finite_coupled.py": "0f5b95daafd2108ecc39410d7599fdb8d2eded8f415b0791ec6cabc207fa4dcb"
+  },
+  "wall_s": 6.636286600027233,
+  "limits": [
+    "instant Henry equilibrium assumes sufficiently fast adsorption, not evidenced here",
+    "border perfectly mixed and circular-arc capillary-static; no along-border flow",
+    "transition shape quasi-steady in attachment frame; no inertia or transient transition storage",
+    "surface tension treated at paper linearized leading order",
+    "no gas, momentum, rupture or experimental validation"
+  ],
+  "time_refinement": [
+    {
+      "dt": 0.01,
+      "final_h_relative_change_vs_finest": 2.4888154981361765e-07,
+      "final_cb_relative_change_vs_finest": 2.850805526866118e-06
+    },
+    {
+      "dt": 0.005,
+      "final_h_relative_change_vs_finest": 5.887271181670428e-08,
+      "final_cb_relative_change_vs_finest": 6.743554441523969e-07
+    },
+    {
+      "dt": 0.0025,
+      "final_h_relative_change_vs_finest": 1.1738120919702055e-08,
+      "final_cb_relative_change_vs_finest": 1.3445389202004776e-07
+    }
+  ],
+  "gates": {
+    "volume_balance": true,
+    "solute_balance": true,
+    "uniform_invariant": true,
+    "last_time_refinement": true
+  }
+}
