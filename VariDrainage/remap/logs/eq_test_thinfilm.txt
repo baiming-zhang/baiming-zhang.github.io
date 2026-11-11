@@ -1,0 +1,43 @@
+  ok    drainage step on particles (576 particles, 16405 pairs): FD gradient 2.83e-09, Hessian-vector 2.02e-11
+  ok    drainage step with 153 reservoir nodes: FD gradient 8.06e-11, Hessian-vector 1.96e-11
+  ok    drainage step: volume drift 9.1e-16, energy 29.731417 -> -1.380578, min h 2.364 (Newton 6, CG 122)
+  ok    solute carried by the drainage: pair fluxes give the volume change to 0.0e+00, a uniform concentration stays uniform to 1.4e-15; with reservoirs the amount changes by what they supply (-3.307e+01 of 7.776e+02) to 3.9e-16; min concentration 0.209
+  ok    1D grid, unstable mode (h0 = 3, k = 0.589): growth per step 1.01934023 vs 1 / (1 - s dt) = 1.01934023
+  ok    mobile surfaces, one BDF2 step (880 DOFs; Langmuir, disjoining, squeeze, gravity, Trouton): FD gradient 1.43e-09, Hessian-vector 3.69e-10
+  ok    mobile surfaces with a surfactant bath (Pi_m 0.299), per-particle bath factors, weightless particles, external forces and (anisotropic) friction: FD gradient 1.28e-10, Hessian-vector 3.70e-10
+  ok    mobile surfaces, soluble surfactant in local equilibrium (5-30 mM) and 119 bath particles: FD gradient 3.24e-09, Hessian-vector 4.64e-10
+  ok    mobile surfaces: momentum (BDF2) conserved to 6.9e-13 relative (Newton 5)
+  ok    surface diffusion step on particles (Langmuir): FD gradient 1.80e-07, Hessian-vector 7.08e-11
+  ok    surface diffusion step: surfactant drift 3.4e-16, energy -313.430141 -> -337.279828, Gamma in [0.317, 0.667] (Newton 6)
+  ok    1D grid, surface diffusion (Langmuir, theta 0.6): decay per step 0.63825254 vs Fick 1 / (1 + Ds k^2 dt) = 0.63825254
+  ok    coupled step, vertical strip (432 particles, 5 steps): volume drift 6.7e-16, surfactant drift 5.6e-16, frame moved 0.0e+00, film moved up to 9.126
+  ok    sphere R = 12: particle areas sum to 4 pi R^2 x 0.99990 (2089 particles), axisymmetric zones x -6.7e-16
+  ok    sphere: factored preconditioner applied to H v returns v to 5.8e-10 (L Cholesky + block LU, 2089 particles)
+  ok    sphere drainage step: factored vs Jacobi volumes agree to 5.7e-11 of the change; CG iterations 3 (factored) vs 847 (Jacobi)
+  ok    sphere drainage step: two-level (131 coarse particles) vs Jacobi volumes agree to 8.0e-09; CG iterations 23 vs 847; prolongation rows sum to 1 within 7e-16
+  ok    mobile surfaces on a sphere (4178 DOFs, tangent bases, projection): FD gradient 4.61e-09, Hessian-vector 3.29e-10
+  ok    sphere, rotating film (10 steps, 20% of a radian; Trouton viscosity on): angular momentum about the axis x 0.9999702, on the sphere to 1.8e-15
+  ok    coupled step on a sphere (2089 particles, 3 steps): volume drift 1.6e-15, surfactant drift 0.0e+00, on the sphere to 1.8e-15
+  ok    remeshing a patch with a hole and a crowded spot: 10 insertions, 30 merges (second pass 0, 21), 330 remapped; V, S, momentum conserved to 7e-16 / 7e-16 / 8e-19; area spread 6.15 -> 2.54; Gamma 0.395-0.600, h 4.94-6.00 after
+  ok    physical units, 1 ms steps (all converged, 6.8 Newton iterations per step): two sets of scales (H, L, T, S x 2.5, 0.5, 0.3, 3) agree: displacements 1.311e-04 m (difference 6.8e-15 of it), thickness changes 1.069e-08 m (6.9e-14)
+  ok    kernel quintic: integral 1.0000000000, FD dW 1.4e-09, d2W 1.4e-08 (of W(0)/h, W(0)/h^2)
+  ok    kernel Wendland C2: integral 1.0000000000, FD dW 1.9e-09, d2W 5.8e-09 (of W(0)/h, W(0)/h^2)
+  ok    kernel Wendland C4: integral 1.0000000000, FD dW 1.7e-09, d2W 2.2e-08 (of W(0)/h, W(0)/h^2)
+  ok    factored in-plane preconditioner (CHOLMOD on H; 256 particles, jitter 0.00 dx, 500 nm film, 1 ms, squeeze energy off): positive definite, |H P^-1 r - r| / |r| = 4.9e-12; shear wave over 277 um: step stiffness 1.4015e-06 N/m, continuum inertia + viscosity 1.4148e-06 N/m (-0.9%)
+  ok    factored in-plane preconditioner (CHOLMOD on H; 256 particles, jitter 0.05 dx, 500 nm film, 1 ms, squeeze energy off): positive definite, |H P^-1 r - r| / |r| = 4.9e-12; shear wave over 277 um: step stiffness 1.4351e-06 N/m, continuum inertia + viscosity 1.4148e-06 N/m (+1.4%)
+  ok    factored in-plane preconditioner (CHOLMOD on H; 256 particles, jitter 0.00 dx, 500 nm film, 1 ms, squeeze energy on (diagonal in P)): positive definite, |H P^-1 r - r| / |r| = 4.4e-05; shear wave over 277 um: step stiffness 1.4015e-06 N/m, continuum inertia + viscosity 1.4148e-06 N/m (-0.9%)
+  ok    factored in-plane preconditioner (CHOLMOD on H; 256 particles, jitter 0.05 dx, 500 nm film, 1 ms, squeeze energy on (diagonal in P)): positive definite, |H P^-1 r - r| / |r| = 4.3e-05; shear wave over 277 um: step stiffness 1.4351e-06 N/m, continuum inertia + viscosity 1.4148e-06 N/m (+1.4%)
+  ok    factored in-plane preconditioner (LDL^T saddle point; 256 particles, jitter 0.00 dx, 500 nm film, 1 ms, squeeze energy off): positive definite, |H P^-1 r - r| / |r| = 7.4e-12; shear wave over 277 um: step stiffness 1.4015e-06 N/m, continuum inertia + viscosity 1.4148e-06 N/m (-0.9%)
+  ok    factored in-plane preconditioner (LDL^T saddle point; 256 particles, jitter 0.05 dx, 500 nm film, 1 ms, squeeze energy off): positive definite, |H P^-1 r - r| / |r| = 7.3e-12; shear wave over 277 um: step stiffness 1.4351e-06 N/m, continuum inertia + viscosity 1.4148e-06 N/m (+1.4%)
+  ok    factored in-plane preconditioner (LDL^T saddle point; 256 particles, jitter 0.00 dx, 500 nm film, 1 ms, squeeze energy on (diagonal in P)): positive definite, |H P^-1 r - r| / |r| = 4.5e-05; shear wave over 277 um: step stiffness 1.4015e-06 N/m, continuum inertia + viscosity 1.4148e-06 N/m (-0.9%)
+  ok    factored in-plane preconditioner (LDL^T saddle point; 256 particles, jitter 0.05 dx, 500 nm film, 1 ms, squeeze energy on (diagonal in P)): positive definite, |H P^-1 r - r| / |r| = 6.4e-05; shear wave over 277 um: step stiffness 1.4351e-06 N/m, continuum inertia + viscosity 1.4148e-06 N/m (+1.4%)
+  ok    meniscus wedge friction: integral of 1 / d over the strip 4.642979e+01 vs quadrature 4.642979e+01, over [0.1, 0.2] mm 4.756795e+00 vs 4.756795e+00 (3 mu times it: 0.21 Pa s per face at 1.5 mPa s, against mu w / r = 9.00e-04)
+  ok    meniscus section: surface width -6.4e-05 and liquid area -1.6e-04 against the fillet limit (r = 1e-4 a); liquid area +4.1e-05 against direct integration (r = a)
+  ok    meniscus hydrostatics: -gamma / r(y) + rho g y uniform to 2.2e-16 (r 0.431 mm at the bottom, 0.293 mm at the top)
+  ok    friction against the frame: terminal velocity f / zeta to 1.1e-09
+  ok    framed film with menisci (1375 particles, 8 steps of 5 ms): converged 1; free monolayer conserved to -1.6e-15; drained into the menisci 0.0310 um of film; h 1.8950 um at the lateral junctions, 2.0010 um at the centre; lateral meniscus surfaces rise at 1.02 mm/s (friction scale 5.04 mm/s)
+  ok    SDS solution (Blokhuis 2025 fit of Elworthy & Mysels): dPhi/dc = mu~ to 2.0e-10, dmu~/dc to 3.3e-08; Gibbs factor 2.0000 below the cmc; tension 52.5 / 40.2 / 38.6 mN/m at 4 / 8.2 / 19.4 mM; micellized 0.1% at 8.2 mM, 60.9% at 19.4 mM (monomers 7.58 mM, Na+ 10.54 mM); coverage 0.9737 at 19.4 mM
+  ok    soluble particle (2 um film, 19.4 mM): partition back to c0 to 0.0e+00; dF/da, d2F/da2 vs FD 2.1e-11, 2.6e-10; film elasticity 3.714e-04 N/m = Prins form to -6.3e-15 (insoluble film 0.678 N/m; weight of a 5 mm film rho g h H = 1.0e-04 N/m); no-liquid limit theta 0.600000
+  ok    framed SDS film (19.4 mM, 1373 particles, 8 steps of 5 ms): converged 1; free surfactant +5.312e+04 of 3.9594e+03, menisci gave +5.312e+04 (balance 1.1e-14); film concentration 19.19 - 19.55 mM, coverage >= 0.9736 (0.9737 at rest); max speed 5.22 mm/s; drained 0.0125 um of film
+
+41 passed, 0 failed

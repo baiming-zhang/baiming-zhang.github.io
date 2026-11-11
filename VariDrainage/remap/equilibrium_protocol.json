@@ -1,0 +1,27 @@
+{
+  "started_utc": "2026-11-11T11:39:26.114983+00:00",
+  "source_commit": "1bebc6a852b7605186c4ae04907095724d2bbbc6",
+  "hashes": {
+    "thin_film\\scripts\\remap_assay\\equilibrium.py": "6600d7ff415e3f5d88ca6b800ce8877e9088c0e8191cc72a452518fc0554ab21",
+    "thin_film\\include\\vf\\thinfilm\\Meniscus.h": "88f15c7ebd6553c108c50a48ea54277738e77bb475637ef077ca5bfa7173d226",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilmMechanics.h": "47ceaf46675de2f2bcf9dfb81376bb688b5fae2e1ca6cd591345af3027237f1f"
+  },
+  "executable_sha256": "15e26ec0ad5aee5e5f2a772c318faf1ba62ac7a72c218be583e7a19c18115d92",
+  "base_environment": {
+    "VF_THREADS": "2",
+    "VF_SDS": "1",
+    "VF_W_M": ".002",
+    "VF_H_M": ".0025",
+    "VF_DX_M": ".0001",
+    "VF_MU_PA": ".0015",
+    "VF_RHO": "1045",
+    "VF_CDRAG": "1",
+    "VF_EVERY_S": ".001",
+    "VF_REPORT_S": ".001",
+    "VF_REMESH": "1",
+    "VF_REGION_REMAP_EQUILIBRIUM": "1"
+  },
+  "total_budget_s": 3300,
+  "change": "after regional remapping only, apply existing instantaneous repartition to non-bath particles at new areas; conserve per-particle 2S+B; no new adsorption rate or physical coefficient",
+  "guard": "5 ms thin/thick candidate probes must pass before 50 ms runs; original failed run is not overwritten"
+}

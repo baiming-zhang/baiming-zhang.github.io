@@ -1,0 +1,62 @@
+{
+  "started_utc": "2026-11-11T11:32:36.838107+00:00",
+  "source_commit": "ac9c710079db978e96a0ec08c8f5a040aedd2adf",
+  "hashes": {
+    "thin_film\\include\\vf\\thinfilm\\ThinFilmMechanics.h": "47ceaf46675de2f2bcf9dfb81376bb688b5fae2e1ca6cd591345af3027237f1f",
+    "thin_film\\bench\\tf_remap_bench.cpp": "c925acb604fb47db99bbb6d0c4465587bf68fe3d280bf1ab86d61075c9f1b025",
+    "thin_film\\bench\\tf_bench.cpp": "8868b4a059dcaf2d17f209f72bce08613e843db3f9d723e34eba78ad17d3d321",
+    "thin_film\\scripts\\remap_assay\\run.py": "8d9e7699c9754649c52a416304531377f93086fa805ac254376e39664e8e0cac"
+  },
+  "binaries": {
+    "test_region_remap": "1a44b01f27b065b1995c6f7d0a2e6de54c04a3d22d20654f4fc61857792f9ae4",
+    "test_thinfilm": "02e386a1e2524e832228cd710e27ca2769494b6e37d20e832f108e3294f34e5c",
+    "tf_bench": "69662fab342910b866f8b288dd487089823cf9ceef0b7a5ba750526a0fbd9648",
+    "tf_remap_bench": "e6ca1b78f4f361cf427d2956d0f8d21e991398163defcc0b6a9fae0e1b12afe1"
+  },
+  "passive_matrix": {
+    "nx": [
+      32,
+      64,
+      128
+    ],
+    "profiles": [
+      "constant",
+      "smooth",
+      "localized_pinch"
+    ],
+    "policies": [
+      "legacy",
+      "region_constrained"
+    ],
+    "cycles": [
+      1,
+      4
+    ],
+    "cases": 36
+  },
+  "candidate": "same topology with per-region V/S/B quotas over affected nodes; default off; no new physical flux law",
+  "passive_initial_state": "known non-equilibrium fields on a warped periodic hex patch with an initial hole; no time evolution, Gibbs-equilibrating exchange or drainage; SI constants inherited; theta approximately 0.45",
+  "base_environment": {
+    "VF_THREADS": "2",
+    "VF_SDS": "1",
+    "VF_W_M": ".002",
+    "VF_H_M": ".0025",
+    "VF_DX_M": ".0001",
+    "VF_MU_PA": ".0015",
+    "VF_RHO": "1045",
+    "VF_CDRAG": "1",
+    "VF_EVERY_S": ".001",
+    "VF_REPORT_S": ".001",
+    "VF_REMESH": "1"
+  },
+  "guard": "two candidate 5 ms native probes must pass Newton, ledger and saved-field feasibility before 50 ms probes",
+  "total_budget_s": 3300,
+  "per_native_timeout_s": 600,
+  "passive_timeout_s": 900,
+  "gates": {
+    "global_balance": 1e-10,
+    "regional_balance": 1e-10,
+    "field_L2_target": 0.02
+  },
+  "caution": "field/energy/moment errors are reported even if conservation passes; no full C1 or experimental claim"
+}
