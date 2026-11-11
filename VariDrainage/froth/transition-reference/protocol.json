@@ -1,0 +1,33 @@
+{
+  "model": "Breward and Howell 2002 transition-region BVP, soluble surfactant, beta=0 plug-flow limit",
+  "doi": "10.1017/S0022112002007930",
+  "url": "https://doi.org/10.1017/S0022112002007930",
+  "equations": [
+    "4.17",
+    "4.18",
+    "4.21",
+    "4.22"
+  ],
+  "comparison": "section 5, Figures 6 and 7",
+  "dimensionless": true,
+  "h_l": 0.8,
+  "P": 5.0,
+  "T": 5.0,
+  "beta": 0.0,
+  "domains": [
+    40,
+    80,
+    160,
+    320
+  ],
+  "tolerance": 1e-07,
+  "tight_tolerance": 1e-08,
+  "initial_Q_guess_both_cases": 0.1,
+  "published_rounded_Q": {
+    "0.5": 0.4292,
+    "1.0": 0.0349
+  },
+  "nature": "post-pilot deterministic equation reproduction; not blind hypothesis testing, not physical validation",
+  "gates": "positive profiles; max collocation RMS<1e-6; boundary residual<1e-7; last-domain Q change<0.1%; Q matches 4-decimal published rounding; tighter tolerance Q change<0.01%",
+  "limits": "stationary local BVP with fixed far-border surfactant; no finite-border temporal update, no SI calibration, no coupling into rigid-interface E04B"
+}
