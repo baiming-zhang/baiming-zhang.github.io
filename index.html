@@ -716,6 +716,7 @@
         <a href="#about" class="active" aria-current="true">About</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
+        <a href="/project/">Projects</a>
         <a href="#education">Education</a>
         <!-- <a href="#ongoing-research">Ongoing Research</a> -->
         <a href="#awards">Awards</a>
@@ -1222,7 +1223,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var navLinks = Array.from(document.querySelectorAll('.side-nav a'));
+      var navLinks = Array.from(document.querySelectorAll('.side-nav a')).filter(function (link) { return link.getAttribute('href').startsWith('#'); });
       var navScroller = document.querySelector('.side-nav-links');
       var sections = navLinks
         .map(function (link) { return document.querySelector(link.getAttribute('href')); })
