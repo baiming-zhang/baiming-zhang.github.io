@@ -1,0 +1,166 @@
+{
+  "state": "running_matrix",
+  "cases": [
+    {
+      "name": "u5_dt00625",
+      "parameters": {
+        "name": "u5_dt00625",
+        "mode": "uniform",
+        "dx_um": 5,
+        "dt_us": 0.0625,
+        "T_us": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 20,
+        "refine_start_um": 200,
+        "observer": true,
+        "timeout_s": 18000
+      },
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_local_assembly_bench.exe",
+        "uniform",
+        "5",
+        "0.0625",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625",
+        "6",
+        "variational",
+        "20",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "native_pid": 126044,
+      "started_utc": "2026-11-13T19:36:28.913539+00:00",
+      "terminal_utc": "2026-11-13T21:42:33.468508+00:00",
+      "wall_s": 7564.5470000000205,
+      "log": "results\\logs\\uniform5_pilot_20261113\\u5_dt00625.log",
+      "log_sha256": "1a62a8d89965e436a9f242981ee7a70f3d3a9e669fcb6f5a5eeef64a6a8fc10c",
+      "monitor_log": "results\\logs\\uniform5_pilot_20261113\\monitor_u5_dt00625.jsonl",
+      "monitor_log_sha256": "a5c6c3341a1df887338777800177bfcc4885dbcbf5a59f80ea07a240fda46853",
+      "completed": true,
+      "native_gate": true,
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 20,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 2112,
+        "interior": 2080,
+        "steps": 160,
+        "requested_steps": 160,
+        "failures": 0,
+        "local": false,
+        "dx_m": 4.9999999999999996e-06,
+        "dt_s": 6.25e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.922305519543647e-12,
+        "V0_m3": 3.5955746505722703e-13,
+        "S0_mol": 1.7890965910041554e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 4.532834564615943e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 9.053772651797897e-16,
+        "max_regionS_res": 1.7512623352662764e-16,
+        "max_displacement_m": 5.6279517647377474e-08,
+        "wall_s": 7563.0827386
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 4.697915420584255e-13,
+        "free_volume_m3": 1.2675964789107875e-13,
+        "S_mol": 1.7890965910041554e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 4.9999999999999996e-06,
+        "actual_background_x_m": 5e-06,
+        "actual_background_y_m": 5e-06,
+        "fine_m": 4.9999999999999996e-06,
+        "physical_cut_m": 0.00024
+      },
+      "maximum_force_target_ratio": 0.532090068518559,
+      "files": [
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\faces.csv",
+          "bytes": 7399922,
+          "sha256": "7ebc1de7266e1b08194d23666399a952c4ff5e5100c8a01e1976b28544e1b5bb"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\history.csv",
+          "bytes": 56036,
+          "sha256": "8a4ae77bcbace227d9de7944c0eb7b72e9051e7ad4526f83285acd5266052c78"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\initial_faces.csv",
+          "bytes": 222292,
+          "sha256": "58f884bd6f25de7f8984a0c5bd6279ae0004985f038c865204eaf405c3ccd89c"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\initial_states.csv",
+          "bytes": 527317,
+          "sha256": "50214861a6c1036fe614d10bf50f84bcf6438eb8da25bf2e89e3d37540c5ce1a"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\mechanical_nodes.csv",
+          "bytes": 9294873,
+          "sha256": "339d97d258e075ae05ccab17121e6881853596a3389066b55e5a6df0806616de"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\mechanics.csv",
+          "bytes": 42264,
+          "sha256": "b97d67b89d7a56673580088f726402d79b66c2758898a910d4ec6f88c990a212"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\mesh.json",
+          "bytes": 250,
+          "sha256": "cc95cf53cb934f7cc03476728b3e7af43454b993beeda9808c0a5c2ffed5ef4b"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\preparation.json",
+          "bytes": 227,
+          "sha256": "fcc8fb83a2a47ba8e8928896b3989439bd546ec03aa92269a10012e02ec1a038"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\regional_mechanics.csv",
+          "bytes": 8325,
+          "sha256": "b310e7aee062c4ab024eabb156d8f7a1e9ce50c88693f1ebad78f5077b8d482f"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\states.csv",
+          "bytes": 17294214,
+          "sha256": "4a1fb22de7a6e37c52b73c6b0209edf43e886acaecb69e9e77730f2f491cdf78"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\summary.json",
+          "bytes": 919,
+          "sha256": "cdd3ea98f859a218ff143cdfa07730d7f5263cc8d59bb71aeb6f16e6c6651921"
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "full_C1_complete": false,
+  "started_utc": "2026-11-13T19:36:28.912645+00:00",
+  "monitor_id": "drift-5",
+  "compute_wall_s": 7564.5470000000205
+}
