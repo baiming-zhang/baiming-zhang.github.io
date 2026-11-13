@@ -1,0 +1,122 @@
+{
+  "source_commit": "2e6888e90120c7c8c4705818180da043f3e0a192",
+  "source_hashes": {
+    "thin_film/scripts/curved_edge/extend.py": "245e472bb2f7fa1cf3436e38f892c650d14fc3a3297589e8641762bd72f2db36",
+    "thin_film/scripts/curved_edge/README.md": "d5eac6b0fc52c032229e5a550eaa080c8c38c51903466650b5b808e177420b9f",
+    "thin_film/include/vf/thinfilm/CurvedEdge.h": "ba3d9512fe8f25be00f449d32f34aeafee863556ae43973fa0859c5d26b60bdb",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "2946d84eac97c14eeb0cb279fa6fe918e643538a0801a25d5693bb0fbb430bdb",
+    "thin_film/include/vf/thinfilm/MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912",
+    "thin_film/bench/tf_curved_edge_bench.cpp": "c7fe27a57c6d17892023b8cbd1cda3503297706d5a4f356d7c74092bbd4555a6"
+  },
+  "binary_sha256": "fe87b99a463dfcdf479793b60934b6c31ecfcbe54567145f73fc9296762531e7",
+  "cases": [
+    {
+      "name": "control_l40",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.0625,
+      "T_us": 0.5,
+      "radius_um": 500,
+      "amplitude": 0.005,
+      "control": "l40_t0625"
+    },
+    {
+      "name": "control_l20",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.03125,
+      "T_us": 0.5,
+      "radius_um": 500,
+      "amplitude": 0.005,
+      "control": "l20"
+    },
+    {
+      "name": "long_guard",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.5,
+      "T_us": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "control": null
+    },
+    {
+      "name": "long_l40_t05",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.5,
+      "T_us": 20,
+      "radius_um": 500,
+      "amplitude": 0.005,
+      "control": null
+    },
+    {
+      "name": "long_l40_t025",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.25,
+      "T_us": 20,
+      "radius_um": 500,
+      "amplitude": 0.005,
+      "control": null
+    },
+    {
+      "name": "long_l40_t0125",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "radius_um": 500,
+      "amplitude": 0.005,
+      "control": null
+    },
+    {
+      "name": "long_u40",
+      "mode": "uniform",
+      "dx_um": 40,
+      "dt_us": 0.25,
+      "T_us": 20,
+      "radius_um": 500,
+      "amplitude": 0.005,
+      "control": null
+    },
+    {
+      "name": "long_l20",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "radius_um": 500,
+      "amplitude": 0.005,
+      "control": null
+    },
+    {
+      "name": "long_u20",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "radius_um": 500,
+      "amplitude": 0.005,
+      "control": null
+    },
+    {
+      "name": "long_r1000",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.25,
+      "T_us": 20,
+      "radius_um": 1000,
+      "amplitude": 0.005,
+      "control": null
+    }
+  ],
+  "raw_directory": "results/local-runs/curved_edge_longer_20261113",
+  "whole_budget_s": 1800,
+  "per_case_timeout_s": 180,
+  "started_utc": "2026-11-13T09:32:29.322793+00:00",
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  }
+}

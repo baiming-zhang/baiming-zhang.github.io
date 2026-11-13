@@ -1,0 +1,24 @@
+  ok    reverse geometry gradient matches finite differences of inherited surface/capillary/disjoining/gravity energy: 4.53e-10
+  ok    moving area Jacobian matches independent finite differences and global fixed-domain closure
+  ok    reservoir-aware differentiated and inherited energy use the same excluded capillary faces
+  ok    uniform monolayer/thickness has no spurious force on irregular support
+  ok    incremental inertial/viscous objective and actual-geometry gradient agree
+  ok    centered exact-gradient Hessian-vector agrees with objective gradient difference
+  ok    actual energy-driven particle motion converges: displacement 1.600e-05, Newton 3
+  ok    material inventories unchanged and measured moving energy/kinetic/viscous budget closes
+  ok    anchored frame positions and velocities stay fixed
+  ok    actual relative drainage and shared donor momentum transfer preserve uniform translation
+  ok    passive momentum mixing does not inject kinetic energy and accounts for pinned-support impulse
+  ok    pinned-support external impulse exactly accounts for open free-particle momentum
+  ok    unsupported soluble closure is rejected instead of silently dropping chemical energy
+  ok    actual moving/open-drainage liquid, surface amount and independent reservoir-work energy budget close
+  ok    fourfold bath bookkeeping capacity does not change film motion or one-sided hydraulic mobility: 2.22e-16
+  ok    stable uniform-reference surface energy preserves the original physical force
+  ok    repeated infeasible trial stays rejected instead of reading a stale cached energy
+  ok    constitutive counterexample retained: normal-only Cartesian faces miss shear, full gradient recovers analytic shear dissipation
+  ok    full-gradient body viscosity is rigid-rotation/translation invariant away from imposed walls
+  ok    full symmetric-gradient and divergence form reproduces analytic affine dilation
+  ok    Dirichlet velocity samples act at real outer faces instead of clamping a mesh-width fluid band
+  ok    shared face-pyramid correction dissipates alternating cell velocities rather than a centered-gradient null mode
+
+22 passed, 0 failed

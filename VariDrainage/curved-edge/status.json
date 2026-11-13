@@ -1,0 +1,666 @@
+{
+  "state": "completed",
+  "tests": [
+    {
+      "name": "test_curved_edge",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_curved_edge.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.04600000008940697,
+      "log": "results\\logs\\curved_edge_20261113\\test_curved_edge.log",
+      "log_sha256": "15e0ab7c2a973c7be95f01532babbdfd28644e3b3e1ecaf345d6ad3b0e645cff"
+    }
+  ],
+  "cases": [
+    {
+      "name": "guard",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "40",
+        "0.125",
+        "0.25",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\curved_edge_20261113\\data\\guard"
+      ],
+      "returncode": 0,
+      "wall_s": 0.0470000000204891,
+      "log": "results\\logs\\curved_edge_20261113\\guard.log",
+      "log_sha256": "1816c3b8295966e48808994d9b520f84983973e248dec17c82aaea66ac9ef9b6",
+      "parameters": {
+        "name": "guard",
+        "mode": "local",
+        "dx_um": 40,
+        "dt_us": 0.125,
+        "T_us": 0.25,
+        "radius_um": 500,
+        "amplitude": 0
+      },
+      "summary": {
+        "N": 18,
+        "interior": 14,
+        "steps": 2,
+        "requested_steps": 2,
+        "failures": 0,
+        "local": true,
+        "dx_m": 3.9999999999999996e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 2.5e-07,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 1.3105721053371435e-11,
+        "V0_m3": 3.0720000000000004e-13,
+        "S0_mol": 1.844524286477556e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.8947806286936009e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 3.109347270398763e-17,
+        "max_regionS_res": 1.668429686756412e-17,
+        "max_displacement_m": 1.2633428940522728e-09,
+        "wall_s": 0.0372127
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/curved_edge_20261113/data/guard/faces.csv",
+          "bytes": 8589,
+          "sha256": "8be9e8d718bbd159463e4b4925885077daa78875da27be542cd7a56bd58fd1f0"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/guard/history.csv",
+          "bytes": 848,
+          "sha256": "666f3cf96585acf86b781fd0dca15a4ec35e5b337ca1708599bc4f0a4fc4a1ba"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/guard/states.csv",
+          "bytes": 31145,
+          "sha256": "ec9cd995e6d571c38d92982e85795e40252e8269e666c9be2fe3a8f0f6525182"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/guard/summary.json",
+          "bytes": 806,
+          "sha256": "305fc45558c6d7a28c3f4f6998663b03b861d3ea22623b4c745ebf8ebee0a1ea"
+        }
+      ]
+    },
+    {
+      "name": "l40_t125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "40",
+        "0.125",
+        "0.5",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\curved_edge_20261113\\data\\l40_t125"
+      ],
+      "returncode": 0,
+      "wall_s": 0.0779999999795109,
+      "log": "results\\logs\\curved_edge_20261113\\l40_t125.log",
+      "log_sha256": "c38e2cba92375a05eb88b69f4f86d7d990049cf8c4f6b317688f888278240130",
+      "parameters": {
+        "name": "l40_t125",
+        "mode": "local",
+        "dx_um": 40,
+        "dt_us": 0.125,
+        "T_us": 0.5,
+        "radius_um": 500,
+        "amplitude": 0.005
+      },
+      "summary": {
+        "N": 18,
+        "interior": 14,
+        "steps": 4,
+        "requested_steps": 4,
+        "failures": 0,
+        "local": true,
+        "dx_m": 3.9999999999999996e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 5e-07,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 1.3143211603600837e-11,
+        "V0_m3": 3.0720000000000004e-13,
+        "S0_mol": 1.8445030806184438e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 3.7895612573872017e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 5.0022919834136215e-17,
+        "max_regionS_res": 4.035725854218727e-17,
+        "max_displacement_m": 4.670745453147084e-09,
+        "wall_s": 0.0670913
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/curved_edge_20261113/data/l40_t125/faces.csv",
+          "bytes": 17295,
+          "sha256": "8a1c160dd2fb6c44ec27935f1fbe4baf58063942d56e4e6a5864624ca5ff3391"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t125/history.csv",
+          "bytes": 1571,
+          "sha256": "4fb86d9392e52880398d350aecab1ec1ce282df56523537c3c2606c3e7797c92"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t125/states.csv",
+          "bytes": 63237,
+          "sha256": "109c2ba9982daae9e067d8bd5f60cdabbcb0dd1cf7e78da7bc15797ed1c30b5d"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t125/summary.json",
+          "bytes": 826,
+          "sha256": "a2e449759525df23d0aad915dbe461508a0162a6c17b1f42deaec68e39d6d0c6"
+        }
+      ]
+    },
+    {
+      "name": "l40_t0625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "40",
+        "0.0625",
+        "0.5",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\curved_edge_20261113\\data\\l40_t0625"
+      ],
+      "returncode": 0,
+      "wall_s": 0.14000000013038516,
+      "log": "results\\logs\\curved_edge_20261113\\l40_t0625.log",
+      "log_sha256": "258598f7fab235795238e6df12ec3e3cee7aa3130d03f5b9c08be0aaa034a4c4",
+      "parameters": {
+        "name": "l40_t0625",
+        "mode": "local",
+        "dx_um": 40,
+        "dt_us": 0.0625,
+        "T_us": 0.5,
+        "radius_um": 500,
+        "amplitude": 0.005
+      },
+      "summary": {
+        "N": 18,
+        "interior": 14,
+        "steps": 8,
+        "requested_steps": 8,
+        "failures": 0,
+        "local": true,
+        "dx_m": 3.9999999999999996e-05,
+        "dt_s": 6.25e-08,
+        "T_s": 5e-07,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 1.3143211603600837e-11,
+        "V0_m3": 3.0720000000000004e-13,
+        "S0_mol": 1.8445030806184438e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 3.7895612573872017e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.1080437782584609e-16,
+        "max_regionS_res": 4.550386272915615e-17,
+        "max_displacement_m": 4.210051367539204e-09,
+        "wall_s": 0.1173357
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/curved_edge_20261113/data/l40_t0625/faces.csv",
+          "bytes": 34518,
+          "sha256": "7e1f328df9052d48c31584ea86b5f42890fa579e55391b385b78cd5f0922020b"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t0625/history.csv",
+          "bytes": 2917,
+          "sha256": "1c402716c22f706cdc98fb3ff0ee6b0d3b26bb0b49b7fa014716ff86d5cb15d2"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t0625/states.csv",
+          "bytes": 127173,
+          "sha256": "cc883cd7fc428ac1626ea5e2c37b3aabcb04546d23379d3c08e2f0b96d617b29"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t0625/summary.json",
+          "bytes": 815,
+          "sha256": "cb1633ad18a088d2a6adda3f794e00ce7617933cdd02a23d18f30e684efef0ad"
+        }
+      ]
+    },
+    {
+      "name": "l40_t03125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "40",
+        "0.03125",
+        "0.5",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\curved_edge_20261113\\data\\l40_t03125"
+      ],
+      "returncode": 0,
+      "wall_s": 0.18799999984912574,
+      "log": "results\\logs\\curved_edge_20261113\\l40_t03125.log",
+      "log_sha256": "04ed5400e4f49b58217a7766e0aef97fce4ad656f77cbd0369d946af31405d92",
+      "parameters": {
+        "name": "l40_t03125",
+        "mode": "local",
+        "dx_um": 40,
+        "dt_us": 0.03125,
+        "T_us": 0.5,
+        "radius_um": 500,
+        "amplitude": 0.005
+      },
+      "summary": {
+        "N": 18,
+        "interior": 14,
+        "steps": 16,
+        "requested_steps": 16,
+        "failures": 0,
+        "local": true,
+        "dx_m": 3.9999999999999996e-05,
+        "dt_s": 3.125e-08,
+        "T_s": 5e-07,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 1.3143211603600837e-11,
+        "V0_m3": 3.0720000000000004e-13,
+        "S0_mol": 1.8445030806184438e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 5.684341886080803e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 9.224834799393772e-17,
+        "max_regionS_res": 4.53510239828583e-17,
+        "max_displacement_m": 3.978842393226245e-09,
+        "wall_s": 0.1876083
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/curved_edge_20261113/data/l40_t03125/faces.csv",
+          "bytes": 69831,
+          "sha256": "190cf249e8d6e3548399a902688de67f924c79ca80f58b8a67b730142db5f376"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t03125/history.csv",
+          "bytes": 5679,
+          "sha256": "1e9a554c4727941a837689d9d84f23f88664de122eac73019374403cb7a799c3"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t03125/states.csv",
+          "bytes": 255452,
+          "sha256": "d87746ce1edbd3a5ac31c2ba3dab467fcee7d9bcde88b2ed44b4687419796266"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l40_t03125/summary.json",
+          "bytes": 828,
+          "sha256": "3055cfa33bfc1ac2812e39c69fa5433da8785ad90acb703c0bbb95f4b494c385"
+        }
+      ]
+    },
+    {
+      "name": "u40",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "40",
+        "0.0625",
+        "0.5",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\curved_edge_20261113\\data\\u40"
+      ],
+      "returncode": 0,
+      "wall_s": 0.45399999991059303,
+      "log": "results\\logs\\curved_edge_20261113\\u40.log",
+      "log_sha256": "01aa385a1965d0226b03fc6403be24f12edbb81619eeaac8d22e221d5e1bcff7",
+      "parameters": {
+        "name": "u40",
+        "mode": "uniform",
+        "dx_um": 40,
+        "dt_us": 0.0625,
+        "T_us": 0.5,
+        "radius_um": 500,
+        "amplitude": 0.005
+      },
+      "summary": {
+        "N": 36,
+        "interior": 32,
+        "steps": 8,
+        "requested_steps": 8,
+        "failures": 0,
+        "local": false,
+        "dx_m": 3.9999999999999996e-05,
+        "dt_s": 6.25e-08,
+        "T_s": 5e-07,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 1.3210907885560538e-11,
+        "V0_m3": 3.072000000000001e-13,
+        "S0_mol": 1.8445236395938148e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 3.789561257387201e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 3.853462326429876e-17,
+        "max_regionS_res": 3.490382661855561e-17,
+        "max_displacement_m": 4.190269889094648e-09,
+        "wall_s": 0.4441156
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/curved_edge_20261113/data/u40/faces.csv",
+          "bytes": 79038,
+          "sha256": "ea97749b4634409d63b62e9e3fd5f40960978bd807794f7fb0ea33f9ec8815e4"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/u40/history.csv",
+          "bytes": 2855,
+          "sha256": "15682a1a3ae4ce1c4638bb139faacb7a3d4306d66d60f8da76344cb95953c5a5"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/u40/states.csv",
+          "bytes": 257909,
+          "sha256": "4d375429be882faabcf02477cd425bd264302f85e050fc33a839f6904d6513cf"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/u40/summary.json",
+          "bytes": 816,
+          "sha256": "0f4e68a43011c3dbdbc4e56207a275ff1336a5e4072cf008ce052954b76b13e8"
+        }
+      ]
+    },
+    {
+      "name": "l20",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.03125",
+        "0.5",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\curved_edge_20261113\\data\\l20"
+      ],
+      "returncode": 0,
+      "wall_s": 1.7339999999385327,
+      "log": "results\\logs\\curved_edge_20261113\\l20.log",
+      "log_sha256": "384e535e425a48b950b684d701c76f87f174283b5c62af9120844d4a7fe34413",
+      "parameters": {
+        "name": "l20",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.03125,
+        "T_us": 0.5,
+        "radius_um": 500,
+        "amplitude": 0.005
+      },
+      "summary": {
+        "N": 64,
+        "interior": 56,
+        "steps": 16,
+        "requested_steps": 16,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 3.125e-08,
+        "T_s": 5e-07,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.8717757481581163e-11,
+        "V0_m3": 3.072000000000001e-13,
+        "S0_mol": 1.8445188326972445e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 9.473903143468002e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.5643406342909591e-16,
+        "max_regionS_res": 3.997012397865552e-17,
+        "max_displacement_m": 1.859019234803771e-08,
+        "wall_s": 1.7170763
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/curved_edge_20261113/data/l20/faces.csv",
+          "bytes": 307844,
+          "sha256": "ec13c03911a5915272a4f0738c2c7e69fe0bbb99f83257d78d09872795b693f4"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l20/history.csv",
+          "bytes": 5678,
+          "sha256": "9ece63cd6e3f2a839ac776e775df62d628e71580deb23e6d3913be85e117a6e5"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l20/states.csv",
+          "bytes": 917246,
+          "sha256": "283f024cd97caa3865812f9dca075bcb4f912d93efe7ee7627453935cec666ac"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/l20/summary.json",
+          "bytes": 816,
+          "sha256": "bae72b981f66656f310b2cb49ecc6ba7e2ad7226ca594294d2d158effbd84f9e"
+        }
+      ]
+    },
+    {
+      "name": "u20",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "0.03125",
+        "0.5",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\curved_edge_20261113\\data\\u20"
+      ],
+      "returncode": 0,
+      "wall_s": 5.608999999938533,
+      "log": "results\\logs\\curved_edge_20261113\\u20.log",
+      "log_sha256": "af8c69cca2b631d1ba1210a4cbc55359e1a78349921cf872e6e25364904208c5",
+      "parameters": {
+        "name": "u20",
+        "mode": "uniform",
+        "dx_um": 20,
+        "dt_us": 0.03125,
+        "T_us": 0.5,
+        "radius_um": 500,
+        "amplitude": 0.005
+      },
+      "summary": {
+        "N": 136,
+        "interior": 128,
+        "steps": 16,
+        "requested_steps": 16,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 3.125e-08,
+        "T_s": 5e-07,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.8686742473010803e-11,
+        "V0_m3": 3.0719999999999994e-13,
+        "S0_mol": 1.8445241824057553e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 7.579122514774404e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.7295409408989616e-16,
+        "max_regionS_res": 5.696913967845135e-17,
+        "max_displacement_m": 1.895391943962815e-08,
+        "wall_s": 5.5834356
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/curved_edge_20261113/data/u20/faces.csv",
+          "bytes": 708032,
+          "sha256": "b3d09d439c0485bd8d68ec3b99f8c8636b88f7638ca0b76bf8bd916ad38c3a75"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/u20/history.csv",
+          "bytes": 5705,
+          "sha256": "43a78a14f8ee5ff4d90ed5cb2baa4fafe891513f0f0103e82675513121956227"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/u20/states.csv",
+          "bytes": 1971561,
+          "sha256": "bddcc99cf9e4b9dc52eb421ae9b3abc42c48ee8ba71dffffadaa7d5c1a37fe0b"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/u20/summary.json",
+          "bytes": 830,
+          "sha256": "bed51abe09f26384665b1436f9a3de742d8e6c1fd88058413b1b9a87d3ab0e59"
+        }
+      ]
+    },
+    {
+      "name": "r1000",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "40",
+        "0.0625",
+        "0.5",
+        "1000",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\curved_edge_20261113\\data\\r1000"
+      ],
+      "returncode": 0,
+      "wall_s": 0.1559999999590218,
+      "log": "results\\logs\\curved_edge_20261113\\r1000.log",
+      "log_sha256": "258598f7fab235795238e6df12ec3e3cee7aa3130d03f5b9c08be0aaa034a4c4",
+      "parameters": {
+        "name": "r1000",
+        "mode": "local",
+        "dx_um": 40,
+        "dt_us": 0.0625,
+        "T_us": 0.5,
+        "radius_um": 1000,
+        "amplitude": 0.005
+      },
+      "summary": {
+        "N": 18,
+        "interior": 14,
+        "steps": 8,
+        "requested_steps": 8,
+        "failures": 0,
+        "local": true,
+        "dx_m": 3.9999999999999996e-05,
+        "dt_s": 6.25e-08,
+        "T_s": 5e-07,
+        "radius_m": 0.001,
+        "far_height_m": 1.2410272899662039e-05,
+        "bath_pressure_Pa": -38.63979255935503,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.947046293620591e-12,
+        "V0_m3": 3.0720000000000004e-13,
+        "S0_mol": 1.8445030806184438e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 3.7895612573872017e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 3.910753376227631e-17,
+        "max_regionS_res": 3.783459006040325e-17,
+        "max_displacement_m": 2.327651206329976e-09,
+        "wall_s": 0.1308489
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/curved_edge_20261113/data/r1000/faces.csv",
+          "bytes": 34464,
+          "sha256": "6745f5076993fa2755f1e530c8eb31dd39d9d11e64a011a3e906583250912d4a"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/r1000/history.csv",
+          "bytes": 2927,
+          "sha256": "fadce098458cd87ebca5aea3522164544a1c283d80c3337d42f87fb4db628751"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/r1000/states.csv",
+          "bytes": 127275,
+          "sha256": "b9b3fb8f524c79aa83f4181ebac587ef9bd2ccd1b7f160cc12862ff388cbdc91"
+        },
+        {
+          "path": "results/curved_edge_20261113/data/r1000/summary.json",
+          "bytes": 808,
+          "sha256": "a3d85c85fb1e34d65dca75863a7a8bef9e5622c47a8fbad6153466fb6faef738"
+        }
+      ]
+    }
+  ],
+  "wall_s": 8.546999999787658
+}

@@ -1,0 +1,98 @@
+{
+  "source_commit": "9d2b4145bb8a234823029bfaab56fb813356c80d",
+  "source_hashes": {
+    "thin_film/scripts/curved_edge/run.py": "870596ca16453771fedcfb2796a94e92db41f68fff45e38960bcc175f2f5ac81",
+    "thin_film/scripts/curved_edge/README.md": "3e284c117ea70ee279946ecb6f66767f565c15631f136e1c55060d0573f0cf80",
+    "thin_film/include/vf/thinfilm/CurvedEdge.h": "6df093d8407c50f5e62dcca8fb7cb8e53ea7fbd094ec735c8ff8bfe2c7957748",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "ab715af4578d243f9475737f329ac276caea41cb498e41fc2c04a079a48d7a3e",
+    "thin_film/include/vf/thinfilm/MovingVoronoiFilm.h": "c2dcaf2623287ce70a57267014ccd639ec42e88ec5199ca74411aaa9a8e2f08d",
+    "thin_film/include/vf/thinfilm/Units.h": "00c7b29cfcbe5742288a240790a1699216c38d2674e615d6fb919e3a036a8e85",
+    "thin_film/bench/tf_curved_edge_bench.cpp": "c7fe27a57c6d17892023b8cbd1cda3503297706d5a4f356d7c74092bbd4555a6"
+  },
+  "binaries": {
+    "test_curved_edge": "cc6abb81f143bbefccb648b11eadf18296c0d702de9749775c15d9350f193350",
+    "tf_curved_edge_bench": "bb077d9abddf7c3325d1057f9d7476349420c130004dd01b799c4aa3f13a54b7"
+  },
+  "cases": [
+    {
+      "name": "guard",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.125,
+      "T_us": 0.25,
+      "radius_um": 500,
+      "amplitude": 0
+    },
+    {
+      "name": "l40_t125",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.125,
+      "T_us": 0.5,
+      "radius_um": 500,
+      "amplitude": 0.005
+    },
+    {
+      "name": "l40_t0625",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.0625,
+      "T_us": 0.5,
+      "radius_um": 500,
+      "amplitude": 0.005
+    },
+    {
+      "name": "l40_t03125",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.03125,
+      "T_us": 0.5,
+      "radius_um": 500,
+      "amplitude": 0.005
+    },
+    {
+      "name": "u40",
+      "mode": "uniform",
+      "dx_um": 40,
+      "dt_us": 0.0625,
+      "T_us": 0.5,
+      "radius_um": 500,
+      "amplitude": 0.005
+    },
+    {
+      "name": "l20",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.03125,
+      "T_us": 0.5,
+      "radius_um": 500,
+      "amplitude": 0.005
+    },
+    {
+      "name": "u20",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.03125,
+      "T_us": 0.5,
+      "radius_um": 500,
+      "amplitude": 0.005
+    },
+    {
+      "name": "r1000",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.0625,
+      "T_us": 0.5,
+      "radius_um": 1000,
+      "amplitude": 0.005
+    }
+  ],
+  "whole_budget_s": 1800,
+  "per_case_timeout_s": 180,
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded",
+    "DLL_parents": "local xmake packages"
+  },
+  "started_utc": "2026-11-13T09:25:36.986091+00:00"
+}
