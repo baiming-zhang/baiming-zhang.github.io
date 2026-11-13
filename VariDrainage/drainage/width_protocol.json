@@ -1,0 +1,66 @@
+{
+  "source_commit": "277d92f7b093832b0a375a963cf60cccef6be29b",
+  "started_utc": "2026-11-13T05:40:39.985947+00:00",
+  "cases": [
+    {
+      "name": "aligned_l50_25_w300",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 300,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "aligned_l50_25_w450",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 450,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "aligned_l50_25_w600",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 600,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "aligned_l25_12p5_w450",
+      "mode": "local",
+      "coarse_um": 25,
+      "fine_um": 12.5,
+      "width_um": 450,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "u6p25_t0p5",
+      "mode": "uniform",
+      "coarse_um": 6.25,
+      "fine_um": 6.25,
+      "width_um": 450,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    }
+  ],
+  "reason": "Original 240/360 um patches fail full change-field criterion; separate grid alignment and domain extent, and challenge the 12.5 um reference itself",
+  "script_sha256": "7a3a8a7ca50ece49482b80cd153940feca2b347a9e12b91ea4b081460bb08744",
+  "binary_sha256": "acc010d1c9ea13515487d673a846fc1976dfcc8037b9e11a634abd1d77ec3de3",
+  "whole_budget_s": 1500,
+  "per_case_timeout_s": 600,
+  "inherited_gates": {
+    "balance": 1e-10,
+    "geometry": 1e-09,
+    "energy": 1e-10,
+    "initial_integral": 0.0001,
+    "h_L2": 0.02,
+    "change_L2": 0.1,
+    "net_flux": 0.1
+  },
+  "caution": "Do not replace rejected original records or treat projected cell-mean agreement as satisfying full piecewise field error. Uniform 6.25 um attempt may time out; retain that outcome."
+}

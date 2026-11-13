@@ -1,0 +1,83 @@
+{
+  "started_utc": "2026-11-13T05:29:52.651265+00:00",
+  "source_commit": "4f1dd341dc63d724db6558cc6683bd70d47fad06",
+  "script_sha256": "eeccd1a72b01e0ec30668ed525867696f8643e1f9f116dea6f787601bbe609dd",
+  "frozen_compute_commit": "8eace2a769db14461a9c5f2e511ba17abc80d3a1",
+  "completed_preserved": [
+    "guard",
+    "u100_t1",
+    "u25_t0p25",
+    "u25_t0p5",
+    "u25_t1",
+    "u50_t1"
+  ],
+  "remaining": [
+    {
+      "name": "u12p5_t0p5",
+      "mode": "uniform",
+      "coarse_um": 12.5,
+      "fine_um": 12.5,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "u12p5_t0p25",
+      "mode": "uniform",
+      "coarse_um": 12.5,
+      "fine_um": 12.5,
+      "width_um": 240,
+      "dt_s": 0.00025,
+      "T_s": 0.02
+    },
+    {
+      "name": "l100_50_w240",
+      "mode": "local",
+      "coarse_um": 100,
+      "fine_um": 50,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w240",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w240_t0p25",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.00025,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w360",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 360,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l25_12p5_w240",
+      "mode": "local",
+      "coarse_um": 25,
+      "fine_um": 12.5,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    }
+  ],
+  "prior_pause": "status_pause_20261111.json",
+  "same_binaries_and_sources": true,
+  "total_budget_s": 3300,
+  "per_case_timeout_s": 600
+}

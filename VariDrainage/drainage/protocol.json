@@ -1,0 +1,156 @@
+{
+  "source_commit": "8eace2a769db14461a9c5f2e511ba17abc80d3a1",
+  "started_utc": "2026-11-11T12:54:14.776888+00:00",
+  "cases": [
+    {
+      "name": "guard",
+      "mode": "uniform",
+      "coarse_um": 100,
+      "fine_um": 100,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.001
+    },
+    {
+      "name": "u100_t1",
+      "mode": "uniform",
+      "coarse_um": 100,
+      "fine_um": 100,
+      "width_um": 240,
+      "dt_s": 0.001,
+      "T_s": 0.02
+    },
+    {
+      "name": "u50_t1",
+      "mode": "uniform",
+      "coarse_um": 50,
+      "fine_um": 50,
+      "width_um": 240,
+      "dt_s": 0.001,
+      "T_s": 0.02
+    },
+    {
+      "name": "u25_t1",
+      "mode": "uniform",
+      "coarse_um": 25,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.001,
+      "T_s": 0.02
+    },
+    {
+      "name": "u25_t0p5",
+      "mode": "uniform",
+      "coarse_um": 25,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "u25_t0p25",
+      "mode": "uniform",
+      "coarse_um": 25,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.00025,
+      "T_s": 0.02
+    },
+    {
+      "name": "u12p5_t0p5",
+      "mode": "uniform",
+      "coarse_um": 12.5,
+      "fine_um": 12.5,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "u12p5_t0p25",
+      "mode": "uniform",
+      "coarse_um": 12.5,
+      "fine_um": 12.5,
+      "width_um": 240,
+      "dt_s": 0.00025,
+      "T_s": 0.02
+    },
+    {
+      "name": "l100_50_w240",
+      "mode": "local",
+      "coarse_um": 100,
+      "fine_um": 50,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w240",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w240_t0p25",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.00025,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w360",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 360,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l25_12p5_w240",
+      "mode": "local",
+      "coarse_um": 25,
+      "fine_um": 12.5,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    }
+  ],
+  "scope": "closed fixed-support capillary drainage plus passive dissolved tracer; no moving meniscus, chemistry feedback or mechanics",
+  "source_hashes": {
+    "thin_film\\scripts\\voronoi_drainage\\run.py": "a951eb828974310312e413d3366fd9be4814a682d54c08161e8b2628670268ec",
+    "thin_film\\scripts\\voronoi_drainage\\README.md": "39fcb1a3cd1aa1d70df6169776198ed242e0fab0e2af3c35a5881bbb733bb03e",
+    "thin_film\\bench\\tf_voronoi_bench.cpp": "edc5fb16500ffbf7ba0e4aea24e7a508211b64c2ef83f5957db30717aafc3eff",
+    "thin_film\\include\\vf\\thinfilm\\VoronoiDrainage.h": "114ed2ef436287d431c9b872cc28e58d30a22530908db8ff9954f2da314e814f",
+    "thin_film\\include\\vf\\thinfilm\\OverlapTransfer.h": "8a86feacdc31520a7dc574a55517d7c1af7069ef6e3ec00705b6f6fc3b1148d0",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilm.h": "28db3d0cd8d8faa0d4722929e4f502708b2a915f5801dc351db2e100ea2a3a35",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilmMechanics.h": "47ceaf46675de2f2bcf9dfb81376bb688b5fae2e1ca6cd591345af3027237f1f",
+    "thin_film\\include\\vf\\thinfilm\\Units.h": "00c7b29cfcbe5742288a240790a1699216c38d2674e615d6fb919e3a036a8e85",
+    "thin_film\\include\\vf\\thinfilm\\Solution.h": "1688ff48927574c1ca03ab1f524d9f0e42e1bade69904798d40316f7bf34e9a0"
+  },
+  "binary_hashes": {
+    "tf_voronoi_bench": "781b82458c3deca075c8471db2d3562a450be95afa1a9638bca71ac25775cc82",
+    "test_voronoi_drainage": "fb481e83426e4df6ce03fe4a4c9b057bfd6013dbbb1f6044223d76e2777b8843",
+    "test_overlap_transfer": "d3bfa6aa628e5cd612f9735b183dbda8e8f4752380668b82d6f6883478145cb3",
+    "test_thinfilm": "d280e30e3c98bd8e1a7bc213f9a51fccb6a9ea219a0139442c157337292bce7b"
+  },
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded in child only"
+  },
+  "whole_budget_s": 3300,
+  "per_case_timeout_s": 600,
+  "gates": {
+    "balances": 1e-10,
+    "geometry": 1e-09,
+    "energy": 1e-10,
+    "initial_analytic_error": 0.0001,
+    "accuracy_h": 0.02,
+    "accuracy_change": 0.1,
+    "accuracy_net_flux": 0.1
+  }
+}

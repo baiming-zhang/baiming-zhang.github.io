@@ -1,0 +1,83 @@
+{
+  "source_commit": "a7ba8ac81fbd1b24dd4c8236ad446af991df3828",
+  "started_utc": "2026-11-13T05:35:37.378431+00:00",
+  "scope": "machine-precision consecutive duplicate cleanup only, unchanged physical parameters and frozen accuracy gates",
+  "old_status": "status_original_geometry.json",
+  "controls": [
+    {
+      "name": "u25_t0p5",
+      "mode": "uniform",
+      "coarse_um": 25,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "u12p5_t0p5",
+      "mode": "uniform",
+      "coarse_um": 12.5,
+      "fine_um": 12.5,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    }
+  ],
+  "remaining": [
+    {
+      "name": "l100_50_w240",
+      "mode": "local",
+      "coarse_um": 100,
+      "fine_um": 50,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w240",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w240_t0p25",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 240,
+      "dt_s": 0.00025,
+      "T_s": 0.02
+    },
+    {
+      "name": "l50_25_w360",
+      "mode": "local",
+      "coarse_um": 50,
+      "fine_um": 25,
+      "width_um": 360,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    },
+    {
+      "name": "l25_12p5_w240",
+      "mode": "local",
+      "coarse_um": 25,
+      "fine_um": 12.5,
+      "width_um": 240,
+      "dt_s": 0.0005,
+      "T_s": 0.02
+    }
+  ],
+  "whole_budget_s": 3300,
+  "per_case_timeout_s": 600,
+  "script_sha256": "858cedcaa2aa5828541ca226e04de351de75a8aaf1e1faa2de3b54cdf1bc1a5d",
+  "header_sha256": "50ff397235e0ca40fb0a68bf9c36a001d4e382bf0150b272cfd6f16bfb7c6415",
+  "binary_sha256": "acc010d1c9ea13515487d673a846fc1976dfcc8037b9e11a634abd1d77ec3de3",
+  "test_binary_sha256": "b31cec6ef8b10f0792c8480dbe1065a95d2042d8f322be48eaf73010f91b1899",
+  "control_gates": {
+    "h_and_B_relative": 1e-10,
+    "area_and_face_length": 1e-12
+  }
+}

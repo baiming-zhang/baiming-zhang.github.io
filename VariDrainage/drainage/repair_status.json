@@ -1,0 +1,770 @@
+{
+  "state": "completed",
+  "cases": [
+    {
+      "name": "u25_t0p5",
+      "command": [
+        "<project>\\build\\windows\\x64\\release\\tf_voronoi_bench.exe",
+        "uniform",
+        "25",
+        "25",
+        "240",
+        "0.0005",
+        "0.02",
+        "<project>\\results\\local-runs\\voronoi_drainage_20261111\\control_u25_t0p5"
+      ],
+      "returncode": 0,
+      "wall_s": 1.625,
+      "log": "results\\logs\\voronoi_drainage_20261111\\control_u25_t0p5.log",
+      "log_sha256": "2701a5fcd7f7ee4e48172e0ce86c6d65302c63acbb6773f50e83f75ed81f3b55",
+      "parameters": {
+        "name": "u25_t0p5",
+        "mode": "uniform",
+        "coarse_um": 25,
+        "fine_um": 25,
+        "width_um": 240,
+        "dt_s": 0.0005,
+        "T_s": 0.02
+      },
+      "output_tag": "control_u25_t0p5",
+      "control": true,
+      "passed": true,
+      "summary": {
+        "N": 1536,
+        "pairs": 2992,
+        "steps_requested": 40,
+        "steps": 40,
+        "requested_T_s": 0.02,
+        "T_s": 0.02,
+        "dt_s": 0.0005,
+        "local": false,
+        "coarse_um": 24.999999999999996,
+        "fine_um": 24.999999999999996,
+        "width_um": 239.99999999999997,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "bulk_scale_mM": 19.4,
+        "S0_per_face_mol": 3.4584830371454386e-12,
+        "V0_m3": 5.5813366532057605e-12,
+        "B0_mol": 1.0827793107220202e-10,
+        "E0_J": 7.015302739983147e-13,
+        "Efinal_J": 2.5063218605896096e-13,
+        "total_half_action_J": 2.185172855392964e-13,
+        "max_V_balance": 2.669819457188424e-15,
+        "max_B_balance": 2.585742507465186e-15,
+        "max_Q_balance": 2.4304796126318878e-15,
+        "max_edge_V_ledger": 2.8932278114245896e-16,
+        "max_edge_B_ledger": 3.807132898611602e-16,
+        "max_node_V": 3.259056954575713e-19,
+        "max_node_B": 3.884829488379186e-19,
+        "max_energy_inequality": 0,
+        "max_pressure_flux": 6.20859897865095e-19,
+        "min_h_m": 3.3356526098954528e-06,
+        "min_c_mM": 15.528992350403392,
+        "net_interface_V_m3": 5.525984661031786e-15,
+        "net_interface_B_mol": 1.0720410201301643e-13,
+        "forward_gross_V_m3": 5.5259846610317944e-15,
+        "reverse_gross_V_m3": 0,
+        "forward_face_steps": 1280,
+        "reverse_face_steps": 0,
+        "Newton_failures": 0,
+        "cg_iterations": 80,
+        "area_closure": 2.220446049250313e-16,
+        "normal_closure": 7.105427357601007e-16,
+        "orthogonality_error": 2.8421709430404013e-15,
+        "wall_s": 1.5997423
+      },
+      "initial_analytic_V_error": 3.808064974464287e-14,
+      "initial_analytic_B_error": 5.684341886080802e-14,
+      "control_difference": {
+        "h_m": 1.2584227185782073e-16,
+        "B_mol": 8.076264191733533e-16,
+        "area_m2": 7.396119550134851e-17,
+        "face_length": 1.4907779871675601e-15
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u25_t0p5\\cells.csv",
+          "bytes": 418706,
+          "sha256": "66259a934fb4e1934da42b92bf1c46a65d6a0853a1f1c7d45eacdc982f81e905"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u25_t0p5\\faces.csv",
+          "bytes": 331401,
+          "sha256": "f9c6d6504589fb6b2d715cbd4ea4f843781156209a808f108aa2739239df49a5"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u25_t0p5\\history.csv",
+          "bytes": 17590,
+          "sha256": "138dbc3464ae75a5a2ab8de760e80103a1f62a739b79fc105dcb6f96abf463ff"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u25_t0p5\\polygons.csv",
+          "bytes": 310490,
+          "sha256": "6a7946d961c2579b6f5a2da1c960a4f3ce93bc749f39b4346fcff5d358ea5286"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u25_t0p5\\summary.json",
+          "bytes": 1406,
+          "sha256": "9914520884e330196d47545094d52e3435e4472144b1a0c1c792ad5eac47cde8"
+        }
+      ]
+    },
+    {
+      "name": "u12p5_t0p5",
+      "command": [
+        "<project>\\build\\windows\\x64\\release\\tf_voronoi_bench.exe",
+        "uniform",
+        "12.5",
+        "12.5",
+        "240",
+        "0.0005",
+        "0.02",
+        "<project>\\results\\local-runs\\voronoi_drainage_20261111\\control_u12p5_t0p5"
+      ],
+      "returncode": 0,
+      "wall_s": 23.82799999997951,
+      "log": "results\\logs\\voronoi_drainage_20261111\\control_u12p5_t0p5.log",
+      "log_sha256": "676e4d0da93637111a04b73a9d352ccace4c032374dd5abb7ec8f1ecd3932350",
+      "parameters": {
+        "name": "u12p5_t0p5",
+        "mode": "uniform",
+        "coarse_um": 12.5,
+        "fine_um": 12.5,
+        "width_um": 240,
+        "dt_s": 0.0005,
+        "T_s": 0.02
+      },
+      "output_tag": "control_u12p5_t0p5",
+      "control": true,
+      "passed": true,
+      "summary": {
+        "N": 6144,
+        "pairs": 12128,
+        "steps_requested": 40,
+        "steps": 40,
+        "requested_T_s": 0.02,
+        "T_s": 0.02,
+        "dt_s": 0.0005,
+        "local": false,
+        "coarse_um": 12.499999999999998,
+        "fine_um": 12.499999999999998,
+        "width_um": 239.99999999999997,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "bulk_scale_mM": 19.4,
+        "S0_per_face_mol": 3.4584830371457714e-12,
+        "V0_m3": 5.5813366532059624e-12,
+        "B0_mol": 1.0827793107219585e-10,
+        "E0_J": 7.448526784116001e-13,
+        "Efinal_J": 2.5201124349906344e-13,
+        "total_half_action_J": 2.3760526027652885e-13,
+        "max_V_balance": 5.673366346525196e-15,
+        "max_B_balance": 4.176968665905539e-15,
+        "max_Q_balance": 3.926159374251699e-15,
+        "max_edge_V_ledger": 5.830860273855062e-16,
+        "max_edge_B_ledger": 4.0751861333099985e-16,
+        "max_node_V": 8.147642386438988e-20,
+        "max_node_B": 1.214009215118565e-19,
+        "max_energy_inequality": 0,
+        "max_pressure_flux": 3.5987625204081354e-18,
+        "min_h_m": 3.324388743358832e-06,
+        "min_c_mM": 15.522250059817138,
+        "net_interface_V_m3": -1.4847697950936136e-15,
+        "net_interface_B_mol": -2.8804534030123965e-14,
+        "forward_gross_V_m3": 0,
+        "reverse_gross_V_m3": 1.4847697950936146e-15,
+        "forward_face_steps": 0,
+        "reverse_face_steps": 2560,
+        "Newton_failures": 0,
+        "cg_iterations": 110,
+        "area_closure": 2.220446049250313e-16,
+        "normal_closure": 1.7763568394002524e-15,
+        "orthogonality_error": 1.1368683772161474e-14,
+        "wall_s": 23.819663
+      },
+      "initial_analytic_V_error": 1.887379141862766e-15,
+      "initial_analytic_B_error": 2.220446049250313e-16,
+      "control_difference": {
+        "h_m": 1.3614629952244572e-16,
+        "B_mol": 9.405000587089352e-16,
+        "area_m2": 1.5156652890147796e-16,
+        "face_length": 5.6920614055488336e-15
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u12p5_t0p5\\cells.csv",
+          "bytes": 1638996,
+          "sha256": "bffbb2d93f742cdfbdd14cd0d8f7381454494a6fd77ba093279510d34f57bef9"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u12p5_t0p5\\faces.csv",
+          "bytes": 1364621,
+          "sha256": "84cce5f626503374dfc2cbf9581c712119431a10342f19d119bdebaa6c14a3ec"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u12p5_t0p5\\history.csv",
+          "bytes": 17665,
+          "sha256": "08691371e431a154d159114ef4f20bd89e88bd7d373bb975ff02069730949f35"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u12p5_t0p5\\polygons.csv",
+          "bytes": 1266307,
+          "sha256": "55a0acefd7ddad9bebe8cc4a2fcb3fd64882d422431caf87b520da02d4bd9877"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\control_u12p5_t0p5\\summary.json",
+          "bytes": 1421,
+          "sha256": "31866a3ae99785b2764c5b0c12bf81ccdfc8dda606ce012b6e2f8c48ad738afe"
+        }
+      ]
+    },
+    {
+      "name": "l100_50_w240",
+      "command": [
+        "<project>\\build\\windows\\x64\\release\\tf_voronoi_bench.exe",
+        "local",
+        "100",
+        "50",
+        "240",
+        "0.0005",
+        "0.02",
+        "<project>\\results\\local-runs\\voronoi_drainage_20261111\\repaired_l100_50_w240"
+      ],
+      "returncode": 0,
+      "wall_s": 0.09399999980814755,
+      "log": "results\\logs\\voronoi_drainage_20261111\\repaired_l100_50_w240.log",
+      "log_sha256": "994ab26bdde42a9339f4dc1502026abef68df4f5cfd3ee79ccde14ed4434f8cd",
+      "parameters": {
+        "name": "l100_50_w240",
+        "mode": "local",
+        "coarse_um": 100,
+        "fine_um": 50,
+        "width_um": 240,
+        "dt_s": 0.0005,
+        "T_s": 0.02
+      },
+      "output_tag": "repaired_l100_50_w240",
+      "control": false,
+      "passed": true,
+      "summary": {
+        "N": 160,
+        "pairs": 297,
+        "steps_requested": 40,
+        "steps": 40,
+        "requested_T_s": 0.02,
+        "T_s": 0.02,
+        "dt_s": 0.0005,
+        "local": true,
+        "coarse_um": 99.99999999999999,
+        "fine_um": 49.99999999999999,
+        "width_um": 239.99999999999997,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "bulk_scale_mM": 19.4,
+        "S0_per_face_mol": 3.4584830371454244e-12,
+        "V0_m3": 5.58133968479734e-12,
+        "B0_mol": 1.0827798613215523e-10,
+        "E0_J": 4.85245603529659e-13,
+        "Efinal_J": 2.2344501037776512e-13,
+        "total_half_action_J": 1.2836859155752697e-13,
+        "max_V_balance": 1.6686362543965022e-15,
+        "max_B_balance": 1.1934190119696269e-15,
+        "max_Q_balance": 1.1217592850450154e-15,
+        "max_edge_V_ledger": 1.2482181356130087e-16,
+        "max_edge_B_ledger": 1.3422079057145382e-16,
+        "max_node_V": 2.607244147494535e-18,
+        "max_node_B": 4.661793015506355e-18,
+        "max_energy_inequality": 0,
+        "max_pressure_flux": 1.2372633817608647e-19,
+        "min_h_m": 3.61330180340185e-06,
+        "min_c_mM": 15.555085418133768,
+        "net_interface_V_m3": 7.661392783576341e-15,
+        "net_interface_B_mol": 1.4863060254474965e-13,
+        "forward_gross_V_m3": 7.661392783576338e-15,
+        "reverse_gross_V_m3": 0,
+        "forward_face_steps": 640,
+        "reverse_face_steps": 0,
+        "Newton_failures": 0,
+        "cg_iterations": 80,
+        "area_closure": 2.220446049250313e-16,
+        "normal_closure": 7.563447549011214e-16,
+        "orthogonality_error": 2.4659221127429246e-15,
+        "wall_s": 0.0788126
+      },
+      "initial_analytic_V_error": 5.431658320897981e-07,
+      "initial_analytic_B_error": 5.085058314424629e-07,
+      "files": [
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l100_50_w240\\cells.csv",
+          "bytes": 43668,
+          "sha256": "55d232a029761539527e4dc296f466121db2ff1c8cdd7d398b9374362645f243"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l100_50_w240\\faces.csv",
+          "bytes": 31132,
+          "sha256": "5d749a4dd2bb49e6f3a7c51e0c3a5aceffde9aa04a3f57ce9ec935b817bd2ccc"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l100_50_w240\\history.csv",
+          "bytes": 17464,
+          "sha256": "505ef676524fe8a6aa324e7725898da736dd02c56e0e65c64e0d7e5de3515d45"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l100_50_w240\\polygons.csv",
+          "bytes": 30008,
+          "sha256": "83ab5a81a14beb5fa1320e5eef75686f77ca50c72e1fd411e37775cb826b529e"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l100_50_w240\\summary.json",
+          "bytes": 1410,
+          "sha256": "85778d8052eafd109041959ed238c859e389ff13a7bf5f72779e337acc0dbf41"
+        }
+      ]
+    },
+    {
+      "name": "l50_25_w240",
+      "command": [
+        "<project>\\build\\windows\\x64\\release\\tf_voronoi_bench.exe",
+        "local",
+        "50",
+        "25",
+        "240",
+        "0.0005",
+        "0.02",
+        "<project>\\results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240"
+      ],
+      "returncode": 0,
+      "wall_s": 0.4220000000204891,
+      "log": "results\\logs\\voronoi_drainage_20261111\\repaired_l50_25_w240.log",
+      "log_sha256": "54454b471e7e1b4d7f4a46b47ba01e7e2d3afb8297be14e3189e8a50ed0de0aa",
+      "parameters": {
+        "name": "l50_25_w240",
+        "mode": "local",
+        "coarse_um": 50,
+        "fine_um": 25,
+        "width_um": 240,
+        "dt_s": 0.0005,
+        "T_s": 0.02
+      },
+      "output_tag": "repaired_l50_25_w240",
+      "control": false,
+      "passed": true,
+      "summary": {
+        "N": 624,
+        "pairs": 1203,
+        "steps_requested": 40,
+        "steps": 40,
+        "requested_T_s": 0.02,
+        "T_s": 0.02,
+        "dt_s": 0.0005,
+        "local": true,
+        "coarse_um": 49.99999999999999,
+        "fine_um": 24.999999999999996,
+        "width_um": 239.99999999999997,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "bulk_scale_mM": 19.4,
+        "S0_per_face_mol": 3.458483037145373e-12,
+        "V0_m3": 5.581336698615918e-12,
+        "B0_mol": 1.082779320738057e-10,
+        "E0_J": 6.446082452012397e-13,
+        "Efinal_J": 2.4979415127598896e-13,
+        "total_half_action_J": 1.9158331618953e-13,
+        "max_V_balance": 2.0023645765999358e-15,
+        "max_B_balance": 2.7846457515113833e-15,
+        "max_Q_balance": 2.6174395600760693e-15,
+        "max_edge_V_ledger": 2.9624827476063504e-16,
+        "max_edge_B_ledger": 2.44550014031308e-16,
+        "max_node_V": 6.518113856119583e-19,
+        "max_node_B": 1.165448835733001e-18,
+        "max_energy_inequality": 0,
+        "max_pressure_flux": 5.870439945123326e-19,
+        "min_h_m": 3.3953380739939773e-06,
+        "min_c_mM": 15.528782181449502,
+        "net_interface_V_m3": 4.571078552388585e-15,
+        "net_interface_B_mol": 8.86789210252817e-14,
+        "forward_gross_V_m3": 4.57107855238859e-15,
+        "reverse_gross_V_m3": 0,
+        "forward_face_steps": 1280,
+        "reverse_face_steps": 0,
+        "Newton_failures": 0,
+        "cg_iterations": 80,
+        "area_closure": 1.887379141862766e-15,
+        "normal_closure": 1.2744301304927253e-15,
+        "orthogonality_error": 5.921189464667558e-15,
+        "wall_s": 0.3986933
+      },
+      "initial_analytic_V_error": 8.13603406868424e-09,
+      "initial_analytic_B_error": 9.250359811474596e-09,
+      "files": [
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240\\cells.csv",
+          "bytes": 169696,
+          "sha256": "7dc3936dbb190ebb70fd577ea4ae7257a3d675481f40074532b7e7fac7303579"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240\\faces.csv",
+          "bytes": 131811,
+          "sha256": "9d30d08549bacf0f1691df3643077b4dc3d3560270f342f96e8d96ec6b79be7b"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240\\history.csv",
+          "bytes": 17468,
+          "sha256": "ad985026def5e51f5cb8cc20fafd6abffefb90f43d912a4da0c26fde2957168b"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240\\polygons.csv",
+          "bytes": 123799,
+          "sha256": "3607577f1ec096b8da461214f94c9846b1c17959bfc0665a8eb5f2d25ff1eddf"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240\\summary.json",
+          "bytes": 1415,
+          "sha256": "cf490e46636d2809e0cbb8f8f77fefcd1bae05ac56ec96ffdcbefac0df87c454"
+        }
+      ]
+    },
+    {
+      "name": "l50_25_w240_t0p25",
+      "command": [
+        "<project>\\build\\windows\\x64\\release\\tf_voronoi_bench.exe",
+        "local",
+        "50",
+        "25",
+        "240",
+        "0.00025",
+        "0.02",
+        "<project>\\results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240_t0p25"
+      ],
+      "returncode": 0,
+      "wall_s": 0.7340000001713634,
+      "log": "results\\logs\\voronoi_drainage_20261111\\repaired_l50_25_w240_t0p25.log",
+      "log_sha256": "c4a585e37c3529a7a8fdedecd0c1f055dc7de0b5a676ee69a2f9a701524ca4f0",
+      "parameters": {
+        "name": "l50_25_w240_t0p25",
+        "mode": "local",
+        "coarse_um": 50,
+        "fine_um": 25,
+        "width_um": 240,
+        "dt_s": 0.00025,
+        "T_s": 0.02
+      },
+      "output_tag": "repaired_l50_25_w240_t0p25",
+      "control": false,
+      "passed": true,
+      "summary": {
+        "N": 624,
+        "pairs": 1203,
+        "steps_requested": 80,
+        "steps": 80,
+        "requested_T_s": 0.02,
+        "T_s": 0.02,
+        "dt_s": 0.00025,
+        "local": true,
+        "coarse_um": 49.99999999999999,
+        "fine_um": 24.999999999999996,
+        "width_um": 239.99999999999997,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "bulk_scale_mM": 19.4,
+        "S0_per_face_mol": 3.458483037145373e-12,
+        "V0_m3": 5.581336698615918e-12,
+        "B0_mol": 1.082779320738057e-10,
+        "E0_J": 6.446082452012397e-13,
+        "Efinal_J": 2.4940001814151065e-13,
+        "total_half_action_J": 1.9457446141545196e-13,
+        "max_V_balance": 2.1692282913165973e-15,
+        "max_B_balance": 2.5857424835462844e-15,
+        "max_Q_balance": 2.4304795914992074e-15,
+        "max_edge_V_ledger": 2.3082270692983473e-16,
+        "max_edge_B_ledger": 2.862148099087628e-16,
+        "max_node_V": 6.518113856119583e-19,
+        "max_node_B": 1.5539317809773344e-18,
+        "max_energy_inequality": 0,
+        "max_pressure_flux": 3.1309543486121285e-19,
+        "min_h_m": 3.3744624417740857e-06,
+        "min_c_mM": 15.52878158771764,
+        "net_interface_V_m3": 4.576923310050467e-15,
+        "net_interface_B_mol": 8.879230931841436e-14,
+        "forward_gross_V_m3": 4.576923310050445e-15,
+        "reverse_gross_V_m3": 0,
+        "forward_face_steps": 2560,
+        "reverse_face_steps": 0,
+        "Newton_failures": 0,
+        "cg_iterations": 160,
+        "area_closure": 1.887379141862766e-15,
+        "normal_closure": 1.2744301304927253e-15,
+        "orthogonality_error": 5.921189464667558e-15,
+        "wall_s": 0.7216776
+      },
+      "initial_analytic_V_error": 8.13603406868424e-09,
+      "initial_analytic_B_error": 9.250359811474596e-09,
+      "files": [
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240_t0p25\\cells.csv",
+          "bytes": 169750,
+          "sha256": "dec35befb647c9f205977ec79f53cadc51a50ce791dfb39f361b25e74e786e96"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240_t0p25\\faces.csv",
+          "bytes": 131774,
+          "sha256": "5be6e1d70f6f7903ec1fd2bccafa1ac2ca8ced5fa894c10d610e5e33959dfb4f"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240_t0p25\\history.csv",
+          "bytes": 34840,
+          "sha256": "bfc3d7a20e995c4a06126b1ac56f71085a28f8624f0cc315b3e4077d510511b2"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240_t0p25\\polygons.csv",
+          "bytes": 123799,
+          "sha256": "3607577f1ec096b8da461214f94c9846b1c17959bfc0665a8eb5f2d25ff1eddf"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w240_t0p25\\summary.json",
+          "bytes": 1414,
+          "sha256": "bda9cb1f540a76aa221d05bb32f88da2f302c6bc301e59c24f0f128c14efeef8"
+        }
+      ]
+    },
+    {
+      "name": "l50_25_w360",
+      "command": [
+        "<project>\\build\\windows\\x64\\release\\tf_voronoi_bench.exe",
+        "local",
+        "50",
+        "25",
+        "360",
+        "0.0005",
+        "0.02",
+        "<project>\\results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w360"
+      ],
+      "returncode": 0,
+      "wall_s": 0.5160000000614673,
+      "log": "results\\logs\\voronoi_drainage_20261111\\repaired_l50_25_w360.log",
+      "log_sha256": "7890795f24eada1298f68e992cf66364be6256b5277fb5b8f7c6247369c8d65a",
+      "parameters": {
+        "name": "l50_25_w360",
+        "mode": "local",
+        "coarse_um": 50,
+        "fine_um": 25,
+        "width_um": 360,
+        "dt_s": 0.0005,
+        "T_s": 0.02
+      },
+      "output_tag": "repaired_l50_25_w360",
+      "control": false,
+      "passed": true,
+      "summary": {
+        "N": 720,
+        "pairs": 1393,
+        "steps_requested": 40,
+        "steps": 40,
+        "requested_T_s": 0.02,
+        "T_s": 0.02,
+        "dt_s": 0.0005,
+        "local": true,
+        "coarse_um": 49.99999999999999,
+        "fine_um": 24.999999999999996,
+        "width_um": 359.99999999999994,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "bulk_scale_mM": 19.4,
+        "S0_per_face_mol": 3.458483037145437e-12,
+        "V0_m3": 5.581336650531214e-12,
+        "B0_mol": 1.0827793101886185e-10,
+        "E0_J": 6.996952812524157e-13,
+        "Efinal_J": 2.504379823284501e-13,
+        "total_half_action_J": 2.1794244099549237e-13,
+        "max_V_balance": 2.0023645938508403e-15,
+        "max_B_balance": 2.386839238835983e-15,
+        "max_Q_balance": 2.2435196434682805e-15,
+        "max_edge_V_ledger": 7.544716853458163e-16,
+        "max_edge_B_ledger": 6.025370539444351e-16,
+        "max_node_V": 6.518113912274871e-19,
+        "max_node_B": 1.5539317961171765e-18,
+        "max_energy_inequality": 0,
+        "max_pressure_flux": 6.817533802608482e-19,
+        "min_h_m": 3.3497095443341187e-06,
+        "min_c_mM": 15.52915918215159,
+        "net_interface_V_m3": -3.224521908377746e-15,
+        "net_interface_B_mol": -6.255572560513372e-14,
+        "forward_gross_V_m3": 8.83768026954207e-16,
+        "reverse_gross_V_m3": 4.108289935331957e-15,
+        "forward_face_steps": 604,
+        "reverse_face_steps": 676,
+        "Newton_failures": 0,
+        "cg_iterations": 80,
+        "area_closure": 1.0436096431476471e-14,
+        "normal_closure": 1.1215801245525446e-15,
+        "orthogonality_error": 5.5264435003563696e-15,
+        "wall_s": 0.5190282
+      },
+      "initial_analytic_V_error": 4.792326535607572e-10,
+      "initial_analytic_B_error": 4.925659879972955e-10,
+      "files": [
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w360\\cells.csv",
+          "bytes": 196770,
+          "sha256": "e0a1c549871e446c12fa3fb904525be30f8c27c1d60614471474bc1e6e8ab047"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w360\\faces.csv",
+          "bytes": 154089,
+          "sha256": "747b27e9fef90b86708cfe904a4efc05dfc6b0cd4eee424992be6ba7e70c1e20"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w360\\history.csv",
+          "bytes": 17597,
+          "sha256": "e2a7975d1ecf800478ca7ed39dfa33918241a2a4637588ea2906b0e0a8f1bbd5"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w360\\polygons.csv",
+          "bytes": 147189,
+          "sha256": "c7677e2b1de4e80b489640e43fcd1f05d12ca7f67323a2cd24ca5c225e16bbc8"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l50_25_w360\\summary.json",
+          "bytes": 1436,
+          "sha256": "c303fe6eb7624ca51792c60efa0e760b16681ef9aeadf41657af3f27a3dc7086"
+        }
+      ]
+    },
+    {
+      "name": "l25_12p5_w240",
+      "command": [
+        "<project>\\build\\windows\\x64\\release\\tf_voronoi_bench.exe",
+        "local",
+        "25",
+        "12.5",
+        "240",
+        "0.0005",
+        "0.02",
+        "<project>\\results\\local-runs\\voronoi_drainage_20261111\\repaired_l25_12p5_w240"
+      ],
+      "returncode": 0,
+      "wall_s": 3.125,
+      "log": "results\\logs\\voronoi_drainage_20261111\\repaired_l25_12p5_w240.log",
+      "log_sha256": "3876e3d1f1df0f89f082f51ce1e9545a057be2719fb6046a87ec6a566429aca9",
+      "parameters": {
+        "name": "l25_12p5_w240",
+        "mode": "local",
+        "coarse_um": 25,
+        "fine_um": 12.5,
+        "width_um": 240,
+        "dt_s": 0.0005,
+        "T_s": 0.02
+      },
+      "output_tag": "repaired_l25_12p5_w240",
+      "control": false,
+      "passed": true,
+      "summary": {
+        "N": 2432,
+        "pairs": 4775,
+        "steps_requested": 40,
+        "steps": 40,
+        "requested_T_s": 0.02,
+        "T_s": 0.02,
+        "dt_s": 0.0005,
+        "local": true,
+        "coarse_um": 24.999999999999996,
+        "fine_um": 12.499999999999998,
+        "width_um": 239.99999999999997,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "bulk_scale_mM": 19.4,
+        "S0_per_face_mol": 3.4584830371454943e-12,
+        "V0_m3": 5.581336656623549e-12,
+        "B0_mol": 1.0827793113779291e-10,
+        "E0_J": 7.215087110230107e-13,
+        "Efinal_J": 2.515137122166088e-13,
+        "total_half_action_J": 2.269972458797297e-13,
+        "max_V_balance": 5.506502627079162e-15,
+        "max_B_balance": 4.972581742113147e-15,
+        "max_Q_balance": 4.673999252399988e-15,
+        "max_edge_V_ledger": 3.9210528960728087e-16,
+        "max_edge_B_ledger": 4.501060563246753e-16,
+        "max_node_V": 1.6295284762899983e-19,
+        "max_node_B": 3.8848294860258957e-19,
+        "max_energy_inequality": 0,
+        "max_pressure_flux": 3.2414971925100635e-18,
+        "min_h_m": 3.3358039505067735e-06,
+        "min_c_mM": 15.522265349332159,
+        "net_interface_V_m3": 2.2064972354624563e-15,
+        "net_interface_B_mol": 4.280604624060201e-14,
+        "forward_gross_V_m3": 2.2064972354624574e-15,
+        "reverse_gross_V_m3": 0,
+        "forward_face_steps": 2560,
+        "reverse_face_steps": 0,
+        "Newton_failures": 0,
+        "cg_iterations": 89,
+        "area_closure": 4.529709940470639e-14,
+        "normal_closure": 2.48928225708319e-15,
+        "orthogonality_error": 1.1329992495528335e-14,
+        "wall_s": 3.1230988
+      },
+      "initial_analytic_V_error": 6.123221929499323e-10,
+      "initial_analytic_B_error": 6.058209489623323e-10,
+      "files": [
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l25_12p5_w240\\cells.csv",
+          "bytes": 665698,
+          "sha256": "be97a708f50d0aed232143eae8cc18872a5acd86faffee24e98839b7f30ecf12"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l25_12p5_w240\\faces.csv",
+          "bytes": 535642,
+          "sha256": "7ce74073f2711c989c4edc4c81520c43543142c9a41da1c2406fa8e78e326b39"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l25_12p5_w240\\history.csv",
+          "bytes": 17544,
+          "sha256": "6cc668814091a9927a3da28ef78e34a7f9d470e50a33e5d3ce46fdcdfe44dcaf"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l25_12p5_w240\\polygons.csv",
+          "bytes": 504034,
+          "sha256": "585063566dfbbbcffac9b1bb3cd2cd2d5639f8cfe4436cbc225d1c09421f5671"
+        },
+        {
+          "path": "results\\local-runs\\voronoi_drainage_20261111\\repaired_l25_12p5_w240\\summary.json",
+          "bytes": 1413,
+          "sha256": "a143aee01ce7ad229685fd0c9a7376828d3e110a639c91e8ea42323dc20767df"
+        }
+      ]
+    }
+  ],
+  "test": {
+    "name": "repair_test_voronoi_drainage",
+    "command": [
+      "<project>\\build\\windows\\x64\\release\\test_voronoi_drainage.exe"
+    ],
+    "returncode": 0,
+    "wall_s": 0.01500000013038516,
+    "log": "results\\logs\\voronoi_drainage_20261111\\repair_test_voronoi_drainage.log",
+    "log_sha256": "83ecfafa66903ca6e4dbc59b09f52fb621f5b634248dcc1958e5bba7100aa3dc"
+  },
+  "wall_s": 30.67200000002049
+}
