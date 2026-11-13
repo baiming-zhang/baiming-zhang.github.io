@@ -85,7 +85,11 @@ def build(source, output, repository, commit):
         # Archive chunks must remain bounded individually for scientific Git
         # provenance; many sub-MB chunks can still exhaust Pages together.
         # Route ALL ZIPs by the same immutable, byte-preserving mechanism.
-        if path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
+        # This report retains many small scientific assets. Keep its HTML in
+        # Pages and serve its original data/figures immutably, without relaxing
+        # the shared site's size guard or changing unrelated project resources.
+        physical_report_asset = name.startswith('VariDrainage/edge-physics/') and path.suffix.lower() != '.html'
+        if physical_report_asset or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))
             continue
         target = output / relative
@@ -99,6 +103,15 @@ def build(source, output, repository, commit):
             continue
         raw = path.read_bytes()
         text = raw.decode('utf-8')
+        if path.relative_to(output).as_posix().startswith('VariDrainage/edge-physics/'):
+            # img src is resolved before the anchor/fetch router runs. Rewrite
+            # these report-local image URLs at build time as well.
+            import posixpath
+            parent = path.relative_to(output).parent.as_posix()
+            def image_resource(match):
+                name = posixpath.normpath(posixpath.join(parent, match.group(2)))
+                return match.group(1) + resources.get(name, match.group(2)) + match.group(3)
+            text = re.sub(r'(<img\b[^>]*\bsrc=["\x27])([^"\x27]+)(["\x27])', image_resource, text, flags=re.I)
         # Preserve exact source bytes apart from this routing tag.
         if re.search(r'<head\b[^>]*>', text, flags=re.I):
             text = re.sub(r'(<head\b[^>]*>)', lambda m: m.group(1) + tag, text, count=1, flags=re.I)
