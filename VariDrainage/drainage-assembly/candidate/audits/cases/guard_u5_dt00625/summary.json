@@ -1,0 +1,34 @@
+{
+  "attempts": 1,
+  "completed": 1,
+  "native_checks": 56,
+  "observer_diagnostics": {
+    "guard_u5_dt00625": {
+      "accepted_steps": 1,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.011098326047484713,
+      "maximum_Newton_iterations": 4,
+      "maximum_CG_iterations": 6,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 3.937588327821249e-19,
+      "native_inertial_BE_loss_J": 4.809740738508923e-18
+    }
+  },
+  "independent_mechanical_audits": {
+    "guard_u5_dt00625": [
+      {
+        "step": 1,
+        "inertial_force": 3.975662313461137e-16,
+        "viscous_force": 4.689210743316647e-14,
+        "viscous_action": 9.782281864152587e-16,
+        "cut_length": 0.0,
+        "weights": 2.070565940925917e-14,
+        "regional": 2.0167146410098017e-12,
+        "passed": true
+      }
+    ]
+  },
+  "full_C1_complete": false,
+  "scope": "Sampled independent SI inertia/viscosity/clipped regional work and recovered traction; exact discrete identity is not continuum traction validation. Native dynamics unchanged.",
+  "native_checks_scope": "56 candidate unit checks executed once earlier; not rerun by independent audit"
+}

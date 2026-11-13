@@ -1,0 +1,1199 @@
+{
+  "source_commit": "e098cb3f580b69dd838e36a32fb5facd377ceda3",
+  "sources": {
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdge.h": "ace17ac5bcf3e355ad4aac3ff631c6acd5d234044a6144222fc862ff32487b20",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgeLocalAssembly.h": "719e432050fa4dea9a4d795617f40ec412bc887357fbe877b6370fdd8a2f018c",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgeMechanicalObserver.h": "7f42541b91bec6a60e0fd5e72bca72abace0a446391884f4551d6a042b2d5b46",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgePreparation.h": "1c59266979bc85e55347a6697f31dcac69d56a8ba5e42b82f85a7ba8e4cb3d8c",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgeRegional.h": "a477ea87f1f69c7832432064f13b13e315e2293ef904635f50fdfef11542b710",
+    "thin_film\\include\\vf\\thinfilm\\FrozenCurvedProbe.h": "ce88b1a2ba9f3f6ec2999def44216cb0a44c8064bd830e824ac9d50f2e45edd7",
+    "thin_film\\include\\vf\\thinfilm\\InterfaceLedger.h": "635b353fbc59fa5d7784d12792ca340e534df84d740ca2ae4801e43f6f748948",
+    "thin_film\\include\\vf\\thinfilm\\Meniscus.h": "88f15c7ebd6553c108c50a48ea54277738e77bb475637ef077ca5bfa7173d226",
+    "thin_film\\include\\vf\\thinfilm\\MovingInterfaceLedger.h": "22c1000a9bd192a020e1ed210441a6f86cbc608e9f4166f5ffe26ba1b0da8771",
+    "thin_film\\include\\vf\\thinfilm\\MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912",
+    "thin_film\\include\\vf\\thinfilm\\OverlapTransfer.h": "8a86feacdc31520a7dc574a55517d7c1af7069ef6e3ec00705b6f6fc3b1148d0",
+    "thin_film\\include\\vf\\thinfilm\\Particles.h": "317af668d4614d943a2a87eff0c292784cf41ba5ecb5662ae92851e638b948d6",
+    "thin_film\\include\\vf\\thinfilm\\Solution.h": "1688ff48927574c1ca03ab1f524d9f0e42e1bade69904798d40316f7bf34e9a0",
+    "thin_film\\include\\vf\\thinfilm\\SurfaceExchange.h": "00997bae84e3058315ebe28061320f80113513fc9c5b2237afaefc4b8c4f46bc",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilm.h": "28db3d0cd8d8faa0d4722929e4f502708b2a915f5801dc351db2e100ea2a3a35",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilmMechanics.h": "47ceaf46675de2f2bcf9dfb81376bb688b5fae2e1ca6cd591345af3027237f1f",
+    "thin_film\\include\\vf\\thinfilm\\Units.h": "00c7b29cfcbe5742288a240790a1699216c38d2674e615d6fb919e3a036a8e85",
+    "thin_film\\include\\vf\\thinfilm\\VoronoiClipProbe.h": "a82f90e59d3ffb939ad4dc678203df3f1e852c8ef73bbf04d86a8b1f41809cd8",
+    "thin_film\\include\\vf\\thinfilm\\VoronoiDifferentiation.h": "1dfa0778bdc7aa6b3cba4e8ba7c44bd4e7c3081cff2e37745a0e23410617cd94",
+    "thin_film\\include\\vf\\thinfilm\\VoronoiDrainage.h": "bb02ee42efc7d418568706201227deb7c690cb877395de7d2affc6b2bf1aefbf",
+    "thin_film\\bench\\tf_bench.cpp": "607b23703fe4fa39907d049cf6388d3a6585702b655fe7fa47e15dd85d7bcd90",
+    "thin_film\\bench\\tf_curved_edge_bench.cpp": "bdec29cee9b414d607fba0b60c350bf198543adc1ab4a73206da4487e11b8c61",
+    "thin_film\\bench\\tf_curved_edge_profile.cpp": "df5330a1b10c6b06f7a3332a709f33626cf06d17f53b830c752d9d11210efa82",
+    "thin_film\\bench\\tf_curved_response_probe.cpp": "39c36be6f2a69f5379b528722ad29652da7c35299691e8d237a9f77d4d291a62",
+    "thin_film\\bench\\tf_drainage_cost_probe.cpp": "94a7e0a577426933cc9b577c24e40f64a98ca872e726e71a0a133def272217a6",
+    "thin_film\\bench\\tf_geometry_candidate_bench.cpp": "36184410c9f58ee8d053d6712fe77c8c006397dd503a8b68ded89d3dd8e5254e",
+    "thin_film\\bench\\tf_geometry_candidate_profile.cpp": "c08eda1725388aa70ff7ac0d8df2398c4cebbfa8b6cca821c75310bf4766ffbc",
+    "thin_film\\bench\\tf_geometry_cost_probe.cpp": "9f0bdcb80cdec4f3f0b0172f094fc23fdd6078cbd0aa0cfa175dd9de166117fa",
+    "thin_film\\bench\\tf_local_assembly_bench.cpp": "c9839d44309990883a7864d06a2ec948482dc915921c06ddaed503caf4c53cf8",
+    "thin_film\\bench\\tf_local_assembly_probe.cpp": "6eb224ea9bcfd2613b2c755d5fd1f410ad7d1ad3d252e4a65dc68ea740d1fc17",
+    "thin_film\\bench\\tf_moving_voronoi_bench.cpp": "6a85084518b84c920d35676331ec078a4c7577bdd010d11890c790c042b90c21",
+    "thin_film\\bench\\tf_overlap_bench.cpp": "cdb12a90b33e7878f77dde2d8e5c76b90638b1ddaae6f9eb59785a7dba05a564",
+    "thin_film\\bench\\tf_remap_bench.cpp": "7e6a0fe9e94146e8e69476e8eecfebf403de7ff1d563dcba1325eb93a02feae8",
+    "thin_film\\bench\\tf_response_bench.cpp": "eeb4bd99273458052fc817a4d661c2b3fc21cb0a2319ffa9019e8d0e6cd50e3f",
+    "thin_film\\bench\\tf_viscous_patch_bench.cpp": "c333d1c0554f0900c2f4ea2e32a8ad68433a2a7fd572fcd06b4036b8c702d23a",
+    "thin_film\\bench\\tf_voronoi_bench.cpp": "edc5fb16500ffbf7ba0e4aea24e7a508211b64c2ef83f5957db30717aafc3eff",
+    "thin_film\\bench\\tf_voronoi_geometry.cpp": "d7efa9bb898e1aa89a80ef6eca651fb70176bb19ce04762c37bdaf5a10d5d6b7",
+    "thin_film\\bench\\tf_voronoi_kinematics.cpp": "330aad198c4daa91da389d054591a0d2ff97cb6aca1c509e7b0c78819586db3e",
+    "thin_film\\tests\\test_local_assembly_curved.cpp": "f7dcf6fa434b01bb3d15bf5251602bbabb56c2c47850628b5f0cad8b46f8b9ca",
+    "thin_film\\tests\\test_local_assembly_observer.cpp": "bd2362c98c81f972f826ac04792be0c8940597c24a66beefc57d3d2ad5eccd79",
+    "thin_film\\tests\\test_local_assembly_preparation.cpp": "4da3f3a76dd2e192ce104a7f86b3969a893884da01bbcb1381d9d6212e5e6d43",
+    "thin_film\\tests\\test_local_curved_hessian.cpp": "9053c07292946ac52f595a76555358525e7257b5effd1d4d491b7765ab0a88a2",
+    "thin_film\\scripts\\local_assembly\\run.py": "884df82b3771fe473bf5f92da036a801c776704afbc37f01af7b7283e9a02303",
+    "thin_film\\scripts\\local_assembly\\equivalence.py": "9fda62b2f1da753063980448b86dbf7e6eb07c974920f57ddefb1885719ea7a3",
+    "thin_film\\scripts\\drainage_cost\\LOCAL_ASSEMBLY.md": "8062a19e5930184d9307cf122f4bba0e278c87a821cc3a36a6f59f1c7cac4009",
+    "thin_film\\xmake.lua": "2b766e68de66d372ae06b7365247d7790cf976ac8860e883aa820305eeadcfc8"
+  },
+  "binaries": {
+    "test_local_curved_hessian": "adfa77a6d60c45d9ad0c9f29c3083add53f24629ba8769ec39623cdce4362da7",
+    "test_local_assembly_curved": "933361daa1b1d3de1462e96ac2190cc6b92d7f42a59b9134c7746ca180c26f05",
+    "test_local_assembly_preparation": "6bb6f2749ce57993a9052c436caa807574a45f77e75b886fcf65592db8604518",
+    "test_local_assembly_observer": "8a8272ef6d37253ca86f715f8c8a6a91b8bbf19be54a96d27c8e65a4b98d5a2a",
+    "tf_local_assembly_probe": "be6039876dbbce13551cccca4a3a97944841a98e987756ff2d5bb3899cfe20e6",
+    "tf_local_assembly_bench": "1c0d4431465d6781ac4a97be3029e8f85c57bff93df1a88a1e490f486ab3f353"
+  },
+  "original_binary_sha256": "76e49ed253e2341df37f93d02803272d020b8500ed9265da6f7d0ec124b6c5c3",
+  "reference_cases": [
+    {
+      "name": "guard_u5_dt00625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "5",
+        "0.0625",
+        "0.0625",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\global_five_20261113\\guard_u5_dt00625",
+        "6",
+        "variational",
+        "1",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 104.18800000008196,
+      "log": "results\\logs\\global_five_20261113\\guard_u5_dt00625.log",
+      "log_sha256": "3ee89975e7883e53c3bcae2f404b9b43e80dda57589b3d0f81af0a2fda06696f",
+      "parameters": {
+        "name": "guard_u5_dt00625",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.0625,
+        "T_us": 0.0625,
+        "dx_um": 5,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 1,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 2112,
+        "interior": 2080,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": false,
+        "dx_m": 4.9999999999999996e-06,
+        "dt_s": 6.25e-08,
+        "T_s": 6.25e-08,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.922305519543647e-12,
+        "V0_m3": 3.5955746505722703e-13,
+        "S0_mol": 1.7890965910041554e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.7807564360991203e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 7.569430191232209e-17,
+        "max_regionS_res": 1.5212341134621297e-16,
+        "max_displacement_m": 6.505268185936363e-11,
+        "wall_s": 102.6619816
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 4.697915420584255e-13,
+        "free_volume_m3": 1.2675964789107875e-13,
+        "S_mol": 1.7890965910041554e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 4.9999999999999996e-06,
+        "actual_background_x_m": 5e-06,
+        "actual_background_y_m": 5e-06,
+        "fine_m": 4.9999999999999996e-06,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.011098326047484713,
+      "files": [
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/faces.csv",
+          "bytes": 797348,
+          "sha256": "b2c2bdca388b1c6295b511f5b28f7d7becbbb0c762e74e0463d6d52050ce7036"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/history.csv",
+          "bytes": 517,
+          "sha256": "a6cea6d04e8fdac4b937a59690dccbdad8343cc752d4d2a91524dbb716f8900a"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/initial_faces.csv",
+          "bytes": 222292,
+          "sha256": "58f884bd6f25de7f8984a0c5bd6279ae0004985f038c865204eaf405c3ccd89c"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/initial_states.csv",
+          "bytes": 527317,
+          "sha256": "50214861a6c1036fe614d10bf50f84bcf6438eb8da25bf2e89e3d37540c5ce1a"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/mechanical_nodes.csv",
+          "bytes": 952864,
+          "sha256": "a770a0e96a83324d0a13ede0d2d2fad607c7fd5697cda7a851db09b6bfcee98a"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/mechanics.csv",
+          "bytes": 403,
+          "sha256": "508f9ed943cd97e871b0bf148dc79ef4796146d3fab38c52f9a81c212b680cb1"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/mesh.json",
+          "bytes": 250,
+          "sha256": "cc95cf53cb934f7cc03476728b3e7af43454b993beeda9808c0a5c2ffed5ef4b"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/preparation.json",
+          "bytes": 227,
+          "sha256": "fcc8fb83a2a47ba8e8928896b3989439bd546ec03aa92269a10012e02ec1a038"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/regional_mechanics.csv",
+          "bytes": 1211,
+          "sha256": "d23bf4507f4b8e0ed38022e956bf360457b7c3f29847bdb303c0477b1deaddef"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/states.csv",
+          "bytes": 1780588,
+          "sha256": "5d421e6c114cd64b3bbd52fecfffaecfc53a9a2c9639b7539a898aaf2e2e4669"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/summary.json",
+          "bytes": 908,
+          "sha256": "30c648e75fb4b96f429956a1e5b680e1b6c97acca15e9cc53202c8ce02449804"
+        }
+      ]
+    },
+    {
+      "name": "guard_u5_dt003125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "5",
+        "0.03125",
+        "0.03125",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\global_five_20261113\\guard_u5_dt003125",
+        "6",
+        "variational",
+        "1",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 105.125,
+      "log": "results\\logs\\global_five_20261113\\guard_u5_dt003125.log",
+      "log_sha256": "3ee89975e7883e53c3bcae2f404b9b43e80dda57589b3d0f81af0a2fda06696f",
+      "parameters": {
+        "name": "guard_u5_dt003125",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.03125,
+        "T_us": 0.03125,
+        "dx_um": 5,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 1,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 2112,
+        "interior": 2080,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": false,
+        "dx_m": 4.9999999999999996e-06,
+        "dt_s": 3.125e-08,
+        "T_s": 3.125e-08,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.922305519543647e-12,
+        "V0_m3": 3.5955746505722703e-13,
+        "S0_mol": 1.7890965910041554e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 2.5901911797805387e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.5755201345091705e-17,
+        "max_regionS_res": 1.4998349269777106e-16,
+        "max_displacement_m": 1.6799378516500017e-11,
+        "wall_s": 103.5812086
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 4.697915420584255e-13,
+        "free_volume_m3": 1.2675964789107875e-13,
+        "S_mol": 1.7890965910041554e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 4.9999999999999996e-06,
+        "actual_background_x_m": 5e-06,
+        "actual_background_y_m": 5e-06,
+        "fine_m": 4.9999999999999996e-06,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.002584294134772926,
+      "files": [
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/faces.csv",
+          "bytes": 797401,
+          "sha256": "5dea1ad650ec6b949ad8e55b8ea47b4e88f727795f82b6614c04177d8ca43ae7"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/history.csv",
+          "bytes": 516,
+          "sha256": "c1cd03bf2d461ed02d103f219e43c5c3c4720639fd9dd5fb2bd898412989b49d"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/initial_faces.csv",
+          "bytes": 222292,
+          "sha256": "58f884bd6f25de7f8984a0c5bd6279ae0004985f038c865204eaf405c3ccd89c"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/initial_states.csv",
+          "bytes": 527317,
+          "sha256": "50214861a6c1036fe614d10bf50f84bcf6438eb8da25bf2e89e3d37540c5ce1a"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/mechanical_nodes.csv",
+          "bytes": 952785,
+          "sha256": "9004128801b10685b27384d1700a01c0e0a867e22573315045826ff2b7387679"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/mechanics.csv",
+          "bytes": 402,
+          "sha256": "a73f79cddb5fd1d9f2e90c36e59b2ea9ce2e9178e6d26a7763356b1968b576a3"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/mesh.json",
+          "bytes": 250,
+          "sha256": "cc95cf53cb934f7cc03476728b3e7af43454b993beeda9808c0a5c2ffed5ef4b"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/preparation.json",
+          "bytes": 227,
+          "sha256": "fcc8fb83a2a47ba8e8928896b3989439bd546ec03aa92269a10012e02ec1a038"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/regional_mechanics.csv",
+          "bytes": 1212,
+          "sha256": "bfa3d1dd95ed70f4812e41de78ff2feba554b7f69babea2dcdfbad660793d351"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/states.csv",
+          "bytes": 1776195,
+          "sha256": "b95a72a69a23058f3244fd12d016568fbb5955a39ab4ca61e01f3d57e5039117"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt003125/summary.json",
+          "bytes": 908,
+          "sha256": "422b72a534106582b3fb5760a65f6fa1106464563fe2ed591c661329976b401c"
+        }
+      ]
+    },
+    {
+      "name": "u10_dt00625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "10",
+        "0.0625",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\global_space_20261113\\u10_dt00625",
+        "6",
+        "variational",
+        "160",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 418.25,
+      "log": "results\\logs\\global_space_20261113\\u10_dt00625.log",
+      "log_sha256": "d409604982583231415b89fa23e4ee72d65158ff306a89d4afeb21c1d90a6552",
+      "parameters": {
+        "name": "u10_dt00625",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.0625,
+        "T_us": 10,
+        "dx_um": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 160,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 160,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 544,
+        "interior": 528,
+        "steps": 160,
+        "requested_steps": 160,
+        "failures": 0,
+        "local": false,
+        "dx_m": 9.999999999999999e-06,
+        "dt_s": 6.25e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.799336249094897e-12,
+        "V0_m3": 3.5726588493588687e-13,
+        "S0_mol": 1.789091527932089e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 2.118029243152813e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 4.893689004895491e-16,
+        "max_regionS_res": 1.5888841430959891e-16,
+        "max_displacement_m": 5.640899260548837e-08,
+        "wall_s": 418.1362981
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 1.400945210080723e-13,
+        "free_volume_m3": 1.220713703029213e-13,
+        "S_mol": 1.789091527932089e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 9.999999999999999e-06,
+        "actual_background_x_m": 1e-05,
+        "actual_background_y_m": 1e-05,
+        "fine_m": 9.999999999999999e-06,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.13988029781346054,
+      "files": [
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/faces.csv",
+          "bytes": 394716,
+          "sha256": "842e4bee797410ffa3f117105d3358d6b554d120d4c912619e6eb817bb48bebd"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/history.csv",
+          "bytes": 55756,
+          "sha256": "120899139f61505046919f8581d86fcecd7b4be9190c89adad58f2d6eb719115"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/initial_faces.csv",
+          "bytes": 53446,
+          "sha256": "2b3674fac8b0b6e2ce2d6984a009a8a31d29e212871f805834a876b76f4cef36"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/initial_states.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/mechanical_nodes.csv",
+          "bytes": 513408,
+          "sha256": "68c62d1886a2e58248f1d27fe35cd7e899e30e20c215d3717168a6224add6479"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/mechanics.csv",
+          "bytes": 42273,
+          "sha256": "783897e300404e9f0d0050235803c3d5fed87c68e0388d8c7b7a3642b530f342"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/mesh.json",
+          "bytes": 250,
+          "sha256": "4793683264828f86e9c4f16d776de8a0452862755000948fb91a54328013a0a7"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/preparation.json",
+          "bytes": 225,
+          "sha256": "e9bba3597acb5ba55577be4ed649ed79b4b62a05712fb91c3592b5afa7ffd533"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/regional_mechanics.csv",
+          "bytes": 2106,
+          "sha256": "8ad2d03118c6a17b922670997cb779386a360c1658cf043b69bdf4bf7292c044"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/states.csv",
+          "bytes": 955272,
+          "sha256": "36781a49a1fb89383ef5c32b21ce111119167b341f462e9f98d34a9a48805b9a"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/summary.json",
+          "bytes": 917,
+          "sha256": "b1cf3b651a6b560b9fcf126363d82941380276f81283fab0364ac4ef9be1d1ca"
+        }
+      ],
+      "estimated_s": 1147.3280000127852
+    }
+  ],
+  "operator_inputs": [
+    {
+      "name": "u20_initial",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_drainage_cost_probe.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\drainage_cost_20261113\\u20_initial\\input.csv",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\drainage_cost_20261113\\u20_initial\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 0.06199999991804361,
+      "log": "results\\logs\\drainage_cost_20261113\\u20_initial.log",
+      "log_sha256": "e5597297b734440a83538fc9b98f0fd2e274b4dba42dca1eda4ac044cf7abaa6",
+      "parameters": {
+        "name": "u20_initial",
+        "source": "results\\local-runs\\cost_profile_20261113\\u20_initial\\input.csv",
+        "source_sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498",
+        "N": 144,
+        "stage": null
+      },
+      "passed": true,
+      "profile": {
+        "N": 144,
+        "area_import_error": 0,
+        "energy_import_error": 5.346653247743588e-16,
+        "first_fields_exact": true,
+        "matrix_nonzeros": 1208,
+        "matrix_density": 0.058256172839506175,
+        "cached_action_relative_error": 0,
+        "symmetry_relative_error": 5.782851058896677e-17,
+        "sink": 543.905365820675,
+        "timings": {
+          "cached_diagonal_scan": [
+            {
+              "wall_s": 8.9e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 8.8e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 8.8e-06,
+              "cpu_s": 0
+            }
+          ],
+          "cached_hessian_apply": [
+            {
+              "wall_s": 2.1e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2.1e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2.1e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2.1e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2e-06,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 2e-06,
+              "cpu_s": 0
+            }
+          ],
+          "cold_hessian_build_and_apply": [
+            {
+              "wall_s": 0.0021509,
+              "cpu_s": 0
+            }
+          ],
+          "fields_with_hessian": [
+            {
+              "wall_s": 0.0021809,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0022712,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0021746,
+              "cpu_s": 0
+            }
+          ],
+          "fields_without_hessian": [
+            {
+              "wall_s": 0.0004252,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0003126,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0002878,
+              "cpu_s": 0
+            }
+          ],
+          "pressure": [
+            {
+              "wall_s": 0.0003242,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0003032,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0003035,
+              "cpu_s": 0
+            }
+          ],
+          "value": [
+            {
+              "wall_s": 0.0003034,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0003052,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0002913,
+              "cpu_s": 0
+            }
+          ]
+        }
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u20_initial\\input.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u20_initial\\profile.json",
+          "bytes": 1528,
+          "sha256": "35e9f76a54e5e129e628b555239b5df582c89ebb103339a6cb05594681dd42ef"
+        },
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u20_initial\\profile.pattern.csv",
+          "bytes": 37650,
+          "sha256": "4b39c525f3318b8574c40cfc5b3a81abddf82d3df1f0476b1d25152846ad16f6"
+        }
+      ]
+    },
+    {
+      "name": "u10_initial",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_drainage_cost_probe.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\drainage_cost_20261113\\u10_initial\\input.csv",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\drainage_cost_20261113\\u10_initial\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 0.7810000001918525,
+      "log": "results\\logs\\drainage_cost_20261113\\u10_initial.log",
+      "log_sha256": "037c4652ea645001464ccd45b3574b58584f66c9e9946969442e2f39f5103956",
+      "parameters": {
+        "name": "u10_initial",
+        "source": "results\\local-runs\\cost_profile_20261113\\u10_initial\\input.csv",
+        "source_sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308",
+        "N": 544,
+        "stage": null
+      },
+      "passed": true,
+      "profile": {
+        "N": 544,
+        "area_import_error": 0,
+        "energy_import_error": 1.0098816065642282e-15,
+        "first_fields_exact": true,
+        "matrix_nonzeros": 5024,
+        "matrix_density": 0.016976643598615917,
+        "cached_action_relative_error": 0,
+        "symmetry_relative_error": 5.806800581296291e-17,
+        "sink": 576.0893963748275,
+        "timings": {
+          "cached_diagonal_scan": [
+            {
+              "wall_s": 0.0001157,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0001144,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0001157,
+              "cpu_s": 0
+            }
+          ],
+          "cached_hessian_apply": [
+            {
+              "wall_s": 5.53e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 5.49e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 4.43e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 4.29e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 4.3e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 4.72e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 4.28e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 4.3e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 4.29e-05,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 4.29e-05,
+              "cpu_s": 0
+            }
+          ],
+          "cold_hessian_build_and_apply": [
+            {
+              "wall_s": 0.1123521,
+              "cpu_s": 0
+            }
+          ],
+          "fields_with_hessian": [
+            {
+              "wall_s": 0.1140765,
+              "cpu_s": 0.015625
+            },
+            {
+              "wall_s": 0.1098775,
+              "cpu_s": 0.03125
+            },
+            {
+              "wall_s": 0.1123392,
+              "cpu_s": 0.03125
+            }
+          ],
+          "fields_without_hessian": [
+            {
+              "wall_s": 0.0037371,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0037906,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.00476,
+              "cpu_s": 0
+            }
+          ],
+          "pressure": [
+            {
+              "wall_s": 0.0037725,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0040583,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0039702,
+              "cpu_s": 0
+            }
+          ],
+          "value": [
+            {
+              "wall_s": 0.0044848,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0039437,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0043276,
+              "cpu_s": 0
+            }
+          ]
+        }
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u10_initial\\input.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u10_initial\\profile.json",
+          "bytes": 1505,
+          "sha256": "bd67f8b88c35470ea0c41549d7735507c789f54d75f17242ce4ce6b5ddb79cd7"
+        },
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u10_initial\\profile.pattern.csv",
+          "bytes": 162529,
+          "sha256": "8d64efdfbd8b35e37a8757165c765899864f823951b8efa7f17bb6d18541a912"
+        }
+      ]
+    },
+    {
+      "name": "u5_initial",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_drainage_cost_probe.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\drainage_cost_20261113\\u5_initial\\input.csv",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\drainage_cost_20261113\\u5_initial\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 86.6569999998901,
+      "log": "results\\logs\\drainage_cost_20261113\\u5_initial.log",
+      "log_sha256": "362058f5bf08cc3859bc78d29b326e63fe71e46083217ca65a70ba184b29cea1",
+      "parameters": {
+        "name": "u5_initial",
+        "source": "results\\local-runs\\global_five_20261113\\guard_u5_dt00625\\initial_states.csv",
+        "source_sha256": "50214861a6c1036fe614d10bf50f84bcf6438eb8da25bf2e89e3d37540c5ce1a",
+        "N": 2112,
+        "stage": null
+      },
+      "passed": true,
+      "profile": {
+        "N": 2112,
+        "area_import_error": 0,
+        "energy_import_error": 3.282175654229636e-16,
+        "first_fields_exact": true,
+        "matrix_nonzeros": 20542,
+        "matrix_density": 0.004605267877640037,
+        "cached_action_relative_error": 0,
+        "symmetry_relative_error": 5.798280787714008e-17,
+        "sink": 600.5377371558009,
+        "timings": {
+          "cached_diagonal_scan": [
+            {
+              "wall_s": 0.001807,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0017453,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0021516,
+              "cpu_s": 0
+            }
+          ],
+          "cached_hessian_apply": [
+            {
+              "wall_s": 0.0015503,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010155,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010081,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010803,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0009257,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010032,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010707,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.000968,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0009533,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0009544,
+              "cpu_s": 0
+            }
+          ],
+          "cold_hessian_build_and_apply": [
+            {
+              "wall_s": 16.3039783,
+              "cpu_s": 3.578125
+            }
+          ],
+          "fields_with_hessian": [
+            {
+              "wall_s": 17.8111959,
+              "cpu_s": 5.375
+            },
+            {
+              "wall_s": 16.3409131,
+              "cpu_s": 3.90625
+            },
+            {
+              "wall_s": 16.4234258,
+              "cpu_s": 4.140625
+            }
+          ],
+          "fields_without_hessian": [
+            {
+              "wall_s": 0.0734612,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0703394,
+              "cpu_s": 0.015625
+            },
+            {
+              "wall_s": 0.0730492,
+              "cpu_s": 0.046875
+            }
+          ],
+          "pressure": [
+            {
+              "wall_s": 0.0684847,
+              "cpu_s": 0.0625
+            },
+            {
+              "wall_s": 0.0713949,
+              "cpu_s": 0.03125
+            },
+            {
+              "wall_s": 0.0755861,
+              "cpu_s": 0
+            }
+          ],
+          "value": [
+            {
+              "wall_s": 0.0699346,
+              "cpu_s": 0.0625
+            },
+            {
+              "wall_s": 0.0736823,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.073152,
+              "cpu_s": 0
+            }
+          ]
+        }
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u5_initial\\input.csv",
+          "bytes": 527317,
+          "sha256": "50214861a6c1036fe614d10bf50f84bcf6438eb8da25bf2e89e3d37540c5ce1a"
+        },
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u5_initial\\profile.json",
+          "bytes": 1480,
+          "sha256": "d6e2ee05b944715050aecbcd04a1fa0c2186ad78acc4d96ae8d10ca14113bb65"
+        },
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u5_initial\\profile.pattern.csv",
+          "bytes": 689877,
+          "sha256": "75cd7c4a5cb3e939d91ec19371eea241e31538cbb67f7950110e9082295a22f6"
+        }
+      ]
+    },
+    {
+      "name": "u5_mechanical_endpoint",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_drainage_cost_probe.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\drainage_cost_20261113\\u5_mechanical_endpoint\\input.csv",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\drainage_cost_20261113\\u5_mechanical_endpoint\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 86.79700000002049,
+      "log": "results\\logs\\drainage_cost_20261113\\u5_mechanical_endpoint.log",
+      "log_sha256": "c96ffcab2685d15774c08470e0674049333fd644fc12a18217008fa0801d9ceb",
+      "parameters": {
+        "name": "u5_mechanical_endpoint",
+        "source": "results\\local-runs\\global_five_20261113\\guard_u5_dt00625\\states.csv",
+        "source_sha256": "5d421e6c114cd64b3bbd52fecfffaecfc53a9a2c9639b7539a898aaf2e2e4669",
+        "N": 2112,
+        "stage": 1
+      },
+      "passed": true,
+      "profile": {
+        "N": 2112,
+        "area_import_error": 4.363176486776865e-14,
+        "energy_import_error": 6.564364709070806e-16,
+        "first_fields_exact": true,
+        "matrix_nonzeros": 24488,
+        "matrix_density": 0.005489913337924701,
+        "cached_action_relative_error": 0,
+        "symmetry_relative_error": 5.79827997860584e-17,
+        "sink": 600.5365304949909,
+        "timings": {
+          "cached_diagonal_scan": [
+            {
+              "wall_s": 0.0017972,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0017217,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0017491,
+              "cpu_s": 0
+            }
+          ],
+          "cached_hessian_apply": [
+            {
+              "wall_s": 0.0012301,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010204,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0009589,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010317,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0009602,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0011325,
+              "cpu_s": 0.015625
+            },
+            {
+              "wall_s": 0.0009913,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010003,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0010067,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0009333,
+              "cpu_s": 0
+            }
+          ],
+          "cold_hessian_build_and_apply": [
+            {
+              "wall_s": 17.1352785,
+              "cpu_s": 7.484375
+            }
+          ],
+          "fields_with_hessian": [
+            {
+              "wall_s": 16.4959807,
+              "cpu_s": 4.296875
+            },
+            {
+              "wall_s": 16.5659763,
+              "cpu_s": 4.3125
+            },
+            {
+              "wall_s": 16.5796264,
+              "cpu_s": 4.640625
+            }
+          ],
+          "fields_without_hessian": [
+            {
+              "wall_s": 0.0757974,
+              "cpu_s": 0.09375
+            },
+            {
+              "wall_s": 0.0696607,
+              "cpu_s": 0.0625
+            },
+            {
+              "wall_s": 0.0706019,
+              "cpu_s": 0.03125
+            }
+          ],
+          "pressure": [
+            {
+              "wall_s": 0.0727938,
+              "cpu_s": 0.046875
+            },
+            {
+              "wall_s": 0.0739624,
+              "cpu_s": 0.015625
+            },
+            {
+              "wall_s": 0.0764054,
+              "cpu_s": 0.046875
+            }
+          ],
+          "value": [
+            {
+              "wall_s": 0.0733522,
+              "cpu_s": 0
+            },
+            {
+              "wall_s": 0.0741777,
+              "cpu_s": 0.046875
+            },
+            {
+              "wall_s": 0.0748816,
+              "cpu_s": 0
+            }
+          ]
+        }
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u5_mechanical_endpoint\\input.csv",
+          "bytes": 625366,
+          "sha256": "bc368e5912f6f62c5b451f566cf156425f9cfdb9fb5698b0be73dc92170f9489"
+        },
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u5_mechanical_endpoint\\profile.json",
+          "bytes": 1576,
+          "sha256": "ccb072901168335e0b9d5c09ccf384654965e5dd908d93f52a7a84351fc39e3f"
+        },
+        {
+          "path": "results\\local-runs\\drainage_cost_20261113\\u5_mechanical_endpoint\\profile.pattern.csv",
+          "bytes": 821260,
+          "sha256": "1a7084c32d485876174f0f71cfd220f7bbeb9e864e24910b4bcc90b8ab594bf4"
+        }
+      ]
+    }
+  ],
+  "whole_native_budget_s": 3600,
+  "operator_budget_s": 600,
+  "actual_budget_s": 1800,
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  },
+  "scope": "Opt-in local energy Hessian assembly, original fields and dense H1 backend unchanged; no default adoption/full C1 claim"
+}

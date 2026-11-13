@@ -1,0 +1,179 @@
+{
+  "state": "completed",
+  "tests": [],
+  "cases": [
+    {
+      "name": "u10_dt00625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_local_assembly_bench.exe",
+        "uniform",
+        "10",
+        "0.0625",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\local_assembly_20261113\\u10_dt00625",
+        "6",
+        "variational",
+        "160",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 362.38999999989755,
+      "log": "results\\logs\\local_assembly_20261113\\u10_dt00625.log",
+      "log_sha256": "d409604982583231415b89fa23e4ee72d65158ff306a89d4afeb21c1d90a6552",
+      "parameters": {
+        "name": "u10_dt00625",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.0625,
+        "T_us": 10,
+        "dx_um": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 160,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "passed": true,
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 160,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 544,
+        "interior": 528,
+        "steps": 160,
+        "requested_steps": 160,
+        "failures": 0,
+        "local": false,
+        "dx_m": 9.999999999999999e-06,
+        "dt_s": 6.25e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.799336249094897e-12,
+        "V0_m3": 3.5726588493588687e-13,
+        "S0_mol": 1.789091527932089e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 2.118029243152813e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 4.893636176477738e-16,
+        "max_regionS_res": 1.798648895882629e-16,
+        "max_displacement_m": 5.6408992605488343e-08,
+        "wall_s": 362.2663927
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 1.400945210080723e-13,
+        "free_volume_m3": 1.220713703029213e-13,
+        "S_mol": 1.789091527932089e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 9.999999999999999e-06,
+        "actual_background_x_m": 1e-05,
+        "actual_background_y_m": 1e-05,
+        "fine_m": 9.999999999999999e-06,
+        "physical_cut_m": 0.00024
+      },
+      "maximum_force_target_ratio": 0.13988028981912268,
+      "files": [
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\faces.csv",
+          "bytes": 394756,
+          "sha256": "17f6f3240173a2a2f6d7832a0dbd580fe0eaa409a508a2919e2aa9c74b3c1b16"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\history.csv",
+          "bytes": 55598,
+          "sha256": "5f699da7751baef5146b911a0cad06fa8c2713c9965ee6216eda2b4efee3dbdf"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\initial_faces.csv",
+          "bytes": 53446,
+          "sha256": "2b3674fac8b0b6e2ce2d6984a009a8a31d29e212871f805834a876b76f4cef36"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\initial_states.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\mechanical_nodes.csv",
+          "bytes": 513435,
+          "sha256": "c00489bf976e1c8351e379f6a3f3f1c377932f594341b10be16aff96d08e9f55"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\mechanics.csv",
+          "bytes": 42266,
+          "sha256": "f3119ee66edc0865f3b6c572ecd4c991b89a446a0083a91463a9c07f909c2ce9"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\mesh.json",
+          "bytes": 250,
+          "sha256": "4793683264828f86e9c4f16d776de8a0452862755000948fb91a54328013a0a7"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\preparation.json",
+          "bytes": 225,
+          "sha256": "e9bba3597acb5ba55577be4ed649ed79b4b62a05712fb91c3592b5afa7ffd533"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\regional_mechanics.csv",
+          "bytes": 2104,
+          "sha256": "122d9a95a86bdb827dff8ab1aeaba372c94f6a9c0a2c93ecfb53ec0889973a34"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\states.csv",
+          "bytes": 955258,
+          "sha256": "0f53ad555d50b72812f01f7139e2ea93f5f0b60bfa8da9c1764e9b59266be54b"
+        },
+        {
+          "path": "results\\local-runs\\local_assembly_20261113\\u10_dt00625\\summary.json",
+          "bytes": 918,
+          "sha256": "007fb6c4ef84b119c1970ebdfc0223efd443e27d1814e85e5d1f9d3e620d6dba"
+        }
+      ],
+      "same_native_file_set": true,
+      "byte_matches": {
+        "faces.csv": false,
+        "history.csv": false,
+        "initial_faces.csv": true,
+        "initial_states.csv": true,
+        "mechanical_nodes.csv": false,
+        "mechanics.csv": false,
+        "mesh.json": true,
+        "preparation.json": true,
+        "regional_mechanics.csv": false,
+        "states.csv": false,
+        "summary.json": false
+      },
+      "equivalence_passed": true
+    }
+  ],
+  "reused_native_checks": 0,
+  "candidate_native_checks": 56,
+  "audited_subset_only": true,
+  "native_checks_scope": "56 candidate unit checks executed once earlier; not rerun by independent audit",
+  "sampled_steps": true,
+  "native_checks": 56
+}
