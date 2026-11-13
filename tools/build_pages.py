@@ -82,7 +82,10 @@ def build(source, output, repository, commit):
         size = path.stat().st_size
         total_source += size
         name = relative.as_posix()
-        if size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS:
+        # Archive chunks must remain bounded individually for scientific Git
+        # provenance; many sub-MB chunks can still exhaust Pages together.
+        # Route ALL ZIPs by the same immutable, byte-preserving mechanism.
+        if path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))
             continue
         target = output / relative
