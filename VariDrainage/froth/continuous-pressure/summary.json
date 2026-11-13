@@ -1,0 +1,455 @@
+{
+  "metadata": {
+    "git_base": "1bd03dd5231fccaabb2895ce62fac9902abed121",
+    "source_sha256": {
+      "foam/scripts/run_continuous_pressure.py": "2f2b4e147d0ee821c2fc8b8f843d574bce92c8e0d2d437b1afadd82600aee4c2",
+      "foam/scripts/run_pressure_finite.py": "ae4071f536047a1ac3b89c1b74747deb0c2d61ab78192883e9ab7bedf9b51cca",
+      "foam/scripts/continuous_pressure_films.py": "737bb1a4bdde752f8f11cde684a4a7c42a1862ca876deab76a85ae6f051974ad",
+      "foam/scripts/pressure_finite_films.py": "56fa993991eefeefbf4d819fb4d63771eac74d0bb0ad588d1b2571493a2d7ba0",
+      "foam/scripts/moving_finite_films.py": "18db460f562f2e915a05512165e2ae0eefc50b12713300bd7dd9d0dc2b21a420",
+      "foam/scripts/open_section_transport.py": "278d654ac2b509458871dd6d8d201e8c13b3f60687ef282743c79a9ca2c5ea3b",
+      "foam/scripts/border_section_transport.py": "1f1cda9c337999d8244c09eaf61e3d1830773dacb85c5e005e402c307ad6eef4",
+      "foam/docs/continuous_pressure_protocol.md": "a2a26c37cff39e0a078e32fe23250165f01322e2ef5c1221e106eb8f518b99e8"
+    },
+    "configs": [
+      {
+        "name": "continuous-main",
+        "n": 192,
+        "dt": 0.01,
+        "T": 0.02,
+        "dp": 0.01,
+        "cf": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "continuous-fine",
+        "n": 288,
+        "dt": 0.01,
+        "T": 0.02,
+        "dp": 0.01,
+        "cf": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "continuous-half",
+        "n": 192,
+        "dt": 0.005,
+        "T": 0.02,
+        "dp": 0.01,
+        "cf": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "continuous-chemical",
+        "n": 192,
+        "dt": 0.01,
+        "T": 0.02,
+        "dp": 0.0,
+        "cf": [
+          1,
+          1.0001,
+          0.9999
+        ]
+      },
+      {
+        "name": "continuous-equilibrium",
+        "n": 96,
+        "dt": 0.01,
+        "T": 0.01,
+        "dp": 0.0,
+        "cf": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "versions": {
+      "python": "3.11.7",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "skfem": "12.0.2"
+    },
+    "scope": "finite well-mixed stock / perfect chemical contact limit, not resolved film resistance or free foam"
+  },
+  "runs": [
+    {
+      "name": "continuous-main",
+      "n": 192,
+      "dt": 0.01,
+      "T": 0.02,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ],
+      "steps": 2,
+      "nodes": 5209,
+      "pressure_loads_Pa": [
+        -75.03706070560837,
+        -75.03706070560837,
+        -75.03706070560837
+      ],
+      "balance_pressure_Pa": -75.04706070560837,
+      "initial_total_amount_nd": 4.133039549711765,
+      "initial_total_liquid_nd": 0.31120904604855637,
+      "initial_entropy": 0.0,
+      "capillary_derivative": -4.839306026039689,
+      "initial_area_nd": 0.16120904604855632,
+      "initial_surface_rate_sum": -0.008065510043399435,
+      "native_resistance": [
+        [
+          1507.6187366724698,
+          -0.7227476352279671,
+          -0.7227672244995942
+        ],
+        [
+          -0.7227476431596864,
+          1507.4375033123742,
+          -0.7227937529920209
+        ],
+        [
+          -0.7227672187861282,
+          -0.7227937668953079,
+          1507.2519418995719
+        ]
+      ],
+      "resistance_reciprocity_error": 9.205704059743548e-12,
+      "minimum_resistance_eigenvalue": 1505.9801916324461,
+      "maximum_mole_error": 0.0,
+      "maximum_liquid_error": 2.220446049250313e-16,
+      "maximum_pressure_residual_Pa": 3.891077940828088e-12,
+      "maximum_inner_residual": 1.0628074200335904e-12,
+      "maximum_cap_flux_error": 1.6771699470957067e-14,
+      "maximum_GCL_error": 7.309239408688221e-12,
+      "maximum_energy_tolerance_ratio": 0.0007904042526330155,
+      "maximum_mechanical_tolerance_ratio": 1.1037508821929092e-07,
+      "maximum_potential_increase_ratio": -3256627.2819536882,
+      "minimum_dissipation": 4.057802020107127e-15,
+      "maximum_Re": 0.00016307426377757466,
+      "minimum_c": 0.9999996354370537,
+      "minimum_sigma_N_m": 0.029999991358993474,
+      "maximum_contact_mismatch": 7.334633037592297e-07,
+      "final_SIP_fraction": 0.40408668417380406,
+      "final_flux_m2_s": [
+        -1.1343521349796922e-13,
+        -1.1343605412000613e-13,
+        -1.1340005621526129e-13
+      ],
+      "final_scale": 1.0000002344511674,
+      "minimum_film_volume_m2": 7.999995967940563e-09,
+      "minimum_film_length_m": 0.009999999950048764,
+      "maximum_concentration_departure": 0.0001728201305022381,
+      "initial_total_potential": 0.0,
+      "wall_seconds": 53.389965400099754
+    },
+    {
+      "name": "continuous-fine",
+      "n": 288,
+      "dt": 0.01,
+      "T": 0.02,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ],
+      "steps": 2,
+      "nodes": 9385,
+      "pressure_loads_Pa": [
+        -75.04436009931567,
+        -75.04436009931567,
+        -75.04436009931567
+      ],
+      "balance_pressure_Pa": -75.05436009931567,
+      "initial_total_amount_nd": 4.133018911453059,
+      "initial_total_liquid_nd": 0.3111881465426808,
+      "initial_entropy": 0.0,
+      "capillary_derivative": -4.83914927774225,
+      "initial_area_nd": 0.16118814654268074,
+      "initial_surface_rate_sum": -0.008065248796237032,
+      "native_resistance": [
+        [
+          1507.5831933685286,
+          -0.7111720306923297,
+          -0.7112050367021931
+        ],
+        [
+          -0.7111720304100189,
+          1507.4824057686242,
+          -0.7112103557657822
+        ],
+        [
+          -0.7112050354827506,
+          -0.711210356597471,
+          1507.2710133085475
+        ]
+      ],
+      "resistance_reciprocity_error": 8.139870249656438e-13,
+      "minimum_resistance_eigenvalue": 1506.0150344130623,
+      "maximum_mole_error": 0.0,
+      "maximum_liquid_error": 3.3306690738754696e-16,
+      "maximum_pressure_residual_Pa": 3.2466969252846153e-12,
+      "maximum_inner_residual": 9.038365685770777e-13,
+      "maximum_cap_flux_error": 1.6799923007174276e-14,
+      "maximum_GCL_error": 7.220187734825545e-12,
+      "maximum_energy_tolerance_ratio": 0.001165765123310673,
+      "maximum_mechanical_tolerance_ratio": 1.6796507498500399e-07,
+      "maximum_potential_increase_ratio": -3310864.409841782,
+      "minimum_dissipation": 4.724976217477597e-15,
+      "maximum_Re": 0.00016650412625900362,
+      "minimum_c": 0.9999996217138738,
+      "minimum_sigma_N_m": 0.029999991089606222,
+      "maximum_contact_mismatch": 7.602604013001724e-07,
+      "final_SIP_fraction": 0.3504299486474398,
+      "final_flux_m2_s": [
+        -1.2242154456919182e-13,
+        -1.224852140357976e-13,
+        -1.2251349241935467e-13
+      ],
+      "final_scale": 1.0000002430176032,
+      "minimum_film_volume_m2": 7.999995820635063e-09,
+      "minimum_film_length_m": 0.009999999948223632,
+      "maximum_concentration_departure": 0.00017820787553857187,
+      "initial_total_potential": 0.0,
+      "wall_seconds": 148.25691570015624
+    },
+    {
+      "name": "continuous-half",
+      "n": 192,
+      "dt": 0.005,
+      "T": 0.02,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ],
+      "steps": 4,
+      "nodes": 5209,
+      "pressure_loads_Pa": [
+        -75.03706070560837,
+        -75.03706070560837,
+        -75.03706070560837
+      ],
+      "balance_pressure_Pa": -75.04706070560837,
+      "initial_total_amount_nd": 4.133039549711765,
+      "initial_total_liquid_nd": 0.31120904604855637,
+      "initial_entropy": 0.0,
+      "capillary_derivative": -4.839306026039689,
+      "initial_area_nd": 0.16120904604855632,
+      "initial_surface_rate_sum": -0.008065510043399435,
+      "native_resistance": [
+        [
+          1507.6187366724698,
+          -0.7227476352279671,
+          -0.7227672244995942
+        ],
+        [
+          -0.7227476431596864,
+          1507.4375033123742,
+          -0.7227937529920209
+        ],
+        [
+          -0.7227672187861282,
+          -0.7227937668953079,
+          1507.2519418995719
+        ]
+      ],
+      "resistance_reciprocity_error": 9.205704059743548e-12,
+      "minimum_resistance_eigenvalue": 1505.9801916324461,
+      "maximum_mole_error": 2.220446049250313e-16,
+      "maximum_liquid_error": 2.220446049250313e-16,
+      "maximum_pressure_residual_Pa": 2.41228003148913e-11,
+      "maximum_inner_residual": 5.174554011290883e-13,
+      "maximum_cap_flux_error": 1.6735810916369176e-14,
+      "maximum_GCL_error": 7.415437921719587e-12,
+      "maximum_energy_tolerance_ratio": 0.01077826386275689,
+      "maximum_mechanical_tolerance_ratio": 1.5387978946612928e-06,
+      "maximum_potential_increase_ratio": -3005956.046197409,
+      "minimum_dissipation": 3.721161593484425e-15,
+      "maximum_Re": 0.00024749648712944024,
+      "minimum_c": 0.9999996323458913,
+      "minimum_sigma_N_m": 0.029999990777960936,
+      "maximum_contact_mismatch": 7.395438750279482e-07,
+      "final_SIP_fraction": 0.3944033676780505,
+      "final_flux_m2_s": [
+        -1.0872876614160547e-13,
+        -1.0873672968166308e-13,
+        -1.0870152760250454e-13
+      ],
+      "final_scale": 1.0000002363937353,
+      "minimum_film_volume_m2": 7.999995934505413e-09,
+      "minimum_film_length_m": 0.009999999949634889,
+      "maximum_concentration_departure": 0.0001844407812676696,
+      "initial_total_potential": 0.0,
+      "wall_seconds": 83.24282459984533
+    },
+    {
+      "name": "continuous-chemical",
+      "n": 192,
+      "dt": 0.01,
+      "T": 0.02,
+      "dp": 0.0,
+      "cf": [
+        1,
+        1.0001,
+        0.9999
+      ],
+      "steps": 2,
+      "nodes": 5209,
+      "pressure_loads_Pa": [
+        -75.04706070560837,
+        -75.04706070560837,
+        -75.04706070560837
+      ],
+      "balance_pressure_Pa": -75.04706070560837,
+      "initial_total_amount_nd": 4.133039549711765,
+      "initial_total_liquid_nd": 0.31120904604855637,
+      "initial_entropy": 1.3000081086471582e-08,
+      "capillary_derivative": -4.839306026039689,
+      "initial_area_nd": 0.16120904604855632,
+      "initial_surface_rate_sum": -0.008065510043399435,
+      "native_resistance": [
+        [
+          1507.6187366724698,
+          -0.7227476352279671,
+          -0.7227672244995942
+        ],
+        [
+          -0.7227476431596864,
+          1507.4375033123742,
+          -0.7227937529920209
+        ],
+        [
+          -0.7227672187861282,
+          -0.7227937668953079,
+          1507.2519418995719
+        ]
+      ],
+      "resistance_reciprocity_error": 9.205704059743548e-12,
+      "minimum_resistance_eigenvalue": 1505.9801916324461,
+      "maximum_mole_error": 2.220446049250313e-16,
+      "maximum_liquid_error": 0.0,
+      "maximum_pressure_residual_Pa": 2.389210625595095e-12,
+      "maximum_inner_residual": 6.780554274564688e-13,
+      "maximum_cap_flux_error": 1.676988096579325e-14,
+      "maximum_GCL_error": 9.264486811467012e-12,
+      "maximum_energy_tolerance_ratio": 0.007767197180200545,
+      "maximum_mechanical_tolerance_ratio": 0.0013581189737867487,
+      "maximum_potential_increase_ratio": -4967603.597029394,
+      "minimum_dissipation": 5.655308015414715e-16,
+      "maximum_Re": 0.00015789333587511327,
+      "minimum_c": 0.9998199267199799,
+      "minimum_sigma_N_m": 0.029999991004121113,
+      "maximum_contact_mismatch": 4.81263381924002e-07,
+      "final_SIP_fraction": 0.3593492123442186,
+      "final_flux_m2_s": [
+        6.752931781813656e-19,
+        -8.582614681512062e-14,
+        8.581822387588418e-14
+      ],
+      "final_scale": 1.000000000009214,
+      "minimum_film_volume_m2": 7.999996149965085e-09,
+      "minimum_film_length_m": 0.009999999999998037,
+      "maximum_concentration_departure": 0.00018007328002012102,
+      "initial_total_potential": 1.3000081086471582e-08,
+      "wall_seconds": 55.540678600082174
+    },
+    {
+      "name": "continuous-equilibrium",
+      "n": 96,
+      "dt": 0.01,
+      "T": 0.01,
+      "dp": 0.0,
+      "cf": [
+        1,
+        1,
+        1
+      ],
+      "steps": 1,
+      "nodes": 1609,
+      "pressure_loads_Pa": [
+        -74.99334357554551,
+        -74.99334357554551,
+        -74.99334357554551
+      ],
+      "balance_pressure_Pa": -74.99334357554551,
+      "initial_total_amount_nd": 4.133191595454443,
+      "initial_total_liquid_nd": 0.31136301650597853,
+      "initial_entropy": 0.0,
+      "capillary_derivative": -4.8404608548877075,
+      "initial_area_nd": 0.1613630165059785,
+      "initial_surface_rate_sum": -0.0080674347581461,
+      "native_resistance": [
+        [
+          1598.669579789509,
+          -0.7777875700867091,
+          -0.7771447154192224
+        ],
+        [
+          -0.7777875486790568,
+          1599.7208142473344,
+          -0.7772038530347452
+        ],
+        [
+          -0.7771447210001755,
+          -0.7772038731017479,
+          1600.2313225046432
+        ]
+      ],
+      "resistance_reciprocity_error": 1.5246509131056726e-11,
+      "minimum_resistance_eigenvalue": 1597.7947948658928,
+      "maximum_mole_error": 0.0,
+      "maximum_liquid_error": 0.0,
+      "maximum_pressure_residual_Pa": 0.0,
+      "maximum_inner_residual": 0.0,
+      "maximum_cap_flux_error": 0.0,
+      "maximum_GCL_error": 0.0,
+      "maximum_energy_tolerance_ratio": 0.0,
+      "maximum_mechanical_tolerance_ratio": 0.0,
+      "maximum_potential_increase_ratio": 0.0,
+      "minimum_dissipation": 0.0,
+      "maximum_Re": 0.0,
+      "minimum_c": 1.0,
+      "minimum_sigma_N_m": 0.03,
+      "maximum_contact_mismatch": 2.220446049250313e-16,
+      "final_SIP_fraction": 0.0,
+      "final_flux_m2_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "final_scale": 1.0,
+      "minimum_film_volume_m2": 8e-09,
+      "minimum_film_length_m": 0.01,
+      "maximum_concentration_departure": 0.0,
+      "initial_total_potential": 0.0,
+      "wall_seconds": 0.701955699827522
+    }
+  ],
+  "checks": {
+    "positive": true,
+    "liquid_and_moles": true,
+    "joint_and_port": true,
+    "cap_and_GCL": true,
+    "closed_energy": true,
+    "potential": true,
+    "nonnegative_dissipation": true,
+    "creeping": true,
+    "continuity": true,
+    "zero_constraint_chemical_work": true,
+    "equilibrium": true
+  },
+  "wall_seconds": 341.28335819998756
+}

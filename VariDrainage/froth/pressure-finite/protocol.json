@@ -1,0 +1,149 @@
+{
+  "git_base": "1bd03dd5231fccaabb2895ce62fac9902abed121",
+  "source_sha256": {
+    "foam/scripts/pressure_finite_films.py": "2a346eb0d46dea5731bc2ec719d66217c70b8ad6608c8b06533093e8f8f4d224",
+    "foam/scripts/run_pressure_finite.py": "d998fe309f6b42cb966c8ffeebde8e198254e524aa024d72e22ad7af6a3bb800",
+    "foam/scripts/moving_finite_films.py": "18db460f562f2e915a05512165e2ae0eefc50b12713300bd7dd9d0dc2b21a420",
+    "foam/scripts/coupled_open_section.py": "59d93b1152193eaa2360f90ddd170e6e7b363ce390b2ecbb758ea34b7f9e2a09",
+    "foam/scripts/open_section_transport.py": "278d654ac2b509458871dd6d8d201e8c13b3f60687ef282743c79a9ca2c5ea3b",
+    "foam/scripts/section_advection.py": "dd5de46e64b336362683b75067b880e774380ed6e71a8144aea962c34bef128f",
+    "foam/scripts/border_section_transport.py": "1f1cda9c337999d8244c09eaf61e3d1830773dacb85c5e005e402c307ad6eef4",
+    "foam/docs/pressure_finite_protocol.md": "20dc6a4d238c3ab8bd4d15d1389c726d216d9c4741263d1b488f65b6f9380fef"
+  },
+  "versions": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "skfem": "12.0.2"
+  },
+  "configs": [
+    {
+      "name": "equilibrium",
+      "n": 96,
+      "dt": 0.01,
+      "T": 0.02,
+      "dp": 0.0,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "pressure-main",
+      "n": 96,
+      "dt": 0.01,
+      "T": 0.05,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "pressure-half",
+      "n": 96,
+      "dt": 0.005,
+      "T": 0.05,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "donor-bias",
+      "n": 96,
+      "dt": 0.01,
+      "T": 0.05,
+      "dp": 0.01,
+      "cf": [
+        1.0001,
+        1.0001,
+        1.0001
+      ]
+    },
+    {
+      "name": "chemical-only",
+      "n": 96,
+      "dt": 0.01,
+      "T": 0.05,
+      "dp": 0.0,
+      "cf": [
+        1,
+        1.0001,
+        0.9999
+      ]
+    },
+    {
+      "name": "pressure-fine",
+      "n": 192,
+      "dt": 0.01,
+      "T": 0.05,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "pressure-reverse",
+      "n": 96,
+      "dt": 0.01,
+      "T": 0.05,
+      "dp": -0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "negative-endpoint",
+      "n": 96,
+      "dt": 0.01,
+      "T": 0.01,
+      "dp": 0.01,
+      "cf": [
+        1.0001,
+        1.0001,
+        1.0001
+      ],
+      "negative": true
+    },
+    {
+      "name": "full-capillary",
+      "n": 96,
+      "dt": 1e-05,
+      "T": 1e-05,
+      "dp": null,
+      "cf": [
+        1,
+        1,
+        1
+      ],
+      "out_of_regime": true
+    }
+  ],
+  "scope": "pressure-loaded uniform finite stocks and constrained homothetic section, not spatial film drainage/free foam",
+  "material": {
+    "r0_m": 0.0004,
+    "h0_m": 8e-07,
+    "eta_m": 1e-05,
+    "D_m2_s": 5e-10,
+    "mu_Pa_s": 0.001,
+    "RT_J_mol": 2500,
+    "cstar_mol_m3": 0.002,
+    "sigma_equilibrium_N_m": 0.03,
+    "film_length_m": 0.01
+  },
+  "readout_sha256": {
+    "foam/scripts/audit_pressure_finite.py": "ff45d4b466de833938eca450dedc0527a83dd02bca442e4cce3ceae5ff44d497",
+    "foam/scripts/audit_continuous_pressure.py": "e223af53de97f9c941efa14d5429d1019a86890d18aacdb723a7b21179b9361d",
+    "foam/scripts/report_pressure_contact.py": "c15450498244638208ee9b8de1a8f7f359d356415c80862c5cf3dd0852710d8a",
+    "foam/scripts/pressure_contact_page.html": "c69569aea33fd6f74b06cbe1cf5af64b91362360c803b6036f655ff3208cb734"
+  }
+}

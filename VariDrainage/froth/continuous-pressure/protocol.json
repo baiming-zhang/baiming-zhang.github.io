@@ -1,0 +1,88 @@
+{
+  "git_base": "1bd03dd5231fccaabb2895ce62fac9902abed121",
+  "source_sha256": {
+    "foam/scripts/run_continuous_pressure.py": "2f2b4e147d0ee821c2fc8b8f843d574bce92c8e0d2d437b1afadd82600aee4c2",
+    "foam/scripts/run_pressure_finite.py": "ae4071f536047a1ac3b89c1b74747deb0c2d61ab78192883e9ab7bedf9b51cca",
+    "foam/scripts/continuous_pressure_films.py": "737bb1a4bdde752f8f11cde684a4a7c42a1862ca876deab76a85ae6f051974ad",
+    "foam/scripts/pressure_finite_films.py": "56fa993991eefeefbf4d819fb4d63771eac74d0bb0ad588d1b2571493a2d7ba0",
+    "foam/scripts/moving_finite_films.py": "18db460f562f2e915a05512165e2ae0eefc50b12713300bd7dd9d0dc2b21a420",
+    "foam/scripts/open_section_transport.py": "278d654ac2b509458871dd6d8d201e8c13b3f60687ef282743c79a9ca2c5ea3b",
+    "foam/scripts/border_section_transport.py": "1f1cda9c337999d8244c09eaf61e3d1830773dacb85c5e005e402c307ad6eef4",
+    "foam/docs/continuous_pressure_protocol.md": "a2a26c37cff39e0a078e32fe23250165f01322e2ef5c1221e106eb8f518b99e8"
+  },
+  "configs": [
+    {
+      "name": "continuous-main",
+      "n": 192,
+      "dt": 0.01,
+      "T": 0.02,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "continuous-fine",
+      "n": 288,
+      "dt": 0.01,
+      "T": 0.02,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "continuous-half",
+      "n": 192,
+      "dt": 0.005,
+      "T": 0.02,
+      "dp": 0.01,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "continuous-chemical",
+      "n": 192,
+      "dt": 0.01,
+      "T": 0.02,
+      "dp": 0.0,
+      "cf": [
+        1,
+        1.0001,
+        0.9999
+      ]
+    },
+    {
+      "name": "continuous-equilibrium",
+      "n": 96,
+      "dt": 0.01,
+      "T": 0.01,
+      "dp": 0.0,
+      "cf": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "versions": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "skfem": "12.0.2"
+  },
+  "scope": "finite well-mixed stock / perfect chemical contact limit, not resolved film resistance or free foam",
+  "readout_sha256": {
+    "foam/scripts/audit_pressure_finite.py": "ff45d4b466de833938eca450dedc0527a83dd02bca442e4cce3ceae5ff44d497",
+    "foam/scripts/audit_continuous_pressure.py": "e223af53de97f9c941efa14d5429d1019a86890d18aacdb723a7b21179b9361d",
+    "foam/scripts/report_pressure_contact.py": "c15450498244638208ee9b8de1a8f7f359d356415c80862c5cf3dd0852710d8a",
+    "foam/scripts/pressure_contact_page.html": "c69569aea33fd6f74b06cbe1cf5af64b91362360c803b6036f655ff3208cb734"
+  }
+}
