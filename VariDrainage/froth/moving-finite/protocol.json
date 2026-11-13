@@ -1,0 +1,140 @@
+{
+  "git_base": "afec53c73e941e6e54b09d426f3da769a4df7a9f",
+  "source_sha256": {
+    "foam/scripts/moving_finite_films.py": "18db460f562f2e915a05512165e2ae0eefc50b12713300bd7dd9d0dc2b21a420",
+    "foam/scripts/run_moving_finite.py": "3928f2c6f9fa9a892a8bbfd59fc38702f5b78cdc8e5e3a20f783ddb2e31afbaf",
+    "foam/scripts/coupled_open_section.py": "59d93b1152193eaa2360f90ddd170e6e7b363ce390b2ecbb758ea34b7f9e2a09",
+    "foam/scripts/open_section_transport.py": "278d654ac2b509458871dd6d8d201e8c13b3f60687ef282743c79a9ca2c5ea3b",
+    "foam/scripts/section_advection.py": "dd5de46e64b336362683b75067b880e774380ed6e71a8144aea962c34bef128f",
+    "foam/scripts/border_section_transport.py": "1f1cda9c337999d8244c09eaf61e3d1830773dacb85c5e005e402c307ad6eef4",
+    "foam/docs/moving_finite_protocol.md": "5bf1c39ed3ebb246be97e0379d9c761a6015e6165a4c25b96171731033445f0e",
+    "foam/scripts/audit_moving_finite.py": "30f1292414051430a4fe46f6438d2a622c2b6aef4f471c2d1c074be6ea8a5993",
+    "foam/scripts/report_moving_finite.py": "c31e9c6ade7ba6cda20acb8a3c510ba85686624fa234399fcbf4d47e8442e0ce",
+    "foam/scripts/moving_finite_page.html": "e3ddbf1bc3bdbdb538e327250e85a7094836b308b5df6a9d2356135b994c61f0"
+  },
+  "versions": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "skfem": "12.0.2"
+  },
+  "configurations": [
+    {
+      "name": "GCL-uniform",
+      "n": 96,
+      "dt": 0.5,
+      "T": 20.0,
+      "surface": false,
+      "feedback": 0.0,
+      "factor": 1.0
+    },
+    {
+      "name": "GCL-stress",
+      "n": 96,
+      "dt": 2.0,
+      "T": 100.0,
+      "surface": false,
+      "feedback": 0.0,
+      "factor": 10.0
+    },
+    {
+      "name": "negative-no-mesh",
+      "n": 96,
+      "dt": 2.0,
+      "T": 2.0,
+      "surface": false,
+      "feedback": 0.0,
+      "factor": 10.0,
+      "negative": true
+    },
+    {
+      "name": "moving-dt20",
+      "n": 192,
+      "dt": 0.02,
+      "T": 0.2,
+      "surface": true,
+      "feedback": 1.0,
+      "factor": 1.0
+    },
+    {
+      "name": "moving-main",
+      "n": 192,
+      "dt": 0.01,
+      "T": 0.2,
+      "surface": true,
+      "feedback": 1.0,
+      "factor": 1.0
+    },
+    {
+      "name": "moving-dt5",
+      "n": 192,
+      "dt": 0.005,
+      "T": 0.2,
+      "surface": true,
+      "feedback": 1.0,
+      "factor": 1.0
+    },
+    {
+      "name": "moving-fine",
+      "n": 288,
+      "dt": 0.01,
+      "T": 0.2,
+      "surface": true,
+      "feedback": 1.0,
+      "factor": 1.0
+    },
+    {
+      "name": "moving-off",
+      "n": 192,
+      "dt": 0.01,
+      "T": 0.2,
+      "surface": true,
+      "feedback": 0.0,
+      "factor": 1.0
+    },
+    {
+      "name": "growth-joint",
+      "n": 96,
+      "dt": 0.5,
+      "T": 20.0,
+      "surface": true,
+      "feedback": 1.0,
+      "factor": 10.0
+    },
+    {
+      "name": "balanced-regression",
+      "n": 192,
+      "dt": 0.01,
+      "T": 0.2,
+      "surface": true,
+      "feedback": 1.0,
+      "factor": 1.0,
+      "balanced": true
+    },
+    {
+      "name": "no-flow",
+      "n": 96,
+      "dt": 0.02,
+      "T": 0.2,
+      "surface": true,
+      "feedback": 1.0,
+      "factor": 0.0
+    }
+  ],
+  "scope": "externally forced homothetic section; not free drainage, foam, coarsening or rupture",
+  "units": {
+    "r0_m": 0.0004,
+    "h0_m": 8e-07,
+    "eta_m": 1e-05,
+    "D_m2_s": 5e-10,
+    "mu_Pa_s": 0.001,
+    "RT_J_mol": 2500,
+    "cstar_mol_m3": 0.002,
+    "q0_m2_s": 8e-13,
+    "film_lengths_m": [
+      0.01,
+      0.01,
+      0.01
+    ]
+  }
+}
