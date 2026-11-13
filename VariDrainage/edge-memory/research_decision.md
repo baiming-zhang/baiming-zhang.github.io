@@ -63,3 +63,18 @@ The18-case run finishes. Add DC-response-corrected slow modes at the same
 state caps before making an efficiency/accuracy comparison. Plain low modes
 can otherwise have a known port-feedthrough cancellation error. This extension
 does not change any original result, signal, physical parameter or gate.
+
+## Graphics-specific primary-work cross-check
+
+Four additional primary papers were checked at the abstract/method-overview level:
+
+- [Huang et al.2020, Chemomechanical Simulation](https://doi.org/10.1145/3386569.3392094): lubrication-based thickness/surfactant/Marangoni dynamics on spherical bubbles; these coupled fields are already established in graphics.
+- [Ishida et al.2020, Evolving Thickness](https://doi.org/10.1145/3386569.3392405): evolving film thickness in deforming bubble/film simulation, including drainage-related visual effects; a moving thickness field is not the contribution here.
+- [Tao et al.2024, Vortex Particle-on-Mesh](https://doi.org/10.1145/3658165): circulation/dilatation decomposition, deforming-film vortices and thickness/surfactant coupling; a particle/mesh hybrid or vivid vortices alone would not distinguish this project.
+- [Liu et al.2015, Model-Reduced Variational Fluid Simulation](https://doi.org/10.1145/2816795.2818130): reduced variational fluid integration with energy/boundary treatment; a variational low-dimensional fluid model is established prior art.
+
+These are additional exclusions of broad novelty claims, not an exhaustive
+proof that the proposed edge coupling is novel. Their detailed boundary
+treatments need equation-level comparison before any paper-priority claim.
+The current pilot establishes a reusable numerical component; C1 novelty must
+come from the nonlinear, stateful local-to-global edge method and evidence.
