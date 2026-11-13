@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "h_m": 6e-06,
+      "tau_s": 2.5411352857498318e-06,
+      "time_to_99_percent_flux_s": 1.1665332679948244e-05,
+      "samples": [
+        {
+          "t_us": 10,
+          "flux_response": 0.980741838145795,
+          "top_traction_response": 0.9841607967505706
+        },
+        {
+          "t_us": 50,
+          "flux_response": 0.9999999971920641,
+          "top_traction_response": 0.9999999976905652
+        },
+        {
+          "t_us": 200,
+          "flux_response": 1.0,
+          "top_traction_response": 1.0
+        }
+      ]
+    },
+    {
+      "h_m": 1.7358535889365542e-05,
+      "tau_s": 2.1269215394127616e-05,
+      "time_to_99_percent_flux_s": 9.76384353896226e-05,
+      "samples": [
+        {
+          "t_us": 10,
+          "flux_response": 0.3839624643115557,
+          "top_traction_response": 0.4921658899963518
+        },
+        {
+          "t_us": 50,
+          "flux_response": 0.9060870316699126,
+          "top_traction_response": 0.9227596794856348
+        },
+        {
+          "t_us": 200,
+          "flux_response": 0.9999187380866971,
+          "top_traction_response": 0.9999331647552353
+        }
+      ]
+    }
+  ],
+  "gates": {
+    "fv_refines": true,
+    "fv_finest": true,
+    "energy": true,
+    "series": true
+  },
+  "all_diagnostic_gates_pass": true,
+  "truncation_error": 0.0,
+  "wall_s": 0.06200000015087426,
+  "protocol_sha256": "92e512dab1ff45c8b84836809fc05429718c8072ba69e4aed4bc3c83178bef3f",
+  "full_C1_complete": false,
+  "physical_free_film_validated": false,
+  "scope": "Constrained stationary interfaces only; no native free-film validation or C1 completion"
+}
