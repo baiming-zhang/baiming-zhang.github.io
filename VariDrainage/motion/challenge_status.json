@@ -1,0 +1,177 @@
+{
+  "state": "completed",
+  "cases": [
+    {
+      "name": "closed_l50_small",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "50",
+        "0.625",
+        "20",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\closed_l50_small"
+      ],
+      "returncode": 0,
+      "wall_s": 6.187000000150874,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\closed_l50_small.log",
+      "log_sha256": "7443699351504fa82a7c4b5ee717ddec4a61eec0e4eff4c099eafa4340294e1a",
+      "parameters": {
+        "name": "closed_l50_small",
+        "mode": "wall_local",
+        "fine_um": 50,
+        "dt_us": 0.625,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": true,
+      "summary": {
+        "N": 192,
+        "local": true,
+        "fine_um": 49.99999999999999,
+        "dt_s": 6.249999999999999e-07,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.9999999999999998e-05,
+        "steps": 32,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.759999999999997e-12,
+        "S0_per_face_mol": 3.4584840960147342e-12,
+        "initial_film_excess_energy_J": 2.04818154781219e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 1.7984431761846048e-14,
+        "half_drain_action_J": 3.2880095172143957e-20,
+        "momentum_mixing_loss_J": 3.1640213505462763e-20,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 2.2636312577459564e-15,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 4.538561468838997e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 2.5263741715914694e-18,
+        "max_momentum_drain_residual": 6.3638438033541e-16,
+        "max_force_threshold_ratio": 0.0010507267063808207,
+        "max_displacement_m": 6.356259195689895e-07,
+        "min_h_m": 5.96659651192561e-06,
+        "min_theta": 0.9689114571496052,
+        "max_theta": 0.978431646386146,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 160,
+        "cg_iterations": 192,
+        "wall_s": 6.1490049
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l50_small\\frames.csv",
+          "bytes": 1488090,
+          "sha256": "693c5d84af41c1334e71169d919c861ff99c24868c4ffca884fcc6e540a6cef3"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l50_small\\history.csv",
+          "bytes": 13043,
+          "sha256": "71c278bc287db8d8217773ffd3d47e3fb069e04db58de69120926f0506f199a0"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l50_small\\summary.json",
+          "bytes": 1216,
+          "sha256": "b23bbe7dfd4bbed154851ab8dec3039a5c0c486c38f3c3b66f3613356381af5b"
+        }
+      ]
+    },
+    {
+      "name": "closed_u50_smaller",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_uniform",
+        "50",
+        "0.3125",
+        "20",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50_smaller"
+      ],
+      "returncode": 1,
+      "wall_s": 4.781999999890104,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\closed_u50_smaller.log",
+      "log_sha256": "61d1236a517906c6a04d83b7ebc0070180fc83f090ea7d957a884bb9b6753e0a",
+      "parameters": {
+        "name": "closed_u50_smaller",
+        "mode": "wall_uniform",
+        "fine_um": 50,
+        "dt_us": 0.3125,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": false,
+      "summary": {
+        "N": 384,
+        "local": false,
+        "fine_um": 49.99999999999999,
+        "dt_s": 3.1249999999999997e-07,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.5624999999999999e-06,
+        "steps": 5,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.7600000000000005e-12,
+        "S0_per_face_mol": 3.4584830418186233e-12,
+        "initial_film_excess_energy_J": 2.0415689947682066e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 2.4563010500572744e-17,
+        "half_drain_action_J": 9.792305496148058e-26,
+        "momentum_mixing_loss_J": 3.7048749484958073e-25,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 9.701276818911237e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.0691156617302766e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 6.31593542897867e-19,
+        "max_momentum_drain_residual": 3.324536201166847e-17,
+        "max_force_threshold_ratio": 6.140935701384011e-06,
+        "max_displacement_m": 6.129039472475603e-09,
+        "min_h_m": 5.999638134978449e-06,
+        "min_theta": 0.9688999498587488,
+        "max_theta": 0.9784438240419323,
+        "material_crossings": 0,
+        "coupled_failures": 1,
+        "newton_iterations": 78,
+        "cg_iterations": 84,
+        "wall_s": 4.6959969
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50_smaller\\frames.csv",
+          "bytes": 526312,
+          "sha256": "82cd00d01ef32dd30bf4f13a32bdef6f0f9425972978babab231a66a3193f9a7"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50_smaller\\history.csv",
+          "bytes": 2316,
+          "sha256": "b020e79c74e8f284577d51c5c97854d138d3a4d58a6f2b2ff97fcfba298c3a7b"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50_smaller\\summary.json",
+          "bytes": 1216,
+          "sha256": "95fde08bd7b6873c000a4b274c1627864f7ee1907dcdeacb6c63c8862994762c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,996 @@
+{
+  "state": "completed",
+  "tests": [
+    {
+      "name": "test_moving_voronoi",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_moving_voronoi.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.06299999984912574,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\test_moving_voronoi.log",
+      "log_sha256": "186d10e1f2350b36242a76056c3308008809ebe3ca53a94d522cf22ab5035539"
+    },
+    {
+      "name": "test_voronoi_drainage",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_voronoi_drainage.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.01600000006146729,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\test_voronoi_drainage.log",
+      "log_sha256": "cc178441acf68b006a4a6c2a5cd75a956ae2ff80401d76588ddf4eb2f5c4fc11"
+    },
+    {
+      "name": "test_overlap_transfer",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_overlap_transfer.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.014999999897554517,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\test_overlap_transfer.log",
+      "log_sha256": "19cc7535184eb4986bef9282d34a9f824728f35c48ff8c2cbc8aff8cb6905e12"
+    },
+    {
+      "name": "test_thinfilm",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_thinfilm.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 25.438000000081956,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\test_thinfilm.log",
+      "log_sha256": "85729c64ea6728de36b53a9a2e7b56f4b8e1bf86af94558adda0b38dc7230e24"
+    }
+  ],
+  "cases": [
+    {
+      "name": "guard_equilibrium",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "2.5",
+        "5",
+        "0",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\guard_equilibrium"
+      ],
+      "returncode": 0,
+      "wall_s": 0.030999999959021807,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\guard_equilibrium.log",
+      "log_sha256": "c8a0e9e304df4de4f48d316e7aa44845ab5ba5be80a91c86c61d8ef7949b8394",
+      "parameters": {
+        "name": "guard_equilibrium",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 2.5,
+        "T_us": 5,
+        "amplitude": 0,
+        "radius_um": 0
+      },
+      "passed": true,
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 2.4999999999999998e-06,
+        "requested_T_s": 4.9999999999999996e-06,
+        "T_s": 4.9999999999999996e-06,
+        "steps": 2,
+        "amplitude": 0,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584830371454155e-12,
+        "initial_film_excess_energy_J": 1.3211431504099669e-37,
+        "boundary_work_J": 0,
+        "viscous_action_J": 0,
+        "half_drain_action_J": 0,
+        "momentum_mixing_loss_J": 0,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 0,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 0,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 0,
+        "max_momentum_drain_residual": 0,
+        "max_force_threshold_ratio": 0.01321485605176911,
+        "max_displacement_m": 0,
+        "min_h_m": 6e-06,
+        "min_theta": 0.9736720262233716,
+        "max_theta": 0.9736720262233718,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 0,
+        "cg_iterations": 0,
+        "wall_s": 0.0161892
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_equilibrium\\frames.csv",
+          "bytes": 27266,
+          "sha256": "f691f682c9e40fbe12bd0393ce069bde2f94c2e7dcceab55d73265b02c8f7396"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_equilibrium\\history.csv",
+          "bytes": 699,
+          "sha256": "2f776249bfe6dc7580cf67950e771cc3432f5ae46854895e13dfcc2a3f230ba9"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_equilibrium\\summary.json",
+          "bytes": 1026,
+          "sha256": "34e848f361cb48ae37108c7cbc9ce3bc1f9c578af59fa4b3332788c1eeb18d85"
+        }
+      ]
+    },
+    {
+      "name": "guard_motion",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "2.5",
+        "5",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\guard_motion"
+      ],
+      "returncode": 0,
+      "wall_s": 0.0779999999795109,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\guard_motion.log",
+      "log_sha256": "a8cd091ac009e2dacb95033f81a5b91c9884013e436315403adec36095473331",
+      "parameters": {
+        "name": "guard_motion",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 2.5,
+        "T_us": 5,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": true,
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 2.4999999999999998e-06,
+        "requested_T_s": 4.9999999999999996e-06,
+        "T_s": 4.9999999999999996e-06,
+        "steps": 2,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715077e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 4.471704994600676e-16,
+        "half_drain_action_J": 3.561492564102136e-23,
+        "momentum_mixing_loss_J": 1.5889459747953086e-22,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 3.2337589396370783e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 7.910906196363616e-18,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 2.5371686579225717e-17,
+        "max_force_threshold_ratio": 6.551868145035811e-06,
+        "max_displacement_m": 6.493258184419251e-08,
+        "min_h_m": 5.996803260977044e-06,
+        "min_theta": 0.9693180120903415,
+        "max_theta": 0.9779929964964297,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 12,
+        "cg_iterations": 18,
+        "wall_s": 0.0539308
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_motion\\frames.csv",
+          "bytes": 31191,
+          "sha256": "558ce81eea180fcb1aa5c3fe4867a791711b0d5d40e852d7ee9b173739ed8258"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_motion\\history.csv",
+          "bytes": 1119,
+          "sha256": "dce5818c68a5a334e91ee4a4f46d885fa85628fb4b2f3e42328d6ac2bbdb4c7c"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_motion\\summary.json",
+          "bytes": 1217,
+          "sha256": "0eb712f519b96fe85fb55eb39184b57f46d0a1404fa302786d6258fb92029ae5"
+        }
+      ]
+    },
+    {
+      "name": "guard_open",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "2.5",
+        "5",
+        "0.005",
+        "500",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\guard_open"
+      ],
+      "returncode": 0,
+      "wall_s": 0.0779999999795109,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\guard_open.log",
+      "log_sha256": "ce3430e0cff58ecd5473c01650a2320ac1128b4194fde910013d320dd667c822",
+      "parameters": {
+        "name": "guard_open",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 2.5,
+        "T_us": 5,
+        "amplitude": 0.005,
+        "radius_um": 500
+      },
+      "passed": true,
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 2.4999999999999998e-06,
+        "requested_T_s": 4.9999999999999996e-06,
+        "T_s": 4.9999999999999996e-06,
+        "steps": 2,
+        "amplitude": 0.005,
+        "radius_m": 0.0005,
+        "boundary_mu_Pa": -77.27958511871006,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0.00032175055439664213,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715126e-12,
+        "boundary_work_J": 2.8825748436272544e-15,
+        "viscous_action_J": 3.6206049649900347e-16,
+        "half_drain_action_J": 1.4412750777779491e-15,
+        "momentum_mixing_loss_J": 1.7629672304286806e-18,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 1.6168794698185392e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.7345719920604192e-17,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 6.255772369556419e-17,
+        "max_force_threshold_ratio": 1.1487427513783204e-05,
+        "max_displacement_m": 6.077438304690146e-08,
+        "min_h_m": 5.996615626118994e-06,
+        "min_theta": 0.9691748277649708,
+        "max_theta": 0.978147435811487,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 12,
+        "cg_iterations": 18,
+        "wall_s": 0.0566166
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_open\\frames.csv",
+          "bytes": 30510,
+          "sha256": "cc3a48b907d5b22b34f76109c25f2a16e49a74d928b464f04810f0e0b3c9c7c8"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_open\\history.csv",
+          "bytes": 1141,
+          "sha256": "3ab1578f4e72af854305c84c2aa44863ae7bedfd304669b6079e575f583a9baa"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\guard_open\\summary.json",
+          "bytes": 1296,
+          "sha256": "0c354a384b242bc85e50230543ee9560d339e7a2fd108ecc34d5a8ec22e4ad84"
+        }
+      ]
+    },
+    {
+      "name": "closed_l100",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "1.25",
+        "20",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\closed_l100"
+      ],
+      "returncode": 0,
+      "wall_s": 0.3130000000819564,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\closed_l100.log",
+      "log_sha256": "677250eca9e5c746ae7eb63fcbd809247cc3a25aeac8cc77f108e398d13612d9",
+      "parameters": {
+        "name": "closed_l100",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 1.25,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": true,
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.9999999999999998e-05,
+        "steps": 16,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715077e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 1.0541253616700646e-14,
+        "half_drain_action_J": 3.2484769537560126e-21,
+        "momentum_mixing_loss_J": 1.4506182513529534e-20,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 4.8506384094556175e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.196588694125002e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 3.3306951893030027e-16,
+        "max_force_threshold_ratio": 0.0016349048925861744,
+        "max_displacement_m": 5.783133304164864e-07,
+        "min_h_m": 5.971735064868433e-06,
+        "min_theta": 0.9692002342796658,
+        "max_theta": 0.9781249480027782,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 80,
+        "cg_iterations": 96,
+        "wall_s": 0.3007932
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l100\\frames.csv",
+          "bytes": 189996,
+          "sha256": "d4fa66b8d8b9a6f8196bb0229f9d62858c47fc50b7dc6c44bcbf14eee07660b1"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l100\\history.csv",
+          "bytes": 6562,
+          "sha256": "c852de74f79065e34eafc9c70c970412d6acdf1720bdf46f7ef05b28faec7e02"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l100\\summary.json",
+          "bytes": 1217,
+          "sha256": "61735c57673e36a2a0943f6af04f452a6d2e9c433c65c6bf6118fc58cfe95b77"
+        }
+      ]
+    },
+    {
+      "name": "closed_u100",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_uniform",
+        "100",
+        "1.25",
+        "20",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\closed_u100"
+      ],
+      "returncode": 0,
+      "wall_s": 0.9379999998491257,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\closed_u100.log",
+      "log_sha256": "9868620fdb1389441a9264d85668dcf5e7b0771cf9446025fc620eff6bb54df7",
+      "parameters": {
+        "name": "closed_u100",
+        "mode": "wall_uniform",
+        "fine_um": 100,
+        "dt_us": 1.25,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": true,
+      "summary": {
+        "N": 96,
+        "local": false,
+        "fine_um": 99.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.9999999999999998e-05,
+        "steps": 16,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.759999999999999e-12,
+        "S0_per_face_mol": 3.458486009772294e-12,
+        "initial_film_excess_energy_J": 2.0413171537787606e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 1.5018522031667817e-14,
+        "half_drain_action_J": 8.240335183007889e-22,
+        "momentum_mixing_loss_J": 1.384895509382034e-20,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 6.46751787927416e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 7.38248544584306e-17,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 2.5263741715914686e-18,
+        "max_momentum_drain_residual": 1.864712331336404e-16,
+        "max_force_threshold_ratio": 0.0007953181427065751,
+        "max_displacement_m": 5.827601717292172e-07,
+        "min_h_m": 5.97146964641379e-06,
+        "min_theta": 0.9691987157676635,
+        "max_theta": 0.9781308993413214,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 80,
+        "cg_iterations": 96,
+        "wall_s": 0.9222725
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u100\\frames.csv",
+          "bytes": 380434,
+          "sha256": "d7948f24918e8853f171311d71273634005188b4f0c18044ddd5afac47e59d8c"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u100\\history.csv",
+          "bytes": 6644,
+          "sha256": "c108f0b7c1e769fe74f7dfaa79f8c5d7f64cde3fc2f5e6c09517c3abd8672973"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u100\\summary.json",
+          "bytes": 1219,
+          "sha256": "5e53fbca06866d949237f3885ac84cf2f6e0b27b015210d0ad32da28eaa552d4"
+        }
+      ]
+    },
+    {
+      "name": "closed_l50",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "50",
+        "1.25",
+        "20",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\closed_l50"
+      ],
+      "returncode": 0,
+      "wall_s": 4.640000000130385,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\closed_l50.log",
+      "log_sha256": "6416d8a3c9634f4da8b48a2959c7435ee88ab644a480a7e2722afd17907efb01",
+      "parameters": {
+        "name": "closed_l50",
+        "mode": "wall_local",
+        "fine_um": 50,
+        "dt_us": 1.25,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": true,
+      "summary": {
+        "N": 192,
+        "local": true,
+        "fine_um": 49.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.9999999999999998e-05,
+        "steps": 16,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.759999999999997e-12,
+        "S0_per_face_mol": 3.4584840960147342e-12,
+        "initial_film_excess_energy_J": 2.04818154781219e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 1.7382512104929954e-14,
+        "half_drain_action_J": 2.996100147428118e-20,
+        "momentum_mixing_loss_J": 2.936796874020154e-20,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 1.6168794698185404e-15,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 2.5291626857454526e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 2.5263741715914694e-18,
+        "max_momentum_drain_residual": 3.8630449918673234e-16,
+        "max_force_threshold_ratio": 0.16082906264482924,
+        "max_displacement_m": 6.293902024031366e-07,
+        "min_h_m": 5.967011913234136e-06,
+        "min_theta": 0.9689455695218335,
+        "max_theta": 0.9783853344576081,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 96,
+        "cg_iterations": 144,
+        "wall_s": 4.5940613
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l50\\frames.csv",
+          "bytes": 762415,
+          "sha256": "c8f92fa5ed9a0a4dfb1871438669665463e9c959371d3cea3af1b4e086fff0b6"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l50\\history.csv",
+          "bytes": 6673,
+          "sha256": "2ae003215c1806ab4783d778dfa11e3a64bfe6ecc3137aaf074a231103d34f0c"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_l50\\summary.json",
+          "bytes": 1215,
+          "sha256": "9103e61600c4506209c196d72556f89879225dc66a07b0ffd1b2f4cd8af022d5"
+        }
+      ]
+    },
+    {
+      "name": "closed_u50",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_uniform",
+        "50",
+        "1.25",
+        "20",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50"
+      ],
+      "returncode": 1,
+      "wall_s": 1.1409999998286366,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\closed_u50.log",
+      "log_sha256": "9d2db061818e96bcba20727e7815427fdadef5aa881be9e066044a3b5fccf16f",
+      "parameters": {
+        "name": "closed_u50",
+        "mode": "wall_uniform",
+        "fine_um": 50,
+        "dt_us": 1.25,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": false,
+      "summary": {
+        "N": 384,
+        "local": false,
+        "fine_um": 49.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 0,
+        "steps": 0,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.7600000000000005e-12,
+        "S0_per_face_mol": 3.4584830418186233e-12,
+        "initial_film_excess_energy_J": 2.0415689947682066e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 0,
+        "half_drain_action_J": 0,
+        "momentum_mixing_loss_J": 0,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 0,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 0,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 0,
+        "max_momentum_drain_residual": 0,
+        "max_force_threshold_ratio": 0,
+        "max_displacement_m": 0,
+        "min_h_m": 1e+100,
+        "min_theta": 1,
+        "max_theta": 0,
+        "material_crossings": 0,
+        "coupled_failures": 1,
+        "newton_iterations": 54,
+        "cg_iterations": 57,
+        "wall_s": 1.050107
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50\\frames.csv",
+          "bytes": 67634,
+          "sha256": "b212eca8dcc41eeaa409d5fe146ec09962d7d6f24341b1f8f874531308192961"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50\\history.csv",
+          "bytes": 325,
+          "sha256": "66e94ab671a1dd073d5c47cf5440e41b41132358628df4bb1dab775d6aa8b734"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50\\summary.json",
+          "bytes": 957,
+          "sha256": "c74db92788bd910d1e6b4402e97d7d9cf5ad20562953e550ccb253192e634afb"
+        }
+      ]
+    },
+    {
+      "name": "closed_u50_time",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_uniform",
+        "50",
+        "0.625",
+        "20",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50_time"
+      ],
+      "returncode": 0,
+      "wall_s": 25.32799999997951,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\closed_u50_time.log",
+      "log_sha256": "161ccba93595aedd15db004435b820faecb9e89f208a01b83c8be0d964317d34",
+      "parameters": {
+        "name": "closed_u50_time",
+        "mode": "wall_uniform",
+        "fine_um": 50,
+        "dt_us": 0.625,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": true,
+      "summary": {
+        "N": 384,
+        "local": false,
+        "fine_um": 49.99999999999999,
+        "dt_s": 6.249999999999999e-07,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.9999999999999998e-05,
+        "steps": 32,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.7600000000000005e-12,
+        "S0_per_face_mol": 3.4584830418186233e-12,
+        "initial_film_excess_energy_J": 2.0415689947682066e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 2.083713292362778e-14,
+        "half_drain_action_J": 1.6600807819467717e-21,
+        "momentum_mixing_loss_J": 1.1436847680706965e-20,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 1.4551915228366854e-15,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 2.481349515252048e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 9.473903143468005e-19,
+        "max_momentum_drain_residual": 1.8724715759348315e-16,
+        "max_force_threshold_ratio": 0.0007099626134915936,
+        "max_displacement_m": 6.368792119307282e-07,
+        "min_h_m": 5.96655554101765e-06,
+        "min_theta": 0.9689085171724005,
+        "max_theta": 0.9784322406152988,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 164,
+        "cg_iterations": 196,
+        "wall_s": 25.2357016
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50_time\\frames.csv",
+          "bytes": 2982628,
+          "sha256": "74c89982957b4d35e5065694a39d55a38823cd6dbc79645d40b578d16054f12e"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50_time\\history.csv",
+          "bytes": 12994,
+          "sha256": "b155e127653b0f9ab97f3eb848b9f7048f29bd2ae812ca06549e1fa213432d21"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\closed_u50_time\\summary.json",
+          "bytes": 1221,
+          "sha256": "c579cbe7c0f7d5d13734054ce91937f4b5e2d0a2bfecaf69741750bbf2e19997"
+        }
+      ]
+    },
+    {
+      "name": "open_l50",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "50",
+        "1.25",
+        "20",
+        "0.005",
+        "500",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\open_l50"
+      ],
+      "returncode": 0,
+      "wall_s": 4.155999999959022,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\open_l50.log",
+      "log_sha256": "fda5c8731f56fb340e869f91f5585f17933d322be05eca7cc5c96efa31714415",
+      "parameters": {
+        "name": "open_l50",
+        "mode": "wall_local",
+        "fine_um": 50,
+        "dt_us": 1.25,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 500
+      },
+      "passed": true,
+      "summary": {
+        "N": 192,
+        "local": true,
+        "fine_um": 49.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.9999999999999998e-05,
+        "steps": 16,
+        "amplitude": 0.005,
+        "radius_m": 0.0005,
+        "boundary_mu_Pa": -77.27958511871006,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0.00032175055439664213,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.759999999999997e-12,
+        "S0_per_face_mol": 3.4584840960147342e-12,
+        "initial_film_excess_energy_J": 2.0481815478122005e-12,
+        "boundary_work_J": 2.2897733631898783e-14,
+        "viscous_action_J": 1.767269956066936e-14,
+        "half_drain_action_J": 1.1444292058764316e-14,
+        "momentum_mixing_loss_J": 1.0470080341550282e-16,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 1.6168794698185404e-15,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 2.622178646559934e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 2.5263741715914694e-18,
+        "max_momentum_drain_residual": 3.459587221531619e-16,
+        "max_force_threshold_ratio": 1.0494547721411743e-05,
+        "max_displacement_m": 6.359275206753128e-07,
+        "min_h_m": 5.959823491266417e-06,
+        "min_theta": 0.9689036822277431,
+        "max_theta": 0.9784415595909168,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 96,
+        "cg_iterations": 144,
+        "wall_s": 4.128062
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\open_l50\\frames.csv",
+          "bytes": 751691,
+          "sha256": "ff4e7da242fdf909baef3a450caaf9248883a749e8572fad330e3b47227d4022"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\open_l50\\history.csv",
+          "bytes": 7023,
+          "sha256": "e82f4cab1c4e4ae1a10f872d60dc63df6f597f71b9483c0b09f6e0bffd1714bf"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\open_l50\\summary.json",
+          "bytes": 1298,
+          "sha256": "34e58f1b4cf0779f506ffc546d36daf25a5f7a9acc11c899576e1eec37c31f08"
+        }
+      ]
+    },
+    {
+      "name": "open_u50",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_uniform",
+        "50",
+        "1.25",
+        "20",
+        "0.005",
+        "500",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\open_u50"
+      ],
+      "returncode": 0,
+      "wall_s": 16.813000000081956,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\open_u50.log",
+      "log_sha256": "93fd3b7a5b84b99530d76ebd2c65e3c797b79df9948b71519e4c4f8c7240a848",
+      "parameters": {
+        "name": "open_u50",
+        "mode": "wall_uniform",
+        "fine_um": 50,
+        "dt_us": 1.25,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 500
+      },
+      "passed": true,
+      "summary": {
+        "N": 384,
+        "local": false,
+        "fine_um": 49.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.9999999999999998e-05,
+        "steps": 16,
+        "amplitude": 0.005,
+        "radius_m": 0.0005,
+        "boundary_mu_Pa": -77.27958511871006,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0.00032175055439664213,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.7600000000000005e-12,
+        "S0_per_face_mol": 3.4584830418186233e-12,
+        "initial_film_excess_energy_J": 2.0415689947681957e-12,
+        "boundary_work_J": 2.295129536299203e-14,
+        "viscous_action_J": 2.0350118485323985e-14,
+        "half_drain_action_J": 1.1471032950593937e-14,
+        "momentum_mixing_loss_J": 1.0508959515905249e-16,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 1.6168794698185394e-15,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.7493893740495706e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 9.473903143468005e-19,
+        "max_momentum_drain_residual": 2.338639879545913e-16,
+        "max_force_threshold_ratio": 1.010241114504234e-05,
+        "max_displacement_m": 6.362106804677307e-07,
+        "min_h_m": 5.95994756998289e-06,
+        "min_theta": 0.9689013327419146,
+        "max_theta": 0.9784405604147796,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 96,
+        "cg_iterations": 144,
+        "wall_s": 16.7202525
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\open_u50\\frames.csv",
+          "bytes": 1517126,
+          "sha256": "2be5325685818e63c0d38585d77e14b4953717aa630825a9a6b2ae3c37ebda8c"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\open_u50\\history.csv",
+          "bytes": 6990,
+          "sha256": "3abbb136a4073aac58cdf445b4eb50871e20e6f3a2d07f8f28a8516831c5ca27"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\open_u50\\summary.json",
+          "bytes": 1301,
+          "sha256": "8c9996107810505b57e6c958b4293f482ca91fec0995653b2afc9d0a0ca2b3be"
+        }
+      ]
+    },
+    {
+      "name": "legacy_control",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "local",
+        "100",
+        "2.5",
+        "20",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\moving_voronoi_wall_20261113\\legacy_control"
+      ],
+      "returncode": 0,
+      "wall_s": 0.25,
+      "log": "results\\logs\\moving_voronoi_wall_20261113\\legacy_control.log",
+      "log_sha256": "55cb1d9ebb3c02fce7dfd7f2393a34722200045f870cce03514db0032b0aba9e",
+      "parameters": {
+        "name": "legacy_control",
+        "mode": "local",
+        "fine_um": 100,
+        "dt_us": 2.5,
+        "T_us": 20,
+        "amplitude": 0.005,
+        "radius_um": 0
+      },
+      "passed": true,
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 2.4999999999999998e-06,
+        "requested_T_s": 1.9999999999999998e-05,
+        "T_s": 1.9999999999999998e-05,
+        "steps": 8,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715077e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 7.443250370414563e-15,
+        "half_drain_action_J": 9.512083538679835e-21,
+        "momentum_mixing_loss_J": 6.512665612357083e-20,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 3.2337589396370783e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 9.758527769792807e-17,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 1.4677043158172746e-16,
+        "max_force_threshold_ratio": 0.558975208531215,
+        "max_displacement_m": 5.646011452205039e-07,
+        "min_h_m": 5.9748628795778966e-06,
+        "min_theta": 0.9691596838737795,
+        "max_theta": 0.9781474576031979,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 48,
+        "cg_iterations": 72,
+        "wall_s": 0.2287387
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\legacy_control\\frames.csv",
+          "bytes": 91212,
+          "sha256": "e27e394489b417cba4b5b9697a8fd2e15318852b5e40342bc4bd7f8b7705a48c"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\legacy_control\\history.csv",
+          "bytes": 3440,
+          "sha256": "86f59e4a47a9c882f7c6da4bee10021bc6a7f0dd460f0499d025d674d38c7112"
+        },
+        {
+          "path": "results\\local-runs\\moving_voronoi_wall_20261113\\legacy_control\\summary.json",
+          "bytes": 1214,
+          "sha256": "6eb0e7635730d722a1869c6ff02b8bf20cf463cd72300ec9414d7961681d3caa"
+        }
+      ]
+    }
+  ],
+  "wall_s": 79.36000000010245,
+  "passed": 10,
+  "attempted": 11
+}

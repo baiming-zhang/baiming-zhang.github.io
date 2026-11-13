@@ -1,0 +1,127 @@
+{
+  "source_commit": "a5d17c9bb8091d87554a362de2736369e2686e6c",
+  "started_utc": "2026-11-13T07:15:08.019808+00:00",
+  "cases": [
+    {
+      "name": "guard_equilibrium",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 2.5,
+      "T_us": 5,
+      "amplitude": 0,
+      "radius_um": 0
+    },
+    {
+      "name": "guard_motion",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 2.5,
+      "T_us": 5,
+      "amplitude": 0.005,
+      "radius_um": 0
+    },
+    {
+      "name": "guard_open",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 2.5,
+      "T_us": 5,
+      "amplitude": 0.005,
+      "radius_um": 500
+    },
+    {
+      "name": "closed_l100",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 1.25,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 0
+    },
+    {
+      "name": "closed_u100",
+      "mode": "wall_uniform",
+      "fine_um": 100,
+      "dt_us": 1.25,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 0
+    },
+    {
+      "name": "closed_l50",
+      "mode": "wall_local",
+      "fine_um": 50,
+      "dt_us": 1.25,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 0
+    },
+    {
+      "name": "closed_u50",
+      "mode": "wall_uniform",
+      "fine_um": 50,
+      "dt_us": 1.25,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 0
+    },
+    {
+      "name": "closed_u50_time",
+      "mode": "wall_uniform",
+      "fine_um": 50,
+      "dt_us": 0.625,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 0
+    },
+    {
+      "name": "open_l50",
+      "mode": "wall_local",
+      "fine_um": 50,
+      "dt_us": 1.25,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 500
+    },
+    {
+      "name": "open_u50",
+      "mode": "wall_uniform",
+      "fine_um": 50,
+      "dt_us": 1.25,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 500
+    },
+    {
+      "name": "legacy_control",
+      "mode": "local",
+      "fine_um": 100,
+      "dt_us": 2.5,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 0
+    }
+  ],
+  "source_hashes": {
+    "thin_film\\scripts\\moving_voronoi_wall\\run.py": "4ce18e5e278385262879760cc4ecb9c6ba86074ce89024716d2d9cdcb75dd592",
+    "thin_film\\scripts\\moving_voronoi_wall\\README.md": "275a8608f120da71629bfb58d957131c9890323eb1da541559c4c2bbe5638685",
+    "thin_film\\bench\\tf_moving_voronoi_bench.cpp": "bba4bb043ff575edb1b97c18851fdbfb62136ee1727e1d4fbadbde8059ea9cec",
+    "thin_film\\include\\vf\\thinfilm\\MovingVoronoiFilm.h": "c2dcaf2623287ce70a57267014ccd639ec42e88ec5199ca74411aaa9a8e2f08d",
+    "thin_film\\include\\vf\\thinfilm\\VoronoiDifferentiation.h": "1dfa0778bdc7aa6b3cba4e8ba7c44bd4e7c3081cff2e37745a0e23410617cd94",
+    "thin_film\\include\\vf\\thinfilm\\VoronoiDrainage.h": "bb02ee42efc7d418568706201227deb7c690cb877395de7d2affc6b2bf1aefbf"
+  },
+  "binary_sha256": "3fb7a2a502256f25bb1fe69ac6bb7a6a2e3e386e2b2c30886adee76c1f7f91cf",
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  },
+  "whole_budget_s": 3300,
+  "per_case_timeout_s": 600,
+  "gates": {
+    "balances": 1e-10,
+    "energy": 1e-07,
+    "h": 0.02,
+    "dynamic_fields": 0.1
+  },
+  "scope": "opt-in face-pyramid symmetric gradient; no-slip actual outer faces; insoluble fixed-domain short-time prototype, no dynamic meniscus"
+}

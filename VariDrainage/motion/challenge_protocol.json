@@ -1,0 +1,30 @@
+{
+  "source_commit": "c4317f10bef9d212c8823ec4a620b61eba7aa62a",
+  "script_sha256": "da761b7391dd1e09da2f30e6cb8c416597679ce20c655d2bf88ca00594a0de7a",
+  "binary_sha256": "3fb7a2a502256f25bb1fe69ac6bb7a6a2e3e386e2b2c30886adee76c1f7f91cf",
+  "started_utc": "2026-11-13T07:17:28.005192+00:00",
+  "cases": [
+    {
+      "name": "closed_l50_small",
+      "mode": "wall_local",
+      "fine_um": 50,
+      "dt_us": 0.625,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 0
+    },
+    {
+      "name": "closed_u50_smaller",
+      "mode": "wall_uniform",
+      "fine_um": 50,
+      "dt_us": 0.3125,
+      "T_us": 20,
+      "amplitude": 0.005,
+      "radius_um": 0
+    }
+  ],
+  "reason": "uniform50um dt1.25us drainage failed; preserve failure, test paired .625us spatial comparison and .625/.3125us temporal comparison",
+  "gates": "unchanged from protocol.json",
+  "whole_budget_s": 1200,
+  "per_case_timeout_s": 600
+}
