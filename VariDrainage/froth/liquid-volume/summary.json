@@ -1,0 +1,409 @@
+{
+  "meshes": [
+    {
+      "name": "liquid7-s020-default",
+      "switches": "pfn",
+      "vertices": 472,
+      "tetrahedra": 934,
+      "expected_volume_m3": 1.6329182892457855e-10,
+      "volume_m3": 1.6329182892457925e-10,
+      "volume_error": 4.218847493575595e-15,
+      "minimum_tet_volume_m3": 1.932165950856193e-15,
+      "positive_tets": true,
+      "usable": true,
+      "elapsed_seconds": 0.43228950002230704
+    },
+    {
+      "name": "liquid7-s020-preserved",
+      "switches": "pMfn",
+      "vertices": 472,
+      "tetrahedra": 934,
+      "expected_volume_m3": 1.6329182892457855e-10,
+      "volume_m3": 1.6329182892457925e-10,
+      "volume_error": 4.218847493575595e-15,
+      "minimum_tet_volume_m3": 1.932165950856193e-15,
+      "positive_tets": true,
+      "usable": true,
+      "elapsed_seconds": 0.4867913001216948
+    },
+    {
+      "name": "liquid7-s010-default",
+      "switches": "pfn",
+      "vertices": 472,
+      "tetrahedra": 934,
+      "expected_volume_m3": 4.084174195988606e-11,
+      "volume_m3": 4.084174195988649e-11,
+      "volume_error": 1.0658141036401503e-14,
+      "minimum_tet_volume_m3": 2.7686824131096576e-16,
+      "positive_tets": true,
+      "usable": true,
+      "elapsed_seconds": 0.5114645001012832
+    },
+    {
+      "name": "liquid7-s010-preserved",
+      "switches": "pMfn",
+      "vertices": 472,
+      "tetrahedra": 934,
+      "expected_volume_m3": 4.084174195988606e-11,
+      "volume_m3": 4.084174195988649e-11,
+      "volume_error": 1.0658141036401503e-14,
+      "minimum_tet_volume_m3": 2.7686824131096576e-16,
+      "positive_tets": true,
+      "usable": true,
+      "elapsed_seconds": 0.42780589987523854
+    },
+    {
+      "name": "liquid4-s020-default",
+      "switches": "pfn",
+      "vertices": 122,
+      "tetrahedra": 188,
+      "expected_volume_m3": 4.845644985460635e-10,
+      "volume_m3": 4.84564498546062e-10,
+      "volume_error": 3.1086244689504383e-15,
+      "minimum_tet_volume_m3": 3.409408807358885e-27,
+      "positive_tets": true,
+      "usable": true,
+      "elapsed_seconds": 0.410132999997586
+    },
+    {
+      "name": "liquid4-s020-preserved",
+      "switches": "pMfn",
+      "vertices": 122,
+      "tetrahedra": 188,
+      "expected_volume_m3": 4.845644985460635e-10,
+      "volume_m3": 4.84564498546062e-10,
+      "volume_error": 3.1086244689504383e-15,
+      "minimum_tet_volume_m3": 3.409408807358885e-27,
+      "positive_tets": true,
+      "usable": true,
+      "elapsed_seconds": 0.46905979979783297
+    }
+  ],
+  "runs": [
+    {
+      "name": "seven-main",
+      "cells": 7,
+      "spread": 0.02,
+      "dt_s": 5000,
+      "steps": 20,
+      "uniform": false,
+      "refined": false,
+      "geometry_file_prefix": "seven-main",
+      "geometry": {
+        "minimum_cell_volume_m3": 3.665368117998047e-14,
+        "dual_volume_rebuild_error": 8.615330671091215e-14,
+        "dual_area_closure": 2.547738240255675e-14,
+        "stock_count": 472,
+        "shared_cut_count": 1838,
+        "exterior_patch_count": 2496
+      },
+      "operator": {
+        "constant_null_diagonal_change_relative": 1.161816327841946e-16,
+        "positive_offdiagonal_fraction": 0.2921653971708379,
+        "maximum_positive_offdiagonal": 1.365479946337602
+      },
+      "gates": {
+        "dual_volume": true,
+        "dual_closure": true,
+        "positive": true,
+        "amount": true,
+        "quadratic_ledger": true,
+        "linear": true,
+        "uniform": true
+      },
+      "elapsed_seconds": 0.0423443999607116,
+      "seed_over_R": [
+        -0.5928641205327317,
+        0.5927550804395268,
+        -0.5926428244368066
+      ],
+      "final": {
+        "step": 20,
+        "time_s": 100000,
+        "amount_mol": 3.281061616606586e-13,
+        "amount_relative_error": 3.552713678800501e-15,
+        "minimum_c_over_cstar": 1.0001100765684174,
+        "maximum_c_over_cstar": 1.0212427715254668,
+        "quadratic_energy_nd": 4.5023667337217595e-09,
+        "backward_euler_loss_nd": 4.7120754469353734e-12,
+        "dt_diffusion_dissipation_nd": 2.0756740132439168e-10,
+        "energy_ledger_relative_error": 3.816977820543954e-14,
+        "linear_relative_residual": 8.681320251291419e-12
+      },
+      "maximum_amount_error": 1.2212453270876722e-14,
+      "maximum_energy_ledger_error": 1.1027236647764322e-12
+    },
+    {
+      "name": "seven-half",
+      "cells": 7,
+      "spread": 0.02,
+      "dt_s": 2500,
+      "steps": 40,
+      "uniform": false,
+      "refined": false,
+      "geometry_file_prefix": "seven-main",
+      "geometry": {
+        "minimum_cell_volume_m3": 3.665368117998047e-14,
+        "dual_volume_rebuild_error": 8.615330671091215e-14,
+        "dual_area_closure": 2.547738240255675e-14,
+        "stock_count": 472,
+        "shared_cut_count": 1838,
+        "exterior_patch_count": 2496
+      },
+      "operator": {
+        "constant_null_diagonal_change_relative": 1.161816327841946e-16,
+        "positive_offdiagonal_fraction": 0.2921653971708379,
+        "maximum_positive_offdiagonal": 1.365479946337602
+      },
+      "gates": {
+        "dual_volume": true,
+        "dual_closure": true,
+        "positive": true,
+        "amount": true,
+        "quadratic_ledger": true,
+        "linear": true,
+        "uniform": true
+      },
+      "elapsed_seconds": 0.03710720012895763,
+      "seed_over_R": [
+        -0.5928641205327317,
+        0.5927550804395268,
+        -0.5926428244368066
+      ],
+      "final": {
+        "step": 40,
+        "time_s": 100000,
+        "amount_mol": 3.281061616606606e-13,
+        "amount_relative_error": 9.547918011776346e-15,
+        "minimum_c_over_cstar": 1.0000964974118514,
+        "maximum_c_over_cstar": 1.02097129572686,
+        "quadratic_energy_nd": 4.458715845869977e-09,
+        "backward_euler_loss_nd": 1.130156866630998e-12,
+        "dt_diffusion_dissipation_nd": 1.0131783931936908e-10,
+        "energy_ledger_relative_error": 6.441758911611753e-14,
+        "linear_relative_residual": 4.5560209829206845e-12
+      },
+      "maximum_amount_error": 9.547918011776346e-15,
+      "maximum_energy_ledger_error": 4.2361761524069923e-13
+    },
+    {
+      "name": "seven-uniform",
+      "cells": 7,
+      "spread": 0.02,
+      "dt_s": 5000,
+      "steps": 20,
+      "uniform": true,
+      "refined": false,
+      "geometry_file_prefix": "seven-main",
+      "geometry": {
+        "minimum_cell_volume_m3": 3.665368117998047e-14,
+        "dual_volume_rebuild_error": 8.615330671091215e-14,
+        "dual_area_closure": 2.547738240255675e-14,
+        "stock_count": 472,
+        "shared_cut_count": 1838,
+        "exterior_patch_count": 2496
+      },
+      "operator": {
+        "constant_null_diagonal_change_relative": 1.161816327841946e-16,
+        "positive_offdiagonal_fraction": 0.2921653971708379,
+        "maximum_positive_offdiagonal": 1.365479946337602
+      },
+      "gates": {
+        "dual_volume": true,
+        "dual_closure": true,
+        "positive": true,
+        "amount": true,
+        "quadratic_ledger": true,
+        "linear": true,
+        "uniform": true
+      },
+      "elapsed_seconds": 0.025211199885234237,
+      "seed_over_R": [
+        -0.5928641205327317,
+        0.5927550804395268,
+        -0.5926428244368066
+      ],
+      "final": {
+        "step": 20,
+        "time_s": 100000,
+        "amount_mol": 3.2658365784915853e-13,
+        "amount_relative_error": 0.0,
+        "minimum_c_over_cstar": 1.0,
+        "maximum_c_over_cstar": 1.0,
+        "quadratic_energy_nd": 0.0,
+        "backward_euler_loss_nd": 0.0,
+        "dt_diffusion_dissipation_nd": 0.0,
+        "energy_ledger_relative_error": 0.0,
+        "linear_relative_residual": 0.0
+      },
+      "maximum_amount_error": 0.0,
+      "maximum_energy_ledger_error": 0.0
+    },
+    {
+      "name": "seven-refined",
+      "cells": 7,
+      "spread": 0.02,
+      "dt_s": 5000,
+      "steps": 20,
+      "uniform": false,
+      "refined": true,
+      "geometry_file_prefix": "seven-refined",
+      "geometry": {
+        "minimum_cell_volume_m3": 2.415207438568825e-16,
+        "dual_volume_rebuild_error": 1.4759304889366831e-12,
+        "dual_area_closure": 3.273526727014775e-14,
+        "stock_count": 2310,
+        "shared_cut_count": 11462,
+        "exterior_patch_count": 9984
+      },
+      "operator": {
+        "constant_null_diagonal_change_relative": 1.4435465633908803e-16,
+        "positive_offdiagonal_fraction": 0.3369394521025999,
+        "maximum_positive_offdiagonal": 1.0790249705207966
+      },
+      "gates": {
+        "dual_volume": true,
+        "dual_closure": true,
+        "positive": true,
+        "amount": true,
+        "quadratic_ledger": true,
+        "linear": true,
+        "uniform": true
+      },
+      "elapsed_seconds": 0.19102260004729033,
+      "seed_over_R": [
+        -0.5928641205327317,
+        0.5927550804395268,
+        -0.5926428244368066
+      ],
+      "final": {
+        "step": 20,
+        "time_s": 100000,
+        "amount_mol": 3.279507709987463e-13,
+        "amount_relative_error": 1.6076029396572267e-13,
+        "minimum_c_over_cstar": 1.0000773517403216,
+        "maximum_c_over_cstar": 1.0191755055216822,
+        "quadratic_energy_nd": 3.6736607383265945e-09,
+        "backward_euler_loss_nd": 3.7276401291076385e-12,
+        "dt_diffusion_dissipation_nd": 1.6754902689325978e-10,
+        "energy_ledger_relative_error": 1.9440132887457265e-13,
+        "linear_relative_residual": 4.558870802388492e-11
+      },
+      "maximum_amount_error": 1.6076029396572267e-13,
+      "maximum_energy_ledger_error": 4.545906972762461e-12
+    },
+    {
+      "name": "seven-thin",
+      "cells": 7,
+      "spread": 0.01,
+      "dt_s": 5000,
+      "steps": 20,
+      "uniform": false,
+      "refined": false,
+      "geometry_file_prefix": "seven-thin",
+      "geometry": {
+        "minimum_cell_volume_m3": 9.174582287427686e-15,
+        "dual_volume_rebuild_error": 1.5587531265737198e-13,
+        "dual_area_closure": 2.991023841552881e-14,
+        "stock_count": 472,
+        "shared_cut_count": 1838,
+        "exterior_patch_count": 2496
+      },
+      "operator": {
+        "constant_null_diagonal_change_relative": 1.1963488486426343e-16,
+        "positive_offdiagonal_fraction": 0.2921653971708379,
+        "maximum_positive_offdiagonal": 1.4785432775444567
+      },
+      "gates": {
+        "dual_volume": true,
+        "dual_closure": true,
+        "positive": true,
+        "amount": true,
+        "quadratic_ledger": true,
+        "linear": true,
+        "uniform": true
+      },
+      "elapsed_seconds": 0.02999090007506311,
+      "seed_over_R": [
+        -0.5928641205327317,
+        0.5927550804395268,
+        -0.5926428244368066
+      ],
+      "final": {
+        "step": 20,
+        "time_s": 100000,
+        "amount_mol": 8.205980093776233e-14,
+        "amount_relative_error": 4.732880753977042e-13,
+        "minimum_c_over_cstar": 1.0001073325179948,
+        "maximum_c_over_cstar": 1.0209673684607257,
+        "quadratic_energy_nd": 1.0993604655679678e-09,
+        "backward_euler_loss_nd": 1.1459688028640756e-12,
+        "dt_diffusion_dissipation_nd": 5.0572341846312266e-11,
+        "energy_ledger_relative_error": 3.512979383831418e-13,
+        "linear_relative_residual": 3.664555396958198e-11
+      },
+      "maximum_amount_error": 4.732880753977042e-13,
+      "maximum_energy_ledger_error": 4.639415470260524e-12
+    },
+    {
+      "name": "four-initial",
+      "cells": 4,
+      "spread": 0.02,
+      "dt_s": 5000,
+      "steps": 20,
+      "uniform": false,
+      "refined": false,
+      "geometry_file_prefix": "four-initial",
+      "geometry": {
+        "minimum_cell_volume_m3": 1.0588429111987431e-13,
+        "dual_volume_rebuild_error": 7.738254481637341e-14,
+        "dual_area_closure": 0.1819464992312941,
+        "stock_count": 122,
+        "shared_cut_count": 445,
+        "exterior_patch_count": 780
+      },
+      "operator": {
+        "constant_null_diagonal_change_relative": 7.258456977670937e-17,
+        "positive_offdiagonal_fraction": 0.40898876404494383,
+        "maximum_positive_offdiagonal": 965048738043.2522
+      },
+      "gates": {
+        "dual_volume": true,
+        "dual_closure": false,
+        "positive": true,
+        "amount": false,
+        "quadratic_ledger": false,
+        "linear": false,
+        "uniform": true
+      },
+      "elapsed_seconds": 0.008369300048798323,
+      "seed_over_R": [
+        -0.5504380485984774,
+        -0.5504406963815897,
+        -0.5505394539450005
+      ],
+      "final": {
+        "step": 20,
+        "time_s": 100000,
+        "amount_mol": 9.723790328828604e-13,
+        "amount_relative_error": 0.005186268918162318,
+        "minimum_c_over_cstar": 1.0005371461645896,
+        "maximum_c_over_cstar": 1.0057921366422835,
+        "quadratic_energy_nd": 3.3751440984807398e-09,
+        "backward_euler_loss_nd": 5.77122167551946e-12,
+        "dt_diffusion_dissipation_nd": 2.2807389912398342e-10,
+        "energy_ledger_relative_error": 0.00020614152067161782,
+        "linear_relative_residual": 0.1471549221818177
+      },
+      "maximum_amount_error": 0.005186268918162318,
+      "maximum_energy_ledger_error": 0.07360144459680852
+    }
+  ],
+  "comparisons": {
+    "half_time_field_relative": 0.012672765657962295,
+    "space_field_relative": 0.09773418453069264,
+    "time_1pct_pass": false,
+    "space_1pct_pass": false
+  },
+  "elapsed_seconds": 10.838959800079465
+}

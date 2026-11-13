@@ -1,0 +1,162 @@
+{
+  "audits": [
+    {
+      "name": "seven-main",
+      "accepted_discrete_run": true,
+      "dual": {
+        "volume_error": 3.6858849306042885e-11,
+        "area_closure": 2.551080519385925e-14,
+        "unique_shared_cuts": true,
+        "omitted_cut_detected": true,
+        "passed": true
+      },
+      "diffusion": {
+        "maximum_element_energy_error": 1.7447013980496683e-12,
+        "maximum_element_balance_error": 8.489889737455001e-10,
+        "maximum_saved_amount_error": 1.2212453270876722e-14,
+        "passed": true
+      },
+      "passed": true
+    },
+    {
+      "name": "seven-half",
+      "accepted_discrete_run": true,
+      "dual": {
+        "volume_error": 3.6858849306042885e-11,
+        "area_closure": 2.551080519385925e-14,
+        "unique_shared_cuts": true,
+        "omitted_cut_detected": true,
+        "passed": true
+      },
+      "diffusion": {
+        "maximum_element_energy_error": 1.3225537093231158e-13,
+        "maximum_element_balance_error": 4.2838107828131496e-10,
+        "maximum_saved_amount_error": 9.992007221626409e-15,
+        "passed": true
+      },
+      "passed": true
+    },
+    {
+      "name": "seven-uniform",
+      "accepted_discrete_run": true,
+      "dual": {
+        "volume_error": 3.6858849306042885e-11,
+        "area_closure": 2.551080519385925e-14,
+        "unique_shared_cuts": true,
+        "omitted_cut_detected": true,
+        "passed": true
+      },
+      "diffusion": {
+        "maximum_element_energy_error": 0.0,
+        "maximum_element_balance_error": 0.0,
+        "maximum_saved_amount_error": 0.0,
+        "passed": true
+      },
+      "passed": true
+    },
+    {
+      "name": "seven-refined",
+      "accepted_discrete_run": true,
+      "dual": {
+        "volume_error": 6.173803690501245e-10,
+        "area_closure": 3.275439919555505e-14,
+        "unique_shared_cuts": true,
+        "omitted_cut_detected": true,
+        "passed": true
+      },
+      "diffusion": {
+        "maximum_element_energy_error": 2.734736229196993e-12,
+        "maximum_element_balance_error": 2.715513638712923e-09,
+        "maximum_saved_amount_error": 1.6187051699034782e-13,
+        "passed": true
+      },
+      "passed": true
+    },
+    {
+      "name": "seven-thin",
+      "accepted_discrete_run": true,
+      "dual": {
+        "volume_error": 1.2962908524372097e-10,
+        "area_closure": 2.99182587929438e-14,
+        "unique_shared_cuts": true,
+        "omitted_cut_detected": true,
+        "passed": true
+      },
+      "diffusion": {
+        "maximum_element_energy_error": 3.659747425627935e-12,
+        "maximum_element_balance_error": 3.570106631549554e-09,
+        "maximum_saved_amount_error": 4.732880753977042e-13,
+        "passed": true
+      },
+      "passed": true
+    },
+    {
+      "name": "four-initial",
+      "accepted_discrete_run": false,
+      "dual": {
+        "volume_error": 7.526286381814973,
+        "area_closure": 0.18194649923129402,
+        "unique_shared_cuts": true,
+        "omitted_cut_detected": true,
+        "passed": false
+      },
+      "diffusion": {
+        "passed": false,
+        "error": "LinAlgError: Singular matrix"
+      },
+      "passed": false
+    }
+  ],
+  "negative_unmarked": {
+    "input_facet_markers": false,
+    "switches": "pfn",
+    "tetrahedra": 582,
+    "volume_error": 0.01102259761698865,
+    "geometry_gate_rejects": true,
+    "scope": "one unmarked geometry control; no diffusion"
+  },
+  "provenance": [
+    {
+      "source": "foam\\scripts\\run_liquid_volume.py",
+      "matched": true
+    },
+    {
+      "source": "foam\\scripts\\liquid_control_volume.py",
+      "matched": true
+    },
+    {
+      "source": "foam\\docs\\liquid_volume_protocol.md",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\wet7-s020-final-vertices.csv",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\wet7-s020-final-triangles.csv",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\summary.json",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\wet7-s010-final-vertices.csv",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\wet7-s010-final-triangles.csv",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\wet4-s020-initial-vertices.csv",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\wet4-s020-initial-triangles.csv",
+      "matched": true
+    }
+  ],
+  "accepted_run_audits_pass": true,
+  "scope": "saved dual cuts and independently assembled affine-element gradients; not normal-flow or physical validation"
+}
