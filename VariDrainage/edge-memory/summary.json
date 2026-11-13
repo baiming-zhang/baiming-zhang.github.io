@@ -1,0 +1,1968 @@
+{
+  "completed_geometry_input_cases": 18,
+  "main_wall_s": 6.859000000171363,
+  "dc_control_wall_s": 1.6409999998286366,
+  "actual_high_port_rank": [
+    16
+  ],
+  "groups": {
+    "instantaneous": {
+      "cases": 18,
+      "passed": 0,
+      "max_flux_L2": 0.9054442035907483,
+      "max_integrated_port_L2": 0.8916167460804402
+    },
+    "slow5": {
+      "cases": 18,
+      "passed": 0,
+      "max_flux_L2": 54.90676129530245,
+      "max_integrated_port_L2": 101.38917832330408
+    },
+    "slow9": {
+      "cases": 18,
+      "passed": 0,
+      "max_flux_L2": 53.49264768506771,
+      "max_integrated_port_L2": 98.77310693656753
+    },
+    "slow17": {
+      "cases": 18,
+      "passed": 0,
+      "max_flux_L2": 50.65912053349941,
+      "max_integrated_port_L2": 93.54017123106473
+    },
+    "dc_slow5": {
+      "cases": 18,
+      "passed": 0,
+      "max_flux_L2": 3.4378871980926284,
+      "max_integrated_port_L2": 0.339805469039221
+    },
+    "dc_slow9": {
+      "cases": 18,
+      "passed": 12,
+      "max_flux_L2": 0.5699191900726058,
+      "max_integrated_port_L2": 0.009063363472116875
+    },
+    "dc_slow17": {
+      "cases": 18,
+      "passed": 18,
+      "max_flux_L2": 0.030060575627057325,
+      "max_integrated_port_L2": 0.00015557057008214393
+    },
+    "port5": {
+      "cases": 18,
+      "passed": 0,
+      "max_flux_L2": 2.3756538697278358,
+      "max_integrated_port_L2": 0.1727193871591681
+    },
+    "port9": {
+      "cases": 18,
+      "passed": 12,
+      "max_flux_L2": 0.08207030761362868,
+      "max_integrated_port_L2": 0.0055871471561552595
+    },
+    "port17": {
+      "cases": 18,
+      "passed": 18,
+      "max_flux_L2": 0.0006833577580811999,
+      "max_integrated_port_L2": 8.470816108785562e-06
+    }
+  },
+  "csv_audits": [
+    {
+      "path": "run1/data/L100_h2_chirp/full160.csv",
+      "work_scaled": 1.3731513422679788e-15,
+      "power_identity": 1.287850166626778e-12,
+      "volume_absolute_m3": 4.996644684780397e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_chirp/full320.csv",
+      "work_scaled": 9.9892527954577e-16,
+      "power_identity": 1.1163575306704965e-12,
+      "volume_absolute_m3": 4.273061519928345e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_chirp/port17.csv",
+      "work_scaled": 9.986555184117e-16,
+      "power_identity": 2.521995283801422e-14,
+      "volume_absolute_m3": 4.234232214373791e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_chirp/port5.csv",
+      "work_scaled": 1.4189000448732547e-15,
+      "power_identity": 1.2186577760405166e-13,
+      "volume_absolute_m3": 4.070593056389041e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_chirp/port9.csv",
+      "work_scaled": 1.2485277404941464e-15,
+      "power_identity": 2.879612183974077e-14,
+      "volume_absolute_m3": 4.203868725094311e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_chirp/slow17.csv",
+      "work_scaled": 8.727227496365523e-16,
+      "power_identity": 4.753899367481285e-15,
+      "volume_absolute_m3": 2.2844312711055364e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_chirp/slow5.csv",
+      "work_scaled": 1.6222351636649326e-15,
+      "power_identity": 9.309237676255918e-15,
+      "volume_absolute_m3": 2.082735248414045e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_chirp/slow9.csv",
+      "work_scaled": 2.2795934084657734e-15,
+      "power_identity": 5.934349921559115e-15,
+      "volume_absolute_m3": 3.3333465094403187e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_fast_pulse/full160.csv",
+      "work_scaled": 5.216756086012652e-16,
+      "power_identity": 1.1104109864519463e-12,
+      "volume_absolute_m3": 5.474012107195947e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_fast_pulse/full320.csv",
+      "work_scaled": 7.308874258806751e-16,
+      "power_identity": 2.2056420552319956e-12,
+      "volume_absolute_m3": 8.438937988277963e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_fast_pulse/port17.csv",
+      "work_scaled": 4.1734073506220273e-16,
+      "power_identity": 4.167049425361314e-14,
+      "volume_absolute_m3": 2.8962941253635252e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_fast_pulse/port5.csv",
+      "work_scaled": 4.0548708497040375e-16,
+      "power_identity": 5.89223420347618e-14,
+      "volume_absolute_m3": 2.516339350016763e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_fast_pulse/port9.csv",
+      "work_scaled": 4.189023123774909e-16,
+      "power_identity": 4.091497429174524e-14,
+      "volume_absolute_m3": 2.8970568485189844e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_fast_pulse/slow17.csv",
+      "work_scaled": 3.6725363511796674e-16,
+      "power_identity": 1.1865209402818425e-15,
+      "volume_absolute_m3": 3.641499873629584e-32,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_fast_pulse/slow5.csv",
+      "work_scaled": 5.697287908182483e-16,
+      "power_identity": 1.6021501059131402e-15,
+      "volume_absolute_m3": 5.861064740139002e-32,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_fast_pulse/slow9.csv",
+      "work_scaled": 6.976399246420783e-16,
+      "power_identity": 1.8213693377638763e-15,
+      "volume_absolute_m3": 1.4445693747336688e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_slow_pulse/full160.csv",
+      "work_scaled": 8.452850910660833e-16,
+      "power_identity": 1.5429835703267726e-11,
+      "volume_absolute_m3": 4.3985892702684745e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_slow_pulse/full320.csv",
+      "work_scaled": 1.0566847423693313e-15,
+      "power_identity": 2.2949816767705914e-10,
+      "volume_absolute_m3": 1.0555550051979443e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_slow_pulse/port17.csv",
+      "work_scaled": 4.226425455356685e-16,
+      "power_identity": 2.5282501838155344e-12,
+      "volume_absolute_m3": 6.064681172502491e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_slow_pulse/port5.csv",
+      "work_scaled": 4.2263108417782415e-16,
+      "power_identity": 3.833333271405113e-12,
+      "volume_absolute_m3": 5.0022419186812725e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_slow_pulse/port9.csv",
+      "work_scaled": 8.452850607056572e-16,
+      "power_identity": 2.535273223164044e-12,
+      "volume_absolute_m3": 6.066534880073964e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_slow_pulse/slow17.csv",
+      "work_scaled": 6.352276567634068e-16,
+      "power_identity": 5.949456006054378e-13,
+      "volume_absolute_m3": 4.497231790901343e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_slow_pulse/slow5.csv",
+      "work_scaled": 2.9357646247106407e-16,
+      "power_identity": 5.37064917219143e-13,
+      "volume_absolute_m3": 4.7409588272166553e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h2_slow_pulse/slow9.csv",
+      "work_scaled": 3.01164339921928e-16,
+      "power_identity": 4.682481613856235e-13,
+      "volume_absolute_m3": 3.792286662622821e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_chirp/full160.csv",
+      "work_scaled": 1.622815222678998e-15,
+      "power_identity": 2.0736340717388497e-13,
+      "volume_absolute_m3": 4.176096965759524e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_chirp/full320.csv",
+      "work_scaled": 2.747044518710939e-15,
+      "power_identity": 1.589047217005115e-12,
+      "volume_absolute_m3": 2.5421380009413927e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_chirp/port17.csv",
+      "work_scaled": 1.9973110372140276e-15,
+      "power_identity": 1.7020639945352311e-13,
+      "volume_absolute_m3": 3.0785388307922344e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_chirp/port5.csv",
+      "work_scaled": 8.513400290314997e-16,
+      "power_identity": 8.435139084521216e-14,
+      "volume_absolute_m3": 2.6332879017742103e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_chirp/port9.csv",
+      "work_scaled": 9.988221953732499e-16,
+      "power_identity": 1.6628438728364272e-13,
+      "volume_absolute_m3": 3.078523784464544e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_chirp/slow17.csv",
+      "work_scaled": 1.199993780750201e-15,
+      "power_identity": 1.597683480993498e-14,
+      "volume_absolute_m3": 2.7031856170605455e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_chirp/slow5.csv",
+      "work_scaled": 5.677823072838551e-15,
+      "power_identity": 2.7103921734773035e-15,
+      "volume_absolute_m3": 2.481094297184547e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_chirp/slow9.csv",
+      "work_scaled": 2.072357644060758e-15,
+      "power_identity": 9.993661408336358e-15,
+      "volume_absolute_m3": 2.640013610251875e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_fast_pulse/full160.csv",
+      "work_scaled": 6.260107303218801e-16,
+      "power_identity": 7.660056403626643e-13,
+      "volume_absolute_m3": 7.708278308999533e-32,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_fast_pulse/full320.csv",
+      "work_scaled": 6.26474936463913e-16,
+      "power_identity": 1.1797562284174147e-11,
+      "volume_absolute_m3": 3.6393068706497214e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_fast_pulse/port17.csv",
+      "work_scaled": 4.173407114341058e-16,
+      "power_identity": 1.5070727370517934e-14,
+      "volume_absolute_m3": 1.4347081816582865e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_fast_pulse/port5.csv",
+      "work_scaled": 6.08230627438395e-16,
+      "power_identity": 3.004405870117572e-14,
+      "volume_absolute_m3": 1.265094431413839e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_fast_pulse/port9.csv",
+      "work_scaled": 2.0945115625785089e-16,
+      "power_identity": 1.451431059380576e-14,
+      "volume_absolute_m3": 1.4352036949092112e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_fast_pulse/slow17.csv",
+      "work_scaled": 3.672536351179689e-16,
+      "power_identity": 5.100784781763795e-15,
+      "volume_absolute_m3": 5.884614306162105e-32,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_fast_pulse/slow5.csv",
+      "work_scaled": 1.025511823472897e-15,
+      "power_identity": 2.3686203245080842e-15,
+      "volume_absolute_m3": 6.415664495472467e-32,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_fast_pulse/slow9.csv",
+      "work_scaled": 3.4881996232102435e-16,
+      "power_identity": 2.090308166135331e-15,
+      "volume_absolute_m3": 5.449924213665249e-32,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_slow_pulse/full160.csv",
+      "work_scaled": 3.1698190915277224e-16,
+      "power_identity": 7.712769969082662e-12,
+      "volume_absolute_m3": 1.394028417905692e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_slow_pulse/full320.csv",
+      "work_scaled": 1.0566847422789343e-15,
+      "power_identity": 2.6870121947700195e-10,
+      "volume_absolute_m3": 8.441194344070652e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_slow_pulse/port17.csv",
+      "work_scaled": 4.226425455272566e-16,
+      "power_identity": 7.425410184263258e-12,
+      "volume_absolute_m3": 2.5295055556022584e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_slow_pulse/port5.csv",
+      "work_scaled": 8.452621679374125e-16,
+      "power_identity": 7.785102296688301e-12,
+      "volume_absolute_m3": 2.4388893480126237e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_slow_pulse/port9.csv",
+      "work_scaled": 2.113212651721908e-16,
+      "power_identity": 7.424455669927166e-12,
+      "volume_absolute_m3": 2.5294844907434917e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_slow_pulse/slow17.csv",
+      "work_scaled": 4.764207425725608e-16,
+      "power_identity": 2.1719144648902827e-13,
+      "volume_absolute_m3": 5.071290720159308e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_slow_pulse/slow5.csv",
+      "work_scaled": 4.4036469370779556e-16,
+      "power_identity": 2.3885713553797224e-13,
+      "volume_absolute_m3": 5.407999848630313e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L100_h6_slow_pulse/slow9.csv",
+      "work_scaled": 6.023286798442565e-16,
+      "power_identity": 2.2677318192852902e-13,
+      "volume_absolute_m3": 5.030515172117985e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/full160.csv",
+      "work_scaled": 7.489916412362208e-16,
+      "power_identity": 1.034683189891196e-12,
+      "volume_absolute_m3": 3.1292148624539236e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/full320.csv",
+      "work_scaled": 2.2475818789738298e-15,
+      "power_identity": 1.4026276642952325e-12,
+      "volume_absolute_m3": 2.015365316179718e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/full320_half_dt.csv",
+      "work_scaled": 2.5009279692200987e-15,
+      "power_identity": 1.2356077886253904e-11,
+      "volume_absolute_m3": 1.4033926504071672e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/full80.csv",
+      "work_scaled": 1.246966813055484e-15,
+      "power_identity": 9.460873597647134e-15,
+      "volume_absolute_m3": 2.0023652890551043e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/port17.csv",
+      "work_scaled": 1.123487457706145e-15,
+      "power_identity": 2.9297081008652106e-13,
+      "volume_absolute_m3": 1.3664352584805914e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/port5.csv",
+      "work_scaled": 1.4189000472004516e-15,
+      "power_identity": 3.0031241202129935e-13,
+      "volume_absolute_m3": 1.8568612817566486e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/port9.csv",
+      "work_scaled": 7.491166400663303e-16,
+      "power_identity": 2.67612165540779e-13,
+      "volume_absolute_m3": 1.3672778528312608e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/slow17.csv",
+      "work_scaled": 5.454517185224619e-16,
+      "power_identity": 5.338821762116143e-15,
+      "volume_absolute_m3": 6.758261207623252e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/slow5.csv",
+      "work_scaled": 1.6222351636664174e-15,
+      "power_identity": 2.7035602504828815e-15,
+      "volume_absolute_m3": 2.0040264036321383e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_chirp/slow9.csv",
+      "work_scaled": 1.4506503508417575e-15,
+      "power_identity": 8.085028113299137e-15,
+      "volume_absolute_m3": 1.6894377842786357e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/full160.csv",
+      "work_scaled": 4.173404868810693e-16,
+      "power_identity": 4.3758313073107804e-13,
+      "volume_absolute_m3": 7.467950717270276e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/full320.csv",
+      "work_scaled": 5.220624470584078e-16,
+      "power_identity": 2.1921940528881073e-12,
+      "volume_absolute_m3": 3.594786353191972e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/full320_half_dt.csv",
+      "work_scaled": 1.0437453761179649e-15,
+      "power_identity": 1.1249585514928436e-12,
+      "volume_absolute_m3": 1.07387293089462e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/full80.csv",
+      "work_scaled": 4.161122001595481e-16,
+      "power_identity": 5.6001225125378556e-14,
+      "volume_absolute_m3": 2.2833576562689253e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/port17.csv",
+      "work_scaled": 7.303463003955731e-16,
+      "power_identity": 2.0432741943388293e-13,
+      "volume_absolute_m3": 3.3878275319417575e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/port5.csv",
+      "work_scaled": 8.109741699219997e-16,
+      "power_identity": 2.140084805595727e-13,
+      "volume_absolute_m3": 2.8503358806874408e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/port9.csv",
+      "work_scaled": 4.189023124417301e-16,
+      "power_identity": 2.016981907663771e-13,
+      "volume_absolute_m3": 3.474159918120801e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/slow17.csv",
+      "work_scaled": 1.101760905353902e-15,
+      "power_identity": 5.3073051771629556e-15,
+      "volume_absolute_m3": 4.10269475232755e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/slow5.csv",
+      "work_scaled": 5.697287908182479e-16,
+      "power_identity": 2.0712513836167723e-15,
+      "volume_absolute_m3": 2.169085874094446e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_fast_pulse/slow9.csv",
+      "work_scaled": 9.301865661894027e-16,
+      "power_identity": 7.386890055758346e-15,
+      "volume_absolute_m3": 1.6254297680890724e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/full160.csv",
+      "work_scaled": 4.226425455395161e-16,
+      "power_identity": 4.912331051982776e-11,
+      "volume_absolute_m3": 5.370229834637828e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/full320.csv",
+      "work_scaled": 6.340108455575884e-16,
+      "power_identity": 2.6609317466767376e-10,
+      "volume_absolute_m3": 1.9408279754720433e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/full320_half_dt.csv",
+      "work_scaled": 6.338158605366128e-16,
+      "power_identity": 2.237915795581645e-10,
+      "volume_absolute_m3": 1.533286176986138e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/full80.csv",
+      "work_scaled": 8.450344710622808e-16,
+      "power_identity": 2.7988399919717414e-12,
+      "volume_absolute_m3": 5.908873440001564e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/port17.csv",
+      "work_scaled": 7.396244546857277e-16,
+      "power_identity": 1.1102456462759042e-12,
+      "volume_absolute_m3": 4.643502799800151e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/port5.csv",
+      "work_scaled": 7.396043970445254e-16,
+      "power_identity": 2.9689965725001136e-12,
+      "volume_absolute_m3": 4.675523792538019e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/port9.csv",
+      "work_scaled": 4.226425303517035e-16,
+      "power_identity": 1.1159826485515205e-12,
+      "volume_absolute_m3": 4.643490281255512e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/slow17.csv",
+      "work_scaled": 3.1761382838156335e-16,
+      "power_identity": 1.7736084240833157e-13,
+      "volume_absolute_m3": 3.171229024190731e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/slow5.csv",
+      "work_scaled": 3.669705780889722e-16,
+      "power_identity": 8.258533095707305e-14,
+      "volume_absolute_m3": 2.276414527526714e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h2_slow_pulse/slow9.csv",
+      "work_scaled": 7.529108498047892e-16,
+      "power_identity": 9.667419427363598e-14,
+      "volume_absolute_m3": 2.5565867787740165e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_chirp/full160.csv",
+      "work_scaled": 8.738235814429415e-16,
+      "power_identity": 6.643087737994705e-13,
+      "volume_absolute_m3": 1.2317796534470045e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_chirp/full320.csv",
+      "work_scaled": 2.247581878986077e-15,
+      "power_identity": 1.3755626423048974e-11,
+      "volume_absolute_m3": 2.2349947559189928e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_chirp/port17.csv",
+      "work_scaled": 1.9973110396339164e-15,
+      "power_identity": 1.1431875003217172e-14,
+      "volume_absolute_m3": 4.81253781915913e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_chirp/port5.csv",
+      "work_scaled": 1.4189000503720748e-15,
+      "power_identity": 1.0749498100365689e-13,
+      "volume_absolute_m3": 9.069324478741018e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_chirp/port9.csv",
+      "work_scaled": 1.373380511856517e-15,
+      "power_identity": 2.028857574333491e-14,
+      "volume_absolute_m3": 4.95490617176688e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_chirp/slow17.csv",
+      "work_scaled": 2.3999875614997897e-15,
+      "power_identity": 4.587866847300624e-15,
+      "volume_absolute_m3": 1.503058923176099e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_chirp/slow5.csv",
+      "work_scaled": 2.4333527455100746e-15,
+      "power_identity": 1.1589614754829906e-14,
+      "volume_absolute_m3": 1.8514506223191357e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_chirp/slow9.csv",
+      "work_scaled": 1.0361788220294112e-15,
+      "power_identity": 1.2541204184050896e-14,
+      "volume_absolute_m3": 1.1045208231060798e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_fast_pulse/full160.csv",
+      "work_scaled": 8.346809737628694e-16,
+      "power_identity": 1.4598276788582747e-13,
+      "volume_absolute_m3": 2.641198365981561e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_fast_pulse/full320.csv",
+      "work_scaled": 1.0441248941096805e-15,
+      "power_identity": 1.389491064201428e-11,
+      "volume_absolute_m3": 2.1932543893883938e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_fast_pulse/port17.csv",
+      "work_scaled": 9.390164181283789e-16,
+      "power_identity": 5.081774268385039e-14,
+      "volume_absolute_m3": 1.7621267458469788e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_fast_pulse/port5.csv",
+      "work_scaled": 8.109741699023774e-16,
+      "power_identity": 3.487188930580223e-14,
+      "volume_absolute_m3": 1.299555084212591e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_fast_pulse/port9.csv",
+      "work_scaled": 8.378046241822656e-16,
+      "power_identity": 5.3933672681733347e-14,
+      "volume_absolute_m3": 1.8049172660119046e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_fast_pulse/slow17.csv",
+      "work_scaled": 4.896715134906203e-16,
+      "power_identity": 4.8296483089618096e-15,
+      "volume_absolute_m3": 1.4367484408618047e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_fast_pulse/slow5.csv",
+      "work_scaled": 1.0255118234729438e-15,
+      "power_identity": 1.916944040522718e-15,
+      "volume_absolute_m3": 1.3615146161941744e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_fast_pulse/slow9.csv",
+      "work_scaled": 9.301865661894408e-16,
+      "power_identity": 4.2746625997814006e-15,
+      "volume_absolute_m3": 9.97347613886632e-31,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_slow_pulse/full160.csv",
+      "work_scaled": 4.22642545522597e-16,
+      "power_identity": 5.568702849530449e-11,
+      "volume_absolute_m3": 1.7053088914678448e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_slow_pulse/full320.csv",
+      "work_scaled": 4.226738970695374e-16,
+      "power_identity": 2.848068550962961e-10,
+      "volume_absolute_m3": 3.168393959016096e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_slow_pulse/port17.csv",
+      "work_scaled": 2.1132127277003894e-16,
+      "power_identity": 2.1153110819010984e-12,
+      "volume_absolute_m3": 7.542670626704366e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_slow_pulse/port5.csv",
+      "work_scaled": 6.339466258063861e-16,
+      "power_identity": 6.102670684298462e-12,
+      "volume_absolute_m3": 7.572257243992529e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_slow_pulse/port9.csv",
+      "work_scaled": 6.339637955361114e-16,
+      "power_identity": 2.131770951332927e-12,
+      "volume_absolute_m3": 7.542670626704366e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_slow_pulse/slow17.csv",
+      "work_scaled": 4.764207425725403e-16,
+      "power_identity": 1.6676331118517307e-13,
+      "volume_absolute_m3": 5.8560731076112155e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_slow_pulse/slow5.csv",
+      "work_scaled": 5.137588093280102e-16,
+      "power_identity": 1.6578024878374475e-13,
+      "volume_absolute_m3": 5.795208425061232e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L200_h6_slow_pulse/slow9.csv",
+      "work_scaled": 4.517465098827936e-16,
+      "power_identity": 3.154860057033151e-14,
+      "volume_absolute_m3": 6.0789917949542605e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_chirp/full160.csv",
+      "work_scaled": 2.0712855263815082e-15,
+      "power_identity": 1.2136323046011831e-12,
+      "volume_absolute_m3": 6.329039131493944e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_chirp/full320.csv",
+      "work_scaled": 8.879335818187929e-16,
+      "power_identity": 1.9064440401270366e-11,
+      "volume_absolute_m3": 5.0276918791901346e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_chirp/port17.csv",
+      "work_scaled": 1.7753875887695443e-15,
+      "power_identity": 1.7807911935726026e-14,
+      "volume_absolute_m3": 6.917266284758416e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_chirp/port5.csv",
+      "work_scaled": 1.0930785566568778e-15,
+      "power_identity": 1.5961049001337834e-13,
+      "volume_absolute_m3": 6.799640113404965e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_chirp/port9.csv",
+      "work_scaled": 1.775683925453535e-15,
+      "power_identity": 2.2924356928218488e-14,
+      "volume_absolute_m3": 7.00800165926336e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_chirp/slow17.csv",
+      "work_scaled": 2.4565529249023417e-15,
+      "power_identity": 1.7736650499879546e-14,
+      "volume_absolute_m3": 8.729975622539987e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_chirp/slow5.csv",
+      "work_scaled": 1.201655676787636e-15,
+      "power_identity": 2.9998559466367903e-15,
+      "volume_absolute_m3": 1.0449181061521558e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_chirp/slow9.csv",
+      "work_scaled": 1.5964829257931436e-15,
+      "power_identity": 5.7208104361616985e-15,
+      "volume_absolute_m3": 9.135769061822377e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_fast_pulse/full160.csv",
+      "work_scaled": 9.89251524458526e-16,
+      "power_identity": 1.189665768359912e-12,
+      "volume_absolute_m3": 1.345154990231966e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_fast_pulse/full320.csv",
+      "work_scaled": 4.949925424060428e-16,
+      "power_identity": 1.9445383714109923e-11,
+      "volume_absolute_m3": 9.057629935537396e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_fast_pulse/port17.csv",
+      "work_scaled": 4.946260220336319e-16,
+      "power_identity": 1.7868944685834524e-13,
+      "volume_absolute_m3": 6.067724262035665e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_fast_pulse/port5.csv",
+      "work_scaled": 6.007216073372444e-16,
+      "power_identity": 2.627856671296776e-13,
+      "volume_absolute_m3": 5.516898947738231e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_fast_pulse/port9.csv",
+      "work_scaled": 9.929536311324156e-16,
+      "power_identity": 1.7137759077326036e-13,
+      "volume_absolute_m3": 6.0716385125093275e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_fast_pulse/slow17.csv",
+      "work_scaled": 5.803514233962866e-16,
+      "power_identity": 5.8537069809692465e-15,
+      "volume_absolute_m3": 6.633215142471719e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_fast_pulse/slow5.csv",
+      "work_scaled": 4.051404734707638e-16,
+      "power_identity": 2.045266188028112e-15,
+      "volume_absolute_m3": 8.080969419699068e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_fast_pulse/slow9.csv",
+      "work_scaled": 4.13416251639768e-16,
+      "power_identity": 2.141989403078067e-15,
+      "volume_absolute_m3": 6.910998610532252e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_slow_pulse/full160.csv",
+      "work_scaled": 2.504548418025688e-16,
+      "power_identity": 5.597480221170202e-11,
+      "volume_absolute_m3": 3.508792447036818e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_slow_pulse/full320.csv",
+      "work_scaled": 6.261835510083476e-16,
+      "power_identity": 8.443837236229604e-10,
+      "volume_absolute_m3": 6.676954292976016e-26,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_slow_pulse/port17.csv",
+      "work_scaled": 5.009096836095377e-16,
+      "power_identity": 3.3805122705814166e-12,
+      "volume_absolute_m3": 5.383035824320545e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_slow_pulse/port5.csv",
+      "work_scaled": 8.765681740126274e-16,
+      "power_identity": 3.1035639718564673e-12,
+      "volume_absolute_m3": 5.273797077874901e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_slow_pulse/port9.csv",
+      "work_scaled": 3.756822492110537e-16,
+      "power_identity": 3.3655983465167574e-12,
+      "volume_absolute_m3": 5.382458045337228e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_slow_pulse/slow17.csv",
+      "work_scaled": 6.587546070143648e-16,
+      "power_identity": 2.1401455719248125e-13,
+      "volume_absolute_m3": 5.13478345448903e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_slow_pulse/slow5.csv",
+      "work_scaled": 5.219137110595918e-16,
+      "power_identity": 5.742520402905726e-14,
+      "volume_absolute_m3": 3.9106546781167252e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h2_slow_pulse/slow9.csv",
+      "work_scaled": 5.354032709725157e-16,
+      "power_identity": 7.390726272415528e-14,
+      "volume_absolute_m3": 4.988484038123542e-28,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_chirp/full160.csv",
+      "work_scaled": 2.958979323403546e-15,
+      "power_identity": 4.3837741016742814e-13,
+      "volume_absolute_m3": 9.92234292523443e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_chirp/full320.csv",
+      "work_scaled": 1.1839114424174468e-15,
+      "power_identity": 6.651350910796338e-13,
+      "volume_absolute_m3": 6.494755773558744e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_chirp/port17.csv",
+      "work_scaled": 7.397448282064305e-16,
+      "power_identity": 1.9698942434619614e-13,
+      "volume_absolute_m3": 5.8061010033442e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_chirp/port5.csv",
+      "work_scaled": 2.3543230428924175e-15,
+      "power_identity": 2.826264964470439e-13,
+      "volume_absolute_m3": 5.794004508197402e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_chirp/port9.csv",
+      "work_scaled": 8.878419707139267e-16,
+      "power_identity": 1.916282041008879e-13,
+      "volume_absolute_m3": 5.74240387969913e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_chirp/slow17.csv",
+      "work_scaled": 2.197968406491021e-15,
+      "power_identity": 7.40412829302849e-15,
+      "volume_absolute_m3": 8.987877202319435e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_chirp/slow5.csv",
+      "work_scaled": 1.3218212444700506e-15,
+      "power_identity": 4.170062041270018e-15,
+      "volume_absolute_m3": 6.33414284584657e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_chirp/slow9.csv",
+      "work_scaled": 1.105257410165784e-15,
+      "power_identity": 6.598564232284245e-15,
+      "volume_absolute_m3": 7.168961254365523e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_fast_pulse/full160.csv",
+      "work_scaled": 7.419386433442851e-16,
+      "power_identity": 5.177243988992654e-13,
+      "volume_absolute_m3": 3.696117404188019e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_fast_pulse/full320.csv",
+      "work_scaled": 6.187406779959564e-16,
+      "power_identity": 3.056228974104033e-12,
+      "volume_absolute_m3": 2.1518436037862473e-29,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_fast_pulse/port17.csv",
+      "work_scaled": 4.946260853015295e-16,
+      "power_identity": 4.916119575942232e-14,
+      "volume_absolute_m3": 3.3284946278629654e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_fast_pulse/port5.csv",
+      "work_scaled": 1.0812988932247968e-15,
+      "power_identity": 3.409095121694846e-14,
+      "volume_absolute_m3": 3.515355916981527e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_fast_pulse/port9.csv",
+      "work_scaled": 4.964768159010609e-16,
+      "power_identity": 5.0739542712576e-14,
+      "volume_absolute_m3": 3.3132455325313706e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_fast_pulse/slow17.csv",
+      "work_scaled": 4.3526356754720967e-16,
+      "power_identity": 4.10553292097915e-15,
+      "volume_absolute_m3": 4.214701299406098e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_fast_pulse/slow5.csv",
+      "work_scaled": 4.051404734707373e-16,
+      "power_identity": 6.705300683291229e-15,
+      "volume_absolute_m3": 1.9248691095325685e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_fast_pulse/slow9.csv",
+      "work_scaled": 8.268325032795033e-16,
+      "power_identity": 4.512538645471937e-15,
+      "volume_absolute_m3": 3.645702335487738e-30,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_slow_pulse/full160.csv",
+      "work_scaled": 5.009096836050627e-16,
+      "power_identity": 1.889400998042297e-11,
+      "volume_absolute_m3": 1.994494591151377e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_slow_pulse/full320.csv",
+      "work_scaled": 3.757101305925948e-16,
+      "power_identity": 1.3406788639923197e-10,
+      "volume_absolute_m3": 1.6142154865862396e-26,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_slow_pulse/port17.csv",
+      "work_scaled": 7.513645254006498e-16,
+      "power_identity": 5.388099582036961e-12,
+      "volume_absolute_m3": 3.3951847285123314e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_slow_pulse/port5.csv",
+      "work_scaled": 6.261201244697292e-16,
+      "power_identity": 4.716964005835208e-12,
+      "volume_absolute_m3": 3.3917053434748014e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_slow_pulse/port9.csv",
+      "work_scaled": 5.009096656055555e-16,
+      "power_identity": 5.3898271354834026e-12,
+      "volume_absolute_m3": 3.39520418040477e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_slow_pulse/slow17.csv",
+      "work_scaled": 5.646468060119822e-16,
+      "power_identity": 7.525265056598608e-14,
+      "volume_absolute_m3": 2.7803583641929333e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_slow_pulse/slow5.csv",
+      "work_scaled": 3.479424740403593e-16,
+      "power_identity": 1.0392024885275409e-13,
+      "volume_absolute_m3": 2.7132337352482106e-27,
+      "passed": true
+    },
+    {
+      "path": "run1/data/L300_h6_slow_pulse/slow9.csv",
+      "work_scaled": 3.569355139820195e-16,
+      "power_identity": 2.8433704385654725e-13,
+      "volume_absolute_m3": 3.083772641712604e-27,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_chirp/dc_slow17.csv",
+      "work_scaled": 1.4980047546109013e-15,
+      "power_identity": 1.4574142872366138e-13,
+      "volume_absolute_m3": 4.825695832724494e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_chirp/dc_slow5.csv",
+      "work_scaled": 6.769486227353653e-16,
+      "power_identity": 1.5289636809614597e-13,
+      "volume_absolute_m3": 5.148713216771133e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_chirp/dc_slow9.csv",
+      "work_scaled": 2.252043914849284e-15,
+      "power_identity": 4.1594390951604356e-14,
+      "volume_absolute_m3": 5.2736174849075865e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_fast_pulse/dc_slow17.csv",
+      "work_scaled": 3.1300536516088466e-16,
+      "power_identity": 6.213156498443561e-14,
+      "volume_absolute_m3": 3.109274837670239e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_fast_pulse/dc_slow5.csv",
+      "work_scaled": 9.46872206093346e-16,
+      "power_identity": 3.1305962313961253e-14,
+      "volume_absolute_m3": 3.1328249115534456e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_fast_pulse/dc_slow9.csv",
+      "work_scaled": 8.346788122917524e-16,
+      "power_identity": 5.957520022732383e-14,
+      "volume_absolute_m3": 3.1092732903665993e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_slow_pulse/dc_slow17.csv",
+      "work_scaled": 3.16981909153935e-16,
+      "power_identity": 4.516704940588403e-12,
+      "volume_absolute_m3": 5.6683067343543694e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_slow_pulse/dc_slow5.csv",
+      "work_scaled": 4.2264254553913553e-16,
+      "power_identity": 4.480955324652526e-12,
+      "volume_absolute_m3": 5.668673864750018e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h2_slow_pulse/dc_slow9.csv",
+      "work_scaled": 3.1698190915378193e-16,
+      "power_identity": 4.6895343737099915e-12,
+      "volume_absolute_m3": 5.6687099759364755e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_chirp/dc_slow17.csv",
+      "work_scaled": 1.4980047546104441e-15,
+      "power_identity": 1.0766128962952874e-13,
+      "volume_absolute_m3": 4.7738339623616955e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_chirp/dc_slow5.csv",
+      "work_scaled": 2.1060623817945924e-15,
+      "power_identity": 2.8778778323370837e-13,
+      "volume_absolute_m3": 5.112839950370479e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_chirp/dc_slow9.csv",
+      "work_scaled": 3.7534065247501885e-15,
+      "power_identity": 3.077206880525662e-14,
+      "volume_absolute_m3": 4.766561413912028e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_fast_pulse/dc_slow17.csv",
+      "work_scaled": 8.346809737620877e-16,
+      "power_identity": 2.0058427150720173e-14,
+      "volume_absolute_m3": 2.0795927248213268e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_fast_pulse/dc_slow5.csv",
+      "work_scaled": 7.890601718950499e-16,
+      "power_identity": 6.698134534174104e-14,
+      "volume_absolute_m3": 2.0989591508819215e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_fast_pulse/dc_slow9.csv",
+      "work_scaled": 3.1300455460853465e-16,
+      "power_identity": 2.0645258747721264e-14,
+      "volume_absolute_m3": 2.0795560345824993e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_slow_pulse/dc_slow17.csv",
+      "work_scaled": 3.1698190914861194e-16,
+      "power_identity": 2.3934660090308728e-12,
+      "volume_absolute_m3": 2.797996439883745e-29,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_slow_pulse/dc_slow5.csv",
+      "work_scaled": 4.226425455303173e-16,
+      "power_identity": 2.4445578795575812e-12,
+      "volume_absolute_m3": 2.7980271343922335e-29,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L100_h6_slow_pulse/dc_slow9.csv",
+      "work_scaled": 6.339638182969814e-16,
+      "power_identity": 2.1578246294743678e-12,
+      "volume_absolute_m3": 2.797935652719875e-29,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_chirp/dc_slow17.csv",
+      "work_scaled": 9.986698364072043e-16,
+      "power_identity": 3.4311135725172286e-13,
+      "volume_absolute_m3": 1.09014857089609e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_chirp/dc_slow5.csv",
+      "work_scaled": 1.0530311909040948e-15,
+      "power_identity": 4.629811465901329e-13,
+      "volume_absolute_m3": 5.806257485152181e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_chirp/dc_slow9.csv",
+      "work_scaled": 1.3762490590739515e-15,
+      "power_identity": 1.2463069071468981e-13,
+      "volume_absolute_m3": 7.160487162610219e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_fast_pulse/dc_slow17.csv",
+      "work_scaled": 6.26010730321785e-16,
+      "power_identity": 9.912162610683639e-14,
+      "volume_absolute_m3": 2.187405381844187e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_fast_pulse/dc_slow5.csv",
+      "work_scaled": 9.468722062813755e-16,
+      "power_identity": 1.8632669634230693e-13,
+      "volume_absolute_m3": 1.4755314763443984e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_fast_pulse/dc_slow9.csv",
+      "work_scaled": 6.260091092183935e-16,
+      "power_identity": 6.792850927841672e-14,
+      "volume_absolute_m3": 1.4559113669993252e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_slow_pulse/dc_slow17.csv",
+      "work_scaled": 4.226425455340999e-16,
+      "power_identity": 8.36323748344922e-13,
+      "volume_absolute_m3": 4.516279238051333e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_slow_pulse/dc_slow5.csv",
+      "work_scaled": 2.1132127276683099e-16,
+      "power_identity": 1.0645077982987021e-12,
+      "volume_absolute_m3": 4.516171385974447e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h2_slow_pulse/dc_slow9.csv",
+      "work_scaled": 6.339638183007325e-16,
+      "power_identity": 1.0171883426737513e-12,
+      "volume_absolute_m3": 4.516251793549625e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_chirp/dc_slow17.csv",
+      "work_scaled": 1.2483372955086435e-15,
+      "power_identity": 9.682221095586493e-14,
+      "volume_absolute_m3": 9.083227285527063e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_chirp/dc_slow5.csv",
+      "work_scaled": 2.2564954090679746e-15,
+      "power_identity": 3.1794490416977986e-13,
+      "volume_absolute_m3": 2.6683365353778757e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_chirp/dc_slow9.csv",
+      "work_scaled": 1.1260219574253788e-15,
+      "power_identity": 6.353422502834169e-14,
+      "volume_absolute_m3": 8.443776108644436e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_fast_pulse/dc_slow17.csv",
+      "work_scaled": 1.0433512172035891e-15,
+      "power_identity": 1.285897770477886e-13,
+      "volume_absolute_m3": 4.079960076228266e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_fast_pulse/dc_slow5.csv",
+      "work_scaled": 9.468722063477895e-16,
+      "power_identity": 1.1121803123726744e-13,
+      "volume_absolute_m3": 1.8620658923317097e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_fast_pulse/dc_slow9.csv",
+      "work_scaled": 4.1733940614591764e-16,
+      "power_identity": 1.2572349610145768e-13,
+      "volume_absolute_m3": 3.8637083288919202e-31,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_slow_pulse/dc_slow17.csv",
+      "work_scaled": 4.226425455414812e-16,
+      "power_identity": 2.7755744929956396e-12,
+      "volume_absolute_m3": 7.4567943734491115e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_slow_pulse/dc_slow5.csv",
+      "work_scaled": 4.226425455386802e-16,
+      "power_identity": 1.4558549841108374e-12,
+      "volume_absolute_m3": 7.447566761603066e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L200_h6_slow_pulse/dc_slow9.csv",
+      "work_scaled": 8.452850910833888e-16,
+      "power_identity": 2.7007882247529255e-12,
+      "volume_absolute_m3": 7.456763558570001e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_chirp/dc_slow17.csv",
+      "work_scaled": 8.877065212500058e-16,
+      "power_identity": 2.411071016844059e-13,
+      "volume_absolute_m3": 1.1751928224153694e-29,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_chirp/dc_slow5.csv",
+      "work_scaled": 8.914549764254265e-16,
+      "power_identity": 2.741474774220306e-13,
+      "volume_absolute_m3": 9.200480307953789e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_chirp/dc_slow9.csv",
+      "work_scaled": 1.779392722842447e-15,
+      "power_identity": 2.2641382247605418e-13,
+      "volume_absolute_m3": 1.1582951945658019e-29,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_fast_pulse/dc_slow17.csv",
+      "work_scaled": 3.7096932167220996e-16,
+      "power_identity": 1.213572036157891e-13,
+      "volume_absolute_m3": 9.168405812556225e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_fast_pulse/dc_slow5.csv",
+      "work_scaled": 1.3092553962915339e-15,
+      "power_identity": 1.4854203857746892e-13,
+      "volume_absolute_m3": 5.700688645054245e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_fast_pulse/dc_slow9.csv",
+      "work_scaled": 8.655928423744443e-16,
+      "power_identity": 1.4189153383547868e-13,
+      "volume_absolute_m3": 9.168549067095625e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_slow_pulse/dc_slow17.csv",
+      "work_scaled": 5.009096836106799e-16,
+      "power_identity": 5.5492731428842725e-12,
+      "volume_absolute_m3": 3.772956464882871e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_slow_pulse/dc_slow5.csv",
+      "work_scaled": 3.756822627022448e-16,
+      "power_identity": 2.0112306468040803e-12,
+      "volume_absolute_m3": 3.8142252917312007e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h2_slow_pulse/dc_slow9.csv",
+      "work_scaled": 7.513645254163229e-16,
+      "power_identity": 5.39133592830831e-12,
+      "volume_absolute_m3": 3.7731663912468092e-28,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_chirp/dc_slow17.csv",
+      "work_scaled": 1.0356576081246658e-15,
+      "power_identity": 7.707789279038529e-14,
+      "volume_absolute_m3": 5.6525562385279275e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_chirp/dc_slow5.csv",
+      "work_scaled": 3.0309469198570717e-15,
+      "power_identity": 1.5722758567078426e-13,
+      "volume_absolute_m3": 6.420219877298527e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_chirp/dc_slow9.csv",
+      "work_scaled": 2.6690890842633687e-15,
+      "power_identity": 1.1873739356799403e-13,
+      "volume_absolute_m3": 4.8440087181566325e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_fast_pulse/dc_slow17.csv",
+      "work_scaled": 2.473128811146618e-16,
+      "power_identity": 8.24537281372515e-14,
+      "volume_absolute_m3": 2.4788592725556233e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_fast_pulse/dc_slow5.csv",
+      "work_scaled": 7.481459407419707e-16,
+      "power_identity": 2.3415798967191273e-13,
+      "volume_absolute_m3": 3.3538061633770604e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_fast_pulse/dc_slow9.csv",
+      "work_scaled": 3.7096836101767173e-16,
+      "power_identity": 1.0380931302477847e-13,
+      "volume_absolute_m3": 2.0918652993307398e-30,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_slow_pulse/dc_slow17.csv",
+      "work_scaled": 3.7568226269702433e-16,
+      "power_identity": 9.641358925615663e-12,
+      "volume_absolute_m3": 3.4275326478582594e-27,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_slow_pulse/dc_slow5.csv",
+      "work_scaled": 2.504548417987876e-16,
+      "power_identity": 9.972137374558849e-12,
+      "volume_absolute_m3": 3.427524944138482e-27,
+      "passed": true
+    },
+    {
+      "path": "dc_control/run1/data/L300_h6_slow_pulse/dc_slow9.csv",
+      "work_scaled": 6.261371044965901e-16,
+      "power_identity": 8.923189450174192e-12,
+      "volume_absolute_m3": 3.418817429673918e-27,
+      "passed": true
+    }
+  ],
+  "csv_audits_passed": 204,
+  "profile_audits": [
+    {
+      "case": "L100_h2_slow_pulse",
+      "model": "full160",
+      "energy": 6.630204933049585e-15,
+      "volume": 6.018531076210111e-18,
+      "flux": 2.887331682786138e-13,
+      "dissipation": 3.156131120687817e-13,
+      "passed": true
+    },
+    {
+      "case": "L100_h2_slow_pulse",
+      "model": "port17",
+      "energy": 6.392468501226983e-15,
+      "volume": 1.0532429383367696e-17,
+      "flux": 2.0354134798935158e-13,
+      "dissipation": 1.1917340937875357e-13,
+      "passed": true
+    },
+    {
+      "case": "L100_h2_fast_pulse",
+      "model": "full160",
+      "energy": 5.73843169461392e-16,
+      "volume": 5.823569946280507e-19,
+      "flux": 2.672002593056616e-14,
+      "dissipation": 2.0753728020408675e-15,
+      "passed": true
+    },
+    {
+      "case": "L100_h2_fast_pulse",
+      "model": "port17",
+      "energy": 5.999273066519162e-16,
+      "volume": 9.579634810323562e-19,
+      "flux": 3.163524657516412e-14,
+      "dissipation": 3.9592498592416134e-15,
+      "passed": true
+    },
+    {
+      "case": "L100_h2_chirp",
+      "model": "full160",
+      "energy": 1.1507944487757196e-16,
+      "volume": 5.172175143618065e-19,
+      "flux": 1.7606023024985987e-13,
+      "dissipation": 8.481445445646924e-15,
+      "passed": true
+    },
+    {
+      "case": "L100_h2_chirp",
+      "model": "port17",
+      "energy": 1.1117844638567761e-16,
+      "volume": 9.4039548065783e-19,
+      "flux": 1.238280911784956e-13,
+      "dissipation": 5.234573947330079e-15,
+      "passed": true
+    },
+    {
+      "case": "L100_h6_slow_pulse",
+      "model": "full160",
+      "energy": 6.5245442967278934e-15,
+      "volume": 3.0092655381050556e-18,
+      "flux": 1.3881827279381875e-13,
+      "dissipation": 6.427303930417421e-13,
+      "passed": true
+    },
+    {
+      "case": "L100_h6_slow_pulse",
+      "model": "port17",
+      "energy": 6.471713978386114e-15,
+      "volume": 3.510809794455898e-18,
+      "flux": 2.9031695122208385e-13,
+      "dissipation": 3.530608230989168e-13,
+      "passed": true
+    },
+    {
+      "case": "L100_h6_fast_pulse",
+      "model": "full160",
+      "energy": 5.216756086015669e-16,
+      "volume": 1.4379455263204605e-19,
+      "flux": 2.4624983378819563e-14,
+      "dissipation": 5.331848564337268e-15,
+      "passed": true
+    },
+    {
+      "case": "L100_h6_fast_pulse",
+      "model": "port17",
+      "energy": 5.477596837572637e-16,
+      "volume": 3.194347361685266e-19,
+      "flux": 3.7668933166799907e-14,
+      "dissipation": 8.519095813009214e-15,
+      "passed": true
+    },
+    {
+      "case": "L100_h6_chirp",
+      "model": "full160",
+      "energy": 1.150794448774769e-16,
+      "volume": 2.1942561215349364e-19,
+      "flux": 1.153944888578447e-13,
+      "dissipation": 6.18821697949761e-15,
+      "passed": true
+    },
+    {
+      "case": "L100_h6_chirp",
+      "model": "port17",
+      "energy": 1.1507944452698028e-16,
+      "volume": 2.977919022083128e-19,
+      "flux": 1.265915286874712e-13,
+      "dissipation": 4.620701888966637e-15,
+      "passed": true
+    },
+    {
+      "case": "L200_h2_slow_pulse",
+      "model": "full160",
+      "energy": 2.932082659680394e-15,
+      "volume": 4.2129717533470784e-17,
+      "flux": 5.121074727915995e-13,
+      "dissipation": 4.918652594432299e-13,
+      "passed": true
+    },
+    {
+      "case": "L200_h2_slow_pulse",
+      "model": "port17",
+      "energy": 2.984912977838832e-15,
+      "volume": 6.018531076210112e-17,
+      "flux": 3.2858664432926695e-13,
+      "dissipation": 1.8807981369115294e-13,
+      "passed": true
+    },
+    {
+      "case": "L200_h2_fast_pulse",
+      "model": "full160",
+      "energy": 6.520945107516706e-16,
+      "volume": 5.199854276555526e-18,
+      "flux": 4.652574631464779e-14,
+      "dissipation": 6.869629785491713e-15,
+      "passed": true
+    },
+    {
+      "case": "L200_h2_fast_pulse",
+      "model": "port17",
+      "energy": 6.260111146247765e-16,
+      "volume": 6.926627964103989e-18,
+      "flux": 6.773230655495766e-14,
+      "dissipation": 1.2177634069461148e-15,
+      "passed": true
+    },
+    {
+      "case": "L200_h2_chirp",
+      "model": "full160",
+      "energy": 6.436646916873769e-17,
+      "volume": 5.830451980078545e-18,
+      "flux": 1.4959844913516316e-13,
+      "dissipation": 1.1305444036338315e-14,
+      "passed": true
+    },
+    {
+      "case": "L200_h2_chirp",
+      "model": "port17",
+      "energy": 6.436646893108117e-17,
+      "volume": 6.159590398308786e-18,
+      "flux": 1.6069548797739424e-13,
+      "dissipation": 4.25017238065982e-15,
+      "passed": true
+    },
+    {
+      "case": "L200_h6_slow_pulse",
+      "model": "full160",
+      "energy": 2.9849129777533408e-15,
+      "volume": 2.0061770254033705e-17,
+      "flux": 4.379395253938401e-13,
+      "dissipation": 3.321965636830218e-13,
+      "passed": true
+    },
+    {
+      "case": "L200_h6_slow_pulse",
+      "model": "port17",
+      "energy": 2.9849129778768007e-15,
+      "volume": 1.8055593228630336e-17,
+      "flux": 5.331639337316778e-13,
+      "dissipation": 1.7857354119544013e-13,
+      "passed": true
+    },
+    {
+      "case": "L200_h6_fast_pulse",
+      "model": "full160",
+      "energy": 5.477593890318827e-16,
+      "volume": 2.268983554737216e-18,
+      "flux": 4.66440822403882e-14,
+      "dissipation": 1.1038124696399638e-14,
+      "passed": true
+    },
+    {
+      "case": "L200_h6_fast_pulse",
+      "model": "port17",
+      "energy": 5.999271560264648e-16,
+      "volume": 1.8487860858479248e-18,
+      "flux": 4.721158350263954e-14,
+      "dissipation": 2.4579738160394324e-15,
+      "passed": true
+    },
+    {
+      "case": "L200_h6_chirp",
+      "model": "full160",
+      "energy": 6.046547103734641e-17,
+      "volume": 1.943483993359515e-18,
+      "flux": 1.3419793750272519e-13,
+      "dissipation": 1.6803296404937643e-14,
+      "passed": true
+    },
+    {
+      "case": "L200_h6_chirp",
+      "model": "port17",
+      "energy": 6.04654709264173e-17,
+      "volume": 1.4419397370086725e-18,
+      "flux": 1.6188225669822163e-13,
+      "dissipation": 1.4996712637203175e-15,
+      "passed": true
+    },
+    {
+      "case": "L300_h2_slow_pulse",
+      "model": "full160",
+      "energy": 5.510006519656512e-15,
+      "volume": 8.827178911774832e-17,
+      "flux": 3.733122840536451e-13,
+      "dissipation": 3.411769143231018e-13,
+      "passed": true
+    },
+    {
+      "case": "L300_h2_slow_pulse",
+      "model": "port17",
+      "energy": 5.510006519704915e-15,
+      "volume": 8.024708101613483e-17,
+      "flux": 3.1438057163456453e-13,
+      "dissipation": 6.83057535959976e-14,
+      "passed": true
+    },
+    {
+      "case": "L300_h2_fast_pulse",
+      "model": "full160",
+      "energy": 3.709693216719469e-16,
+      "volume": 6.592814650748434e-18,
+      "flux": 3.17696777740271e-14,
+      "dissipation": 1.2439113846047482e-14,
+      "passed": true
+    },
+    {
+      "case": "L300_h2_fast_pulse",
+      "model": "port17",
+      "energy": 4.637118956565297e-16,
+      "volume": 1.0340919848806729e-17,
+      "flux": 3.0524707590522496e-14,
+      "dissipation": 3.8391986824374595e-15,
+      "passed": true
+    },
+    {
+      "case": "L300_h2_chirp",
+      "model": "full160",
+      "energy": 6.010426750660639e-17,
+      "volume": 6.143917140297823e-18,
+      "flux": 9.325840559578254e-14,
+      "dissipation": 8.780427664513794e-15,
+      "passed": true
+    },
+    {
+      "case": "L300_h2_chirp",
+      "model": "port17",
+      "energy": 6.010426732813552e-17,
+      "volume": 1.021896422314842e-17,
+      "flux": 1.6940126982988271e-13,
+      "dissipation": 4.270888975648539e-15,
+      "passed": true
+    },
+    {
+      "case": "L300_h6_slow_pulse",
+      "model": "full160",
+      "energy": 5.44739280920506e-15,
+      "volume": 2.6749027005378277e-17,
+      "flux": 3.7836407930132106e-13,
+      "dissipation": 2.0398026617417422e-13,
+      "passed": true
+    },
+    {
+      "case": "L300_h6_slow_pulse",
+      "model": "port17",
+      "energy": 5.603927085279845e-15,
+      "volume": 2.6749027005378277e-17,
+      "flux": 3.4360767844085694e-13,
+      "dissipation": 1.3398176964377094e-13,
+      "passed": true
+    },
+    {
+      "case": "L300_h6_fast_pulse",
+      "model": "full160",
+      "energy": 4.946257622295236e-16,
+      "volume": 2.682619092933723e-18,
+      "flux": 4.60075774796328e-14,
+      "dissipation": 7.839649204443811e-15,
+      "passed": true
+    },
+    {
+      "case": "L300_h6_fast_pulse",
+      "model": "port17",
+      "energy": 4.3279782463883803e-16,
+      "volume": 2.3050499004574514e-18,
+      "flux": 6.046711700846482e-14,
+      "dissipation": 8.18009561280813e-15,
+      "passed": true
+    },
+    {
+      "case": "L300_h6_chirp",
+      "model": "full160",
+      "energy": 6.010426750663464e-17,
+      "volume": 2.6749027005378278e-18,
+      "flux": 1.2384713467389784e-13,
+      "dissipation": 1.9331932122869406e-14,
+      "passed": true
+    },
+    {
+      "case": "L300_h6_chirp",
+      "model": "port17",
+      "energy": 5.77925647036274e-17,
+      "volume": 2.340539862970599e-18,
+      "flux": 1.1014974035356343e-13,
+      "dissipation": 5.452703908878505e-15,
+      "passed": true
+    }
+  ],
+  "profile_audits_passed": 36,
+  "max_grid160_to320_flux": 0.002947542898934606,
+  "time_checks": [
+    {
+      "case": "L200_h2_slow_pulse",
+      "difference": 0.03976169215507867,
+      "passed": false
+    },
+    {
+      "case": "L200_h2_fast_pulse",
+      "difference": 0.040803914218572844,
+      "passed": false
+    },
+    {
+      "case": "L200_h2_chirp",
+      "difference": 0.003911998105421018,
+      "passed": true
+    }
+  ],
+  "memory_counterexamples": {
+    "L100_h2_fast_pulse": {
+      "t_s": 0.0011646025255149849,
+      "pressure_now_Pa": [
+        0.0,
+        -0.0
+      ],
+      "volume_change_m3": 3.6427333311925625e-31,
+      "volume_change_relative_to_initial": 2.2767083319953512e-17,
+      "q_after_pulse_m3_s": [
+        -1.2146080309789067e-18,
+        1.214608030954796e-18
+      ],
+      "q_after_pulse_relative_to_peak": 0.020093900837741412,
+      "rest_state_q_m3_s": [
+        0.0,
+        0.0
+      ],
+      "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+    },
+    "L100_h6_fast_pulse": {
+      "t_s": 4.313342687092536e-05,
+      "pressure_now_Pa": [
+        0.0,
+        -0.0
+      ],
+      "volume_change_m3": -3.875703616186551e-32,
+      "volume_change_relative_to_initial": -8.07438253372198e-19,
+      "q_after_pulse_m3_s": [
+        -3.2794416836433e-17,
+        3.2794416836758764e-17
+      ],
+      "q_after_pulse_relative_to_peak": 0.020093900838041894,
+      "rest_state_q_m3_s": [
+        0.0,
+        0.0
+      ],
+      "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+    },
+    "L200_h2_fast_pulse": {
+      "t_s": 0.018633640408239758,
+      "pressure_now_Pa": [
+        0.0,
+        -0.0
+      ],
+      "volume_change_m3": 5.803977966507067e-31,
+      "volume_change_relative_to_initial": 1.8137431145334583e-17,
+      "q_after_pulse_m3_s": [
+        -6.073040154912655e-19,
+        6.0730401548859e-19
+      ],
+      "q_after_pulse_relative_to_peak": 0.020093900837956317,
+      "rest_state_q_m3_s": [
+        0.0,
+        0.0
+      ],
+      "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+    },
+    "L200_h6_fast_pulse": {
+      "t_s": 0.0006901348299348058,
+      "pressure_now_Pa": [
+        0.0,
+        -0.0
+      ],
+      "volume_change_m3": -1.8216517464862427e-30,
+      "volume_change_relative_to_initial": -1.897553902589836e-17,
+      "q_after_pulse_m3_s": [
+        -1.639720841804395e-17,
+        1.6397208418486667e-17
+      ],
+      "q_after_pulse_relative_to_peak": 0.020093900838002055,
+      "rest_state_q_m3_s": [
+        0.0,
+        0.0
+      ],
+      "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+    },
+    "L300_h2_fast_pulse": {
+      "t_s": 0.09433280456671378,
+      "pressure_now_Pa": [
+        0.0,
+        -0.0
+      ],
+      "volume_change_m3": 6.599709777267957e-30,
+      "volume_change_relative_to_initial": 1.3749395369308242e-16,
+      "q_after_pulse_m3_s": [
+        -4.0486934366124106e-19,
+        4.0486934365458977e-19
+      ],
+      "q_after_pulse_relative_to_peak": 0.020093900837855432,
+      "rest_state_q_m3_s": [
+        0.0,
+        0.0
+      ],
+      "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+    },
+    "L300_h6_fast_pulse": {
+      "t_s": 0.003493807576544954,
+      "pressure_now_Pa": [
+        0.0,
+        -0.0
+      ],
+      "volume_change_m3": -3.286423408062839e-30,
+      "volume_change_relative_to_initial": -2.2822384778214156e-17,
+      "q_after_pulse_m3_s": [
+        -1.0931472278738821e-17,
+        1.0931472278915907e-17
+      ],
+      "q_after_pulse_relative_to_peak": 0.020093900837972467,
+      "rest_state_q_m3_s": [
+        0.0,
+        0.0
+      ],
+      "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+    }
+  },
+  "max_port_frequency_error": 0.017846851249413643,
+  "median_full160_online_s": 0.0470000000204891,
+  "median_port16_online_s": 0.01600000006146729,
+  "similarity_limitation": "Uniform strips at different L/h are capillary similarity rescalings because inputs/time scale with tau.18 SI runs are3 dimensionless input tests, not18 independent physical validation conditions. Each geometry has its own assembled basis; no cross-geometry learned generalization.",
+  "temporal_limitation": "Two pulse time checks fail2%; retain discrete reduction accuracy separately from continuum time accuracy. No further time-step tuning in this matrix.",
+  "scope": "Linear immobile-interface capillary strip; fixed thickness endpoints, no curved meniscus, surface/bulk surfactant, moving geometry, nonlinear mobility or experiment validation. Passive rational projection is prior art; this is a C1 architecture pilot, not a completed novel method."
+}

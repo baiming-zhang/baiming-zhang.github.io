@@ -1,0 +1,1902 @@
+{
+  "state": "completed",
+  "cases": [
+    {
+      "name": "L100_h2_slow_pulse",
+      "length": 9.999999999999999e-05,
+      "h0": 2e-06,
+      "kind": "slow_pulse",
+      "T_s": 0.23292050510299697,
+      "dt_s": 0.00022746143076464548,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 2.7491194223923733e-12,
+            "power_identity": 1.543068098835878e-11,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.4274837028006045e-05,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 2.963087606106449e-12,
+            "power_identity": 5.372117054503783e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.458990958898809e-05,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 2.3701599800714577e-12,
+            "power_identity": 4.683987435555845e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.4223973725569697e-05,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 2.810751061403726e-12,
+            "power_identity": 5.955808282622009e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.426863082140391e-05,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 3.126645702000766e-13,
+            "power_identity": 3.833121955863025e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.42888073477677e-05,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 3.791599346373918e-13,
+            "power_identity": 2.5344279381033408e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.4274827355260103e-05,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 3.790365547503295e-13,
+            "power_identity": 2.528461505088301e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.427483702843277e-05,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.00029704709522390584,
+        "fine_audit": {
+          "volume_balance": 6.59721833109732e-11,
+          "power_identity": 2.294990130248532e-10,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 2.4275200283171775e-05
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L100_h2_fast_pulse",
+      "length": 9.999999999999999e-05,
+      "h0": 2e-06,
+      "kind": "fast_pulse",
+      "T_s": 0.0023292050510299697,
+      "dt_s": 2.274614307646455e-06,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 3.4212575669974667e-14,
+            "power_identity": 1.1099936459650656e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.4479483926591336e-06,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 3.663165462586875e-15,
+            "power_identity": 1.146367073258542e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 1.8009783863119541e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 9.028558592085428e-15,
+            "power_identity": 1.5027957678462435e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.517206091483798e-06,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 2.275937421018489e-15,
+            "power_identity": 1.1865209402818425e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.4967987367452937e-06,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.5727123508998663e-14,
+            "power_identity": 5.89223420347618e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.820903941501791e-06,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 1.8106605301001573e-14,
+            "power_identity": 4.1124425447933995e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.426305461969162e-06,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 1.810183828333228e-14,
+            "power_identity": 4.125315351855092e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.4479505406999e-06,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0029475428969880503,
+        "fine_audit": {
+          "volume_balance": 5.274336242673725e-14,
+          "power_identity": 2.205433230253173e-12,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 2.44841568978238e-06
+        }
+      },
+      "memory_counterexample": {
+        "t_s": 0.0011646025255149849,
+        "pressure_now_Pa": [
+          0.0,
+          -0.0
+        ],
+        "volume_change_m3": 3.6427333311925625e-31,
+        "volume_change_relative_to_initial": 2.2767083319953512e-17,
+        "q_after_pulse_m3_s": [
+          -1.2146080309789067e-18,
+          1.214608030954796e-18
+        ],
+        "q_after_pulse_relative_to_peak": 0.020093900837741412,
+        "rest_state_q_m3_s": [
+          0.0,
+          0.0
+        ],
+        "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+      }
+    },
+    {
+      "name": "L100_h2_chirp",
+      "length": 9.999999999999999e-05,
+      "h0": 2e-06,
+      "kind": "chirp",
+      "T_s": 0.023292050510299697,
+      "dt_s": 2.2746143076464547e-05,
+      "offline_basis_wall_s": 0.01600000006146729,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.04600000008940697,
+          "audit": {
+            "volume_balance": 3.1228935240329415e-14,
+            "power_identity": 1.2866369562078975e-12,
+            "minimum_dissipation_scaled": 1.3912059590255637e-16,
+            "maximum_relative_thickness_perturbation": 2.671250186276412e-06,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.03100000019185245,
+          "audit": {
+            "volume_balance": 1.3017001263039714e-14,
+            "power_identity": 8.651689841667377e-15,
+            "minimum_dissipation_scaled": 1.5869173449879114e-17,
+            "maximum_relative_thickness_perturbation": 2.4233178623668508e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 2.083348621366304e-14,
+            "power_identity": 5.487700183234902e-15,
+            "minimum_dissipation_scaled": 1.5823253568000705e-17,
+            "maximum_relative_thickness_perturbation": 2.686434590505182e-06,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 1.4277601404861535e-14,
+            "power_identity": 4.975276061053641e-15,
+            "minimum_dissipation_scaled": 1.6711616660610507e-17,
+            "maximum_relative_thickness_perturbation": 2.669764577103499e-06,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.03100000019185245,
+          "audit": {
+            "volume_balance": 2.5440745220898808e-14,
+            "power_identity": 1.219544588568564e-13,
+            "minimum_dissipation_scaled": 1.264423894804127e-16,
+            "maximum_relative_thickness_perturbation": 2.2370180738293204e-06,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 2.6274555690031703e-14,
+            "power_identity": 2.814454642517038e-14,
+            "minimum_dissipation_scaled": 1.4022623217810094e-16,
+            "maximum_relative_thickness_perturbation": 2.662334000902954e-06,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 2.646442153757652e-14,
+            "power_identity": 2.5912380004100478e-14,
+            "minimum_dissipation_scaled": 1.3912056287164862e-16,
+            "maximum_relative_thickness_perturbation": 2.671250363315822e-06,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0006390475751999898,
+        "fine_audit": {
+          "volume_balance": 2.670658747977812e-13,
+          "power_identity": 1.1161507219212156e-12,
+          "minimum_dissipation_scaled": 1.3903595773791296e-16,
+          "maximum_relative_thickness_perturbation": 2.670468299679102e-06
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L100_h6_slow_pulse",
+      "length": 9.999999999999999e-05,
+      "h0": 6e-06,
+      "kind": "slow_pulse",
+      "T_s": 0.008626685374185072,
+      "dt_s": 8.42449743572761e-06,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.06299999984912574,
+          "audit": {
+            "volume_balance": 2.904155654440969e-13,
+            "power_identity": 7.712558647809891e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.091612342259983e-06,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 1.126666384359187e-12,
+            "power_identity": 2.3929750023167996e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.196636529161618e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.03100000019185245,
+          "audit": {
+            "volume_balance": 1.04802562421008e-12,
+            "power_identity": 2.2692376409849006e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.074657908230634e-06,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 1.0565111260972157e-12,
+            "power_identity": 2.167150257464558e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.089543607027592e-06,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 5.081177461467049e-13,
+            "power_identity": 7.78425703452037e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.096269126176738e-06,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 5.269795717674193e-13,
+            "power_identity": 7.424455669927166e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.09160911791706e-06,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 5.269799479256116e-13,
+            "power_identity": 7.425832826808782e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.091612342394268e-06,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.00029704714354563023,
+        "fine_audit": {
+          "volume_balance": 1.7585821800919317e-11,
+          "power_identity": 2.687020648247955e-10,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 8.091733423243024e-06
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L100_h6_fast_pulse",
+      "length": 9.999999999999999e-05,
+      "h0": 6e-06,
+      "kind": "fast_pulse",
+      "T_s": 8.626685374185072e-05,
+      "dt_s": 8.42449743572761e-08,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 1.6058913143749026e-15,
+            "power_identity": 7.66214310606105e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.159827975529406e-07,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 1.3365967698900954e-15,
+            "power_identity": 3.3941321479809778e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 6.003261287760367e-07,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.03100000019185245,
+          "audit": {
+            "volume_balance": 1.1354008778469267e-15,
+            "power_identity": 1.7414882038143073e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.390686971607814e-07,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 1.2259613137837718e-15,
+            "power_identity": 4.733531146645825e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.322662455813167e-07,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 2.6356146691698613e-15,
+            "power_identity": 3.065228932861413e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.403013107858997e-07,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 2.9900076767416773e-15,
+            "power_identity": 1.472376175006361e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.087684843862156e-07,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 2.988975378387924e-15,
+            "power_identity": 1.522804525588274e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.159846013588326e-07,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.002947542898934606,
+        "fine_audit": {
+          "volume_balance": 7.581889313853585e-14,
+          "power_identity": 1.1797771109152967e-11,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 8.161385632485054e-07
+        }
+      },
+      "memory_counterexample": {
+        "t_s": 4.313342687092536e-05,
+        "pressure_now_Pa": [
+          0.0,
+          -0.0
+        ],
+        "volume_change_m3": -3.875703616186551e-32,
+        "volume_change_relative_to_initial": -8.07438253372198e-19,
+        "q_after_pulse_m3_s": [
+          -3.2794416836433e-17,
+          3.2794416836758764e-17
+        ],
+        "q_after_pulse_relative_to_peak": 0.020093900838041894,
+        "rest_state_q_m3_s": [
+          0.0,
+          0.0
+        ],
+        "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+      }
+    },
+    {
+      "name": "L100_h6_chirp",
+      "length": 9.999999999999999e-05,
+      "h0": 6e-06,
+      "kind": "chirp",
+      "T_s": 0.0008626685374185072,
+      "dt_s": 8.424497435727609e-07,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 8.700288214918067e-15,
+            "power_identity": 2.0823723075532734e-13,
+            "minimum_dissipation_scaled": 1.3912059590246397e-16,
+            "maximum_relative_thickness_perturbation": 8.904167287564806e-07,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 5.1690718385318934e-15,
+            "power_identity": 3.501311026466861e-15,
+            "minimum_dissipation_scaled": 1.5869173446629294e-17,
+            "maximum_relative_thickness_perturbation": 8.077726207021514e-07,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 5.4999029686273185e-15,
+            "power_identity": 1.0766140815307063e-14,
+            "minimum_dissipation_scaled": 1.5823253567992447e-17,
+            "maximum_relative_thickness_perturbation": 8.954781968367774e-07,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 5.631558335919415e-15,
+            "power_identity": 1.6156450356307925e-14,
+            "minimum_dissipation_scaled": 1.6711616660613037e-17,
+            "maximum_relative_thickness_perturbation": 8.899215257025588e-07,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 5.486235887641758e-15,
+            "power_identity": 8.460634944765653e-14,
+            "minimum_dissipation_scaled": 1.2644239010593675e-16,
+            "maximum_relative_thickness_perturbation": 7.456726931633174e-07,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 6.413622564150488e-15,
+            "power_identity": 1.6615953450922104e-13,
+            "minimum_dissipation_scaled": 1.402262330292668e-16,
+            "maximum_relative_thickness_perturbation": 8.874446572956426e-07,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 6.4132150594422026e-15,
+            "power_identity": 1.6920774393491637e-13,
+            "minimum_dissipation_scaled": 1.3912056611870162e-16,
+            "maximum_relative_thickness_perturbation": 8.90416794032655e-07,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.000639047565038217,
+        "fine_audit": {
+          "volume_balance": 5.296122402620369e-14,
+          "power_identity": 1.589234515495031e-12,
+          "minimum_dissipation_scaled": 1.3903595773597191e-16,
+          "maximum_relative_thickness_perturbation": 8.901560998798718e-07
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L200_h2_slow_pulse",
+      "length": 0.00019999999999999998,
+      "h0": 2e-06,
+      "kind": "slow_pulse",
+      "T_s": 3.7267280816479516,
+      "dt_s": 0.0036393828922343277,
+      "offline_basis_wall_s": 0.01600000006146729,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 1.678198027030536e-11,
+            "power_identity": 4.9123521841100535e-11,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.709934811466634e-05,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 7.113781856826059e-12,
+            "power_identity": 8.22917544946019e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.835963835594266e-05,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 7.989311114177264e-12,
+            "power_identity": 9.607186559379221e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.689589490371934e-05,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 9.910111765454801e-12,
+            "power_identity": 1.7736084240833157e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.70745232930402e-05,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 1.461089599495809e-11,
+            "power_identity": 2.9692078880421256e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.715522948544669e-05,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.4511000416155157e-11,
+            "power_identity": 1.1164052910818728e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.70993094246778e-05,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.4510861989940403e-11,
+            "power_identity": 1.110879610094207e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.709934811557795e-05,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.00029704709484209,
+        "fine_audit": {
+          "volume_balance": 6.06508862705635e-11,
+          "power_identity": 2.6609254065682804e-10,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 9.71008011547255e-05
+        },
+        "grid80_to160_flux": 0.0011822368895201098,
+        "time_full320_flux": 0.03976169215507867,
+        "time_fine_audit": {
+          "volume_balance": 4.7915199049347885e-11,
+          "power_identity": 2.2379221337402519e-10,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 9.71479902612726e-05
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L200_h2_fast_pulse",
+      "length": 0.00019999999999999998,
+      "h0": 2e-06,
+      "kind": "fast_pulse",
+      "T_s": 0.037267280816479516,
+      "dt_s": 3.639382892234328e-05,
+      "offline_basis_wall_s": 0.01600000006146729,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 2.333734599146961e-14,
+            "power_identity": 4.377918009745185e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.791793570631095e-06,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 6.778393356545147e-14,
+            "power_identity": 1.5015225927985252e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.203913545152013e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 5.079468025278347e-14,
+            "power_identity": 8.200803301174066e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 1.0068824365919209e-05,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.2820921101023652e-14,
+            "power_identity": 4.4503800285543615e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.987194946976865e-06,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 8.90730109651619e-15,
+            "power_identity": 2.1461671118701435e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 1.1283615738160092e-05,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.0856749744127504e-14,
+            "power_identity": 2.016981907663771e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.70522185159947e-06,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.0586961044133907e-14,
+            "power_identity": 2.0370140831925802e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 9.791804782897734e-06,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0029475428972447486,
+        "fine_audit": {
+          "volume_balance": 1.1233707353724921e-13,
+          "power_identity": 2.1921940528881073e-12,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 9.793662759202673e-06
+        },
+        "grid80_to160_flux": 0.011157894030095119,
+        "time_full320_flux": 0.040803914218572844,
+        "time_fine_audit": {
+          "volume_balance": 3.355852909045686e-13,
+          "power_identity": 1.12412355519195e-12,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 9.799921875668382e-06
+        }
+      },
+      "memory_counterexample": {
+        "t_s": 0.018633640408239758,
+        "pressure_now_Pa": [
+          0.0,
+          -0.0
+        ],
+        "volume_change_m3": 5.803977966507067e-31,
+        "volume_change_relative_to_initial": 1.8137431145334583e-17,
+        "q_after_pulse_m3_s": [
+          -6.073040154912655e-19,
+          6.0730401548859e-19
+        ],
+        "q_after_pulse_relative_to_peak": 0.020093900837956317,
+        "rest_state_q_m3_s": [
+          0.0,
+          0.0
+        ],
+        "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+      }
+    },
+    {
+      "name": "L200_h2_chirp",
+      "length": 0.00019999999999999998,
+      "h0": 2e-06,
+      "kind": "chirp",
+      "T_s": 0.37267280816479514,
+      "dt_s": 0.00036393828922343276,
+      "offline_basis_wall_s": 0.01500000013038516,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 9.779172603360774e-15,
+            "power_identity": 1.0348821407958989e-12,
+            "minimum_dissipation_scaled": 1.3912059590241415e-16,
+            "maximum_relative_thickness_perturbation": 1.0685000745052942e-05,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 6.262653041011481e-14,
+            "power_identity": 3.913800753747933e-15,
+            "minimum_dissipation_scaled": 1.58691734480521e-17,
+            "maximum_relative_thickness_perturbation": 9.693271448851139e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 5.2794554600515097e-14,
+            "power_identity": 8.740532645438705e-15,
+            "minimum_dissipation_scaled": 1.582325356800617e-17,
+            "maximum_relative_thickness_perturbation": 1.0745738361991981e-05,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 2.1119113708497592e-14,
+            "power_identity": 5.2297314184116495e-15,
+            "minimum_dissipation_scaled": 1.6711616660634876e-17,
+            "maximum_relative_thickness_perturbation": 1.0679058308394878e-05,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 5.802766737127979e-14,
+            "power_identity": 2.996739070000588e-13,
+            "minimum_dissipation_scaled": 1.2644238984992405e-16,
+            "maximum_relative_thickness_perturbation": 8.948072320955205e-06,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 4.272592826820785e-14,
+            "power_identity": 2.6752828008368815e-13,
+            "minimum_dissipation_scaled": 1.4022622889163788e-16,
+            "maximum_relative_thickness_perturbation": 1.0649336233060519e-05,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 4.270223030209527e-14,
+            "power_identity": 2.9246368033130617e-13,
+            "minimum_dissipation_scaled": 1.3912058146900292e-16,
+            "maximum_relative_thickness_perturbation": 1.0685001768199731e-05,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0006390475695875704,
+        "fine_audit": {
+          "volume_balance": 6.298016613061618e-13,
+          "power_identity": 1.4030022612750589e-12,
+          "minimum_dissipation_scaled": 1.3903595773734103e-16,
+          "maximum_relative_thickness_perturbation": 1.0681873198744702e-05
+        },
+        "grid80_to160_flux": 0.002545922452192913,
+        "time_full320_flux": 0.003911998105421018,
+        "time_fine_audit": {
+          "volume_balance": 4.3855456087935577e-13,
+          "power_identity": 1.2358076674779326e-11,
+          "minimum_dissipation_scaled": 1.2901302769376105e-18,
+          "maximum_relative_thickness_perturbation": 1.071355454662765e-05
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L200_h6_slow_pulse",
+      "length": 0.00019999999999999998,
+      "h0": 6e-06,
+      "kind": "slow_pulse",
+      "T_s": 0.13802696598696115,
+      "dt_s": 0.00013479195897164175,
+      "offline_basis_wall_s": 0.015999999828636646,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 1.7763754656744907e-12,
+            "power_identity": 5.5687239816577236e-11,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.23664493682634e-05,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 6.036715064768368e-12,
+            "power_identity": 1.6607382524621786e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.2786546117597976e-05,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 6.332287132098072e-12,
+            "power_identity": 3.1849764910253386e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.229863163657533e-05,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 6.1001117634038836e-12,
+            "power_identity": 1.6692211809936388e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.2358174431109026e-05,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 7.88777448256755e-12,
+            "power_identity": 6.103304630924273e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.238507653115939e-05,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.03100000019185245,
+          "audit": {
+            "volume_balance": 7.856957597280328e-12,
+            "power_identity": 2.1324049151284646e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.2366436474650187e-05,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 7.856965120444175e-12,
+            "power_identity": 2.1155224031738686e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.236644937224032e-05,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.000297047060925128,
+        "fine_audit": {
+          "volume_balance": 3.300410775210505e-11,
+          "power_identity": 2.8480643242239893e-10,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 3.236693373066309e-05
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L200_h6_fast_pulse",
+      "length": 0.00019999999999999998,
+      "h0": 6e-06,
+      "kind": "fast_pulse",
+      "T_s": 0.0013802696598696116,
+      "dt_s": 1.3479195897164176e-06,
+      "offline_basis_wall_s": 0.015999999828636646,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 2.7512482978974593e-14,
+            "power_identity": 1.4535675715550523e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.263931190221674e-06,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 1.4182443918689564e-14,
+            "power_identity": 2.6006185895046824e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.401304515198719e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 1.0389037644652378e-14,
+            "power_identity": 5.204849165970846e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.3562747886453277e-06,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 1.4966129592310456e-14,
+            "power_identity": 4.707230430589155e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.329064982322675e-06,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 1.353704437194731e-15,
+            "power_identity": 3.4263658678375465e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.7612052362781546e-06,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 1.880121989470376e-15,
+            "power_identity": 5.4771477305915566e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.2350739684191646e-06,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 1.8355486936264195e-15,
+            "power_identity": 4.998306142329188e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 3.2639372267052455e-06,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.00294754289811915,
+        "fine_audit": {
+          "volume_balance": 2.284639988946243e-13,
+          "power_identity": 1.3893866517120184e-11,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 3.264554253014343e-06
+        }
+      },
+      "memory_counterexample": {
+        "t_s": 0.0006901348299348058,
+        "pressure_now_Pa": [
+          0.0,
+          -0.0
+        ],
+        "volume_change_m3": -1.8216517464862427e-30,
+        "volume_change_relative_to_initial": -1.897553902589836e-17,
+        "q_after_pulse_m3_s": [
+          -1.639720841804395e-17,
+          1.6397208418486667e-17
+        ],
+        "q_after_pulse_relative_to_peak": 0.020093900838002055,
+        "rest_state_q_m3_s": [
+          0.0,
+          0.0
+        ],
+        "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+      }
+    },
+    {
+      "name": "L200_h6_chirp",
+      "length": 0.00019999999999999998,
+      "h0": 6e-06,
+      "kind": "chirp",
+      "T_s": 0.013802696598696115,
+      "dt_s": 1.3479195897164175e-05,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.04600000008940697,
+          "audit": {
+            "volume_balance": 1.2830191700807037e-14,
+            "power_identity": 6.638094460386461e-13,
+            "minimum_dissipation_scaled": 1.3912059590251162e-16,
+            "maximum_relative_thickness_perturbation": 3.561666915023345e-06,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.9286069368555083e-14,
+            "power_identity": 9.792125914416883e-15,
+            "minimum_dissipation_scaled": 1.5869173444966372e-17,
+            "maximum_relative_thickness_perturbation": 3.231090482637506e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 1.150542524068833e-14,
+            "power_identity": 1.3405462320667425e-14,
+            "minimum_dissipation_scaled": 1.5823253568013327e-17,
+            "maximum_relative_thickness_perturbation": 3.5819127873385954e-06,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 1.565664435747221e-14,
+            "power_identity": 6.366976944825757e-15,
+            "minimum_dissipation_scaled": 1.671161666062126e-17,
+            "maximum_relative_thickness_perturbation": 3.55968610280451e-06,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.03100000019185245,
+          "audit": {
+            "volume_balance": 9.447839929008998e-15,
+            "power_identity": 1.0662812175413258e-13,
+            "minimum_dissipation_scaled": 1.2644239045848838e-16,
+            "maximum_relative_thickness_perturbation": 2.9826907771372657e-06,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 5.16331975284187e-15,
+            "power_identity": 1.9736492384165312e-14,
+            "minimum_dissipation_scaled": 1.4022623684038343e-16,
+            "maximum_relative_thickness_perturbation": 3.5497786709828566e-06,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 5.014423801737714e-15,
+            "power_identity": 1.0699950230148182e-14,
+            "minimum_dissipation_scaled": 1.391205627139872e-16,
+            "maximum_relative_thickness_perturbation": 3.561667018487442e-06,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0006390475645115741,
+        "fine_audit": {
+          "volume_balance": 2.328112014251772e-13,
+          "power_identity": 1.3753583698893305e-11,
+          "minimum_dissipation_scaled": 1.3903595773814493e-16,
+          "maximum_relative_thickness_perturbation": 3.5606243995793565e-06
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L300_h2_slow_pulse",
+      "length": 0.0003,
+      "h0": 2e-06,
+      "kind": "slow_pulse",
+      "T_s": 18.866560913342756,
+      "dt_s": 0.018424375891936285,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 7.309970622656265e-11,
+            "power_identity": 5.597492743912292e-11,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 0.00021847353324597915,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 8.147261443741325e-12,
+            "power_identity": 5.777314650309702e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 0.00022130918633480597,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 1.0392747301796961e-11,
+            "power_identity": 7.40857304811461e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 0.00021801576355803804,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.0697726333198783e-11,
+            "power_identity": 2.1363812598847312e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 0.00021841767741774193,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 1.0987109344405116e-11,
+            "power_identity": 3.102937851732171e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 0.00021859926652752296,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 1.1213486359951633e-11,
+            "power_identity": 3.3657235739331615e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 0.00021847344619200954,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.1214674016750672e-11,
+            "power_identity": 3.380387043160514e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 0.00021847353325971284,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0002970471759300149,
+        "fine_audit": {
+          "volume_balance": 1.3910320039376117e-09,
+          "power_identity": 8.443830974394099e-10,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 0.00021847680228370909
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L300_h2_fast_pulse",
+      "length": 0.0003,
+      "h0": 2e-06,
+      "kind": "fast_pulse",
+      "T_s": 0.18866560913342756,
+      "dt_s": 0.00018424375891936285,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 2.8024062296499295e-13,
+            "power_identity": 1.1906550198843692e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.203153553391204e-05,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 1.683535295770639e-13,
+            "power_identity": 1.9102193635378576e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 1.6208805476963002e-05,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.43979137719422e-13,
+            "power_identity": 2.0041839858648115e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.265485482346655e-05,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 1.3819198213482749e-13,
+            "power_identity": 6.288970548516459e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.2471188630688084e-05,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 1.1493544225410983e-13,
+            "power_identity": 2.632662444155475e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.53881353538577e-05,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 1.2649246940856482e-13,
+            "power_identity": 1.7063287554991092e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.1836748795722807e-05,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 1.2641092211993595e-13,
+            "power_identity": 1.7831847734181995e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 2.203157023657275e-05,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.002947542893636721,
+        "fine_audit": {
+          "volume_balance": 1.8870062365702913e-12,
+          "power_identity": 1.944525996597432e-11,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 2.203574121011767e-05
+        }
+      },
+      "memory_counterexample": {
+        "t_s": 0.09433280456671378,
+        "pressure_now_Pa": [
+          0.0,
+          -0.0
+        ],
+        "volume_change_m3": 6.599709777267957e-30,
+        "volume_change_relative_to_initial": 1.3749395369308242e-16,
+        "q_after_pulse_m3_s": [
+          -4.0486934366124106e-19,
+          4.0486934365458977e-19
+        ],
+        "q_after_pulse_relative_to_peak": 0.020093900837855432,
+        "rest_state_q_m3_s": [
+          0.0,
+          0.0
+        ],
+        "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+      }
+    },
+    {
+      "name": "L300_h2_chirp",
+      "length": 0.0003,
+      "h0": 2e-06,
+      "kind": "chirp",
+      "T_s": 1.8866560913342756,
+      "dt_s": 0.0018424375891936285,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.06299999984912574,
+          "audit": {
+            "volume_balance": 1.318584927159183e-13,
+            "power_identity": 1.2117274616617452e-12,
+            "minimum_dissipation_scaled": 1.3912059590239556e-16,
+            "maximum_relative_thickness_perturbation": 2.404125167648172e-05,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.015999999828636646,
+          "audit": {
+            "volume_balance": 2.1769428138057057e-13,
+            "power_identity": 3.4290019241770642e-15,
+            "minimum_dissipation_scaled": 1.5869173449115133e-17,
+            "maximum_relative_thickness_perturbation": 2.1809860760795374e-05,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 1.903300267540686e-13,
+            "power_identity": 6.2807547556124236e-15,
+            "minimum_dissipation_scaled": 1.5823253568041618e-17,
+            "maximum_relative_thickness_perturbation": 2.417791131464405e-05,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 1.8187449213624974e-13,
+            "power_identity": 1.675938283752637e-14,
+            "minimum_dissipation_scaled": 1.671161666061628e-17,
+            "maximum_relative_thickness_perturbation": 2.4027881194009497e-05,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 1.4165816594075742e-13,
+            "power_identity": 1.5977865594517168e-13,
+            "minimum_dissipation_scaled": 1.2644239024381798e-16,
+            "maximum_relative_thickness_perturbation": 2.013316276644915e-05,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 1.4599903147947396e-13,
+            "power_identity": 2.4552067193217545e-14,
+            "minimum_dissipation_scaled": 1.402262396352595e-16,
+            "maximum_relative_thickness_perturbation": 2.3961004477116448e-05,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 1.4410921272154398e-13,
+            "power_identity": 1.7807911935726e-14,
+            "minimum_dissipation_scaled": 1.3912057488772695e-16,
+            "maximum_relative_thickness_perturbation": 2.4041253220238484e-05,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0006390475772637671,
+        "fine_audit": {
+          "volume_balance": 1.0474383158858933e-12,
+          "power_identity": 1.9064172171334196e-11,
+          "minimum_dissipation_scaled": 1.390359577375908e-16,
+          "maximum_relative_thickness_perturbation": 2.4034214696418295e-05
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L300_h6_slow_pulse",
+      "length": 0.0003,
+      "h0": 6e-06,
+      "kind": "slow_pulse",
+      "T_s": 0.6987615153089908,
+      "dt_s": 0.0006823842922939363,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 1.3850594022782211e-11,
+            "power_identity": 1.8893509070739376e-11,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.282451108395965e-05,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 1.8841908963931788e-11,
+            "power_identity": 1.0392024885275409e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.376972877191812e-05,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 2.1415126575760018e-11,
+            "power_identity": 2.8433704385654725e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.267192117970201e-05,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 1.9308069607359913e-11,
+            "power_identity": 7.468800375997405e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.280589247198296e-05,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 2.3553514679491522e-11,
+            "power_identity": 4.717089229860101e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.286642212068714e-05,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 2.357782152033131e-11,
+            "power_identity": 5.3897019080670024e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.282448205685696e-05,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 2.3577610203017966e-11,
+            "power_identity": 5.388224809457861e-12,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.282451108131783e-05,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0002970471932213979,
+        "fine_audit": {
+          "volume_balance": 1.1209834716529994e-10,
+          "power_identity": 1.3406788639923197e-10,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 7.282560079255718e-05
+        }
+      },
+      "memory_counterexample": null
+    },
+    {
+      "name": "L300_h6_fast_pulse",
+      "length": 0.0003,
+      "h0": 6e-06,
+      "kind": "fast_pulse",
+      "T_s": 0.006987615153089908,
+      "dt_s": 6.823842922939363e-06,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 2.5667481973527912e-14,
+            "power_identity": 5.182190246614952e-13,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.343845177982158e-06,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 1.33671465939762e-14,
+            "power_identity": 6.975394332271722e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 5.4029351589780065e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.031999999890103936,
+          "audit": {
+            "volume_balance": 2.5317377329775957e-14,
+            "power_identity": 3.68570614219243e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.551618274483979e-06,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.014999999897554517,
+          "audit": {
+            "volume_balance": 2.9268759023653427e-14,
+            "power_identity": 3.670269353431938e-15,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.490396210227582e-06,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 2.4412191255717602e-14,
+            "power_identity": 3.4571528502826126e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 8.462711803226439e-06,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 2.3008649470244187e-14,
+            "power_identity": 5.0491304304625454e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.2789162184665644e-06,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 2.311454602700614e-14,
+            "power_identity": 4.866656967412077e-14,
+            "minimum_dissipation_scaled": 0.0,
+            "maximum_relative_thickness_perturbation": 7.343852144079067e-06,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0029475428966817536,
+        "fine_audit": {
+          "volume_balance": 1.4943358359626718e-13,
+          "power_identity": 3.055610233426035e-12,
+          "minimum_dissipation_scaled": 0.0,
+          "maximum_relative_thickness_perturbation": 7.345247069488309e-06
+        }
+      },
+      "memory_counterexample": {
+        "t_s": 0.003493807576544954,
+        "pressure_now_Pa": [
+          0.0,
+          -0.0
+        ],
+        "volume_change_m3": -3.286423408062839e-30,
+        "volume_change_relative_to_initial": -2.2822384778214156e-17,
+        "q_after_pulse_m3_s": [
+          -1.0931472278738821e-17,
+          1.0931472278915907e-17
+        ],
+        "q_after_pulse_relative_to_peak": 0.020093900837972467,
+        "rest_state_q_m3_s": [
+          0.0,
+          0.0
+        ],
+        "comparison": "Rest and previously antisymmetrically driven strip have equal prescribed current pressures, endpoint thickness and total volume (up to recorded residual); interior profiles differ. This is an internal-state counterexample, not adsorption memory or a real-meniscus experiment."
+      }
+    },
+    {
+      "name": "L300_h6_chirp",
+      "length": 0.0003,
+      "h0": 6e-06,
+      "kind": "chirp",
+      "T_s": 0.06987615153089909,
+      "dt_s": 6.823842922939364e-05,
+      "offline_basis_wall_s": 0.0,
+      "models": {
+        "full160": {
+          "rank": 160,
+          "wall_s": 0.0470000000204891,
+          "audit": {
+            "volume_balance": 6.89059115194014e-14,
+            "power_identity": 4.4074459362615184e-13,
+            "minimum_dissipation_scaled": 1.3912059590250038e-16,
+            "maximum_relative_thickness_perturbation": 8.013750558797035e-06,
+            "passed": true
+          }
+        },
+        "slow5": {
+          "rank": 5,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 4.3987437458994304e-14,
+            "power_identity": 4.2696328265978656e-15,
+            "minimum_dissipation_scaled": 1.5869173448370297e-17,
+            "maximum_relative_thickness_perturbation": 7.269953586644387e-06,
+            "passed": true
+          }
+        },
+        "slow9": {
+          "rank": 9,
+          "wall_s": 0.01500000013038516,
+          "audit": {
+            "volume_balance": 4.978445315531613e-14,
+            "power_identity": 7.212596126820788e-15,
+            "minimum_dissipation_scaled": 1.5823253567969887e-17,
+            "maximum_relative_thickness_perturbation": 8.059303771508328e-06,
+            "passed": true
+          }
+        },
+        "slow17": {
+          "rank": 17,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 6.241529146306238e-14,
+            "power_identity": 9.37785543746024e-15,
+            "minimum_dissipation_scaled": 1.6711616660627813e-17,
+            "maximum_relative_thickness_perturbation": 8.009293731315936e-06,
+            "passed": true
+          }
+        },
+        "port5": {
+          "rank": 5,
+          "wall_s": 0.030999999959021807,
+          "audit": {
+            "volume_balance": 4.02368895100027e-14,
+            "power_identity": 2.830915803517218e-13,
+            "minimum_dissipation_scaled": 1.264423901360702e-16,
+            "maximum_relative_thickness_perturbation": 6.711054225136691e-06,
+            "passed": true
+          }
+        },
+        "port9": {
+          "rank": 9,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 3.9878577934194725e-14,
+            "power_identity": 1.9183397997430852e-13,
+            "minimum_dissipation_scaled": 1.4022624803167147e-16,
+            "maximum_relative_thickness_perturbation": 7.987001155969902e-06,
+            "passed": true
+          }
+        },
+        "port17": {
+          "rank": 16,
+          "wall_s": 0.01600000006146729,
+          "audit": {
+            "volume_balance": 4.0319936879783465e-14,
+            "power_identity": 1.9719747757912927e-13,
+            "minimum_dissipation_scaled": 1.3912057555599802e-16,
+            "maximum_relative_thickness_perturbation": 8.013751157987264e-06,
+            "passed": true
+          }
+        }
+      },
+      "convergence": {
+        "grid160_to320_flux": 0.0006390475704596114,
+        "fine_audit": {
+          "volume_balance": 4.510240377714599e-13,
+          "power_identity": 6.651350910796332e-13,
+          "minimum_dissipation_scaled": 1.3903595773696386e-16,
+          "maximum_relative_thickness_perturbation": 8.011404898811299e-06
+        }
+      },
+      "memory_counterexample": null
+    }
+  ],
+  "wall_s": 6.859000000171363
+}

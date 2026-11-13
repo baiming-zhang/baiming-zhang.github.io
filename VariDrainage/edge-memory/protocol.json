@@ -1,0 +1,160 @@
+{
+  "source_commit": "e87e0d03a71fd16bdf69f8faeb9a30a7a8e57eba",
+  "started_utc": "2026-11-13T07:40:17.671681+00:00",
+  "cases": [
+    {
+      "name": "L100_h2_slow_pulse",
+      "length": 9.999999999999999e-05,
+      "h0": 2e-06,
+      "kind": "slow_pulse"
+    },
+    {
+      "name": "L100_h2_fast_pulse",
+      "length": 9.999999999999999e-05,
+      "h0": 2e-06,
+      "kind": "fast_pulse"
+    },
+    {
+      "name": "L100_h2_chirp",
+      "length": 9.999999999999999e-05,
+      "h0": 2e-06,
+      "kind": "chirp"
+    },
+    {
+      "name": "L100_h6_slow_pulse",
+      "length": 9.999999999999999e-05,
+      "h0": 6e-06,
+      "kind": "slow_pulse"
+    },
+    {
+      "name": "L100_h6_fast_pulse",
+      "length": 9.999999999999999e-05,
+      "h0": 6e-06,
+      "kind": "fast_pulse"
+    },
+    {
+      "name": "L100_h6_chirp",
+      "length": 9.999999999999999e-05,
+      "h0": 6e-06,
+      "kind": "chirp"
+    },
+    {
+      "name": "L200_h2_slow_pulse",
+      "length": 0.00019999999999999998,
+      "h0": 2e-06,
+      "kind": "slow_pulse"
+    },
+    {
+      "name": "L200_h2_fast_pulse",
+      "length": 0.00019999999999999998,
+      "h0": 2e-06,
+      "kind": "fast_pulse"
+    },
+    {
+      "name": "L200_h2_chirp",
+      "length": 0.00019999999999999998,
+      "h0": 2e-06,
+      "kind": "chirp"
+    },
+    {
+      "name": "L200_h6_slow_pulse",
+      "length": 0.00019999999999999998,
+      "h0": 6e-06,
+      "kind": "slow_pulse"
+    },
+    {
+      "name": "L200_h6_fast_pulse",
+      "length": 0.00019999999999999998,
+      "h0": 6e-06,
+      "kind": "fast_pulse"
+    },
+    {
+      "name": "L200_h6_chirp",
+      "length": 0.00019999999999999998,
+      "h0": 6e-06,
+      "kind": "chirp"
+    },
+    {
+      "name": "L300_h2_slow_pulse",
+      "length": 0.0003,
+      "h0": 2e-06,
+      "kind": "slow_pulse"
+    },
+    {
+      "name": "L300_h2_fast_pulse",
+      "length": 0.0003,
+      "h0": 2e-06,
+      "kind": "fast_pulse"
+    },
+    {
+      "name": "L300_h2_chirp",
+      "length": 0.0003,
+      "h0": 2e-06,
+      "kind": "chirp"
+    },
+    {
+      "name": "L300_h6_slow_pulse",
+      "length": 0.0003,
+      "h0": 6e-06,
+      "kind": "slow_pulse"
+    },
+    {
+      "name": "L300_h6_fast_pulse",
+      "length": 0.0003,
+      "h0": 6e-06,
+      "kind": "fast_pulse"
+    },
+    {
+      "name": "L300_h6_chirp",
+      "length": 0.0003,
+      "h0": 6e-06,
+      "kind": "chirp"
+    }
+  ],
+  "model": "linearized constant-mobility immobile-surface capillary strip, fixed endpoint thickness; two prescribed pressure perturbations; not meniscus geometry or Marangoni dynamics",
+  "parameters": {
+    "gamma_N_m": 0.038639792559355034,
+    "viscosity_Pa_s": 0.0015,
+    "width_m": 8e-05,
+    "amplitude_Pa": 0.005,
+    "material": "inherited SDS constants only; not full SDS surface/bulk model"
+  },
+  "main_cells": 160,
+  "reference_cells": 320,
+  "coarse_cells_for_L200_h2": 80,
+  "main_steps": 1024,
+  "time_reference_steps": 2048,
+  "ranks": [
+    5,
+    9,
+    17
+  ],
+  "bases": [
+    "slow modes with exact volume covector",
+    "fixed rational port-response shifts with exact volume covector"
+  ],
+  "construction": "No transient snapshots or fringe exponent used in basis construction; each geometry operator independently assembled from same SI parameters. Geometry-specific reduction, not one trained cross-geometry model.",
+  "gates": {
+    "volume_balance": 1e-09,
+    "power_identity": 1e-08,
+    "minimum_dissipation_scaled": -1e-09,
+    "linear_thickness": 0.02,
+    "flux_error": 0.05,
+    "integrated_port_error": 0.05,
+    "grid_or_time_flux_difference": 0.02
+  },
+  "source_hashes": {
+    "thin_film/scripts/edge_memory/run.py": "8c3812a64a17a777aca43bb6b0015e667b7d17db63213f69419108b309489cec",
+    "thin_film/scripts/edge_memory/port.py": "8137a56d8f9f5482ee65d7d0b0703934422cbb68332e772ca2366a5801999a47",
+    "thin_film/scripts/edge_memory/tests.py": "b86e93aae9d4a472e3ebd8a63761bd6fcce61b951f76c206ec864313cf7bdbde",
+    "thin_film/scripts/edge_memory/README.md": "8d3de2eb21d9d7425f0f255850d5f98f916e9496c75ed9c4975916dd65a0612d"
+  },
+  "environment": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "OPENBLAS_NUM_THREADS": "2"
+  },
+  "whole_budget_s": 900,
+  "decision": "Stop after frozen matrix. If memory is negligible, drop memory claim. If low-rank port flux is inaccurate, keep resolved edge states; do not tune physical coefficients to pass."
+}
