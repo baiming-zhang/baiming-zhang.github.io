@@ -1,0 +1,51 @@
+{
+  "expected_fixed_counterexample_pattern_observed": true,
+  "observations": [
+    {
+      "case": "unperturbed",
+      "delta": 0.0,
+      "original_completed": 1.0,
+      "original_normal_closure": 0.0,
+      "central_full_closure": 0.0,
+      "central_filtered_closure": 0.0,
+      "central_perimeter": 4.0,
+      "short_edge_count": 0.0,
+      "short_edge_total": 0.0,
+      "cutoff": 7.155417527999328e-09,
+      "message": ""
+    },
+    {
+      "case": "short_face",
+      "delta": 8e-09,
+      "original_completed": 0.0,
+      "original_normal_closure": 1.414213544830987e-09,
+      "central_full_closure": 1.3877787815943878e-17,
+      "central_filtered_closure": 1.414213544830987e-09,
+      "central_perimeter": 3.9999999976568543,
+      "short_edge_count": 1.0,
+      "short_edge_total": 5.65685420726255e-09,
+      "cutoff": 7.155417527999328e-09,
+      "message": "inconsistent Voronoi face geometry: normal_closure=1.4142135448309869e-09 angle_error=5.0139104337910288e-17 face_length=15.500000000000002 roundoff_certificate=5.0139104337910285e-08"
+    },
+    {
+      "case": "resolved_face",
+      "delta": 8e-07,
+      "original_completed": 1.0,
+      "original_normal_closure": 8.851868874693557e-17,
+      "central_full_closure": 1.3877788620756167e-17,
+      "central_filtered_closure": 1.3877788620756167e-17,
+      "central_perimeter": 3.999999765685519,
+      "short_edge_count": 0.0,
+      "short_edge_total": 0.0,
+      "cutoff": 7.155417527999328e-09,
+      "message": ""
+    }
+  ],
+  "new_native_trajectory_steps": 0,
+  "native_observation_wall_s": 0.5310000001918525,
+  "actual_failed_step78_reproduced": false,
+  "solver_repair_adopted": false,
+  "dynamic_convergence_qualified": false,
+  "full_C1_complete": false,
+  "scope": "A manufactured ORIGINAL-geometry counterexample; polygon full-edge sum is a telescoping diagnostic, not a repaired operator or physical validation"
+}

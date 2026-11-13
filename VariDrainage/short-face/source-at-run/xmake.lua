@@ -1,0 +1,12 @@
+-- Isolated diagnostic project: preserve the archived long-run xmake sources.
+set_project("drift-short-face-diagnostic")
+set_languages("c++17")
+add_rules("mode.release")
+add_requires("eigen", "tbb")
+add_defines("NOMINMAX", "_USE_MATH_DEFINES")
+add_cxflags("/utf-8", "/bigobj", {tools = "cl"})
+target("tf_short_face_probe")
+    set_kind("binary")
+    add_files("../../bench/tf_short_face_probe.cpp")
+    add_includedirs("../../include", "../../../core/include")
+    add_packages("eigen", "tbb")

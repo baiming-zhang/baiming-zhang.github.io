@@ -1,0 +1,55 @@
+[
+  {
+    "name": "configure",
+    "command": [
+      "C:\\Users\\张柏铭\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "f",
+      "-y",
+      "-P",
+      "C:\\Users\\张柏铭\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\short_face",
+      "-p",
+      "windows",
+      "-a",
+      "x64",
+      "-m",
+      "release",
+      "--sdk=C:\\Users\\张柏铭\\Desktop\\SPH\\.tools\\msvc"
+    ],
+    "returncode": 0,
+    "wall_s": 1.7190000000409782,
+    "log": "results\\logs\\short_face_20261113\\configure.log",
+    "log_sha256": "91109ff0f6d81332f8d319ad522f67f9698ed46db9d646b75b5079789c0280f7"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Users\\张柏铭\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "build",
+      "-y",
+      "-P",
+      "C:\\Users\\张柏铭\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\short_face",
+      "-j2",
+      "tf_short_face_probe"
+    ],
+    "returncode": 0,
+    "wall_s": 6.5149999998975545,
+    "log": "results\\logs\\short_face_20261113\\build.log",
+    "log_sha256": "aeb04f4f66eabb79940f97e194867a3dfe98b859b66189ed0b752471d5d28a32"
+  },
+  {
+    "name": "observe",
+    "command": [
+      "C:\\Users\\张柏铭\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\张柏铭\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\short_face",
+      "tf_short_face_probe",
+      "C:\\Users\\张柏铭\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\short_face_20261113\\native"
+    ],
+    "returncode": 0,
+    "wall_s": 0.5310000001918525,
+    "log": "results\\logs\\short_face_20261113\\observe.log",
+    "log_sha256": "cae103cbcef2543ec7bb774c2315eb41275b150ca5bc29d111505f08e9411e52",
+    "resume_source_sha256": "1d6b9e18bd03eb478e2e9798f8dc8dca5c0edb4879278e464ec110528c5a6987"
+  }
+]
