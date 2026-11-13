@@ -1,0 +1,120 @@
+{
+  "source_commit": "6dded213f4b1fbf2cd05e70e2f3883ec3003612e",
+  "cases": [
+    {
+      "name": "equilibrium",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 2.5,
+      "T_us": 10,
+      "amplitude": 0,
+      "radius_um": 0,
+      "cut_um": 800
+    },
+    {
+      "name": "closed_l100_t2p5",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 2.5,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 0,
+      "cut_um": 800
+    },
+    {
+      "name": "closed_l100_t1p25",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 1.25,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 0,
+      "cut_um": 800
+    },
+    {
+      "name": "closed_l100_t0p625",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 0.625,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 0,
+      "cut_um": 800
+    },
+    {
+      "name": "closed_u100",
+      "mode": "wall_uniform",
+      "fine_um": 100,
+      "dt_us": 1.25,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 0,
+      "cut_um": 800
+    },
+    {
+      "name": "closed_l50",
+      "mode": "wall_local",
+      "fine_um": 50,
+      "dt_us": 0.625,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 0,
+      "cut_um": 800
+    },
+    {
+      "name": "closed_u50",
+      "mode": "wall_uniform",
+      "fine_um": 50,
+      "dt_us": 0.625,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 0,
+      "cut_um": 800
+    },
+    {
+      "name": "open_l100",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 1.25,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 500,
+      "cut_um": 800
+    },
+    {
+      "name": "observer_disabled",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 1.25,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 0,
+      "cut_um": null
+    },
+    {
+      "name": "alternative_cut",
+      "mode": "wall_local",
+      "fine_um": 100,
+      "dt_us": 1.25,
+      "T_us": 10,
+      "amplitude": 0.005,
+      "radius_um": 0,
+      "cut_um": 775
+    }
+  ],
+  "source_hashes": {
+    "thin_film\\scripts\\moving_interface\\run.py": "fd9c1472941215e1a82a7da66c93776f7efe547ed955b6728aaf319e999dee7e",
+    "thin_film\\scripts\\moving_interface\\README.md": "5d32632e1e9a75dccfde26ba38554f744469bb52753f6aa43b5cc80396c1a777",
+    "thin_film\\bench\\tf_moving_voronoi_bench.cpp": "6a85084518b84c920d35676331ec078a4c7577bdd010d11890c790c042b90c21",
+    "thin_film\\include\\vf\\thinfilm\\MovingInterfaceLedger.h": "22c1000a9bd192a020e1ed210441a6f86cbc608e9f4166f5ffe26ba1b0da8771"
+  },
+  "binary_sha256": "96c9e42e3c6a964bd5f34f3aeedbc57d614bbc18c77b666178fe54437988800c",
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded",
+    "native_dll_paths": "local xmake package parents"
+  },
+  "started_utc": "2026-11-13T09:01:33.679608+00:00",
+  "whole_budget_s": 1800,
+  "per_case_timeout_s": 180
+}

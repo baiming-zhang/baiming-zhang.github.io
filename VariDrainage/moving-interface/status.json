@@ -1,0 +1,1042 @@
+{
+  "state": "completed",
+  "tests": [
+    {
+      "name": "test_moving_interface",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_moving_interface.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.01500000013038516,
+      "log": "results\\logs\\moving_interface_20261113\\test_moving_interface.log",
+      "log_sha256": "e6e8a369ce17b4f5934ad0b5d66571ef54d933017c048e92c95be2bb23cdfdf5"
+    },
+    {
+      "name": "test_moving_voronoi",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_moving_voronoi.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.06299999984912574,
+      "log": "results\\logs\\moving_interface_20261113\\test_moving_voronoi.log",
+      "log_sha256": "186d10e1f2350b36242a76056c3308008809ebe3ca53a94d522cf22ab5035539"
+    }
+  ],
+  "cases": [
+    {
+      "name": "equilibrium",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "2.5",
+        "10",
+        "0",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\equilibrium",
+        "800"
+      ],
+      "returncode": 0,
+      "wall_s": 0.06200000015087426,
+      "log": "results\\logs\\moving_interface_20261113\\equilibrium.log",
+      "log_sha256": "e549c35b4a4cfb8cd4b51c5f0b2fd4a25f24a79c679a917062a7609d5d56683f",
+      "parameters": {
+        "name": "equilibrium",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 2.5,
+        "T_us": 10,
+        "amplitude": 0,
+        "radius_um": 0,
+        "cut_um": 800
+      },
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 2.4999999999999998e-06,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 4,
+        "amplitude": 0,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584830371454155e-12,
+        "initial_film_excess_energy_J": 1.3211431504099669e-37,
+        "boundary_work_J": 0,
+        "viscous_action_J": 0,
+        "half_drain_action_J": 0,
+        "momentum_mixing_loss_J": 0,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 0,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 0,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 0,
+        "max_momentum_drain_residual": 0,
+        "max_force_threshold_ratio": 0.01321485605176911,
+        "max_displacement_m": 0,
+        "min_h_m": 6e-06,
+        "min_theta": 0.9736720262233716,
+        "max_theta": 0.9736720262233718,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 0,
+        "cg_iterations": 0,
+        "wall_s": 0.0454615
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\equilibrium\\faces.csv",
+          "bytes": 45860,
+          "sha256": "7ea99b89fdc13407f23ea321f6bbab16d70f386685a3420f2e7aa66deea8b822"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\equilibrium\\frames.csv",
+          "bytes": 46056,
+          "sha256": "afdd0815dded946a071addd8d35edef97d38a2ef68e2f336f58a48b7abe067c5"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\equilibrium\\history.csv",
+          "bytes": 1073,
+          "sha256": "6e76f09cd94fd9f20c9e2ba1ebed6cd8c37469c9300b4832d1067a4cbc6f80da"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\equilibrium\\interface.csv",
+          "bytes": 839,
+          "sha256": "87f09bfc71b343f4c05ee5cb917dfe292b24a05b15e5afb91e8748f186a581ed"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\equilibrium\\stages.csv",
+          "bytes": 61767,
+          "sha256": "6184793a9446192493f9cbf67de7870577e146e4a0855dc51a37bc3b785267aa"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\equilibrium\\summary.json",
+          "bytes": 1026,
+          "sha256": "97cebfd8bd84e2d47f300c9ed648889ed9bba49fb1ba70e51a1d881a09d5d5d1"
+        }
+      ]
+    },
+    {
+      "name": "closed_l100_t2p5",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "2.5",
+        "10",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\closed_l100_t2p5",
+        "800"
+      ],
+      "returncode": 0,
+      "wall_s": 0.125,
+      "log": "results\\logs\\moving_interface_20261113\\closed_l100_t2p5.log",
+      "log_sha256": "62156245f6550827cfdb99c6f3520953f32082e898a9a27462050c8c184eb98a",
+      "parameters": {
+        "name": "closed_l100_t2p5",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 2.5,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 0,
+        "cut_um": 800
+      },
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 2.4999999999999998e-06,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 4,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715077e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 2.3011979094502306e-15,
+        "half_drain_action_J": 3.7440837928382847e-22,
+        "momentum_mixing_loss_J": 1.7563007159715484e-21,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 4.8506384094556175e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 3.295979121159125e-17,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 1.0283149560114583e-16,
+        "max_force_threshold_ratio": 6.551868145035811e-06,
+        "max_displacement_m": 1.99892060682246e-07,
+        "min_h_m": 5.9902154517068415e-06,
+        "min_theta": 0.9693180120903415,
+        "max_theta": 0.9779929964964297,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 24,
+        "cg_iterations": 36,
+        "wall_s": 0.1105589
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t2p5\\faces.csv",
+          "bytes": 55930,
+          "sha256": "a01bcc8fcc79d81116b5649ef796f1d6a1501cabd69aa36457f09d5de5fd1add"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t2p5\\frames.csv",
+          "bytes": 53841,
+          "sha256": "9c4109e0d05dc720ea9e9f4e31a5f51a4c152dd737fd22c10652612396d54c87"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t2p5\\history.csv",
+          "bytes": 1892,
+          "sha256": "ad79d9606a71c44905cef0f633ce4a1e381625f0a530658d1313d1f27fd40eca"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t2p5\\interface.csv",
+          "bytes": 4953,
+          "sha256": "8baf3b6cc3d246127ff5d6bdaa3476e772a997e6eb5c71bd97dffc8ba0075396"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t2p5\\stages.csv",
+          "bytes": 61733,
+          "sha256": "913015dfe8f1ca75375ce128f2db17641a7936f6d9621e56a6b5cffe49c3a250"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t2p5\\summary.json",
+          "bytes": 1205,
+          "sha256": "8c6209f21f8a9e62b68aafd4c8c0c3380b3904b0b15225a7b2cdf2839b9d7e80"
+        }
+      ]
+    },
+    {
+      "name": "closed_l100_t1p25",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "1.25",
+        "10",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\closed_l100_t1p25",
+        "800"
+      ],
+      "returncode": 0,
+      "wall_s": 0.1720000000204891,
+      "log": "results\\logs\\moving_interface_20261113\\closed_l100_t1p25.log",
+      "log_sha256": "8147db21d5e46d37e0204a065d65d2222eaecc5dba7346f9710a7c99e1ba8ca4",
+      "parameters": {
+        "name": "closed_l100_t1p25",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 1.25,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 0,
+        "cut_um": 800
+      },
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 8,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715077e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 2.13508914929995e-15,
+        "half_drain_action_J": 2.977792513098577e-22,
+        "momentum_mixing_loss_J": 1.580520728183821e-21,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 3.2337589396370783e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.196588694125002e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 1.0046017219038055e-16,
+        "max_force_threshold_ratio": 0.0016349048925861744,
+        "max_displacement_m": 1.8914073867455575e-07,
+        "min_h_m": 5.990714359093783e-06,
+        "min_theta": 0.9692002342796658,
+        "max_theta": 0.9781249480027782,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 40,
+        "cg_iterations": 48,
+        "wall_s": 0.169771
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t1p25\\faces.csv",
+          "bytes": 111781,
+          "sha256": "c0015d0036c70971adcc8725bfbe4c37c4fe8194b54b8aa822bb44717fd50151"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t1p25\\frames.csv",
+          "bytes": 99247,
+          "sha256": "8622c1b48ec4ad543d43b090087533b8e90394bf6f6d67035c525d5be920597a"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t1p25\\history.csv",
+          "bytes": 3442,
+          "sha256": "4bea923f04f6263b1e4670598996b8ff1b22eff7642be3a380b275e6dcce84fe"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t1p25\\interface.csv",
+          "bytes": 9741,
+          "sha256": "1e055b848fb66caa04dfa6c17ede912775b2722fafb9da0345875c29fbd8191a"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t1p25\\stages.csv",
+          "bytes": 123517,
+          "sha256": "9fc1c2ce924c5fa00c3a4e891145899833b72067b89d103beb03bfa1180233cd"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t1p25\\summary.json",
+          "bytes": 1214,
+          "sha256": "f64bae00e910e09a706daf792548dd486900d8982e152245e3d517964d70c32a"
+        }
+      ]
+    },
+    {
+      "name": "closed_l100_t0p625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "0.625",
+        "10",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\closed_l100_t0p625",
+        "800"
+      ],
+      "returncode": 0,
+      "wall_s": 0.375,
+      "log": "results\\logs\\moving_interface_20261113\\closed_l100_t0p625.log",
+      "log_sha256": "dc95e0d9734071da07749cb99907d0cad041f1958eaa4fa88e0b365a7f798a2f",
+      "parameters": {
+        "name": "closed_l100_t0p625",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 0.625,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 0,
+        "cut_um": 800
+      },
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 6.249999999999999e-07,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 16,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715077e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 2.037148726114861e-15,
+        "half_drain_action_J": 2.5407576378869575e-22,
+        "momentum_mixing_loss_J": 1.4591693416055043e-21,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 4.8506384094556175e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 9.734088277946625e-17,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 8.512554173032026e-17,
+        "max_force_threshold_ratio": 8.464983609539396e-06,
+        "max_displacement_m": 1.8264462171176706e-07,
+        "min_h_m": 5.991020301658709e-06,
+        "min_theta": 0.9691698843774811,
+        "max_theta": 0.97815938250521,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 80,
+        "cg_iterations": 96,
+        "wall_s": 0.3567979
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t0p625\\faces.csv",
+          "bytes": 225969,
+          "sha256": "92855308d2368bbb10719539f3ad59401b185e52c0f5c63fa67fc6aa14cb5b8d"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t0p625\\frames.csv",
+          "bytes": 190348,
+          "sha256": "95c95a0a14f4b6cde9160b22c4e443912cb16cc4c360de4262de02503688037c"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t0p625\\history.csv",
+          "bytes": 6634,
+          "sha256": "4fcaacb114ec2edde6a452dcb1a0331deaa3b7cc98fcc0b658abd910213186cf"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t0p625\\interface.csv",
+          "bytes": 19368,
+          "sha256": "0f341103f9fa88446f86b5c7c86a462f121300c6e450fe417539bf69635559bc"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t0p625\\stages.csv",
+          "bytes": 248022,
+          "sha256": "43d8cd74bec65ec1ef475a3c84e92bf7478957c3cacf0dce18e7630193936aaf"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l100_t0p625\\summary.json",
+          "bytes": 1207,
+          "sha256": "fe77c5b364fd4eb9d347d42784d9cbc9875f42454922f50a2a793993a43a3e53"
+        }
+      ]
+    },
+    {
+      "name": "closed_u100",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_uniform",
+        "100",
+        "1.25",
+        "10",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\closed_u100",
+        "800"
+      ],
+      "returncode": 0,
+      "wall_s": 0.5159999998286366,
+      "log": "results\\logs\\moving_interface_20261113\\closed_u100.log",
+      "log_sha256": "37172dedb1d64c9d1231140a33036fc7e88b8a56644cfa35c9b8200f1ba24ce4",
+      "parameters": {
+        "name": "closed_u100",
+        "mode": "wall_uniform",
+        "fine_um": 100,
+        "dt_us": 1.25,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 0,
+        "cut_um": 800
+      },
+      "summary": {
+        "N": 96,
+        "local": false,
+        "fine_um": 99.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 8,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.759999999999999e-12,
+        "S0_per_face_mol": 3.458486009772294e-12,
+        "initial_film_excess_energy_J": 2.0413171537787606e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 3.1934098961001777e-15,
+        "half_drain_action_J": 5.056645708997809e-23,
+        "momentum_mixing_loss_J": 1.0815716766643393e-21,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 6.46751787927416e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 7.220356136488054e-17,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 2.5263741715914686e-18,
+        "max_momentum_drain_residual": 9.52472638529845e-17,
+        "max_force_threshold_ratio": 0.0007953181427065751,
+        "max_displacement_m": 1.8965675973727642e-07,
+        "min_h_m": 5.990545133424168e-06,
+        "min_theta": 0.9691987157676635,
+        "max_theta": 0.9781308993413214,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 40,
+        "cg_iterations": 48,
+        "wall_s": 0.4969862
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u100\\faces.csv",
+          "bytes": 239768,
+          "sha256": "58d2b224931429290372df54255551fd622f9b1a4cf0806baf978da7f7bca6e1"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u100\\frames.csv",
+          "bytes": 198633,
+          "sha256": "6e35d5ca4f181d4db0188aee84523a1f92d0a5553103772428ce1c5a1b8ede1d"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u100\\history.csv",
+          "bytes": 3462,
+          "sha256": "64530c78c4a66e2b12f762a878e896c63030f071ae6b2fe91428d7973f918fa7"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u100\\interface.csv",
+          "bytes": 9773,
+          "sha256": "d255a475094bf7961278ae0c50a59b4b2d28b7b6d017ef6c505346e8a7e48995"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u100\\stages.csv",
+          "bytes": 244531,
+          "sha256": "942982b19d0b20e864cfef0c78931e072449e5310da67d7fe3c6af7eb99d97c5"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u100\\summary.json",
+          "bytes": 1219,
+          "sha256": "93b71913aeb73322a94c367d4ebea73561aa1f23f5034140ff1b09bf901ec70a"
+        }
+      ]
+    },
+    {
+      "name": "closed_l50",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "50",
+        "0.625",
+        "10",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\closed_l50",
+        "800"
+      ],
+      "returncode": 0,
+      "wall_s": 3.3590000001713634,
+      "log": "results\\logs\\moving_interface_20261113\\closed_l50.log",
+      "log_sha256": "c52e484e36d2ddfbc401b372874924121df9e577c671a306cae9e25accaa6628",
+      "parameters": {
+        "name": "closed_l50",
+        "mode": "wall_local",
+        "fine_um": 50,
+        "dt_us": 0.625,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 0,
+        "cut_um": 800
+      },
+      "summary": {
+        "N": 192,
+        "local": true,
+        "fine_um": 49.99999999999999,
+        "dt_s": 6.249999999999999e-07,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 16,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.759999999999997e-12,
+        "S0_per_face_mol": 3.4584840960147342e-12,
+        "initial_film_excess_energy_J": 2.04818154781219e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 3.675322234910291e-15,
+        "half_drain_action_J": 4.5767822649171995e-21,
+        "momentum_mixing_loss_J": 2.6471673193750884e-21,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 2.2636312577459564e-15,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 2.943693920830179e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 2.5263741715914694e-18,
+        "max_momentum_drain_residual": 2.4140804929316093e-16,
+        "max_force_threshold_ratio": 0.0010507267063808207,
+        "max_displacement_m": 2.0358711634353844e-07,
+        "min_h_m": 5.988541343257913e-06,
+        "min_theta": 0.9689114571496052,
+        "max_theta": 0.978431646386146,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 80,
+        "cg_iterations": 96,
+        "wall_s": 3.3190995
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l50\\faces.csv",
+          "bytes": 1039776,
+          "sha256": "6cf9405e27e3bb832c24c63c4259a40b9003831b93053abba35180e03c5b7213"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l50\\frames.csv",
+          "bytes": 763562,
+          "sha256": "b02dd4396aad0a8b0ce78c8814c358ccdee824fccfecf890b3f89a57385b54d3"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l50\\history.csv",
+          "bytes": 6689,
+          "sha256": "bd794ee694968e423711053840af38cb18cd2fe2a0e2bf3aea2033baa335da3d"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l50\\interface.csv",
+          "bytes": 19420,
+          "sha256": "f95c2870d2de4a25077e4a9a5c2582b24a4c43a9e00831ed976262f7d9e1d741"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l50\\stages.csv",
+          "bytes": 984094,
+          "sha256": "e26e300b48b553a1c22cd02f79ee768faa17bcc99df6744f0c1d8cac9c0d5d34"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_l50\\summary.json",
+          "bytes": 1216,
+          "sha256": "027bc37f30335a037a3a522666ffd287b71cc8910bebf2e16248d3319cac8fbc"
+        }
+      ]
+    },
+    {
+      "name": "closed_u50",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_uniform",
+        "50",
+        "0.625",
+        "10",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\closed_u50",
+        "800"
+      ],
+      "returncode": 0,
+      "wall_s": 13.047000000020489,
+      "log": "results\\logs\\moving_interface_20261113\\closed_u50.log",
+      "log_sha256": "434b05d2fb6c040bad0a74e4c05ffb77e478d547820f614d8283760e8e4f4373",
+      "parameters": {
+        "name": "closed_u50",
+        "mode": "wall_uniform",
+        "fine_um": 50,
+        "dt_us": 0.625,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 0,
+        "cut_um": 800
+      },
+      "summary": {
+        "N": 384,
+        "local": false,
+        "fine_um": 49.99999999999999,
+        "dt_s": 6.249999999999999e-07,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 16,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.7600000000000005e-12,
+        "S0_per_face_mol": 3.4584830418186233e-12,
+        "initial_film_excess_energy_J": 2.0415689947682066e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 4.398200942607376e-15,
+        "half_drain_action_J": 2.485713531356099e-22,
+        "momentum_mixing_loss_J": 1.361027324869868e-21,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 8.084397349092697e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.8486094353330411e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 9.473903143468005e-19,
+        "max_momentum_drain_residual": 1.3874225429368165e-16,
+        "max_force_threshold_ratio": 0.0007099626134915936,
+        "max_displacement_m": 2.0394630375056273e-07,
+        "min_h_m": 5.988523336932599e-06,
+        "min_theta": 0.9689085171724005,
+        "max_theta": 0.9784322406152988,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 83,
+        "cg_iterations": 99,
+        "wall_s": 12.9561625
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u50\\faces.csv",
+          "bytes": 2172278,
+          "sha256": "77e0bf931e3ae12de587581b5da4a1c5c16d15222417b8d43fd19f04e47907bc"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u50\\frames.csv",
+          "bytes": 1530521,
+          "sha256": "a635d93092aeb1423c4935d33a15d5de9d55bd7566074f681a603b81503ba044"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u50\\history.csv",
+          "bytes": 6679,
+          "sha256": "383237831cc2d2268d72338c3ce63c656464212a77612c971cf62964b823f1f3"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u50\\interface.csv",
+          "bytes": 19431,
+          "sha256": "46e87752a2af56148074bfee9b1068661d522a3ad4836436eb71f5ed422df485"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u50\\stages.csv",
+          "bytes": 1963221,
+          "sha256": "72c79e50140ea312159566660cba43bbf4381f594f8d39a4236713595e1f0fa2"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\closed_u50\\summary.json",
+          "bytes": 1210,
+          "sha256": "51f10425aa6530fa406555309e72addc21e92a519ea0e94a93d6552254a68aca"
+        }
+      ]
+    },
+    {
+      "name": "open_l100",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "1.25",
+        "10",
+        "0.005",
+        "500",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\open_l100",
+        "800"
+      ],
+      "returncode": 0,
+      "wall_s": 0.1720000000204891,
+      "log": "results\\logs\\moving_interface_20261113\\open_l100.log",
+      "log_sha256": "786817bc8d4090d40ffbf0bff4041ea9393d5794ab0d7f874f1ce52b89c115e2",
+      "parameters": {
+        "name": "open_l100",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 1.25,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 500,
+        "cut_um": 800
+      },
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 8,
+        "amplitude": 0.005,
+        "radius_m": 0.0005,
+        "boundary_mu_Pa": -77.27958511871006,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0.00032175055439664213,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715126e-12,
+        "boundary_work_J": 5.764293640158772e-15,
+        "viscous_action_J": 1.7342800187609745e-15,
+        "half_drain_action_J": 2.882110492165749e-15,
+        "momentum_mixing_loss_J": 8.472387112166969e-18,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 3.2337589396370783e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.220637600865056e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 1.5025489185982444e-16,
+        "max_force_threshold_ratio": 0.0016808790748295583,
+        "max_displacement_m": 1.7735391174685704e-07,
+        "min_h_m": 5.990557422527081e-06,
+        "min_theta": 0.9691631525799963,
+        "max_theta": 0.9781654636312936,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 40,
+        "cg_iterations": 48,
+        "wall_s": 0.160151
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\open_l100\\faces.csv",
+          "bytes": 101230,
+          "sha256": "1250ca747a87e07ef5eebd686577ad7acf4912f0fa4315f3aacbf8e542ba8b81"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\open_l100\\frames.csv",
+          "bytes": 96590,
+          "sha256": "ad4acdc76eda893cea5abfd595e7af65b05b842bba349d899181379b7080a52d"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\open_l100\\history.csv",
+          "bytes": 3619,
+          "sha256": "f4433869b5436f2740ddc07f2b594a1349fb675eb666d1d6907d7b681f0c3c33"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\open_l100\\interface.csv",
+          "bytes": 9741,
+          "sha256": "ac9acadef9142a0815f013d50873e8343065744e2fb917beed23d821ef0a8afc"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\open_l100\\stages.csv",
+          "bytes": 123560,
+          "sha256": "9e4f5064804dba8a3d5ef3e11c326a8099c48a0a574ff1383a5a2adc80733929"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\open_l100\\summary.json",
+          "bytes": 1295,
+          "sha256": "a2215240d7dff61f4394c40adfbee661c50c5e4bab4f171eb4fafda6d6b70f68"
+        }
+      ]
+    },
+    {
+      "name": "observer_disabled",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "1.25",
+        "10",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\observer_disabled"
+      ],
+      "returncode": 0,
+      "wall_s": 0.15699999989010394,
+      "log": "results\\logs\\moving_interface_20261113\\observer_disabled.log",
+      "log_sha256": "8147db21d5e46d37e0204a065d65d2222eaecc5dba7346f9710a7c99e1ba8ca4",
+      "parameters": {
+        "name": "observer_disabled",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 1.25,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 0,
+        "cut_um": null
+      },
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 8,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715077e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 2.13508914929995e-15,
+        "half_drain_action_J": 2.977792513098577e-22,
+        "momentum_mixing_loss_J": 1.580520728183821e-21,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 3.2337589396370783e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.196588694125002e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 1.0046017219038055e-16,
+        "max_force_threshold_ratio": 0.0016349048925861744,
+        "max_displacement_m": 1.8914073867455575e-07,
+        "min_h_m": 5.990714359093783e-06,
+        "min_theta": 0.9692002342796658,
+        "max_theta": 0.9781249480027782,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 40,
+        "cg_iterations": 48,
+        "wall_s": 0.1533178
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\observer_disabled\\frames.csv",
+          "bytes": 99247,
+          "sha256": "8622c1b48ec4ad543d43b090087533b8e90394bf6f6d67035c525d5be920597a"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\observer_disabled\\history.csv",
+          "bytes": 3442,
+          "sha256": "4bea923f04f6263b1e4670598996b8ff1b22eff7642be3a380b275e6dcce84fe"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\observer_disabled\\summary.json",
+          "bytes": 1204,
+          "sha256": "a4956e24a5aa75c0329fe7627d938eaaf077437b053388c02ebe9d0d697e846e"
+        }
+      ]
+    },
+    {
+      "name": "alternative_cut",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_moving_voronoi_bench.exe",
+        "wall_local",
+        "100",
+        "1.25",
+        "10",
+        "0.005",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\moving_interface_20261113\\data\\alternative_cut",
+        "775"
+      ],
+      "returncode": 0,
+      "wall_s": 0.18799999984912574,
+      "log": "results\\logs\\moving_interface_20261113\\alternative_cut.log",
+      "log_sha256": "8147db21d5e46d37e0204a065d65d2222eaecc5dba7346f9710a7c99e1ba8ca4",
+      "parameters": {
+        "name": "alternative_cut",
+        "mode": "wall_local",
+        "fine_um": 100,
+        "dt_us": 1.25,
+        "T_us": 10,
+        "amplitude": 0.005,
+        "radius_um": 0,
+        "cut_um": 775
+      },
+      "summary": {
+        "N": 48,
+        "local": true,
+        "fine_um": 99.99999999999999,
+        "dt_s": 1.2499999999999999e-06,
+        "requested_T_s": 9.999999999999999e-06,
+        "T_s": 9.999999999999999e-06,
+        "steps": 8,
+        "amplitude": 0.005,
+        "radius_m": 0,
+        "boundary_mu_Pa": 0,
+        "fibre_radius_m": 0.000125,
+        "meniscus_arc_width_m": 0,
+        "gamma_ref_N_m": 0.038639792559355034,
+        "mu_Pa_s": 0.0015,
+        "rho_kg_m3": 1045,
+        "theta0": 0.9736720262233717,
+        "V0_m3": 5.760000000000001e-12,
+        "S0_per_face_mol": 3.4584410813915254e-12,
+        "initial_film_excess_energy_J": 2.0361638005715077e-12,
+        "boundary_work_J": 0,
+        "viscous_action_J": 2.13508914929995e-15,
+        "half_drain_action_J": 2.977792513098577e-22,
+        "momentum_mixing_loss_J": 1.580520728183821e-21,
+        "max_energy_budget_excess": 0,
+        "max_V_balance": 3.2337589396370783e-16,
+        "max_S_balance": 0,
+        "max_region_V_ledger": 1.196588694125002e-16,
+        "max_region_S_ledger": 0,
+        "max_node_V_residual": 1.010549668636587e-17,
+        "max_momentum_drain_residual": 1.0046017219038055e-16,
+        "max_force_threshold_ratio": 0.0016349048925861744,
+        "max_displacement_m": 1.8914073867455575e-07,
+        "min_h_m": 5.990714359093783e-06,
+        "min_theta": 0.9692002342796658,
+        "max_theta": 0.9781249480027782,
+        "material_crossings": 0,
+        "coupled_failures": 0,
+        "newton_iterations": 40,
+        "cg_iterations": 48,
+        "wall_s": 0.1675303
+      },
+      "completed": true,
+      "files": [
+        {
+          "path": "results\\moving_interface_20261113\\data\\alternative_cut\\faces.csv",
+          "bytes": 111781,
+          "sha256": "c0015d0036c70971adcc8725bfbe4c37c4fe8194b54b8aa822bb44717fd50151"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\alternative_cut\\frames.csv",
+          "bytes": 99247,
+          "sha256": "8622c1b48ec4ad543d43b090087533b8e90394bf6f6d67035c525d5be920597a"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\alternative_cut\\history.csv",
+          "bytes": 3442,
+          "sha256": "4bea923f04f6263b1e4670598996b8ff1b22eff7642be3a380b275e6dcce84fe"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\alternative_cut\\interface.csv",
+          "bytes": 9756,
+          "sha256": "6f41db94cb0940e63157fa0c1f6d20fbf64423bdba0b4ab17b5ceea9e06b0d9c"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\alternative_cut\\stages.csv",
+          "bytes": 125400,
+          "sha256": "eb55dde98d286d4f29f0c2a3eddbe58b524b848ee37dfa45b43e85c9737b20d9"
+        },
+        {
+          "path": "results\\moving_interface_20261113\\data\\alternative_cut\\summary.json",
+          "bytes": 1214,
+          "sha256": "e539da47f95f90a6b93d6b7d47285e43f310090a7f2a186d0fce0ef445e8155a"
+        }
+      ]
+    }
+  ],
+  "wall_s": 18.375
+}
