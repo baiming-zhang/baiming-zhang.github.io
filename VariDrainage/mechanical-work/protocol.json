@@ -1,0 +1,112 @@
+{
+  "source_commit": "24a4f369733983977897f07faaa2b5883e52b813",
+  "source_hashes": {
+    "thin_film/scripts/mechanical_work/run.py": "c317521897ba3dc232984cc3034d166de57f8d10be6599371aa6df005e9f9ccf",
+    "thin_film/scripts/mechanical_work/README.md": "e4a566efbad4769d3985457d9deea5a972ad186ca195ac168acfaef11f6e3eb6",
+    "thin_film/bench/tf_curved_edge_bench.cpp": "48abb7901dffe2107ec4be3bddb3523073a531af43704579dfb25c55a38472cb",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMechanicalObserver.h": "7f42541b91bec6a60e0fd5e72bca72abace0a446391884f4551d6a042b2d5b46",
+    "thin_film/include/vf/thinfilm/CurvedEdgeRegional.h": "a477ea87f1f69c7832432064f13b13e315e2293ef904635f50fdfef11542b710",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film/include/vf/thinfilm/MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912",
+    "thin_film/tests/test_curved_mechanical_observer.cpp": "e2003e4c96b88de8ee8f5562f464cf9599a4ee0f9545a9c20289b6d512a4949d"
+  },
+  "binary_hashes": {
+    "tf_curved_edge_bench": "181b3802cf646a5ce29b475e69b5140b16743ffacf59dd8e806af056c24cec09",
+    "test_curved_mechanical_observer": "e60bd01db8c691abcc36bb21488143330dd341c1e8ce477db14430870f3c5be5",
+    "test_edge_preparation": "63d935274c3ea997e841d5c9dba141c5d22d015b1198121730f51a2f462f405f",
+    "test_curved_edge": "dafdbbe27798598a3bf5029a26e2c16a8ae880735e545f497c3b46bba40f4d55"
+  },
+  "guards": [
+    {
+      "name": "observer_off",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.5,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 20,
+      "refine_start_um": 200,
+      "observer": false
+    },
+    {
+      "name": "observer_guard",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 1,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200,
+      "observer": true
+    }
+  ],
+  "conditional_matrix": [
+    {
+      "name": "obs_dt1",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 10,
+      "refine_start_um": 200,
+      "observer": true
+    },
+    {
+      "name": "obs_dt05",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.5,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 20,
+      "refine_start_um": 200,
+      "observer": true
+    },
+    {
+      "name": "obs_dt025",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.25,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 40,
+      "refine_start_um": 200,
+      "observer": true
+    }
+  ],
+  "raw_directory": "results/local-runs/mechanical_work_fixed_20261113",
+  "scope": "Observer only, actual inertial/viscous/curved-area model unchanged. All accepted Newton statistics; sampled regional energies, forces, positive clipped viscous dissipation and discrete ports; recovered physical-cut viscous traction is separate.",
+  "gates": {
+    "frozen_trajectory": "byte-exact6files",
+    "regional_derivative_unit": 1e-07,
+    "independent_work_formulas": 1e-07,
+    "physical_cut_geometry": 1e-08,
+    "native_balance": 1e-10,
+    "native_energy": 1e-07
+  },
+  "per_case_timeout_s": 600,
+  "whole_compute_budget_s": 3300,
+  "condition": "all24checks and observer-off plus1us observer guard pass; estimated guard-wall*steps<=600s per case",
+  "sampling": "All native Newton/kinetic/viscous statistics. Regional work and nodal forces only at first, every10us and final.",
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  },
+  "limitations": "Endpoint capillary remainder is not assumed positive physical dissipation. Discrete port identities do not independently validate continuum traction or normal flux. No new kinetic rate or changed convergence target."
+}

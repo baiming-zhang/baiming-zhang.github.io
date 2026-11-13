@@ -1,0 +1,737 @@
+{
+  "state": "completed",
+  "tests": [
+    {
+      "name": "test_curved_mechanical_observer",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_curved_mechanical_observer.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.030999999959021807,
+      "log": "results\\logs\\mechanical_work_fixed_20261113\\test_curved_mechanical_observer.log",
+      "log_sha256": "e4de21ad637537096c4cd740a96b948dc19c63c4f92c01db9c17c68bd1ffa19f"
+    },
+    {
+      "name": "test_edge_preparation",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_edge_preparation.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.01600000006146729,
+      "log": "results\\logs\\mechanical_work_fixed_20261113\\test_edge_preparation.log",
+      "log_sha256": "d655965e8d2a38ba0c556a7357f5d98c341205c38e8cd4e2d6a2398c3cba391b"
+    },
+    {
+      "name": "test_curved_edge",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_curved_edge.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.0779999999795109,
+      "log": "results\\logs\\mechanical_work_fixed_20261113\\test_curved_edge.log",
+      "log_sha256": "adc2345db8802c2b8587c21657e7f17b3280740ddc1133f41a17a3c40f1a8a04"
+    }
+  ],
+  "cases": [
+    {
+      "name": "observer_off",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.5",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\mechanical_work_fixed_20261113\\observer_off",
+        "6",
+        "variational",
+        "20",
+        "200",
+        "0"
+      ],
+      "returncode": 0,
+      "wall_s": 36.17200000002049,
+      "log": "results\\logs\\mechanical_work_fixed_20261113\\observer_off.log",
+      "log_sha256": "5e0fe7f8c6e18c32d9f408f305f78a58932cb50a849a29fa4ffcf58eb2e8da24",
+      "parameters": {
+        "name": "observer_off",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.5,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 20,
+        "refine_start_um": 200,
+        "observer": false
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 20,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 400,
+        "requested_steps": 400,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 5e-07,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.1540401300974907e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 2.440793667664427e-16,
+        "max_regionS_res": 1.0041035083234351e-16,
+        "max_displacement_m": 1.7409859340305137e-07,
+        "wall_s": 36.1437454
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "frozen_trajectory_bytes": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true,
+        "initial_states.csv": true,
+        "initial_faces.csv": true,
+        "preparation.json": true
+      },
+      "files": [
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_off/faces.csv",
+          "bytes": 561966,
+          "sha256": "79b590ecfd7af6807436125f487737f0cdda8a6de0f43354f3200975b75fe8a8"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_off/history.csv",
+          "bytes": 138393,
+          "sha256": "f270a49760e143ef2f7ddfe36d9e3dc3719024104ce278a7040069193da87b31"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_off/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_off/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_off/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_off/states.csv",
+          "bytes": 1591544,
+          "sha256": "b32929c2237d9ab600eca07ae612ac2f52fceb6bbdcc542c53430e8666d66261"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_off/summary.json",
+          "bytes": 928,
+          "sha256": "2ba729bed1eb5c2345542428898d8138e059cfe585c384ff8ce7941279e22e83"
+        }
+      ]
+    },
+    {
+      "name": "observer_guard",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "1",
+        "1",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\mechanical_work_fixed_20261113\\observer_guard",
+        "6",
+        "variational",
+        "1",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 0.17100000008940697,
+      "log": "results\\logs\\mechanical_work_fixed_20261113\\observer_guard.log",
+      "log_sha256": "46dabef2c36668a0e55e6fa3994624d9482afbf11e23657a002b7674257f1373",
+      "parameters": {
+        "name": "observer_guard",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 1,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 1,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 1e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 4.945886271846389e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.3463533186300595e-17,
+        "max_regionS_res": 3.6138766274947394e-17,
+        "max_displacement_m": 3.7028764339673637e-09,
+        "wall_s": 0.1487265
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "numeric_csv": true,
+      "files": [
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/faces.csv",
+          "bytes": 25676,
+          "sha256": "fd881b8830a2c9e38136f507d15430c0fdf0bdcd9627d085495dd362df10651f"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/history.csv",
+          "bytes": 519,
+          "sha256": "804970913b0820607dc0154c68a27a5369c5257561a295397e307ce688b21fa1"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/mechanical_nodes.csv",
+          "bytes": 38862,
+          "sha256": "f26a826e2b41179cb0e0e45554be01649400c83286cfabd4b861c37980e47ca8"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/mechanics.csv",
+          "bytes": 403,
+          "sha256": "df1d3cf05945efcc6d3dd4cb6af0619a91858b1bcc6b2978f988bf97e6bf306f"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/regional_mechanics.csv",
+          "bytes": 1211,
+          "sha256": "9fdbbb03b5bbce78545388b258ad5b49bf90a124c838159a415ef658cfcfa180"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/states.csv",
+          "bytes": 71817,
+          "sha256": "30579b6702440eb1e2ec31f988840d003a3af73cadd5e2e66a2b0e8174d9f3f4"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/observer_guard/summary.json",
+          "bytes": 932,
+          "sha256": "414ba21958593fc24dafb1c20a58911b63bbbab70bf13b40f37dd33bd504664f"
+        }
+      ]
+    },
+    {
+      "name": "obs_dt1",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "1",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\mechanical_work_fixed_20261113\\obs_dt1",
+        "6",
+        "variational",
+        "10",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 22.155999999959022,
+      "log": "results\\logs\\mechanical_work_fixed_20261113\\obs_dt1.log",
+      "log_sha256": "9958bc43867736a4aae4d7c476ee36a5e40f94736e85b670616480ca9c61bce6",
+      "parameters": {
+        "name": "obs_dt1",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 10,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 10,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 200,
+        "requested_steps": 200,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.1540401300974907e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.195677269784211e-16,
+        "max_regionS_res": 8.61902355617575e-17,
+        "max_displacement_m": 1.6911835992825904e-07,
+        "wall_s": 22.1407128
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "frozen_trajectory_bytes": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true,
+        "initial_states.csv": true,
+        "initial_faces.csv": true,
+        "preparation.json": true
+      },
+      "numeric_csv": true,
+      "files": [
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/faces.csv",
+          "bytes": 558614,
+          "sha256": "9238736dc0f97fb64709fe5cea1df67a79ef41700ce8eb0e900341f13c9a414b"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/history.csv",
+          "bytes": 69372,
+          "sha256": "08c9d6173cd533575f272c6a2540e3af1751d40ceeaa5a658da530e31866c647"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/mechanical_nodes.csv",
+          "bytes": 880231,
+          "sha256": "3345a0e0b10f1301f6bb1ea162e67be78abbf16228e6ddd9ac906d7e5763b24d"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/mechanics.csv",
+          "bytes": 52409,
+          "sha256": "ecdd745d6de9607f91820bb07fc40f0647cb8936ac8b71efeff6199c70c749c1"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/regional_mechanics.csv",
+          "bytes": 19132,
+          "sha256": "9f5c6ddcf385712a5c77a84b9057e1681fb9374bb9ed16490d2b2844cd7378c1"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/states.csv",
+          "bytes": 1590382,
+          "sha256": "703d2152e59c774276edaaf1c237d19cbfbae9dc0809352411b62f9843d88b3a"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt1/summary.json",
+          "bytes": 936,
+          "sha256": "21045d36c11529222197cfca7ba2101e128ec3ba0b064b22c6ba47cfc54f09b3"
+        }
+      ]
+    },
+    {
+      "name": "obs_dt05",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.5",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\mechanical_work_fixed_20261113\\obs_dt05",
+        "6",
+        "variational",
+        "20",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 37.70299999997951,
+      "log": "results\\logs\\mechanical_work_fixed_20261113\\obs_dt05.log",
+      "log_sha256": "5e0fe7f8c6e18c32d9f408f305f78a58932cb50a849a29fa4ffcf58eb2e8da24",
+      "parameters": {
+        "name": "obs_dt05",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.5,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 20,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 20,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 400,
+        "requested_steps": 400,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 5e-07,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.1540401300974907e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 2.440793667664427e-16,
+        "max_regionS_res": 1.0041035083234351e-16,
+        "max_displacement_m": 1.7409859340305137e-07,
+        "wall_s": 37.6825868
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "frozen_trajectory_bytes": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true,
+        "initial_states.csv": true,
+        "initial_faces.csv": true,
+        "preparation.json": true
+      },
+      "numeric_csv": true,
+      "files": [
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/faces.csv",
+          "bytes": 561966,
+          "sha256": "79b590ecfd7af6807436125f487737f0cdda8a6de0f43354f3200975b75fe8a8"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/history.csv",
+          "bytes": 138393,
+          "sha256": "f270a49760e143ef2f7ddfe36d9e3dc3719024104ce278a7040069193da87b31"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/mechanical_nodes.csv",
+          "bytes": 880762,
+          "sha256": "aa72dc0530ec442b41cf923b5d76d64f80422dd1b395077ffee5564dc055a7d3"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/mechanics.csv",
+          "bytes": 104842,
+          "sha256": "526fed9bef0ac411f1d8d67f53fb6735ea29abf680751f22d3f623d9b2efc76a"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/regional_mechanics.csv",
+          "bytes": 19098,
+          "sha256": "2c2d449002d61f898c7b81b95d103c677487c5571a4214dc16d0799f828a1083"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/states.csv",
+          "bytes": 1591544,
+          "sha256": "b32929c2237d9ab600eca07ae612ac2f52fceb6bbdcc542c53430e8666d66261"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt05/summary.json",
+          "bytes": 936,
+          "sha256": "b228ab243d7ec74fa42971611abc6b812761fbfeed96ae238862db943627ec35"
+        }
+      ]
+    },
+    {
+      "name": "obs_dt025",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.25",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\mechanical_work_fixed_20261113\\obs_dt025",
+        "6",
+        "variational",
+        "40",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 59.53099999995902,
+      "log": "results\\logs\\mechanical_work_fixed_20261113\\obs_dt025.log",
+      "log_sha256": "55ab797efc28b29f455d60a21d280fc309d8071c3ca08325efa582b52f31e57b",
+      "parameters": {
+        "name": "obs_dt025",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.25,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 40,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 40,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 800,
+        "requested_steps": 800,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 2.5e-07,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.6486287572821296e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.199636207630239e-16,
+        "max_regionS_res": 1.2724176813037934e-16,
+        "max_displacement_m": 1.7684304022341593e-07,
+        "wall_s": 59.5026999
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "frozen_trajectory_bytes": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true,
+        "initial_states.csv": true,
+        "initial_faces.csv": true,
+        "preparation.json": true
+      },
+      "numeric_csv": true,
+      "files": [
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/faces.csv",
+          "bytes": 563298,
+          "sha256": "d2fbf8f4dc1f55a3521ebaf97829f9bd8c703bfc1f74aca75c9c8fa989961185"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/history.csv",
+          "bytes": 277961,
+          "sha256": "dcb7ec55d7cc3dff71df628ba8932c8dd4409706d7e095d097137783062e22a1"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/mechanical_nodes.csv",
+          "bytes": 880721,
+          "sha256": "550312774d1a6be708a528019de027991774484c00a11db9ec0a7e32e5175f28"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/mechanics.csv",
+          "bytes": 209805,
+          "sha256": "735d450cfb793bc7b8847784029309dd912b6f3aa789ac1ded54e6b6fd708dfb"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/regional_mechanics.csv",
+          "bytes": 19110,
+          "sha256": "08de580215c5213586d40c03923fa3a1d0ec5f27fba36e8c7b0ae75bc83764fa"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/states.csv",
+          "bytes": 1591837,
+          "sha256": "ad57f227c00c2a64c2d1adf439030f3b8fe96a177bfde1eb277e33248269c7c8"
+        },
+        {
+          "path": "results/local-runs/mechanical_work_fixed_20261113/obs_dt025/summary.json",
+          "bytes": 935,
+          "sha256": "a8ce3247eabf156b8a171305f2f802903a24f8696b272e7643a571076172f459"
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "compute_wall_s": 155.85800000000745,
+  "sampled_steps": true,
+  "native_checks": 24
+}

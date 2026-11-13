@@ -1,0 +1,1 @@
+First observer guard completed with unchanged dynamics, but fixed-mask char streamed as ASCII0/1 control bytes in mechanical_nodes.csv. Preserve these raw bytes and first protocol. Correct only serialization to integer before a new separately frozen primary campaign. This is an observation-format failure, not a physical/model or Newton failure.
