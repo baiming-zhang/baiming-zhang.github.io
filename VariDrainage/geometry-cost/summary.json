@@ -1,0 +1,90 @@
+{
+  "exact_frozen_geometry_cases": 4,
+  "rows": [
+    {
+      "case": "u20_initial",
+      "N": 144,
+      "exact": true,
+      "unchanged_fraction": 0.6665695415695416,
+      "medians_ms": {
+        "candidate_clip": 1.6783,
+        "full_reference_geometry": 5.0605,
+        "partition_validation": 0.4654,
+        "reference_clip": 3.9191
+      },
+      "clipping_speedup": 2.3351605791574808
+    },
+    {
+      "case": "u20_t10",
+      "N": 144,
+      "exact": true,
+      "unchanged_fraction": 0.6666181041181041,
+      "medians_ms": {
+        "candidate_clip": 1.6215,
+        "full_reference_geometry": 4.7858,
+        "partition_validation": 0.4828,
+        "reference_clip": 3.8594
+      },
+      "clipping_speedup": 2.3801418439716313
+    },
+    {
+      "case": "u10_initial",
+      "N": 544,
+      "exact": true,
+      "unchanged_fraction": 0.7114038294875962,
+      "medians_ms": {
+        "candidate_clip": 27.8561,
+        "full_reference_geometry": 71.4875,
+        "partition_validation": 2.0477999999999996,
+        "reference_clip": 64.6833
+      },
+      "clipping_speedup": 2.3220515434680373
+    },
+    {
+      "case": "u10_t10",
+      "N": 544,
+      "exact": true,
+      "unchanged_fraction": 0.7114410681399632,
+      "medians_ms": {
+        "candidate_clip": 28.5573,
+        "full_reference_geometry": 75.31219999999999,
+        "partition_validation": 2.1355,
+        "reference_clip": 66.1298
+      },
+      "clipping_speedup": 2.315688107769292
+    }
+  ],
+  "candidate_checks": 38,
+  "all_candidate_checks_passed": true,
+  "frozen_non_timing_profile_cases": 4,
+  "candidate_trajectory_passed": false,
+  "actual_matching_files": {
+    "faces.csv": true,
+    "history.csv": true,
+    "initial_faces.csv": true,
+    "initial_states.csv": true,
+    "mechanical_nodes.csv": true,
+    "mechanics.csv": true,
+    "mesh.json": true,
+    "preparation.json": true,
+    "regional_mechanics.csv": true,
+    "states.csv": true,
+    "summary.json": false
+  },
+  "actual_wall_s": 254.875,
+  "native_probe_wall_s": 2.4370000001508743,
+  "candidate_native_wall_s": 264.2970000000205,
+  "first_stopped_attempt_native_s": 0.25,
+  "default_adopted": false,
+  "C1_space_qualified": false,
+  "physical_flux_qualified": false,
+  "posthoc_summary_field_differences": {
+    "wall_s": {
+      "reference": 418.1362981,
+      "candidate": 254.7976376
+    }
+  },
+  "posthoc_numerical_equivalence_excluding_wall_s": true,
+  "preregistered_all11_bytes_gate_passed": false,
+  "interpretation": "Original all11 file gate retained as failed. Posthoc observation: only native wall_s differs; no tolerance change or native rerun."
+}

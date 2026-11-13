@@ -1,0 +1,837 @@
+{
+  "state": "completed",
+  "tests": [
+    {
+      "name": "test_geometry_candidate_curved",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_geometry_candidate_curved.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.07800000021234155,
+      "log": "results\\logs\\geometry_candidate_20261113\\test_geometry_candidate_curved.log",
+      "log_sha256": "adc2345db8802c2b8587c21657e7f17b3280740ddc1133f41a17a3c40f1a8a04",
+      "counts": [
+        [
+          "14",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "reused_execution": true
+    },
+    {
+      "name": "test_geometry_candidate_preparation",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_geometry_candidate_preparation.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.125,
+      "log": "results\\logs\\geometry_candidate_20261113\\test_geometry_candidate_preparation.log",
+      "log_sha256": "d655965e8d2a38ba0c556a7357f5d98c341205c38e8cd4e2d6a2398c3cba391b",
+      "counts": [
+        [
+          "4",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "reused_execution": true
+    },
+    {
+      "name": "test_geometry_candidate_observer",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_geometry_candidate_observer.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.031999999890103936,
+      "log": "results\\logs\\geometry_candidate_20261113\\test_geometry_candidate_observer.log",
+      "log_sha256": "e4de21ad637537096c4cd740a96b948dc19c63c4f92c01db9c17c68bd1ffa19f",
+      "counts": [
+        [
+          "6",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "reused_execution": true
+    },
+    {
+      "name": "test_geometry_candidate_transfer",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_geometry_candidate_transfer.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.014999999897554517,
+      "log": "results\\logs\\geometry_candidate_20261113\\test_geometry_candidate_transfer.log",
+      "log_sha256": "19cc7535184eb4986bef9282d34a9f824728f35c48ff8c2cbc8aff8cb6905e12",
+      "counts": [
+        [
+          "14",
+          "0"
+        ]
+      ],
+      "passed": true,
+      "reused_execution": true
+    }
+  ],
+  "cases": [
+    {
+      "name": "profile_u20_initial",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_geometry_candidate_profile.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\profile_u20_initial\\input.csv",
+        ".03125",
+        "3",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\profile_u20_initial\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 0.4529999999795109,
+      "log": "results\\logs\\geometry_candidate_20261113\\profile_u20_initial.log",
+      "log_sha256": "ab0f8613344b73bf347fa80af378bc30345198c527cc289ed2ac2045f893fd4c",
+      "passed": true,
+      "non_timing_equal": {
+        "N": true,
+        "area_import_error": true,
+        "dt_s": true,
+        "energy_import_error": true,
+        "force_target_ratio": true,
+        "mechanics_cg_iters": true,
+        "mechanics_endpoint_difference_m": true,
+        "mechanics_iters": true,
+        "sink": true,
+        "tape_nodes": true
+      },
+      "profile": {
+        "N": 144,
+        "dt_s": 3.125e-08,
+        "area_import_error": 0,
+        "energy_import_error": 5.346653247743588e-16,
+        "tape_nodes": 60983,
+        "mechanics_endpoint_difference_m": 0,
+        "mechanics_iters": 3,
+        "mechanics_cg_iters": 4,
+        "force_target_ratio": 0.00022807278505547113,
+        "sink": 4907.851275223222,
+        "timings": [
+          {
+            "name": "geometry",
+            "samples": [
+              {
+                "wall_s": 0.0026874,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0025942,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0118403,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "energy_gradient",
+            "samples": [
+              {
+                "wall_s": 0.005277,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0054101,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0134513,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "metric_build_plus_value",
+            "samples": [
+              {
+                "wall_s": 0.006452,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0061634,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0061488,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "problem_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0051199,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0051954,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0050475,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "hessian_vector",
+            "samples": [
+              {
+                "wall_s": 0.0108122,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0101357,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0102653,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "mechanics_step",
+            "samples": [
+              {
+                "wall_s": 0.1190644,
+                "cpu_s": 0.0625
+              }
+            ]
+          },
+          {
+            "name": "coupled_step",
+            "samples": [
+              {
+                "wall_s": 0.1302453,
+                "cpu_s": 0.125
+              }
+            ]
+          },
+          {
+            "name": "saved_step_observer",
+            "samples": [
+              {
+                "wall_s": 0.02199,
+                "cpu_s": 0.015625
+              }
+            ]
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\profile_u20_initial\\input.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\profile_u20_initial\\profile.json",
+          "bytes": 1384,
+          "sha256": "e4419105308d3791b453c9a930a7dd8bd56629de9f37d6db8a470a8afd8395e2"
+        }
+      ]
+    },
+    {
+      "name": "profile_u20_t10",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_geometry_candidate_profile.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\profile_u20_t10\\input.csv",
+        ".03125",
+        "3",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\profile_u20_t10\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 0.4380000000819564,
+      "log": "results\\logs\\geometry_candidate_20261113\\profile_u20_t10.log",
+      "log_sha256": "4830ca13ed956bf51ebf85f0c442535127462de553c1cf09f9272fd5d9428b6b",
+      "passed": true,
+      "non_timing_equal": {
+        "N": true,
+        "area_import_error": true,
+        "dt_s": true,
+        "energy_import_error": true,
+        "force_target_ratio": true,
+        "mechanics_cg_iters": true,
+        "mechanics_endpoint_difference_m": true,
+        "mechanics_iters": true,
+        "sink": true,
+        "tape_nodes": true
+      },
+      "profile": {
+        "N": 144,
+        "dt_s": 3.125e-08,
+        "area_import_error": 7.105427357601002e-15,
+        "energy_import_error": 5.359312890196067e-16,
+        "tape_nodes": 60983,
+        "mechanics_endpoint_difference_m": 0,
+        "mechanics_iters": 3,
+        "mechanics_cg_iters": 4,
+        "force_target_ratio": 2.2138976678915485e-05,
+        "sink": 492208.7242682447,
+        "timings": [
+          {
+            "name": "geometry",
+            "samples": [
+              {
+                "wall_s": 0.0027672,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0024464,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0024623,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "energy_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0057541,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0048207,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0048096,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "metric_build_plus_value",
+            "samples": [
+              {
+                "wall_s": 0.0065442,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0057268,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0065645,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "problem_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0054512,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0051952,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0052233,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "hessian_vector",
+            "samples": [
+              {
+                "wall_s": 0.01141,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0128514,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0103209,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "mechanics_step",
+            "samples": [
+              {
+                "wall_s": 0.1211453,
+                "cpu_s": 0.109375
+              }
+            ]
+          },
+          {
+            "name": "coupled_step",
+            "samples": [
+              {
+                "wall_s": 0.1409843,
+                "cpu_s": 0.109375
+              }
+            ]
+          },
+          {
+            "name": "saved_step_observer",
+            "samples": [
+              {
+                "wall_s": 0.0209496,
+                "cpu_s": 0.03125
+              }
+            ]
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\profile_u20_t10\\input.csv",
+          "bytes": 43841,
+          "sha256": "990a1b202e6cb453b07b1490b6b1157d5c13ea0e46610afda7edddc0d1d69847"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\profile_u20_t10\\profile.json",
+          "bytes": 1368,
+          "sha256": "0ce8298e8b93f8ef9f6a40eb44f4f4f8d9a3b4099fd3d5d0f0d88a0093cd143e"
+        }
+      ]
+    },
+    {
+      "name": "profile_u10_initial",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_geometry_candidate_profile.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\profile_u10_initial\\input.csv",
+        ".03125",
+        "3",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\profile_u10_initial\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 4.2649999998975545,
+      "log": "results\\logs\\geometry_candidate_20261113\\profile_u10_initial.log",
+      "log_sha256": "f25241298b21da760ce81a185fd90e69666570583eaeaef75defd8c5fb71dc4c",
+      "passed": true,
+      "non_timing_equal": {
+        "N": true,
+        "area_import_error": true,
+        "dt_s": true,
+        "energy_import_error": true,
+        "force_target_ratio": true,
+        "mechanics_cg_iters": true,
+        "mechanics_endpoint_difference_m": true,
+        "mechanics_iters": true,
+        "sink": true,
+        "tape_nodes": true
+      },
+      "profile": {
+        "N": 544,
+        "dt_s": 3.125e-08,
+        "area_import_error": 0,
+        "energy_import_error": 8.415680054701902e-16,
+        "tape_nodes": 244153,
+        "mechanics_endpoint_difference_m": 0,
+        "mechanics_iters": 3,
+        "mechanics_cg_iters": 4,
+        "force_target_ratio": 0.006104436545411922,
+        "sink": 1578.5928896502865,
+        "timings": [
+          {
+            "name": "geometry",
+            "samples": [
+              {
+                "wall_s": 0.0424877,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0350081,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0349966,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "energy_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0469757,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0482236,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0501107,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "metric_build_plus_value",
+            "samples": [
+              {
+                "wall_s": 0.0689189,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0683009,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0728097,
+                "cpu_s": 0.03125
+              }
+            ]
+          },
+          {
+            "name": "problem_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0479422,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0504707,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.1367158,
+                "cpu_s": 0.046875
+              }
+            ]
+          },
+          {
+            "name": "hessian_vector",
+            "samples": [
+              {
+                "wall_s": 0.0990922,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0961445,
+                "cpu_s": 0.078125
+              },
+              {
+                "wall_s": 0.095665,
+                "cpu_s": 0.03125
+              }
+            ]
+          },
+          {
+            "name": "mechanics_step",
+            "samples": [
+              {
+                "wall_s": 1.090853,
+                "cpu_s": 0.546875
+              }
+            ]
+          },
+          {
+            "name": "coupled_step",
+            "samples": [
+              {
+                "wall_s": 1.4573304,
+                "cpu_s": 0.703125
+              }
+            ]
+          },
+          {
+            "name": "saved_step_observer",
+            "samples": [
+              {
+                "wall_s": 0.2437889,
+                "cpu_s": 0.046875
+              }
+            ]
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\profile_u10_initial\\input.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\profile_u10_initial\\profile.json",
+          "bytes": 1403,
+          "sha256": "1f9b559b7bc10cc81dce07ca8b02f78b1c64463a7183ffd3506d0382ac9abbc4"
+        }
+      ]
+    },
+    {
+      "name": "profile_u10_t10",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_geometry_candidate_profile.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\profile_u10_t10\\input.csv",
+        ".03125",
+        "3",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\profile_u10_t10\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 4.266000000061467,
+      "log": "results\\logs\\geometry_candidate_20261113\\profile_u10_t10.log",
+      "log_sha256": "16e6f3216c0b5f2fb3712f8ccf5452b876a5cf28a31ce5d5c7ed27f06661580d",
+      "passed": true,
+      "non_timing_equal": {
+        "N": true,
+        "area_import_error": true,
+        "dt_s": true,
+        "energy_import_error": true,
+        "force_target_ratio": true,
+        "mechanics_cg_iters": true,
+        "mechanics_endpoint_difference_m": true,
+        "mechanics_iters": true,
+        "sink": true,
+        "tape_nodes": true
+      },
+      "profile": {
+        "N": 544,
+        "dt_s": 3.125e-08,
+        "area_import_error": 1.454392162258955e-14,
+        "energy_import_error": 1.85551809282198e-15,
+        "tape_nodes": 244153,
+        "mechanics_endpoint_difference_m": 0,
+        "mechanics_iters": 3,
+        "mechanics_cg_iters": 4,
+        "force_target_ratio": 0.007091917127360242,
+        "sink": 104871.94566698921,
+        "timings": [
+          {
+            "name": "geometry",
+            "samples": [
+              {
+                "wall_s": 0.0346408,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0343974,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0323734,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "energy_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0507793,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0489452,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0474738,
+                "cpu_s": 0.03125
+              }
+            ]
+          },
+          {
+            "name": "metric_build_plus_value",
+            "samples": [
+              {
+                "wall_s": 0.0694045,
+                "cpu_s": 0.078125
+              },
+              {
+                "wall_s": 0.0719454,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0681968,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "problem_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0491704,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0503109,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0493751,
+                "cpu_s": 0.03125
+              }
+            ]
+          },
+          {
+            "name": "hessian_vector",
+            "samples": [
+              {
+                "wall_s": 0.1080293,
+                "cpu_s": 0.078125
+              },
+              {
+                "wall_s": 0.0999324,
+                "cpu_s": 0.078125
+              },
+              {
+                "wall_s": 0.0973069,
+                "cpu_s": 0.09375
+              }
+            ]
+          },
+          {
+            "name": "mechanics_step",
+            "samples": [
+              {
+                "wall_s": 1.1717262,
+                "cpu_s": 0.546875
+              }
+            ]
+          },
+          {
+            "name": "coupled_step",
+            "samples": [
+              {
+                "wall_s": 1.4749147,
+                "cpu_s": 0.796875
+              }
+            ]
+          },
+          {
+            "name": "saved_step_observer",
+            "samples": [
+              {
+                "wall_s": 0.2347951,
+                "cpu_s": 0.1875
+              }
+            ]
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\profile_u10_t10\\input.csv",
+          "bytes": 165892,
+          "sha256": "773272e38c18ccf14fc34455cc684d06c0f2d2a4fd5792dd80dfb3fa33237582"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\profile_u10_t10\\profile.json",
+          "bytes": 1468,
+          "sha256": "9b6aac5835d2da5d7d9a6acb4d19f1403bdc699ca1a697c4fab8ddaf03962ffb"
+        }
+      ]
+    },
+    {
+      "name": "u10_dt00625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_geometry_candidate_bench.exe",
+        "uniform",
+        "10",
+        "0.0625",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\geometry_candidate_20261113\\u10_dt00625",
+        "6",
+        "variational",
+        "160",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 254.875,
+      "log": "results\\logs\\geometry_candidate_20261113\\u10_dt00625.log",
+      "log_sha256": "d409604982583231415b89fa23e4ee72d65158ff306a89d4afeb21c1d90a6552",
+      "files": [
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\faces.csv",
+          "bytes": 394716,
+          "sha256": "842e4bee797410ffa3f117105d3358d6b554d120d4c912619e6eb817bb48bebd"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\history.csv",
+          "bytes": 55756,
+          "sha256": "120899139f61505046919f8581d86fcecd7b4be9190c89adad58f2d6eb719115"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\initial_faces.csv",
+          "bytes": 53446,
+          "sha256": "2b3674fac8b0b6e2ce2d6984a009a8a31d29e212871f805834a876b76f4cef36"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\initial_states.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\mechanical_nodes.csv",
+          "bytes": 513408,
+          "sha256": "68c62d1886a2e58248f1d27fe35cd7e899e30e20c215d3717168a6224add6479"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\mechanics.csv",
+          "bytes": 42273,
+          "sha256": "783897e300404e9f0d0050235803c3d5fed87c68e0388d8c7b7a3642b530f342"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\mesh.json",
+          "bytes": 250,
+          "sha256": "4793683264828f86e9c4f16d776de8a0452862755000948fb91a54328013a0a7"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\preparation.json",
+          "bytes": 225,
+          "sha256": "e9bba3597acb5ba55577be4ed649ed79b4b62a05712fb91c3592b5afa7ffd533"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\regional_mechanics.csv",
+          "bytes": 2106,
+          "sha256": "8ad2d03118c6a17b922670997cb779386a360c1658cf043b69bdf4bf7292c044"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\states.csv",
+          "bytes": 955272,
+          "sha256": "36781a49a1fb89383ef5c32b21ce111119167b341f462e9f98d34a9a48805b9a"
+        },
+        {
+          "path": "results\\local-runs\\geometry_candidate_20261113\\u10_dt00625\\summary.json",
+          "bytes": 910,
+          "sha256": "3f6f92f049ebeb74a5212650bae2ecf7ebd7227e3d5ca6af39fb1dfc22f19f51"
+        }
+      ],
+      "matching_files": {
+        "faces.csv": true,
+        "history.csv": true,
+        "initial_faces.csv": true,
+        "initial_states.csv": true,
+        "mechanical_nodes.csv": true,
+        "mechanics.csv": true,
+        "mesh.json": true,
+        "preparation.json": true,
+        "regional_mechanics.csv": true,
+        "states.csv": true,
+        "summary.json": false
+      },
+      "extra_files": [],
+      "passed": false,
+      "baseline_wall_s": 418.25
+    }
+  ],
+  "skipped": [],
+  "compute_wall_s": 264.2970000000205,
+  "original_binary_unchanged": true
+}
