@@ -1,0 +1,711 @@
+{
+  "source_commit": "c600f1e842caaeae8e2df72a9c8a65fcf12c3da1",
+  "started_utc": "2026-11-13T08:22:49.628083+00:00",
+  "source_hashes": {
+    "thin_film/scripts/nonlinear_edge/run.py": "e552fca395b594976966def6750c8729c43628cf5d18991a59776dd2a3bb2138",
+    "thin_film/scripts/nonlinear_edge/edge.py": "c051d2a48b7f3e59e6cf814704047be67a50babcb50a0b2e3eb7c3d9bf087e07",
+    "thin_film/scripts/nonlinear_edge/tests.py": "588e8055689e3e219e00315103b5067ebe1123470b11333e358b0b45719e3ab5",
+    "thin_film/scripts/nonlinear_edge/README.md": "86665a42916235611d9f1f4f8b65668f74a91a14896986394e31c393723607d0"
+  },
+  "cases": [
+    {
+      "params": {
+        "name": "r500_a0p5_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a0p5_pulse_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a0p5_pulse_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a0p5_pulse_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a0p5_pulse_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a0p5_pulse_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a0p5_pulse_no_trace17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": false
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a0p5_chirp_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a0p5_chirp_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a0p5_chirp_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a0p5_chirp_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a0p5_chirp_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a0p5_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a0p5_chirp_no_trace17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": false
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a5p0_pulse_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a5p0_pulse_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a5p0_pulse_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a5p0_pulse_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a5p0_pulse_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a5p0_pulse_no_trace17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": false
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a5p0_chirp_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a5p0_chirp_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a5p0_chirp_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a5p0_chirp_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a5p0_chirp_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a5p0_chirp",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r500_a5p0_chirp_no_trace17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": false
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a0p5_pulse_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a0p5_pulse_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a0p5_pulse_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a0p5_pulse_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a0p5_pulse_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a0p5_pulse_no_trace17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": false
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a0p5_chirp_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a0p5_chirp_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a0p5_chirp_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a0p5_chirp_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a0p5_chirp_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a0p5_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 0.5,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a0p5_chirp_no_trace17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": false
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a5p0_pulse_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a5p0_pulse_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a5p0_pulse_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a5p0_pulse_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a5p0_pulse_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a5p0_pulse_no_trace17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": false
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a5p0_chirp_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a5p0_chirp_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a5p0_chirp_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a5p0_chirp_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a5p0_chirp_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a5p0_chirp",
+        "radius_m": 0.001,
+        "amplitude_Pa": 5.0,
+        "signal": "chirp",
+        "T_s": 0.05
+      },
+      "name": "r1000_a5p0_chirp_no_trace17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": false
+    }
+  ],
+  "scope": "1D nonlinear immobile-interface capillary reference. Full left region coupled to full/reduced right edge with explicit shared volume and capillary-shape power. No moving particles, surfactant dynamics or fully resolved meniscus.",
+  "physics": "Exact symmetric-interface area energy, h^3/(12mu) mobility frozen within each implicit step; constant gamma=.038639792559355034N/m, mu=.0015Pa.s; width80um and length80um. Radius-derived endpoint geometry and constant baseline Laplace pressure; internal equilibrium solved, never imposed during evolution.",
+  "gates": {
+    "regional_volume": 1e-09,
+    "regional_power": 1e-07,
+    "root_physical_volume": 1e-10,
+    "trace_pressure_Pa": 1e-06,
+    "flux_error": 0.05,
+    "change_field_error": 0.1,
+    "time_grid_flux": 0.02
+  },
+  "whole_budget_s": 3300,
+  "per_case_timeout_s": 300,
+  "decision": "Do not tune material parameters or construct a basis from validation trajectories. Compare port and standard DC-corrected bases with identical retained volume/trace directions. If accuracy/cost fails, keep full local edge states.",
+  "amendment": {
+    "reason": "Evolve extensive perturbations directly and rationalize slope differences, avoiding subtraction of near-equilibrium absolute heights in stiff mobility. Identical physical inputs, projection spaces, root and output gates.",
+    "original_protocol": "results/nonlinear_edge_20261113/protocol.json",
+    "control_cases": [
+      "r1000_a5p0_pulse_full80",
+      "r1000_a5p0_pulse_local_dc17"
+    ],
+    "control_gates": {
+      "h_relative": 1e-08,
+      "port_flux_L2": 1e-05
+    },
+    "original_attempts_preserved": 48
+  }
+}

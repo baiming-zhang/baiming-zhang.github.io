@@ -1,0 +1,155 @@
+{
+  "source_commit": "4401122b671c56829309361cc588a72921fe3246",
+  "started_utc": "2026-11-13T08:26:27.685683+00:00",
+  "cases": [
+    {
+      "params": {
+        "name": "r500_a50_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a50_pulse_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a50_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a50_pulse_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a50_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a50_pulse_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a50_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a50_pulse_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r500_a50_pulse",
+        "radius_m": 0.0005,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r500_a50_pulse_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a50_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a50_pulse_full80",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a50_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a50_pulse_time80",
+      "n": 80,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a50_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a50_pulse_grid160",
+      "n": 160,
+      "steps": 800,
+      "model_kind": "full",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a50_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a50_pulse_local_port17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "port",
+      "traces": true
+    },
+    {
+      "params": {
+        "name": "r1000_a50_pulse",
+        "radius_m": 0.001,
+        "amplitude_Pa": 50.0,
+        "signal": "pulse",
+        "T_s": 0.02
+      },
+      "name": "r1000_a50_pulse_local_dc17",
+      "n": 80,
+      "steps": 400,
+      "model_kind": "dc_slow",
+      "traces": true
+    }
+  ],
+  "source_hashes": {
+    "thin_film/scripts/nonlinear_edge/stress.py": "4e23f62db919bee4ddc848f134c157a8e6aac7fb096f6e656a4f678fc0291d0a",
+    "thin_film/scripts/nonlinear_edge/edge.py": "c051d2a48b7f3e59e6cf814704047be67a50babcb50a0b2e3eb7c3d9bf087e07",
+    "thin_film/scripts/nonlinear_edge/run.py": "e552fca395b594976966def6750c8729c43628cf5d18991a59776dd2a3bb2138"
+  },
+  "reason": "Probe stronger nonlinear mobility response at one fixed50Pa amplitude after the original8-input matrix. This is an explicit new challenge, not an optimized parameter or replacement for failed chirps.",
+  "gates": "unchanged from original protocol",
+  "per_case_budget_s": 300,
+  "whole_budget_s": 3300
+}
