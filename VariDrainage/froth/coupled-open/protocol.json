@@ -1,0 +1,35 @@
+{
+  "git_base": "c64365ae8f95537d0002afdfa6ec0c1155064dfc",
+  "source_sha256": {
+    "foam/scripts/run_coupled_open.py": "ea9b8829f83493cef7c5f82469c2e5b0e21b81305a5bb549a856b920adc2dc72",
+    "foam/scripts/coupled_open_section.py": "59d93b1152193eaa2360f90ddd170e6e7b363ce390b2ecbb758ea34b7f9e2a09",
+    "foam/scripts/finite_open_films.py": "9e135854fc1d610212c243f681b342cbecf6383b7b927102abf27b3b541563d1",
+    "foam/scripts/open_section_transport.py": "278d654ac2b509458871dd6d8d201e8c13b3f60687ef282743c79a9ca2c5ea3b",
+    "foam/scripts/open_section_stokes.py": "8b122f1df4f8c764e1be7027b6a6f3dc9da2a7e54401ccbc4b219b01ecf7f5d7",
+    "foam/scripts/border_section_transport.py": "1f1cda9c337999d8244c09eaf61e3d1830773dacb85c5e005e402c307ad6eef4",
+    "foam/scripts/section_advection.py": "dd5de46e64b336362683b75067b880e774380ed6e71a8144aea962c34bef128f",
+    "foam/docs/coupled_open_protocol.md": "5d051726f67bda8d358fd5adcf622879eb17a54e429eff002da47c45ae60594a"
+  },
+  "versions": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit_fem": "12.0.2"
+  },
+  "inputs": {
+    "r_m": 0.0004,
+    "h0_m": 8e-07,
+    "eta_m": 1e-05,
+    "D_m2_s": 5e-10,
+    "mu_Pa_s": 0.001,
+    "RT_J_mol": 2500.0,
+    "cstar_mol_m3": 0.002,
+    "q0_m2_s": 8e-13,
+    "film_lengths_main_m": [
+      0.01,
+      0.01,
+      0.01
+    ]
+  },
+  "scope": "fixed-contact, externally held film projected areas and cap throughflow; no free shape, spatial film drainage, gas, rupture or experimental claim"
+}

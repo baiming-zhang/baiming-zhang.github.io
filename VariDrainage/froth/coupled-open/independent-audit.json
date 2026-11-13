@@ -1,0 +1,149 @@
+{
+  "cases": [
+    {
+      "name": "fixed-feedback",
+      "mole_ledger_error": 2.2448815387609106e-15,
+      "finite_film_transfer_error": 0.0,
+      "film_volume_law_error": 0.0,
+      "film_BE_reconstruction_error": 0.0,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 1.1910242553231186e-15,
+      "final_entropy_reconstruction_error": 6.617444900424222e-24
+    },
+    {
+      "name": "fixed-off",
+      "mole_ledger_error": 2.2611723429368084e-15,
+      "finite_film_transfer_error": 0.0,
+      "film_volume_law_error": 0.0,
+      "film_BE_reconstruction_error": 0.0,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 3.573072765969356e-16,
+      "final_entropy_reconstruction_error": 2.6469779601696886e-23
+    },
+    {
+      "name": "finite-dt20",
+      "mole_ledger_error": 2.1489714991042519e-16,
+      "finite_film_transfer_error": 5.5278278888060615e-16,
+      "film_volume_law_error": 6.203854594147708e-16,
+      "film_BE_reconstruction_error": 8.077935669463161e-28,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 0.0,
+      "final_entropy_reconstruction_error": 0.0
+    },
+    {
+      "name": "finite-main",
+      "mole_ledger_error": 2.1489714991042519e-16,
+      "finite_film_transfer_error": 4.921819143618071e-16,
+      "film_volume_law_error": 6.203854594147708e-16,
+      "film_BE_reconstruction_error": 2.0194839173657902e-28,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 0.0,
+      "final_entropy_reconstruction_error": 0.0
+    },
+    {
+      "name": "finite-dt5",
+      "mole_ledger_error": 8.595885996417007e-16,
+      "finite_film_transfer_error": 1.798701471517059e-15,
+      "film_volume_law_error": 6.203854594147708e-16,
+      "film_BE_reconstruction_error": 5.048709793414476e-29,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 2.1489714991042519e-16,
+      "final_entropy_reconstruction_error": 0.0
+    },
+    {
+      "name": "finite-fine",
+      "mole_ledger_error": 4.2979644600167857e-16,
+      "finite_film_transfer_error": 6.313655840137378e-16,
+      "film_volume_law_error": 6.203854594147708e-16,
+      "film_BE_reconstruction_error": 3.0292258760486853e-28,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 0.0,
+      "final_entropy_reconstruction_error": 0.0
+    },
+    {
+      "name": "finite-small",
+      "mole_ledger_error": 8.909731534208196e-16,
+      "finite_film_transfer_error": 1.1076669037444648e-15,
+      "film_volume_law_error": 1.1632227364026952e-15,
+      "film_BE_reconstruction_error": 1.6155871338926322e-27,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 1.7819463068416392e-16,
+      "final_entropy_reconstruction_error": 3.3881317890172014e-21
+    },
+    {
+      "name": "finite-off",
+      "mole_ledger_error": 2.1489714991042519e-16,
+      "finite_film_transfer_error": 3.9998471605135283e-16,
+      "film_volume_law_error": 6.203854594147708e-16,
+      "film_BE_reconstruction_error": 2.0194839173657902e-28,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 0.0,
+      "final_entropy_reconstruction_error": 0.0
+    },
+    {
+      "name": "no-flow",
+      "mole_ledger_error": 0.0,
+      "finite_film_transfer_error": 0.0,
+      "film_volume_law_error": 0.0,
+      "film_BE_reconstruction_error": 0.0,
+      "energy_identity_reconstruction_error": 0.0,
+      "mechanical_identity_reconstruction_error": 0.0,
+      "final_inventory_reconstruction_error": 0.0,
+      "final_entropy_reconstruction_error": 0.0
+    }
+  ],
+  "native_work": [
+    {
+      "name": "fixed-feedback",
+      "integrated_Marangoni_work_relative_error": 2.8082597177074785e-14,
+      "velocity_form_viscous_SIP_relative_error": 2.062967611348503e-13,
+      "SIP_fraction": 0.25925246957802606,
+      "native_cap_flux_error_over_q0": 4.417621069237666e-16
+    },
+    {
+      "name": "fixed-off",
+      "integrated_Marangoni_work_relative_error": 6.746208335459051e-15,
+      "velocity_form_viscous_SIP_relative_error": 2.4468468278413556e-10,
+      "SIP_fraction": 0.00833050125885137,
+      "native_cap_flux_error_over_q0": 3.7865323450608567e-16
+    },
+    {
+      "name": "finite-main",
+      "integrated_Marangoni_work_relative_error": 4.072016606223543e-14,
+      "velocity_form_viscous_SIP_relative_error": 1.4025367846330154e-12,
+      "SIP_fraction": 0.25925215635795973,
+      "native_cap_flux_error_over_q0": 5.048709793414476e-16
+    },
+    {
+      "name": "finite-fine",
+      "integrated_Marangoni_work_relative_error": 6.38928896230851e-14,
+      "velocity_form_viscous_SIP_relative_error": 5.584757732362696e-13,
+      "SIP_fraction": 0.21007210074388658,
+      "native_cap_flux_error_over_q0": 5.048709793414476e-16
+    },
+    {
+      "name": "finite-small",
+      "integrated_Marangoni_work_relative_error": 7.493683855135629e-14,
+      "velocity_form_viscous_SIP_relative_error": 2.7702677993914495e-14,
+      "SIP_fraction": 0.25924933817913626,
+      "native_cap_flux_error_over_q0": 4.417621069237666e-16
+    }
+  ],
+  "common_interior_P1_field_change": 0.09680797171348084,
+  "common_points": 3491,
+  "checks": {
+    "mole_and_film_ledgers": true,
+    "energy_reconstruction": true,
+    "native_stress_adjoint": true,
+    "native_cap_flux": true
+  },
+  "limits": "Externally held areas/throughflow and frozen contact geometry; not autonomous film drainage or free-shape foam."
+}
