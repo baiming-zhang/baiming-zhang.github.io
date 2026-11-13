@@ -1,0 +1,257 @@
+{
+  "source_commit": "7acb6f2ece9986c50db0f18fb574745a53dd7c93",
+  "source_hashes": {
+    "thin_film/scripts/edge_preparation/run.py": "d1ee8e2e62d8a61cd5f26ce0dbf1576f321f6dc5eb07df5e992202572bd50abc",
+    "thin_film/scripts/edge_preparation/README.md": "a5c1dd7799c4f8f3cd1b9fdf4e3f48f19b7ff23c15ce86bf02e1d4c255bf0059",
+    "thin_film/bench/tf_curved_edge_bench.cpp": "05f35820ef8ec05aec3520f6ddb10f003e667f4ec876d4eaf9be5fcfe865d569",
+    "thin_film/include/vf/thinfilm/CurvedEdge.h": "4219f7f3167aa5575d8e4be4e4417559ceefd6e86e6663f7d657fee363de5ef9",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "8f3f95ffee2ff34d42a7d37d01209219173de0a10d8ea4825dd1410d37eb147b",
+    "thin_film/include/vf/thinfilm/Solution.h": "1688ff48927574c1ca03ab1f524d9f0e42e1bade69904798d40316f7bf34e9a0",
+    "thin_film/include/vf/thinfilm/Units.h": "00c7b29cfcbe5742288a240790a1699216c38d2674e615d6fb919e3a036a8e85"
+  },
+  "binary_sha256": "967ec89b9be594bdda9f3338d2afd2ee5da0ec6e62d0f4165615451af4c98660",
+  "cases": [
+    {
+      "name": "default_control",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.25,
+      "T_us": 20,
+      "c_bulk_mM": 19.4,
+      "preparation": "projected",
+      "amplitude": 0.005,
+      "radius_um": 500
+    },
+    {
+      "name": "original_failure_local",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 19.4,
+      "preparation": "projected",
+      "amplitude": 0.005,
+      "radius_um": 500
+    },
+    {
+      "name": "original_failure_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 19.4,
+      "preparation": "projected",
+      "amplitude": 0.005,
+      "radius_um": 500
+    },
+    {
+      "name": "c1.94_projected_local",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 1.94,
+      "preparation": "projected",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c1.94_projected_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 1.94,
+      "preparation": "projected",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c1.94_balanced_local",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 1.94,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c1.94_balanced_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 1.94,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c6_projected_local",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 6,
+      "preparation": "projected",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c6_projected_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 6,
+      "preparation": "projected",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c6_balanced_local",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c6_balanced_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c19.4_projected_local",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 19.4,
+      "preparation": "projected",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c19.4_projected_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 19.4,
+      "preparation": "projected",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c19.4_balanced_local",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 19.4,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c19.4_balanced_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 19.4,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    }
+  ],
+  "conditional_refinement": [
+    {
+      "name": "guard10",
+      "mode": "uniform",
+      "dx_um": 10,
+      "dt_us": 0.03125,
+      "T_us": 0.03125,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "local20_T5",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.03125,
+      "T_us": 5,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "uniform20_T5",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.03125,
+      "T_us": 5,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "local10_T5",
+      "mode": "local",
+      "dx_um": 10,
+      "dt_us": 0.03125,
+      "T_us": 5,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "uniform10_T5",
+      "mode": "uniform",
+      "dx_um": 10,
+      "dt_us": 0.03125,
+      "T_us": 5,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "uniform20_time",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.0625,
+      "T_us": 20,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    }
+  ],
+  "condition": "both c6 balanced local20/uniform20 complete and independent gates pass; then guard10 must pass",
+  "raw_directory": "results/local-runs/edge_preparation_20261113",
+  "whole_budget_s": 3300,
+  "per_case_timeout_s": 180,
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  },
+  "started_utc": "2026-11-13T10:01:54.566553+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "source_commit": "7f35a51bc0aef2a2f3ab63b8b0d377b8d2b3fb33",
+  "source_hashes": {
+    "thin_film/bench/tf_bench.cpp": "607b23703fe4fa39907d049cf6388d3a6585702b655fe7fa47e15dd85d7bcd90",
+    "thin_film/include/vf/thinfilm/Meniscus.h": "88f15c7ebd6553c108c50a48ea54277738e77bb475637ef077ca5bfa7173d226",
+    "thin_film/include/vf/thinfilm/ThinFilmMechanics.h": "47ceaf46675de2f2bcf9dfb81376bb688b5fae2e1ca6cd591345af3027237f1f",
+    "thin_film/include/vf/thinfilm/Units.h": "00c7b29cfcbe5742288a240790a1699216c38d2674e615d6fb919e3a036a8e85"
+  },
+  "binary_sha256": "15e26ec0ad5aee5e5f2a772c318faf1ba62ac7a72c218be583e7a19c18115d92",
+  "environment": {
+    "VF_SDS": "1",
+    "VF_W_M": ".016",
+    "VF_H_M": ".005",
+    "VF_FIBRE_M": ".000125",
+    "VF_DX_M": ".0001",
+    "VF_H0_M": ".000002",
+    "VF_DT_S": ".005",
+    "VF_TMAX_S": ".01",
+    "VF_REPORT_S": ".005",
+    "VF_EVERY_S": ".005",
+    "VF_MU_PA": ".0015",
+    "VF_RHO": "1045",
+    "VF_RREF_M": ".0005",
+    "VF_FRAMES": "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\monier_geometry_startup_20261113\\frames.txt"
+  },
+  "caller_VF": "excluded",
+  "command": [
+    "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_bench.exe",
+    "framed"
+  ],
+  "timeout_s": 180,
+  "target": "Monier2024 Table I W16mm/H5mm/D250um/mu1.5mPa.s",
+  "limitations": [
+    "10ms startup only",
+    "uniform2um initial state unlike withdrawn experimental profile",
+    "model tension38.6 vs experimental approx35mN/m",
+    "dx100um cannot resolve a narrow pinching layer",
+    "inherited soluble/kernel baseline, not new curved-edge prototype"
+  ]
+}

@@ -1,0 +1,484 @@
+{
+  "state": "completed",
+  "tests": [
+    {
+      "name": "test_curved_edge",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_curved_edge.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.06300000008195639,
+      "log": "results\\logs\\edge_preparation_20261113\\counter\\test_curved_edge.log",
+      "log_sha256": "adc2345db8802c2b8587c21657e7f17b3280740ddc1133f41a17a3c40f1a8a04"
+    }
+  ],
+  "cases": [
+    {
+      "name": "default_control",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "40",
+        "0.25",
+        "20",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\edge_counter_20261113\\default_control",
+        "19.4",
+        "projected"
+      ],
+      "returncode": 0,
+      "wall_s": 0.8119999999180436,
+      "log": "results\\logs\\edge_preparation_20261113\\counter\\default_control.log",
+      "log_sha256": "4a2420d46d3e8f29c7293411ad0c4b886412498b92bdbd5e5ad714be1428ff16",
+      "parameters": {
+        "name": "default_control",
+        "mode": "local",
+        "dx_um": 40,
+        "dt_us": 0.25,
+        "T_us": 20,
+        "c_bulk_mM": 19.4,
+        "preparation": "projected",
+        "amplitude": 0.005,
+        "radius_um": 500
+      },
+      "summary": {
+        "signed_bath_counter": true,
+        "c_bulk_mM": 19.4,
+        "preparation": "projected",
+        "N": 18,
+        "interior": 14,
+        "steps": 80,
+        "requested_steps": 80,
+        "failures": 0,
+        "local": true,
+        "dx_m": 3.9999999999999996e-05,
+        "dt_s": 2.5e-07,
+        "T_s": 1.9999999999999998e-05,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 1.3143211603600837e-11,
+        "V0_m3": 3.0720000000000004e-13,
+        "S0_mol": 1.8445030806184438e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 5.684341886080803e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.3378765687891798e-16,
+        "max_regionS_res": 6.775840211538746e-17,
+        "max_displacement_m": 1.6521278540787828e-06,
+        "wall_s": 0.7934972
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/edge_counter_20261113/default_control/faces.csv",
+          "bytes": 348331,
+          "sha256": "bf56c7dd87da8ec2d652d27d8c58b4ca508117893321bca4ba3ab4a1e197b45f"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/default_control/history.csv",
+          "bytes": 27429,
+          "sha256": "ccab45baef67d71b9f1dd26cfa73b5eed5fc9ae69545387a586089f2291dd0c7"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/default_control/states.csv",
+          "bytes": 1270948,
+          "sha256": "dd31fc347e837dccc0ecc5c45c7ecf97db441c05b8225c6fbf4664311655b1e1"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/default_control/summary.json",
+          "bytes": 912,
+          "sha256": "12c5e54b8180325fdfc84c2501b8089d154dfba5225bd8ec0da9e8f7ef8b8d5d"
+        }
+      ],
+      "control_difference": {
+        "h": 0.0,
+        "dh": 0.0,
+        "displacement": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "name": "c6_balanced_local",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.125",
+        "20",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\edge_counter_20261113\\c6_balanced_local",
+        "6",
+        "balanced"
+      ],
+      "returncode": 0,
+      "wall_s": 11.813000000081956,
+      "log": "results\\logs\\edge_preparation_20261113\\counter\\c6_balanced_local.log",
+      "log_sha256": "dba363e43183248c81f287b961fcf387ec4e76f393842caf328d94b5d1d81174",
+      "parameters": {
+        "name": "c6_balanced_local",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.125,
+        "T_us": 20,
+        "c_bulk_mM": 6,
+        "preparation": "balanced",
+        "amplitude": 0,
+        "radius_um": 500
+      },
+      "summary": {
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "balanced",
+        "N": 64,
+        "interior": 56,
+        "steps": 160,
+        "requested_steps": 160,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 1.9999999999999998e-05,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.7489158831130838e-11,
+        "V0_m3": 3.072000000000001e-13,
+        "S0_mol": 1.7871698113207546e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 9.473903143468002e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 2.1789843511708467e-16,
+        "max_regionS_res": 7.785412278646073e-17,
+        "max_displacement_m": 2.248651614450458e-06,
+        "wall_s": 11.801377
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/edge_counter_20261113/c6_balanced_local/faces.csv",
+          "bytes": 3120829,
+          "sha256": "9db61e81d8416d7f79fe9e5136b79d29e4753e3595771f1eaeaf2fefbf80c080"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/c6_balanced_local/history.csv",
+          "bytes": 55432,
+          "sha256": "0fa5c0deb266319c949eb6f05d823af00fc43b32bce2fb8704bb41f3faf2c251"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/c6_balanced_local/states.csv",
+          "bytes": 9190134,
+          "sha256": "cd76f7f65e548cd2fabb7c578daa108aecfa5aa74ea77e4ddef57837b3dbcf63"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/c6_balanced_local/summary.json",
+          "bytes": 867,
+          "sha256": "45c92e84d878690eb65502b8d5f6a7059770db58e68e199ded19b8a6e9c6b2da"
+        }
+      ]
+    },
+    {
+      "name": "c6_balanced_uniform",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "0.125",
+        "20",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\edge_counter_20261113\\c6_balanced_uniform",
+        "6",
+        "balanced"
+      ],
+      "returncode": 0,
+      "wall_s": 28.890999999828637,
+      "log": "results\\logs\\edge_preparation_20261113\\counter\\c6_balanced_uniform.log",
+      "log_sha256": "260a88dc70824d7cbc5219eb9b1d8b69ff29c251d5161d05912ff5d501ff35fd",
+      "parameters": {
+        "name": "c6_balanced_uniform",
+        "mode": "uniform",
+        "dx_um": 20,
+        "dt_us": 0.125,
+        "T_us": 20,
+        "c_bulk_mM": 6,
+        "preparation": "balanced",
+        "amplitude": 0,
+        "radius_um": 500
+      },
+      "summary": {
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "balanced",
+        "N": 136,
+        "interior": 128,
+        "steps": 160,
+        "requested_steps": 160,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 1.9999999999999998e-05,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.7466528671120504e-11,
+        "V0_m3": 3.0719999999999994e-13,
+        "S0_mol": 1.7871698113207556e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.1368683772161607e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 2.100816988541884e-16,
+        "max_regionS_res": 1.108177440057537e-16,
+        "max_displacement_m": 2.241734172762705e-06,
+        "wall_s": 28.8713766
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/edge_counter_20261113/c6_balanced_uniform/faces.csv",
+          "bytes": 7210248,
+          "sha256": "cf8c5c41f94fe2797b213cd0c25c2f0b17b9e1280fa62295f03bd1ef2a86dbec"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/c6_balanced_uniform/history.csv",
+          "bytes": 55349,
+          "sha256": "0241fa0cc57202eec0641d564e69b1ff16b685b9f3ba8c36945fb3c543acb7c4"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/c6_balanced_uniform/states.csv",
+          "bytes": 19745092,
+          "sha256": "356b1201be1b1de4046e3112b6e1d3f04edec84fb301e8f8d65f6eb3bb832b59"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/c6_balanced_uniform/summary.json",
+          "bytes": 877,
+          "sha256": "869b050a87c87b38ee10c974f5f8a9150c73559bf3bf0dbaced509b66dcf6a11"
+        }
+      ]
+    },
+    {
+      "name": "original_failure_local",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.125",
+        "20",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\edge_counter_20261113\\original_failure_local",
+        "19.4",
+        "projected"
+      ],
+      "returncode": 1,
+      "wall_s": 3.094000000040978,
+      "log": "results\\logs\\edge_preparation_20261113\\counter\\original_failure_local.log",
+      "log_sha256": "2f7c029812b783d906ba97de9b7a268c5556c37b68b2f7ba14be3bd608ffbab6",
+      "parameters": {
+        "name": "original_failure_local",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.125,
+        "T_us": 20,
+        "c_bulk_mM": 19.4,
+        "preparation": "projected",
+        "amplitude": 0.005,
+        "radius_um": 500
+      },
+      "summary": {
+        "signed_bath_counter": true,
+        "c_bulk_mM": 19.4,
+        "preparation": "projected",
+        "N": 64,
+        "interior": 56,
+        "steps": 58,
+        "requested_steps": 160,
+        "failures": 1,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 7.25e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.8717757481581163e-11,
+        "V0_m3": 3.072000000000001e-13,
+        "S0_mol": 1.8445188326972445e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 7.579122514774402e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 2.3517519673564115e-16,
+        "max_regionS_res": 7.126541826813354e-17,
+        "max_displacement_m": 2.1534387404688572e-06,
+        "wall_s": 3.0843339
+      },
+      "failure": {
+        "step": 59,
+        "last_accepted_step": 58,
+        "message": "motion Hessian plus: curved differentiated monolayer/tension domain node=27 theta=0.99961093478022844 projected_theta=1.0473388673170638 surface_area=2.840046337987896"
+      },
+      "completed": false,
+      "native_gate": false,
+      "files": [
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_local/faces.csv",
+          "bytes": 1119479,
+          "sha256": "7c24cf491e38da7218da653e7c800b6cd1338534a6b0a6b9a27bde8f9af67c2b"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_local/failure.json",
+          "bytes": 217,
+          "sha256": "75563cb99acda546378252cb6c044373f7adb383b3e8414fa40eecea7e12e6ce"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_local/history.csv",
+          "bytes": 20042,
+          "sha256": "d88e5343eec5d774e8841738f76a182819c814fe5fc3c67b1228d8d7ee12695d"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_local/states.csv",
+          "bytes": 3305462,
+          "sha256": "dd62012cc9c9a2aa67e8106f1b69da711f312c39a6a2b62ecaf0afb87de288be"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_local/summary.json",
+          "bytes": 898,
+          "sha256": "d045cb05f507ac20f8b1971bfbc645a81f7374fa7589bb89b5750d49be468941"
+        }
+      ]
+    },
+    {
+      "name": "original_failure_uniform",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "0.125",
+        "20",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\edge_counter_20261113\\original_failure_uniform",
+        "19.4",
+        "projected"
+      ],
+      "returncode": 1,
+      "wall_s": 10.733999999938533,
+      "log": "results\\logs\\edge_preparation_20261113\\counter\\original_failure_uniform.log",
+      "log_sha256": "fcf0ec4b53a93c515a1214a024c89c0499dd61dfeeede7dec3b9a2324efce094",
+      "parameters": {
+        "name": "original_failure_uniform",
+        "mode": "uniform",
+        "dx_um": 20,
+        "dt_us": 0.125,
+        "T_us": 20,
+        "c_bulk_mM": 19.4,
+        "preparation": "projected",
+        "amplitude": 0.005,
+        "radius_um": 500
+      },
+      "summary": {
+        "signed_bath_counter": true,
+        "c_bulk_mM": 19.4,
+        "preparation": "projected",
+        "N": 136,
+        "interior": 128,
+        "steps": 58,
+        "requested_steps": 160,
+        "failures": 1,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 7.25e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.8686742473010803e-11,
+        "V0_m3": 3.0719999999999994e-13,
+        "S0_mol": 1.8445241824057553e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 9.473903143468006e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 2.3331831981489775e-16,
+        "max_regionS_res": 8.404632105408132e-17,
+        "max_displacement_m": 2.1503341131084905e-06,
+        "wall_s": 10.7101902
+      },
+      "failure": {
+        "step": 59,
+        "last_accepted_step": 58,
+        "message": "motion Hessian plus: curved differentiated monolayer/tension domain node=127 theta=0.99961049642873057 projected_theta=1.0472082348545335 surface_area=2.9381105193072536"
+      },
+      "completed": false,
+      "native_gate": false,
+      "files": [
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_uniform/faces.csv",
+          "bytes": 2583910,
+          "sha256": "4443f14651c970f571e1cfdc3811530291c8f8717ebf3c802d9c4579d9b0be6f"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_uniform/failure.json",
+          "bytes": 219,
+          "sha256": "fffb9510edd27685e4efa2982e3d9f8714e5bf350a691e073a98f121eb5e9c4c"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_uniform/history.csv",
+          "bytes": 20130,
+          "sha256": "d448135159962c901a3648a126a4799af81092da18fb6848b0ac0ec1dfeb4960"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_uniform/states.csv",
+          "bytes": 7098585,
+          "sha256": "c70abf1d16c803dcf5ffba8c988115ae670cfd8fa973425f5d2d9addbc55b924"
+        },
+        {
+          "path": "results/local-runs/edge_counter_20261113/original_failure_uniform/summary.json",
+          "bytes": 893,
+          "sha256": "1b18552fa8747554b21407be65e60278086f78cea6981129dae506cddbdc91b1"
+        }
+      ]
+    }
+  ],
+  "wall_s": 55.54700000002049
+}

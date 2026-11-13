@@ -1,0 +1,123 @@
+{
+  "source_hashes": {
+    "framed_fringes.csv": "d5174613b9652728d0a33b68d2a6f8ae8e30afb91382c0bb21605dac5d74d464",
+    "framed_crossings.csv": "32fe686f41a97a2b2d21baf329d58b887815266a8bd2ac22dc445bb13f36891b",
+    "power_law_fits.txt": "5920c31cc36589bae3940228c8a500b8fc2cd0c5ed0e1ccc3b0c7cea55fe545d"
+  },
+  "source_kind": "inherited numerical CSV; NOT new simulation or experimental trajectories",
+  "frames": 60,
+  "time_range_s": [
+    0.1,
+    6.0
+  ],
+  "z_output_precision_H": 0.001,
+  "fixed_height_proxies": [
+    {
+      "reference_z_over_H": 0.4,
+      "fixed_height_speed_exponent": 2.633192311782025,
+      "fringes": 9
+    },
+    {
+      "reference_z_over_H": 0.5,
+      "fixed_height_speed_exponent": 2.2728337233434583,
+      "fringes": 10
+    },
+    {
+      "reference_z_over_H": 0.6,
+      "fixed_height_speed_exponent": 2.8732591448925655,
+      "fringes": 11
+    },
+    {
+      "reference_z_over_H": 0.7,
+      "fixed_height_speed_exponent": 3.031774503006273,
+      "fringes": 12
+    },
+    {
+      "reference_z_over_H": 0.8,
+      "fixed_height_speed_exponent": 3.083016191526922,
+      "fringes": 12
+    }
+  ],
+  "paper_operator_sensitivity": [
+    {
+      "derivative_window": 5,
+      "peaks": [
+        {
+          "h_um": 19.0,
+          "tmax_s": 0.6,
+          "Vmax_H_s": 0.4009999999999997
+        },
+        {
+          "h_um": 18.0,
+          "tmax_s": 0.4,
+          "Vmax_H_s": 0.46799999999999964
+        },
+        {
+          "h_um": 6.0,
+          "tmax_s": 3.5,
+          "Vmax_H_s": 0.07000000000000028
+        }
+      ],
+      "qualified_for_paper_operator": false
+    },
+    {
+      "derivative_window": 7,
+      "peaks": [
+        {
+          "h_um": 19.0,
+          "tmax_s": 0.7,
+          "Vmax_H_s": 0.37392857142857083
+        },
+        {
+          "h_um": 18.0,
+          "tmax_s": 0.5,
+          "Vmax_H_s": 0.42392857142857165
+        },
+        {
+          "h_um": 6.0,
+          "tmax_s": 3.6,
+          "Vmax_H_s": 0.06178571428571302
+        }
+      ],
+      "qualified_for_paper_operator": false
+    },
+    {
+      "derivative_window": 9,
+      "peaks": [
+        {
+          "h_um": 19.0,
+          "tmax_s": 0.7,
+          "Vmax_H_s": 0.32383333333333303
+        },
+        {
+          "h_um": 18.0,
+          "tmax_s": 0.6,
+          "Vmax_H_s": 0.38533333333333275
+        },
+        {
+          "h_um": 10.0,
+          "tmax_s": 1.2,
+          "Vmax_H_s": 0.10716666666666719
+        }
+      ],
+      "qualified_for_paper_operator": false
+    }
+  ],
+  "exact_table_I_geometry_matches": 0,
+  "legacy_setup": {
+    "W_mm": 4,
+    "H_mm": 5,
+    "fibre_D_um": 250,
+    "viscosity_mPa_s": 1.5,
+    "model_tension_mN_m": 38.639792559355,
+    "experimental_approx_tension_mN_m": 35
+  },
+  "limitations": [
+    "raw13.6MB particle series not carried",
+    "legacy6s stdout named by RESULTS is absent in current Git tree",
+    "rounded height CSV limits derivatives",
+    "fixed-height speed exponent is only equivalent to paper T(h) exponent after self-similarity validation",
+    "no exact experimental parameter tuple in Table I",
+    "no experimental raw trajectories loaded"
+  ]
+}

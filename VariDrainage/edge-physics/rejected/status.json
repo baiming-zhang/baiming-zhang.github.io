@@ -1,0 +1,238 @@
+{
+  "state": "completed",
+  "cases": [
+    {
+      "name": "c6_balanced_local",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.125",
+        "20",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\edge_rejected_20261113\\c6_balanced_local",
+        "6",
+        "balanced"
+      ],
+      "returncode": 1,
+      "wall_s": 8.655999999959022,
+      "log": "results\\logs\\edge_preparation_20261113\\rejected\\c6_balanced_local.log",
+      "log_sha256": "f96ac4501fb4763e586a4f52a0d6bf99c3705459ad0c79ed0255fe35826df4e9",
+      "parameters": {
+        "name": "c6_balanced_local",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.125,
+        "T_us": 20,
+        "c_bulk_mM": 6,
+        "preparation": "balanced",
+        "amplitude": 0,
+        "radius_um": 500
+      },
+      "summary": {
+        "c_bulk_mM": 6,
+        "preparation": "balanced",
+        "N": 64,
+        "interior": 56,
+        "steps": 96,
+        "requested_steps": 160,
+        "failures": 1,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 1.2e-05,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.7489158831130838e-11,
+        "V0_m3": 3.072000000000001e-13,
+        "S0_mol": 1.7871698113207546e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 9.473903143468002e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 2.025773285781373e-16,
+        "max_regionS_res": 7.785412278646073e-17,
+        "max_displacement_m": 2.248651614450458e-06,
+        "wall_s": 8.6303759
+      },
+      "failure": {
+        "step": 97,
+        "last_accepted_step": 96,
+        "kind": "nonconverged",
+        "mechanics_ok": true,
+        "drainage_iterations": 1,
+        "gradient_start": 74335.71305024078,
+        "gradient_last": 74335.71305024078
+      },
+      "completed": false,
+      "native_gate": false,
+      "files": [
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_local/faces.csv",
+          "bytes": 1864598,
+          "sha256": "7d8876275083af7ddc981af6f2b967eb7758063a8e690a9faf5933e89ca7db44"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_local/failed_faces.csv",
+          "bytes": 16032,
+          "sha256": "8be10ffb075df394ca31cf751c3edc7340bc51508c374b36dbf3599e898c2670"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_local/failed_states.csv",
+          "bytes": 57435,
+          "sha256": "869cf7383e5b7c90b237931583d9a91a4b01e5bd2176c97e53770f29312aacdb"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_local/failure.json",
+          "bytes": 174,
+          "sha256": "c1f5e160931d1bbd4131a444b412909ab8167dbb2d7d0763ca502265a946ae77"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_local/history.csv",
+          "bytes": 33368,
+          "sha256": "5abbc61b2b23cf6d621f19cd87b2e0aa5fa8324b82d6b96710339e1a3692951d"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_local/states.csv",
+          "bytes": 5514233,
+          "sha256": "19a91f12ed92b866157e8bb9ee02c861dc7ceead7f5fb5a7d7414d70899ba18f"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_local/summary.json",
+          "bytes": 832,
+          "sha256": "42d98613abf36ced4dae7d700640bd1863b781130dc654357ef747602eb27677"
+        }
+      ],
+      "accepted_prefix_exact": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true
+      }
+    },
+    {
+      "name": "c6_balanced_uniform",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "0.125",
+        "20",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\edge_rejected_20261113\\c6_balanced_uniform",
+        "6",
+        "balanced"
+      ],
+      "returncode": 1,
+      "wall_s": 18.07799999997951,
+      "log": "results\\logs\\edge_preparation_20261113\\rejected\\c6_balanced_uniform.log",
+      "log_sha256": "195a2e292e3a64e30c9680b93e663ef48dd13916f39a30b7fc6c611174cb66d6",
+      "parameters": {
+        "name": "c6_balanced_uniform",
+        "mode": "uniform",
+        "dx_um": 20,
+        "dt_us": 0.125,
+        "T_us": 20,
+        "c_bulk_mM": 6,
+        "preparation": "balanced",
+        "amplitude": 0,
+        "radius_um": 500
+      },
+      "summary": {
+        "c_bulk_mM": 6,
+        "preparation": "balanced",
+        "N": 136,
+        "interior": 128,
+        "steps": 99,
+        "requested_steps": 160,
+        "failures": 1,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 1.2375e-05,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 2.7466528671120504e-11,
+        "V0_m3": 3.0719999999999994e-13,
+        "S0_mol": 1.7871698113207556e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 9.473903143468006e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.5208808604866292e-16,
+        "max_regionS_res": 1.108177440057537e-16,
+        "max_displacement_m": 2.241734172762705e-06,
+        "wall_s": 18.0585502
+      },
+      "failure": {
+        "step": 100,
+        "last_accepted_step": 99,
+        "kind": "nonconverged",
+        "mechanics_ok": true,
+        "drainage_iterations": 1,
+        "gradient_start": 74468.57291303715,
+        "gradient_last": 74468.57291303715
+      },
+      "completed": false,
+      "native_gate": false,
+      "files": [
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_uniform/faces.csv",
+          "bytes": 4431080,
+          "sha256": "4015ada37cbd76dd722b72e5d527deb7f85e6942dfae032665316c0ddf558c5d"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_uniform/failed_faces.csv",
+          "bytes": 38285,
+          "sha256": "e57e866122f5e8e4fe66ea0fddbe5029eb9b550d63b9d8028338bb5e6caf540b"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_uniform/failed_states.csv",
+          "bytes": 123769,
+          "sha256": "60e14ea1a0d802a92b2fad247ec880ffbceacbfe5b885eda1cbf2e6ab7545cf1"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_uniform/failure.json",
+          "bytes": 175,
+          "sha256": "316788d0b91d8c47b778f81985a89526ed6ef3ce77b142bebb92b01a40f8a1b3"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_uniform/history.csv",
+          "bytes": 34281,
+          "sha256": "06890e1f8c352742e7c4582edbe1cba86ac7bef1c831087b4041a3ab5c39e14d"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_uniform/states.csv",
+          "bytes": 12220095,
+          "sha256": "a0a4eacade2f71e2ccda74c224369e1bbe5f3fe5c251059abe26bd739144e5e6"
+        },
+        {
+          "path": "results/local-runs/edge_rejected_20261113/c6_balanced_uniform/summary.json",
+          "bytes": 850,
+          "sha256": "b39ed8a014f046900f20a31a9ecda7faea141f50d9d1f6da48933e902b925886"
+        }
+      ],
+      "accepted_prefix_exact": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true
+      }
+    }
+  ],
+  "wall_s": 26.79700000002049
+}

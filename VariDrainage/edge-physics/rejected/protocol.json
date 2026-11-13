@@ -1,0 +1,42 @@
+{
+  "source_commit": "a301d08fa36749b12d1de634fc66a7e02ec42d74",
+  "source_sha256": "6de254b04520f7abb4d096d221f0464114f659efedf119cbdf351f9deffb6222",
+  "binary_sha256": "2b08d60fc36a969ce9520e0dfcb3a5fe4fe0a4bc3f751d317f139472352f9362",
+  "cases": [
+    {
+      "name": "c6_balanced_local",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "c6_balanced_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 20,
+      "c_bulk_mM": 6,
+      "preparation": "balanced",
+      "amplitude": 0,
+      "radius_um": 500
+    }
+  ],
+  "raw_directory": "results/local-runs/edge_rejected_20261113",
+  "per_case_timeout_s": 180,
+  "scope": "OBSERVATION ONLY; same equations/tolerances; candidates not accepted",
+  "gates": {
+    "exact_accepted_prefix": true,
+    "candidate_per_node_continuity": 1e-10,
+    "candidate_face_constitutive": 1e-07,
+    "candidate_energy": 1e-07
+  },
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  }
+}
