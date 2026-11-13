@@ -1,0 +1,211 @@
+{
+  "scope": "Frozen-state native component timings, not a solver optimization or physical validation",
+  "passed_cases": 4,
+  "compute_wall_s": 15.360000000102445,
+  "rows": [
+    {
+      "case": "u20_initial",
+      "N": 144,
+      "phase": "initial",
+      "timings": {
+        "geometry": {
+          "wall_median_ms": 4.5964,
+          "cpu_sum_s": 0.015625,
+          "samples": 3
+        },
+        "energy_gradient": {
+          "wall_median_ms": 7.4474,
+          "cpu_sum_s": 0,
+          "samples": 3
+        },
+        "metric_build_plus_value": {
+          "wall_median_ms": 7.6423000000000005,
+          "cpu_sum_s": 0.015625,
+          "samples": 3
+        },
+        "problem_gradient": {
+          "wall_median_ms": 7.8552,
+          "cpu_sum_s": 0,
+          "samples": 3
+        },
+        "hessian_vector": {
+          "wall_median_ms": 14.569500000000001,
+          "cpu_sum_s": 0.046875,
+          "samples": 3
+        },
+        "mechanics_step": {
+          "wall_median_ms": 168.943,
+          "cpu_sum_s": 0.0625,
+          "samples": 1
+        },
+        "coupled_step": {
+          "wall_median_ms": 184.2124,
+          "cpu_sum_s": 0.125,
+          "samples": 1
+        },
+        "saved_step_observer": {
+          "wall_median_ms": 31.603199999999998,
+          "cpu_sum_s": 0.015625,
+          "samples": 1
+        }
+      },
+      "area_import_error": 0,
+      "energy_import_error": 5.346653247743588e-16,
+      "endpoint_difference_m": 0,
+      "force_target_ratio": 0.00022807278505547113
+    },
+    {
+      "case": "u20_t10",
+      "N": 144,
+      "phase": "t10",
+      "timings": {
+        "geometry": {
+          "wall_median_ms": 5.0017000000000005,
+          "cpu_sum_s": 0,
+          "samples": 3
+        },
+        "energy_gradient": {
+          "wall_median_ms": 8.2742,
+          "cpu_sum_s": 0.015625,
+          "samples": 3
+        },
+        "metric_build_plus_value": {
+          "wall_median_ms": 7.8074,
+          "cpu_sum_s": 0.015625,
+          "samples": 3
+        },
+        "problem_gradient": {
+          "wall_median_ms": 7.1592,
+          "cpu_sum_s": 0.015625,
+          "samples": 3
+        },
+        "hessian_vector": {
+          "wall_median_ms": 14.254299999999999,
+          "cpu_sum_s": 0,
+          "samples": 3
+        },
+        "mechanics_step": {
+          "wall_median_ms": 164.7214,
+          "cpu_sum_s": 0.0625,
+          "samples": 1
+        },
+        "coupled_step": {
+          "wall_median_ms": 188.6707,
+          "cpu_sum_s": 0.015625,
+          "samples": 1
+        },
+        "saved_step_observer": {
+          "wall_median_ms": 35.399100000000004,
+          "cpu_sum_s": 0.015625,
+          "samples": 1
+        }
+      },
+      "area_import_error": 7.105427357601002e-15,
+      "energy_import_error": 5.359312890196067e-16,
+      "endpoint_difference_m": 0,
+      "force_target_ratio": 2.2138976678915485e-05
+    },
+    {
+      "case": "u10_initial",
+      "N": 544,
+      "phase": "initial",
+      "timings": {
+        "geometry": {
+          "wall_median_ms": 68.61739999999999,
+          "cpu_sum_s": 0.125,
+          "samples": 3
+        },
+        "energy_gradient": {
+          "wall_median_ms": 85.2892,
+          "cpu_sum_s": 0.15625,
+          "samples": 3
+        },
+        "metric_build_plus_value": {
+          "wall_median_ms": 102.7805,
+          "cpu_sum_s": 0.109375,
+          "samples": 3
+        },
+        "problem_gradient": {
+          "wall_median_ms": 81.64540000000001,
+          "cpu_sum_s": 0.109375,
+          "samples": 3
+        },
+        "hessian_vector": {
+          "wall_median_ms": 167.8367,
+          "cpu_sum_s": 0.234375,
+          "samples": 3
+        },
+        "mechanics_step": {
+          "wall_median_ms": 1881.9395000000002,
+          "cpu_sum_s": 0.953125,
+          "samples": 1
+        },
+        "coupled_step": {
+          "wall_median_ms": 2317.0025,
+          "cpu_sum_s": 1.015625,
+          "samples": 1
+        },
+        "saved_step_observer": {
+          "wall_median_ms": 422.4793,
+          "cpu_sum_s": 0.203125,
+          "samples": 1
+        }
+      },
+      "area_import_error": 0,
+      "energy_import_error": 8.415680054701902e-16,
+      "endpoint_difference_m": 0,
+      "force_target_ratio": 0.006104436545411922
+    },
+    {
+      "case": "u10_t10",
+      "N": 544,
+      "phase": "t10",
+      "timings": {
+        "geometry": {
+          "wall_median_ms": 71.265,
+          "cpu_sum_s": 0.109375,
+          "samples": 3
+        },
+        "energy_gradient": {
+          "wall_median_ms": 84.3859,
+          "cpu_sum_s": 0.15625,
+          "samples": 3
+        },
+        "metric_build_plus_value": {
+          "wall_median_ms": 108.7475,
+          "cpu_sum_s": 0.109375,
+          "samples": 3
+        },
+        "problem_gradient": {
+          "wall_median_ms": 84.6522,
+          "cpu_sum_s": 0.0625,
+          "samples": 3
+        },
+        "hessian_vector": {
+          "wall_median_ms": 173.1415,
+          "cpu_sum_s": 0.1875,
+          "samples": 3
+        },
+        "mechanics_step": {
+          "wall_median_ms": 1999.6747,
+          "cpu_sum_s": 1.0625,
+          "samples": 1
+        },
+        "coupled_step": {
+          "wall_median_ms": 2412.8457000000003,
+          "cpu_sum_s": 1.109375,
+          "samples": 1
+        },
+        "saved_step_observer": {
+          "wall_median_ms": 424.3854,
+          "cpu_sum_s": 0.25,
+          "samples": 1
+        }
+      },
+      "area_import_error": 1.454392162258955e-14,
+      "energy_import_error": 1.85551809282198e-15,
+      "endpoint_difference_m": 0,
+      "force_target_ratio": 0.007091917127360242
+    }
+  ]
+}

@@ -1,0 +1,660 @@
+{
+  "state": "completed",
+  "cases": [
+    {
+      "name": "u20_initial",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_profile.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\cost_profile_20261113\\u20_initial\\input.csv",
+        ".03125",
+        "3",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\cost_profile_20261113\\u20_initial\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 0.625,
+      "log": "results\\logs\\cost_profile_20261113\\u20_initial.log",
+      "log_sha256": "ab0f8613344b73bf347fa80af378bc30345198c527cc289ed2ac2045f893fd4c",
+      "parameters": {
+        "name": "u20_initial",
+        "dx_um": 20,
+        "phase": "initial",
+        "N": 144,
+        "source_path": "results\\local-runs\\background_space_20261113\\u20_dt003125\\initial_states.csv",
+        "source_sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498",
+        "input": "results\\local-runs\\cost_profile_20261113\\u20_initial\\input.csv",
+        "input_sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+      },
+      "passed": true,
+      "profile": {
+        "N": 144,
+        "dt_s": 3.125e-08,
+        "area_import_error": 0,
+        "energy_import_error": 5.346653247743588e-16,
+        "tape_nodes": 60983,
+        "mechanics_endpoint_difference_m": 0,
+        "mechanics_iters": 3,
+        "mechanics_cg_iters": 4,
+        "force_target_ratio": 0.00022807278505547113,
+        "sink": 4907.851275223222,
+        "timings": [
+          {
+            "name": "geometry",
+            "samples": [
+              {
+                "wall_s": 0.0045957,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0045964,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0049778,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "energy_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0080431,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0068434,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0074474,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "metric_build_plus_value",
+            "samples": [
+              {
+                "wall_s": 0.0075805,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0076423,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0082129,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "problem_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0095166,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0078552,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.00723,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "hessian_vector",
+            "samples": [
+              {
+                "wall_s": 0.0144871,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0147761,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0145695,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "mechanics_step",
+            "samples": [
+              {
+                "wall_s": 0.168943,
+                "cpu_s": 0.0625
+              }
+            ]
+          },
+          {
+            "name": "coupled_step",
+            "samples": [
+              {
+                "wall_s": 0.1842124,
+                "cpu_s": 0.125
+              }
+            ]
+          },
+          {
+            "name": "saved_step_observer",
+            "samples": [
+              {
+                "wall_s": 0.0316032,
+                "cpu_s": 0.015625
+              }
+            ]
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\cost_profile_20261113\\u20_initial\\input.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results\\local-runs\\cost_profile_20261113\\u20_initial\\profile.json",
+          "bytes": 1397,
+          "sha256": "01cd1dc03529f21656a04b81fab7639707080e862bdedb79712391c721e62782"
+        }
+      ]
+    },
+    {
+      "name": "u20_t10",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_profile.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\cost_profile_20261113\\u20_t10\\input.csv",
+        ".03125",
+        "3",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\cost_profile_20261113\\u20_t10\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 0.5940000000409782,
+      "log": "results\\logs\\cost_profile_20261113\\u20_t10.log",
+      "log_sha256": "4830ca13ed956bf51ebf85f0c442535127462de553c1cf09f9272fd5d9428b6b",
+      "parameters": {
+        "name": "u20_t10",
+        "dx_um": 20,
+        "phase": "t10",
+        "N": 144,
+        "source_path": "results\\local-runs\\background_space_20261113\\u20_dt003125\\states.csv",
+        "source_sha256": "0419946c524a976d25adf9956225a129995473dca34d6e384619fb131818d257",
+        "input": "results\\local-runs\\cost_profile_20261113\\u20_t10\\input.csv",
+        "input_sha256": "990a1b202e6cb453b07b1490b6b1157d5c13ea0e46610afda7edddc0d1d69847"
+      },
+      "passed": true,
+      "profile": {
+        "N": 144,
+        "dt_s": 3.125e-08,
+        "area_import_error": 7.105427357601002e-15,
+        "energy_import_error": 5.359312890196067e-16,
+        "tape_nodes": 60983,
+        "mechanics_endpoint_difference_m": 0,
+        "mechanics_iters": 3,
+        "mechanics_cg_iters": 4,
+        "force_target_ratio": 2.2138976678915485e-05,
+        "sink": 492208.7242682447,
+        "timings": [
+          {
+            "name": "geometry",
+            "samples": [
+              {
+                "wall_s": 0.0045922,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.00566,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0050017,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "energy_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0082742,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0086142,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0076662,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "metric_build_plus_value",
+            "samples": [
+              {
+                "wall_s": 0.0080227,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0077561,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0078074,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "problem_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0070392,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0076594,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.0071592,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "hessian_vector",
+            "samples": [
+              {
+                "wall_s": 0.0141636,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0142543,
+                "cpu_s": 0
+              },
+              {
+                "wall_s": 0.0150907,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "mechanics_step",
+            "samples": [
+              {
+                "wall_s": 0.1647214,
+                "cpu_s": 0.0625
+              }
+            ]
+          },
+          {
+            "name": "coupled_step",
+            "samples": [
+              {
+                "wall_s": 0.1886707,
+                "cpu_s": 0.015625
+              }
+            ]
+          },
+          {
+            "name": "saved_step_observer",
+            "samples": [
+              {
+                "wall_s": 0.0353991,
+                "cpu_s": 0.015625
+              }
+            ]
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\cost_profile_20261113\\u20_t10\\input.csv",
+          "bytes": 43841,
+          "sha256": "990a1b202e6cb453b07b1490b6b1157d5c13ea0e46610afda7edddc0d1d69847"
+        },
+        {
+          "path": "results\\local-runs\\cost_profile_20261113\\u20_t10\\profile.json",
+          "bytes": 1394,
+          "sha256": "46ddaca945e2b340e2619038905a5be8973a6d81c4e6f5c57c8e4b2118724427"
+        }
+      ]
+    },
+    {
+      "name": "u10_initial",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_profile.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\cost_profile_20261113\\u10_initial\\input.csv",
+        ".03125",
+        "3",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\cost_profile_20261113\\u10_initial\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 6.937000000150874,
+      "log": "results\\logs\\cost_profile_20261113\\u10_initial.log",
+      "log_sha256": "f25241298b21da760ce81a185fd90e69666570583eaeaef75defd8c5fb71dc4c",
+      "parameters": {
+        "name": "u10_initial",
+        "dx_um": 10,
+        "phase": "initial",
+        "N": 544,
+        "source_path": "results\\local-runs\\global_space_20261113\\u10_dt003125\\initial_states.csv",
+        "source_sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308",
+        "input": "results\\local-runs\\cost_profile_20261113\\u10_initial\\input.csv",
+        "input_sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+      },
+      "passed": true,
+      "profile": {
+        "N": 544,
+        "dt_s": 3.125e-08,
+        "area_import_error": 0,
+        "energy_import_error": 8.415680054701902e-16,
+        "tape_nodes": 244153,
+        "mechanics_endpoint_difference_m": 0,
+        "mechanics_iters": 3,
+        "mechanics_cg_iters": 4,
+        "force_target_ratio": 0.006104436545411922,
+        "sink": 1578.5928896502865,
+        "timings": [
+          {
+            "name": "geometry",
+            "samples": [
+              {
+                "wall_s": 0.0770331,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0686174,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.067732,
+                "cpu_s": 0.046875
+              }
+            ]
+          },
+          {
+            "name": "energy_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0809916,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0859618,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.0852892,
+                "cpu_s": 0.0625
+              }
+            ]
+          },
+          {
+            "name": "metric_build_plus_value",
+            "samples": [
+              {
+                "wall_s": 0.1027805,
+                "cpu_s": 0.015625
+              },
+              {
+                "wall_s": 0.1025893,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.1037184,
+                "cpu_s": 0.0625
+              }
+            ]
+          },
+          {
+            "name": "problem_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0816454,
+                "cpu_s": 0.078125
+              },
+              {
+                "wall_s": 0.0871462,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0808273,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "hessian_vector",
+            "samples": [
+              {
+                "wall_s": 0.1678367,
+                "cpu_s": 0.078125
+              },
+              {
+                "wall_s": 0.1697808,
+                "cpu_s": 0.109375
+              },
+              {
+                "wall_s": 0.1669762,
+                "cpu_s": 0.046875
+              }
+            ]
+          },
+          {
+            "name": "mechanics_step",
+            "samples": [
+              {
+                "wall_s": 1.8819395,
+                "cpu_s": 0.953125
+              }
+            ]
+          },
+          {
+            "name": "coupled_step",
+            "samples": [
+              {
+                "wall_s": 2.3170025,
+                "cpu_s": 1.015625
+              }
+            ]
+          },
+          {
+            "name": "saved_step_observer",
+            "samples": [
+              {
+                "wall_s": 0.4224793,
+                "cpu_s": 0.203125
+              }
+            ]
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\cost_profile_20261113\\u10_initial\\input.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results\\local-runs\\cost_profile_20261113\\u10_initial\\profile.json",
+          "bytes": 1428,
+          "sha256": "a2efe06cf4b3d32449413a5f30fe11fe283cef27630884ac391cf030d9f04cb3"
+        }
+      ]
+    },
+    {
+      "name": "u10_t10",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_profile.exe",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\cost_profile_20261113\\u10_t10\\input.csv",
+        ".03125",
+        "3",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\cost_profile_20261113\\u10_t10\\profile.json"
+      ],
+      "returncode": 0,
+      "wall_s": 7.203999999910593,
+      "log": "results\\logs\\cost_profile_20261113\\u10_t10.log",
+      "log_sha256": "16e6f3216c0b5f2fb3712f8ccf5452b876a5cf28a31ce5d5c7ed27f06661580d",
+      "parameters": {
+        "name": "u10_t10",
+        "dx_um": 10,
+        "phase": "t10",
+        "N": 544,
+        "source_path": "results\\local-runs\\global_space_20261113\\u10_dt003125\\states.csv",
+        "source_sha256": "100ba51e31f42690d2d6d703b0584424370ddeda49a970e8fb9a6b7c95f44f42",
+        "input": "results\\local-runs\\cost_profile_20261113\\u10_t10\\input.csv",
+        "input_sha256": "773272e38c18ccf14fc34455cc684d06c0f2d2a4fd5792dd80dfb3fa33237582"
+      },
+      "passed": true,
+      "profile": {
+        "N": 544,
+        "dt_s": 3.125e-08,
+        "area_import_error": 1.454392162258955e-14,
+        "energy_import_error": 1.85551809282198e-15,
+        "tape_nodes": 244153,
+        "mechanics_endpoint_difference_m": 0,
+        "mechanics_iters": 3,
+        "mechanics_cg_iters": 4,
+        "force_target_ratio": 0.007091917127360242,
+        "sink": 104871.94566698921,
+        "timings": [
+          {
+            "name": "geometry",
+            "samples": [
+              {
+                "wall_s": 0.071265,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0725161,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0703003,
+                "cpu_s": 0.046875
+              }
+            ]
+          },
+          {
+            "name": "energy_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0843859,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.088708,
+                "cpu_s": 0.0625
+              },
+              {
+                "wall_s": 0.0812418,
+                "cpu_s": 0.046875
+              }
+            ]
+          },
+          {
+            "name": "metric_build_plus_value",
+            "samples": [
+              {
+                "wall_s": 0.1033205,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.1129397,
+                "cpu_s": 0.0625
+              },
+              {
+                "wall_s": 0.1087475,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "problem_gradient",
+            "samples": [
+              {
+                "wall_s": 0.0846522,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0838665,
+                "cpu_s": 0.03125
+              },
+              {
+                "wall_s": 0.0865205,
+                "cpu_s": 0
+              }
+            ]
+          },
+          {
+            "name": "hessian_vector",
+            "samples": [
+              {
+                "wall_s": 0.1731415,
+                "cpu_s": 0.0625
+              },
+              {
+                "wall_s": 0.175194,
+                "cpu_s": 0.046875
+              },
+              {
+                "wall_s": 0.1691297,
+                "cpu_s": 0.078125
+              }
+            ]
+          },
+          {
+            "name": "mechanics_step",
+            "samples": [
+              {
+                "wall_s": 1.9996747,
+                "cpu_s": 1.0625
+              }
+            ]
+          },
+          {
+            "name": "coupled_step",
+            "samples": [
+              {
+                "wall_s": 2.4128457,
+                "cpu_s": 1.109375
+              }
+            ]
+          },
+          {
+            "name": "saved_step_observer",
+            "samples": [
+              {
+                "wall_s": 0.4243854,
+                "cpu_s": 0.25
+              }
+            ]
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\cost_profile_20261113\\u10_t10\\input.csv",
+          "bytes": 165892,
+          "sha256": "773272e38c18ccf14fc34455cc684d06c0f2d2a4fd5792dd80dfb3fa33237582"
+        },
+        {
+          "path": "results\\local-runs\\cost_profile_20261113\\u10_t10\\profile.json",
+          "bytes": 1390,
+          "sha256": "c1723339b55c053120cf0bb5af12aa3cb7027077427da9f0c1bec8d474bcf95a"
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "compute_wall_s": 15.360000000102445,
+  "original_binary_unchanged": true
+}
