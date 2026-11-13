@@ -1,0 +1,322 @@
+{
+  "prepared_utc": "2026-11-13T20:09:48.467729+00:00",
+  "source_commit": "7fdf3defedb4e490c325eb579953fffc15365e39",
+  "sources": {
+    "thin_film\\scripts\\velocity_meaning\\run.py": "2121fe6d4e456464260b408b2dfa1ebdeb2d9bdbda4de11a32baa7c17e367403",
+    "thin_film\\scripts\\velocity_meaning\\PLAN.md": "c379e1e958d8a75394111aba0be6b6cf5ccc1ee86e12a978b284fb41f490e27a",
+    "thin_film\\scripts\\prepared_motion\\analyze.py": "138a2a87f7e32972de95d8d9e4b4bcaa6f86c8534107610464b21a921d4cc51d",
+    "thin_film\\scripts\\curved_edge\\analyze.py": "490aabf724b4ada7dc097f86244db30fdd86f97714da008cc83d92a64d432a80",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film\\include\\vf\\thinfilm\\MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilm.h": "28db3d0cd8d8faa0d4722929e4f502708b2a915f5801dc351db2e100ea2a3a35"
+  },
+  "cases": [
+    {
+      "name": "u20_dt003125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "0.03125",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\background_space_20261113\\u20_dt003125",
+        "6",
+        "variational",
+        "320",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 1143.780999999959,
+      "log": "results\\logs\\background_space_20261113\\u20_dt003125.log",
+      "log_sha256": "5992c3a6980de4e13c6fc3a6e83e58986718bd612b1e2df3e369e444dfc4b178",
+      "parameters": {
+        "name": "u20_dt003125",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.03125,
+        "T_us": 200,
+        "dx_um": 20,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 320,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 320,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 144,
+        "interior": 136,
+        "steps": 6400,
+        "requested_steps": 6400,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 3.125e-08,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.532518920806525e-12,
+        "V0_m3": 3.530924236316567e-13,
+        "S0_mol": 1.7890738034541587e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.813361678686375e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.521932688291897e-16,
+        "max_regionS_res": 1.3261178905535356e-16,
+        "max_displacement_m": 1.7174442563555202e-07,
+        "wall_s": 1143.7404268
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.7187835009193692e-14,
+        "free_volume_m3": 1.130847572362178e-13,
+        "S_mol": 1.7890738034541587e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 1.9999999999999998e-05,
+        "actual_background_x_m": 2e-05,
+        "actual_background_y_m": 2e-05,
+        "fine_m": 1.9999999999999998e-05,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.023249851706154484,
+      "files": [
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/faces.csv",
+          "bytes": 1040071,
+          "sha256": "2b3875879834a7a0e0544b8f74ab7263dd5d824ced3f5e0609f0a35fdf98e201"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/history.csv",
+          "bytes": 2229674,
+          "sha256": "043796edff91e309fbf9deeff874c08ad4345af66c177288db2682762d14765e"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/initial_faces.csv",
+          "bytes": 12831,
+          "sha256": "75f67ea9b6081ca5666fe4e91d8c0a2f08cf58553424512f90f7bda5cc94087a"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/initial_states.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/mechanical_nodes.csv",
+          "bytes": 1487626,
+          "sha256": "04767b580110cef028957330f946b35f932da6b9a460e1bc6a14697dc4cb154b"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/mechanics.csv",
+          "bytes": 1688803,
+          "sha256": "95dccf480b2937b416230ef57da8657773edff08f5ea402fabbec1046f30899f"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/mesh.json",
+          "bytes": 250,
+          "sha256": "66c2ac0807adadc8d7876787921939e26b68b4ed1e75e02a86d69050b19bedce"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/preparation.json",
+          "bytes": 226,
+          "sha256": "719025bbba47ba0a07fac7c96ecf93a32bd03dca80a4f1801157e82724b519e8"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/regional_mechanics.csv",
+          "bytes": 19055,
+          "sha256": "d272f098ab6e00b75eeef48bb29b4b47112614a818898773f95dd14191e2c628"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/states.csv",
+          "bytes": 2748681,
+          "sha256": "0419946c524a976d25adf9956225a129995473dca34d6e384619fb131818d257"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/summary.json",
+          "bytes": 914,
+          "sha256": "f4d2bcf655b8138847c8527da9f03e1fc0fce582754a40d7e0dea231a2a4e619"
+        }
+      ],
+      "estimated_s": 2273.7311999954286
+    },
+    {
+      "name": "u10_dt003125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "10",
+        "0.03125",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\global_space_20261113\\u10_dt003125",
+        "6",
+        "variational",
+        "320",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 2708.6410000000615,
+      "log": "results\\logs\\global_space_20261113\\u10_dt003125.log",
+      "log_sha256": "b98b264eb27f18084a980b9ed63c524ae9df8aa50556d87925b5a93666b29cc9",
+      "parameters": {
+        "name": "u10_dt003125",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.03125,
+        "T_us": 10,
+        "dx_um": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 320,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 320,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 544,
+        "interior": 528,
+        "steps": 320,
+        "requested_steps": 320,
+        "failures": 0,
+        "local": false,
+        "dx_m": 9.999999999999999e-06,
+        "dt_s": 3.125e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.799336249094897e-12,
+        "V0_m3": 3.5726588493588687e-13,
+        "S0_mol": 1.789091527932089e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.7921785903600725e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 5.132732933901137e-16,
+        "max_regionS_res": 1.7144129390598087e-16,
+        "max_displacement_m": 5.640442748235463e-08,
+        "wall_s": 2708.5219734
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 1.400945210080723e-13,
+        "free_volume_m3": 1.220713703029213e-13,
+        "S_mol": 1.789091527932089e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 9.999999999999999e-06,
+        "actual_background_x_m": 1e-05,
+        "actual_background_y_m": 1e-05,
+        "fine_m": 9.999999999999999e-06,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.008218276739220423,
+      "files": [
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/faces.csv",
+          "bytes": 394781,
+          "sha256": "3f00dfe86cb60a4b493e2e83774414b4444e87a3b0fe32f9f82724f85e8448de"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/history.csv",
+          "bytes": 111611,
+          "sha256": "1ceb61145631d38bf7a1bbae84f0c41759a0d767913f9fdb4c71bd32b126561f"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/initial_faces.csv",
+          "bytes": 53446,
+          "sha256": "2b3674fac8b0b6e2ce2d6984a009a8a31d29e212871f805834a876b76f4cef36"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/initial_states.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/mechanical_nodes.csv",
+          "bytes": 513515,
+          "sha256": "221d1324ff99df5af3198fcaece718d747289d1769832297b6f70274307af689"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/mechanics.csv",
+          "bytes": 84544,
+          "sha256": "0c3deb592833fbd4b2ca16ce1b681aa8e072376dcf531d838aac9fd8a6fb506f"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/mesh.json",
+          "bytes": 250,
+          "sha256": "4793683264828f86e9c4f16d776de8a0452862755000948fb91a54328013a0a7"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/preparation.json",
+          "bytes": 225,
+          "sha256": "e9bba3597acb5ba55577be4ed649ed79b4b62a05712fb91c3592b5afa7ffd533"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/regional_mechanics.csv",
+          "bytes": 2104,
+          "sha256": "686c704a4e44d43376247cd0c1e07675c2c641ff662f196ba3e459e2f9072617"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/states.csv",
+          "bytes": 955182,
+          "sha256": "100ba51e31f42690d2d6d703b0584424370ddeda49a970e8fb9a6b7c95f44f42"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/summary.json",
+          "bytes": 918,
+          "sha256": "9217a531d5ce272305a23a70674b942904d053b72fdaa0f22c1bcff93eb9a9bb"
+        }
+      ],
+      "estimated_s": 2294.6560000255704
+    }
+  ],
+  "previous_cut_sha256": "08ec65ae5afdc3b3c419d5be8e941db6febd43a1298234e7383592fdb6da011b",
+  "budget_s": 300,
+  "scope": "Conditional steady full-thickness profile IF node speed is surface speed; not a native physical inertia/traction audit"
+}

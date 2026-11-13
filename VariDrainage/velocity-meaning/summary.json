@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "name": "u20_dt003125",
+      "cut_cells": 8,
+      "time_us": 10,
+      "node_speed_RMS_m_s": 0.0014669158743370043,
+      "relative_speed_RMS_m_s": 0.007607596707470988,
+      "relative_to_node_RMS_ratio": 5.186116559621636,
+      "rates_m3_s": {
+        "material": -1.3998999487172298e-12,
+        "relative": 7.302374735614823e-12
+      },
+      "conditional_profile_K_J_m": 2.4786423708138797e-11,
+      "node_plug_K_J_m": 1.0792642520826273e-12,
+      "conditional_mean_plug_K_J_m": 1.8980887541121288e-11,
+      "conditional_shear_variance_J_m": 5.805536167017514e-12,
+      "profile_to_node_K_ratio": 22.966037891377482,
+      "arithmetic_checks": {
+        "reproduce_original_cut_relative_errors": {
+          "material": 0.0,
+          "relative": 2.2124133482402123e-16
+        },
+        "profile_mean_error": 5.397365409474367e-16,
+        "profile_energy_error": 1.024649395753146e-15
+      },
+      "data_sha256": "ab7e88ed73af314fce7a00a3a3495836d0989cee67c4e468323beddaae29c518"
+    },
+    {
+      "name": "u10_dt003125",
+      "cut_cells": 16,
+      "time_us": 10,
+      "node_speed_RMS_m_s": 0.004383618638922342,
+      "relative_speed_RMS_m_s": 0.006796249405756328,
+      "relative_to_node_RMS_ratio": 1.550374237715875,
+      "rates_m3_s": {
+        "material": 4.203349755168427e-12,
+        "relative": 6.523465584145248e-12
+      },
+      "conditional_profile_K_J_m": 6.728763961580247e-11,
+      "node_plug_K_J_m": 9.637467526858708e-12,
+      "conditional_mean_plug_K_J_m": 6.265460004281684e-11,
+      "conditional_shear_variance_J_m": 4.633039572985654e-12,
+      "profile_to_node_K_ratio": 6.981879775810212,
+      "arithmetic_checks": {
+        "reproduce_original_cut_relative_errors": {
+          "material": 0.0,
+          "relative": 1.2382889991933008e-16
+        },
+        "profile_mean_error": 3.839047765227537e-16,
+        "profile_energy_error": 7.921918918407673e-16
+      },
+      "data_sha256": "bb723bfb80acfe2b8cef825cc9958c0bbc584001947e4e105a773cd5200f3204"
+    }
+  ],
+  "wall_s": 0.25,
+  "protocol_sha256": "529a1a301d07b86682b4407cd0b9946310e9c5c04a93f9fc58454df16d55c1d7",
+  "scope": "Conditional steady full-thickness profile IF node speed is surface speed; not a native physical inertia/traction audit",
+  "physical_free_film_validated": false,
+  "full_C1_complete": false
+}
