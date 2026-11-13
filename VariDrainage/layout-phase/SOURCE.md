@@ -1,15 +1,32 @@
-# Initial-shape supplement, phase dynamics NOT yet qualified
+# Completed same-resolution layout study
 
-Published science snapshot: https://github.com/wang-mengdi/variational-films/tree/4eea298
-Source: thin_film/scripts/layout_phase/{initial.py,initial_projection.py,initial_figure.py}
-Native execution commit930d647, hashes and full parameters in protocol.json.
-Current page reports only read-only initial-shape/representation observations.
-status_at_publication.json is a timestamped snapshot, not live status.
-The smaller-time-step native run is pending at this publication. Do not infer
-the time-pair or final same-dx layout comparison passed.
+Completed science source/results: https://github.com/wang-mengdi/variational-films/tree/96a5736
+Scripts: thin_film/scripts/layout_phase/. Native execution source930d647 and
+binary/source SHA256 are in protocol.json; no native solver/model edit.
 
-Initial JSON includes original coordinates/heights and analytic observer values.
-Native raw source hashes recorded there. Uniform/background raw files can be
-restored from ../background-space/. New phase-run raw files will be packaged
-when the two-horizon matrix is terminal; no partial trajectory overwritten.
-No continuum circle inserted into the solver. No physical causal claim.
+4native runs,24checks,9602accepted steps;44saved scalar and44saved mechanical
+independent audits pass. New split20time pair passes all original2%conditions.
+All six same-dx overlap comparisons fail original10%conditions; fine200us
+dh7.991%,motion55.007%. Logical-node diagnostic54.439%is not a replacement gate.
+Full C1 / global dx convergence / independent physical flux / experiment open.
+
+Six bounded ZIP parts restore44new raw native files byte-exact to namespace
+native/, corresponding to results/local-runs/layout_phase_20261113/.
+python restore_raw.py REPORT_DIRECTORY NEW_OUTPUT_DIRECTORY
+Uniform comparator raw files are preserved at ../background-space/ and remain
+SHA256-referenced in protocol.json. Never rerun or overwrite frozen campaigns.
+status_at_publication.json preserves the earlier INCOMPLETE initial supplement
+snapshot. For final state use status.json, phase_summary.json and audit files.
+
+Initial analytic curve is observer only, not imposed native initialization.
+CONTEXT.md corrects the frozen plan's source-count typo:3native hashes plus
+binary/runner/README coverage, not a five-native-header check.
+
+Nested area-spectrum report: source/results65a11c5, unchanged read-only geometry
+CLI,30observations and60raw CSVfiles. It assesses ONLY the flat area-elastic
+Rayleigh block, omitting full curved stiffness/viscosity/boundaries/evolution.
+It is not actual-drainage causal proof or an innovation claim for generic VPH.
+Primary paper PDFs are saved locally, never rehosted here.
+
+This200us window remains bath-to-film replenishment startup (finest signed
+bath counter change-1.88836e-16m3), not long-time net drainage validation.

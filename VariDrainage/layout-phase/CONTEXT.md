@@ -33,6 +33,17 @@ Changing them for mesh regularity needs consistent V/S/momentum transfer and
 its own work/energy argument. Do not add a smoother or residual flux correction
 to obtain a desired pattern.
 
+More directly related Lagrangian precedent: Heß & Springel2010,
+[Particle hydrodynamics with tessellation techniques](https://arxiv.org/abs/0912.0629),
+section5.3/Fig5 discusses the standard VPH Nyquist pressure-restoring degeneracy.
+Author arXiv PDF0912.0629v2 downloaded, page11 visually checked. Their shape
+correction forces are not adopted here. The accompanying read-only native
+area_spectrum_20261113 observer tests the area-elastic Hessian block,
+J^T diag(2E/A)J, on flat grids. It omits the curved-gradient stiffness and
+viscosity of actual drainage; it cannot establish a full dynamical frequency
+or cause of the observed phase differences. Native flat-film/material tests
+and globally refined actual motion remain required.
+
 Kim & Mandre2017 [Marangoni elasticity of flowing soap films](https://doi.org/10.1103/PhysRevFluids.2.082001) gives a related long-wave speed
 relation. The current model EOS implies c~6.98m/s,320um crossing~45.8us;
 this is a model scale, not measured data or proof of wave/reflection causation.
