@@ -1,0 +1,117 @@
+{
+  "source_commit": "81a6b46c6a37f3555c68c1a2429efbe7970b7ada",
+  "source_hashes": {
+    "thin_film/scripts/time_refinement/run.py": "e0dd44d7887a087bb4b62a0cd9de56732a881046ce1db4cc12378d6d6d4e588a",
+    "thin_film/scripts/time_refinement/README.md": "de614e64764636fdaf0570184f85f2a375bdbe6ad9182843d1a3d0b12af05e4c",
+    "thin_film/bench/tf_curved_edge_bench.cpp": "48abb7901dffe2107ec4be3bddb3523073a531af43704579dfb25c55a38472cb",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film/include/vf/thinfilm/MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMechanicalObserver.h": "7f42541b91bec6a60e0fd5e72bca72abace0a446391884f4551d6a042b2d5b46"
+  },
+  "binary_hashes": {
+    "tf_curved_edge_bench": "181b3802cf646a5ce29b475e69b5140b16743ffacf59dd8e806af056c24cec09",
+    "test_curved_mechanical_observer": "e60bd01db8c691abcc36bb21488143330dd341c1e8ce477db14430870f3c5be5",
+    "test_edge_preparation": "63d935274c3ea997e841d5c9dba141c5d22d015b1198121730f51a2f462f405f",
+    "test_curved_edge": "dafdbbe27798598a3bf5029a26e2c16a8ae880735e545f497c3b46bba40f4d55"
+  },
+  "guards": [
+    {
+      "name": "control_dt025",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.25,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 40,
+      "refine_start_um": 200,
+      "observer": true
+    },
+    {
+      "name": "guard_dt0125",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 0.125,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200,
+      "observer": true
+    }
+  ],
+  "conditional_matrix": [
+    {
+      "name": "dt0125",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.125,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 80,
+      "refine_start_um": 200,
+      "observer": true
+    },
+    {
+      "name": "dt00625",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.0625,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 160,
+      "refine_start_um": 200,
+      "observer": true
+    },
+    {
+      "name": "dt003125",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.03125,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 320,
+      "refine_start_um": 200,
+      "observer": true
+    }
+  ],
+  "physical_cut_m": 0.00024,
+  "fine_start_m": 0.0002,
+  "per_case_timeout_s": 600,
+  "whole_compute_budget_s": 3300,
+  "cost_estimate": {
+    "source": "mechanical_work_fixed_20261113/obs_dt025",
+    "wall_s": 59.53099999995902,
+    "dt_us": 0.25,
+    "margin": 1.15
+  },
+  "gates": {
+    "balance": 1e-10,
+    "energy": 1e-07,
+    "force_ratio": 1.000001,
+    "time_dh_and_displacement": 0.02
+  },
+  "observation_times_s": [
+    1e-05,
+    5e-05,
+    0.0002
+  ],
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  },
+  "scope": "Only dt changes; unchanged model, physical cut, materials, preparation and solver. All native scalar/force statistics, sampled independent geometry/constitutive/mechanical audits. Time pair pass does not imply spatial or experimental validation."
+}

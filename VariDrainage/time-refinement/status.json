@@ -1,0 +1,732 @@
+{
+  "state": "completed",
+  "tests": [
+    {
+      "name": "test_curved_mechanical_observer",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_curved_mechanical_observer.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.04600000008940697,
+      "log": "results\\logs\\time_refinement_20261113\\test_curved_mechanical_observer.log",
+      "log_sha256": "e4de21ad637537096c4cd740a96b948dc19c63c4f92c01db9c17c68bd1ffa19f"
+    },
+    {
+      "name": "test_edge_preparation",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_edge_preparation.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.015999999828636646,
+      "log": "results\\logs\\time_refinement_20261113\\test_edge_preparation.log",
+      "log_sha256": "d655965e8d2a38ba0c556a7357f5d98c341205c38e8cd4e2d6a2398c3cba391b"
+    },
+    {
+      "name": "test_curved_edge",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_curved_edge.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.06300000008195639,
+      "log": "results\\logs\\time_refinement_20261113\\test_curved_edge.log",
+      "log_sha256": "adc2345db8802c2b8587c21657e7f17b3280740ddc1133f41a17a3c40f1a8a04"
+    }
+  ],
+  "cases": [
+    {
+      "name": "control_dt025",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.25",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\time_refinement_20261113\\control_dt025",
+        "6",
+        "variational",
+        "40",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 57.389999999897555,
+      "log": "results\\logs\\time_refinement_20261113\\control_dt025.log",
+      "log_sha256": "55ab797efc28b29f455d60a21d280fc309d8071c3ca08325efa582b52f31e57b",
+      "parameters": {
+        "name": "control_dt025",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.25,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 40,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 40,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 800,
+        "requested_steps": 800,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 2.5e-07,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.6486287572821296e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.199636207630239e-16,
+        "max_regionS_res": 1.2724176813037934e-16,
+        "max_displacement_m": 1.7684304022341593e-07,
+        "wall_s": 57.3714383
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.24450695867912547,
+      "byte_exact_to_frozen": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true,
+        "initial_states.csv": true,
+        "initial_faces.csv": true,
+        "preparation.json": true,
+        "mechanics.csv": true,
+        "regional_mechanics.csv": true,
+        "mechanical_nodes.csv": true
+      },
+      "files": [
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/faces.csv",
+          "bytes": 563298,
+          "sha256": "d2fbf8f4dc1f55a3521ebaf97829f9bd8c703bfc1f74aca75c9c8fa989961185"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/history.csv",
+          "bytes": 277961,
+          "sha256": "dcb7ec55d7cc3dff71df628ba8932c8dd4409706d7e095d097137783062e22a1"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/mechanical_nodes.csv",
+          "bytes": 880721,
+          "sha256": "550312774d1a6be708a528019de027991774484c00a11db9ec0a7e32e5175f28"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/mechanics.csv",
+          "bytes": 209805,
+          "sha256": "735d450cfb793bc7b8847784029309dd912b6f3aa789ac1ded54e6b6fd708dfb"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/regional_mechanics.csv",
+          "bytes": 19110,
+          "sha256": "08de580215c5213586d40c03923fa3a1d0ec5f27fba36e8c7b0ae75bc83764fa"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/states.csv",
+          "bytes": 1591837,
+          "sha256": "ad57f227c00c2a64c2d1adf439030f3b8fe96a177bfde1eb277e33248269c7c8"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/control_dt025/summary.json",
+          "bytes": 935,
+          "sha256": "8d64330f2f9bd67a879114a0326b860a04896a2dc147c073ccc775088e655ad4"
+        }
+      ]
+    },
+    {
+      "name": "guard_dt0125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.125",
+        "0.125",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\time_refinement_20261113\\guard_dt0125",
+        "6",
+        "variational",
+        "1",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 0.125,
+      "log": "results\\logs\\time_refinement_20261113\\guard_dt0125.log",
+      "log_sha256": "46dabef2c36668a0e55e6fa3994624d9482afbf11e23657a002b7674257f1373",
+      "parameters": {
+        "name": "guard_dt0125",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.125,
+        "T_us": 0.125,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 1,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 1.25e-07,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 9.891772543692778e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 8.450492763032626e-17,
+        "max_regionS_res": 3.228366856216124e-17,
+        "max_displacement_m": 6.941178784268605e-11,
+        "wall_s": 0.1097781
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.0054926332419589444,
+      "files": [
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/faces.csv",
+          "bytes": 25678,
+          "sha256": "e12822bb98d5341d5b66cbcaab390cd7b387c28d73ccd98a95a46d3a3dcc931c"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/history.csv",
+          "bytes": 519,
+          "sha256": "cba24be2e4107be0e74b8d97a2522a2a94f995981cdea9dfc3c4540968166616"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/mechanical_nodes.csv",
+          "bytes": 38921,
+          "sha256": "d424ce16fd58b701293a0d583bb90cc3347a7cdcb733f25bdf0187d17d0d89e5"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/mechanics.csv",
+          "bytes": 402,
+          "sha256": "a88a99501b91ea3c889090aeb902762424147c401a2c3866fd34095a381a5617"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/regional_mechanics.csv",
+          "bytes": 1207,
+          "sha256": "ffffc9dc0528e0c28710ad24576515e42f3337cb723c896ae929e3e4e85a5ced"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/states.csv",
+          "bytes": 71988,
+          "sha256": "7490e97106bbebb2a75b90a5ebaa1f9f03c38570d59e9b82aa0e9a2eeb09499f"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/guard_dt0125/summary.json",
+          "bytes": 922,
+          "sha256": "f60b0b7e26992ec78aebe36b70f9adba322da29092e51658987cc6e4f913292e"
+        }
+      ]
+    },
+    {
+      "name": "dt0125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.125",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\time_refinement_20261113\\dt0125",
+        "6",
+        "variational",
+        "80",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 115.35900000017136,
+      "log": "results\\logs\\time_refinement_20261113\\dt0125.log",
+      "log_sha256": "f11f3274302b395996af6c3ead78039cc72f0877abfc0b81b2fa02fff23a19b1",
+      "parameters": {
+        "name": "dt0125",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.125,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 80,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 80,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 1600,
+        "requested_steps": 1600,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1.25e-07,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.8134916330103424e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.586162497520293e-16,
+        "max_regionS_res": 1.1870126811395916e-16,
+        "max_displacement_m": 1.7826797879840663e-07,
+        "wall_s": 115.3327861
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.9984973645684725,
+      "files": [
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/faces.csv",
+          "bytes": 568986,
+          "sha256": "c65740d3813cb4cb0743756041a7a819552df69654713fffab0ca2b52940bd66"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/history.csv",
+          "bytes": 556907,
+          "sha256": "f645238fa18d9399a50343f9526fa9f943b4d110eaa335136d365bfa666e21ae"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/mechanical_nodes.csv",
+          "bytes": 881181,
+          "sha256": "fa7fc053e90890fb7da510103b824f1faba5539af1be2b67ee031ade584e0e4a"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/mechanics.csv",
+          "bytes": 420596,
+          "sha256": "e6914893e7809a73823268d3f6c4a1087025f890ae51e427f8e44cf617ceb4bc"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/regional_mechanics.csv",
+          "bytes": 19061,
+          "sha256": "5abb2a3fe1e10134b93f08ac137d6a92444e50dfc41eb07384e773fd0d0261b2"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/states.csv",
+          "bytes": 1593761,
+          "sha256": "86fba90431abd9fd7d65323af1b82906e9141cf657cf34fecfe691c5c13f0c37"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt0125/summary.json",
+          "bytes": 937,
+          "sha256": "e7697d0a968101b73a7706198bfeeb91036fee024e68b1a3bda5192ccc8172fe"
+        }
+      ]
+    },
+    {
+      "name": "dt00625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.0625",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\time_refinement_20261113\\dt00625",
+        "6",
+        "variational",
+        "160",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 228.9220000000205,
+      "log": "results\\logs\\time_refinement_20261113\\dt00625.log",
+      "log_sha256": "50e7189e6c0da12e0b72ecfa071dd434e091722b1774677d4067b696e728e757",
+      "parameters": {
+        "name": "dt00625",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.0625,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 160,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 160,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 3200,
+        "requested_steps": 3200,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 6.25e-08,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.8134916330103424e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.41180178714789e-16,
+        "max_regionS_res": 1.1449570697273791e-16,
+        "max_displacement_m": 1.78988120360645e-07,
+        "wall_s": 228.9017675
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.17565979724386482,
+      "files": [
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/faces.csv",
+          "bytes": 573528,
+          "sha256": "1be149bc043f44657a1a5308b97e2629838c98c153356111ec535c6692506efc"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/history.csv",
+          "bytes": 1114212,
+          "sha256": "998f7a8f1655172466eae22a87c78e41e47928981d64e73c9aaca5d0e3465afa"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/mechanical_nodes.csv",
+          "bytes": 881893,
+          "sha256": "c99868616f498d151796e94ee332b5fe916bed9c3db3d2eedbcd2404fc26b9e0"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/mechanics.csv",
+          "bytes": 843058,
+          "sha256": "734c95c01c8a515c9a70983bd41092e1e76585f3e0f9b0ea0831e8cfa28f745d"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/regional_mechanics.csv",
+          "bytes": 19043,
+          "sha256": "9a4af2c3e1d640649bf177c00ee1fd8c5a32d4d470fa4c275499168f9d5f11ca"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/states.csv",
+          "bytes": 1595545,
+          "sha256": "ea74b992af45ed16f75b45daa7bc8269609c0b8a5d8f39d79b309934f4bf2a3f"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt00625/summary.json",
+          "bytes": 937,
+          "sha256": "0e860f44939ecae3d096baa79161bab3879794ff8222a47378878e411a7345d8"
+        }
+      ]
+    },
+    {
+      "name": "dt003125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.03125",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\time_refinement_20261113\\dt003125",
+        "6",
+        "variational",
+        "320",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 447.75,
+      "log": "results\\logs\\time_refinement_20261113\\dt003125.log",
+      "log_sha256": "e4819e6be5e24902800115fda32f9e2ca8f7448f4903378502ba8e3fc98b4bfd",
+      "parameters": {
+        "name": "dt003125",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.03125,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 320,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 320,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 6400,
+        "requested_steps": 6400,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 3.125e-08,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.4837658815539168e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.630644733239045e-16,
+        "max_regionS_res": 1.3545117213911366e-16,
+        "max_displacement_m": 1.7934902056053882e-07,
+        "wall_s": 447.7135504
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.02005043753355644,
+      "files": [
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/faces.csv",
+          "bytes": 575407,
+          "sha256": "8a8de6e9173fc5048e771af50d58d5dad63fd82a85c3789128a19f10704f2d03"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/history.csv",
+          "bytes": 2228326,
+          "sha256": "a78ddf11b7011a629b6967912dd2b60c11d3e9233436ba3b6d11c9ebddea2bbd"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/mechanical_nodes.csv",
+          "bytes": 882071,
+          "sha256": "ba722e7ce8f5537004bc57cc02bb130a1244a0022c53099deaafc63125f72fcd"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/mechanics.csv",
+          "bytes": 1688952,
+          "sha256": "2fe7d9ecc158ce73086e99a4d215a6c8ab76330f514c727972b5cfa244627553"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/regional_mechanics.csv",
+          "bytes": 19168,
+          "sha256": "5c1f164ca77dac4ef0484f7185d06363887e75d253228f136f2efcd0e4ed9708"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/states.csv",
+          "bytes": 1596338,
+          "sha256": "e1de568fab0e364dd12e4c91f353b3443471da97b43be0e5572b449c354179a3"
+        },
+        {
+          "path": "results/local-runs/time_refinement_20261113/dt003125/summary.json",
+          "bytes": 939,
+          "sha256": "faa05792c12247c3a2e6c0ad0f503dc18a707ad71cfd194a32fcfc9f5bcfb797"
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "compute_wall_s": 849.6710000000894,
+  "sampled_steps": true,
+  "native_checks": 24
+}
