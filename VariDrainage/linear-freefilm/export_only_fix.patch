@@ -1,0 +1,14 @@
+--- frozen-original-run.py
++++ current-export-fixed-run.py
+@@ -6,7 +6,10 @@
+ from reference import build,trajectory
+ R=Path(__file__).resolve().parents[3];O=R/'results/linear_freefilm_20261113';HERE=Path(__file__).resolve().parent
+ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+-def save(p,d):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(d,indent=2,allow_nan=False),encoding='utf-8')
++def json_scalar(value):
++    if isinstance(value,np.generic):return value.item()
++    raise TypeError(type(value).__name__)
++def save(p,d):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(d,indent=2,allow_nan=False,default=json_scalar),encoding='utf-8')
+ def prepare():
+     assert not (O/'protocol.json').exists();s=json.loads((R/'results/global_space_20261113/status.json').read_text());rec=next(c for c in s['cases'] if c['name']=='u10_dt003125');assert rec['native_gate'] and rec['completed']
+     for f in rec['files']:assert sha(R/f['path'])==f['sha256']
