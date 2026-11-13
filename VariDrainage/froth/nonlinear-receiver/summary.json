@@ -1,0 +1,175 @@
+{
+  "runs": [
+    {
+      "name": "active",
+      "dt_s": 2.5e-07,
+      "steps_completed": 8000,
+      "status": "completed",
+      "failure": null,
+      "elastic": true,
+      "erased": false,
+      "received_energy_J": 4.883965879244022e-11,
+      "incoming_energy_J": 4.1946696930806366e-08,
+      "inelastic_loss_J": 4.1897857272013924e-08,
+      "maximum_energy_error_received": 4.0589164361964676e-07,
+      "maximum_linear_impulse_error": 1.1405949132424593e-13,
+      "maximum_angular_impulse_error": 1.5548717100514172e-15,
+      "minimum_thickness_m": 7.962989653858179e-07,
+      "minimum_surface_tension_N_m": 0.02998991461100998,
+      "maximum_displacement_m": 1.8296873435536553e-05,
+      "final_rotation_rad": 0.0005315939460462239,
+      "external_sink_linear": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "external_sink_angular": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "checks": {
+        "completed": true,
+        "energy_1pct": true,
+        "momentum": true,
+        "angular_with_preload": true,
+        "positive_thickness": true,
+        "positive_tension": true,
+        "inelastic_loss": true
+      },
+      "elapsed_seconds": 4.258023299975321
+    },
+    {
+      "name": "half",
+      "dt_s": 1.25e-07,
+      "steps_completed": 16000,
+      "status": "completed",
+      "failure": null,
+      "elastic": true,
+      "erased": false,
+      "received_energy_J": 4.883965879244022e-11,
+      "incoming_energy_J": 4.1946696930806366e-08,
+      "inelastic_loss_J": 4.1897857272013924e-08,
+      "maximum_energy_error_received": 1.0152254166498336e-07,
+      "maximum_linear_impulse_error": 1.2192766114811006e-13,
+      "maximum_angular_impulse_error": 5.264927485873251e-15,
+      "minimum_thickness_m": 7.962989652118893e-07,
+      "minimum_surface_tension_N_m": 0.029989914611354005,
+      "maximum_displacement_m": 1.8298414777908675e-05,
+      "final_rotation_rad": 0.0005315937869040596,
+      "external_sink_linear": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "external_sink_angular": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "checks": {
+        "completed": true,
+        "energy_1pct": true,
+        "momentum": true,
+        "angular_with_preload": true,
+        "positive_thickness": true,
+        "positive_tension": true,
+        "inelastic_loss": true
+      },
+      "elapsed_seconds": 8.420230499934405
+    },
+    {
+      "name": "constant",
+      "dt_s": 2.5e-07,
+      "steps_completed": 8000,
+      "status": "completed",
+      "failure": null,
+      "elastic": false,
+      "erased": false,
+      "received_energy_J": 4.883965879244022e-11,
+      "incoming_energy_J": 4.1946696930806366e-08,
+      "inelastic_loss_J": 4.1897857272013924e-08,
+      "maximum_energy_error_received": 3.956871086485548e-07,
+      "maximum_linear_impulse_error": 1.1791927112387482e-13,
+      "maximum_angular_impulse_error": 1.7392116162323333e-15,
+      "minimum_thickness_m": 6.490977871771533e-07,
+      "minimum_surface_tension_N_m": 0.03,
+      "maximum_displacement_m": 1.835140382638372e-05,
+      "final_rotation_rad": 0.0005898470093346152,
+      "external_sink_linear": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "external_sink_angular": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "checks": {
+        "completed": true,
+        "energy_1pct": true,
+        "momentum": true,
+        "angular_with_preload": true,
+        "positive_thickness": true,
+        "positive_tension": true,
+        "inelastic_loss": true
+      },
+      "elapsed_seconds": 4.321170500013977
+    },
+    {
+      "name": "erased",
+      "dt_s": 2.5e-07,
+      "steps_completed": 8000,
+      "status": "completed",
+      "failure": null,
+      "elastic": true,
+      "erased": true,
+      "received_energy_J": 0.0,
+      "incoming_energy_J": 4.1946696930806366e-08,
+      "inelastic_loss_J": 4.1946696930806366e-08,
+      "maximum_energy_error_received": 1.0761709608606509e-11,
+      "maximum_linear_impulse_error": 4.18939995225067e-15,
+      "maximum_angular_impulse_error": 1.1976858624079008e-13,
+      "minimum_thickness_m": 7.999999999999998e-07,
+      "minimum_surface_tension_N_m": 0.03,
+      "maximum_displacement_m": 4.389902781161374e-19,
+      "final_rotation_rad": 0.0,
+      "external_sink_linear": [
+        8.090934697275277e-09,
+        -3.778438454610171e-09,
+        3.779067717544962e-09
+      ],
+      "external_sink_angular": [
+        1.6570236148869874e-15,
+        -2.1213246789059703e-11,
+        -2.1213262179080027e-11
+      ],
+      "checks": {
+        "completed": true,
+        "energy_1pct": true,
+        "momentum": true,
+        "angular_with_preload": true,
+        "positive_thickness": true,
+        "positive_tension": true,
+        "inelastic_loss": true
+      },
+      "elapsed_seconds": 4.2208541999571025
+    }
+  ],
+  "comparisons": {
+    "final_thickness_half_relative": 7.929702528394726e-07,
+    "final_response_half_relative": 3.3056250473597046e-05,
+    "final_thickness_constitutive_difference": 0.04754494654786771,
+    "time_1pct_pass": true
+  },
+  "force_audit": {
+    "directional_gradient_error": 5.7214253137128066e-08,
+    "energy_rigid_invariance": 4.313886878579999e-17,
+    "net_capillary_force": 2.528364229882912e-16,
+    "net_capillary_torque": 3.4168763942150657e-16,
+    "rotated_gradient_error": 3.3970300251178297e-15,
+    "passed": true
+  },
+  "scope": "supported isolated nonlinear neighbour response; complete lifecycle remains open"
+}
