@@ -1,0 +1,78 @@
+{
+  "cases": [
+    {
+      "name": "dt20",
+      "cumulative_mole_error": 1.1365302068564024e-14,
+      "history_energy_identity_error": 3.308722450212111e-24,
+      "saved_node_entropy_error": 1.0587911840678754e-22,
+      "incoming_moles_reconstruction_error": 0.0,
+      "last_port_flux_error_over_q0": 1.6263032587282567e-14
+    },
+    {
+      "name": "main",
+      "cumulative_mole_error": 1.1392556998308104e-14,
+      "history_energy_identity_error": 3.308722450212111e-24,
+      "saved_node_entropy_error": 0.0,
+      "incoming_moles_reconstruction_error": 0.0,
+      "last_port_flux_error_over_q0": 2.7105054312137608e-14
+    },
+    {
+      "name": "dt5",
+      "cumulative_mole_error": 1.2252487560192818e-14,
+      "history_energy_identity_error": 1.6543612251060553e-24,
+      "saved_node_entropy_error": 2.6469779601696886e-23,
+      "incoming_moles_reconstruction_error": 0.0,
+      "last_port_flux_error_over_q0": 4.336808689942017e-14
+    },
+    {
+      "name": "n288",
+      "cumulative_mole_error": 7.454293713165048e-15,
+      "history_energy_identity_error": 3.308722450212111e-24,
+      "saved_node_entropy_error": 2.6469779601696886e-23,
+      "incoming_moles_reconstruction_error": 0.0,
+      "last_port_flux_error_over_q0": 3.252606517456513e-14
+    },
+    {
+      "name": "bulk-uniform",
+      "cumulative_mole_error": 7.912325456959668e-15,
+      "history_energy_identity_error": 1.4693679385278594e-39,
+      "saved_node_entropy_error": 1.401298464324817e-45,
+      "incoming_moles_reconstruction_error": 0.0,
+      "last_port_flux_error_over_q0": 6.776263578034402e-16
+    },
+    {
+      "name": "no-flow",
+      "cumulative_mole_error": 3.332693512058567e-15,
+      "history_energy_identity_error": 8.758115402030107e-47,
+      "saved_node_entropy_error": 7.006492321624085e-46,
+      "incoming_moles_reconstruction_error": 0.0,
+      "last_port_flux_error_over_q0": 0.0
+    },
+    {
+      "name": "uniform-inlet",
+      "cumulative_mole_error": 1.1433738348444856e-14,
+      "history_energy_identity_error": 3.308722450212111e-24,
+      "saved_node_entropy_error": 5.293955920339377e-23,
+      "incoming_moles_reconstruction_error": 0.0,
+      "last_port_flux_error_over_q0": 2.7105054312137608e-14
+    },
+    {
+      "name": "contrast",
+      "cumulative_mole_error": 1.1433934623193962e-14,
+      "history_energy_identity_error": 3.308722450212111e-24,
+      "saved_node_entropy_error": 5.293955920339377e-23,
+      "incoming_moles_reconstruction_error": 1.5777218104420236e-30,
+      "last_port_flux_error_over_q0": 2.7105054312137608e-14
+    }
+  ],
+  "source_contrast_response_relative_error": 1.6293240788136194e-12,
+  "common_interior_P1_reconstruction_relative_difference": 0.0038122154570830766,
+  "common_samples": 3491,
+  "checks": {
+    "mole_ledger": true,
+    "chemical_identity": true,
+    "external_flux_reconstruction": true,
+    "source_response_linearity": true
+  },
+  "limits": "Frozen flow; interior reconstruction does not bound endpoint trace or full foam error."
+}

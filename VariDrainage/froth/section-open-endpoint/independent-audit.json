@@ -1,0 +1,138 @@
+{
+  "audit": [
+    {
+      "group": "section-open",
+      "name": "n48",
+      "saved_cap_error_over_q0": 1.2621774483536189e-15,
+      "saved_power_defect": 3.482913952897129e-11
+    },
+    {
+      "group": "section-open",
+      "name": "n96",
+      "saved_cap_error_over_q0": 8.835242138475332e-16,
+      "saved_power_defect": 7.186699376324756e-11
+    },
+    {
+      "group": "section-open",
+      "name": "n144",
+      "saved_cap_error_over_q0": 1.3883951931889808e-15,
+      "saved_power_defect": 3.4548029777981677e-12
+    },
+    {
+      "group": "section-open",
+      "name": "n192",
+      "saved_cap_error_over_q0": 8.835242138475332e-16,
+      "saved_power_defect": 1.7056141797515588e-11
+    },
+    {
+      "group": "section-open",
+      "name": "zero",
+      "saved_cap_error_over_q0": 0.0,
+      "saved_power_defect": 0.0
+    },
+    {
+      "group": "section-open",
+      "name": "reverse",
+      "saved_cap_error_over_q0": 8.835242138475332e-16,
+      "saved_power_defect": 7.186699376324756e-11
+    },
+    {
+      "group": "section-open",
+      "name": "double",
+      "saved_cap_error_over_q0": 1.7670484276950664e-15,
+      "saved_power_defect": 7.186699376324756e-11
+    },
+    {
+      "group": "section-open",
+      "name": "load",
+      "saved_cap_error_over_q0": 5.771036034592341e-19,
+      "saved_power_defect": 3.20454822896933e-11
+    },
+    {
+      "group": "section-open",
+      "name": "combined",
+      "saved_cap_error_over_q0": 8.835242138475332e-16,
+      "saved_power_defect": 8.889630147089827e-11
+    },
+    {
+      "group": "section-open-endpoint",
+      "name": "G1",
+      "saved_cap_error_over_q0": 5.048709793414476e-16,
+      "saved_power_defect": 4.052117599170934e-10
+    },
+    {
+      "group": "section-open-endpoint",
+      "name": "G2",
+      "saved_cap_error_over_q0": 8.835242138475332e-16,
+      "saved_power_defect": 1.5079395328973234e-10
+    },
+    {
+      "group": "section-open-endpoint",
+      "name": "G3",
+      "saved_cap_error_over_q0": 1.0097419586828951e-15,
+      "saved_power_defect": 5.977126147030564e-11
+    },
+    {
+      "group": "section-open-endpoint",
+      "name": "G3n288",
+      "saved_cap_error_over_q0": 1.0097419586828951e-15,
+      "saved_power_defect": 3.609875703090518e-10
+    },
+    {
+      "group": "section-open-endpoint",
+      "name": "SIP10",
+      "saved_cap_error_over_q0": 1.0097419586828951e-15,
+      "saved_power_defect": 1.1237597983341804e-10
+    },
+    {
+      "group": "section-open-endpoint",
+      "name": "SIP40",
+      "saved_cap_error_over_q0": 1.0097419586828951e-15,
+      "saved_power_defect": 1.8394958728324063e-09
+    }
+  ],
+  "native_field_reconstruction": [
+    {
+      "name": "G1",
+      "cell_mean_reconstruction_relative_error": 3.4710790700112178e-15
+    },
+    {
+      "name": "G2",
+      "cell_mean_reconstruction_relative_error": 3.274272683818546e-15
+    },
+    {
+      "name": "G3",
+      "cell_mean_reconstruction_relative_error": 4.255881249925289e-15
+    },
+    {
+      "name": "G3n288",
+      "cell_mean_reconstruction_relative_error": 3.780940109499912e-15
+    }
+  ],
+  "comparisons": [
+    {
+      "coarse": "G1",
+      "fine": "G2",
+      "native_velocity_common_interior_relative_L2": 0.0028533596256132246,
+      "samples": 3491
+    },
+    {
+      "coarse": "G2",
+      "fine": "G3",
+      "native_velocity_common_interior_relative_L2": 0.002966594671723131,
+      "samples": 3491
+    },
+    {
+      "coarse": "G3",
+      "fine": "G3n288",
+      "native_velocity_common_interior_relative_L2": 0.0028509836206431134,
+      "samples": 3491
+    }
+  ],
+  "checks": {
+    "saved_flux": true,
+    "saved_power": true,
+    "native_field_reconstruction": true
+  },
+  "scope": "fixed throughflow only; interior probes do not cover all narrow cap cells"
+}

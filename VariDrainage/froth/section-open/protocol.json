@@ -1,0 +1,31 @@
+{
+  "git_base": "17baac4c8da8f8e6c130ac3efdd33456dd53522e",
+  "source_sha256": {
+    "foam/scripts/run_section_open.py": "3524fd14c44c6b30fc85d23419721f07f1fd837cbe459a36413d450111e76191",
+    "foam/scripts/open_section_stokes.py": "8b122f1df4f8c764e1be7027b6a6f3dc9da2a7e54401ccbc4b219b01ecf7f5d7",
+    "foam/scripts/border_section_stream.py": "5104ddd47a96b70aae91acb4309ba09f03811195c76b63cd75790c2c51db069f",
+    "foam/scripts/border_section_stokes_hdiv.py": "b61bf8a01fce39d2c77ffd51b99b37c0971b93c0291ae12b4413ea48f897818d",
+    "foam/scripts/border_section_transport.py": "eed020a62a5893a68a5e8e62901e952d70def57da381984f16e2f802cba5eab5",
+    "foam/docs/open_section_protocol.md": "5b94d173777ddc7e0508e1c23c1a5c896d16b5b36d41ba2b7a5bdd0def7a1dfd"
+  },
+  "python": "3.11.7",
+  "inputs": {
+    "radius_m": 0.0004,
+    "h_m": 8e-07,
+    "mu_Pa_s": 0.001,
+    "rho_kg_m3": 998.2,
+    "velocity_reference_m_s": 2.5e-05,
+    "diagnostic_inlet_speed_m_s": 1e-06,
+    "q0_m2_s": 8e-13,
+    "normal_depths_um": [
+      0.25,
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "SIP_penalty": 20
+  },
+  "scope": "prescribed compatible throughflow on fixed shape; not open solute, finite accumulation or moving foam"
+}

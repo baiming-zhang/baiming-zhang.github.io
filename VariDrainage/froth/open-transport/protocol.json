@@ -1,0 +1,21 @@
+{
+  "git_base": "d421c8c81d306c7851df327ae49040c95b8c736c",
+  "source_sha256": {
+    "foam/scripts/run_open_transport.py": "04b2fe82d60031fa17aba8a68cd7cd601b7872c8ed9092de60476d5e6bd497f1",
+    "foam/scripts/open_section_transport.py": "c599372c9f7f969191a843125d8fc0def86ba2c291c344f4d54b414cd423b4e4",
+    "foam/scripts/section_advection.py": "dd5de46e64b336362683b75067b880e774380ed6e71a8144aea962c34bef128f",
+    "foam/scripts/open_section_stokes.py": "8b122f1df4f8c764e1be7027b6a6f3dc9da2a7e54401ccbc4b219b01ecf7f5d7",
+    "foam/scripts/border_section_transport.py": "1f1cda9c337999d8244c09eaf61e3d1830773dacb85c5e005e402c307ad6eef4",
+    "foam/docs/open_transport_protocol.md": "da1bd169caba5e8d15173d3b17d778eba62bde172667ab6cf906129d3107d093"
+  },
+  "inputs": {
+    "radius_m": 0.0004,
+    "cstar_mol_m3": 0.002,
+    "RT_J_mol": 2500.0,
+    "velocity_scale_m_s": 2.5e-05,
+    "q0_m2_s": 8e-13,
+    "D_m2_s": 5e-10,
+    "eta_m": 1e-05
+  },
+  "scope": "frozen pressure-driven velocity; instant Henry equilibrium; fixed area; no concentration-flow feedback, finite film depletion, gas or rupture"
+}
