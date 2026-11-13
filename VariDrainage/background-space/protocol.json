@@ -1,0 +1,199 @@
+{
+  "source_commit": "08a9b955799ffda5e4ee860251ac04ef88ce8e8e",
+  "source_hashes": {
+    "thin_film/scripts/background_space/run.py": "220ab1a0f79b74dc5fd694105a720c235b9d0d4bf904d3b0f308a752117a8704",
+    "thin_film/scripts/background_space/README.md": "b37551eda83cea66c561996bfd8d9079d3fa99d99d3f4243d5c0b4da96ee1a99",
+    "thin_film/bench/tf_curved_edge_bench.cpp": "bdec29cee9b414d607fba0b60c350bf198543adc1ab4a73206da4487e11b8c61",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film/include/vf/thinfilm/MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912"
+  },
+  "binary_hashes": {
+    "tf_curved_edge_bench": "76e49ed253e2341df37f93d02803272d020b8500ed9265da6f7d0ec124b6c5c3",
+    "test_curved_mechanical_observer": "e60bd01db8c691abcc36bb21488143330dd341c1e8ce477db14430870f3c5be5",
+    "test_edge_preparation": "63d935274c3ea997e841d5c9dba141c5d22d015b1198121730f51a2f462f405f",
+    "test_curved_edge": "dafdbbe27798598a3bf5029a26e2c16a8ae880735e545f497c3b46bba40f4d55"
+  },
+  "guards": [
+    {
+      "name": "control_default",
+      "mode": "local",
+      "ratio": null,
+      "dt_us": 0.0625,
+      "T_us": 200,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 160,
+      "refine_start_um": 200
+    },
+    {
+      "name": "guard_omitted",
+      "mode": "local",
+      "ratio": null,
+      "dt_us": 0.0625,
+      "T_us": 0.0625,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200
+    },
+    {
+      "name": "guard_explicit2",
+      "mode": "local",
+      "ratio": 2,
+      "dt_us": 0.0625,
+      "T_us": 0.0625,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200
+    },
+    {
+      "name": "guard_bg30",
+      "mode": "local",
+      "ratio": 1.5,
+      "dt_us": 0.0625,
+      "T_us": 0.0625,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200
+    },
+    {
+      "name": "guard_bg25",
+      "mode": "local",
+      "ratio": 1.25,
+      "dt_us": 0.0625,
+      "T_us": 0.0625,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200
+    },
+    {
+      "name": "guard_uniform",
+      "mode": "uniform",
+      "ratio": null,
+      "dt_us": 0.0625,
+      "T_us": 0.0625,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200
+    },
+    {
+      "name": "guard_uniform_fine",
+      "mode": "uniform",
+      "ratio": null,
+      "dt_us": 0.03125,
+      "T_us": 0.03125,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200
+    }
+  ],
+  "conditional_matrix": [
+    {
+      "name": "u20_dt00625",
+      "mode": "uniform",
+      "ratio": null,
+      "dt_us": 0.0625,
+      "T_us": 200,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 160,
+      "refine_start_um": 200
+    },
+    {
+      "name": "u20_dt003125",
+      "mode": "uniform",
+      "ratio": null,
+      "dt_us": 0.03125,
+      "T_us": 200,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 320,
+      "refine_start_um": 200
+    },
+    {
+      "name": "bg30_dt00625",
+      "mode": "local",
+      "ratio": 1.5,
+      "dt_us": 0.0625,
+      "T_us": 200,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 160,
+      "refine_start_um": 200
+    },
+    {
+      "name": "bg25_dt00625",
+      "mode": "local",
+      "ratio": 1.25,
+      "dt_us": 0.0625,
+      "T_us": 200,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 160,
+      "refine_start_um": 200
+    }
+  ],
+  "cost": {
+    "reference": "prepared_motion_20261113/u20_dt1",
+    "wall_s": 54.656999999890104,
+    "dt_us": 1,
+    "margin": 1.3
+  },
+  "per_case_timeout_s": 2400,
+  "whole_compute_budget_s": 6600,
+  "gates": {
+    "balance": 1e-10,
+    "energy": 1e-07,
+    "force_ratio": 1.000001,
+    "time": 0.02,
+    "space": 0.1
+  },
+  "observation_times_s": [
+    1e-05,
+    5e-05,
+    0.0002
+  ],
+  "environment": {
+    "VF_THREADS": "2",
+    "inherited_VF": "excluded"
+  },
+  "scope": "Only numerical background spacing changes; fine20um, physical cut240um and all model parameters fixed. Uniform20 comparator time pair required; no claim of full dx convergence or experimental validation."
+}

@@ -1,0 +1,1253 @@
+{
+  "attempts": 11,
+  "completed": 11,
+  "native_checks": 24,
+  "observer_diagnostics": {
+    "control_default": {
+      "accepted_steps": 3200,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.17565979724386482,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 4.8054387546191345e-15,
+      "native_inertial_BE_loss_J": 3.226182852494604e-16
+    },
+    "guard_omitted": {
+      "accepted_steps": 1,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.000552644493019213,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 7.795425639627609e-21,
+      "native_inertial_BE_loss_J": 1.4791014754765415e-18
+    },
+    "guard_explicit2": {
+      "accepted_steps": 1,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.000552644493019213,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 7.795425639627609e-21,
+      "native_inertial_BE_loss_J": 1.4791014754765415e-18
+    },
+    "guard_bg30": {
+      "accepted_steps": 1,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.0004070507893499154,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 7.795706122821634e-21,
+      "native_inertial_BE_loss_J": 1.479098994074185e-18
+    },
+    "guard_bg25": {
+      "accepted_steps": 1,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.000522976577577982,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 7.795896175554533e-21,
+      "native_inertial_BE_loss_J": 1.4790977860059446e-18
+    },
+    "guard_uniform": {
+      "accepted_steps": 1,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.00036949533142428495,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 7.800976157532908e-21,
+      "native_inertial_BE_loss_J": 1.4788738265682065e-18
+    },
+    "guard_uniform_fine": {
+      "accepted_steps": 1,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.00022861714863136296,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 9.790082406624876e-22,
+      "native_inertial_BE_loss_J": 3.709006379380649e-19
+    },
+    "u20_dt00625": {
+      "accepted_steps": 3200,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.19757214437675066,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 4.811835449458135e-15,
+      "native_inertial_BE_loss_J": 3.622299639505369e-16
+    },
+    "u20_dt003125": {
+      "accepted_steps": 6400,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.023249851706154484,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 5.06738158459931e-15,
+      "native_inertial_BE_loss_J": 1.957288520935741e-16
+    },
+    "bg30_dt00625": {
+      "accepted_steps": 3200,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.1805954119113955,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 4.7627343310038405e-15,
+      "native_inertial_BE_loss_J": 3.5597448434484966e-16
+    },
+    "bg25_dt00625": {
+      "accepted_steps": 3200,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.18137682249543693,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 4.748720239394595e-15,
+      "native_inertial_BE_loss_J": 3.681548867412505e-16
+    }
+  },
+  "independent_mechanical_audits": {
+    "control_default": [
+      {
+        "step": 1,
+        "inertial_force": 5.598967854307981e-16,
+        "viscous_force": 2.51305621137664e-14,
+        "viscous_action": 1.7371334866738138e-15,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 2.284133431604352e-11,
+        "passed": true
+      },
+      {
+        "step": 160,
+        "inertial_force": 7.17579246589336e-15,
+        "viscous_force": 7.80513279993471e-15,
+        "viscous_action": 4.0685777221649747e-16,
+        "cut_length": 0.0,
+        "weights": 2.7755575615628914e-15,
+        "regional": 3.871292400497904e-12,
+        "passed": true
+      },
+      {
+        "step": 320,
+        "inertial_force": 1.067280246372681e-14,
+        "viscous_force": 8.805750296820972e-15,
+        "viscous_action": 5.035933462554132e-16,
+        "cut_length": 0.0,
+        "weights": 4.6629367034256575e-15,
+        "regional": 2.0552095379082962e-11,
+        "passed": true
+      },
+      {
+        "step": 480,
+        "inertial_force": 2.6446228046450507e-14,
+        "viscous_force": 9.229855307846092e-15,
+        "viscous_action": 3.3507430322102607e-16,
+        "cut_length": 0.0,
+        "weights": 3.774758283725532e-15,
+        "regional": 6.621516222087931e-12,
+        "passed": true
+      },
+      {
+        "step": 640,
+        "inertial_force": 2.4713656699733647e-14,
+        "viscous_force": 8.780323042970546e-15,
+        "viscous_action": 2.2142979458653566e-16,
+        "cut_length": 0.0,
+        "weights": 4.9404924595819466e-15,
+        "regional": 1.6854418902194455e-11,
+        "passed": true
+      },
+      {
+        "step": 800,
+        "inertial_force": 1.4687255954602033e-14,
+        "viscous_force": 4.5343641042883384e-15,
+        "viscous_action": 8.694027863701658e-16,
+        "cut_length": 0.0,
+        "weights": 4.218847493575595e-15,
+        "regional": 2.4770775254907813e-11,
+        "passed": true
+      },
+      {
+        "step": 960,
+        "inertial_force": 2.3463369930020958e-14,
+        "viscous_force": 1.025468094392774e-14,
+        "viscous_action": 5.931830761780479e-16,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 4.982092746913403e-11,
+        "passed": true
+      },
+      {
+        "step": 1120,
+        "inertial_force": 4.082644485228011e-14,
+        "viscous_force": 9.413841288271458e-15,
+        "viscous_action": 2.3227052441783914e-15,
+        "cut_length": 0.0,
+        "weights": 4.6629367034256575e-15,
+        "regional": 8.213808302557983e-12,
+        "passed": true
+      },
+      {
+        "step": 1280,
+        "inertial_force": 2.083211495796521e-14,
+        "viscous_force": 5.4877405826976986e-15,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 3.774758283725532e-15,
+        "regional": 5.682734240344873e-12,
+        "passed": true
+      },
+      {
+        "step": 1440,
+        "inertial_force": 1.4286474857322507e-14,
+        "viscous_force": 8.21953110157846e-15,
+        "viscous_action": 1.8314965397689838e-15,
+        "cut_length": 0.0,
+        "weights": 3.3306690738754696e-15,
+        "regional": 2.472383164306988e-12,
+        "passed": true
+      },
+      {
+        "step": 1600,
+        "inertial_force": 9.191935358557199e-15,
+        "viscous_force": 7.790677117045281e-15,
+        "viscous_action": 2.0273044239382082e-15,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 1.6511438284059754e-11,
+        "passed": true
+      },
+      {
+        "step": 1760,
+        "inertial_force": 5.938347324714147e-14,
+        "viscous_force": 8.256284532760418e-15,
+        "viscous_action": 2.532183401625082e-15,
+        "cut_length": 0.0,
+        "weights": 3.6637359812630166e-15,
+        "regional": 6.0372676419161824e-12,
+        "passed": true
+      },
+      {
+        "step": 1920,
+        "inertial_force": 3.7730516589330425e-14,
+        "viscous_force": 2.9343535391333083e-15,
+        "viscous_action": 1.8174361576575464e-16,
+        "cut_length": 0.0,
+        "weights": 5.329070518200751e-15,
+        "regional": 9.369500392368564e-12,
+        "passed": true
+      },
+      {
+        "step": 2080,
+        "inertial_force": 3.256401718771361e-14,
+        "viscous_force": 7.34195012858335e-15,
+        "viscous_action": 4.657887238989542e-16,
+        "cut_length": 0.0,
+        "weights": 3.9968028886505635e-15,
+        "regional": 3.575376982529429e-11,
+        "passed": true
+      },
+      {
+        "step": 2240,
+        "inertial_force": 2.997360553364988e-14,
+        "viscous_force": 2.8915034330302095e-15,
+        "viscous_action": 6.968825984619736e-16,
+        "cut_length": 0.0,
+        "weights": 3.9968028886505635e-15,
+        "regional": 1.0864102244453881e-11,
+        "passed": true
+      },
+      {
+        "step": 2400,
+        "inertial_force": 1.712306660649904e-14,
+        "viscous_force": 2.031985623026571e-14,
+        "viscous_action": 2.559412739657998e-15,
+        "cut_length": 0.0,
+        "weights": 3.6637359812630166e-15,
+        "regional": 1.9270299166944224e-11,
+        "passed": true
+      },
+      {
+        "step": 2560,
+        "inertial_force": 5.99194635366241e-14,
+        "viscous_force": 2.562698615151033e-15,
+        "viscous_action": 3.539888123740706e-16,
+        "cut_length": 0.0,
+        "weights": 4.3298697960381105e-15,
+        "regional": 1.933699296402139e-11,
+        "passed": true
+      },
+      {
+        "step": 2720,
+        "inertial_force": 6.345964334622965e-14,
+        "viscous_force": 5.3146504759905225e-15,
+        "viscous_action": 3.6150521150203283e-16,
+        "cut_length": 0.0,
+        "weights": 4.551914400963142e-15,
+        "regional": 6.196891305130186e-12,
+        "passed": true
+      },
+      {
+        "step": 2880,
+        "inertial_force": 1.6329382488501023e-14,
+        "viscous_force": 1.3306614529785294e-14,
+        "viscous_action": 8.779758158971326e-16,
+        "cut_length": 0.0,
+        "weights": 4.3298697960381105e-15,
+        "regional": 7.095103666884268e-12,
+        "passed": true
+      },
+      {
+        "step": 3040,
+        "inertial_force": 2.3271493680584136e-14,
+        "viscous_force": 2.5776869874680074e-15,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 5.218048215738236e-15,
+        "regional": 9.191777822117328e-12,
+        "passed": true
+      },
+      {
+        "step": 3200,
+        "inertial_force": 3.842019404060981e-14,
+        "viscous_force": 9.65627730697938e-15,
+        "viscous_action": 8.639426304187218e-16,
+        "cut_length": 0.0,
+        "weights": 3.774758283725532e-15,
+        "regional": 9.084328871600347e-12,
+        "passed": true
+      }
+    ],
+    "guard_omitted": [
+      {
+        "step": 1,
+        "inertial_force": 5.598967854307981e-16,
+        "viscous_force": 2.51305621137664e-14,
+        "viscous_action": 1.7371334866738138e-15,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 2.284133431604352e-11,
+        "passed": true
+      }
+    ],
+    "guard_explicit2": [
+      {
+        "step": 1,
+        "inertial_force": 5.598967854307981e-16,
+        "viscous_force": 2.51305621137664e-14,
+        "viscous_action": 1.7371334866738138e-15,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 2.284133431604352e-11,
+        "passed": true
+      }
+    ],
+    "guard_bg30": [
+      {
+        "step": 1,
+        "inertial_force": 3.7326452362127333e-16,
+        "viscous_force": 2.6158630563858602e-14,
+        "viscous_action": 1.3510552113469758e-15,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 1.9667495817559035e-11,
+        "passed": true
+      }
+    ],
+    "guard_bg25": [
+      {
+        "step": 1,
+        "inertial_force": 3.7326452362085297e-16,
+        "viscous_force": 2.478787263032973e-14,
+        "viscous_action": 1.544025456645337e-15,
+        "cut_length": 0.0,
+        "weights": 4.884981308350689e-15,
+        "regional": 1.123188831048388e-11,
+        "passed": true
+      }
+    ],
+    "guard_uniform": [
+      {
+        "step": 1,
+        "inertial_force": 1.8606264109788114e-16,
+        "viscous_force": 2.480362872352906e-14,
+        "viscous_action": 1.9287749874733298e-16,
+        "cut_length": 0.0,
+        "weights": 5.051514762044462e-15,
+        "regional": 1.6145827946761117e-11,
+        "passed": true
+      }
+    ],
+    "guard_uniform_fine": [
+      {
+        "step": 1,
+        "inertial_force": 1.8572192465077373e-16,
+        "viscous_force": 4.231230371061933e-14,
+        "viscous_action": 1.9211186210679316e-16,
+        "cut_length": 0.0,
+        "weights": 5.051514762044462e-15,
+        "regional": 1.17312781198482e-10,
+        "passed": true
+      }
+    ],
+    "u20_dt00625": [
+      {
+        "step": 1,
+        "inertial_force": 1.8606264109788114e-16,
+        "viscous_force": 2.480362872352906e-14,
+        "viscous_action": 1.9287749874733298e-16,
+        "cut_length": 0.0,
+        "weights": 5.051514762044462e-15,
+        "regional": 1.6145827946761117e-11,
+        "passed": true
+      },
+      {
+        "step": 160,
+        "inertial_force": 7.326345200535075e-15,
+        "viscous_force": 7.006995448695972e-15,
+        "viscous_action": 9.150974794294505e-16,
+        "cut_length": 0.0,
+        "weights": 5.662137425588298e-15,
+        "regional": 6.334952585912502e-12,
+        "passed": true
+      },
+      {
+        "step": 320,
+        "inertial_force": 8.07486706208426e-15,
+        "viscous_force": 9.948742974570078e-15,
+        "viscous_action": 2.023055917274067e-15,
+        "cut_length": 0.0,
+        "weights": 2.886579864025407e-15,
+        "regional": 2.0690400097537503e-11,
+        "passed": true
+      },
+      {
+        "step": 480,
+        "inertial_force": 2.066593020815155e-14,
+        "viscous_force": 9.602878057131246e-15,
+        "viscous_action": 1.173977222728808e-15,
+        "cut_length": 0.0,
+        "weights": 4.440892098500626e-15,
+        "regional": 2.7909867447636512e-12,
+        "passed": true
+      },
+      {
+        "step": 640,
+        "inertial_force": 1.8849390141927193e-14,
+        "viscous_force": 8.217964306492394e-15,
+        "viscous_action": 2.0099683195895456e-16,
+        "cut_length": 0.0,
+        "weights": 3.3306690738754696e-15,
+        "regional": 7.345056223374958e-12,
+        "passed": true
+      },
+      {
+        "step": 800,
+        "inertial_force": 2.0162713330334602e-14,
+        "viscous_force": 3.8300858013487524e-15,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 5.10702591327572e-15,
+        "regional": 1.2113188343431323e-11,
+        "passed": true
+      },
+      {
+        "step": 960,
+        "inertial_force": 2.3261943497833542e-14,
+        "viscous_force": 6.8834738989644425e-15,
+        "viscous_action": 6.676152818123962e-16,
+        "cut_length": 0.0,
+        "weights": 4.9960036108132044e-15,
+        "regional": 1.0169691436269113e-10,
+        "passed": true
+      },
+      {
+        "step": 1120,
+        "inertial_force": 2.3069579225581648e-14,
+        "viscous_force": 7.155266863960012e-15,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 6.772360450213455e-15,
+        "regional": 1.4123007652860757e-11,
+        "passed": true
+      },
+      {
+        "step": 1280,
+        "inertial_force": 1.4661148862303056e-14,
+        "viscous_force": 5.762586367970294e-15,
+        "viscous_action": 2.2369748059344622e-15,
+        "cut_length": 0.0,
+        "weights": 2.886579864025407e-15,
+        "regional": 6.073442182488135e-12,
+        "passed": true
+      },
+      {
+        "step": 1440,
+        "inertial_force": 1.6124224307681727e-14,
+        "viscous_force": 5.813958134177285e-15,
+        "viscous_action": 3.6620095482621443e-16,
+        "cut_length": 0.0,
+        "weights": 3.3306690738754696e-15,
+        "regional": 1.7927193962698522e-11,
+        "passed": true
+      },
+      {
+        "step": 1600,
+        "inertial_force": 1.9741645470280603e-14,
+        "viscous_force": 6.337296399232823e-15,
+        "viscous_action": 5.876431892943623e-16,
+        "cut_length": 0.0,
+        "weights": 3.219646771412954e-15,
+        "regional": 1.1329927838433083e-11,
+        "passed": true
+      },
+      {
+        "step": 1760,
+        "inertial_force": 3.3124788507934635e-14,
+        "viscous_force": 1.9408199949142044e-14,
+        "viscous_action": 1.5528461728529488e-16,
+        "cut_length": 0.0,
+        "weights": 4.107825191113079e-15,
+        "regional": 5.800854226983799e-12,
+        "passed": true
+      },
+      {
+        "step": 1920,
+        "inertial_force": 2.0180868877168403e-14,
+        "viscous_force": 7.283230550807505e-15,
+        "viscous_action": 2.1367518032984176e-16,
+        "cut_length": 0.0,
+        "weights": 2.831068712794149e-15,
+        "regional": 2.2044168284878464e-12,
+        "passed": true
+      },
+      {
+        "step": 2080,
+        "inertial_force": 2.0665175982902654e-14,
+        "viscous_force": 5.054732595689971e-15,
+        "viscous_action": 2.146126357737623e-16,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 6.850856417549873e-11,
+        "passed": true
+      },
+      {
+        "step": 2240,
+        "inertial_force": 2.2973134838402442e-14,
+        "viscous_force": 8.327349276702219e-15,
+        "viscous_action": 1.671403594502993e-15,
+        "cut_length": 0.0,
+        "weights": 3.9968028886505635e-15,
+        "regional": 1.4377256573584027e-10,
+        "passed": true
+      },
+      {
+        "step": 2400,
+        "inertial_force": 1.5931327624885803e-14,
+        "viscous_force": 2.7375125414302195e-15,
+        "viscous_action": 2.678520636788905e-16,
+        "cut_length": 0.0,
+        "weights": 4.440892098500626e-15,
+        "regional": 1.3192850072129837e-11,
+        "passed": true
+      },
+      {
+        "step": 2560,
+        "inertial_force": 3.731360769804041e-14,
+        "viscous_force": 8.222911472516581e-15,
+        "viscous_action": 6.437731860090508e-16,
+        "cut_length": 0.0,
+        "weights": 3.6637359812630166e-15,
+        "regional": 7.951070706947845e-12,
+        "passed": true
+      },
+      {
+        "step": 2720,
+        "inertial_force": 5.763139041908263e-14,
+        "viscous_force": 1.007869137463988e-14,
+        "viscous_action": 1.294957879624365e-15,
+        "cut_length": 0.0,
+        "weights": 4.218847493575595e-15,
+        "regional": 6.811528160981671e-12,
+        "passed": true
+      },
+      {
+        "step": 2880,
+        "inertial_force": 2.1212287043148404e-14,
+        "viscous_force": 3.082693508808488e-15,
+        "viscous_action": 3.9709630960472473e-16,
+        "cut_length": 0.0,
+        "weights": 3.9968028886505635e-15,
+        "regional": 6.20533417415897e-12,
+        "passed": true
+      },
+      {
+        "step": 3040,
+        "inertial_force": 1.8214869648873946e-14,
+        "viscous_force": 8.995912143478893e-15,
+        "viscous_action": 5.836644288601781e-16,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 3.321704726261647e-11,
+        "passed": true
+      },
+      {
+        "step": 3200,
+        "inertial_force": 3.2585869818019434e-14,
+        "viscous_force": 1.7267599084208903e-14,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 9.066745127575908e-12,
+        "passed": true
+      }
+    ],
+    "u20_dt003125": [
+      {
+        "step": 1,
+        "inertial_force": 1.8572192465077373e-16,
+        "viscous_force": 4.231230371061933e-14,
+        "viscous_action": 1.9211186210679316e-16,
+        "cut_length": 0.0,
+        "weights": 5.051514762044462e-15,
+        "regional": 1.17312781198482e-10,
+        "passed": true
+      },
+      {
+        "step": 320,
+        "inertial_force": 9.821866991380869e-15,
+        "viscous_force": 1.1276368977065157e-14,
+        "viscous_action": 7.8291639646444865e-16,
+        "cut_length": 0.0,
+        "weights": 4.107825191113079e-15,
+        "regional": 5.447492773905365e-12,
+        "passed": true
+      },
+      {
+        "step": 640,
+        "inertial_force": 1.974670983497226e-14,
+        "viscous_force": 7.93666302996062e-15,
+        "viscous_action": 2.384157513216632e-15,
+        "cut_length": 0.0,
+        "weights": 4.107825191113079e-15,
+        "regional": 6.24967262338115e-12,
+        "passed": true
+      },
+      {
+        "step": 960,
+        "inertial_force": 4.611518832281385e-14,
+        "viscous_force": 7.884196541197886e-15,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 5.440092820663267e-15,
+        "regional": 4.542053987903376e-12,
+        "passed": true
+      },
+      {
+        "step": 1280,
+        "inertial_force": 3.480763461840788e-14,
+        "viscous_force": 8.4781996909064e-15,
+        "viscous_action": 1.4879659151982427e-15,
+        "cut_length": 0.0,
+        "weights": 3.9968028886505635e-15,
+        "regional": 2.865194198551529e-11,
+        "passed": true
+      },
+      {
+        "step": 1600,
+        "inertial_force": 3.7283555578356645e-14,
+        "viscous_force": 9.847690588629433e-15,
+        "viscous_action": 1.1305156216686537e-16,
+        "cut_length": 0.0,
+        "weights": 4.218847493575595e-15,
+        "regional": 1.4124712558260599e-11,
+        "passed": true
+      },
+      {
+        "step": 1920,
+        "inertial_force": 4.2297143744904973e-14,
+        "viscous_force": 1.6385735086570575e-14,
+        "viscous_action": 7.634777348847647e-16,
+        "cut_length": 0.0,
+        "weights": 2.9976021664879227e-15,
+        "regional": 6.815139089405643e-11,
+        "passed": true
+      },
+      {
+        "step": 2240,
+        "inertial_force": 4.279007588689277e-14,
+        "viscous_force": 5.96472211428326e-15,
+        "viscous_action": 6.6596517122211e-16,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 4.522269745413446e-12,
+        "passed": true
+      },
+      {
+        "step": 2560,
+        "inertial_force": 2.967704762619601e-14,
+        "viscous_force": 4.985697303937365e-15,
+        "viscous_action": 6.503932035031425e-16,
+        "cut_length": 0.0,
+        "weights": 4.218847493575595e-15,
+        "regional": 1.1008155532215343e-11,
+        "passed": true
+      },
+      {
+        "step": 2880,
+        "inertial_force": 2.8014159121414028e-14,
+        "viscous_force": 1.0369369022979424e-14,
+        "viscous_action": 2.4302782439441854e-15,
+        "cut_length": 0.0,
+        "weights": 5.10702591327572e-15,
+        "regional": 3.9087955614650435e-11,
+        "passed": true
+      },
+      {
+        "step": 3200,
+        "inertial_force": 3.391386397840214e-14,
+        "viscous_force": 1.045512747801588e-14,
+        "viscous_action": 6.065328239458217e-16,
+        "cut_length": 0.0,
+        "weights": 4.218847493575595e-15,
+        "regional": 1.05012541966078e-11,
+        "passed": true
+      },
+      {
+        "step": 3520,
+        "inertial_force": 4.529274228056076e-14,
+        "viscous_force": 1.3540313070407952e-14,
+        "viscous_action": 1.6744663835947686e-15,
+        "cut_length": 0.0,
+        "weights": 4.496403249731884e-15,
+        "regional": 6.708972432192427e-12,
+        "passed": true
+      },
+      {
+        "step": 3840,
+        "inertial_force": 7.977777306560039e-14,
+        "viscous_force": 5.112704916357272e-15,
+        "viscous_action": 1.8600085851397544e-16,
+        "cut_length": 0.0,
+        "weights": 5.440092820663267e-15,
+        "regional": 6.238853655938696e-12,
+        "passed": true
+      },
+      {
+        "step": 4160,
+        "inertial_force": 4.973008826700836e-14,
+        "viscous_force": 1.0943366272121e-14,
+        "viscous_action": 1.2524147827761464e-15,
+        "cut_length": 0.0,
+        "weights": 4.385380947269368e-15,
+        "regional": 6.025550432539837e-11,
+        "passed": true
+      },
+      {
+        "step": 4480,
+        "inertial_force": 3.07236772781859e-14,
+        "viscous_force": 8.860084615460842e-15,
+        "viscous_action": 4.514246078036513e-16,
+        "cut_length": 2.220446049250313e-16,
+        "weights": 3.1086244689504383e-15,
+        "regional": 3.161011795438693e-11,
+        "passed": true
+      },
+      {
+        "step": 4800,
+        "inertial_force": 1.8883913169667645e-14,
+        "viscous_force": 4.2633291272972134e-15,
+        "viscous_action": 8.548176223166918e-16,
+        "cut_length": 0.0,
+        "weights": 3.219646771412954e-15,
+        "regional": 3.7131978239238233e-11,
+        "passed": true
+      },
+      {
+        "step": 5120,
+        "inertial_force": 9.134270034820998e-14,
+        "viscous_force": 6.736712100132704e-15,
+        "viscous_action": 1.2878295958687097e-15,
+        "cut_length": 0.0,
+        "weights": 3.9968028886505635e-15,
+        "regional": 1.626701481456815e-11,
+        "passed": true
+      },
+      {
+        "step": 5440,
+        "inertial_force": 6.31943008681902e-14,
+        "viscous_force": 1.1979689268699139e-14,
+        "viscous_action": 4.985770239818003e-16,
+        "cut_length": 0.0,
+        "weights": 4.107825191113079e-15,
+        "regional": 6.561072693975913e-11,
+        "passed": true
+      },
+      {
+        "step": 5760,
+        "inertial_force": 5.662522292639728e-14,
+        "viscous_force": 3.655828940385891e-15,
+        "viscous_action": 1.996656913691264e-15,
+        "cut_length": 0.0,
+        "weights": 2.1094237467877974e-15,
+        "regional": 1.1418148508607187e-12,
+        "passed": true
+      },
+      {
+        "step": 6080,
+        "inertial_force": 3.914315289899155e-14,
+        "viscous_force": 8.553780710141288e-15,
+        "viscous_action": 3.436707407822313e-16,
+        "cut_length": 0.0,
+        "weights": 4.440892098500626e-15,
+        "regional": 1.9016084767794748e-10,
+        "passed": true
+      },
+      {
+        "step": 6400,
+        "inertial_force": 4.214403458117072e-14,
+        "viscous_force": 1.6168217011371037e-14,
+        "viscous_action": 1.2241787254564274e-15,
+        "cut_length": 0.0,
+        "weights": 2.9976021664879227e-15,
+        "regional": 8.44657306207332e-12,
+        "passed": true
+      }
+    ],
+    "bg30_dt00625": [
+      {
+        "step": 1,
+        "inertial_force": 3.7326452362127333e-16,
+        "viscous_force": 2.6158630563858602e-14,
+        "viscous_action": 1.3510552113469758e-15,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 1.9667495817559035e-11,
+        "passed": true
+      },
+      {
+        "step": 160,
+        "inertial_force": 5.612153963291415e-15,
+        "viscous_force": 5.0914983555274146e-15,
+        "viscous_action": 8.593441658370871e-16,
+        "cut_length": 0.0,
+        "weights": 4.218847493575595e-15,
+        "regional": 1.5499025625077818e-12,
+        "passed": true
+      },
+      {
+        "step": 320,
+        "inertial_force": 1.2882275604745263e-14,
+        "viscous_force": 1.2100183598748749e-14,
+        "viscous_action": 3.077054400799811e-16,
+        "cut_length": 0.0,
+        "weights": 2.9976021664879227e-15,
+        "regional": 1.1351665529676995e-11,
+        "passed": true
+      },
+      {
+        "step": 480,
+        "inertial_force": 1.826364095918883e-14,
+        "viscous_force": 7.376488292960193e-15,
+        "viscous_action": 2.7149826692308806e-16,
+        "cut_length": 0.0,
+        "weights": 3.774758283725532e-15,
+        "regional": 6.029280149479726e-12,
+        "passed": true
+      },
+      {
+        "step": 640,
+        "inertial_force": 1.894207188437818e-14,
+        "viscous_force": 7.417927252383096e-15,
+        "viscous_action": 6.437791808991477e-16,
+        "cut_length": 0.0,
+        "weights": 3.219646771412954e-15,
+        "regional": 1.4196074059503905e-11,
+        "passed": true
+      },
+      {
+        "step": 800,
+        "inertial_force": 1.011833965641132e-14,
+        "viscous_force": 5.596929931622509e-15,
+        "viscous_action": 1.5169826068496496e-16,
+        "cut_length": 0.0,
+        "weights": 4.884981308350689e-15,
+        "regional": 1.8019520974438575e-11,
+        "passed": true
+      },
+      {
+        "step": 960,
+        "inertial_force": 1.3067095017309939e-14,
+        "viscous_force": 4.594552649062138e-15,
+        "viscous_action": 0.0,
+        "cut_length": 2.220446049250313e-16,
+        "weights": 4.440892098500626e-15,
+        "regional": 2.7657623217717387e-11,
+        "passed": true
+      },
+      {
+        "step": 1120,
+        "inertial_force": 1.8609862320512765e-14,
+        "viscous_force": 7.234567979216471e-15,
+        "viscous_action": 5.06736772873299e-16,
+        "cut_length": 0.0,
+        "weights": 4.107825191113079e-15,
+        "regional": 6.318945906757412e-12,
+        "passed": true
+      },
+      {
+        "step": 1280,
+        "inertial_force": 2.168511305852069e-14,
+        "viscous_force": 2.1569027185997193e-15,
+        "viscous_action": 0.0,
+        "cut_length": 2.220446049250313e-16,
+        "weights": 3.7192471324942744e-15,
+        "regional": 3.5870318097905797e-12,
+        "passed": true
+      },
+      {
+        "step": 1440,
+        "inertial_force": 6.482935691773195e-15,
+        "viscous_force": 1.2881256045851078e-14,
+        "viscous_action": 7.629989915427418e-16,
+        "cut_length": 0.0,
+        "weights": 4.3298697960381105e-15,
+        "regional": 2.750057253376991e-12,
+        "passed": true
+      },
+      {
+        "step": 1600,
+        "inertial_force": 1.1167987180413616e-14,
+        "viscous_force": 6.0504906813727175e-15,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 5.329070518200751e-15,
+        "regional": 3.3538700128825485e-12,
+        "passed": true
+      },
+      {
+        "step": 1760,
+        "inertial_force": 1.6758746477560884e-14,
+        "viscous_force": 5.592481844703624e-15,
+        "viscous_action": 9.280721477972108e-16,
+        "cut_length": 0.0,
+        "weights": 5.329070518200751e-15,
+        "regional": 8.957286624880449e-12,
+        "passed": true
+      },
+      {
+        "step": 1920,
+        "inertial_force": 5.0608561129521184e-14,
+        "viscous_force": 1.2273116679291543e-14,
+        "viscous_action": 8.995287103812672e-16,
+        "cut_length": 0.0,
+        "weights": 4.3298697960381105e-15,
+        "regional": 7.919203905383591e-12,
+        "passed": true
+      },
+      {
+        "step": 2080,
+        "inertial_force": 3.7345996264562e-14,
+        "viscous_force": 3.3853475053836e-15,
+        "viscous_action": 3.636443740198339e-16,
+        "cut_length": 0.0,
+        "weights": 4.551914400963142e-15,
+        "regional": 5.869404061998682e-12,
+        "passed": true
+      },
+      {
+        "step": 2240,
+        "inertial_force": 9.92112702768047e-15,
+        "viscous_force": 5.956318880190805e-15,
+        "viscous_action": 2.5509834872905796e-16,
+        "cut_length": 0.0,
+        "weights": 4.052314039881821e-15,
+        "regional": 8.47687544448795e-12,
+        "passed": true
+      },
+      {
+        "step": 2400,
+        "inertial_force": 1.5729703982215588e-14,
+        "viscous_force": 2.0610717053026444e-15,
+        "viscous_action": 1.0390591427497488e-15,
+        "cut_length": 0.0,
+        "weights": 3.7192471324942744e-15,
+        "regional": 1.7412547017867787e-11,
+        "passed": true
+      },
+      {
+        "step": 2560,
+        "inertial_force": 7.650655761327083e-14,
+        "viscous_force": 1.3575590430651176e-14,
+        "viscous_action": 8.662345525200357e-16,
+        "cut_length": 0.0,
+        "weights": 3.3306690738754696e-15,
+        "regional": 5.173937796414852e-11,
+        "passed": true
+      },
+      {
+        "step": 2720,
+        "inertial_force": 2.544301412469059e-14,
+        "viscous_force": 9.348087615069067e-15,
+        "viscous_action": 1.6662919380938595e-16,
+        "cut_length": 0.0,
+        "weights": 3.3861802251067274e-15,
+        "regional": 7.1132904481862116e-12,
+        "passed": true
+      },
+      {
+        "step": 2880,
+        "inertial_force": 1.8958918189372824e-14,
+        "viscous_force": 1.524680875896504e-14,
+        "viscous_action": 1.5712175383561168e-15,
+        "cut_length": 0.0,
+        "weights": 3.552713678800501e-15,
+        "regional": 1.461898590757826e-11,
+        "passed": true
+      },
+      {
+        "step": 3040,
+        "inertial_force": 1.5655359909370272e-14,
+        "viscous_force": 2.4750222218584282e-15,
+        "viscous_action": 7.772256589280153e-16,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 9.37086241023776e-12,
+        "passed": true
+      },
+      {
+        "step": 3200,
+        "inertial_force": 2.4770714287342177e-14,
+        "viscous_force": 1.525812601480723e-14,
+        "viscous_action": 5.280014234029555e-16,
+        "cut_length": 0.0,
+        "weights": 3.774758283725532e-15,
+        "regional": 1.675885540620153e-12,
+        "passed": true
+      }
+    ],
+    "bg25_dt00625": [
+      {
+        "step": 1,
+        "inertial_force": 3.7326452362085297e-16,
+        "viscous_force": 2.478787263032973e-14,
+        "viscous_action": 1.544025456645337e-15,
+        "cut_length": 0.0,
+        "weights": 4.884981308350689e-15,
+        "regional": 1.123188831048388e-11,
+        "passed": true
+      },
+      {
+        "step": 160,
+        "inertial_force": 3.593796320665728e-15,
+        "viscous_force": 8.317809262210847e-15,
+        "viscous_action": 4.4083793245675303e-16,
+        "cut_length": 0.0,
+        "weights": 3.497202527569243e-15,
+        "regional": 7.50700091783814e-12,
+        "passed": true
+      },
+      {
+        "step": 320,
+        "inertial_force": 1.2144636008553867e-14,
+        "viscous_force": 1.1429309948853878e-14,
+        "viscous_action": 3.148621269489985e-15,
+        "cut_length": 0.0,
+        "weights": 3.774758283725532e-15,
+        "regional": 1.4621937761613945e-11,
+        "passed": true
+      },
+      {
+        "step": 480,
+        "inertial_force": 1.9161574718658215e-14,
+        "viscous_force": 1.1527911396160622e-14,
+        "viscous_action": 1.7703984597539953e-15,
+        "cut_length": 0.0,
+        "weights": 4.9960036108132044e-15,
+        "regional": 7.883579372818234e-13,
+        "passed": true
+      },
+      {
+        "step": 640,
+        "inertial_force": 2.4998018588337046e-14,
+        "viscous_force": 6.555039275801559e-15,
+        "viscous_action": 6.663469574941874e-16,
+        "cut_length": 0.0,
+        "weights": 3.219646771412954e-15,
+        "regional": 1.0551714973371817e-11,
+        "passed": true
+      },
+      {
+        "step": 800,
+        "inertial_force": 9.224435297448659e-15,
+        "viscous_force": 5.0485625199610726e-15,
+        "viscous_action": 5.873436932655721e-16,
+        "cut_length": 0.0,
+        "weights": 4.3298697960381105e-15,
+        "regional": 2.8427489453288222e-12,
+        "passed": true
+      },
+      {
+        "step": 960,
+        "inertial_force": 1.8057859863215414e-14,
+        "viscous_force": 9.509214270758245e-15,
+        "viscous_action": 1.3054193865449519e-15,
+        "cut_length": 0.0,
+        "weights": 4.551914400963142e-15,
+        "regional": 1.619203021776787e-10,
+        "passed": true
+      },
+      {
+        "step": 1120,
+        "inertial_force": 1.4306474600588283e-14,
+        "viscous_force": 4.62364943595453e-15,
+        "viscous_action": 1.3493199366240796e-15,
+        "cut_length": 0.0,
+        "weights": 3.6637359812630166e-15,
+        "regional": 5.145109389582774e-12,
+        "passed": true
+      },
+      {
+        "step": 1280,
+        "inertial_force": 3.1386124963667367e-14,
+        "viscous_force": 4.507144719610667e-15,
+        "viscous_action": 4.2725360998514376e-16,
+        "cut_length": 0.0,
+        "weights": 3.497202527569243e-15,
+        "regional": 2.0568173528108124e-12,
+        "passed": true
+      },
+      {
+        "step": 1440,
+        "inertial_force": 1.890552247605005e-14,
+        "viscous_force": 1.0454209284641015e-14,
+        "viscous_action": 3.917700179025861e-16,
+        "cut_length": 0.0,
+        "weights": 4.773959005888173e-15,
+        "regional": 1.2918122844598758e-12,
+        "passed": true
+      },
+      {
+        "step": 1600,
+        "inertial_force": 9.882045338282884e-15,
+        "viscous_force": 1.1129001909090327e-14,
+        "viscous_action": 9.610700117306885e-16,
+        "cut_length": 0.0,
+        "weights": 3.4416913763379853e-15,
+        "regional": 5.074540111625765e-12,
+        "passed": true
+      },
+      {
+        "step": 1760,
+        "inertial_force": 2.556316549065434e-14,
+        "viscous_force": 1.605337563342545e-14,
+        "viscous_action": 6.382759832685786e-16,
+        "cut_length": 0.0,
+        "weights": 3.552713678800501e-15,
+        "regional": 8.336425539699202e-12,
+        "passed": true
+      },
+      {
+        "step": 1920,
+        "inertial_force": 3.0488234249614486e-14,
+        "viscous_force": 9.3771146669264e-15,
+        "viscous_action": 1.0851523695335563e-15,
+        "cut_length": 0.0,
+        "weights": 3.3306690738754696e-15,
+        "regional": 6.108126732264694e-12,
+        "passed": true
+      },
+      {
+        "step": 2080,
+        "inertial_force": 3.5350529678724186e-14,
+        "viscous_force": 2.8887442545106275e-15,
+        "viscous_action": 6.337330710611556e-16,
+        "cut_length": 0.0,
+        "weights": 4.107825191113079e-15,
+        "regional": 7.571639325015857e-11,
+        "passed": true
+      },
+      {
+        "step": 2240,
+        "inertial_force": 9.412478454267335e-15,
+        "viscous_force": 2.6088660820929754e-15,
+        "viscous_action": 6.08112922668762e-16,
+        "cut_length": 0.0,
+        "weights": 4.218847493575595e-15,
+        "regional": 1.1980687984009587e-11,
+        "passed": true
+      },
+      {
+        "step": 2400,
+        "inertial_force": 2.2683094667123615e-14,
+        "viscous_force": 1.1992952151042175e-14,
+        "viscous_action": 9.745989742840078e-16,
+        "cut_length": 0.0,
+        "weights": 4.218847493575595e-15,
+        "regional": 3.078654457686941e-11,
+        "passed": true
+      },
+      {
+        "step": 2560,
+        "inertial_force": 3.4343315014532255e-14,
+        "viscous_force": 8.224552935512414e-15,
+        "viscous_action": 5.933070050703987e-16,
+        "cut_length": 0.0,
+        "weights": 5.329070518200751e-15,
+        "regional": 6.8112134892062264e-12,
+        "passed": true
+      },
+      {
+        "step": 2720,
+        "inertial_force": 3.51206333347346e-14,
+        "viscous_force": 7.218855338894698e-15,
+        "viscous_action": 2.012000940553293e-16,
+        "cut_length": 0.0,
+        "weights": 3.3306690738754696e-15,
+        "regional": 1.3293843993919118e-11,
+        "passed": true
+      },
+      {
+        "step": 2880,
+        "inertial_force": 1.0142910075727203e-14,
+        "viscous_force": 9.281154108290018e-15,
+        "viscous_action": 3.447377073988005e-16,
+        "cut_length": 0.0,
+        "weights": 5.995204332975845e-15,
+        "regional": 1.1055244126701416e-11,
+        "passed": true
+      },
+      {
+        "step": 3040,
+        "inertial_force": 3.360928202969772e-14,
+        "viscous_force": 8.043677336414178e-15,
+        "viscous_action": 5.306240800355123e-16,
+        "cut_length": 0.0,
+        "weights": 3.4416913763379853e-15,
+        "regional": 2.4964026361555425e-11,
+        "passed": true
+      },
+      {
+        "step": 3200,
+        "inertial_force": 6.048967269813449e-14,
+        "viscous_force": 6.36143741962433e-15,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 3.885780586188048e-15,
+        "regional": 6.007912260776069e-12,
+        "passed": true
+      }
+    ]
+  },
+  "full_C1_complete": false,
+  "scope": "Sampled independent SI inertia/viscosity/clipped regional work and recovered traction; exact discrete identity is not continuum traction validation. Native dynamics unchanged."
+}
