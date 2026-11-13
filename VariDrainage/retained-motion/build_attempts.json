@@ -1,0 +1,39 @@
+[
+  {
+    "name": "configure",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "f",
+      "-y",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_motion",
+      "-p",
+      "windows",
+      "-a",
+      "x64",
+      "-m",
+      "release",
+      "--sdk=C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\msvc"
+    ],
+    "returncode": 0,
+    "wall_s": 1.875,
+    "log": "results\\logs\\retained_motion_20261113\\configure.log",
+    "log_sha256": "91109ff0f6d81332f8d319ad522f67f9698ed46db9d646b75b5079789c0280f7"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "build",
+      "-y",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_motion",
+      "-j2",
+      "tf_retained_face_bench"
+    ],
+    "returncode": 0,
+    "wall_s": 17.155999999959022,
+    "log": "results\\logs\\retained_motion_20261113\\build.log",
+    "log_sha256": "5ee91dfdb5d57d62e17720f92405fd45709716687ac86e45d66a3847128e46bc"
+  }
+]
