@@ -1,0 +1,200 @@
+{
+  "source_commit": "7d5d06f484a93cae05b890399efb99276a42885e",
+  "sources": {
+    "thin_film\\scripts\\native_force_binding\\run.py": "0227578de623b7b492509ce85d676e807fe2517dcc1641a4251cead608f8dc8c",
+    "thin_film\\scripts\\native_force_binding\\PLAN.md": "d1895a85a1c6339e047d17c17b6d46dea795083820d77d18e68ffc7587f07f64",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdge.h": "ace17ac5bcf3e355ad4aac3ff631c6acd5d234044a6144222fc862ff32487b20",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film\\include\\vf\\thinfilm\\MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912",
+    "thin_film\\include\\vf\\thinfilm\\ThinFilm.h": "28db3d0cd8d8faa0d4722929e4f502708b2a915f5801dc351db2e100ea2a3a35",
+    "thin_film\\include\\vf\\thinfilm\\Units.h": "00c7b29cfcbe5742288a240790a1699216c38d2674e615d6fb919e3a036a8e85",
+    "thin_film\\include\\vf\\thinfilm\\VoronoiDifferentiation.h": "1dfa0778bdc7aa6b3cba4e8ba7c44bd4e7c3081cff2e37745a0e23410617cd94",
+    "thin_film\\bench\\tf_curved_response_probe.cpp": "39c36be6f2a69f5379b528722ad29652da7c35299691e8d237a9f77d4d291a62"
+  },
+  "binary_sha256": "109e123c0006608e14daad8cef31075fefad45be1faddf7491a13a32ebf2ffa4",
+  "original_fixture_references": [
+    {
+      "case": "flat16",
+      "files": [
+        {
+          "path": "results\\local-runs\\curved_response_20261113\\flat16\\input.json",
+          "bytes": 186,
+          "sha256": "97a8a5152dc5ea58bde1d985c0b72d8996e7d6e86859b78575de729cd9aae22e"
+        },
+        {
+          "path": "results\\local-runs\\curved_response_20261113\\flat16\\response.csv",
+          "bytes": 3477,
+          "sha256": "a591c0020475c7e8180f6ec1ee07900f15148f6a185182fd5b06410e9f632e9f"
+        },
+        {
+          "path": "results\\local-runs\\curved_response_20261113\\flat16\\response.meta.json",
+          "bytes": 246,
+          "sha256": "ea3be683230988f73526baef6c9ae09dc203106567874a68cc0f16ce6877d96a"
+        },
+        {
+          "path": "results\\local-runs\\curved_response_20261113\\flat16\\response.nodes.csv",
+          "bytes": 24954,
+          "sha256": "565a94c7973c0d3ecc1dc367869f5aec9586f63ec7af8a0ac48468fbbf6048da"
+        }
+      ]
+    },
+    {
+      "case": "flat32",
+      "files": [
+        {
+          "path": "results\\local-runs\\curved_response_20261113\\flat32\\input.json",
+          "bytes": 186,
+          "sha256": "07eef776dd8261aa812f9626423751d8c22a5c88d1972ed4ef1199d36fd30a09"
+        },
+        {
+          "path": "results\\local-runs\\curved_response_20261113\\flat32\\response.csv",
+          "bytes": 3475,
+          "sha256": "de528c66d3eae70bede81f8f209a0e2990d6453edf7f8976d79e6ecc6baa343a"
+        },
+        {
+          "path": "results\\local-runs\\curved_response_20261113\\flat32\\response.meta.json",
+          "bytes": 246,
+          "sha256": "75b29c0696a3fdb0b6afce16a5ed940ea0b5243d593e844dde49c4813fe0b200"
+        },
+        {
+          "path": "results\\local-runs\\curved_response_20261113\\flat32\\response.nodes.csv",
+          "bytes": 97640,
+          "sha256": "6e0261c93dc8d2cbc3f1637dc8608238efb353c63011c9faf922a991fe580b8f"
+        }
+      ]
+    }
+  ],
+  "material_summary": {
+    "refine_start_m": 0,
+    "save_stride": 320,
+    "signed_bath_counter": true,
+    "c_bulk_mM": 6,
+    "preparation": "variational",
+    "N": 544,
+    "interior": 528,
+    "steps": 320,
+    "requested_steps": 320,
+    "failures": 0,
+    "local": false,
+    "dx_m": 9.999999999999999e-06,
+    "dt_s": 3.125e-08,
+    "T_s": 9.999999999999999e-06,
+    "radius_m": 0.0005,
+    "far_height_m": 1.888298565975473e-05,
+    "bath_pressure_Pa": -91.32109909274597,
+    "amplitude": 0,
+    "Gamma_inf_mol_m2": 3.7e-06,
+    "theta0": 0.9433962264150942,
+    "clean_tension_N_m": 0.072,
+    "RT_J_mol": 2478.957029602388,
+    "rho_kg_m3": 1045,
+    "viscosity_Pa_s": 0.0015,
+    "initial_energy_J": 4.799336249094897e-12,
+    "V0_m3": 3.5726588493588687e-13,
+    "S0_mol": 1.789091527932089e-13,
+    "max_budget_excess": 0,
+    "max_V_res": 1.7921785903600725e-15,
+    "max_S_res": 0,
+    "max_regionV_res": 5.132732933901137e-16,
+    "max_regionS_res": 1.7144129390598087e-16,
+    "max_displacement_m": 5.640442748235463e-08,
+    "wall_s": 2708.5219734
+  },
+  "cases": [
+    {
+      "name": "dx20_wave80_a001",
+      "dx_um": 20,
+      "wavelength_um": 80,
+      "amplitude": 0.001,
+      "input": "results\\local-runs\\native_force_binding_20261113\\dx20_wave80_a001\\manufactured.csv",
+      "input_sha256": "75ff4beeab57e30f2741b148ae3fe30946a9666b989c45f84f8af006df72e293",
+      "N": 128,
+      "manufactured_flat_geometry": true,
+      "scope": "New manufactured surface-coverage perturbation, not a native trajectory snapshot"
+    },
+    {
+      "name": "dx20_wave80_a0005",
+      "dx_um": 20,
+      "wavelength_um": 80,
+      "amplitude": 0.0005,
+      "input": "results\\local-runs\\native_force_binding_20261113\\dx20_wave80_a0005\\manufactured.csv",
+      "input_sha256": "dd01c0504cc0c1b09b393ec74d595d79f4624bec6775a2448ff7f4fad9a405c8",
+      "N": 128,
+      "manufactured_flat_geometry": true,
+      "scope": "New manufactured surface-coverage perturbation, not a native trajectory snapshot"
+    },
+    {
+      "name": "dx20_wave160_a001",
+      "dx_um": 20,
+      "wavelength_um": 160,
+      "amplitude": 0.001,
+      "input": "results\\local-runs\\native_force_binding_20261113\\dx20_wave160_a001\\manufactured.csv",
+      "input_sha256": "6f99e086cb883db6a6f9e58d43c626f7de90f866370432d237891330ac87e55e",
+      "N": 128,
+      "manufactured_flat_geometry": true,
+      "scope": "New manufactured surface-coverage perturbation, not a native trajectory snapshot"
+    },
+    {
+      "name": "dx20_wave160_a0005",
+      "dx_um": 20,
+      "wavelength_um": 160,
+      "amplitude": 0.0005,
+      "input": "results\\local-runs\\native_force_binding_20261113\\dx20_wave160_a0005\\manufactured.csv",
+      "input_sha256": "3c8a79a1a4bddf2a539a860613b3bc8c1429d4ba0b2079f40e958f9cef9ff702",
+      "N": 128,
+      "manufactured_flat_geometry": true,
+      "scope": "New manufactured surface-coverage perturbation, not a native trajectory snapshot"
+    },
+    {
+      "name": "dx10_wave80_a001",
+      "dx_um": 10,
+      "wavelength_um": 80,
+      "amplitude": 0.001,
+      "input": "results\\local-runs\\native_force_binding_20261113\\dx10_wave80_a001\\manufactured.csv",
+      "input_sha256": "dfebdb5afcedf7297a5ba7be55dd9980c0b8f3c02ccfb538916de7e493ef90e2",
+      "N": 512,
+      "manufactured_flat_geometry": true,
+      "scope": "New manufactured surface-coverage perturbation, not a native trajectory snapshot"
+    },
+    {
+      "name": "dx10_wave80_a0005",
+      "dx_um": 10,
+      "wavelength_um": 80,
+      "amplitude": 0.0005,
+      "input": "results\\local-runs\\native_force_binding_20261113\\dx10_wave80_a0005\\manufactured.csv",
+      "input_sha256": "a73558b2fca2958bea380b0b7017997ab28a7cedb3493b4948fad48ccf2eae59",
+      "N": 512,
+      "manufactured_flat_geometry": true,
+      "scope": "New manufactured surface-coverage perturbation, not a native trajectory snapshot"
+    },
+    {
+      "name": "dx10_wave160_a001",
+      "dx_um": 10,
+      "wavelength_um": 160,
+      "amplitude": 0.001,
+      "input": "results\\local-runs\\native_force_binding_20261113\\dx10_wave160_a001\\manufactured.csv",
+      "input_sha256": "04c25245094d21ab8ebedad87ffee0c7ae974220a4e7cb68a2bc5cd00d88bcc7",
+      "N": 512,
+      "manufactured_flat_geometry": true,
+      "scope": "New manufactured surface-coverage perturbation, not a native trajectory snapshot"
+    },
+    {
+      "name": "dx10_wave160_a0005",
+      "dx_um": 10,
+      "wavelength_um": 160,
+      "amplitude": 0.0005,
+      "input": "results\\local-runs\\native_force_binding_20261113\\dx10_wave160_a0005\\manufactured.csv",
+      "input_sha256": "171420da97ead962dfd22c22aab4c32c6c76e4c1829411ed5752034d766c447a",
+      "N": 512,
+      "manufactured_flat_geometry": true,
+      "scope": "New manufactured surface-coverage perturbation, not a native trajectory snapshot"
+    }
+  ],
+  "per_case_cap_s": 60,
+  "whole_cap_s": 480,
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  },
+  "scope": "Native nodal mass and baseline monolayer force only; no dynamic continuum-limit/C1 qualification"
+}
