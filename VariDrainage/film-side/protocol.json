@@ -1,0 +1,148 @@
+{
+  "source_commit": "110b802adf3f92d0e74cd1ea25138473cc64b552",
+  "source_hashes": {
+    "thin_film/scripts/film_side/run.py": "d7546dd8ac23c68b57a2190f3992745ead35b0b02b444ce764ead564de8115f3",
+    "thin_film/scripts/film_side/README.md": "063c920b798f86baf6b03f3807d0b1847819e76fde9edb87db5b94a6ed52da4c",
+    "thin_film/bench/tf_curved_edge_bench.cpp": "edd43485c209204c64d6d46da9fd1864406c3f8c863ce7a5815f331ccd6d1e59",
+    "thin_film/include/vf/thinfilm/CurvedEdgePreparation.h": "1c59266979bc85e55347a6697f31dcac69d56a8ba5e42b82f85a7ba8e4cb3d8c",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film/include/vf/thinfilm/CurvedEdge.h": "ace17ac5bcf3e355ad4aac3ff631c6acd5d234044a6144222fc862ff32487b20"
+  },
+  "binary_hashes": {
+    "tf_curved_edge_bench": "fa4e2ba99e46c91f07f4be26fe10665a6a6a25265fc1b82041e3454cfc3a08d2",
+    "test_edge_preparation": "63d935274c3ea997e841d5c9dba141c5d22d015b1198121730f51a2f462f405f",
+    "test_curved_edge": "dafdbbe27798598a3bf5029a26e2c16a8ae880735e545f497c3b46bba40f4d55"
+  },
+  "guards": [
+    {
+      "name": "control_l240",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 10,
+      "refine_start_um": 240
+    },
+    {
+      "name": "control_uniform",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 10,
+      "refine_start_um": 240
+    },
+    {
+      "name": "guard_f200",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 1,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200
+    },
+    {
+      "name": "guard_f160",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 1,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 160
+    }
+  ],
+  "conditional_matrix": [
+    {
+      "name": "f200_dt1",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 10,
+      "refine_start_um": 200
+    },
+    {
+      "name": "f160_dt1",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 10,
+      "refine_start_um": 160
+    },
+    {
+      "name": "f200_dt05",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.5,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 20,
+      "refine_start_um": 200
+    },
+    {
+      "name": "f200_dt025",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.25,
+      "T_us": 200,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 40,
+      "refine_start_um": 200
+    }
+  ],
+  "physical_cut_m": 0.00024,
+  "scope": "Numerical fine-patch start200/160um. Original radius, physical initial trace/cut240um, far bath320um, materials, energy, force, mobility and tolerances unchanged.",
+  "prior_evidence": "prepared_motion_20261113: minima221-230um outside old fine patch240um",
+  "condition": "all18checks, both byte-exact controls and both1us guards pass; guard-wall*steps<=600s per case",
+  "gates": {
+    "native_balance": 1e-10,
+    "energy": 1e-07,
+    "saved_formula": 1e-07,
+    "space_dynamic": 0.1,
+    "time_dynamic": 0.02
+  },
+  "raw_directory": "results/local-runs/film_side_20261113",
+  "observation_times_s": [
+    1e-05,
+    5e-05,
+    0.0002
+  ],
+  "per_case_timeout_s": 600,
+  "whole_compute_budget_s": 3300,
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  },
+  "sampling": "All native scalar rows; three full states/faces at first step, each10us and final; initial state separately"
+}

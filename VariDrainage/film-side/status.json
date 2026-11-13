@@ -1,0 +1,989 @@
+{
+  "state": "completed",
+  "tests": [
+    {
+      "name": "test_edge_preparation",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_edge_preparation.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.01500000013038516,
+      "log": "results\\logs\\film_side_20261113\\test_edge_preparation.log",
+      "log_sha256": "d655965e8d2a38ba0c556a7357f5d98c341205c38e8cd4e2d6a2398c3cba391b"
+    },
+    {
+      "name": "test_curved_edge",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_curved_edge.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.07899999991059303,
+      "log": "results\\logs\\film_side_20261113\\test_curved_edge.log",
+      "log_sha256": "adc2345db8802c2b8587c21657e7f17b3280740ddc1133f41a17a3c40f1a8a04"
+    }
+  ],
+  "cases": [
+    {
+      "name": "control_l240",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "1",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\film_side_20261113\\control_l240",
+        "6",
+        "variational",
+        "10"
+      ],
+      "returncode": 0,
+      "wall_s": 15.875,
+      "log": "results\\logs\\film_side_20261113\\control_l240.log",
+      "log_sha256": "0baa6ff5583addcba9a78bcab41401fa285c6a4b289efc4ac4a13486906ad507",
+      "parameters": {
+        "name": "control_l240",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 10,
+        "refine_start_um": 240
+      },
+      "summary": {
+        "refine_start_m": 0.00024,
+        "save_stride": 10,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 72,
+        "interior": 64,
+        "steps": 200,
+        "requested_steps": 200,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.533180309590716e-12,
+        "V0_m3": 3.5310088460025125e-13,
+        "S0_mol": 1.7890738636051016e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 8.242355577693447e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 3.0530019100554336e-16,
+        "max_regionS_res": 9.015273674499309e-17,
+        "max_displacement_m": 2.1889813754440457e-07,
+        "wall_s": 15.8483116
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 3.086828428991424e-14,
+        "free_volume_m3": 1.1306364895286995e-13,
+        "S_mol": 1.7890738636051016e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "byte_exact_to_frozen_reference": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true,
+        "initial_states.csv": true,
+        "initial_faces.csv": true,
+        "preparation.json": true
+      },
+      "files": [
+        {
+          "path": "results/local-runs/film_side_20261113/control_l240/faces.csv",
+          "bytes": 469749,
+          "sha256": "d05adaa18d5dbe66460489c6109613c6b33c94e6a783d36497235e9fa6a5fa3e"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_l240/history.csv",
+          "bytes": 68878,
+          "sha256": "2c6d9b67ece340e6da8022f064c0221c8631d1c225e5fc842bf6317abc8f2226"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_l240/initial_faces.csv",
+          "bytes": 5951,
+          "sha256": "c9b3b4075663b233abec2cdbac5c78e5e9d5c1c5112f45da08db8f36a2ca26ad"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_l240/initial_states.csv",
+          "bytes": 18560,
+          "sha256": "df7ac286f0685adc6d0fba68c6bd0c1654065697df6255e9d59c23e74a531b0b"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_l240/preparation.json",
+          "bytes": 227,
+          "sha256": "4ef1338c0d4b07db9d311940416e471913742e85f953cb2862059429a7990a74"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_l240/states.csv",
+          "bytes": 1362117,
+          "sha256": "fd23ed19a234ebf07349b733258eb0d7cb53848035c027dbe177eb6f73465cdd"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_l240/summary.json",
+          "bytes": 936,
+          "sha256": "c50738e8a6c2b51f0f4cf49593bd86f7e7f3c49a11781f7c1f302b93eb314164"
+        }
+      ]
+    },
+    {
+      "name": "control_uniform",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "1",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\film_side_20261113\\control_uniform",
+        "6",
+        "variational",
+        "10"
+      ],
+      "returncode": 0,
+      "wall_s": 53.264999999897555,
+      "log": "results\\logs\\film_side_20261113\\control_uniform.log",
+      "log_sha256": "01e86f53aad3cd4bd3f53b7d2ef9c88f941f438944adfb8f650b7a4ddbd4cae8",
+      "parameters": {
+        "name": "control_uniform",
+        "mode": "uniform",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 10,
+        "refine_start_um": 240
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 10,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 144,
+        "interior": 136,
+        "steps": 200,
+        "requested_steps": 200,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.532518920806525e-12,
+        "V0_m3": 3.530924236316567e-13,
+        "S0_mol": 1.7890738034541587e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.483659555288852e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 2.480739830901114e-16,
+        "max_regionS_res": 1.086351456473961e-16,
+        "max_displacement_m": 1.5889904865811084e-07,
+        "wall_s": 53.2407102
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.7187835009193692e-14,
+        "free_volume_m3": 1.130847572362178e-13,
+        "S_mol": 1.7890738034541587e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "byte_exact_to_frozen_reference": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true,
+        "initial_states.csv": true,
+        "initial_faces.csv": true,
+        "preparation.json": true
+      },
+      "files": [
+        {
+          "path": "results/local-runs/film_side_20261113/control_uniform/faces.csv",
+          "bytes": 1010421,
+          "sha256": "50fcfbe597adae8454d1c68bf6f1b3cfea96782c67359fbe1e87159f73de6164"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_uniform/history.csv",
+          "bytes": 69010,
+          "sha256": "3779d3cd1d611bbbb8a83290b2abda0c7b600863d3f1eb27a563d5a130f141fd"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_uniform/initial_faces.csv",
+          "bytes": 12831,
+          "sha256": "75f67ea9b6081ca5666fe4e91d8c0a2f08cf58553424512f90f7bda5cc94087a"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_uniform/initial_states.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_uniform/preparation.json",
+          "bytes": 226,
+          "sha256": "719025bbba47ba0a07fac7c96ecf93a32bd03dca80a4f1801157e82724b519e8"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_uniform/states.csv",
+          "bytes": 2740601,
+          "sha256": "ca382bc0983550307dd36b70691126249ec0f7d3b2035d55125b1053d2b83fb6"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/control_uniform/summary.json",
+          "bytes": 917,
+          "sha256": "89dc80278dc8bf84d211f186f084f9903affbbee72e0d9bac6df457d525e610b"
+        }
+      ]
+    },
+    {
+      "name": "guard_f200",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "1",
+        "1",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\film_side_20261113\\guard_f200",
+        "6",
+        "variational",
+        "1",
+        "200"
+      ],
+      "returncode": 0,
+      "wall_s": 0.1559999999590218,
+      "log": "results\\logs\\film_side_20261113\\guard_f200.log",
+      "log_sha256": "46dabef2c36668a0e55e6fa3994624d9482afbf11e23657a002b7674257f1373",
+      "parameters": {
+        "name": "guard_f200",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 1,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 1,
+        "refine_start_um": 200
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 1e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 4.945886271846389e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.3463533186300595e-17,
+        "max_regionS_res": 3.6138766274947394e-17,
+        "max_displacement_m": 3.7028764339673637e-09,
+        "wall_s": 0.1349343
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f200/faces.csv",
+          "bytes": 25676,
+          "sha256": "fd881b8830a2c9e38136f507d15430c0fdf0bdcd9627d085495dd362df10651f"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f200/history.csv",
+          "bytes": 519,
+          "sha256": "804970913b0820607dc0154c68a27a5369c5257561a295397e307ce688b21fa1"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f200/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f200/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f200/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f200/states.csv",
+          "bytes": 71817,
+          "sha256": "30579b6702440eb1e2ec31f988840d003a3af73cadd5e2e66a2b0e8174d9f3f4"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f200/summary.json",
+          "bytes": 932,
+          "sha256": "576654167bd80e690359df6242702b7aeeba21c722250f449a01bef48e9904cd"
+        }
+      ]
+    },
+    {
+      "name": "guard_f160",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "1",
+        "1",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\film_side_20261113\\guard_f160",
+        "6",
+        "variational",
+        "1",
+        "160"
+      ],
+      "returncode": 0,
+      "wall_s": 0.1720000000204891,
+      "log": "results\\logs\\film_side_20261113\\guard_f160.log",
+      "log_sha256": "0a5266eb7f6d1bf257d20323b324f13c092adeef5a0d049832b56f1bd2386a44",
+      "parameters": {
+        "name": "guard_f160",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 1,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 1,
+        "refine_start_um": 160
+      },
+      "summary": {
+        "refine_start_m": 0.00015999999999999999,
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 96,
+        "interior": 88,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 1e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.5338768746394e-12,
+        "V0_m3": 3.5312991596311637e-13,
+        "S0_mol": 1.7890737547802542e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 8.241677960746192e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 5.878433145097656e-17,
+        "max_regionS_res": 1.4219443424874757e-17,
+        "max_displacement_m": 3.706339762138159e-09,
+        "wall_s": 0.1509326
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3451698227387648e-14,
+        "free_volume_m3": 1.1315315461621076e-13,
+        "S_mol": 1.7890737547802542e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f160/faces.csv",
+          "bytes": 29806,
+          "sha256": "acac874df9214c9c7a8a900c580c2b56cdc4109073964f08fffeb3632f97da43"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f160/history.csv",
+          "bytes": 517,
+          "sha256": "1a2e52917673d94a4bc5e77de414af14fdd4914eeea00d1bc7aff7f9cfcf71f0"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f160/initial_faces.csv",
+          "bytes": 8222,
+          "sha256": "0d112530600232d834364565467650f25f31c398870a28539d5816911d54e90e"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f160/initial_states.csv",
+          "bytes": 24330,
+          "sha256": "2557178600b39187ba7863b47f4d559b0921550131a90b667f0aa5df5797f9bc"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f160/preparation.json",
+          "bytes": 227,
+          "sha256": "f5ab6ae9e54bfa9437a9c275f1c08c827d3bca840e817338932ab09147cd902b"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f160/states.csv",
+          "bytes": 82057,
+          "sha256": "1ca8b9c977be5504c1dad6f85117c54c77cfbddaabe72863adc60d4f9fd72313"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/guard_f160/summary.json",
+          "bytes": 918,
+          "sha256": "8220be1ad26ea970963ead99f442b2f76f8cec86c1bacd4d07b89519e216acfa"
+        }
+      ]
+    },
+    {
+      "name": "f200_dt1",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "1",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\film_side_20261113\\f200_dt1",
+        "6",
+        "variational",
+        "10",
+        "200"
+      ],
+      "returncode": 0,
+      "wall_s": 20.937999999849126,
+      "log": "results\\logs\\film_side_20261113\\f200_dt1.log",
+      "log_sha256": "9958bc43867736a4aae4d7c476ee36a5e40f94736e85b670616480ca9c61bce6",
+      "parameters": {
+        "name": "f200_dt1",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 10,
+        "refine_start_um": 200
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 10,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 200,
+        "requested_steps": 200,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.1540401300974907e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.195677269784211e-16,
+        "max_regionS_res": 8.61902355617575e-17,
+        "max_displacement_m": 1.6911835992825904e-07,
+        "wall_s": 20.9060703
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt1/faces.csv",
+          "bytes": 558614,
+          "sha256": "9238736dc0f97fb64709fe5cea1df67a79ef41700ce8eb0e900341f13c9a414b"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt1/history.csv",
+          "bytes": 69372,
+          "sha256": "08c9d6173cd533575f272c6a2540e3af1751d40ceeaa5a658da530e31866c647"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt1/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt1/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt1/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt1/states.csv",
+          "bytes": 1590382,
+          "sha256": "703d2152e59c774276edaaf1c237d19cbfbae9dc0809352411b62f9843d88b3a"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt1/summary.json",
+          "bytes": 928,
+          "sha256": "df92007d09db4afb8a560d4b2fda6fec6f0b1993a9f1f6c103eabd19588215ad"
+        }
+      ]
+    },
+    {
+      "name": "f160_dt1",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "1",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\film_side_20261113\\f160_dt1",
+        "6",
+        "variational",
+        "10",
+        "160"
+      ],
+      "returncode": 0,
+      "wall_s": 25.312000000150874,
+      "log": "results\\logs\\film_side_20261113\\f160_dt1.log",
+      "log_sha256": "3614f20191e5a4676ce07b0d405c3b7c43b0da19de56debbf4eea6719ddea520",
+      "parameters": {
+        "name": "f160_dt1",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 10,
+        "refine_start_um": 160
+      },
+      "summary": {
+        "refine_start_m": 0.00015999999999999999,
+        "save_stride": 10,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 96,
+        "interior": 88,
+        "steps": 200,
+        "requested_steps": 200,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.5338768746394e-12,
+        "V0_m3": 3.5312991596311637e-13,
+        "S0_mol": 1.7890737547802542e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.4835020329343146e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.16211009698771e-16,
+        "max_regionS_res": 9.146131848439532e-17,
+        "max_displacement_m": 1.66006763876776e-07,
+        "wall_s": 25.1923101
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3451698227387648e-14,
+        "free_volume_m3": 1.1315315461621076e-13,
+        "S_mol": 1.7890737547802542e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/film_side_20261113/f160_dt1/faces.csv",
+          "bytes": 648228,
+          "sha256": "96ecdfc2ce76bca91e6c3ee1db9eca744f53740606c464f8b0f98372cdcb6257"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f160_dt1/history.csv",
+          "bytes": 69382,
+          "sha256": "d7cf52b12d33c0ab5c58e842ec232c6903644b83a8c3c01e6c2b02072058bbed"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f160_dt1/initial_faces.csv",
+          "bytes": 8222,
+          "sha256": "0d112530600232d834364565467650f25f31c398870a28539d5816911d54e90e"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f160_dt1/initial_states.csv",
+          "bytes": 24330,
+          "sha256": "2557178600b39187ba7863b47f4d559b0921550131a90b667f0aa5df5797f9bc"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f160_dt1/preparation.json",
+          "bytes": 227,
+          "sha256": "f5ab6ae9e54bfa9437a9c275f1c08c827d3bca840e817338932ab09147cd902b"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f160_dt1/states.csv",
+          "bytes": 1819449,
+          "sha256": "1a2529244c180d04cca4b73d1b4f4d5c29e5ee8bfcbb4d6c88c93c74e0a1e983"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f160_dt1/summary.json",
+          "bytes": 925,
+          "sha256": "0629e41ccec97762c894d076e1855199bdb77a873ab2e1e4129f48d3710984f7"
+        }
+      ]
+    },
+    {
+      "name": "f200_dt05",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.5",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\film_side_20261113\\f200_dt05",
+        "6",
+        "variational",
+        "20",
+        "200"
+      ],
+      "returncode": 0,
+      "wall_s": 37.26600000006147,
+      "log": "results\\logs\\film_side_20261113\\f200_dt05.log",
+      "log_sha256": "5e0fe7f8c6e18c32d9f408f305f78a58932cb50a849a29fa4ffcf58eb2e8da24",
+      "parameters": {
+        "name": "f200_dt05",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.5,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 20,
+        "refine_start_um": 200
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 20,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 400,
+        "requested_steps": 400,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 5e-07,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.1540401300974907e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 2.440793667664427e-16,
+        "max_regionS_res": 1.0041035083234351e-16,
+        "max_displacement_m": 1.7409859340305137e-07,
+        "wall_s": 37.2476135
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt05/faces.csv",
+          "bytes": 561966,
+          "sha256": "79b590ecfd7af6807436125f487737f0cdda8a6de0f43354f3200975b75fe8a8"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt05/history.csv",
+          "bytes": 138393,
+          "sha256": "f270a49760e143ef2f7ddfe36d9e3dc3719024104ce278a7040069193da87b31"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt05/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt05/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt05/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt05/states.csv",
+          "bytes": 1591544,
+          "sha256": "b32929c2237d9ab600eca07ae612ac2f52fceb6bbdcc542c53430e8666d66261"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt05/summary.json",
+          "bytes": 928,
+          "sha256": "ffc4ab6d8d621359bf1eaa649530568f2314c9e8a931d06c616735e84820ff62"
+        }
+      ]
+    },
+    {
+      "name": "f200_dt025",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "0.25",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\film_side_20261113\\f200_dt025",
+        "6",
+        "variational",
+        "40",
+        "200"
+      ],
+      "returncode": 0,
+      "wall_s": 61.42200000002049,
+      "log": "results\\logs\\film_side_20261113\\f200_dt025.log",
+      "log_sha256": "55ab797efc28b29f455d60a21d280fc309d8071c3ca08325efa582b52f31e57b",
+      "parameters": {
+        "name": "f200_dt025",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 0.25,
+        "T_us": 200,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 40,
+        "refine_start_um": 200
+      },
+      "summary": {
+        "refine_start_m": 0.00019999999999999998,
+        "save_stride": 40,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 84,
+        "interior": 76,
+        "steps": 800,
+        "requested_steps": 800,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 2.5e-07,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.531727222413656e-12,
+        "V0_m3": 3.5306712112329334e-13,
+        "S0_mol": 1.789073859060857e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.6486287572821296e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.199636207630239e-16,
+        "max_regionS_res": 1.2724176813037934e-16,
+        "max_displacement_m": 1.7684304022341593e-07,
+        "wall_s": 61.3836003
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.3982282409856443e-14,
+        "free_volume_m3": 1.13032209878689e-13,
+        "S_mol": 1.789073859060857e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt025/faces.csv",
+          "bytes": 563298,
+          "sha256": "d2fbf8f4dc1f55a3521ebaf97829f9bd8c703bfc1f74aca75c9c8fa989961185"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt025/history.csv",
+          "bytes": 277961,
+          "sha256": "dcb7ec55d7cc3dff71df628ba8932c8dd4409706d7e095d097137783062e22a1"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt025/initial_faces.csv",
+          "bytes": 7083,
+          "sha256": "cc71bc16bc7a6504ecce29e0a3debe969c1c1a3a9b92cf6968241090c0cf9e91"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt025/initial_states.csv",
+          "bytes": 21431,
+          "sha256": "4bdf8f8de947a6fcee8486413fe7765a3c83c30933d738efb34e7287b0420464"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt025/preparation.json",
+          "bytes": 225,
+          "sha256": "c193c3ba566f10423ac7fdbb22f7fdd38591a2f3094bca037b51f116603dfd84"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt025/states.csv",
+          "bytes": 1591837,
+          "sha256": "ad57f227c00c2a64c2d1adf439030f3b8fe96a177bfde1eb277e33248269c7c8"
+        },
+        {
+          "path": "results/local-runs/film_side_20261113/f200_dt025/summary.json",
+          "bytes": 935,
+          "sha256": "4109d7e7801b665448f4969c1ff66b251a48b3f19e26ec8bffa3f20407686237"
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "compute_wall_s": 214.5,
+  "sampled_steps": true,
+  "native_checks": 18
+}
