@@ -22,7 +22,9 @@ physical dissipation, or adding them as a physical closure, would be unjustified
 Prior cut work was left trace; this analysis uses the same physical orientation.
 
 The independent smooth-field problem uses SI L320um,W160um,h6um,mu.0015Pa s,
-rho1045kg/m3,U1mm/s. Streamfunction gives
+rho1045kg/m3,U1mm/s. Manufactured cut is x=.63L=201.6um, a numerical
+choice to avoid grid-aligned cuts at every tested resolution. It is NOT the
+original moving-film physical cut (still240um, unchanged). Streamfunction gives
 u=U sin^2(pi x/L) sin(2pi y/W),
 v=-U W/L sin(2pi x/L) sin^2(pi y/W).
 It is divergence-free and zero on all walls. Thus f=-mu h Laplacian(u,v).
