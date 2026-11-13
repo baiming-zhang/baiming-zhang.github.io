@@ -1,0 +1,170 @@
+{
+  "cases": [
+    {
+      "name": "u5_dt003125",
+      "parameters": {
+        "name": "u5_dt003125",
+        "mode": "uniform",
+        "dx_um": 5,
+        "dt_us": 0.03125,
+        "T_us": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 40,
+        "refine_start_um": 200,
+        "observer": true,
+        "timeout_s": 28000
+      },
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_local_assembly_bench.exe",
+        "uniform",
+        "5",
+        "0.03125",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125",
+        "6",
+        "variational",
+        "40",
+        "200",
+        "1"
+      ],
+      "returncode": 1,
+      "native_pid": 22684,
+      "started_utc": "2026-11-13T21:42:33.515512+00:00",
+      "terminal_utc": "2026-11-13T22:39:09.924442+00:00",
+      "wall_s": 3396.405999999959,
+      "log": "results\\logs\\uniform5_pilot_20261113\\u5_dt003125.log",
+      "log_sha256": "75af1eb350ad441355c094ed4a240c1bab43470432a7ac8f2d2058d0d9399152",
+      "monitor_log": "results\\logs\\uniform5_pilot_20261113\\monitor_u5_dt003125.jsonl",
+      "monitor_log_sha256": "b6cd6180782d60941e88e12cb3bc3117485add0963894442ef8eb9d96fc19a29",
+      "completed": false,
+      "native_gate": false,
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 40,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 2112,
+        "interior": 2080,
+        "steps": 77,
+        "requested_steps": 320,
+        "failures": 1,
+        "local": false,
+        "dx_m": 4.9999999999999996e-06,
+        "dt_s": 3.125e-08,
+        "T_s": 2.40625e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.922305519543647e-12,
+        "V0_m3": 3.5955746505722703e-13,
+        "S0_mol": 1.7890965910041554e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 5.018495410824794e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 9.44023062286361e-16,
+        "max_regionS_res": 1.4998349269777106e-16,
+        "max_displacement_m": 1.3311673953067535e-08,
+        "wall_s": 3394.851317
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 4.697915420584255e-13,
+        "free_volume_m3": 1.2675964789107875e-13,
+        "S_mol": 1.7890965910041554e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 4.9999999999999996e-06,
+        "actual_background_x_m": 5e-06,
+        "actual_background_y_m": 5e-06,
+        "fine_m": 4.9999999999999996e-06,
+        "physical_cut_m": 0.00024
+      },
+      "failure": {
+        "step": 78,
+        "last_accepted_step": 77,
+        "message": "motion Hessian plus: inconsistent Voronoi face geometry: normal_closure=1.2925674880115229e-09 angle_error=6.4886614255072107e-11 face_length=3.1602585137997662e-06 roundoff_certificate=0.0045151849839007562"
+      },
+      "files": [
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\faces.csv",
+          "bytes": 1613092,
+          "sha256": "60a819d771d7b0d7867fba99783d52351ceca067dcd1b62ca76051aea06d738d"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\failure.json",
+          "bytes": 257,
+          "sha256": "50682bfe7137721f2165a65269340c158bbaf4cae6bbec9910e8173dcb3ece63"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\history.csv",
+          "bytes": 26886,
+          "sha256": "a8fd7d930797d38fa9ac7d1bc97d1b1fa563f3d6c26ea9321bfda79c35dfc52f"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\initial_faces.csv",
+          "bytes": 222292,
+          "sha256": "58f884bd6f25de7f8984a0c5bd6279ae0004985f038c865204eaf405c3ccd89c"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\initial_states.csv",
+          "bytes": 527317,
+          "sha256": "50214861a6c1036fe614d10bf50f84bcf6438eb8da25bf2e89e3d37540c5ce1a"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\mechanical_nodes.csv",
+          "bytes": 1995825,
+          "sha256": "788b24ba2c53ba159839d94d0cc00db1266b0bfea71923d9f7e8f77e322350c4"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\mechanics.csv",
+          "bytes": 20286,
+          "sha256": "a684ff4aae5625631f512e02988d4002de7e9e04d6ab2203dd3ffc77041c9a70"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\mesh.json",
+          "bytes": 250,
+          "sha256": "cc95cf53cb934f7cc03476728b3e7af43454b993beeda9808c0a5c2ffed5ef4b"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\preparation.json",
+          "bytes": 227,
+          "sha256": "fcc8fb83a2a47ba8e8928896b3989439bd546ec03aa92269a10012e02ec1a038"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\regional_mechanics.csv",
+          "bytes": 2105,
+          "sha256": "ac1e1ffdfe18614bfd36e07ae8d2daf382626e4f57c8946cd043cedac0b76c3c"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\states.csv",
+          "bytes": 3696732,
+          "sha256": "58b5494382a83ca92035b4fa3f19505ced958431d415d58c3f8953d510650245"
+        },
+        {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\summary.json",
+          "bytes": 908,
+          "sha256": "cca8c2347515aec25d4c4f621fcf40642cace74ef2ddaa60d37046531d73cd36"
+        }
+      ]
+    }
+  ],
+  "scope": "Exact terminal native case record only; no whole-batch qualification"
+}
