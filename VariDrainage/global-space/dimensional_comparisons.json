@@ -1,0 +1,54 @@
+{
+  "scope": "Same overlap pairs, weights and denominator as original comparison; dimensional values do not replace the failed gate.",
+  "inputs": {
+    "results\\local-runs\\background_space_20261113\\u20_dt00625\\summary.json": "79f8f1dc218334ae555a848bc7146fd0b6365d19630efebd6c543631969a7347",
+    "results\\local-runs\\background_space_20261113\\u20_dt00625\\initial_states.csv": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498",
+    "results\\local-runs\\background_space_20261113\\u20_dt00625\\states.csv": "73c99f5f51e3a96609e5f58b6c400e400d82b09dcd88cc5e0f67dfee52647978",
+    "results\\local-runs\\global_space_20261113\\u10_dt00625\\summary.json": "b1cf3b651a6b560b9fcf126363d82941380276f81283fab0364ac4ef9be1d1ca",
+    "results\\local-runs\\global_space_20261113\\u10_dt00625\\initial_states.csv": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308",
+    "results\\local-runs\\global_space_20261113\\u10_dt00625\\states.csv": "36781a49a1fb89383ef5c32b21ce111119167b341f462e9f98d34a9a48805b9a",
+    "results\\local-runs\\background_space_20261113\\u20_dt003125\\summary.json": "f4d2bcf655b8138847c8527da9f03e1fc0fce582754a40d7e0dea231a2a4e619",
+    "results\\local-runs\\background_space_20261113\\u20_dt003125\\initial_states.csv": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498",
+    "results\\local-runs\\background_space_20261113\\u20_dt003125\\states.csv": "0419946c524a976d25adf9956225a129995473dca34d6e384619fb131818d257",
+    "results\\local-runs\\global_space_20261113\\u10_dt003125\\summary.json": "9217a531d5ce272305a23a70674b942904d053b72fdaa0f22c1bcff93eb9a9bb",
+    "results\\local-runs\\global_space_20261113\\u10_dt003125\\initial_states.csv": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308",
+    "results\\local-runs\\global_space_20261113\\u10_dt003125\\states.csv": "100ba51e31f42690d2d6d703b0584424370ddeda49a970e8fb9a6b7c95f44f42"
+  },
+  "source_sha256": "6483388bed794101551f2e2f1b4deb8a450c6f6871937c0efe5c20dfb9183ae0",
+  "rows": [
+    {
+      "candidate": "u20_dt00625",
+      "reference": "u10_dt00625",
+      "time_us": 10,
+      "fields": {
+        "dh": {
+          "RMS_difference_m": 6.534435983037685e-09,
+          "RMS_reference_m": 1.3218848920878575e-08,
+          "unchanged_relative_L2": 0.4943271552727135
+        },
+        "displacement": {
+          "RMS_difference_m": 1.6998945213807353e-08,
+          "RMS_reference_m": 2.2411200044844726e-08,
+          "unchanged_relative_L2": 0.7585022301256752
+        }
+      }
+    },
+    {
+      "candidate": "u20_dt003125",
+      "reference": "u10_dt003125",
+      "time_us": 10,
+      "fields": {
+        "dh": {
+          "RMS_difference_m": 6.558050159742588e-09,
+          "RMS_reference_m": 1.3231987605489353e-08,
+          "unchanged_relative_L2": 0.4956209418622755
+        },
+        "displacement": {
+          "RMS_difference_m": 1.708005985425679e-08,
+          "RMS_reference_m": 2.2438811142052732e-08,
+          "unchanged_relative_L2": 0.7611838143352849
+        }
+      }
+    }
+  ]
+}

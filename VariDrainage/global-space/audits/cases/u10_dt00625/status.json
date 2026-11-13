@@ -1,0 +1,163 @@
+{
+  "state": "completed",
+  "tests": [],
+  "cases": [
+    {
+      "name": "u10_dt00625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "10",
+        "0.0625",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\global_space_20261113\\u10_dt00625",
+        "6",
+        "variational",
+        "160",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 418.25,
+      "log": "results\\logs\\global_space_20261113\\u10_dt00625.log",
+      "log_sha256": "d409604982583231415b89fa23e4ee72d65158ff306a89d4afeb21c1d90a6552",
+      "parameters": {
+        "name": "u10_dt00625",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.0625,
+        "T_us": 10,
+        "dx_um": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 160,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 160,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 544,
+        "interior": 528,
+        "steps": 160,
+        "requested_steps": 160,
+        "failures": 0,
+        "local": false,
+        "dx_m": 9.999999999999999e-06,
+        "dt_s": 6.25e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.799336249094897e-12,
+        "V0_m3": 3.5726588493588687e-13,
+        "S0_mol": 1.789091527932089e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 2.118029243152813e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 4.893689004895491e-16,
+        "max_regionS_res": 1.5888841430959891e-16,
+        "max_displacement_m": 5.640899260548837e-08,
+        "wall_s": 418.1362981
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 1.400945210080723e-13,
+        "free_volume_m3": 1.220713703029213e-13,
+        "S_mol": 1.789091527932089e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 9.999999999999999e-06,
+        "actual_background_x_m": 1e-05,
+        "actual_background_y_m": 1e-05,
+        "fine_m": 9.999999999999999e-06,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.13988029781346054,
+      "files": [
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/faces.csv",
+          "bytes": 394716,
+          "sha256": "842e4bee797410ffa3f117105d3358d6b554d120d4c912619e6eb817bb48bebd"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/history.csv",
+          "bytes": 55756,
+          "sha256": "120899139f61505046919f8581d86fcecd7b4be9190c89adad58f2d6eb719115"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/initial_faces.csv",
+          "bytes": 53446,
+          "sha256": "2b3674fac8b0b6e2ce2d6984a009a8a31d29e212871f805834a876b76f4cef36"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/initial_states.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/mechanical_nodes.csv",
+          "bytes": 513408,
+          "sha256": "68c62d1886a2e58248f1d27fe35cd7e899e30e20c215d3717168a6224add6479"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/mechanics.csv",
+          "bytes": 42273,
+          "sha256": "783897e300404e9f0d0050235803c3d5fed87c68e0388d8c7b7a3642b530f342"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/mesh.json",
+          "bytes": 250,
+          "sha256": "4793683264828f86e9c4f16d776de8a0452862755000948fb91a54328013a0a7"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/preparation.json",
+          "bytes": 225,
+          "sha256": "e9bba3597acb5ba55577be4ed649ed79b4b62a05712fb91c3592b5afa7ffd533"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/regional_mechanics.csv",
+          "bytes": 2106,
+          "sha256": "8ad2d03118c6a17b922670997cb779386a360c1658cf043b69bdf4bf7292c044"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/states.csv",
+          "bytes": 955272,
+          "sha256": "36781a49a1fb89383ef5c32b21ce111119167b341f462e9f98d34a9a48805b9a"
+        },
+        {
+          "path": "results/local-runs/global_space_20261113/u10_dt00625/summary.json",
+          "bytes": 917,
+          "sha256": "b1cf3b651a6b560b9fcf126363d82941380276f81283fab0364ac4ef9be1d1ca"
+        }
+      ],
+      "estimated_s": 1147.3280000127852
+    }
+  ],
+  "reused_native_checks": 24,
+  "audited_subset_only": true,
+  "native_checks_scope": "24previously executed unit checks verified via frozen hashes; not rerun here",
+  "sampled_steps": true,
+  "native_checks": 24
+}
