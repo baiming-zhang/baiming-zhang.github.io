@@ -1,0 +1,53 @@
+{
+  "new_native_runs": 2,
+  "native_guards_passed": 2,
+  "expected_N": 2112,
+  "accepted_steps": 2,
+  "reused_native_checks": 24,
+  "new_unit_test_executions": 0,
+  "saved_scalar_audits": 2,
+  "saved_mechanical_audits": 2,
+  "all_independent_audits_passed": true,
+  "native_wall_s": 209.31300000008196,
+  "audit_wall_s": 6.470000000204891,
+  "rows": [
+    {
+      "case": "guard_u5_dt00625",
+      "N": 2112,
+      "dt_us": 0.0625,
+      "T_us": 0.0625,
+      "steps": 1,
+      "driver_wall_s": 104.18800000008196,
+      "native_timer_wall_s": 102.6619816,
+      "outside_native_timer_s": 1.526018400081952,
+      "native_gate": true,
+      "independent_saved_audit": true,
+      "force_ratio": 0.011098326047484713,
+      "max_VS_ledger": 1.7807564360991203e-15,
+      "max_energy_budget_excess": 0,
+      "prep_pressure": 4.697915420584255e-13
+    },
+    {
+      "case": "guard_u5_dt003125",
+      "N": 2112,
+      "dt_us": 0.03125,
+      "T_us": 0.03125,
+      "steps": 1,
+      "driver_wall_s": 105.125,
+      "native_timer_wall_s": 103.5812086,
+      "outside_native_timer_s": 1.5437914000000035,
+      "native_gate": true,
+      "independent_saved_audit": true,
+      "force_ratio": 0.002584294134772926,
+      "max_VS_ledger": 2.5901911797805387e-15,
+      "max_energy_budget_excess": 0,
+      "prep_pressure": 4.697915420584255e-13
+    }
+  ],
+  "time_pair_qualified": false,
+  "space_pair_qualified": false,
+  "long_matrix_launched": false,
+  "physical_normal_flux_traction_qualified": false,
+  "full_C1_complete": false,
+  "scope": "Two actual uniform5 one-step startups at different end times; not a time/space refinement pair"
+}

@@ -1,0 +1,162 @@
+{
+  "state": "completed",
+  "tests": [],
+  "cases": [
+    {
+      "name": "guard_u5_dt00625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "5",
+        "0.0625",
+        "0.0625",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\global_five_20261113\\guard_u5_dt00625",
+        "6",
+        "variational",
+        "1",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 104.18800000008196,
+      "log": "results\\logs\\global_five_20261113\\guard_u5_dt00625.log",
+      "log_sha256": "3ee89975e7883e53c3bcae2f404b9b43e80dda57589b3d0f81af0a2fda06696f",
+      "parameters": {
+        "name": "guard_u5_dt00625",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.0625,
+        "T_us": 0.0625,
+        "dx_um": 5,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 1,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 2112,
+        "interior": 2080,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": false,
+        "dx_m": 4.9999999999999996e-06,
+        "dt_s": 6.25e-08,
+        "T_s": 6.25e-08,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.922305519543647e-12,
+        "V0_m3": 3.5955746505722703e-13,
+        "S0_mol": 1.7890965910041554e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.7807564360991203e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 7.569430191232209e-17,
+        "max_regionS_res": 1.5212341134621297e-16,
+        "max_displacement_m": 6.505268185936363e-11,
+        "wall_s": 102.6619816
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 4.697915420584255e-13,
+        "free_volume_m3": 1.2675964789107875e-13,
+        "S_mol": 1.7890965910041554e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 4.9999999999999996e-06,
+        "actual_background_x_m": 5e-06,
+        "actual_background_y_m": 5e-06,
+        "fine_m": 4.9999999999999996e-06,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.011098326047484713,
+      "files": [
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/faces.csv",
+          "bytes": 797348,
+          "sha256": "b2c2bdca388b1c6295b511f5b28f7d7becbbb0c762e74e0463d6d52050ce7036"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/history.csv",
+          "bytes": 517,
+          "sha256": "a6cea6d04e8fdac4b937a59690dccbdad8343cc752d4d2a91524dbb716f8900a"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/initial_faces.csv",
+          "bytes": 222292,
+          "sha256": "58f884bd6f25de7f8984a0c5bd6279ae0004985f038c865204eaf405c3ccd89c"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/initial_states.csv",
+          "bytes": 527317,
+          "sha256": "50214861a6c1036fe614d10bf50f84bcf6438eb8da25bf2e89e3d37540c5ce1a"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/mechanical_nodes.csv",
+          "bytes": 952864,
+          "sha256": "a770a0e96a83324d0a13ede0d2d2fad607c7fd5697cda7a851db09b6bfcee98a"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/mechanics.csv",
+          "bytes": 403,
+          "sha256": "508f9ed943cd97e871b0bf148dc79ef4796146d3fab38c52f9a81c212b680cb1"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/mesh.json",
+          "bytes": 250,
+          "sha256": "cc95cf53cb934f7cc03476728b3e7af43454b993beeda9808c0a5c2ffed5ef4b"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/preparation.json",
+          "bytes": 227,
+          "sha256": "fcc8fb83a2a47ba8e8928896b3989439bd546ec03aa92269a10012e02ec1a038"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/regional_mechanics.csv",
+          "bytes": 1211,
+          "sha256": "d23bf4507f4b8e0ed38022e956bf360457b7c3f29847bdb303c0477b1deaddef"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/states.csv",
+          "bytes": 1780588,
+          "sha256": "5d421e6c114cd64b3bbd52fecfffaecfc53a9a2c9639b7539a898aaf2e2e4669"
+        },
+        {
+          "path": "results/local-runs/global_five_20261113/guard_u5_dt00625/summary.json",
+          "bytes": 908,
+          "sha256": "30c648e75fb4b96f429956a1e5b680e1b6c97acca15e9cc53202c8ce02449804"
+        }
+      ]
+    }
+  ],
+  "reused_native_checks": 24,
+  "audited_subset_only": true,
+  "native_checks_scope": "24previously executed unit checks verified via frozen hashes; not rerun here",
+  "sampled_steps": true,
+  "native_checks": 24
+}
