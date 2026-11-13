@@ -1,0 +1,104 @@
+[
+  {
+    "name": "configure",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "f",
+      "-y",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_checks",
+      "-p",
+      "windows",
+      "-a",
+      "x64",
+      "-m",
+      "release",
+      "--sdk=C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\msvc"
+    ],
+    "returncode": 0,
+    "wall_s": 2.3119999999180436,
+    "log": "results\\logs\\retained_checks_20261113\\configure.log",
+    "log_sha256": "91109ff0f6d81332f8d319ad522f67f9698ed46db9d646b75b5079789c0280f7"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "build",
+      "-y",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_checks",
+      "-j2"
+    ],
+    "returncode": 0,
+    "wall_s": 32.04700000002049,
+    "log": "results\\logs\\retained_checks_20261113\\build.log",
+    "log_sha256": "31722b2df81c97bf298b3d11301afd1b54b0ae9a6bd8eb9a22c84cbc00dfd5a0"
+  },
+  {
+    "name": "curved",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_checks",
+      "test_retained_curved"
+    ],
+    "returncode": 0,
+    "wall_s": 0.6090000001713634,
+    "log": "results\\logs\\retained_checks_20261113\\curved.log",
+    "log_sha256": "adc2345db8802c2b8587c21657e7f17b3280740ddc1133f41a17a3c40f1a8a04",
+    "counts": [
+      [
+        "14",
+        "0"
+      ]
+    ],
+    "passed": true,
+    "binary_sha256": "ef15b6929b50bf7edb19812c3c6055967677c494762196e1d9f18499e4569b75"
+  },
+  {
+    "name": "preparation",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_checks",
+      "test_retained_preparation"
+    ],
+    "returncode": 0,
+    "wall_s": 0.5159999998286366,
+    "log": "results\\logs\\retained_checks_20261113\\preparation.log",
+    "log_sha256": "d655965e8d2a38ba0c556a7357f5d98c341205c38e8cd4e2d6a2398c3cba391b",
+    "counts": [
+      [
+        "4",
+        "0"
+      ]
+    ],
+    "passed": true,
+    "binary_sha256": "96c56058f9db61a17e05161e03034f47ef1340784cdf8ad7c5ddac33e682d0ad"
+  },
+  {
+    "name": "observer",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_checks",
+      "test_retained_observer"
+    ],
+    "returncode": 0,
+    "wall_s": 0.5150000001303852,
+    "log": "results\\logs\\retained_checks_20261113\\observer.log",
+    "log_sha256": "e4de21ad637537096c4cd740a96b948dc19c63c4f92c01db9c17c68bd1ffa19f",
+    "counts": [
+      [
+        "6",
+        "0"
+      ]
+    ],
+    "passed": true,
+    "binary_sha256": "37490957183d452fff681fb9efaddd2daedd34754aa77a925fdd8d58290730b7"
+  }
+]

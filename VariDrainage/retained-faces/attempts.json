@@ -1,0 +1,151 @@
+[
+  {
+    "name": "configure",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "f",
+      "-y",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "-p",
+      "windows",
+      "-a",
+      "x64",
+      "-m",
+      "release",
+      "--sdk=C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\msvc"
+    ],
+    "returncode": 0,
+    "wall_s": 1.297000000020489,
+    "log": "results\\logs\\retained_faces_20261113\\configure.log",
+    "log_sha256": "91109ff0f6d81332f8d319ad522f67f9698ed46db9d646b75b5079789c0280f7"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "build",
+      "-y",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "-j2",
+      "tf_retained_face_probe"
+    ],
+    "returncode": 0,
+    "wall_s": 6.188000000081956,
+    "log": "results\\logs\\retained_faces_20261113\\build.log",
+    "log_sha256": "577324907cfeb902de13fff54f0f05411851d1406040bb205df25dece34c14ed"
+  },
+  {
+    "name": "unperturbed",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "tf_retained_face_probe",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\retained_faces_20261113\\inputs\\unperturbed.txt",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_faces_20261113\\native\\unperturbed"
+    ],
+    "returncode": 0,
+    "wall_s": 0.546000000089407,
+    "log": "results\\logs\\retained_faces_20261113\\unperturbed.log",
+    "log_sha256": "214136e845d63de730fb526930007a704fefad2e53aab076d7621d1be3f02942"
+  },
+  {
+    "name": "short_face",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "tf_retained_face_probe",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\retained_faces_20261113\\inputs\\short_face.txt",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_faces_20261113\\native\\short_face"
+    ],
+    "returncode": 0,
+    "wall_s": 0.48499999986961484,
+    "log": "results\\logs\\retained_faces_20261113\\short_face.log",
+    "log_sha256": "214136e845d63de730fb526930007a704fefad2e53aab076d7621d1be3f02942"
+  },
+  {
+    "name": "resolved_face",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "tf_retained_face_probe",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\retained_faces_20261113\\inputs\\resolved_face.txt",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_faces_20261113\\native\\resolved_face"
+    ],
+    "returncode": 0,
+    "wall_s": 0.5,
+    "log": "results\\logs\\retained_faces_20261113\\resolved_face.log",
+    "log_sha256": "214136e845d63de730fb526930007a704fefad2e53aab076d7621d1be3f02942"
+  },
+  {
+    "name": "u20_dt003125",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "tf_retained_face_probe",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\retained_faces_20261113\\inputs\\u20_dt003125.txt",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_faces_20261113\\native\\u20_dt003125"
+    ],
+    "returncode": 0,
+    "wall_s": 0.5,
+    "log": "results\\logs\\retained_faces_20261113\\u20_dt003125.log",
+    "log_sha256": "b2e8dc3c1437900269d854ad3000dfc4450e5d0595cc4b57c73f007610269162"
+  },
+  {
+    "name": "u10_dt003125",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "tf_retained_face_probe",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\retained_faces_20261113\\inputs\\u10_dt003125.txt",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_faces_20261113\\native\\u10_dt003125"
+    ],
+    "returncode": 0,
+    "wall_s": 0.6559999999590218,
+    "log": "results\\logs\\retained_faces_20261113\\u10_dt003125.log",
+    "log_sha256": "e7eb35a58342ef3ad4a5b02ca40a90b540a19073935b061e73dbff99b1157298"
+  },
+  {
+    "name": "u5_dt00625",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "tf_retained_face_probe",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\retained_faces_20261113\\inputs\\u5_dt00625.txt",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_faces_20261113\\native\\u5_dt00625"
+    ],
+    "returncode": 0,
+    "wall_s": 2.844000000040978,
+    "log": "results\\logs\\retained_faces_20261113\\u5_dt00625.log",
+    "log_sha256": "fe3fe7b21299867f2d2a2ea78783e9c38bd84e247fcff38857f52148721fbf56"
+  },
+  {
+    "name": "u5_dt003125",
+    "command": [
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\.tools\\xmake\\xmake\\xmake.exe",
+      "run",
+      "-P",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\thin_film\\scripts\\retained_faces",
+      "tf_retained_face_probe",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\retained_faces_20261113\\inputs\\u5_dt003125.txt",
+      "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_faces_20261113\\native\\u5_dt003125"
+    ],
+    "returncode": 0,
+    "wall_s": 2.890000000130385,
+    "log": "results\\logs\\retained_faces_20261113\\u5_dt003125.log",
+    "log_sha256": "fe3fe7b21299867f2d2a2ea78783e9c38bd84e247fcff38857f52148721fbf56"
+  }
+]

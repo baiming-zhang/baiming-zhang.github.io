@@ -1,0 +1,376 @@
+{
+  "fixed_geometry_matrix_admitted": true,
+  "cases": [
+    {
+      "case": {
+        "name": "unperturbed",
+        "N": 9,
+        "kind": "manufactured",
+        "input": "results\\retained_faces_20261113\\inputs\\unperturbed.txt",
+        "input_sha256": "8d245c0e6fbe061b8f8bd1dc2cd2c487dbd87bffe66f538aaeaf8a65cb2c9599"
+      },
+      "observations": [
+        {
+          "variant": "original",
+          "completed": 1.0,
+          "normal_closure": 0.0,
+          "area_closure": 0.0,
+          "orthogonality_certificate": 0.0,
+          "area_import_error": 0.0,
+          "pairs": 12.0,
+          "faces": 24.0,
+          "minimum_face_length": 1.0,
+          "message": ""
+        },
+        {
+          "variant": "candidate",
+          "completed": 1.0,
+          "normal_closure": 0.0,
+          "area_closure": 0.0,
+          "orthogonality_certificate": 0.0,
+          "area_import_error": 0.0,
+          "pairs": 12.0,
+          "faces": 24.0,
+          "minimum_face_length": 1.0,
+          "message": ""
+        }
+      ],
+      "equality": {
+        "both_admitted": true,
+        "cells_exact": true,
+        "areas_exact": true,
+        "pairs_exact": true,
+        "conductances_exact": true,
+        "additional_pairs": 0
+      },
+      "expected_original_outcome": true,
+      "candidate_geometry_admitted": true,
+      "comparison_contract_satisfied": true,
+      "passed": true
+    },
+    {
+      "case": {
+        "name": "short_face",
+        "N": 9,
+        "kind": "manufactured",
+        "input": "results\\retained_faces_20261113\\inputs\\short_face.txt",
+        "input_sha256": "1f1b06f7797a7ae9ce4bfd9d0642d8e8c7f0b7c55855e6c153e925ae314ebadd"
+      },
+      "observations": [
+        {
+          "variant": "original",
+          "completed": 0.0,
+          "normal_closure": -1.0,
+          "area_closure": -1.0,
+          "orthogonality_certificate": -1.0,
+          "area_import_error": -1.0,
+          "pairs": -1.0,
+          "faces": -1.0,
+          "minimum_face_length": -1.0,
+          "message": "inconsistent Voronoi face geometry: normal_closure=1.4142135448309869e-09 angle_error=5.0139104337910288e-17 face_length=15.500000000000002 roundoff_certificate=5.0139104337910285e-08"
+        },
+        {
+          "variant": "candidate",
+          "completed": 1.0,
+          "normal_closure": 5.875518667808048e-17,
+          "area_closure": 0.0,
+          "orthogonality_certificate": 2.225255006253999e-05,
+          "area_import_error": 0.0,
+          "pairs": 13.0,
+          "faces": 25.0,
+          "minimum_face_length": 5.656854148384083e-09,
+          "message": ""
+        }
+      ],
+      "equality": {
+        "both_admitted": false
+      },
+      "expected_original_outcome": true,
+      "candidate_geometry_admitted": true,
+      "comparison_contract_satisfied": true,
+      "passed": true
+    },
+    {
+      "case": {
+        "name": "resolved_face",
+        "N": 9,
+        "kind": "manufactured",
+        "input": "results\\retained_faces_20261113\\inputs\\resolved_face.txt",
+        "input_sha256": "7c4a242ba5ed7a9e08f9bad322d8f1fca26f5caa276d07eade13bf892fd854e0"
+      },
+      "observations": [
+        {
+          "variant": "original",
+          "completed": 1.0,
+          "normal_closure": 8.851868874693557e-17,
+          "area_closure": 0.0,
+          "orthogonality_certificate": 1.5150628128171442e-05,
+          "area_import_error": 0.0,
+          "pairs": 13.0,
+          "faces": 25.0,
+          "minimum_face_length": 5.656851983619558e-07,
+          "message": ""
+        },
+        {
+          "variant": "candidate",
+          "completed": 1.0,
+          "normal_closure": 8.851868874693557e-17,
+          "area_closure": 0.0,
+          "orthogonality_certificate": 1.5150628128171442e-05,
+          "area_import_error": 0.0,
+          "pairs": 13.0,
+          "faces": 25.0,
+          "minimum_face_length": 5.656851983619558e-07,
+          "message": ""
+        }
+      ],
+      "equality": {
+        "both_admitted": true,
+        "cells_exact": true,
+        "areas_exact": true,
+        "pairs_exact": true,
+        "conductances_exact": true,
+        "additional_pairs": 0
+      },
+      "expected_original_outcome": true,
+      "candidate_geometry_admitted": true,
+      "comparison_contract_satisfied": true,
+      "passed": true
+    },
+    {
+      "case": {
+        "name": "u20_dt003125",
+        "N": 144,
+        "kind": "saved_actual_geometry",
+        "step": 320,
+        "time_us": 10.0,
+        "source": {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/states.csv",
+          "bytes": 2748681,
+          "sha256": "0419946c524a976d25adf9956225a129995473dca34d6e384619fb131818d257"
+        },
+        "input": "results\\retained_faces_20261113\\inputs\\u20_dt003125.txt",
+        "input_sha256": "e46f0dab6be0c954e400042dbbc77cad4cb3d4b351ea421aa4448d6ccfc0e35b",
+        "trajectory_replayed": false,
+        "failed_case_prefix_only": false
+      },
+      "observations": [
+        {
+          "variant": "original",
+          "completed": 1.0,
+          "normal_closure": 1.0441164692072068e-15,
+          "area_closure": 1.1102230246251565e-16,
+          "orthogonality_certificate": 0.0017446544796003334,
+          "area_import_error": 1.8540724511240114e-14,
+          "pairs": 381.0,
+          "faces": 433.0,
+          "minimum_face_length": 3.231390396570209e-07,
+          "message": ""
+        },
+        {
+          "variant": "candidate",
+          "completed": 1.0,
+          "normal_closure": 1.0441164692072068e-15,
+          "area_closure": 1.1102230246251565e-16,
+          "orthogonality_certificate": 0.0017446544796003334,
+          "area_import_error": 1.8540724511240114e-14,
+          "pairs": 381.0,
+          "faces": 433.0,
+          "minimum_face_length": 3.231390396570209e-07,
+          "message": ""
+        }
+      ],
+      "equality": {
+        "both_admitted": true,
+        "cells_exact": true,
+        "areas_exact": true,
+        "pairs_exact": true,
+        "conductances_exact": true,
+        "additional_pairs": 0
+      },
+      "expected_original_outcome": true,
+      "candidate_geometry_admitted": true,
+      "comparison_contract_satisfied": true,
+      "passed": true
+    },
+    {
+      "case": {
+        "name": "u10_dt003125",
+        "N": 544,
+        "kind": "saved_actual_geometry",
+        "step": 320,
+        "time_us": 10.0,
+        "source": {
+          "path": "results/local-runs/global_space_20261113/u10_dt003125/states.csv",
+          "bytes": 955182,
+          "sha256": "100ba51e31f42690d2d6d703b0584424370ddeda49a970e8fb9a6b7c95f44f42"
+        },
+        "input": "results\\retained_faces_20261113\\inputs\\u10_dt003125.txt",
+        "input_sha256": "791bf1ec8e786cefdaf61543ce0ab6681bb47279b9941a7963f06fafd10e9d58",
+        "trajectory_replayed": false,
+        "failed_case_prefix_only": false
+      },
+      "observations": [
+        {
+          "variant": "original",
+          "completed": 1.0,
+          "normal_closure": 3.5514567889839287e-15,
+          "area_closure": 2.220446049250313e-16,
+          "orthogonality_certificate": 0.0020355877659060688,
+          "area_import_error": 1.7985612998927536e-14,
+          "pairs": 1533.0,
+          "faces": 1633.0,
+          "minimum_face_length": 6.325263832521134e-08,
+          "message": ""
+        },
+        {
+          "variant": "candidate",
+          "completed": 1.0,
+          "normal_closure": 3.5514567889839287e-15,
+          "area_closure": 2.220446049250313e-16,
+          "orthogonality_certificate": 0.0020355877659060688,
+          "area_import_error": 1.7985612998927536e-14,
+          "pairs": 1533.0,
+          "faces": 1633.0,
+          "minimum_face_length": 6.325263832521134e-08,
+          "message": ""
+        }
+      ],
+      "equality": {
+        "both_admitted": true,
+        "cells_exact": true,
+        "areas_exact": true,
+        "pairs_exact": true,
+        "conductances_exact": true,
+        "additional_pairs": 0
+      },
+      "expected_original_outcome": true,
+      "candidate_geometry_admitted": true,
+      "comparison_contract_satisfied": true,
+      "passed": true
+    },
+    {
+      "case": {
+        "name": "u5_dt00625",
+        "N": 2112,
+        "kind": "saved_actual_geometry",
+        "step": 160,
+        "time_us": 10.0,
+        "source": {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt00625\\states.csv",
+          "bytes": 17294214,
+          "sha256": "4a1fb22de7a6e37c52b73c6b0209edf43e886acaecb69e9e77730f2f491cdf78"
+        },
+        "input": "results\\retained_faces_20261113\\inputs\\u5_dt00625.txt",
+        "input_sha256": "5cbd7cbc3f0d70fd5055ac568c5326f6f48ff160d9cdf356c762761df67db89c",
+        "trajectory_replayed": false,
+        "failed_case_prefix_only": false
+      },
+      "observations": [
+        {
+          "variant": "original",
+          "completed": 1.0,
+          "normal_closure": 7.04929950366749e-15,
+          "area_closure": 4.440892098500626e-16,
+          "orthogonality_certificate": 0.006969638809191119,
+          "area_import_error": 6.661338147750939e-14,
+          "pairs": 6141.0,
+          "faces": 6337.0,
+          "minimum_face_length": 4.820386984917136e-09,
+          "message": ""
+        },
+        {
+          "variant": "candidate",
+          "completed": 1.0,
+          "normal_closure": 7.04929950366749e-15,
+          "area_closure": 4.440892098500626e-16,
+          "orthogonality_certificate": 0.006969638809191119,
+          "area_import_error": 6.661338147750939e-14,
+          "pairs": 6141.0,
+          "faces": 6337.0,
+          "minimum_face_length": 4.820386984917136e-09,
+          "message": ""
+        }
+      ],
+      "equality": {
+        "both_admitted": true,
+        "cells_exact": true,
+        "areas_exact": true,
+        "pairs_exact": true,
+        "conductances_exact": true,
+        "additional_pairs": 0
+      },
+      "expected_original_outcome": true,
+      "candidate_geometry_admitted": true,
+      "comparison_contract_satisfied": true,
+      "passed": true
+    },
+    {
+      "case": {
+        "name": "u5_dt003125",
+        "N": 2112,
+        "kind": "saved_actual_geometry",
+        "step": 40,
+        "time_us": 1.25,
+        "source": {
+          "path": "results\\local-runs\\uniform5_pilot_20261113\\u5_dt003125\\states.csv",
+          "bytes": 3696732,
+          "sha256": "58b5494382a83ca92035b4fa3f19505ced958431d415d58c3f8953d510650245"
+        },
+        "input": "results\\retained_faces_20261113\\inputs\\u5_dt003125.txt",
+        "input_sha256": "cff3ef1bb43ba2bf80db7f4baba9a47beb116cd388cdf7f6937d6615e0971a04",
+        "trajectory_replayed": false,
+        "failed_case_prefix_only": true
+      },
+      "observations": [
+        {
+          "variant": "original",
+          "completed": 1.0,
+          "normal_closure": 6.322660420847571e-15,
+          "area_closure": 2.220446049250313e-16,
+          "orthogonality_certificate": 0.00722142383605973,
+          "area_import_error": 5.007105841059456e-14,
+          "pairs": 6141.0,
+          "faces": 6337.0,
+          "minimum_face_length": 3.1602585126971237e-08,
+          "message": ""
+        },
+        {
+          "variant": "candidate",
+          "completed": 1.0,
+          "normal_closure": 6.322660420847571e-15,
+          "area_closure": 2.220446049250313e-16,
+          "orthogonality_certificate": 0.00722142383605973,
+          "area_import_error": 5.007105841059456e-14,
+          "pairs": 6141.0,
+          "faces": 6337.0,
+          "minimum_face_length": 3.1602585126971237e-08,
+          "message": ""
+        }
+      ],
+      "equality": {
+        "both_admitted": true,
+        "cells_exact": true,
+        "areas_exact": true,
+        "pairs_exact": true,
+        "conductances_exact": true,
+        "additional_pairs": 0
+      },
+      "expected_original_outcome": true,
+      "candidate_geometry_admitted": true,
+      "comparison_contract_satisfied": true,
+      "passed": true
+    }
+  ],
+  "candidate_admitted_count": 7,
+  "paired_native_geometry_observations": 14,
+  "new_native_trajectory_steps": 0,
+  "short_face_candidate_closure": 5.875518667808048e-17,
+  "actual_snapshots_all_graphs_exact": true,
+  "original_default_changed": false,
+  "actual_failed78_reproduced": false,
+  "derivative_checks_executed": false,
+  "dynamic_convergence_qualified": false,
+  "full_C1_complete": false,
+  "scope": "Geometry-only admission, not operator/dynamic/physical qualification"
+}
