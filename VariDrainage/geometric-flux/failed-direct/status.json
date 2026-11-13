@@ -1,0 +1,37 @@
+{
+  "state": "failed",
+  "guards": [
+    {
+      "name": "guard_translation_j0",
+      "errors": {
+        "native_area": 3.6350710512584155e-16,
+        "native_weight": 0.0,
+        "native_Jv": 1.9685307846814835e-16,
+        "area_FD": 8.791369005715476e-11,
+        "weight_FD": 6.963584079736996e-11,
+        "FD_level_change": 1.0713985857524868e-10,
+        "global_area_sum": 1.1472881783697814e-16
+      },
+      "passed": true,
+      "FD_epsilon_s": 1.5659205853725429e-07,
+      "native": {
+        "name": "guard_translation_j0",
+        "command": [
+          "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_voronoi_kinematics.exe",
+          "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\kinematic_flux_20261113\\native\\guard_translation_j0-input.csv",
+          "0.00024",
+          "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\kinematic_flux_20261113\\native\\guard_translation_j0-native.csv"
+        ],
+        "returncode": 0,
+        "wall_s": 0.015999999828636646,
+        "log": "results\\kinematic_flux_20261113\\logs\\guard_translation_j0.log",
+        "log_sha256": "b1db7a2b9f9f35730300baf7e96ce6038b4625fae23bcdf4878731e5eb646ac9"
+      }
+    }
+  ],
+  "samples": [],
+  "phase": "GEOS finite-difference Voronoi intersection for exact regular rotation guard",
+  "exception": "TopologyException: side location conflict",
+  "native_simulations_started": 0,
+  "note": "Two native geometry observations preserved; first guard passed. No model/input jitter or raw state modification. Next campaign tests uniform coordinate conditioning."
+}

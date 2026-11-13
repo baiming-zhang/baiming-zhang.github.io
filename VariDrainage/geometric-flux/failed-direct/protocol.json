@@ -1,0 +1,47 @@
+{
+  "source_commit": "31e74c36cc8bcc11993b4ccba47077aa9e28cc8f",
+  "source_hashes": {
+    "thin_film/scripts/kinematic_flux/analyze.py": "75c2464a938f4878c976d24146c27c8aec982f429f83355d139b02d164c45bc0",
+    "thin_film/scripts/kinematic_flux/README.md": "e2f84fe6ebdcc7c2c2b5dced053a738617f6ffdd6144032bbde421d7a051e5a8",
+    "thin_film/bench/tf_voronoi_kinematics.cpp": "330aad198c4daa91da389d054591a0d2ff97cb6aca1c509e7b0c78819586db3e",
+    "thin_film/include/vf/thinfilm/MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912"
+  },
+  "binary_sha256": "6ca0454c3db49674cc9bd6daadf0e34b16b8d65c10f73e5ca54004f89ad10242",
+  "cases": [
+    "obs_dt1",
+    "control_dt025",
+    "dt003125"
+  ],
+  "samples_us": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200
+  ],
+  "fixed_cut_m": 0.00024,
+  "whole_budget_s": 600,
+  "native_timeout_s": 5,
+  "gates": {
+    "geometry": 1e-08,
+    "area_and_weight_derivatives": 1e-06,
+    "liquid_surface_and_quadrature": 1e-05
+  },
+  "scope": "Native geometry-only observations of frozen states. Independent face-speed shape derivatives and GEOS FD. Not continuum normal-flux validation.",
+  "reference": "Springel2010AREPOsec3.3eq32-34, author PDF locally preserved and page17 visually checked."
+}

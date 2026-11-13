@@ -1,0 +1,62 @@
+{
+  "source_commit": "2a0651f151fe19e5f0629bad95f93b076fab9103",
+  "source_hashes": {
+    "thin_film/scripts/kinematic_flux/transport.py": "e1cd7429c202431135a52246f267edfcf7dfe668facaa125efdc0b960a5a4a00",
+    "thin_film/scripts/kinematic_flux/analyze.py": "2a9811d52dc2cc1a6ef6a3c91f415d7d025fac6a5a778d83f3bf4553981d3bc2",
+    "thin_film/bench/tf_voronoi_kinematics.cpp": "330aad198c4daa91da389d054591a0d2ff97cb6aca1c509e7b0c78819586db3e"
+  },
+  "binary_sha256": "6ca0454c3db49674cc9bd6daadf0e34b16b8d65c10f73e5ca54004f89ad10242",
+  "matrix": [
+    {
+      "n": 7,
+      "jitter": 0.0
+    },
+    {
+      "n": 15,
+      "jitter": 0.0
+    },
+    {
+      "n": 23,
+      "jitter": 0.0
+    },
+    {
+      "n": 31,
+      "jitter": 0.0
+    },
+    {
+      "n": 7,
+      "jitter": 0.08
+    },
+    {
+      "n": 15,
+      "jitter": 0.08
+    },
+    {
+      "n": 23,
+      "jitter": 0.08
+    },
+    {
+      "n": 31,
+      "jitter": 0.08
+    }
+  ],
+  "cut_m": 0.00024,
+  "whole_budget_s": 600,
+  "native_timeout_s": 5,
+  "field": "Divergence-free zero-wall smooth velocity; affine nonuniform liquid thickness and monolayer density. Instantaneous geometric material rate only, no time evolution.",
+  "choices": {
+    "U_m_s": 0.001,
+    "h0_m": 6e-06,
+    "Gamma0_mol_m2": 1.85e-06,
+    "liquid_y_slope": 0.4,
+    "liquid_x_slope": 0.2,
+    "surface_y_slope": -0.3,
+    "surface_x_slope": 0.1
+  },
+  "gates": {
+    "native_geometry_and_FD": "unchanged kinematic diagnostic criteria",
+    "finest_geometric_liquid_and_surface_relative_error": 0.05,
+    "overall_decrease": "finest<coarsest for each layout and quantity; report all intermediate levels"
+  },
+  "scope": "Independent known continuum cut flux. This is not coupled moving-drainage spatial convergence or experimental validation."
+}
