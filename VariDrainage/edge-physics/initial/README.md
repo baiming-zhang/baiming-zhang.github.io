@@ -24,3 +24,18 @@ free-node inventory and graph-flux labels and adds postprocessing comparisons.
 All original fields, protocol, figure PNG/vector PDF and driver bytes retained.
 No >2h job. Full C1 conservation/normal-flux/mechanical-power/time-space gates
 and experimental validation remain open. No empirical drainage law inserted.
+
+## Physical interpretation guard
+
+Do not demand mesh-independent instantaneous t=0 flux from this piecewise
+flat/constant-curvature preparation, or tune an arbitrary smoothing width until
+it passes. A curvature/pressure transition can generate a short-time relaxation
+layer. This is an inference, not a proven explanation of this discretization.
+Aradian et al2001 (https://arxiv.org/abs/cond-mat/0105318) distinguish initial
+flat film, transition and fixed-curvature border, and examine positive-time
+pinch dynamics. Salez et al2012 (https://arxiv.org/abs/1210.5905) analyze capillary
+relaxation of a step; their polymer-film mobility is not our soap-film closure.
+Next bounded evidence must compare fixed POSITIVE physical times and integrated
+exchange/profiles, with reference resolution chosen before seeing outcomes.
+No analytical profile/time law goes in the solver. Instantaneous graph-flux
+checks remain diagnostics, not a new blocker replacing C1's full requirements.
