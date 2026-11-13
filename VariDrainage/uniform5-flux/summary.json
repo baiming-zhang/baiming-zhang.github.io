@@ -1,0 +1,40 @@
+{
+  "new_terminal_observations": 1,
+  "new_native_runs": 0,
+  "reference_reproductions": [
+    {
+      "case": "u10_dt00625",
+      "max_relative_reproduction_difference": 0.0
+    },
+    {
+      "case": "u10_dt003125",
+      "max_relative_reproduction_difference": 0.0
+    }
+  ],
+  "case": "u5_dt00625",
+  "same_dt_cases": [
+    "u20_dt00625",
+    "u10_dt00625",
+    "u5_dt00625"
+  ],
+  "new_case": {
+    "time_us": 10,
+    "scope": "One saved step, nonconforming recovery, not physical normal-flux validation or temporal L2.",
+    "recovered_relative_m3_s": 7.0011288355957254e-12,
+    "ledger_relative_m3_s": 7.010771312364332e-12,
+    "recovered_material_m3_s": 5.177839225011617e-12,
+    "ledger_material_m3_s": 5.1984390039564994e-12,
+    "recovered_surface_mol_s": 3.013069560352036e-12,
+    "ledger_surface_mol_s": 3.025056909201687e-12,
+    "cut_length_m": 0.00016,
+    "cut_cells": 32,
+    "max_gradient_condition": 1.6215617337727204,
+    "relative_single_step_relative_difference": 0.0013753803025354375,
+    "material_single_step_relative_difference": 0.0039626855156334705,
+    "surface_single_step_relative_difference": 0.003962685400458945
+  },
+  "full_C1_complete": false,
+  "physical_flux_validated": false,
+  "time_space_qualified": false,
+  "scope": "One terminal saved step; same-dt resolution diagnostic, not physical validation or convergence acceptance"
+}
