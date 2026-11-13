@@ -1,0 +1,1790 @@
+// datafilename: free4-relaxed.fe
+vertices_predicted       130
+edges_predicted          413
+facets_predicted         289
+facetedges_predicted     865
+bodies_predicted           5
+quantities_predicted            0
+method_instances_predicted      0
+// Total energy: 27.1277557055679
+SOAPFILM
+
+LINEAR
+
+SCALE: 0.238298280787074
+
+PARAMETER spread = 0.02 
+PARAMETER ccount =  0 
+PARAMETER voffset =  0 
+PARAMETER wrapnum =  0 
+PARAMETER border_body =  0 
+PARAMETER weterrors =  0 
+define cornerx real[0] =
+{}
+
+define cornery real[0] =
+{}
+
+define cornerz real[0] =
+{}
+
+define cornern integer[0] =
+{}
+
+define borderbody integer[0] =
+{}
+
+PARAMETER ffid =  0 
+PARAMETER vvid =  0 
+PARAMETER fcounter =  0 
+PARAMETER fstart =  0 
+
+TOTAL_TIME 21.9345
+
+
+//Extra attributes for elements
+
+define vertex attribute hivalence integer[0]
+
+define facet attribute stock_id integer
+
+define facet attribute corners integer[0]
+
+define facet attribute newedge integer[0]
+
+define facet attribute corneredge1 integer[0]
+
+define facet attribute corneredge2 integer[0]
+
+define facet attribute didflag1 integer[0]
+
+define facet attribute didflag2 integer[0]
+
+define facet attribute diagedge integer[0]
+
+VIEW_MATRIX 
+ 1.000000000000000   0.000000000000000   0.000000000000000  -0.000000000000000  
+ 0.000000000000000   1.000000000000000   0.000000000000000  -0.000000000000000  
+ 0.000000000000000   0.000000000000000   1.000000000000000  -0.000000000000000  
+ 0.000000000000000   0.000000000000000   0.000000000000000   1.000000000000000  
+slice_coeff = { 1.00000, 0.00000, 0.00000, 0.00000}
+
+
+define edge attribute oldedge integer
+
+
+define facet attribute oldbodies integer[2]
+
+
+define facet attribute ftype integer
+parameter oldfacet = 1 // original facet
+parameter tubefacet = 2 // new facet along tube
+parameter vertexfacet = 3 // new facet around vertex
+
+parameter border_body = 5
+
+vertices
+5  0.859719 0.859706 0.859692
+7  0.859696 -0.859712 -0.859732
+8  -0.859691 0.859675 -0.859716
+9  -0.859689 -0.859706 0.859648
+16  0.916052 0.00341185 0.916015
+17  0.916034 0.916018 0.00341381
+18  0.003429 0.916019 0.915999
+22  0.915903 -0.915934 -0.00357772
+23  0.915939 -0.00354578 -0.915996
+24  0.00350563 -0.916016 -0.916035
+26  -0.915946 0.915912 -0.00355105
+27  -0.916036 0.00346732 -0.916072
+28  -0.00351583 0.915945 -0.916014
+29  -0.916039 -0.916058 0.0034434
+30  -0.915974 -0.00351426 0.915915
+31  -0.00349979 -0.916001 0.91593
+38  0.805798 -0.298513 0.80575
+39  0.805796 0.805779 -0.298525
+40  -0.29847 0.805762 0.805738
+44  0.80572 -0.805759 0.29833
+45  0.805738 0.29838 -0.80579
+46  -0.298502 -0.80584 -0.805858
+48  -0.80574 0.805702 0.298332
+49  -0.805832 -0.298545 -0.805878
+50  0.298409 0.80573 -0.805805
+51  -0.805837 -0.805853 -0.298569
+52  -0.805752 0.298375 0.805698
+53  0.298414 -0.80578 0.805707
+60  0.973193 0.356034 0.973163
+61  0.973159 0.973146 0.356018
+62  0.356042 0.973171 0.973152
+66  0.973075 -0.973095 -0.356078
+67  0.973101 -0.356068 -0.973143
+68  0.356055 -0.973147 -0.973162
+70  -0.973098 0.973078 -0.356072
+71  -0.973154 0.356045 -0.97318
+72  -0.356054 0.973092 -0.97314
+73  -0.973141 -0.973158 0.356019
+74  -0.973114 -0.356053 0.973068
+75  -0.356046 -0.973135 0.973079
+76  0.928685 -0.259904 0.260009
+77  0.668731 6.10887e-005 6.15901e-005
+78  0.928673 0.259982 -0.25992
+79  0.259989 0.928682 -0.259921
+80  5.28824e-005 0.66873 5.30636e-005
+81  -0.259914 0.928687 0.259999
+82  -0.259934 0.259981 0.928687
+83  4.41832e-005 4.41516e-005 0.66873
+84  0.259978 -0.259936 0.928687
+85  1.22623 0.486857 0.486846
+86  1.1489 0.00896649 0.590996
+87  1.14889 0.591019 0.00895388
+88  0.00899044 1.14887 0.590997
+89  0.486867 1.2262 0.48684
+90  0.591035 1.14887 0.00895685
+91  0.00897194 0.591036 1.14889
+92  0.591053 0.00895197 1.14891
+93  0.486895 0.486877 1.22624
+94  -0.259972 -0.259942 -0.928686
+95  -1.13604e-005 1.13275e-005 -0.66873
+96  0.259944 0.259969 -0.928686
+97  0.259961 -0.928688 0.259954
+98  2.83533e-006 -0.66873 -2.81675e-006
+99  -0.259945 -0.928687 -0.25997
+100  1.14884 -0.00907174 -0.591096
+101  1.14881 -0.591078 -0.00909669
+102  1.22611 -0.486929 -0.486954
+103  0.486879 -1.22611 -0.486931
+104  0.591013 -1.14878 -0.00910152
+105  0.00902099 -1.14888 -0.591081
+106  0.591027 -0.00906141 -1.14887
+107  0.486903 -0.486935 -1.22619
+108  0.00900576 -0.59108 -1.14894
+109  -0.928687 -0.259956 -0.259958
+110  -0.66873 -2.78054e-006 2.77524e-006
+111  -0.928688 0.259959 0.259955
+112  -1.14891 0.00898875 -0.591095
+113  -1.1488 0.591008 -0.0090845
+114  -1.22614 0.486876 -0.486942
+115  -0.486917 1.22611 -0.48695
+116  -0.591064 1.14881 -0.00908735
+117  -0.00904774 1.14884 -0.591101
+118  -0.591054 0.0089773 -1.14895
+119  -0.486906 0.486874 -1.2262
+120  -0.00903587 0.591006 -1.14887
+121  -1.14881 -0.00905608 0.590985
+122  -1.1489 -0.591072 0.00895968
+123  -1.22614 -0.486918 0.486852
+124  -0.486912 -1.22617 0.486865
+125  -0.591055 -1.14891 0.00896121
+126  -0.00903914 -1.14884 0.590986
+127  -0.591064 -0.00904348 1.14882
+128  -0.486905 -0.48692 1.22612
+129  -0.00902373 -0.591078 1.14884
+130  0.681134 -0.484591 0.484477
+131  0.680731 0.484037 -0.484278
+132  0.484092 0.680684 -0.484277
+133  -0.485028 0.681576 0.484906
+134  -0.485046 0.484948 0.681541
+135  0.484501 -0.484616 0.681116
+136  -0.483685 -0.483704 -0.680406
+137  0.484066 0.484022 -0.680925
+138  0.48447 -0.681242 0.484443
+139  -0.483672 -0.680373 -0.483738
+140  -0.680346 -0.483715 -0.483738
+141  -0.681671 0.484921 0.484879
+143   0.267163 -0.258175 0.258254
+144   0.258236 0.267146 -0.258211
+145   -0.25819 0.258246 0.267152
+146   -0.258224 -0.258222 -0.267142
+147   0.258247 -0.267092 0.258253
+148   -0.267141 -0.258222 -0.258226
+149   0.525071 -0.516778 0.516648
+150   0.945488 -0.361516 0.361572
+151   0.54636 -0.541293 0.54111
+152   0.267152 0.25823 -0.258211
+153   0.525083 0.516613 -0.516941
+154   0.945502 0.361565 -0.361573
+155   0.516692 0.525004 -0.51694
+156   0.361592 0.945497 -0.361571
+157   0.53989 0.545094 -0.540198
+158   -0.25819 0.267162 0.258236
+159   -0.516327 0.524586 0.516149
+160   -0.361498 0.945435 0.361548
+161   -0.516328 0.516196 0.52454
+162   -0.361549 0.361556 0.945444
+163   -0.542656 0.542529 0.54771
+164   0.258247 -0.258175 0.26717
+165   0.516681 -0.516778 0.525039
+166   0.361595 -0.36159 0.945483
+167   0.950114 -0.356949 0.364387
+168   0.950135 0.364388 -0.357011
+169   -0.356925 0.950055 0.364358
+170   0.364415 0.95013 -0.357009
+171   -0.356976 0.364366 0.950065
+172   0.364411 -0.357023 0.950109
+173   -0.516288 -0.516287 -0.52475
+174   -0.361627 -0.361603 -0.945635
+175   -0.538489 -0.538568 -0.543778
+176   0.258235 0.25823 -0.267128
+177   0.516691 0.516613 -0.525332
+178   0.361515 0.36152 -0.945505
+179   0.51668 -0.525169 0.516647
+180   0.361504 -0.945461 0.361473
+181   0.541115 -0.546538 0.541109
+182   -0.258224 -0.267139 -0.258226
+183   -0.516288 -0.524679 -0.516359
+184   -0.361588 -0.945599 -0.36164
+185   0.950135 0.357004 -0.364394
+186   0.950113 -0.364331 0.357004
+187   0.364319 -0.950085 0.356905
+188   -0.357038 -0.950241 -0.364472
+189   0.364337 0.356959 -0.950135
+190   -0.357077 -0.364435 -0.950278
+191   -0.524679 -0.516288 -0.516359
+192   -0.945602 -0.361634 -0.361642
+193   -0.543733 -0.538568 -0.538533
+194   -0.267107 0.258246 0.258235
+195   -0.524719 0.516195 0.516148
+196   -0.945419 0.361479 0.361468
+197   -0.950244 -0.357083 -0.364474
+198   -0.950038 0.364288 0.356895
+199   -0.364307 0.950054 0.356975
+200   0.357031 0.95013 -0.364391
+201   -0.364459 -0.357052 -0.950278
+202   0.356955 0.364342 -0.950135
+203   -0.950038 0.356906 0.364278
+204   -0.950244 -0.364466 -0.357091
+205   -0.36442 -0.950241 -0.357089
+206   0.356937 -0.950085 0.364289
+207   -0.364358 0.356983 0.950064
+208   0.357028 -0.364405 0.950109
+209   0.00933241 4.8608e-005 4.12945e-005
+211   1.15877 4.3887e-005 2.89864e-005
+214   4.61259e-005 0.00933473 4.11262e-005
+216   5.7492e-005 1.15871 4.02294e-005
+219   4.60968e-005 4.85284e-005 0.00932754
+221   1.61217e-005 1.06552e-005 1.15875
+224   1.16376 0.0054774 0.00546221
+225   0.00549132 1.1637 0.00547354
+226   0.00545028 0.00544454 1.16373
+227   4.53097e-005 4.78654e-005 -0.00924635
+229   -9.30927e-006 9.76961e-006 -1.15887
+232   4.55095e-005 -0.00923889 4.05644e-005
+234   2.43369e-005 -1.1588 -4.02875e-005
+237   1.16375 -0.0053922 -0.0054075
+238   0.00545881 -1.16378 -0.00547576
+239   0.00542556 -0.0054258 -1.16386
+240   -0.00924133 4.7814e-005 4.05373e-005
+242   -1.15877 -1.17687e-005 -8.62105e-006
+245   -1.16376 0.0054226 -0.00544423
+246   -0.00537829 1.1637 -0.00539612
+247   -0.00544409 0.00544386 -1.16386
+248   -1.16376 -0.005447 0.00542536
+249   -0.00541079 -1.16379 0.00539387
+250   -0.00541928 -0.005425 1.16373
+252   0.55353 -0.548785 0.548572
+266   0.545133 0.53985 -0.540198
+267   0.553539 0.548525 -0.54889
+270   0.548623 0.553441 -0.54889
+284   -0.542656 0.547773 0.542466
+285   -0.548744 0.553487 0.54852
+288   -0.548745 0.548571 0.553436
+300   0.548614 -0.548785 0.553488
+302   0.541116 -0.541294 0.546354
+306   0.553865 -0.546012 0.553822
+313   0.553884 0.553787 -0.546126
+314   -0.545959 0.55381 0.553759
+333   -0.548769 -0.548772 -0.553786
+345   0.548622 0.548525 -0.553806
+347   0.539889 0.53985 -0.545442
+351   0.548613 -0.553701 0.548571
+363   -0.548769 -0.553689 -0.548869
+365   -0.538489 -0.543812 -0.538533
+368   0.553883 0.545763 -0.554148
+375   0.553864 -0.554034 0.545798
+385   -0.546019 -0.554045 -0.554143
+396   -0.553686 -0.548773 -0.548869
+410   -0.547899 0.542529 0.542466
+411   -0.55366 0.548571 0.548519
+413   -0.554043 -0.546022 -0.554143
+420   -0.553981 0.553809 0.545735
+430   0.545861 0.553786 -0.554148
+440   -0.553981 0.545786 0.553758
+447   -0.554043 -0.554046 -0.54612
+457   0.545841 -0.554034 0.553821
+
+edges
+7  306 38 
+8  313 39 
+9  314 40 
+13  375 44 
+14  368 45 
+15  385 46 
+17  420 48 
+18  413 49 
+19  430 50 
+20  447 51 
+21  440 52 
+22  457 53 
+29  16 60 
+30  17 61 
+31  18 62 
+35  22 66 
+36  23 67 
+37  24 68 
+39  26 70 
+40  27 71 
+41  28 72 
+42  29 73 
+43  30 74 
+44  31 75 
+45  149 76 
+46  211 77 
+47  211 78 
+48  155 79 
+49  216 80 
+50  216 81 
+51  161 82 
+52  221 83 
+53  221 84 
+54  224 85 
+55  224 86 
+56  17 87 
+57  18 88 
+58  225 89 
+59  225 90 
+60  226 91 
+61  16 92 
+62  226 93 
+63  173 94 
+64  229 95 
+65  229 96 
+66  179 97 
+67  234 98 
+68  234 99 
+69  237 100 
+70  22 101 
+71  237 102 
+72  238 103 
+73  238 104 
+74  24 105 
+75  23 106 
+76  239 107 
+77  239 108 
+78  191 109 
+79  242 110 
+80  242 111 
+81  245 112 
+82  26 113 
+83  245 114 
+84  246 115 
+85  246 116 
+86  28 117 
+87  27 118 
+88  247 119 
+89  247 120 
+90  248 121 
+91  29 122 
+92  248 123 
+93  249 124 
+94  249 125 
+95  31 126 
+96  30 127 
+97  250 128 
+98  250 129 
+105  38 16 
+106  39 17 
+107  40 18 
+111  44 22 
+112  45 23 
+113  46 24 
+115  48 26 
+116  49 27 
+117  50 28 
+118  51 29 
+119  52 30 
+120  53 31 
+127  60 5 
+128  61 5 
+129  62 5 
+133  66 7 
+134  67 7 
+135  68 7 
+137  70 8 
+138  71 8 
+139  72 8 
+140  73 9 
+141  74 9 
+142  75 9 
+143  76 211 
+144  77 209 
+145  78 153 
+146  79 216 
+147  80 214 
+148  81 159 
+149  82 221 
+150  83 219 
+151  84 165 
+152  85 5 
+153  86 16 
+154  87 224 
+155  88 225 
+156  89 5 
+157  90 17 
+158  91 18 
+159  92 226 
+160  93 5 
+161  94 229 
+162  95 227 
+163  96 177 
+164  97 234 
+165  98 232 
+166  99 183 
+167  100 23 
+168  101 237 
+169  102 7 
+170  103 7 
+171  104 22 
+172  105 238 
+173  106 239 
+174  107 7 
+175  108 24 
+176  109 242 
+177  110 240 
+178  111 195 
+179  112 27 
+180  113 245 
+181  114 8 
+182  115 8 
+183  116 26 
+184  117 246 
+185  118 247 
+186  119 8 
+187  120 28 
+188  121 30 
+189  122 248 
+190  123 9 
+191  124 9 
+192  125 29 
+193  126 249 
+194  127 250 
+195  128 9 
+196  129 31 
+197  77 143 
+198  76 77 
+199  143 76 
+200  80 144 
+201  79 80 
+202  144 79 
+203  83 145 
+204  82 83 
+205  145 82 
+206  85 61 
+207  87 85 
+208  61 87 
+209  89 62 
+210  88 89 
+211  62 88 
+212  93 60 
+213  92 93 
+214  60 92 
+215  95 146 
+216  94 95 
+217  146 94 
+218  98 147 
+219  97 98 
+220  147 97 
+221  102 66 
+222  101 102 
+223  66 101 
+224  103 68 
+225  105 103 
+226  68 105 
+227  107 67 
+228  106 107 
+229  67 106 
+230  110 148 
+231  109 110 
+232  148 109 
+233  114 70 
+234  113 114 
+235  70 113 
+236  115 72 
+237  117 115 
+238  72 117 
+239  119 71 
+240  118 119 
+241  71 118 
+242  123 73 
+243  122 123 
+244  73 122 
+245  124 75 
+246  126 124 
+247  75 126 
+248  128 74 
+249  127 128 
+250  74 127 
+251  151 150 
+252  150 149 
+253  150 76 
+254  77 78 
+255  152 77 
+256  78 152 
+257  78 154 
+258  154 153 
+259  154 266 
+260  157 156 
+261  156 155 
+262  156 79 
+263  80 81 
+264  158 80 
+265  81 158 
+266  81 160 
+267  160 159 
+268  160 284 
+269  163 162 
+270  162 161 
+271  162 82 
+272  83 84 
+273  164 83 
+274  84 164 
+275  84 166 
+276  166 165 
+277  302 166 
+278  85 86 
+279  60 85 
+280  86 60 
+281  38 86 
+282  167 38 
+283  86 167 
+284  87 39 
+285  168 87 
+286  39 168 
+287  40 169 
+288  88 40 
+289  169 88 
+290  89 90 
+291  61 89 
+292  90 61 
+293  90 170 
+294  39 90 
+295  170 39 
+296  171 40 
+297  91 171 
+298  40 91 
+299  172 92 
+300  38 172 
+301  92 38 
+302  93 91 
+303  62 93 
+304  91 62 
+305  175 174 
+306  174 173 
+307  174 94 
+308  95 96 
+309  176 95 
+310  96 176 
+311  96 178 
+312  178 177 
+313  347 178 
+314  181 180 
+315  180 179 
+316  180 97 
+317  98 99 
+318  182 98 
+319  99 182 
+320  99 184 
+321  184 183 
+322  365 184 
+323  185 45 
+324  100 185 
+325  45 100 
+326  186 101 
+327  44 186 
+328  101 44 
+329  102 100 
+330  67 102 
+331  100 67 
+332  103 104 
+333  66 103 
+334  104 66 
+335  44 104 
+336  187 44 
+337  104 187 
+338  105 46 
+339  188 105 
+340  46 188 
+341  45 189 
+342  106 45 
+343  189 106 
+344  107 108 
+345  68 107 
+346  108 68 
+347  108 190 
+348  46 108 
+349  190 46 
+350  193 192 
+351  192 191 
+352  192 109 
+353  110 111 
+354  194 110 
+355  111 194 
+356  111 196 
+357  196 195 
+358  196 410 
+359  197 49 
+360  112 197 
+361  49 112 
+362  198 113 
+363  48 198 
+364  113 48 
+365  114 112 
+366  71 114 
+367  112 71 
+368  115 116 
+369  70 115 
+370  116 70 
+371  48 116 
+372  199 48 
+373  116 199 
+374  117 50 
+375  200 117 
+376  50 200 
+377  49 201 
+378  118 49 
+379  201 118 
+380  119 120 
+381  72 119 
+382  120 72 
+383  120 202 
+384  50 120 
+385  202 50 
+386  203 52 
+387  121 203 
+388  52 121 
+389  204 122 
+390  51 204 
+391  122 51 
+392  123 121 
+393  74 123 
+394  121 74 
+395  124 125 
+396  73 124 
+397  125 73 
+398  51 125 
+399  205 51 
+400  125 205 
+401  126 53 
+402  206 126 
+403  53 206 
+404  52 207 
+405  127 52 
+406  207 127 
+407  128 129 
+408  75 128 
+409  129 75 
+410  129 208 
+411  53 129 
+412  208 53 
+413  252 130 
+414  151 130 
+415  150 130 
+416  154 131 
+417  266 131 
+418  267 131 
+419  270 132 
+420  157 132 
+421  156 132 
+422  160 133 
+423  284 133 
+424  285 133 
+425  288 134 
+426  163 134 
+427  162 134 
+428  166 135 
+429  302 135 
+430  300 135 
+431  333 136 
+432  175 136 
+433  174 136 
+434  178 137 
+435  347 137 
+436  345 137 
+437  351 138 
+438  181 138 
+439  180 138 
+440  184 139 
+441  365 139 
+442  363 139 
+443  396 140 
+444  193 140 
+445  192 140 
+446  196 141 
+447  410 141 
+448  411 141 
+449  252 151 /* from edge 1 */ 
+450  351 181 /* from edge 1 */ 
+451  300 302 /* from edge 1 */ 
+452  252 181 
+453  351 302 
+454  300 151 
+455  214 144 /* from edge 2 */ 
+456  209 152 /* from edge 2 */ 
+457  227 176 /* from edge 2 */ 
+458  214 152 
+459  209 176 
+460  227 144 
+461  252 150 /* from edge 3 */ 
+462  306 167 /* from edge 3 */ 
+463  375 186 /* from edge 3 */ 
+464  252 167 
+465  306 186 
+466  375 150 
+467  219 145 /* from edge 4 */ 
+468  214 158 /* from edge 4 */ 
+469  240 194 /* from edge 4 */ 
+470  219 158 
+471  214 194 
+472  240 145 
+473  270 156 /* from edge 5 */ 
+474  313 170 /* from edge 5 */ 
+475  430 200 /* from edge 5 */ 
+476  270 170 
+477  313 200 
+478  430 156 
+479  300 166 /* from edge 6 */ 
+480  457 208 /* from edge 6 */ 
+481  306 172 /* from edge 6 */ 
+482  300 208 
+483  457 172 
+484  306 166 
+485  227 146 /* from edge 10 */ 
+486  232 182 /* from edge 10 */ 
+487  240 148 /* from edge 10 */ 
+488  227 182 
+489  232 148 
+490  240 146 
+491  345 178 /* from edge 11 */ 
+492  430 202 /* from edge 11 */ 
+493  368 189 /* from edge 11 */ 
+494  345 202 
+495  430 189 
+496  368 178 
+497  351 180 /* from edge 12 */ 
+498  375 187 /* from edge 12 */ 
+499  457 206 /* from edge 12 */ 
+500  351 187 
+501  375 206 
+502  457 180 
+503  411 196 /* from edge 16 */ 
+504  440 203 /* from edge 16 */ 
+505  420 198 /* from edge 16 */ 
+506  411 203 
+507  440 198 
+508  420 196 
+509  149 143 /* from edge 23 */ 
+510  179 147 /* from edge 23 */ 
+511  165 164 /* from edge 23 */ 
+512  149 147 
+513  179 164 
+514  165 143 
+515  155 157 /* from edge 24 */ 
+516  153 266 /* from edge 24 */ 
+517  177 347 /* from edge 24 */ 
+518  155 266 
+519  153 347 
+520  177 157 
+521  211 154 /* from edge 25 */ 
+522  224 168 /* from edge 25 */ 
+523  237 185 /* from edge 25 */ 
+524  211 168 
+525  224 185 
+526  237 154 
+527  161 163 /* from edge 26 */ 
+528  159 284 /* from edge 26 */ 
+529  195 410 /* from edge 26 */ 
+530  161 284 
+531  159 410 
+532  195 163 
+533  216 160 /* from edge 27 */ 
+534  225 169 /* from edge 27 */ 
+535  246 199 /* from edge 27 */ 
+536  216 169 
+537  225 199 
+538  246 160 
+539  221 162 /* from edge 28 */ 
+540  250 207 /* from edge 28 */ 
+541  226 171 /* from edge 28 */ 
+542  221 207 
+543  250 171 
+544  226 162 
+545  173 175 /* from edge 32 */ 
+546  183 365 /* from edge 32 */ 
+547  191 193 /* from edge 32 */ 
+548  173 365 
+549  183 193 
+550  191 175 
+551  229 174 /* from edge 33 */ 
+552  247 201 /* from edge 33 */ 
+553  239 190 /* from edge 33 */ 
+554  229 201 
+555  247 190 
+556  239 174 
+557  234 184 /* from edge 34 */ 
+558  238 188 /* from edge 34 */ 
+559  249 205 /* from edge 34 */ 
+560  234 188 
+561  238 205 
+562  249 184 
+563  242 192 /* from edge 38 */ 
+564  248 204 /* from edge 38 */ 
+565  245 197 /* from edge 38 */ 
+566  242 204 
+567  248 197 
+568  245 192 
+569  151 149 /* from edge 99 */ 
+570  181 179 /* from edge 99 */ 
+571  302 165 /* from edge 99 */ 
+572  151 179 
+573  181 165 
+574  302 149 
+575  144 155 /* from edge 100 */ 
+576  152 153 /* from edge 100 */ 
+577  176 177 /* from edge 100 */ 
+578  144 153 
+579  152 177 
+580  176 155 
+581  150 211 /* from edge 101 */ 
+582  167 224 /* from edge 101 */ 
+583  186 237 /* from edge 101 */ 
+584  150 224 
+585  167 237 
+586  186 211 
+587  145 161 /* from edge 102 */ 
+588  158 159 /* from edge 102 */ 
+589  194 195 /* from edge 102 */ 
+590  145 159 
+591  158 195 
+592  194 161 
+593  156 216 /* from edge 103 */ 
+594  170 225 /* from edge 103 */ 
+595  200 246 /* from edge 103 */ 
+596  156 225 
+597  170 246 
+598  200 216 
+599  166 221 /* from edge 104 */ 
+600  208 250 /* from edge 104 */ 
+601  172 226 /* from edge 104 */ 
+602  166 250 
+603  208 226 
+604  172 221 
+605  146 173 /* from edge 108 */ 
+606  182 183 /* from edge 108 */ 
+607  148 191 /* from edge 108 */ 
+608  146 183 
+609  182 191 
+610  148 173 
+611  178 229 /* from edge 109 */ 
+612  202 247 /* from edge 109 */ 
+613  189 239 /* from edge 109 */ 
+614  178 247 
+615  202 239 
+616  189 229 
+617  180 234 /* from edge 110 */ 
+618  187 238 /* from edge 110 */ 
+619  206 249 /* from edge 110 */ 
+620  180 238 
+621  187 249 
+622  206 234 
+623  196 242 /* from edge 114 */ 
+624  203 248 /* from edge 114 */ 
+625  198 245 /* from edge 114 */ 
+626  196 248 
+627  203 245 
+628  198 242 
+629  143 209 /* from edge 121 */ 
+630  147 232 /* from edge 121 */ 
+631  164 219 /* from edge 121 */ 
+632  143 232 
+633  147 219 
+634  164 209 
+635  266 267 /* from edge 122 */ 
+636  347 345 /* from edge 122 */ 
+637  157 270 /* from edge 122 */ 
+638  266 345 
+639  347 270 
+640  157 267 
+641  154 267 /* from edge 123 */ 
+642  168 313 /* from edge 123 */ 
+643  185 368 /* from edge 123 */ 
+644  154 313 
+645  168 368 
+646  185 267 
+647  284 285 /* from edge 124 */ 
+648  410 411 /* from edge 124 */ 
+649  163 288 /* from edge 124 */ 
+650  284 411 
+651  410 288 
+652  163 285 
+653  160 285 /* from edge 125 */ 
+654  169 314 /* from edge 125 */ 
+655  199 420 /* from edge 125 */ 
+656  160 314 
+657  169 420 
+658  199 285 
+659  162 288 /* from edge 126 */ 
+660  207 440 /* from edge 126 */ 
+661  171 314 /* from edge 126 */ 
+662  162 440 
+663  207 314 
+664  171 288 
+665  175 333 /* from edge 130 */ 
+666  365 363 /* from edge 130 */ 
+667  193 396 /* from edge 130 */ 
+668  175 363 
+669  365 396 
+670  193 333 
+671  174 333 /* from edge 131 */ 
+672  201 413 /* from edge 131 */ 
+673  190 385 /* from edge 131 */ 
+674  174 413 
+675  201 385 
+676  190 333 
+677  184 363 /* from edge 132 */ 
+678  188 385 /* from edge 132 */ 
+679  205 447 /* from edge 132 */ 
+680  184 385 
+681  188 447 
+682  205 363 
+683  192 396 /* from edge 136 */ 
+684  204 447 /* from edge 136 */ 
+685  197 413 /* from edge 136 */ 
+686  192 447 
+687  204 413 
+688  197 396 
+689  149 179
+690  179 165
+691  165 149 
+692  155 153
+693  153 177
+694  177 155 
+695  211 224
+696  224 237
+697  237 211 
+698  161 159
+699  159 195
+700  195 161 
+701  216 225
+702  225 246
+703  246 216 
+704  221 250
+705  250 226
+706  226 221 
+707  173 183
+708  183 191
+709  191 173 
+710  229 247
+711  247 239
+712  239 229 
+713  234 238
+714  238 249
+715  249 234 
+716  242 248
+717  248 245
+718  245 242 
+719  151 181
+720  181 302
+721  302 151 
+722  144 152
+723  152 176
+724  176 144 
+725  150 167
+726  167 186
+727  186 150 
+728  145 158
+729  158 194
+730  194 145 
+731  156 170
+732  170 200
+733  200 156 
+734  166 208
+735  208 172
+736  172 166 
+737  146 182
+738  182 148
+739  148 146 
+740  178 202
+741  202 189
+742  189 178 
+743  180 187
+744  187 206
+745  206 180 
+746  196 203
+747  203 198
+748  198 196 
+749  143 147
+750  147 164
+751  164 143 
+752  266 347
+753  347 157
+754  157 266 
+755  154 168
+756  168 185
+757  185 154 
+758  284 410
+759  410 163
+760  163 284 
+761  160 169
+762  169 199
+763  199 160 
+764  162 207
+765  207 171
+766  171 162 
+767  175 365
+768  365 193
+769  193 175 
+770  174 201
+771  201 190
+772  190 174 
+773  184 188
+774  188 205
+775  205 184 
+776  192 204
+777  204 197
+778  197 192 
+779  252 351 oldedge 1
+780  351 300 oldedge 1
+781  300 252 oldedge 1
+782  214 209 oldedge 2
+783  209 227 oldedge 2
+784  227 214 oldedge 2
+785  252 306 oldedge 3
+786  306 375 oldedge 3
+787  375 252 oldedge 3
+788  219 214 oldedge 4
+789  214 240 oldedge 4
+790  240 219 oldedge 4
+791  270 313 oldedge 5
+792  313 430 oldedge 5
+793  430 270 oldedge 5
+794  300 457 oldedge 6
+795  457 306 oldedge 6
+796  306 300 oldedge 6
+797  227 232 oldedge 10
+798  232 240 oldedge 10
+799  240 227 oldedge 10
+800  345 430 oldedge 11
+801  430 368 oldedge 11
+802  368 345 oldedge 11
+803  351 375 oldedge 12
+804  375 457 oldedge 12
+805  457 351 oldedge 12
+806  411 440 oldedge 16
+807  440 420 oldedge 16
+808  420 411 oldedge 16
+809  209 232 oldedge 121
+810  232 219 oldedge 121
+811  219 209 oldedge 121
+812  267 345 oldedge 122
+813  345 270 oldedge 122
+814  270 267 oldedge 122
+815  267 313 oldedge 123
+816  313 368 oldedge 123
+817  368 267 oldedge 123
+818  285 411 oldedge 124
+819  411 288 oldedge 124
+820  288 285 oldedge 124
+821  285 314 oldedge 125
+822  314 420 oldedge 125
+823  420 285 oldedge 125
+824  288 440 oldedge 126
+825  440 314 oldedge 126
+826  314 288 oldedge 126
+827  333 363 oldedge 130
+828  363 396 oldedge 130
+829  396 333 oldedge 130
+830  333 413 oldedge 131
+831  413 385 oldedge 131
+832  385 333 oldedge 131
+833  363 385 oldedge 132
+834  385 447 oldedge 132
+835  447 363 oldedge 132
+836  396 447 oldedge 136
+837  447 413 oldedge 136
+838  413 396 oldedge 136
+
+faces
+1   -199 -197 -198  oldbodies 1 2  ftype oldfacet
+2   -202 -200 -201  oldbodies 1 3  ftype oldfacet
+3   -205 -203 -204  oldbodies 1 4  ftype oldfacet
+4   -208 -206 -207  oldbodies 1 0  ftype oldfacet
+5   -211 -209 -210  oldbodies 1 0  ftype oldfacet
+6   -214 -212 -213  oldbodies 1 0  ftype oldfacet
+7   -217 -215 -216  oldbodies 2 3  ftype oldfacet
+8   -220 -218 -219  oldbodies 2 4  ftype oldfacet
+9   -223 -221 -222  oldbodies 2 0  ftype oldfacet
+10   -226 -224 -225  oldbodies 2 0  ftype oldfacet
+11   -229 -227 -228  oldbodies 2 0  ftype oldfacet
+12   -232 -230 -231  oldbodies 3 4  ftype oldfacet
+13   -235 -233 -234  oldbodies 3 0  ftype oldfacet
+14   -238 -236 -237  oldbodies 3 0  ftype oldfacet
+15   -241 -239 -240  oldbodies 3 0  ftype oldfacet
+16   -244 -242 -243  oldbodies 4 0  ftype oldfacet
+17   -247 -245 -246  oldbodies 4 0  ftype oldfacet
+18   -250 -248 -249  oldbodies 4 0  ftype oldfacet
+19   -252 -251 569  oldbodies 1 2  ftype oldfacet
+20   -256 -254 -255  oldbodies 1 2  ftype oldfacet
+21   -258 -257 145  oldbodies 1 2  ftype oldfacet
+22   -261 -260 -515  oldbodies 1 3  ftype oldfacet
+23   -265 -263 -264  oldbodies 1 3  ftype oldfacet
+24   -267 -266 148  oldbodies 1 3  ftype oldfacet
+25   -270 -269 -527  oldbodies 1 4  ftype oldfacet
+26   -274 -272 -273  oldbodies 1 4  ftype oldfacet
+27   -276 -275 151  oldbodies 1 4  ftype oldfacet
+28   -280 -278 -279  oldbodies 1 0  ftype oldfacet
+29   -283 -281 -282  oldbodies 1 0  ftype oldfacet
+30   -286 -284 -285  oldbodies 1 0  ftype oldfacet
+31   -289 -287 -288  oldbodies 1 0  ftype oldfacet
+32   -292 -290 -291  oldbodies 1 0  ftype oldfacet
+33   -295 -293 -294  oldbodies 1 0  ftype oldfacet
+34   -298 -296 -297  oldbodies 1 0  ftype oldfacet
+35   -301 -299 -300  oldbodies 1 0  ftype oldfacet
+36   -304 -302 -303  oldbodies 1 0  ftype oldfacet
+37   -306 -305 -545  oldbodies 2 3  ftype oldfacet
+38   -310 -308 -309  oldbodies 2 3  ftype oldfacet
+39   -312 -311 163  oldbodies 2 3  ftype oldfacet
+40   -315 -314 570  oldbodies 2 4  ftype oldfacet
+41   -319 -317 -318  oldbodies 2 4  ftype oldfacet
+42   -321 -320 166  oldbodies 2 4  ftype oldfacet
+43   -325 -323 -324  oldbodies 2 0  ftype oldfacet
+44   -328 -326 -327  oldbodies 2 0  ftype oldfacet
+45   -331 -329 -330  oldbodies 2 0  ftype oldfacet
+46   -334 -332 -333  oldbodies 2 0  ftype oldfacet
+47   -337 -335 -336  oldbodies 2 0  ftype oldfacet
+48   -340 -338 -339  oldbodies 2 0  ftype oldfacet
+49   -343 -341 -342  oldbodies 2 0  ftype oldfacet
+50   -346 -344 -345  oldbodies 2 0  ftype oldfacet
+51   -349 -347 -348  oldbodies 2 0  ftype oldfacet
+52   -351 -350 -547  oldbodies 3 4  ftype oldfacet
+53   -355 -353 -354  oldbodies 3 4  ftype oldfacet
+54   -357 -356 178  oldbodies 3 4  ftype oldfacet
+55   -361 -359 -360  oldbodies 3 0  ftype oldfacet
+56   -364 -362 -363  oldbodies 3 0  ftype oldfacet
+57   -367 -365 -366  oldbodies 3 0  ftype oldfacet
+58   -370 -368 -369  oldbodies 3 0  ftype oldfacet
+59   -373 -371 -372  oldbodies 3 0  ftype oldfacet
+60   -376 -374 -375  oldbodies 3 0  ftype oldfacet
+61   -379 -377 -378  oldbodies 3 0  ftype oldfacet
+62   -382 -380 -381  oldbodies 3 0  ftype oldfacet
+63   -385 -383 -384  oldbodies 3 0  ftype oldfacet
+64   -388 -386 -387  oldbodies 4 0  ftype oldfacet
+65   -391 -389 -390  oldbodies 4 0  ftype oldfacet
+66   -394 -392 -393  oldbodies 4 0  ftype oldfacet
+67   -397 -395 -396  oldbodies 4 0  ftype oldfacet
+68   -400 -398 -399  oldbodies 4 0  ftype oldfacet
+69   -403 -401 -402  oldbodies 4 0  ftype oldfacet
+70   -406 -404 -405  oldbodies 4 0  ftype oldfacet
+71   -409 -407 -408  oldbodies 4 0  ftype oldfacet
+72   -412 -410 -411  oldbodies 4 0  ftype oldfacet
+73   -144 197 629  oldbodies 1 2  ftype oldfacet
+74   -46 -143 198  oldbodies 1 2  ftype oldfacet
+75   199 -45 509  oldbodies 1 2  ftype oldfacet
+76   -147 200 -455  oldbodies 1 3  ftype oldfacet
+77   -49 -146 201  oldbodies 1 3  ftype oldfacet
+78   202 -48 -575  oldbodies 1 3  ftype oldfacet
+79   -150 203 -467  oldbodies 1 4  ftype oldfacet
+80   -52 -149 204  oldbodies 1 4  ftype oldfacet
+81   205 -51 -587  oldbodies 1 4  ftype oldfacet
+82   -152 206 128  oldbodies 1 0  ftype oldfacet
+83   -54 -154 207  oldbodies 1 0  ftype oldfacet
+84   208 -56 30  oldbodies 1 0  ftype oldfacet
+85   -156 209 129  oldbodies 1 0  ftype oldfacet
+86   -58 -155 210  oldbodies 1 0  ftype oldfacet
+87   211 -57 31  oldbodies 1 0  ftype oldfacet
+88   -160 212 127  oldbodies 1 0  ftype oldfacet
+89   -62 -159 213  oldbodies 1 0  ftype oldfacet
+90   214 -61 29  oldbodies 1 0  ftype oldfacet
+91   -162 215 -485  oldbodies 2 3  ftype oldfacet
+92   -64 -161 216  oldbodies 2 3  ftype oldfacet
+93   217 -63 -605  oldbodies 2 3  ftype oldfacet
+94   -165 218 630  oldbodies 2 4  ftype oldfacet
+95   -67 -164 219  oldbodies 2 4  ftype oldfacet
+96   220 -66 510  oldbodies 2 4  ftype oldfacet
+97   -169 221 133  oldbodies 2 0  ftype oldfacet
+98   -71 -168 222  oldbodies 2 0  ftype oldfacet
+99   223 -70 35  oldbodies 2 0  ftype oldfacet
+100   -170 224 135  oldbodies 2 0  ftype oldfacet
+101   -72 -172 225  oldbodies 2 0  ftype oldfacet
+102   226 -74 37  oldbodies 2 0  ftype oldfacet
+103   -174 227 134  oldbodies 2 0  ftype oldfacet
+104   -76 -173 228  oldbodies 2 0  ftype oldfacet
+105   229 -75 36  oldbodies 2 0  ftype oldfacet
+106   -177 230 -487  oldbodies 3 4  ftype oldfacet
+107   -79 -176 231  oldbodies 3 4  ftype oldfacet
+108   232 -78 -607  oldbodies 3 4  ftype oldfacet
+109   -181 233 137  oldbodies 3 0  ftype oldfacet
+110   -83 -180 234  oldbodies 3 0  ftype oldfacet
+111   235 -82 39  oldbodies 3 0  ftype oldfacet
+112   -182 236 139  oldbodies 3 0  ftype oldfacet
+113   -84 -184 237  oldbodies 3 0  ftype oldfacet
+114   238 -86 41  oldbodies 3 0  ftype oldfacet
+115   -186 239 138  oldbodies 3 0  ftype oldfacet
+116   -88 -185 240  oldbodies 3 0  ftype oldfacet
+117   241 -87 40  oldbodies 3 0  ftype oldfacet
+118   -190 242 140  oldbodies 4 0  ftype oldfacet
+119   -92 -189 243  oldbodies 4 0  ftype oldfacet
+120   244 -91 42  oldbodies 4 0  ftype oldfacet
+121   -191 245 142  oldbodies 4 0  ftype oldfacet
+122   -93 -193 246  oldbodies 4 0  ftype oldfacet
+123   247 -95 44  oldbodies 4 0  ftype oldfacet
+124   -195 248 141  oldbodies 4 0  ftype oldfacet
+125   -97 -194 249  oldbodies 4 0  ftype oldfacet
+126   250 -96 43  oldbodies 4 0  ftype oldfacet
+127   -415 -461 413  oldbodies 1 2  ftype oldfacet
+128   252 45 -253  oldbodies 1 2  ftype oldfacet
+129   253 143 -581  oldbodies 1 2  ftype oldfacet
+130   46 254 -47  oldbodies 1 2  ftype oldfacet
+131   144 456 255  oldbodies 1 2  ftype oldfacet
+132   256 576 -145  oldbodies 1 2  ftype oldfacet
+133   47 257 -521  oldbodies 1 2  ftype oldfacet
+134   258 516 -259  oldbodies 1 2  ftype oldfacet
+135   -418 -641 416  oldbodies 1 2  ftype oldfacet
+136   -421 -473 419  oldbodies 1 3  ftype oldfacet
+137   261 48 -262  oldbodies 1 3  ftype oldfacet
+138   262 146 -593  oldbodies 1 3  ftype oldfacet
+139   49 263 -50  oldbodies 1 3  ftype oldfacet
+140   147 468 264  oldbodies 1 3  ftype oldfacet
+141   265 588 -148  oldbodies 1 3  ftype oldfacet
+142   50 266 -533  oldbodies 1 3  ftype oldfacet
+143   267 528 -268  oldbodies 1 3  ftype oldfacet
+144   -424 -653 422  oldbodies 1 3  ftype oldfacet
+145   -427 659 425  oldbodies 1 4  ftype oldfacet
+146   270 51 -271  oldbodies 1 4  ftype oldfacet
+147   271 149 539  oldbodies 1 4  ftype oldfacet
+148   52 272 -53  oldbodies 1 4  ftype oldfacet
+149   150 -631 273  oldbodies 1 4  ftype oldfacet
+150   274 -511 -151  oldbodies 1 4  ftype oldfacet
+151   53 275 599  oldbodies 1 4  ftype oldfacet
+152   -430 479 428  oldbodies 1 4  ftype oldfacet
+153   277 276 -571  oldbodies 1 4  ftype oldfacet
+154   54 278 -55  oldbodies 1 0  ftype oldfacet
+155   152 -127 279  oldbodies 1 0  ftype oldfacet
+156   280 -29 -153  oldbodies 1 0  ftype oldfacet
+157   -105 281 153  oldbodies 1 0  ftype oldfacet
+158   -7 462 282  oldbodies 1 0  ftype oldfacet
+159   283 582 55  oldbodies 1 0  ftype oldfacet
+160   56 284 106  oldbodies 1 0  ftype oldfacet
+161   154 522 285  oldbodies 1 0  ftype oldfacet
+162   286 642 8  oldbodies 1 0  ftype oldfacet
+163   9 287 654  oldbodies 1 0  ftype oldfacet
+164   107 57 288  oldbodies 1 0  ftype oldfacet
+165   289 155 534  oldbodies 1 0  ftype oldfacet
+166   58 290 -59  oldbodies 1 0  ftype oldfacet
+167   156 -128 291  oldbodies 1 0  ftype oldfacet
+168   292 -30 -157  oldbodies 1 0  ftype oldfacet
+169   59 293 594  oldbodies 1 0  ftype oldfacet
+170   157 -106 294  oldbodies 1 0  ftype oldfacet
+171   295 -8 474  oldbodies 1 0  ftype oldfacet
+172   -661 296 -9  oldbodies 1 0  ftype oldfacet
+173   -541 60 297  oldbodies 1 0  ftype oldfacet
+174   298 158 -107  oldbodies 1 0  ftype oldfacet
+175   -601 299 159  oldbodies 1 0  ftype oldfacet
+176   -481 7 300  oldbodies 1 0  ftype oldfacet
+177   301 105 61  oldbodies 1 0  ftype oldfacet
+178   62 302 -60  oldbodies 1 0  ftype oldfacet
+179   160 -129 303  oldbodies 1 0  ftype oldfacet
+180   304 -31 -158  oldbodies 1 0  ftype oldfacet
+181   -433 671 431  oldbodies 2 3  ftype oldfacet
+182   306 63 -307  oldbodies 2 3  ftype oldfacet
+183   307 161 551  oldbodies 2 3  ftype oldfacet
+184   64 308 -65  oldbodies 2 3  ftype oldfacet
+185   162 457 309  oldbodies 2 3  ftype oldfacet
+186   310 577 -163  oldbodies 2 3  ftype oldfacet
+187   65 311 611  oldbodies 2 3  ftype oldfacet
+188   -436 491 434  oldbodies 2 3  ftype oldfacet
+189   313 312 517  oldbodies 2 3  ftype oldfacet
+190   -439 -497 437  oldbodies 2 4  ftype oldfacet
+191   315 66 -316  oldbodies 2 4  ftype oldfacet
+192   316 164 -617  oldbodies 2 4  ftype oldfacet
+193   67 317 -68  oldbodies 2 4  ftype oldfacet
+194   165 486 318  oldbodies 2 4  ftype oldfacet
+195   319 606 -166  oldbodies 2 4  ftype oldfacet
+196   68 320 -557  oldbodies 2 4  ftype oldfacet
+197   -442 -677 440  oldbodies 2 4  ftype oldfacet
+198   322 321 546  oldbodies 2 4  ftype oldfacet
+199   -643 323 -14  oldbodies 2 0  ftype oldfacet
+200   -523 69 324  oldbodies 2 0  ftype oldfacet
+201   325 167 -112  oldbodies 2 0  ftype oldfacet
+202   -583 326 168  oldbodies 2 0  ftype oldfacet
+203   -463 13 327  oldbodies 2 0  ftype oldfacet
+204   328 111 70  oldbodies 2 0  ftype oldfacet
+205   71 329 -69  oldbodies 2 0  ftype oldfacet
+206   169 -134 330  oldbodies 2 0  ftype oldfacet
+207   331 -36 -167  oldbodies 2 0  ftype oldfacet
+208   72 332 -73  oldbodies 2 0  ftype oldfacet
+209   170 -133 333  oldbodies 2 0  ftype oldfacet
+210   334 -35 -171  oldbodies 2 0  ftype oldfacet
+211   -111 335 171  oldbodies 2 0  ftype oldfacet
+212   -13 498 336  oldbodies 2 0  ftype oldfacet
+213   337 618 73  oldbodies 2 0  ftype oldfacet
+214   74 338 113  oldbodies 2 0  ftype oldfacet
+215   172 558 339  oldbodies 2 0  ftype oldfacet
+216   340 678 15  oldbodies 2 0  ftype oldfacet
+217   14 341 -493  oldbodies 2 0  ftype oldfacet
+218   112 75 342  oldbodies 2 0  ftype oldfacet
+219   343 173 -613  oldbodies 2 0  ftype oldfacet
+220   76 344 -77  oldbodies 2 0  ftype oldfacet
+221   174 -135 345  oldbodies 2 0  ftype oldfacet
+222   346 -37 -175  oldbodies 2 0  ftype oldfacet
+223   77 347 -553  oldbodies 2 0  ftype oldfacet
+224   175 -113 348  oldbodies 2 0  ftype oldfacet
+225   349 -15 -673  oldbodies 2 0  ftype oldfacet
+226   -445 683 443  oldbodies 3 4  ftype oldfacet
+227   351 78 -352  oldbodies 3 4  ftype oldfacet
+228   352 176 563  oldbodies 3 4  ftype oldfacet
+229   79 353 -80  oldbodies 3 4  ftype oldfacet
+230   177 469 354  oldbodies 3 4  ftype oldfacet
+231   355 589 -178  oldbodies 3 4  ftype oldfacet
+232   80 356 623  oldbodies 3 4  ftype oldfacet
+233   357 529 -358  oldbodies 3 4  ftype oldfacet
+234   -448 503 446  oldbodies 3 4  ftype oldfacet
+235   -685 359 -18  oldbodies 3 0  ftype oldfacet
+236   -565 81 360  oldbodies 3 0  ftype oldfacet
+237   361 179 -116  oldbodies 3 0  ftype oldfacet
+238   -625 362 180  oldbodies 3 0  ftype oldfacet
+239   -505 17 363  oldbodies 3 0  ftype oldfacet
+240   364 115 82  oldbodies 3 0  ftype oldfacet
+241   83 365 -81  oldbodies 3 0  ftype oldfacet
+242   181 -138 366  oldbodies 3 0  ftype oldfacet
+243   367 -40 -179  oldbodies 3 0  ftype oldfacet
+244   84 368 -85  oldbodies 3 0  ftype oldfacet
+245   182 -137 369  oldbodies 3 0  ftype oldfacet
+246   370 -39 -183  oldbodies 3 0  ftype oldfacet
+247   -115 371 183  oldbodies 3 0  ftype oldfacet
+248   -17 -655 372  oldbodies 3 0  ftype oldfacet
+249   373 -535 85  oldbodies 3 0  ftype oldfacet
+250   86 374 117  oldbodies 3 0  ftype oldfacet
+251   184 -595 375  oldbodies 3 0  ftype oldfacet
+252   376 -475 19  oldbodies 3 0  ftype oldfacet
+253   18 377 672  oldbodies 3 0  ftype oldfacet
+254   116 87 378  oldbodies 3 0  ftype oldfacet
+255   379 185 552  oldbodies 3 0  ftype oldfacet
+256   88 380 -89  oldbodies 3 0  ftype oldfacet
+257   186 -139 381  oldbodies 3 0  ftype oldfacet
+258   382 -41 -187  oldbodies 3 0  ftype oldfacet
+259   89 383 612  oldbodies 3 0  ftype oldfacet
+260   187 -117 384  oldbodies 3 0  ftype oldfacet
+261   385 -19 492  oldbodies 3 0  ftype oldfacet
+262   504 386 -21  oldbodies 4 0  ftype oldfacet
+263   624 90 387  oldbodies 4 0  ftype oldfacet
+264   388 188 -119  oldbodies 4 0  ftype oldfacet
+265   564 389 189  oldbodies 4 0  ftype oldfacet
+266   684 20 390  oldbodies 4 0  ftype oldfacet
+267   391 118 91  oldbodies 4 0  ftype oldfacet
+268   92 392 -90  oldbodies 4 0  ftype oldfacet
+269   190 -141 393  oldbodies 4 0  ftype oldfacet
+270   394 -43 -188  oldbodies 4 0  ftype oldfacet
+271   93 395 -94  oldbodies 4 0  ftype oldfacet
+272   191 -140 396  oldbodies 4 0  ftype oldfacet
+273   397 -42 -192  oldbodies 4 0  ftype oldfacet
+274   -118 398 192  oldbodies 4 0  ftype oldfacet
+275   -20 -679 399  oldbodies 4 0  ftype oldfacet
+276   400 -559 94  oldbodies 4 0  ftype oldfacet
+277   95 401 120  oldbodies 4 0  ftype oldfacet
+278   193 -619 402  oldbodies 4 0  ftype oldfacet
+279   403 -499 22  oldbodies 4 0  ftype oldfacet
+280   21 404 660  oldbodies 4 0  ftype oldfacet
+281   119 96 405  oldbodies 4 0  ftype oldfacet
+282   406 194 540  oldbodies 4 0  ftype oldfacet
+283   97 407 -98  oldbodies 4 0  ftype oldfacet
+284   195 -142 408  oldbodies 4 0  ftype oldfacet
+285   409 -44 -196  oldbodies 4 0  ftype oldfacet
+286   98 410 600  oldbodies 4 0  ftype oldfacet
+287   196 -120 411  oldbodies 4 0  ftype oldfacet
+288   412 -22 480  oldbodies 4 0  ftype oldfacet
+289   449 414 -413  oldbodies 1 2  ftype oldfacet
+290   251 415 -414  oldbodies 1 2  ftype oldfacet
+291   259 417 -416  oldbodies 1 2  ftype oldfacet
+292   635 418 -417  oldbodies 1 2  ftype oldfacet
+293   -637 420 -419  oldbodies 1 3  ftype oldfacet
+294   260 421 -420  oldbodies 1 3  ftype oldfacet
+295   268 423 -422  oldbodies 1 3  ftype oldfacet
+296   647 424 -423  oldbodies 1 3  ftype oldfacet
+297   -649 426 -425  oldbodies 1 4  ftype oldfacet
+298   269 427 -426  oldbodies 1 4  ftype oldfacet
+299   -277 429 -428  oldbodies 1 4  ftype oldfacet
+300   -451 430 -429  oldbodies 1 4  ftype oldfacet
+301   -665 432 -431  oldbodies 2 3  ftype oldfacet
+302   305 433 -432  oldbodies 2 3  ftype oldfacet
+303   -313 435 -434  oldbodies 2 3  ftype oldfacet
+304   636 436 -435  oldbodies 2 3  ftype oldfacet
+305   450 438 -437  oldbodies 2 4  ftype oldfacet
+306   314 439 -438  oldbodies 2 4  ftype oldfacet
+307   -322 441 -440  oldbodies 2 4  ftype oldfacet
+308   666 442 -441  oldbodies 2 4  ftype oldfacet
+309   -667 444 -443  oldbodies 3 4  ftype oldfacet
+310   350 445 -444  oldbodies 3 4  ftype oldfacet
+311   358 447 -446  oldbodies 3 4  ftype oldfacet
+312   648 448 -447  oldbodies 3 4  ftype oldfacet
+313   -449 452 -719 tension 0.5 ftype tubefacet
+314   779 450 -452 tension 0.5 ftype tubefacet
+315   -450 453 -720 tension 0.5 ftype tubefacet
+316   780 451 -453 tension 0.5 ftype tubefacet
+317   -451 454 -721 tension 0.5 ftype tubefacet
+318   781 449 -454 tension 0.5 ftype tubefacet
+319   -455 458 -722 tension 0.5 ftype tubefacet
+320   782 456 -458 tension 0.5 ftype tubefacet
+321   -456 459 -723 tension 0.5 ftype tubefacet
+322   783 457 -459 tension 0.5 ftype tubefacet
+323   -457 460 -724 tension 0.5 ftype tubefacet
+324   784 455 -460 tension 0.5 ftype tubefacet
+325   -461 464 -725 tension 0.5 ftype tubefacet
+326   785 462 -464 tension 0.5 ftype tubefacet
+327   -462 465 -726 tension 0.5 ftype tubefacet
+328   786 463 -465 tension 0.5 ftype tubefacet
+329   -463 466 -727 tension 0.5 ftype tubefacet
+330   787 461 -466 tension 0.5 ftype tubefacet
+331   -467 470 -728 tension 0.5 ftype tubefacet
+332   788 468 -470 tension 0.5 ftype tubefacet
+333   -468 471 -729 tension 0.5 ftype tubefacet
+334   789 469 -471 tension 0.5 ftype tubefacet
+335   -469 472 -730 tension 0.5 ftype tubefacet
+336   790 467 -472 tension 0.5 ftype tubefacet
+337   -473 476 -731 tension 0.5 ftype tubefacet
+338   791 474 -476 tension 0.5 ftype tubefacet
+339   -474 477 -732 tension 0.5 ftype tubefacet
+340   792 475 -477 tension 0.5 ftype tubefacet
+341   -475 478 -733 tension 0.5 ftype tubefacet
+342   793 473 -478 tension 0.5 ftype tubefacet
+343   -479 482 -734 tension 0.5 ftype tubefacet
+344   794 480 -482 tension 0.5 ftype tubefacet
+345   -480 483 -735 tension 0.5 ftype tubefacet
+346   795 481 -483 tension 0.5 ftype tubefacet
+347   -481 484 -736 tension 0.5 ftype tubefacet
+348   796 479 -484 tension 0.5 ftype tubefacet
+349   -485 488 -737 tension 0.5 ftype tubefacet
+350   797 486 -488 tension 0.5 ftype tubefacet
+351   -486 489 -738 tension 0.5 ftype tubefacet
+352   798 487 -489 tension 0.5 ftype tubefacet
+353   -487 490 -739 tension 0.5 ftype tubefacet
+354   799 485 -490 tension 0.5 ftype tubefacet
+355   -491 494 -740 tension 0.5 ftype tubefacet
+356   800 492 -494 tension 0.5 ftype tubefacet
+357   -492 495 -741 tension 0.5 ftype tubefacet
+358   801 493 -495 tension 0.5 ftype tubefacet
+359   -493 496 -742 tension 0.5 ftype tubefacet
+360   802 491 -496 tension 0.5 ftype tubefacet
+361   -497 500 -743 tension 0.5 ftype tubefacet
+362   803 498 -500 tension 0.5 ftype tubefacet
+363   -498 501 -744 tension 0.5 ftype tubefacet
+364   804 499 -501 tension 0.5 ftype tubefacet
+365   -499 502 -745 tension 0.5 ftype tubefacet
+366   805 497 -502 tension 0.5 ftype tubefacet
+367   -503 506 -746 tension 0.5 ftype tubefacet
+368   806 504 -506 tension 0.5 ftype tubefacet
+369   -504 507 -747 tension 0.5 ftype tubefacet
+370   807 505 -507 tension 0.5 ftype tubefacet
+371   -505 508 -748 tension 0.5 ftype tubefacet
+372   808 503 -508 tension 0.5 ftype tubefacet
+373   -509 512 -749 tension 0.5 ftype tubefacet
+374   689 510 -512 tension 0.5 ftype tubefacet
+375   -510 513 -750 tension 0.5 ftype tubefacet
+376   690 511 -513 tension 0.5 ftype tubefacet
+377   -511 514 -751 tension 0.5 ftype tubefacet
+378   691 509 -514 tension 0.5 ftype tubefacet
+379   -515 518 -754 tension 0.5 ftype tubefacet
+380   692 516 -518 tension 0.5 ftype tubefacet
+381   -516 519 -752 tension 0.5 ftype tubefacet
+382   693 517 -519 tension 0.5 ftype tubefacet
+383   -517 520 -753 tension 0.5 ftype tubefacet
+384   694 515 -520 tension 0.5 ftype tubefacet
+385   -521 524 -755 tension 0.5 ftype tubefacet
+386   695 522 -524 tension 0.5 ftype tubefacet
+387   -522 525 -756 tension 0.5 ftype tubefacet
+388   696 523 -525 tension 0.5 ftype tubefacet
+389   -523 526 -757 tension 0.5 ftype tubefacet
+390   697 521 -526 tension 0.5 ftype tubefacet
+391   -527 530 -760 tension 0.5 ftype tubefacet
+392   698 528 -530 tension 0.5 ftype tubefacet
+393   -528 531 -758 tension 0.5 ftype tubefacet
+394   699 529 -531 tension 0.5 ftype tubefacet
+395   -529 532 -759 tension 0.5 ftype tubefacet
+396   700 527 -532 tension 0.5 ftype tubefacet
+397   -533 536 -761 tension 0.5 ftype tubefacet
+398   701 534 -536 tension 0.5 ftype tubefacet
+399   -534 537 -762 tension 0.5 ftype tubefacet
+400   702 535 -537 tension 0.5 ftype tubefacet
+401   -535 538 -763 tension 0.5 ftype tubefacet
+402   703 533 -538 tension 0.5 ftype tubefacet
+403   -539 542 -764 tension 0.5 ftype tubefacet
+404   704 540 -542 tension 0.5 ftype tubefacet
+405   -540 543 -765 tension 0.5 ftype tubefacet
+406   705 541 -543 tension 0.5 ftype tubefacet
+407   -541 544 -766 tension 0.5 ftype tubefacet
+408   706 539 -544 tension 0.5 ftype tubefacet
+409   -545 548 -767 tension 0.5 ftype tubefacet
+410   707 546 -548 tension 0.5 ftype tubefacet
+411   -546 549 -768 tension 0.5 ftype tubefacet
+412   708 547 -549 tension 0.5 ftype tubefacet
+413   -547 550 -769 tension 0.5 ftype tubefacet
+414   709 545 -550 tension 0.5 ftype tubefacet
+415   -551 554 -770 tension 0.5 ftype tubefacet
+416   710 552 -554 tension 0.5 ftype tubefacet
+417   -552 555 -771 tension 0.5 ftype tubefacet
+418   711 553 -555 tension 0.5 ftype tubefacet
+419   -553 556 -772 tension 0.5 ftype tubefacet
+420   712 551 -556 tension 0.5 ftype tubefacet
+421   -557 560 -773 tension 0.5 ftype tubefacet
+422   713 558 -560 tension 0.5 ftype tubefacet
+423   -558 561 -774 tension 0.5 ftype tubefacet
+424   714 559 -561 tension 0.5 ftype tubefacet
+425   -559 562 -775 tension 0.5 ftype tubefacet
+426   715 557 -562 tension 0.5 ftype tubefacet
+427   -563 566 -776 tension 0.5 ftype tubefacet
+428   716 564 -566 tension 0.5 ftype tubefacet
+429   -564 567 -777 tension 0.5 ftype tubefacet
+430   717 565 -567 tension 0.5 ftype tubefacet
+431   -565 568 -778 tension 0.5 ftype tubefacet
+432   718 563 -568 tension 0.5 ftype tubefacet
+433   -569 572 -689 tension 0.5 ftype tubefacet
+434   719 570 -572 tension 0.5 ftype tubefacet
+435   -570 573 -690 tension 0.5 ftype tubefacet
+436   720 571 -573 tension 0.5 ftype tubefacet
+437   -571 574 -691 tension 0.5 ftype tubefacet
+438   721 569 -574 tension 0.5 ftype tubefacet
+439   -575 578 -692 tension 0.5 ftype tubefacet
+440   722 576 -578 tension 0.5 ftype tubefacet
+441   -576 579 -693 tension 0.5 ftype tubefacet
+442   723 577 -579 tension 0.5 ftype tubefacet
+443   -577 580 -694 tension 0.5 ftype tubefacet
+444   724 575 -580 tension 0.5 ftype tubefacet
+445   -581 584 -695 tension 0.5 ftype tubefacet
+446   725 582 -584 tension 0.5 ftype tubefacet
+447   -582 585 -696 tension 0.5 ftype tubefacet
+448   726 583 -585 tension 0.5 ftype tubefacet
+449   -583 586 -697 tension 0.5 ftype tubefacet
+450   727 581 -586 tension 0.5 ftype tubefacet
+451   -587 590 -698 tension 0.5 ftype tubefacet
+452   728 588 -590 tension 0.5 ftype tubefacet
+453   -588 591 -699 tension 0.5 ftype tubefacet
+454   729 589 -591 tension 0.5 ftype tubefacet
+455   -589 592 -700 tension 0.5 ftype tubefacet
+456   730 587 -592 tension 0.5 ftype tubefacet
+457   -593 596 -701 tension 0.5 ftype tubefacet
+458   731 594 -596 tension 0.5 ftype tubefacet
+459   -594 597 -702 tension 0.5 ftype tubefacet
+460   732 595 -597 tension 0.5 ftype tubefacet
+461   -595 598 -703 tension 0.5 ftype tubefacet
+462   733 593 -598 tension 0.5 ftype tubefacet
+463   -599 602 -704 tension 0.5 ftype tubefacet
+464   734 600 -602 tension 0.5 ftype tubefacet
+465   -600 603 -705 tension 0.5 ftype tubefacet
+466   735 601 -603 tension 0.5 ftype tubefacet
+467   -601 604 -706 tension 0.5 ftype tubefacet
+468   736 599 -604 tension 0.5 ftype tubefacet
+469   -605 608 -707 tension 0.5 ftype tubefacet
+470   737 606 -608 tension 0.5 ftype tubefacet
+471   -606 609 -708 tension 0.5 ftype tubefacet
+472   738 607 -609 tension 0.5 ftype tubefacet
+473   -607 610 -709 tension 0.5 ftype tubefacet
+474   739 605 -610 tension 0.5 ftype tubefacet
+475   -611 614 -710 tension 0.5 ftype tubefacet
+476   740 612 -614 tension 0.5 ftype tubefacet
+477   -612 615 -711 tension 0.5 ftype tubefacet
+478   741 613 -615 tension 0.5 ftype tubefacet
+479   -613 616 -712 tension 0.5 ftype tubefacet
+480   742 611 -616 tension 0.5 ftype tubefacet
+481   -617 620 -713 tension 0.5 ftype tubefacet
+482   743 618 -620 tension 0.5 ftype tubefacet
+483   -618 621 -714 tension 0.5 ftype tubefacet
+484   744 619 -621 tension 0.5 ftype tubefacet
+485   -619 622 -715 tension 0.5 ftype tubefacet
+486   745 617 -622 tension 0.5 ftype tubefacet
+487   -623 626 -716 tension 0.5 ftype tubefacet
+488   746 624 -626 tension 0.5 ftype tubefacet
+489   -624 627 -717 tension 0.5 ftype tubefacet
+490   747 625 -627 tension 0.5 ftype tubefacet
+491   -625 628 -718 tension 0.5 ftype tubefacet
+492   748 623 -628 tension 0.5 ftype tubefacet
+493   -629 632 -809 tension 0.5 ftype tubefacet
+494   749 630 -632 tension 0.5 ftype tubefacet
+495   -630 633 -810 tension 0.5 ftype tubefacet
+496   750 631 -633 tension 0.5 ftype tubefacet
+497   -631 634 -811 tension 0.5 ftype tubefacet
+498   751 629 -634 tension 0.5 ftype tubefacet
+499   -635 638 -812 tension 0.5 ftype tubefacet
+500   752 636 -638 tension 0.5 ftype tubefacet
+501   -636 639 -813 tension 0.5 ftype tubefacet
+502   753 637 -639 tension 0.5 ftype tubefacet
+503   -637 640 -814 tension 0.5 ftype tubefacet
+504   754 635 -640 tension 0.5 ftype tubefacet
+505   -641 644 -815 tension 0.5 ftype tubefacet
+506   755 642 -644 tension 0.5 ftype tubefacet
+507   -642 645 -816 tension 0.5 ftype tubefacet
+508   756 643 -645 tension 0.5 ftype tubefacet
+509   -643 646 -817 tension 0.5 ftype tubefacet
+510   757 641 -646 tension 0.5 ftype tubefacet
+511   -647 650 -818 tension 0.5 ftype tubefacet
+512   758 648 -650 tension 0.5 ftype tubefacet
+513   -648 651 -819 tension 0.5 ftype tubefacet
+514   759 649 -651 tension 0.5 ftype tubefacet
+515   -649 652 -820 tension 0.5 ftype tubefacet
+516   760 647 -652 tension 0.5 ftype tubefacet
+517   -653 656 -821 tension 0.5 ftype tubefacet
+518   761 654 -656 tension 0.5 ftype tubefacet
+519   -654 657 -822 tension 0.5 ftype tubefacet
+520   762 655 -657 tension 0.5 ftype tubefacet
+521   -655 658 -823 tension 0.5 ftype tubefacet
+522   763 653 -658 tension 0.5 ftype tubefacet
+523   -659 662 -824 tension 0.5 ftype tubefacet
+524   764 660 -662 tension 0.5 ftype tubefacet
+525   -660 663 -825 tension 0.5 ftype tubefacet
+526   765 661 -663 tension 0.5 ftype tubefacet
+527   -661 664 -826 tension 0.5 ftype tubefacet
+528   766 659 -664 tension 0.5 ftype tubefacet
+529   -665 668 -827 tension 0.5 ftype tubefacet
+530   767 666 -668 tension 0.5 ftype tubefacet
+531   -666 669 -828 tension 0.5 ftype tubefacet
+532   768 667 -669 tension 0.5 ftype tubefacet
+533   -667 670 -829 tension 0.5 ftype tubefacet
+534   769 665 -670 tension 0.5 ftype tubefacet
+535   -671 674 -830 tension 0.5 ftype tubefacet
+536   770 672 -674 tension 0.5 ftype tubefacet
+537   -672 675 -831 tension 0.5 ftype tubefacet
+538   771 673 -675 tension 0.5 ftype tubefacet
+539   -673 676 -832 tension 0.5 ftype tubefacet
+540   772 671 -676 tension 0.5 ftype tubefacet
+541   -677 680 -833 tension 0.5 ftype tubefacet
+542   773 678 -680 tension 0.5 ftype tubefacet
+543   -678 681 -834 tension 0.5 ftype tubefacet
+544   774 679 -681 tension 0.5 ftype tubefacet
+545   -679 682 -835 tension 0.5 ftype tubefacet
+546   775 677 -682 tension 0.5 ftype tubefacet
+547   -683 686 -836 tension 0.5 ftype tubefacet
+548   776 684 -686 tension 0.5 ftype tubefacet
+549   -684 687 -837 tension 0.5 ftype tubefacet
+550   777 685 -687 tension 0.5 ftype tubefacet
+551   -685 688 -838 tension 0.5 ftype tubefacet
+552   778 683 -688 tension 0.5 ftype tubefacet
+//vertex faces:
+553   -787 -803 -779  tension 0.5 ftype vertexfacet // by old vertex 1
+554   -781 -796 -785  tension 0.5 ftype vertexfacet // by old vertex 1
+555   -805 -794 -780  tension 0.5 ftype vertexfacet // by old vertex 1
+556   -804 -786 -795  tension 0.5 ftype vertexfacet // by old vertex 1
+557   809 -797 -783  tension 0.5 ftype vertexfacet // by old vertex 2
+558   -782 -788 811  tension 0.5 ftype vertexfacet // by old vertex 2
+559   -799 -789 -784  tension 0.5 ftype vertexfacet // by old vertex 2
+560   -798 810 -790  tension 0.5 ftype vertexfacet // by old vertex 2
+561   816 -801 -792  tension 0.5 ftype vertexfacet // by old vertex 3
+562   -791 814 815  tension 0.5 ftype vertexfacet // by old vertex 3
+563   813 -793 -800  tension 0.5 ftype vertexfacet // by old vertex 3
+564   -802 817 812  tension 0.5 ftype vertexfacet // by old vertex 3
+565   822 -807 825  tension 0.5 ftype vertexfacet // by old vertex 4
+566   826 820 821  tension 0.5 ftype vertexfacet // by old vertex 4
+567   819 824 -806  tension 0.5 ftype vertexfacet // by old vertex 4
+568   -808 823 818  tension 0.5 ftype vertexfacet // by old vertex 4
+569   834 837 831  tension 0.5 ftype vertexfacet // by old vertex 6
+570   832 827 833  tension 0.5 ftype vertexfacet // by old vertex 6
+571   836 835 828  tension 0.5 ftype vertexfacet // by old vertex 6
+572   829 830 838  tension 0.5 ftype vertexfacet // by old vertex 6
+
+bodies 
+1   1 2 3 4 5 6 19 20 21 22 \
+    23 24 25 26 27 28 29 30 31 32 \
+    33 34 35 36 73 74 75 76 77 78 \
+    79 80 81 82 83 84 85 86 87 88 \
+    89 90 127 128 129 130 131 132 133 134 \
+    135 136 137 138 139 140 141 142 143 144 \
+    145 146 147 148 149 150 151 152 153 154 \
+    155 156 157 158 159 160 161 162 163 164 \
+    165 166 167 168 169 170 171 172 173 174 \
+    175 176 177 178 179 180 289 290 291 292 \
+    293 294 295 296 297 298 299 300 -317 -318 \
+    -319 -320 -325 -326 -331 -332 -337 -338 -347 -348 \
+    -377 -378 -379 -380 -385 -386 -391 -392 -397 -398 \
+    -407 -408 -437 -438 -439 -440 -445 -446 -451 -452 \
+    -457 -458 -467 -468 -497 -498 -503 -504 -505 -506 \
+    -515 -516 -517 -518 -527 -528 -554 -558 -562 -566 \
+      volume 2 
+2   -1 7 8 9 10 11 -19 -20 -21 37 \
+    38 39 40 41 42 43 44 45 46 47 \
+    48 49 50 51 -73 -74 -75 91 92 93 \
+    94 95 96 97 98 99 100 101 102 103 \
+    104 105 -127 -128 -129 -130 -131 -132 -133 -134 \
+    -135 181 182 183 184 185 186 187 188 189 \
+    190 191 192 193 194 195 196 197 198 199 \
+    200 201 202 203 204 205 206 207 208 209 \
+    210 211 212 213 214 215 216 217 218 219 \
+    220 221 222 223 224 225 -289 -290 -291 -292 \
+    301 302 303 304 305 306 307 308 -313 -314 \
+    -321 -322 -329 -330 -349 -350 -359 -360 -361 -362 \
+    -373 -374 -381 -382 -389 -390 -409 -410 -419 -420 \
+    -421 -422 -433 -434 -441 -442 -449 -450 -469 -470 \
+    -479 -480 -481 -482 -493 -494 -499 -500 -509 -510 \
+    -529 -530 -539 -540 -541 -542 -553 -557 -564 -570 \
+      volume 2 
+3   -2 -7 12 13 14 15 -22 -23 -24 -37 \
+    -38 -39 52 53 54 55 56 57 58 59 \
+    60 61 62 63 -76 -77 -78 -91 -92 -93 \
+    106 107 108 109 110 111 112 113 114 115 \
+    116 117 -136 -137 -138 -139 -140 -141 -142 -143 \
+    -144 -181 -182 -183 -184 -185 -186 -187 -188 -189 \
+    226 227 228 229 230 231 232 233 234 235 \
+    236 237 238 239 240 241 242 243 244 245 \
+    246 247 248 249 250 251 252 253 254 255 \
+    256 257 258 259 260 261 -293 -294 -295 -296 \
+    -301 -302 -303 -304 309 310 311 312 -323 -324 \
+    -333 -334 -341 -342 -353 -354 -355 -356 -371 -372 \
+    -383 -384 -393 -394 -401 -402 -413 -414 -415 -416 \
+    -431 -432 -443 -444 -453 -454 -461 -462 -473 -474 \
+    -475 -476 -491 -492 -501 -502 -511 -512 -521 -522 \
+    -533 -534 -535 -536 -551 -552 -559 -563 -568 -572 \
+      volume 2 
+4   -3 -8 -12 16 17 18 -25 -26 -27 -40 \
+    -41 -42 -52 -53 -54 64 65 66 67 68 \
+    69 70 71 72 -79 -80 -81 -94 -95 -96 \
+    -106 -107 -108 118 119 120 121 122 123 124 \
+    125 126 -145 -146 -147 -148 -149 -150 -151 -152 \
+    -153 -190 -191 -192 -193 -194 -195 -196 -197 -198 \
+    -226 -227 -228 -229 -230 -231 -232 -233 -234 262 \
+    263 264 265 266 267 268 269 270 271 272 \
+    273 274 275 276 277 278 279 280 281 282 \
+    283 284 285 286 287 288 -297 -298 -299 -300 \
+    -305 -306 -307 -308 -309 -310 -311 -312 -315 -316 \
+    -335 -336 -343 -344 -351 -352 -365 -366 -367 -368 \
+    -375 -376 -395 -396 -403 -404 -411 -412 -425 -426 \
+    -427 -428 -435 -436 -455 -456 -463 -464 -471 -472 \
+    -485 -486 -487 -488 -495 -496 -513 -514 -523 -524 \
+    -531 -532 -545 -546 -547 -548 -555 -560 -567 -571 \
+      volume 2 
+5   313 314 315 316 317 318 319 320 321 322 \
+323 324 325 326 327 328 329 330 331 332 \
+333 334 335 336 337 338 339 340 341 342 \
+343 344 345 346 347 348 349 350 351 352 \
+353 354 355 356 357 358 359 360 361 362 \
+363 364 365 366 367 368 369 370 371 372 \
+373 374 375 376 377 378 379 380 381 382 \
+383 384 385 386 387 388 389 390 391 392 \
+393 394 395 396 397 398 399 400 401 402 \
+403 404 405 406 407 408 409 410 411 412 \
+413 414 415 416 417 418 419 420 421 422 \
+423 424 425 426 427 428 429 430 431 432 \
+433 434 435 436 437 438 439 440 441 442 \
+443 444 445 446 447 448 449 450 451 452 \
+453 454 455 456 457 458 459 460 461 462 \
+463 464 465 466 467 468 469 470 471 472 \
+473 474 475 476 477 478 479 480 481 482 \
+483 484 485 486 487 488 489 490 491 492 \
+493 494 495 496 497 498 499 500 501 502 \
+503 504 505 506 507 508 509 510 511 512 \
+513 514 515 516 517 518 519 520 521 522 \
+523 524 525 526 527 528 529 530 531 532 \
+533 534 535 536 537 538 539 540 541 542 \
+543 544 545 546 547 548 549 550 551 552 \
+553 554 555 556 557 558 559 560 561 562 \
+563 564 565 566 567 568 569 570 571 572 \
+ volume 0.00116537
+
+read
+
+recalc
+set body target volume // so volumes don't exceed torus volume
+border_body := 5

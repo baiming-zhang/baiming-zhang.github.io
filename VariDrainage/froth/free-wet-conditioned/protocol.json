@@ -1,0 +1,21 @@
+{
+  "scope": "free/wet initialization and area descent only",
+  "length_scale_m": 0.01,
+  "gamma_N_m": 0.03,
+  "physical_time": null,
+  "training": false,
+  "evolver_sha256": "ccf7a4c69db6ff7ffd01ac4be2328488dd670d6979d16f0542eba910e0cd2249",
+  "wetfoam_macro_sha256": "9dd3e61002523f966f6c386756535b1015efbef1610d644c62ce059f99413c21",
+  "sources": {
+    "foam\\scripts\\run_free_wet.py": "c1826642f32d59f8f9ac431b01fdad42742c4bbd50f67fc6ff4970c6a6065e1d",
+    "foam\\scripts\\cluster_geometry.py": "dcb175602430058b4111ca561670274fbbd1a4e9735715cba6a2ead81e1f00f5",
+    "foam\\docs\\free_wet_protocol.md": "8b37ccc2d23a160bd933621109a170a42584cf0a90ba3ca1374b5785cb2c36f2"
+  },
+  "spreads": [
+    0.02,
+    0.01
+  ],
+  "dry_iterations_per_level": 80,
+  "wet_iterations": 80,
+  "dry_conditioning": "u every 10 iterations; conjugate gradient"
+}

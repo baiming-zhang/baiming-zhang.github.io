@@ -1,0 +1,6 @@
+read "../../../../.tools/evolver270/fe/wetfoam2.cmd"
+spread := 0.01
+wetfoam >>> "wet7-s010-raw.fe"
+printf "CONVERSION_ERRORS %d\n",weterrors
+q
+q

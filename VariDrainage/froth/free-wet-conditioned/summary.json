@@ -1,0 +1,675 @@
+{
+  "runs": [
+    {
+      "name": "free4",
+      "kind": "dry",
+      "cells": 4,
+      "returncode": 0,
+      "warnings": [],
+      "elapsed_seconds": 0.2698943999130279,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 32.48528137423857,
+          "energy_J": 0.0001949116882454314,
+          "energy_rebuild_error": 0.0,
+          "minimum_triangle_area_m2": 0.0001414213562373095,
+          "body_volumes_m3": {
+            "1": 2e-06,
+            "2": 2.0000000000000003e-06,
+            "3": 2.0000000000000003e-06,
+            "4": 2.0000000000000003e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 2.220446049250313e-16,
+          "maximum_body_area_normal_closure": 2.220446049250313e-16,
+          "vertices": 9,
+          "triangles": 18,
+          "films": 10,
+          "borders": 10,
+          "junctions": 5,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 1.0,
+          "maximum_angle_error_degrees": 60.0
+        },
+        {
+          "label": "level0",
+          "energy_over_2gammaR2": 32.34437438981308,
+          "energy_J": 0.0001940662463388785,
+          "energy_rebuild_error": 0.0,
+          "minimum_triangle_area_m2": 0.00015291145197987897,
+          "body_volumes_m3": {
+            "1": 2e-06,
+            "2": 1.9999999999999995e-06,
+            "3": 1.9999999999999995e-06,
+            "4": 1.9999999999999995e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 2.220446049250313e-16,
+          "maximum_body_area_normal_closure": 1.32021460364232e-15,
+          "vertices": 9,
+          "triangles": 18,
+          "films": 10,
+          "borders": 10,
+          "junctions": 5,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 1.1751308775491176,
+          "maximum_angle_error_degrees": 49.95287211174869
+        },
+        {
+          "label": "level1",
+          "energy_over_2gammaR2": 28.065039513854842,
+          "energy_J": 0.00016839023708312904,
+          "energy_rebuild_error": 1.265885863815241e-16,
+          "minimum_triangle_area_m2": 9.142765639519693e-06,
+          "body_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 2.220446049250313e-16,
+          "maximum_body_area_normal_closure": 4.373154964984119e-16,
+          "vertices": 31,
+          "triangles": 72,
+          "films": 10,
+          "borders": 10,
+          "junctions": 5,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 0.5989031256109322,
+          "maximum_angle_error_degrees": 36.86193605728943
+        },
+        {
+          "label": "level2",
+          "energy_over_2gammaR2": 27.12775570556786,
+          "energy_J": 0.00016276653423340717,
+          "energy_rebuild_error": 1.3096231466251817e-16,
+          "minimum_triangle_area_m2": 2.506604801448949e-07,
+          "body_volumes_m3": {
+            "1": 2.0000000000000003e-06,
+            "2": 2.0000000000000003e-06,
+            "3": 2.0000000000000003e-06,
+            "4": 2.0000000000000003e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 4.440892098500626e-16,
+          "maximum_body_area_normal_closure": 4.385935364980059e-16,
+          "vertices": 129,
+          "triangles": 288,
+          "films": 10,
+          "borders": 10,
+          "junctions": 5,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 0.3538567195688859,
+          "maximum_angle_error_degrees": 22.30242645577465
+        }
+      ],
+      "checks": {
+        "native_clean": true,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true
+      }
+    },
+    {
+      "name": "wet4-s020",
+      "kind": "wet",
+      "cells": 4,
+      "spread": 0.02,
+      "returncode": 0,
+      "warnings": [
+        "Enter command: WARNING 1055: Volume or quantity constraints don't converge in 10 projections."
+      ],
+      "elapsed_seconds": 0.19973160000517964,
+      "conversion": {
+        "returncode": 0,
+        "warnings": [],
+        "elapsed_seconds": 0.15123980003409088
+      },
+      "raw_sha256": "8d0fe7484de1fcb4a8c6a4275353d5e9f9486a393acbaf950b02297b234686f1",
+      "loadable_sha256": "0ff353497133256d7b02887abedf343555c35c86bdcea3b7a675b133ee88074a",
+      "removed_duplicate_declarations": 1,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 27.0847141506799,
+          "energy_J": 0.00016250828490407942,
+          "energy_rebuild_error": 3.935112985541313e-16,
+          "minimum_triangle_area_m2": 1.6744981943280531e-09,
+          "body_volumes_m3": {
+            "1": 1.9975029845556944e-06,
+            "2": 1.997501895112873e-06,
+            "3": 1.997502603480469e-06,
+            "4": 1.997498648599628e-06,
+            "5": 4.845644985460635e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 1.9975029845556944e-06,
+            "2": 1.997501895112873e-06,
+            "3": 1.997502603480469e-06,
+            "4": 1.997498648599628e-06,
+            "5": 4.845644985460635e-10
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 2.950972799453666e-13,
+          "maximum_body_area_normal_closure": 3.124286863993476e-16,
+          "vertices": 226,
+          "triangles": 572,
+          "liquid_volume_m3": 4.845644985460635e-10,
+          "liquid_fraction": 6.0642645985889536e-05
+        },
+        {
+          "label": "final",
+          "energy_over_2gammaR2": 27.0721870672255,
+          "energy_J": 0.000162433122403353,
+          "energy_rebuild_error": 2.6246225840405305e-16,
+          "minimum_triangle_area_m2": 2.7487476424889867e-09,
+          "body_volumes_m3": {
+            "1": 1.997502984555694e-06,
+            "2": 1.997501895112871e-06,
+            "3": 1.997502603480468e-06,
+            "4": 1.997498648599627e-06,
+            "5": 4.845644985417551e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 1.9975029845556944e-06,
+            "2": 1.997501895112873e-06,
+            "3": 1.997502603480469e-06,
+            "4": 1.997498648599628e-06,
+            "5": 4.845644985460635e-10
+          },
+          "volume_target_error": 8.891443137315491e-12,
+          "native_volume_rebuild_error": 1.113553693699032e-13,
+          "maximum_body_area_normal_closure": 4.4360159933945073e-16,
+          "vertices": 226,
+          "triangles": 572,
+          "liquid_volume_m3": 4.845644985417551e-10,
+          "liquid_fraction": 6.06426459853504e-05
+        }
+      ],
+      "checks": {
+        "native_clean": false,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true,
+        "conversion_clean": true
+      }
+    },
+    {
+      "name": "wet4-s010",
+      "kind": "wet",
+      "cells": 4,
+      "spread": 0.01,
+      "returncode": 0,
+      "warnings": [
+        "Enter command: WARNING 1055: Volume or quantity constraints don't converge in 10 projections."
+      ],
+      "elapsed_seconds": 0.2008098999504,
+      "conversion": {
+        "returncode": 0,
+        "warnings": [],
+        "elapsed_seconds": 0.1472987998276949
+      },
+      "raw_sha256": "19310fa1e3e815ba18a10c7d1fc013dfcacbb2624c7d8ac9377d2d2f8e1eade1",
+      "loadable_sha256": "0197afde5a5aba0f342c846a1143a77f44e32d24738c8360c867bf140ff4a8ac",
+      "removed_duplicate_declarations": 1,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 27.106276112174612,
+          "energy_J": 0.00016263765667304768,
+          "energy_rebuild_error": 1.3106609200386703e-16,
+          "minimum_triangle_area_m2": 4.1854928004394316e-10,
+          "body_volumes_m3": {
+            "1": 1.998782515151824e-06,
+            "2": 1.9987837152864904e-06,
+            "3": 1.9987811291882678e-06,
+            "4": 1.9987769167867534e-06,
+            "5": 1.2122133468503948e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 1.998782515151824e-06,
+            "2": 1.9987837152864904e-06,
+            "3": 1.9987811291882678e-06,
+            "4": 1.9987769167867534e-06,
+            "5": 1.2122133468503948e-10
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 5.284661597215745e-14,
+          "maximum_body_area_normal_closure": 3.49478836155726e-16,
+          "vertices": 226,
+          "triangles": 572,
+          "liquid_volume_m3": 1.2122133468503948e-10,
+          "liquid_fraction": 1.5161677614425131e-05
+        },
+        {
+          "label": "final",
+          "energy_over_2gammaR2": 27.100003395024924,
+          "energy_J": 0.00016260002037014955,
+          "energy_rebuild_error": 2.6219285857748017e-16,
+          "minimum_triangle_area_m2": 6.33732314331678e-10,
+          "body_volumes_m3": {
+            "1": 1.998782515151822e-06,
+            "2": 1.998783715286488e-06,
+            "3": 1.998781129188266e-06,
+            "4": 1.998776916786751e-06,
+            "5": 1.212213346829204e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 1.998782515151824e-06,
+            "2": 1.9987837152864904e-06,
+            "3": 1.9987811291882678e-06,
+            "4": 1.9987769167867534e-06,
+            "5": 1.2122133468503948e-10
+          },
+          "volume_target_error": 1.748090561193294e-11,
+          "native_volume_rebuild_error": 4.413136522884997e-13,
+          "maximum_body_area_normal_closure": 4.24497783675659e-16,
+          "vertices": 226,
+          "triangles": 572,
+          "liquid_volume_m3": 1.212213346829204e-10,
+          "liquid_fraction": 1.516167761416011e-05
+        }
+      ],
+      "checks": {
+        "native_clean": false,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true,
+        "conversion_clean": true
+      }
+    },
+    {
+      "name": "free7",
+      "kind": "dry",
+      "cells": 7,
+      "returncode": 0,
+      "warnings": [],
+      "elapsed_seconds": 0.47446139995008707,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 41.60321210111418,
+          "energy_J": 0.0002496192726066851,
+          "energy_rebuild_error": 0.0,
+          "minimum_triangle_area_m2": 9e-06,
+          "body_volumes_m3": {
+            "1": 2.1600000000000005e-07,
+            "2": 1.2973333333333328e-06,
+            "3": 1.2973333333333328e-06,
+            "4": 1.2973333333333328e-06,
+            "5": 1.2973333333333328e-06,
+            "6": 1.2973333333333328e-06,
+            "7": 1.2973333333333322e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333335e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "volume_target_error": 9.992007221626409e-16,
+          "native_volume_rebuild_error": 4.440892098500626e-16,
+          "maximum_body_area_normal_closure": 6.710308644151443e-16,
+          "vertices": 40,
+          "triangles": 96,
+          "films": 24,
+          "borders": 32,
+          "junctions": 16,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 2.4142135623730954,
+          "maximum_angle_error_degrees": 75.00000000000001
+        },
+        {
+          "label": "level0",
+          "energy_over_2gammaR2": 32.669988373782246,
+          "energy_J": 0.00019601993024269347,
+          "energy_rebuild_error": 0.0,
+          "minimum_triangle_area_m2": 8.197598149849619e-06,
+          "body_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333333e-06,
+            "6": 1.2973333333333333e-06,
+            "7": 1.2973333333333333e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333335e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 4.440892098500626e-16,
+          "maximum_body_area_normal_closure": 5.666414021507945e-16,
+          "vertices": 40,
+          "triangles": 96,
+          "films": 24,
+          "borders": 32,
+          "junctions": 16,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 1.0000000090307746,
+          "maximum_angle_error_degrees": 60.0
+        },
+        {
+          "label": "level1",
+          "energy_over_2gammaR2": 30.61861180199824,
+          "energy_J": 0.00018371167081198946,
+          "energy_rebuild_error": 4.641247228025723e-16,
+          "minimum_triangle_area_m2": 3.486207875030898e-07,
+          "body_volumes_m3": {
+            "1": 2.1600000000000005e-07,
+            "2": 1.2973333333333335e-06,
+            "3": 1.2973333333333333e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333333e-06,
+            "6": 1.2973333333333337e-06,
+            "7": 1.297333333333334e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333335e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "volume_target_error": 4.440892098500626e-16,
+          "native_volume_rebuild_error": 4.440892098500626e-16,
+          "maximum_body_area_normal_closure": 5.589116576837084e-16,
+          "vertices": 168,
+          "triangles": 384,
+          "films": 24,
+          "borders": 32,
+          "junctions": 16,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 0.5023833616660337,
+          "maximum_angle_error_degrees": 31.18598723795597
+        },
+        {
+          "label": "level2",
+          "energy_over_2gammaR2": 30.109008481581217,
+          "energy_J": 0.0001806540508894873,
+          "energy_rebuild_error": 1.5339355280549919e-15,
+          "minimum_triangle_area_m2": 6.614937946212047e-08,
+          "body_volumes_m3": {
+            "1": 2.1600000000000005e-07,
+            "2": 1.2973335404568019e-06,
+            "3": 1.2973333333333364e-06,
+            "4": 1.2973331262098778e-06,
+            "5": 1.2973333333333358e-06,
+            "6": 1.2973333333333438e-06,
+            "7": 1.2973333333333078e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333335e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "volume_target_error": 1.5965323862943137e-07,
+          "native_volume_rebuild_error": 5.551115123125783e-16,
+          "maximum_body_area_normal_closure": 4.852697932902576e-16,
+          "vertices": 712,
+          "triangles": 1536,
+          "films": 24,
+          "borders": 32,
+          "junctions": 16,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 0.2652619705474518,
+          "maximum_angle_error_degrees": 16.236529943010538
+        }
+      ],
+      "checks": {
+        "native_clean": true,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true
+      }
+    },
+    {
+      "name": "wet7-s020",
+      "kind": "wet",
+      "cells": 7,
+      "spread": 0.02,
+      "returncode": 0,
+      "warnings": [],
+      "elapsed_seconds": 0.45784419984556735,
+      "conversion": {
+        "returncode": 0,
+        "warnings": [],
+        "elapsed_seconds": 0.2458277998957783
+      },
+      "raw_sha256": "54c0002873980659e2698474c355189af5afa6ca1937d3312b4d41daa3930a6b",
+      "loadable_sha256": "b826f837ce134eb89a94559ee10652326c0392efa267cff874538a17866c7f3a",
+      "removed_duplicate_declarations": 1,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 30.085523001001196,
+          "energy_J": 0.0001805131380060072,
+          "energy_rebuild_error": 1.4170458045282201e-15,
+          "minimum_triangle_area_m2": 2.827788583681744e-10,
+          "body_volumes_m3": {
+            "1": 2.1595630427962635e-07,
+            "2": 1.296700775980203e-06,
+            "3": 1.2967000769456175e-06,
+            "4": 1.2967002135986594e-06,
+            "5": 1.2967008720124514e-06,
+            "6": 1.296700613155274e-06,
+            "7": 1.2967000070784098e-06,
+            "8": 1.6329182889868382e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1595630427962635e-07,
+            "2": 1.296700775980203e-06,
+            "3": 1.2967000769456175e-06,
+            "4": 1.2967002135986594e-06,
+            "5": 1.2967008720124514e-06,
+            "6": 1.296700613155274e-06,
+            "7": 1.2967000070784098e-06,
+            "8": 1.6329182889868382e-10
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 1.3390399900004013e-12,
+          "maximum_body_area_normal_closure": 4.852556656647825e-16,
+          "vertices": 984,
+          "triangles": 2368,
+          "liquid_volume_m3": 1.6329182889868382e-10,
+          "liquid_fraction": 2.0420866710459828e-05
+        },
+        {
+          "label": "final",
+          "energy_over_2gammaR2": 30.07497106322037,
+          "energy_J": 0.0001804498263793222,
+          "energy_rebuild_error": 4.725143271236895e-16,
+          "minimum_triangle_area_m2": 5.917356976904733e-10,
+          "body_volumes_m3": {
+            "1": 2.1595630427963445e-07,
+            "2": 1.296700775980282e-06,
+            "3": 1.2967000769457064e-06,
+            "4": 1.2967002135987206e-06,
+            "5": 1.296700872012511e-06,
+            "6": 1.296700613155209e-06,
+            "7": 1.2967000070785836e-06,
+            "8": 1.6329182892457855e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1595630427962635e-07,
+            "2": 1.296700775980203e-06,
+            "3": 1.2967000769456175e-06,
+            "4": 1.2967002135986594e-06,
+            "5": 1.2967008720124514e-06,
+            "6": 1.296700613155274e-06,
+            "7": 1.2967000070784098e-06,
+            "8": 1.6329182889868382e-10
+          },
+          "volume_target_error": 1.58579371856149e-10,
+          "native_volume_rebuild_error": 7.710498906021712e-13,
+          "maximum_body_area_normal_closure": 4.833003953471105e-16,
+          "vertices": 984,
+          "triangles": 2368,
+          "liquid_volume_m3": 1.6329182892457855e-10,
+          "liquid_fraction": 2.0420866713697056e-05
+        }
+      ],
+      "checks": {
+        "native_clean": true,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true,
+        "conversion_clean": true
+      }
+    },
+    {
+      "name": "wet7-s010",
+      "kind": "wet",
+      "cells": 7,
+      "spread": 0.01,
+      "returncode": 0,
+      "warnings": [],
+      "elapsed_seconds": 0.4314130002167076,
+      "conversion": {
+        "returncode": 0,
+        "warnings": [],
+        "elapsed_seconds": 0.2615280000027269
+      },
+      "raw_sha256": "b56046cb40d1d56437a638964099198892788955909e198db4e3bfa6029c24f2",
+      "loadable_sha256": "ab857d69004e482230661d8e7bdb2feae596f5e02232803c29e01ba86ed50916",
+      "removed_duplicate_declarations": 1,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 30.097270750094935,
+          "energy_J": 0.0001805836245005696,
+          "energy_rebuild_error": 2.3608211577053344e-16,
+          "minimum_triangle_area_m2": 7.066863519215883e-11,
+          "body_volumes_m3": {
+            "1": 2.159794504276795e-07,
+            "2": 1.2970211544485458e-06,
+            "3": 1.2970205766803698e-06,
+            "4": 1.2970207930259787e-06,
+            "5": 1.297021285381764e-06,
+            "6": 1.2970209471758846e-06,
+            "7": 1.2970203957804267e-06,
+            "8": 4.084174192393771e-11
+          },
+          "body_target_volumes_m3": {
+            "1": 2.159794504276795e-07,
+            "2": 1.2970211544485458e-06,
+            "3": 1.2970205766803698e-06,
+            "4": 1.2970207930259787e-06,
+            "5": 1.297021285381764e-06,
+            "6": 1.2970209471758846e-06,
+            "7": 1.2970203957804267e-06,
+            "8": 4.084174192393771e-11
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 5.0737192225369654e-14,
+          "maximum_body_area_normal_closure": 4.2603512433341215e-16,
+          "vertices": 984,
+          "triangles": 2368,
+          "liquid_volume_m3": 4.084174192393771e-11,
+          "liquid_fraction": 5.106401503512637e-06
+        },
+        {
+          "label": "final",
+          "energy_over_2gammaR2": 30.091913943770823,
+          "energy_J": 0.00018055148366262494,
+          "energy_rebuild_error": 3.5418621282505e-16,
+          "minimum_triangle_area_m2": 1.434750877161083e-10,
+          "body_volumes_m3": {
+            "1": 2.159794504276851e-07,
+            "2": 1.2970211544486104e-06,
+            "3": 1.2970205766804403e-06,
+            "4": 1.2970207930260136e-06,
+            "5": 1.2970212853817989e-06,
+            "6": 1.2970209471758981e-06,
+            "7": 1.2970203957804987e-06,
+            "8": 4.084174195988606e-11
+          },
+          "body_target_volumes_m3": {
+            "1": 2.159794504276795e-07,
+            "2": 1.2970211544485458e-06,
+            "3": 1.2970205766803698e-06,
+            "4": 1.2970207930259787e-06,
+            "5": 1.297021285381764e-06,
+            "6": 1.2970209471758846e-06,
+            "7": 1.2970203957804267e-06,
+            "8": 4.084174192393771e-11
+          },
+          "volume_target_error": 8.801865902796635e-10,
+          "native_volume_rebuild_error": 2.523536934972981e-13,
+          "maximum_body_area_normal_closure": 6.164783601479146e-16,
+          "vertices": 984,
+          "triangles": 2368,
+          "liquid_volume_m3": 4.084174195988606e-11,
+          "liquid_fraction": 5.106401508007011e-06
+        }
+      ],
+      "checks": {
+        "native_clean": true,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true,
+        "conversion_clean": true
+      }
+    }
+  ],
+  "all_usable": false
+}

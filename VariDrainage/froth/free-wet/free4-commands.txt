@@ -1,0 +1,25 @@
+target_tolerance := 1e-12
+printf "SNAP initial %.17g\n",total_energy
+foreach body bb do printf "BODY initial %d %.17g %.17g\n",bb.id,bb.volume,bb.target
+foreach vertex vv do printf "VERTEX initial %d %.17g %.17g %.17g\n",vv.id,vv.x,vv.y,vv.z
+foreach facet ff do printf "TRI initial %d %d %d %d %d %d %d %.17g\n",ff.id,ff.vertex[1].id,ff.vertex[2].id,ff.vertex[3].id,ff.frontbody,ff.backbody,ff.stock_id,ff.tension
+g 80
+printf "SNAP level0 %.17g\n",total_energy
+foreach body bb do printf "BODY level0 %d %.17g %.17g\n",bb.id,bb.volume,bb.target
+foreach vertex vv do printf "VERTEX level0 %d %.17g %.17g %.17g\n",vv.id,vv.x,vv.y,vv.z
+foreach facet ff do printf "TRI level0 %d %d %d %d %d %d %d %.17g\n",ff.id,ff.vertex[1].id,ff.vertex[2].id,ff.vertex[3].id,ff.frontbody,ff.backbody,ff.stock_id,ff.tension
+r
+g 80
+printf "SNAP level1 %.17g\n",total_energy
+foreach body bb do printf "BODY level1 %d %.17g %.17g\n",bb.id,bb.volume,bb.target
+foreach vertex vv do printf "VERTEX level1 %d %.17g %.17g %.17g\n",vv.id,vv.x,vv.y,vv.z
+foreach facet ff do printf "TRI level1 %d %d %d %d %d %d %d %.17g\n",ff.id,ff.vertex[1].id,ff.vertex[2].id,ff.vertex[3].id,ff.frontbody,ff.backbody,ff.stock_id,ff.tension
+r
+g 80
+printf "SNAP level2 %.17g\n",total_energy
+foreach body bb do printf "BODY level2 %d %.17g %.17g\n",bb.id,bb.volume,bb.target
+foreach vertex vv do printf "VERTEX level2 %d %.17g %.17g %.17g\n",vv.id,vv.x,vv.y,vv.z
+foreach facet ff do printf "TRI level2 %d %d %d %d %d %d %d %.17g\n",ff.id,ff.vertex[1].id,ff.vertex[2].id,ff.vertex[3].id,ff.frontbody,ff.backbody,ff.stock_id,ff.tension
+dump "free4-relaxed.fe"
+q
+q

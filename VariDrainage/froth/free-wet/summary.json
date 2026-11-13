@@ -1,0 +1,761 @@
+{
+  "runs": [
+    {
+      "name": "free4",
+      "kind": "dry",
+      "cells": 4,
+      "returncode": 0,
+      "warnings": [],
+      "elapsed_seconds": 0.22889439994469285,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 32.48528137423857,
+          "energy_J": 0.0001949116882454314,
+          "energy_rebuild_error": 0.0,
+          "minimum_triangle_area_m2": 0.0001414213562373095,
+          "body_volumes_m3": {
+            "1": 2e-06,
+            "2": 2.0000000000000003e-06,
+            "3": 2.0000000000000003e-06,
+            "4": 2.0000000000000003e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 2.220446049250313e-16,
+          "maximum_body_area_normal_closure": 2.220446049250313e-16,
+          "vertices": 9,
+          "triangles": 18,
+          "films": 10,
+          "borders": 10,
+          "junctions": 5,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 1.0,
+          "maximum_angle_error_degrees": 60.0
+        },
+        {
+          "label": "level0",
+          "energy_over_2gammaR2": 32.34437438981308,
+          "energy_J": 0.0001940662463388785,
+          "energy_rebuild_error": 0.0,
+          "minimum_triangle_area_m2": 0.00015291145197987897,
+          "body_volumes_m3": {
+            "1": 2e-06,
+            "2": 1.9999999999999995e-06,
+            "3": 1.9999999999999995e-06,
+            "4": 1.9999999999999995e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 2.220446049250313e-16,
+          "maximum_body_area_normal_closure": 1.32021460364232e-15,
+          "vertices": 9,
+          "triangles": 18,
+          "films": 10,
+          "borders": 10,
+          "junctions": 5,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 1.1751308775491176,
+          "maximum_angle_error_degrees": 49.95287211174869
+        },
+        {
+          "label": "level1",
+          "energy_over_2gammaR2": 28.06799411025741,
+          "energy_J": 0.00016840796466154444,
+          "energy_rebuild_error": 1.2657526094827583e-16,
+          "minimum_triangle_area_m2": 1.081611308887036e-05,
+          "body_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 1.9999999999999995e-06,
+            "4": 2.0000000000000003e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 2.220446049250313e-16,
+          "maximum_body_area_normal_closure": 3.764949453935611e-16,
+          "vertices": 31,
+          "triangles": 72,
+          "films": 10,
+          "borders": 10,
+          "junctions": 5,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 0.6723051683463493,
+          "maximum_angle_error_degrees": 41.13942987760905
+        },
+        {
+          "label": "level2",
+          "energy_over_2gammaR2": 27.144251450763576,
+          "energy_J": 0.00016286550870458146,
+          "energy_rebuild_error": 3.9264818393441774e-16,
+          "minimum_triangle_area_m2": 1.9182231801699876e-08,
+          "body_volumes_m3": {
+            "1": 1.9999999999999995e-06,
+            "2": 1.9999999999999995e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2e-06,
+            "2": 2e-06,
+            "3": 2e-06,
+            "4": 2e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 4.440892098500626e-16,
+          "maximum_body_area_normal_closure": 4.494775313252277e-16,
+          "vertices": 129,
+          "triangles": 288,
+          "films": 10,
+          "borders": 10,
+          "junctions": 5,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 0.3610075050443027,
+          "maximum_angle_error_degrees": 22.735074378495256
+        }
+      ],
+      "checks": {
+        "native_clean": true,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true
+      }
+    },
+    {
+      "name": "wet4-s020",
+      "kind": "wet",
+      "cells": 4,
+      "spread": 0.02,
+      "returncode": 0,
+      "warnings": [
+        "WARNING 3857: Edge 439 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 451 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 457 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 469 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 475 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 481 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 619 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 631 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 637 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 649 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 655 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 661 facets body order disagrees with geometric order."
+      ],
+      "elapsed_seconds": 0.20539000001735985,
+      "conversion": {
+        "returncode": 0,
+        "warnings": [],
+        "elapsed_seconds": 0.151094599859789
+      },
+      "raw_sha256": "fd310b556f74a5f15d2dc952448f9665ed519c3c53709724c7ce8ee907940b12",
+      "loadable_sha256": "80d2cd0f536b51a649e48c459f6301e20598a5869233823141d71b85ab4340f6",
+      "removed_duplicate_declarations": 1,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 27.11085952749672,
+          "energy_J": 0.00016266515716498032,
+          "energy_rebuild_error": 2.358790806818574e-15,
+          "minimum_triangle_area_m2": 7.002493820052821e-10,
+          "body_volumes_m3": {
+            "1": 1.99776963088287e-06,
+            "2": 1.997768322325734e-06,
+            "3": 1.9977682638563257e-06,
+            "4": 1.997768118377254e-06,
+            "5": 3.3303579953781027e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 1.99776963088287e-06,
+            "2": 1.997768322325734e-06,
+            "3": 1.9977682638563257e-06,
+            "4": 1.997768118377254e-06,
+            "5": 3.3303579953781027e-10
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 1.1035616864774056e-13,
+          "maximum_body_area_normal_closure": 2.61254422450516e-16,
+          "vertices": 232,
+          "triangles": 584,
+          "liquid_volume_m3": 3.3303579953781027e-10,
+          "liquid_fraction": 4.167423634744108e-05
+        },
+        {
+          "label": "final",
+          "energy_over_2gammaR2": 27.097242045022647,
+          "energy_J": 0.00016258345227013586,
+          "energy_rebuild_error": 9.243240103154417e-14,
+          "minimum_triangle_area_m2": 7.438772646255589e-11,
+          "body_volumes_m3": {
+            "1": 1.99776963088287e-06,
+            "2": 1.997768322325734e-06,
+            "3": 1.9977682638563257e-06,
+            "4": 1.9977681183772536e-06,
+            "5": 3.330357995375895e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 1.99776963088287e-06,
+            "2": 1.997768322325734e-06,
+            "3": 1.9977682638563257e-06,
+            "4": 1.997768118377254e-06,
+            "5": 3.3303579953781027e-10
+          },
+          "volume_target_error": 6.628031457012185e-13,
+          "native_volume_rebuild_error": 1.9206858326015208e-14,
+          "maximum_body_area_normal_closure": 2.8248668769472276e-16,
+          "vertices": 232,
+          "triangles": 584,
+          "liquid_volume_m3": 3.330357995375895e-10,
+          "liquid_fraction": 4.167423634741346e-05
+        }
+      ],
+      "checks": {
+        "native_clean": false,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true,
+        "conversion_clean": true
+      }
+    },
+    {
+      "name": "wet4-s010",
+      "kind": "wet",
+      "cells": 4,
+      "spread": 0.01,
+      "returncode": 0,
+      "warnings": [
+        "WARNING 3857: Edge 649 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 655 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 661 facets body order disagrees with geometric order."
+      ],
+      "elapsed_seconds": 0.23362310021184385,
+      "conversion": {
+        "returncode": 0,
+        "warnings": [],
+        "elapsed_seconds": 0.1519067999906838
+      },
+      "raw_sha256": "bb129d951d455aca67a525cfaf8a023a7043c2991917ba069cbf8db234627817",
+      "loadable_sha256": "30ff1066371154288a727fad606a0e716bd81e69c9f08a78457ebd1d0142b4b3",
+      "removed_duplicate_declarations": 1,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 27.126928271238857,
+          "energy_J": 0.00016276156962743315,
+          "energy_rebuild_error": 1.2965664622417161e-14,
+          "minimum_triangle_area_m2": 7.632697959859629e-11,
+          "body_volumes_m3": {
+            "1": 1.998905996738235e-06,
+            "2": 1.9989043555310162e-06,
+            "3": 1.9989039988660572e-06,
+            "4": 1.9989042388873136e-06,
+            "5": 8.323057753761685e-11
+          },
+          "body_target_volumes_m3": {
+            "1": 1.998905996738235e-06,
+            "2": 1.9989043555310162e-06,
+            "3": 1.9989039988660572e-06,
+            "4": 1.9989042388873136e-06,
+            "5": 8.323057753761685e-11
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 1.4063195052926858e-12,
+          "maximum_body_area_normal_closure": 3.802398952809214e-16,
+          "vertices": 232,
+          "triangles": 584,
+          "liquid_volume_m3": 8.323057753761685e-11,
+          "liquid_fraction": 1.0409414883779338e-05
+        },
+        {
+          "label": "final",
+          "energy_over_2gammaR2": 27.12079686243476,
+          "energy_J": 0.00016272478117460853,
+          "energy_rebuild_error": 9.746096290735164e-14,
+          "minimum_triangle_area_m2": 1.6833864979902742e-11,
+          "body_volumes_m3": {
+            "1": 1.9989059967382347e-06,
+            "2": 1.9989043555310162e-06,
+            "3": 1.9989039988660572e-06,
+            "4": 1.9989042388873136e-06,
+            "5": 8.323057753760487e-11
+          },
+          "body_target_volumes_m3": {
+            "1": 1.998905996738235e-06,
+            "2": 1.9989043555310162e-06,
+            "3": 1.9989039988660572e-06,
+            "4": 1.9989042388873136e-06,
+            "5": 8.323057753761685e-11
+          },
+          "volume_target_error": 1.4410694859634532e-13,
+          "native_volume_rebuild_error": 1.3464784842653899e-12,
+          "maximum_body_area_normal_closure": 4.799714585830814e-16,
+          "vertices": 232,
+          "triangles": 584,
+          "liquid_volume_m3": 8.323057753760487e-11,
+          "liquid_fraction": 1.0409414883777839e-05
+        }
+      ],
+      "checks": {
+        "native_clean": false,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true,
+        "conversion_clean": true
+      }
+    },
+    {
+      "name": "free7",
+      "kind": "dry",
+      "cells": 7,
+      "returncode": 0,
+      "warnings": [
+        "WARNING! Zero area for facet 313.",
+        "WARNING! Zero area for facet 313.",
+        "WARNING! Zero area for facet 313.",
+        "WARNING! Zero area for facet 120.",
+        "WARNING! Zero area for facet 122.",
+        "WARNING! Zero area for facet 292.",
+        "WARNING! Zero area for facet 310.",
+        "WARNING! Zero area for facet 293.",
+        "WARNING! Zero area for facet 293.",
+        "Enter command: WARNING! Zero area for facet 293.",
+        "WARNING! Zero area for facet 1191.",
+        "WARNING! Zero area for facet 1261.",
+        "WARNING! Zero area for facet 293.",
+        "WARNING! Zero area for facet 1261.",
+        "WARNING! Zero area for facet 1262.",
+        "WARNING! Zero area for facet 1263.",
+        "WARNING! Zero area for facet 1461.",
+        "WARNING! Zero area for facet 293.",
+        "WARNING! Zero area for facet 1261.",
+        "WARNING! Zero area for facet 1262.",
+        "WARNING! Zero area for facet 1263.",
+        "WARNING! Zero area for facet 1461."
+      ],
+      "elapsed_seconds": 0.42002010019496083,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 41.60321210111418,
+          "energy_J": 0.0002496192726066851,
+          "energy_rebuild_error": 0.0,
+          "minimum_triangle_area_m2": 9e-06,
+          "body_volumes_m3": {
+            "1": 2.1600000000000005e-07,
+            "2": 1.2973333333333328e-06,
+            "3": 1.2973333333333328e-06,
+            "4": 1.2973333333333328e-06,
+            "5": 1.2973333333333328e-06,
+            "6": 1.2973333333333328e-06,
+            "7": 1.2973333333333322e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333335e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "volume_target_error": 9.992007221626409e-16,
+          "native_volume_rebuild_error": 4.440892098500626e-16,
+          "maximum_body_area_normal_closure": 6.710308644151443e-16,
+          "vertices": 40,
+          "triangles": 96,
+          "films": 24,
+          "borders": 32,
+          "junctions": 16,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 2.4142135623730954,
+          "maximum_angle_error_degrees": 75.00000000000001
+        },
+        {
+          "label": "level0",
+          "energy_over_2gammaR2": 32.669988373782246,
+          "energy_J": 0.00019601993024269347,
+          "energy_rebuild_error": 6.5247290047735e-16,
+          "minimum_triangle_area_m2": 8.197597976674717e-06,
+          "body_volumes_m3": {
+            "1": 2.1600000000000005e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333333e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333337e-06,
+            "7": 1.2973333333333337e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333335e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 2.220446049250313e-16,
+          "maximum_body_area_normal_closure": 3.666718928916774e-16,
+          "vertices": 40,
+          "triangles": 96,
+          "films": 24,
+          "borders": 32,
+          "junctions": 16,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 0.9999999935426213,
+          "maximum_angle_error_degrees": 60.0
+        },
+        {
+          "label": "level1",
+          "energy_over_2gammaR2": 30.639785290273686,
+          "energy_J": 0.0001838387117416421,
+          "energy_rebuild_error": 1.0331929615828249e-10,
+          "minimum_triangle_area_m2": 3.443930561754162e-14,
+          "body_volumes_m3": {
+            "1": 2.1600000000000005e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333333e-06,
+            "6": 1.2973333333333333e-06,
+            "7": 1.2973333333333337e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333335e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 5.551115123125783e-16,
+          "maximum_body_area_normal_closure": 6.09234879237108e-16,
+          "vertices": 168,
+          "triangles": 384,
+          "films": 24,
+          "borders": 32,
+          "junctions": 16,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 0.4827830406120726,
+          "maximum_angle_error_degrees": 29.98414736882515
+        },
+        {
+          "label": "level2",
+          "energy_over_2gammaR2": 30.152298299872285,
+          "energy_J": 0.0001809137897992337,
+          "energy_rebuild_error": 2.992771116287177e-14,
+          "minimum_triangle_area_m2": 2.8212233878948718e-11,
+          "body_volumes_m3": {
+            "1": 2.1600000000000005e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333337e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333333e-06,
+            "6": 1.2973333333333337e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1600000000000003e-07,
+            "2": 1.2973333333333337e-06,
+            "3": 1.2973333333333335e-06,
+            "4": 1.2973333333333335e-06,
+            "5": 1.2973333333333335e-06,
+            "6": 1.2973333333333335e-06,
+            "7": 1.2973333333333335e-06
+          },
+          "volume_target_error": 2.220446049250313e-16,
+          "native_volume_rebuild_error": 6.661338147750939e-16,
+          "maximum_body_area_normal_closure": 6.023472913410822e-16,
+          "vertices": 712,
+          "triangles": 1536,
+          "films": 24,
+          "borders": 32,
+          "junctions": 16,
+          "graph_valid": true,
+          "maximum_triple_force_residual": 1.0118187871069024,
+          "maximum_angle_error_degrees": 84.27822262757826
+        }
+      ],
+      "checks": {
+        "native_clean": false,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": false,
+        "area_descent": true,
+        "dry_graph": true
+      }
+    },
+    {
+      "name": "wet7-s020",
+      "kind": "wet",
+      "cells": 7,
+      "spread": 0.02,
+      "returncode": 0,
+      "warnings": [
+        "WARNING 3857: Edge 2187 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2209 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2221 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2227 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2235 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2247 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2269 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2277 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2281 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2293 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2299 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2763 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2785 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2797 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2803 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2811 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2823 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2833 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2845 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2853 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2857 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2869 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2875 facets body order disagrees with geometric order.",
+        "WARNING 1055: Volume or quantity constraints don't converge in 10 projections."
+      ],
+      "elapsed_seconds": 0.4240169001277536,
+      "conversion": {
+        "returncode": 0,
+        "warnings": [],
+        "elapsed_seconds": 0.2765283999033272
+      },
+      "raw_sha256": "22382e12cfbac4ab25db1f16de4c92716c8b14a1dcdb65966908af49ee2a413e",
+      "loadable_sha256": "0a89b53d15242055063cd4b4ab0857a99dbce28db3200aee3309b1fd242ff330",
+      "removed_duplicate_declarations": 1,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 30.13582458988869,
+          "energy_J": 0.00018081494753933213,
+          "energy_rebuild_error": 2.829361049566919e-15,
+          "minimum_triangle_area_m2": 2.1075594226498255e-10,
+          "body_volumes_m3": {
+            "1": 2.1596975911082626e-07,
+            "2": 1.2967639529708513e-06,
+            "3": 1.296762085419246e-06,
+            "4": 1.2967630070653668e-06,
+            "5": 1.2967632743298482e-06,
+            "6": 1.2967598448957696e-06,
+            "7": 1.2967598130913627e-06,
+            "8": 1.2559965648100218e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1596975911082626e-07,
+            "2": 1.2967639529708513e-06,
+            "3": 1.296762085419246e-06,
+            "4": 1.2967630070653668e-06,
+            "5": 1.2967632743298482e-06,
+            "6": 1.2967598448957696e-06,
+            "7": 1.2967598130913627e-06,
+            "8": 1.2559965648100218e-10
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 3.4794389591752406e-13,
+          "maximum_body_area_normal_closure": 5.916385929725303e-16,
+          "vertices": 984,
+          "triangles": 2368,
+          "liquid_volume_m3": 1.2559965648100218e-10,
+          "liquid_fraction": 1.5706500120005063e-05
+        },
+        {
+          "label": "final",
+          "energy_over_2gammaR2": 30.114990699995047,
+          "energy_J": 0.0001806899441999703,
+          "energy_rebuild_error": 1.7695740208884169e-15,
+          "minimum_triangle_area_m2": 7.930122755117244e-11,
+          "body_volumes_m3": {
+            "1": 2.1596975911082626e-07,
+            "2": 1.2967639529708513e-06,
+            "3": 1.296762085419246e-06,
+            "4": 1.2967630070653666e-06,
+            "5": 1.2967632743298482e-06,
+            "6": 1.2967598448957696e-06,
+            "7": 1.2967598130913627e-06,
+            "8": 1.2559965648100242e-10
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1596975911082626e-07,
+            "2": 1.2967639529708513e-06,
+            "3": 1.296762085419246e-06,
+            "4": 1.2967630070653668e-06,
+            "5": 1.2967632743298482e-06,
+            "6": 1.2967598448957696e-06,
+            "7": 1.2967598130913627e-06,
+            "8": 1.2559965648100218e-10
+          },
+          "volume_target_error": 1.9984014443252818e-15,
+          "native_volume_rebuild_error": 7.94253551816837e-13,
+          "maximum_body_area_normal_closure": 6.845009859318825e-16,
+          "vertices": 984,
+          "triangles": 2368,
+          "liquid_volume_m3": 1.2559965648100242e-10,
+          "liquid_fraction": 1.5706500120005093e-05
+        }
+      ],
+      "checks": {
+        "native_clean": false,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true,
+        "conversion_clean": true
+      }
+    },
+    {
+      "name": "wet7-s010",
+      "kind": "wet",
+      "cells": 7,
+      "spread": 0.01,
+      "returncode": 0,
+      "warnings": [
+        "WARNING 3857: Edge 2187 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2209 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2221 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2227 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2235 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2247 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2269 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2277 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2281 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2293 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2299 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2763 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2785 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2797 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2803 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2811 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2823 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2833 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2845 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2853 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2857 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2869 facets body order disagrees with geometric order.",
+        "WARNING 3857: Edge 2875 facets body order disagrees with geometric order.",
+        "WARNING 1055: Volume or quantity constraints don't converge in 10 projections."
+      ],
+      "elapsed_seconds": 0.43818169995211065,
+      "conversion": {
+        "returncode": 0,
+        "warnings": [],
+        "elapsed_seconds": 0.24197089998051524
+      },
+      "raw_sha256": "fff119c0f25483e7a1457ca89a4c418de6e210f269a0fbcc9996b433940e8eae",
+      "loadable_sha256": "ae6f4048528202862c53b4853e72c4294f43281f40a13bf139737d203b4dad57",
+      "removed_duplicate_declarations": 1,
+      "snapshots": [
+        {
+          "label": "initial",
+          "energy_over_2gammaR2": 30.14404165705359,
+          "energy_J": 0.00018086424994232157,
+          "energy_rebuild_error": 7.071474460962031e-16,
+          "minimum_triangle_area_m2": 5.268898556624564e-11,
+          "body_volumes_m3": {
+            "1": 2.1598579209006358e-07,
+            "2": 1.2970522736581497e-06,
+            "3": 1.2970504260121403e-06,
+            "4": 1.2970511415097325e-06,
+            "5": 1.29705238986695e-06,
+            "6": 1.2970493579674065e-06,
+            "7": 1.2970497646855062e-06,
+            "8": 3.141280312306635e-11
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1598579209006358e-07,
+            "2": 1.2970522736581497e-06,
+            "3": 1.2970504260121403e-06,
+            "4": 1.2970511415097325e-06,
+            "5": 1.29705238986695e-06,
+            "6": 1.2970493579674065e-06,
+            "7": 1.2970497646855062e-06,
+            "8": 3.141280312306635e-11
+          },
+          "volume_target_error": 0.0,
+          "native_volume_rebuild_error": 2.6125768215479184e-12,
+          "maximum_body_area_normal_closure": 6.40911435998263e-16,
+          "vertices": 984,
+          "triangles": 2368,
+          "liquid_volume_m3": 3.141280312306635e-11,
+          "liquid_fraction": 3.927423893315945e-06
+        },
+        {
+          "label": "final",
+          "energy_over_2gammaR2": 30.13250066461371,
+          "energy_J": 0.00018079500398768226,
+          "energy_rebuild_error": 1.296933530402247e-14,
+          "minimum_triangle_area_m2": 5.402014339535908e-11,
+          "body_volumes_m3": {
+            "1": 2.1598579209006358e-07,
+            "2": 1.29705227365815e-06,
+            "3": 1.29705042601214e-06,
+            "4": 1.2970511415097325e-06,
+            "5": 1.2970523898669499e-06,
+            "6": 1.2970493579674065e-06,
+            "7": 1.297049764685506e-06,
+            "8": 3.141280312306705e-11
+          },
+          "body_target_volumes_m3": {
+            "1": 2.1598579209006358e-07,
+            "2": 1.2970522736581497e-06,
+            "3": 1.2970504260121403e-06,
+            "4": 1.2970511415097325e-06,
+            "5": 1.29705238986695e-06,
+            "6": 1.2970493579674065e-06,
+            "7": 1.2970497646855062e-06,
+            "8": 3.141280312306635e-11
+          },
+          "volume_target_error": 2.2426505097428162e-14,
+          "native_volume_rebuild_error": 1.361133428190442e-12,
+          "maximum_body_area_normal_closure": 5.113317717075786e-16,
+          "vertices": 984,
+          "triangles": 2368,
+          "liquid_volume_m3": 3.141280312306705e-11,
+          "liquid_fraction": 3.927423893316033e-06
+        }
+      ],
+      "checks": {
+        "native_clean": false,
+        "positive": true,
+        "volume_targets": true,
+        "native_volume": true,
+        "native_energy": true,
+        "area_descent": true,
+        "dry_graph": true,
+        "conversion_clean": true
+      }
+    }
+  ],
+  "all_usable": false
+}

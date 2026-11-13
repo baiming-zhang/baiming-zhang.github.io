@@ -1,0 +1,62 @@
+// FROTH free cluster; no support; all gas volumes fixed; x/R.
+// Reference area only, not liquid drainage or physical dynamics.
+define facet attribute stock_id integer
+vertices
+1 1 -0.99999999999999978 1
+2 0 0 0
+3 1 1 -1
+4 -1 1 1
+5 1 1 1
+6 -1 -1 -1
+7 1 -1 -1
+8 -1 1 -1
+9 -1 -1 1
+edges
+1 1 2
+2 2 3
+3 1 3
+4 2 4
+5 3 4
+6 1 4
+7 1 5
+8 3 5
+9 4 5
+10 2 6
+11 3 6
+12 1 6
+13 1 7
+14 3 7
+15 6 7
+16 4 6
+17 4 8
+18 6 8
+19 3 8
+20 6 9
+21 4 9
+22 1 9
+faces
+1 1 2 -3 tension 1 stock_id 5
+2 -2 4 -5 tension 1 stock_id 6
+3 -4 -1 6 tension 1 stock_id 7
+4 -7 3 8 tension 1 stock_id 1
+5 9 -8 5 tension 1 stock_id 1
+6 -6 7 -9 tension 1 stock_id 1
+7 -10 2 11 tension 1 stock_id 8
+8 1 10 -12 tension 1 stock_id 9
+9 -3 13 -14 tension 1 stock_id 2
+10 -13 12 15 tension 1 stock_id 2
+11 14 -15 -11 tension 1 stock_id 2
+12 -10 4 16 tension 1 stock_id 10
+13 -16 17 -18 tension 1 stock_id 3
+14 -17 -5 19 tension 1 stock_id 3
+15 18 -19 11 tension 1 stock_id 3
+16 16 20 -21 tension 1 stock_id 4
+17 -20 -12 22 tension 1 stock_id 4
+18 21 -22 6 tension 1 stock_id 4
+bodies
+1 1 2 3 4 5 6 volume 1.9999999999999996
+2 -1 7 8 9 10 11 volume 1.9999999999999996
+3 -2 -7 12 13 14 15 volume 1.9999999999999996
+4 -3 -8 -12 16 17 18 volume 1.9999999999999996
+read
+// No automatic relaxation: use the versioned batch commands.
