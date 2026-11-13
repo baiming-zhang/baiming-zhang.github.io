@@ -1,0 +1,176 @@
+{
+  "source_commit": "b5f88a36f6dbf76470f5f74fab5d0c98ea249f76",
+  "source_hashes": {
+    "thin_film/scripts/prepared_motion/run.py": "2e401990e57363850e6eba662980001d3af72c4fa63ce4afa61ceb43b910b083",
+    "thin_film/scripts/prepared_motion/README.md": "52adb429ffd26c88dd2debd15239a2d7bc6e59d734610d94f9a7ef0f5c6589c8",
+    "thin_film/include/vf/thinfilm/CurvedEdgePreparation.h": "1c59266979bc85e55347a6697f31dcac69d56a8ba5e42b82f85a7ba8e4cb3d8c",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film/include/vf/thinfilm/CurvedEdge.h": "ace17ac5bcf3e355ad4aac3ff631c6acd5d234044a6144222fc862ff32487b20",
+    "thin_film/bench/tf_curved_edge_bench.cpp": "399dd432f76ad2d535b0f52127a2fa9753310620f870f39c86c667ffe8ed6245",
+    "thin_film/tests/test_edge_preparation.cpp": "9ac5d8dc811654f7a5bc0a1aa8d478225cd38b76013ed1c248217f05f12ff788"
+  },
+  "binaries": {
+    "tf_curved_edge_bench": "86795a2dfdb7930c613ab26406cc00f0e86bb7ce3c01e0033662f33c461fd731",
+    "test_edge_preparation": "63d935274c3ea997e841d5c9dba141c5d22d015b1198121730f51a2f462f405f",
+    "test_curved_edge": "dafdbbe27798598a3bf5029a26e2c16a8ae880735e545f497c3b46bba40f4d55"
+  },
+  "guards": [
+    {
+      "name": "legacy_control",
+      "mode": "local",
+      "dx_um": 40,
+      "dt_us": 0.25,
+      "T_us": 20,
+      "preparation": "projected",
+      "save_stride": 1,
+      "c_bulk_mM": 19.4,
+      "amplitude": 0.005,
+      "radius_um": 500
+    },
+    {
+      "name": "guard_local20",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 1,
+      "preparation": "variational",
+      "save_stride": 1,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "guard_uniform20",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 1,
+      "preparation": "variational",
+      "save_stride": 1,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "guard_local10",
+      "mode": "local",
+      "dx_um": 10,
+      "dt_us": 1,
+      "T_us": 1,
+      "preparation": "variational",
+      "save_stride": 1,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "guard_uniform10",
+      "mode": "uniform",
+      "dx_um": 10,
+      "dt_us": 1,
+      "T_us": 1,
+      "preparation": "variational",
+      "save_stride": 1,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    }
+  ],
+  "conditional_matrix": [
+    {
+      "name": "l20_dt1",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 200,
+      "preparation": "variational",
+      "save_stride": 10,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "u20_dt1",
+      "mode": "uniform",
+      "dx_um": 20,
+      "dt_us": 1,
+      "T_us": 200,
+      "preparation": "variational",
+      "save_stride": 10,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "l20_dt05",
+      "mode": "local",
+      "dx_um": 20,
+      "dt_us": 0.5,
+      "T_us": 200,
+      "preparation": "variational",
+      "save_stride": 20,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "l10_dt1",
+      "mode": "local",
+      "dx_um": 10,
+      "dt_us": 1,
+      "T_us": 200,
+      "preparation": "variational",
+      "save_stride": 10,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "u10_dt1",
+      "mode": "uniform",
+      "dx_um": 10,
+      "dt_us": 1,
+      "T_us": 200,
+      "preparation": "variational",
+      "save_stride": 10,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    },
+    {
+      "name": "u10_dt05",
+      "mode": "uniform",
+      "dx_um": 10,
+      "dt_us": 0.5,
+      "T_us": 200,
+      "preparation": "variational",
+      "save_stride": 20,
+      "c_bulk_mM": 6,
+      "amplitude": 0,
+      "radius_um": 500
+    }
+  ],
+  "raw_directory": "results/local-runs/prepared_motion_20261113",
+  "per_guard_timeout_s": 180,
+  "per_matrix_timeout_s": 600,
+  "whole_compute_budget_s": 3300,
+  "positive_observation_times_s": [
+    1e-05,
+    5e-05,
+    0.0002
+  ],
+  "scope": "Actual moving variable-S curved-area model with variational initial edge; trace heights constrained ONLY in initialization. No kinetic closure or empirical drainage law.",
+  "condition": "all native tests and guards pass; guard wall * requested steps <=600s for each matrix case; no parameter/tolerance retry",
+  "gates": {
+    "V_S_region": 1e-10,
+    "energy": 1e-07,
+    "independent_formula": 1e-07,
+    "time_dynamic": 0.02,
+    "space_dynamic": 0.1
+  },
+  "sampling": "All accepted history rows; three full states/faces for step1, every10us and final. Independent formulas audited at saved steps only.",
+  "environment": {
+    "VF_THREADS": "2",
+    "caller_VF": "excluded"
+  }
+}

@@ -1,0 +1,584 @@
+{
+  "state": "frozen_guard_snapshot",
+  "tests": [
+    {
+      "name": "test_edge_preparation",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_edge_preparation.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.015999999828636646,
+      "log": "results\\logs\\prepared_motion_20261113\\test_edge_preparation.log",
+      "log_sha256": "d655965e8d2a38ba0c556a7357f5d98c341205c38e8cd4e2d6a2398c3cba391b"
+    },
+    {
+      "name": "test_curved_edge",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\test_curved_edge.exe"
+      ],
+      "returncode": 0,
+      "wall_s": 0.0779999999795109,
+      "log": "results\\logs\\prepared_motion_20261113\\test_curved_edge.log",
+      "log_sha256": "adc2345db8802c2b8587c21657e7f17b3280740ddc1133f41a17a3c40f1a8a04"
+    }
+  ],
+  "cases": [
+    {
+      "name": "legacy_control",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "40",
+        "0.25",
+        "20",
+        "500",
+        "0.005",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\prepared_motion_20261113\\legacy_control",
+        "19.4",
+        "projected",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 0.6560000001918525,
+      "log": "results\\logs\\prepared_motion_20261113\\legacy_control.log",
+      "log_sha256": "4a2420d46d3e8f29c7293411ad0c4b886412498b92bdbd5e5ad714be1428ff16",
+      "parameters": {
+        "name": "legacy_control",
+        "mode": "local",
+        "dx_um": 40,
+        "dt_us": 0.25,
+        "T_us": 20,
+        "preparation": "projected",
+        "save_stride": 1,
+        "c_bulk_mM": 19.4,
+        "amplitude": 0.005,
+        "radius_um": 500
+      },
+      "summary": {
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 19.4,
+        "preparation": "projected",
+        "N": 18,
+        "interior": 14,
+        "steps": 80,
+        "requested_steps": 80,
+        "failures": 0,
+        "local": true,
+        "dx_m": 3.9999999999999996e-05,
+        "dt_s": 2.5e-07,
+        "T_s": 1.9999999999999998e-05,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -77.27958511871006,
+        "amplitude": 0.005,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9736720262233717,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 1.3143211603600837e-11,
+        "V0_m3": 3.0720000000000004e-13,
+        "S0_mol": 1.8445030806184438e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 5.684341886080803e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.3378765687891798e-16,
+        "max_regionS_res": 6.775840211538746e-17,
+        "max_displacement_m": 1.6521278540787828e-06,
+        "wall_s": 0.6427597
+      },
+      "completed": true,
+      "native_gate": true,
+      "legacy_bytes": {
+        "states.csv": true,
+        "faces.csv": true,
+        "history.csv": true
+      },
+      "files": [
+        {
+          "path": "results/local-runs/prepared_motion_20261113/legacy_control/faces.csv",
+          "bytes": 348331,
+          "sha256": "bf56c7dd87da8ec2d652d27d8c58b4ca508117893321bca4ba3ab4a1e197b45f"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/legacy_control/history.csv",
+          "bytes": 27429,
+          "sha256": "ccab45baef67d71b9f1dd26cfa73b5eed5fc9ae69545387a586089f2291dd0c7"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/legacy_control/states.csv",
+          "bytes": 1270948,
+          "sha256": "dd31fc347e837dccc0ecc5c45c7ecf97db441c05b8225c6fbf4664311655b1e1"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/legacy_control/summary.json",
+          "bytes": 928,
+          "sha256": "c49b2c4322471be751ff736ba5a4d0d6260cd2b95b248799febd3cc01cfa792f"
+        }
+      ]
+    },
+    {
+      "name": "guard_local20",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "20",
+        "1",
+        "1",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\prepared_motion_20261113\\guard_local20",
+        "6",
+        "variational",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 0.125,
+      "log": "results\\logs\\prepared_motion_20261113\\guard_local20.log",
+      "log_sha256": "686e6610a8faf0b8fa11b12b6df3fd54c091d0548638ab74a15014d8100ad39b",
+      "parameters": {
+        "name": "guard_local20",
+        "mode": "local",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 1,
+        "preparation": "variational",
+        "save_stride": 1,
+        "c_bulk_mM": 6,
+        "amplitude": 0,
+        "radius_um": 500
+      },
+      "summary": {
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 72,
+        "interior": 64,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": true,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 1e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.533180309590716e-12,
+        "V0_m3": 3.5310088460025125e-13,
+        "S0_mol": 1.7890738636051016e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 0,
+        "max_S_res": 0,
+        "max_regionV_res": 1.0901601890174378e-17,
+        "max_regionS_res": 3.7604299748371656e-17,
+        "max_displacement_m": 3.1720088636143363e-09,
+        "wall_s": 0.0990725
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 3.086828428991424e-14,
+        "free_volume_m3": 1.1306364895286995e-13,
+        "S_mol": 1.7890738636051016e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local20/faces.csv",
+          "bytes": 21600,
+          "sha256": "deb85c4d37514b30d8d0088cbf45ab74ecd2c91aedfb1001b1f44fec078122e9"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local20/history.csv",
+          "bytes": 498,
+          "sha256": "2417a1d0af96fe7520cd2bfdfa6f343546831c12dd2b89054a9f2e44f85054ed"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local20/initial_faces.csv",
+          "bytes": 5951,
+          "sha256": "c9b3b4075663b233abec2cdbac5c78e5e9d5c1c5112f45da08db8f36a2ca26ad"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local20/initial_states.csv",
+          "bytes": 18560,
+          "sha256": "df7ac286f0685adc6d0fba68c6bd0c1654065697df6255e9d59c23e74a531b0b"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local20/preparation.json",
+          "bytes": 227,
+          "sha256": "4ef1338c0d4b07db9d311940416e471913742e85f953cb2862059429a7990a74"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local20/states.csv",
+          "bytes": 61684,
+          "sha256": "233b84b0eb86a64b600790f27a60aa316ce396e910453a412c2d4f6c225d7b98"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local20/summary.json",
+          "bytes": 872,
+          "sha256": "fac4ce451b34b3dec81bb38598798a5ffddac589dae50686b7687e9b089ecf86"
+        }
+      ]
+    },
+    {
+      "name": "guard_uniform20",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "1",
+        "1",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\prepared_motion_20261113\\guard_uniform20",
+        "6",
+        "variational",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 0.34399999980814755,
+      "log": "results\\logs\\prepared_motion_20261113\\guard_uniform20.log",
+      "log_sha256": "69ed29f7ce4657e85b2320685d8c0853ebb45ece60b96edfc20e28a76783dd05",
+      "parameters": {
+        "name": "guard_uniform20",
+        "mode": "uniform",
+        "dx_um": 20,
+        "dt_us": 1,
+        "T_us": 1,
+        "preparation": "variational",
+        "save_stride": 1,
+        "c_bulk_mM": 6,
+        "amplitude": 0,
+        "radius_um": 500
+      },
+      "summary": {
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 144,
+        "interior": 136,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 1e-06,
+        "T_s": 1e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.532518920806525e-12,
+        "V0_m3": 3.530924236316567e-13,
+        "S0_mol": 1.7890738034541587e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.6485106169876136e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 4.63190834063872e-17,
+        "max_regionS_res": 6.028419606139281e-17,
+        "max_displacement_m": 3.7101389386522705e-09,
+        "wall_s": 0.3239248
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.7187835009193692e-14,
+        "free_volume_m3": 1.130847572362178e-13,
+        "S_mol": 1.7890738034541587e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform20/faces.csv",
+          "bytes": 46479,
+          "sha256": "73a84d059f10c7d871c8203f77cef859b7d60443b255241c7e3ec5b5c649f21a"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform20/history.csv",
+          "bytes": 518,
+          "sha256": "d25d7e50c7d7f399838abf81dd2ce3683f8a4e360fa82e9332901186a4d5af04"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform20/initial_faces.csv",
+          "bytes": 12831,
+          "sha256": "75f67ea9b6081ca5666fe4e91d8c0a2f08cf58553424512f90f7bda5cc94087a"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform20/initial_states.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform20/preparation.json",
+          "bytes": 226,
+          "sha256": "719025bbba47ba0a07fac7c96ecf93a32bd03dca80a4f1801157e82724b519e8"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform20/states.csv",
+          "bytes": 123171,
+          "sha256": "fc1135c1972f62f87336094e23595edcd29dfd5aae83aee046fa49a74f27bedc"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform20/summary.json",
+          "bytes": 894,
+          "sha256": "4d79a55d7abf71677260e15651d132f0459cffa3152c462a11e000e063ae5a2d"
+        }
+      ]
+    },
+    {
+      "name": "guard_local10",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "local",
+        "10",
+        "1",
+        "1",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\prepared_motion_20261113\\guard_local10",
+        "6",
+        "variational",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 1.0309999999590218,
+      "log": "results\\logs\\prepared_motion_20261113\\guard_local10.log",
+      "log_sha256": "c639bb0130d992297aeb5663ee82be9feddecfab4c0624b089785b8ec783432e",
+      "parameters": {
+        "name": "guard_local10",
+        "mode": "local",
+        "dx_um": 10,
+        "dt_us": 1,
+        "T_us": 1,
+        "preparation": "variational",
+        "save_stride": 1,
+        "c_bulk_mM": 6,
+        "amplitude": 0,
+        "radius_um": 500
+      },
+      "summary": {
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 256,
+        "interior": 240,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": true,
+        "dx_m": 9.999999999999999e-06,
+        "dt_s": 1e-06,
+        "T_s": 1e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.798893690714699e-12,
+        "V0_m3": 3.5725474066308583e-13,
+        "S0_mol": 1.789091533434978e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.6293040872020504e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.371493366616643e-16,
+        "max_regionS_res": 4.173949048725237e-17,
+        "max_displacement_m": 4.349087414853786e-09,
+        "wall_s": 1.0043843
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 1.4911755795435492e-13,
+        "free_volume_m3": 1.2204724908316397e-13,
+        "S_mol": 1.789091533434978e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local10/faces.csv",
+          "bytes": 87019,
+          "sha256": "8c45bbd2dd88e4f6bd2598b999a21a2934125db00e86371471ffeba1a3abe402"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local10/history.csv",
+          "bytes": 517,
+          "sha256": "d6e306e01d4bb34b9c150091d87b9ff3603fdd372db60d99748187b3f4cd405a"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local10/initial_faces.csv",
+          "bytes": 24101,
+          "sha256": "0f8f42941933ccf0ee54d23fced5f73bb04c2b1dc2387beac5253f87cd516ad1"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local10/initial_states.csv",
+          "bytes": 65444,
+          "sha256": "06df3bacde37ba1df4dae711de84005e818f297d68157ae9a6a6ce9a2d8b4a47"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local10/preparation.json",
+          "bytes": 227,
+          "sha256": "6f637f66bc718d48a94f5c91242636d109dfe6a0e011ea252d0987cec6041c19"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local10/states.csv",
+          "bytes": 219949,
+          "sha256": "39ed5dca189c473408294c97cd8cb8f1c9b9a6cd0cc8b5277f83b52357835830"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_local10/summary.json",
+          "bytes": 890,
+          "sha256": "0bbcf783a285fccf1224d5bdad9bfe6d3f16a0867fddbb57cc1098901ebe1a82"
+        }
+      ]
+    },
+    {
+      "name": "guard_uniform10",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "10",
+        "1",
+        "1",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\prepared_motion_20261113\\guard_uniform10",
+        "6",
+        "variational",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 5.516000000061467,
+      "log": "results\\logs\\prepared_motion_20261113\\guard_uniform10.log",
+      "log_sha256": "c9355283b8ca89e65cda0d51afcab14efd8fdcec894ff9214b6190ddea246324",
+      "parameters": {
+        "name": "guard_uniform10",
+        "mode": "uniform",
+        "dx_um": 10,
+        "dt_us": 1,
+        "T_us": 1,
+        "preparation": "variational",
+        "save_stride": 1,
+        "c_bulk_mM": 6,
+        "amplitude": 0,
+        "radius_um": 500
+      },
+      "summary": {
+        "save_stride": 1,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 544,
+        "interior": 528,
+        "steps": 1,
+        "requested_steps": 1,
+        "failures": 0,
+        "local": false,
+        "dx_m": 9.999999999999999e-06,
+        "dt_s": 1e-06,
+        "T_s": 1e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.799336249094897e-12,
+        "V0_m3": 3.5726588493588687e-13,
+        "S0_mol": 1.789091527932089e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 4.887759791891107e-16,
+        "max_S_res": 0,
+        "max_regionV_res": 1.628258846688334e-16,
+        "max_regionS_res": 1.0123920713635343e-16,
+        "max_displacement_m": 5.044294526357132e-09,
+        "wall_s": 5.3961339
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 1.400945210080723e-13,
+        "free_volume_m3": 1.220713703029213e-13,
+        "S_mol": 1.789091527932089e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "completed": true,
+      "native_gate": true,
+      "files": [
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform10/faces.csv",
+          "bytes": 192928,
+          "sha256": "348933993f0adbe4b07a5709ec9cf32421a0263f5e9940c6b53104100dd26c5b"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform10/history.csv",
+          "bytes": 518,
+          "sha256": "8edf013aa70375b17929581fa194d2c3be2f34ce183a50b1da76538e48e39368"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform10/initial_faces.csv",
+          "bytes": 53446,
+          "sha256": "2b3674fac8b0b6e2ce2d6984a009a8a31d29e212871f805834a876b76f4cef36"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform10/initial_states.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform10/preparation.json",
+          "bytes": 225,
+          "sha256": "e9bba3597acb5ba55577be4ed649ed79b4b62a05712fb91c3592b5afa7ffd533"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform10/states.csv",
+          "bytes": 466170,
+          "sha256": "4d9c3537ad86ab1fada158394dba93524cd3f8be371b057f4151fe14afebe474"
+        },
+        {
+          "path": "results/local-runs/prepared_motion_20261113/guard_uniform10/summary.json",
+          "bytes": 893,
+          "sha256": "10a282f11e192579319ae42feebf70dadd27d3cd2f6145d21811617eea36636b"
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}
