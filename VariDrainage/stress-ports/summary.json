@@ -1,0 +1,60 @@
+{
+  "gates": {
+    "surface_refines": true,
+    "surface_finest": true,
+    "energy": true,
+    "momentum": true,
+    "positive_dissipation": true,
+    "exact_flux_controls": true
+  },
+  "all_reference_controls_passed": true,
+  "controls": [
+    {
+      "case": "h6.0000_shear_free",
+      "maximum_energy_error": 4.05500983253798e-16,
+      "maximum_momentum_error": 3.510411550186459e-16,
+      "minimum_dissipation_J_m2": 7.625938644767109e-51,
+      "maximum_flux_control_error": 8.793169556863546e-16
+    },
+    {
+      "case": "h6.0000_balanced",
+      "maximum_energy_error": 4.01605795610267e-16,
+      "maximum_momentum_error": 2.6523013197758648e-15,
+      "minimum_dissipation_J_m2": 6.302004550343165e-21,
+      "maximum_flux_control_error": 5.048330130438011e-13
+    },
+    {
+      "case": "h6.0000_balanced_reversal",
+      "maximum_energy_error": 4.816224205516983e-16,
+      "maximum_momentum_error": 2.6523013197758648e-15,
+      "minimum_dissipation_J_m2": 6.302004550343165e-21,
+      "maximum_flux_control_error": 2.5220203732987634e-13
+    },
+    {
+      "case": "h17.3585_shear_free",
+      "maximum_energy_error": 3.220632592377222e-16,
+      "maximum_momentum_error": 5.584297469059238e-16,
+      "minimum_dissipation_J_m2": 1.733249857017779e-50,
+      "maximum_flux_control_error": 8.10498729884292e-16
+    },
+    {
+      "case": "h17.3585_balanced",
+      "maximum_energy_error": 1.3141807784750083e-15,
+      "maximum_momentum_error": 2.4392393041452387e-15,
+      "minimum_dissipation_J_m2": 5.330782810288319e-20,
+      "maximum_flux_control_error": 5.4782718332235293e-14
+    },
+    {
+      "case": "h17.3585_balanced_reversal",
+      "maximum_energy_error": 1.3141807784750083e-15,
+      "maximum_momentum_error": 2.444641827520976e-15,
+      "minimum_dissipation_J_m2": 5.330782810288319e-20,
+      "maximum_flux_control_error": 2.722999281423562e-14
+    }
+  ],
+  "wall_s": 0.2339999999385327,
+  "protocol_sha256": "87cb41dcc202e1c6764b6efc3807ba87e4b8e80c908d178d4f0621b735f221b9",
+  "physical_free_boundary_validated": false,
+  "full_C1_complete": false,
+  "scope": "Prescribed pressure/traction, flat supported strip; surface speed is an output. Not full C1, free-boundary edge or experiment validation."
+}
