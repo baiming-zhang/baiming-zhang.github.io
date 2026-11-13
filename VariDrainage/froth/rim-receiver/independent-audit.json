@@ -1,0 +1,109 @@
+{
+  "packet_audits": [
+    {
+      "name": "main",
+      "parcel_unique": true,
+      "absorbed_mass_error": 2.220446049250313e-16,
+      "absorbed_tag_error": 0.0,
+      "packet_mass_error": 0.0,
+      "packet_tag_error": 0.0,
+      "packet_momentum_error": 0.0,
+      "packet_KE_error": 0.0,
+      "post_handoff_global_mass_error": 5.551115123125783e-15,
+      "post_handoff_global_tag_error": 1.5187850976872141e-13,
+      "saved_contact_state_difference": 0.0,
+      "passed": true
+    },
+    {
+      "name": "half",
+      "parcel_unique": true,
+      "absorbed_mass_error": 2.220446049250313e-16,
+      "absorbed_tag_error": 0.0,
+      "packet_mass_error": 0.0,
+      "packet_tag_error": 0.0,
+      "packet_momentum_error": 0.0,
+      "packet_KE_error": 0.0,
+      "post_handoff_global_mass_error": 5.329070518200751e-15,
+      "post_handoff_global_tag_error": 1.5198953207118393e-13,
+      "saved_contact_state_difference": 0.0,
+      "passed": true
+    }
+  ],
+  "liquid_geometry": {
+    "native_volume_error": 1.1324274851176597e-14,
+    "quadrature_inertia_error": 5.56167421035393e-15
+  },
+  "modal_audits": [
+    {
+      "name": "main",
+      "modal_saved_displacement_error": 6.419607731935524e-11,
+      "maximum_dt_omega": 3.5956740808158276,
+      "minimum_generalized_eigenvalue": 0.0,
+      "saved_max_normal_gradient": 0.002544615426439678,
+      "saved_max_normal_displacement_m": 1.0450653814998242e-05,
+      "saved_peak_area_normal_rms_m": 2.7074154991638366e-06,
+      "original_full_gradient_gate_retained": false,
+      "passed": true,
+      "scope": "independent modal time integration with shared operator assembly; not an independent constitutive validation"
+    },
+    {
+      "name": "half",
+      "modal_saved_displacement_error": 7.14617233970155e-11,
+      "maximum_dt_omega": 3.5956740799969746,
+      "minimum_generalized_eigenvalue": 0.0,
+      "saved_max_normal_gradient": 0.0025634918375088437,
+      "saved_max_normal_displacement_m": 1.053325284453261e-05,
+      "saved_peak_area_normal_rms_m": 2.7292446632801942e-06,
+      "original_full_gradient_gate_retained": false,
+      "passed": true,
+      "scope": "independent modal time integration with shared operator assembly; not an independent constitutive validation"
+    }
+  ],
+  "source_hashes": [
+    {
+      "source": "foam\\scripts\\run_rim_receiver.py",
+      "matched": true
+    },
+    {
+      "source": "foam\\scripts\\rim_receiver.py",
+      "matched": true
+    },
+    {
+      "source": "foam\\bench\\rim_first_contact.cpp",
+      "matched": true
+    },
+    {
+      "source": "foam\\docs\\rim_receiver_protocol.md",
+      "matched": true
+    },
+    {
+      "source": "coda\\include\\vf\\coda\\Rim.h",
+      "matched": true
+    },
+    {
+      "source": "core\\include\\vf\\core\\Types.h",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\wet4-s020-initial-vertices.csv",
+      "matched": true
+    },
+    {
+      "source": "results\\free-wet-conditioned\\wet4-s020-initial-triangles.csv",
+      "matched": true
+    }
+  ],
+  "coda_owner_unchanged": true,
+  "erased_control_external_linear_sink": [
+    8.090934697275277e-09,
+    -3.778438454610171e-09,
+    3.779067717544962e-09
+  ],
+  "erased_control_external_orbital_angular_sink": [
+    4.208123487413177e-14,
+    -2.115559976040211e-11,
+    -2.1242172458487378e-11
+  ],
+  "geometry_and_packets_pass": true,
+  "scope": "first-contact and controlled rigid-carrier impulse reference, not physical neighbour rupture"
+}

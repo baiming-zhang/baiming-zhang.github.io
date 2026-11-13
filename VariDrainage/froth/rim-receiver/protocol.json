@@ -1,0 +1,35 @@
+{
+  "scope": "first-contact handoff and isolated linear rigid-carrier/neighbour response; no ongoing rupture/cascade",
+  "owner_coda": "83d9a9365e044ac1ccb98379ea8886d45dfcf30b",
+  "python": "3.11.7",
+  "numpy": "1.26.4",
+  "executable_sha256": "96425b01db38b6e50e7785a5738364eecde412a25cfb1341593d8e057ddd4db2",
+  "sources": {
+    "foam\\scripts\\run_rim_receiver.py": "91a89e06dc92f22b90b276377547e461f2d146e41b5b381c127b4f05cb1c53a0",
+    "foam\\scripts\\rim_receiver.py": "251422ac390c268d4a6a2c4777f14ab98da41fd4d6d3a4b858b6733947cb1386",
+    "foam\\bench\\rim_first_contact.cpp": "4e0cdd06351680c4a783ba1df0496fedfda0fc3e12e1ec6c659afaf6c31258fc",
+    "foam\\docs\\rim_receiver_protocol.md": "c3380e67adcd2d7af526a21df9e09b8fbb88d4cba8c687c4af2e6995f58aa810",
+    "coda\\include\\vf\\coda\\Rim.h": "6ee0820206121802f5dc575eab56cb22654e28d3a7895bad679ea9d68973def6",
+    "core\\include\\vf\\core\\Types.h": "a5a2cc572cdec74e5ae25f7b7de417320bc3a468ab0d08e9554c61e2fa384dcb",
+    "results\\free-wet-conditioned\\wet4-s020-initial-vertices.csv": "cd68eea61e887e881bae57bf016347c536c4be6be15cc2b4c5834d2f8f294307",
+    "results\\free-wet-conditioned\\wet4-s020-initial-triangles.csv": "f71cd7ac2f14db67a9868861c12775da43432b45827c00d53e4d6ecb916dcfcd"
+  },
+  "preparation": {
+    "active_gases": [
+      1,
+      2
+    ],
+    "parcels": 20394,
+    "rim_nodes": 24,
+    "dt_s": 7.58291541038824e-07,
+    "hole_radius_m": 0.0005592705183138382,
+    "projection_error_m": 2.3846173888121894e-06,
+    "native_active_area_m2": 0.00010333436613289556,
+    "initial_remaining_volume_m3": 8.185856751013983e-11,
+    "geometry_sources": [
+      "results\\free-wet-conditioned\\wet4-s020-initial-vertices.csv",
+      "results\\free-wet-conditioned\\wet4-s020-initial-triangles.csv"
+    ]
+  },
+  "training": false
+}
