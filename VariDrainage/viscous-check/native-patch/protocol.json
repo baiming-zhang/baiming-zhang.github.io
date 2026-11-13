@@ -1,0 +1,65 @@
+{
+  "source_commit": "fc7d551bec4c82b3c6e2a4f80eea222a0608bf00",
+  "source_hashes": {
+    "thin_film\\scripts\\cut_work\\run_patch.py": "7e430acaf3981e302002177e4a592397dfe15172ba52f20ee7586c4660d380b8",
+    "thin_film\\bench\\tf_viscous_patch_bench.cpp": "78c49b524ed1792f949e531ba7e121c101517ce9d0e5d760c5802d63d3f5e2c9",
+    "thin_film\\include\\vf\\thinfilm\\MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgeMechanicalObserver.h": "7f42541b91bec6a60e0fd5e72bca72abace0a446391884f4551d6a042b2d5b46"
+  },
+  "binary_sha256": "bb94d63df3aa2fd2740474c5936499d15d757203d9ca961cb3aece59f2e64c86",
+  "matrix": [
+    {
+      "name": "n8_j0",
+      "n": 8,
+      "jitter": 0.0
+    },
+    {
+      "name": "n16_j0",
+      "n": 16,
+      "jitter": 0.0
+    },
+    {
+      "name": "n24_j0",
+      "n": 24,
+      "jitter": 0.0
+    },
+    {
+      "name": "n32_j0",
+      "n": 32,
+      "jitter": 0.0
+    },
+    {
+      "name": "n8_j8",
+      "n": 8,
+      "jitter": 0.08
+    },
+    {
+      "name": "n16_j8",
+      "n": 16,
+      "jitter": 0.08
+    },
+    {
+      "name": "n24_j8",
+      "n": 24,
+      "jitter": 0.08
+    },
+    {
+      "name": "n32_j8",
+      "n": 32,
+      "jitter": 0.08
+    }
+  ],
+  "environment": {
+    "VF_THREADS": "2",
+    "inherited_VF": "excluded"
+  },
+  "per_case_timeout_s": 120,
+  "whole_budget_s": 600,
+  "field": "Divergence-free smooth streamfunction sin^2(pi*x/L)*sin^2(pi*y/W), zero wall velocity",
+  "scope": "Native metric action on prescribed analytic SI vector field; no position evolution, no force prescribed in solver, no experimental validation.",
+  "gates": {
+    "native_matrix_pyramid_relative": 1e-09,
+    "cut_length_relative": 1e-08
+  },
+  "convergence": "Report force L2 and cut-power/energy errors vs independent analytic integrals under spatial refinement. Do not infer moving-drainage convergence."
+}

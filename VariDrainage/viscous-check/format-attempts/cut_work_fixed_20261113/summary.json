@@ -1,0 +1,51 @@
+{
+  "cases": {
+    "observer_guard": {
+      "saved_steps": 1,
+      "passed": 1,
+      "relative_gap": 2.9591603174787147,
+      "geometric_over_port": 1.6691146180775271,
+      "commutator_over_port": 0.669114618077527,
+      "wall_over_port": 0.018540183569935736,
+      "internal_minus_nodal_over_port": 2.9777005010485453,
+      "maximum_error": 1.038470369323808e-14
+    },
+    "obs_dt1": {
+      "saved_steps": 21,
+      "passed": 21,
+      "relative_gap": 0.42573082102085896,
+      "geometric_over_port": 0.7361806900711503,
+      "commutator_over_port": 1.5635221797765935,
+      "wall_over_port": 0.003424041515092967,
+      "internal_minus_nodal_over_port": 0.4252645796176421,
+      "maximum_error": 1.1180009566450897e-14
+    },
+    "obs_dt05": {
+      "saved_steps": 21,
+      "passed": 21,
+      "relative_gap": 0.46471179037215504,
+      "geometric_over_port": 0.8714919368117277,
+      "commutator_over_port": 1.5025265936361454,
+      "wall_over_port": 0.0040383362415726855,
+      "internal_minus_nodal_over_port": 0.46521907871047563,
+      "maximum_error": 1.32003725194937e-14
+    },
+    "obs_dt025": {
+      "saved_steps": 21,
+      "passed": 21,
+      "relative_gap": 0.5265194447464863,
+      "geometric_over_port": 0.8705794797678107,
+      "commutator_over_port": 1.346063011669984,
+      "wall_over_port": 0.004310678502564795,
+      "internal_minus_nodal_over_port": 0.5276856110969295,
+      "maximum_error": 1.7330539599135002e-14
+    }
+  },
+  "affine_guards": {
+    "cases": 48,
+    "maximum_relative_error": 5.270801739687027e-16,
+    "purpose": "Independent divergence-theorem quadrature/constitutive-factor guard; not native affine reproduction with nonzero wall data."
+  },
+  "interpretation": "Exact discrete port = clipped-vs-cell ownership term + weighted-velocity reconstruction commutator. Exact gap = internal broken-field boundary work + outer-wall work - nodal weighted work. This explains a definition/reconstruction mismatch, not physical convergence. Fields are piecewise affine and generally nonconforming.",
+  "full_C1_complete": false
+}

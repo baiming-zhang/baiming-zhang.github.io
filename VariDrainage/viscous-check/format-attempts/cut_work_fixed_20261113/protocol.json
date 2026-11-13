@@ -1,0 +1,19 @@
+{
+  "source_commit": "c5fbf7776b501c2be906112d5149e5cdd7f95ad3",
+  "sources": {
+    "thin_film\\scripts\\cut_work\\analyze.py": "26b76dce583f510c45a2bf53f0b183dea18574314fa88f6a9c89640613b236ec",
+    "thin_film\\scripts\\mechanical_work\\analyze.py": "c835749b20f33f44a1b18a9a65b77f46469053a7e2e0d549d61c18b9ea94cf59",
+    "thin_film\\include\\vf\\thinfilm\\MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912"
+  },
+  "input_manifest_sha256": "c6643d784f7d57eb70ef09793cac3bc5bf91de282618f0660609c47f1f076711",
+  "input_campaign": "mechanical_work_fixed_20261113",
+  "scope": "Read-only 64 saved mechanical steps. Native bilinear form, clipped face-pyramid dissipation, nodal weighted work, broken Green boundary integrals; no physics changes.",
+  "gates": {
+    "native_reconstruction": 1e-07,
+    "commutator_identity": 1e-07,
+    "broken_green": 1e-08,
+    "cut_trace": 1e-07
+  },
+  "seed": 11303,
+  "timeout_s": 600
+}

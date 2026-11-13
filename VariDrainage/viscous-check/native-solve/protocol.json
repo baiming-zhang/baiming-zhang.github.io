@@ -1,0 +1,66 @@
+{
+  "source_commit": "6fd18822ddd455ddd32cf91bbf4fb51bfd0d9cad",
+  "source_hashes": {
+    "thin_film\\scripts\\cut_work\\run_solve.py": "d1e5aa64b37eb292a413b232c9db9dd4497b306f642312911f3cbabcedb118ea",
+    "thin_film\\scripts\\cut_work\\run_patch.py": "7e430acaf3981e302002177e4a592397dfe15172ba52f20ee7586c4660d380b8",
+    "thin_film\\bench\\tf_viscous_patch_bench.cpp": "c333d1c0554f0900c2f4ea2e32a8ad68433a2a7fd572fcd06b4036b8c702d23a",
+    "thin_film\\include\\vf\\thinfilm\\MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912",
+    "thin_film\\include\\vf\\thinfilm\\CurvedEdgeMechanicalObserver.h": "7f42541b91bec6a60e0fd5e72bca72abace0a446391884f4551d6a042b2d5b46"
+  },
+  "binary_sha256": "eb7eac09059a1ba2a3358ccd9578a8022fab388f3570bea433fab058d81da128",
+  "matrix": [
+    {
+      "name": "n8_j0",
+      "n": 8,
+      "jitter": 0.0
+    },
+    {
+      "name": "n16_j0",
+      "n": 16,
+      "jitter": 0.0
+    },
+    {
+      "name": "n24_j0",
+      "n": 24,
+      "jitter": 0.0
+    },
+    {
+      "name": "n32_j0",
+      "n": 32,
+      "jitter": 0.0
+    },
+    {
+      "name": "n8_j8",
+      "n": 8,
+      "jitter": 0.08
+    },
+    {
+      "name": "n16_j8",
+      "n": 16,
+      "jitter": 0.08
+    },
+    {
+      "name": "n24_j8",
+      "n": 24,
+      "jitter": 0.08
+    },
+    {
+      "name": "n32_j8",
+      "n": 32,
+      "jitter": 0.08
+    }
+  ],
+  "environment": {
+    "VF_THREADS": "2",
+    "inherited_VF": "excluded"
+  },
+  "per_case_timeout_s": 120,
+  "whole_budget_s": 600,
+  "field": "Divergence-free smooth streamfunction sin^2(pi*x/L)*sin^2(pi*y/W), zero wall velocity",
+  "scope": "Manufactured steady SI vector-viscosity solve with native C u = cell area times analytic body force. Diagonal CG relative residual target1e-10; no time evolution or experimental validation.",
+  "gates": {
+    "native_matrix_pyramid_relative": 1e-09,
+    "cut_length_relative": 1e-08
+  },
+  "convergence": "Report force L2 and cut-power/energy errors vs independent analytic integrals under spatial refinement. Do not infer moving-drainage convergence."
+}

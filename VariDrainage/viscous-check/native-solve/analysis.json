@@ -1,0 +1,137 @@
+{
+  "cases": [
+    {
+      "name": "n8_j0",
+      "n": 8,
+      "jitter": 0,
+      "sites": 128,
+      "dx_um": 20.0,
+      "velocity_L2": 0.14105760296797845,
+      "velocity_Linf": 0.15235483710169614,
+      "native_solver": {
+        "iterations": 35,
+        "relative_residual": 9.970896510724557e-11,
+        "converged": true
+      },
+      "rhs_relative_error": 0.0,
+      "frozen_prescribed_nodes_exact": true,
+      "independent_operator_residual": 9.970884805969884e-11
+    },
+    {
+      "name": "n16_j0",
+      "n": 16,
+      "jitter": 0,
+      "sites": 512,
+      "dx_um": 10.0,
+      "velocity_L2": 0.0429757100272437,
+      "velocity_Linf": 0.06533283039042638,
+      "native_solver": {
+        "iterations": 66,
+        "relative_residual": 8.529294325829819e-11,
+        "converged": true
+      },
+      "rhs_relative_error": 0.0,
+      "frozen_prescribed_nodes_exact": true
+    },
+    {
+      "name": "n24_j0",
+      "n": 24,
+      "jitter": 0,
+      "sites": 1152,
+      "dx_um": 6.666666666666668,
+      "velocity_L2": 0.02247086922694224,
+      "velocity_Linf": 0.042661832828354375,
+      "native_solver": {
+        "iterations": 100,
+        "relative_residual": 7.253012467348187e-11,
+        "converged": true
+      },
+      "rhs_relative_error": 0.0,
+      "frozen_prescribed_nodes_exact": true
+    },
+    {
+      "name": "n32_j0",
+      "n": 32,
+      "jitter": 0,
+      "sites": 2048,
+      "dx_um": 5.0,
+      "velocity_L2": 0.014439655216898733,
+      "velocity_Linf": 0.03183241519015263,
+      "native_solver": {
+        "iterations": 133,
+        "relative_residual": 7.727469701884948e-11,
+        "converged": true
+      },
+      "rhs_relative_error": 0.0,
+      "frozen_prescribed_nodes_exact": true
+    },
+    {
+      "name": "n8_j8",
+      "n": 8,
+      "jitter": 0.08,
+      "sites": 128,
+      "dx_um": 20.0,
+      "velocity_L2": 0.13551073367759778,
+      "velocity_Linf": 0.14989865281598452,
+      "native_solver": {
+        "iterations": 49,
+        "relative_residual": 7.183232695258857e-11,
+        "converged": true
+      },
+      "rhs_relative_error": 0.0,
+      "frozen_prescribed_nodes_exact": true,
+      "independent_operator_residual": 7.18322348934523e-11
+    },
+    {
+      "name": "n16_j8",
+      "n": 16,
+      "jitter": 0.08,
+      "sites": 512,
+      "dx_um": 10.0,
+      "velocity_L2": 0.04129330626149045,
+      "velocity_Linf": 0.06302886608620296,
+      "native_solver": {
+        "iterations": 98,
+        "relative_residual": 9.457626629622382e-11,
+        "converged": true
+      },
+      "rhs_relative_error": 0.0,
+      "frozen_prescribed_nodes_exact": true
+    },
+    {
+      "name": "n24_j8",
+      "n": 24,
+      "jitter": 0.08,
+      "sites": 1152,
+      "dx_um": 6.666666666666668,
+      "velocity_L2": 0.022174281311339538,
+      "velocity_Linf": 0.042405815924941304,
+      "native_solver": {
+        "iterations": 137,
+        "relative_residual": 9.899337910424296e-11,
+        "converged": true
+      },
+      "rhs_relative_error": 4.860872369388233e-18,
+      "frozen_prescribed_nodes_exact": true
+    },
+    {
+      "name": "n32_j8",
+      "n": 32,
+      "jitter": 0.08,
+      "sites": 2048,
+      "dx_um": 5.0,
+      "velocity_L2": 0.013942926701477829,
+      "velocity_Linf": 0.031166800143335588,
+      "native_solver": {
+        "iterations": 182,
+        "relative_residual": 8.253748234792204e-11,
+        "converged": true
+      },
+      "rhs_relative_error": 1.656405085460142e-17,
+      "frozen_prescribed_nodes_exact": true
+    }
+  ],
+  "source_script_sha256": "c1643f1913bea30478bd3b6ce454d29c2c245bddf93ace4161c46a70aea73356",
+  "scope": "Eight actual native steady linear solves of vector viscosity with analytic area-weighted body loads, independent analytic RHS and area-weighted velocity errors; independent SI/GEOS residual at two n8 guards only.",
+  "full_C1_complete": false
+}
