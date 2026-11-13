@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "tasks": [
     {
       "id": "R01",
@@ -848,6 +848,30 @@
         {
           "label": "逐case加载曲线",
           "url": "P05.html#loading-curves"
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "phase": "Plate",
+      "title": "Plate · GINOT CMAME泛化",
+      "due": "2026-11-13",
+      "start": "2026-11-13",
+      "completed": "2026-11-13",
+      "status": "已完成",
+      "deliverables": "Case1-3 TRAIN / Case4 validation / Case5 test；GINOT纯初值各40000次单目标帧更新；完整几何和因果载荷前缀，不输入GT应力",
+      "review": "train-only归一化；validation固定里程碑选优；test仅在40000步和选择冻结后评估；仅1val和1test，只使用过去及当前施加载荷和完整几何",
+      "dependencies": "P05",
+      "issues": "仅读取当前帧及以前载荷；不输入GT或预测应力；官方边界点云几何编码加同P05的GRU载荷条件，非官方原样复现；保留P01–P05。",
+      "page": "P06.html",
+      "results": [
+        {
+          "label": "泛化结果、时间及交互场",
+          "url": "P06.html"
+        },
+        {
+          "label": "逐case加载曲线",
+          "url": "P06.html#loading-curves"
         }
       ]
     }
