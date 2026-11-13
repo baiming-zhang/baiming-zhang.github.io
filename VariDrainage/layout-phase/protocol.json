@@ -1,0 +1,397 @@
+{
+  "source_commit": "930d647514d0fcd4e7eb5b7d09f75c022e2276c8",
+  "native_reference_protocol": "results/background_space_20261113/protocol.json",
+  "native_reference_sha256": "98c8529438bc62116e9395ee115948263543e80820693dcbc3a564e4b747d5b3",
+  "native_source_hashes": {
+    "thin_film/bench/tf_curved_edge_bench.cpp": "bdec29cee9b414d607fba0b60c350bf198543adc1ab4a73206da4487e11b8c61",
+    "thin_film/include/vf/thinfilm/CurvedEdgeMotion.h": "b2c9c9f48687fe0e940c3f2826988de01412fdff8d92cfaaefd1aa24d60d364e",
+    "thin_film/include/vf/thinfilm/MovingVoronoiFilm.h": "5a15774f928b2726e7a1903b0391051e3826bd90c53af6d7fe00ec83feef6912"
+  },
+  "binary_hashes": {
+    "tf_curved_edge_bench": "76e49ed253e2341df37f93d02803272d020b8500ed9265da6f7d0ec124b6c5c3",
+    "test_curved_mechanical_observer": "e60bd01db8c691abcc36bb21488143330dd341c1e8ce477db14430870f3c5be5",
+    "test_edge_preparation": "63d935274c3ea997e841d5c9dba141c5d22d015b1198121730f51a2f462f405f",
+    "test_curved_edge": "dafdbbe27798598a3bf5029a26e2c16a8ae880735e545f497c3b46bba40f4d55"
+  },
+  "runner_sha256": "a57994783dfb7be93e3c8c89dac5b962b98da2546700726f637a19a428e74f95",
+  "plan_sha256": "e6d098d7b72c72a97ec694e439cb7f8c51e80e135f6aa4224459ce89d67bbc3d",
+  "cases": [
+    {
+      "name": "guard_dt00625",
+      "mode": "local",
+      "ratio": 1.0,
+      "dt_us": 0.0625,
+      "T_us": 0.0625,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200,
+      "observer": true
+    },
+    {
+      "name": "guard_dt003125",
+      "mode": "local",
+      "ratio": 1.0,
+      "dt_us": 0.03125,
+      "T_us": 0.03125,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 1,
+      "refine_start_um": 200,
+      "observer": true
+    },
+    {
+      "name": "split20_dt00625",
+      "mode": "local",
+      "ratio": 1.0,
+      "dt_us": 0.0625,
+      "T_us": 200,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 160,
+      "refine_start_um": 200,
+      "observer": true
+    },
+    {
+      "name": "split20_dt003125",
+      "mode": "local",
+      "ratio": 1.0,
+      "dt_us": 0.03125,
+      "T_us": 200,
+      "dx_um": 20,
+      "radius_um": 500,
+      "amplitude": 0,
+      "c_bulk_mM": 6,
+      "preparation": "variational",
+      "save_stride": 320,
+      "refine_start_um": 200,
+      "observer": true
+    }
+  ],
+  "reference_cases": [
+    {
+      "name": "u20_dt00625",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "0.0625",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\background_space_20261113\\u20_dt00625",
+        "6",
+        "variational",
+        "160",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 574.8590000001714,
+      "log": "results\\logs\\background_space_20261113\\u20_dt00625.log",
+      "log_sha256": "f975d6626c72260b745fa5d53faa4b2453a82953254ce7aa8a4053c8fac3a125",
+      "parameters": {
+        "name": "u20_dt00625",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.0625,
+        "T_us": 200,
+        "dx_um": 20,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 160,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 160,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 144,
+        "interior": 136,
+        "steps": 3200,
+        "requested_steps": 3200,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 6.25e-08,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.532518920806525e-12,
+        "V0_m3": 3.530924236316567e-13,
+        "S0_mol": 1.7890738034541587e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.3188084935900909e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.702264477371807e-16,
+        "max_regionS_res": 1.1047735598749273e-16,
+        "max_displacement_m": 1.7057899575071322e-07,
+        "wall_s": 574.8214274
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.7187835009193692e-14,
+        "free_volume_m3": 1.130847572362178e-13,
+        "S_mol": 1.7890738034541587e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 1.9999999999999998e-05,
+        "actual_background_x_m": 2e-05,
+        "actual_background_y_m": 2e-05,
+        "fine_m": 1.9999999999999998e-05,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.19757214437675066,
+      "files": [
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/faces.csv",
+          "bytes": 1036813,
+          "sha256": "1d7d4d1814ddfad25f9400c4588a46bef88d91a8c403ac8361f92c04fb3db607"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/history.csv",
+          "bytes": 1110068,
+          "sha256": "8672f78e974f096c7fe538185e29d522a4caefafa77264960a99a30ef4e8656e"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/initial_faces.csv",
+          "bytes": 12831,
+          "sha256": "75f67ea9b6081ca5666fe4e91d8c0a2f08cf58553424512f90f7bda5cc94087a"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/initial_states.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/mechanical_nodes.csv",
+          "bytes": 1487368,
+          "sha256": "8e9225a2dd87222d87d1b7dd1da39b8b2fbdba4c2a8ac7d9828507bac54bb7ba"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/mechanics.csv",
+          "bytes": 843182,
+          "sha256": "87cb87736a085f6002554be34afe5037d88967d2edfd5df6bed6a3acec872c47"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/mesh.json",
+          "bytes": 250,
+          "sha256": "66c2ac0807adadc8d7876787921939e26b68b4ed1e75e02a86d69050b19bedce"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/preparation.json",
+          "bytes": 226,
+          "sha256": "719025bbba47ba0a07fac7c96ecf93a32bd03dca80a4f1801157e82724b519e8"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/regional_mechanics.csv",
+          "bytes": 19140,
+          "sha256": "2686c7853133bd3ab7290ed3890ab7c466705bd91a3ad3b030f5acf1db7760f2"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/states.csv",
+          "bytes": 2747925,
+          "sha256": "73c99f5f51e3a96609e5f58b6c400e400d82b09dcd88cc5e0f67dfee52647978"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt00625/summary.json",
+          "bytes": 919,
+          "sha256": "79f8f1dc218334ae555a848bc7146fd0b6365d19630efebd6c543631969a7347"
+        }
+      ],
+      "estimated_s": 1136.8655999977143
+    },
+    {
+      "name": "u20_dt003125",
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\build\\windows\\x64\\release\\tf_curved_edge_bench.exe",
+        "uniform",
+        "20",
+        "0.03125",
+        "200",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\background_space_20261113\\u20_dt003125",
+        "6",
+        "variational",
+        "320",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "wall_s": 1143.780999999959,
+      "log": "results\\logs\\background_space_20261113\\u20_dt003125.log",
+      "log_sha256": "5992c3a6980de4e13c6fc3a6e83e58986718bd612b1e2df3e369e444dfc4b178",
+      "parameters": {
+        "name": "u20_dt003125",
+        "mode": "uniform",
+        "ratio": null,
+        "dt_us": 0.03125,
+        "T_us": 200,
+        "dx_um": 20,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 320,
+        "refine_start_um": 200,
+        "observer": true
+      },
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 320,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 144,
+        "interior": 136,
+        "steps": 6400,
+        "requested_steps": 6400,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 3.125e-08,
+        "T_s": 0.00019999999999999998,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.532518920806525e-12,
+        "V0_m3": 3.530924236316567e-13,
+        "S0_mol": 1.7890738034541587e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.813361678686375e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.521932688291897e-16,
+        "max_regionS_res": 1.3261178905535356e-16,
+        "max_displacement_m": 1.7174442563555202e-07,
+        "wall_s": 1143.7404268
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.7187835009193692e-14,
+        "free_volume_m3": 1.130847572362178e-13,
+        "S_mol": 1.7890738034541587e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 1.9999999999999998e-05,
+        "actual_background_x_m": 2e-05,
+        "actual_background_y_m": 2e-05,
+        "fine_m": 1.9999999999999998e-05,
+        "physical_cut_m": 0.00024
+      },
+      "completed": true,
+      "native_gate": true,
+      "maximum_force_target_ratio": 0.023249851706154484,
+      "files": [
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/faces.csv",
+          "bytes": 1040071,
+          "sha256": "2b3875879834a7a0e0544b8f74ab7263dd5d824ced3f5e0609f0a35fdf98e201"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/history.csv",
+          "bytes": 2229674,
+          "sha256": "043796edff91e309fbf9deeff874c08ad4345af66c177288db2682762d14765e"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/initial_faces.csv",
+          "bytes": 12831,
+          "sha256": "75f67ea9b6081ca5666fe4e91d8c0a2f08cf58553424512f90f7bda5cc94087a"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/initial_states.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/mechanical_nodes.csv",
+          "bytes": 1487626,
+          "sha256": "04767b580110cef028957330f946b35f932da6b9a460e1bc6a14697dc4cb154b"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/mechanics.csv",
+          "bytes": 1688803,
+          "sha256": "95dccf480b2937b416230ef57da8657773edff08f5ea402fabbec1046f30899f"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/mesh.json",
+          "bytes": 250,
+          "sha256": "66c2ac0807adadc8d7876787921939e26b68b4ed1e75e02a86d69050b19bedce"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/preparation.json",
+          "bytes": 226,
+          "sha256": "719025bbba47ba0a07fac7c96ecf93a32bd03dca80a4f1801157e82724b519e8"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/regional_mechanics.csv",
+          "bytes": 19055,
+          "sha256": "d272f098ab6e00b75eeef48bb29b4b47112614a818898773f95dd14191e2c628"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/states.csv",
+          "bytes": 2748681,
+          "sha256": "0419946c524a976d25adf9956225a129995473dca34d6e384619fb131818d257"
+        },
+        {
+          "path": "results/local-runs/background_space_20261113/u20_dt003125/summary.json",
+          "bytes": 914,
+          "sha256": "f4d2bcf655b8138847c8527da9f03e1fc0fce582754a40d7e0dea231a2a4e619"
+        }
+      ],
+      "estimated_s": 2273.7311999954286
+    }
+  ],
+  "budget_s": 4000,
+  "per_case_timeout_s": 2400,
+  "gates": {
+    "balance": 1e-10,
+    "energy": 1e-07,
+    "force_ratio": 1.000001,
+    "preparation": 1e-08,
+    "time": 0.02,
+    "space": 0.1
+  },
+  "scope": "Same nominal dx20, altered fine-site deterministic jitter phase. Combined geometry/preparation sensitivity, not isolated physical causation or global spatial convergence."
+}
