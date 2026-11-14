@@ -1,0 +1,114 @@
+{
+  "attempts": 1,
+  "completed": 1,
+  "native_checks": 24,
+  "observer_diagnostics": {
+    "u20_dt00625": {
+      "accepted_steps": 160,
+      "above_native_force_target": 0,
+      "maximum_force_target_ratio": 0.1975721455973565,
+      "maximum_Newton_iterations": 3,
+      "maximum_CG_iterations": 4,
+      "negative_curvature_hits": 0,
+      "native_viscous_action_J": 1.6951886794434723e-15,
+      "native_inertial_BE_loss_J": 8.676394337385103e-17
+    }
+  },
+  "independent_mechanical_audits": {
+    "u20_dt00625": [
+      {
+        "step": 1,
+        "inertial_force": 1.8606264109788114e-16,
+        "viscous_force": 2.480362872352906e-14,
+        "viscous_action": 1.9287749874733298e-16,
+        "cut_length": 0.0,
+        "weights": 5.051514762044462e-15,
+        "regional": 1.6145827946761117e-11,
+        "passed": true
+      },
+      {
+        "step": 20,
+        "inertial_force": 3.1667326534086597e-15,
+        "viscous_force": 1.0278534611463127e-14,
+        "viscous_action": 9.87651346923483e-16,
+        "cut_length": 0.0,
+        "weights": 3.9968028886505635e-15,
+        "regional": 2.780478663395316e-12,
+        "passed": true
+      },
+      {
+        "step": 40,
+        "inertial_force": 4.260631442309372e-15,
+        "viscous_force": 5.025277338102835e-15,
+        "viscous_action": 0.0,
+        "cut_length": 0.0,
+        "weights": 4.385380947269368e-15,
+        "regional": 1.6270252165949718e-12,
+        "passed": true
+      },
+      {
+        "step": 60,
+        "inertial_force": 1.987303536354893e-14,
+        "viscous_force": 9.289715202062999e-15,
+        "viscous_action": 2.2264762565348434e-15,
+        "cut_length": 0.0,
+        "weights": 3.9968028886505635e-15,
+        "regional": 1.3608729548394522e-12,
+        "passed": true
+      },
+      {
+        "step": 80,
+        "inertial_force": 6.555476379104257e-14,
+        "viscous_force": 4.7674575310885594e-15,
+        "viscous_action": 3.7797198695594324e-16,
+        "cut_length": 0.0,
+        "weights": 3.552713678800501e-15,
+        "regional": 1.3179795189565857e-12,
+        "passed": true
+      },
+      {
+        "step": 100,
+        "inertial_force": 2.7222270095167237e-14,
+        "viscous_force": 6.6160895675388706e-15,
+        "viscous_action": 1.1653713017564485e-15,
+        "cut_length": 0.0,
+        "weights": 3.4416913763379853e-15,
+        "regional": 1.1408467706348244e-12,
+        "passed": true
+      },
+      {
+        "step": 120,
+        "inertial_force": 2.146673852803492e-14,
+        "viscous_force": 1.207569308976796e-14,
+        "viscous_action": 2.171587741334593e-15,
+        "cut_length": 0.0,
+        "weights": 4.3298697960381105e-15,
+        "regional": 2.78518760091883e-12,
+        "passed": true
+      },
+      {
+        "step": 140,
+        "inertial_force": 7.162190062426168e-15,
+        "viscous_force": 7.49860706703611e-15,
+        "viscous_action": 3.035352654500533e-16,
+        "cut_length": 2.220446049250313e-16,
+        "weights": 3.774758283725532e-15,
+        "regional": 3.4251909519654983e-12,
+        "passed": true
+      },
+      {
+        "step": 160,
+        "inertial_force": 5.625586493268024e-15,
+        "viscous_force": 7.507495123602842e-15,
+        "viscous_action": 8.007102945007694e-16,
+        "cut_length": 0.0,
+        "weights": 5.662137425588298e-15,
+        "regional": 6.334741599461492e-12,
+        "passed": true
+      }
+    ]
+  },
+  "full_C1_complete": false,
+  "scope": "Sampled independent SI inertia/viscosity/clipped regional work and recovered traction; exact discrete identity is not continuum traction validation. Native dynamics unchanged.",
+  "native_checks_scope": "24candidate fixture checks verified via frozen hashes; not rerun by this auditor"
+}

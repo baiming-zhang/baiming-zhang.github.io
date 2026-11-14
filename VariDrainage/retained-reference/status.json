@@ -1,0 +1,635 @@
+{
+  "state": "completed",
+  "cases": [
+    {
+      "name": "u20_dt00625",
+      "parameters": {
+        "name": "u20_dt00625",
+        "mode": "uniform",
+        "dx_um": 20,
+        "N": 144,
+        "dt_us": 0.0625,
+        "T_us": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 20,
+        "refine_start_um": 200,
+        "observer": true,
+        "timeout_s": 300
+      },
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_motion_20261113\\bin\\tf_retained_face_bench.exe",
+        "uniform",
+        "20",
+        "0.0625",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_reference_20261113\\u20_dt00625",
+        "6",
+        "variational",
+        "20",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_s": 30.030999999959022,
+      "terminal_utc": "2026-11-13T23:34:19.755596+00:00",
+      "completed": true,
+      "native_gate": true,
+      "log": "results\\logs\\retained_reference_20261113\\u20_dt00625.log",
+      "log_sha256": "2a19942e39fa1db02635258b7f768e421523c1e568140ed3765598a90d44ee7a",
+      "monitor_log": "results\\logs\\retained_reference_20261113\\monitor_u20_dt00625.jsonl",
+      "monitor_log_sha256": "af7a4ea270aa4e26db229b4d819c1b1e260fa490baeff97cfa71bdb121ae4435",
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 20,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 144,
+        "interior": 136,
+        "steps": 160,
+        "requested_steps": 160,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 6.25e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.532518920806525e-12,
+        "V0_m3": 3.530924236316567e-13,
+        "S0_mol": 1.7890738034541587e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.3188084935900909e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 2.2365672759832256e-16,
+        "max_regionS_res": 7.907356575132546e-17,
+        "max_displacement_m": 8.018705070955878e-08,
+        "wall_s": 29.1034474
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.7187835009193692e-14,
+        "free_volume_m3": 1.130847572362178e-13,
+        "S_mol": 1.7890738034541587e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 1.9999999999999998e-05,
+        "actual_background_x_m": 2e-05,
+        "actual_background_y_m": 2e-05,
+        "fine_m": 1.9999999999999998e-05,
+        "physical_cut_m": 0.00024
+      },
+      "maximum_force_target_ratio": 0.1975721455973565,
+      "files": [
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\faces.csv",
+          "bytes": 431844,
+          "sha256": "9aaca6d2e002dcf4c4ff2f496f8563f9db5203dee942288062a2789b550ff7eb"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\history.csv",
+          "bytes": 55875,
+          "sha256": "835a60798a9d7a570a4b3c24fbe2d7177711808d3dbeee5f5cf1e790173a5a16"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\initial_faces.csv",
+          "bytes": 12831,
+          "sha256": "75f67ea9b6081ca5666fe4e91d8c0a2f08cf58553424512f90f7bda5cc94087a"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\initial_states.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\mechanical_nodes.csv",
+          "bytes": 632940,
+          "sha256": "7a1db7552e6b11028b3bd4721d15515b37e078784ad9976cdf7523ce426914d1"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\mechanics.csv",
+          "bytes": 42250,
+          "sha256": "a4f784a5d3dad92e7c493eab9a780cecb5dd42c59a1cf1db61c465cd0864d336"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\mesh.json",
+          "bytes": 250,
+          "sha256": "66c2ac0807adadc8d7876787921939e26b68b4ed1e75e02a86d69050b19bedce"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\preparation.json",
+          "bytes": 226,
+          "sha256": "719025bbba47ba0a07fac7c96ecf93a32bd03dca80a4f1801157e82724b519e8"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\regional_mechanics.csv",
+          "bytes": 8291,
+          "sha256": "b4ec78117c5cfc312650bcb3f8f8763f71afb0aa5433f130a75882bb2aefaf61"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\states.csv",
+          "bytes": 1170201,
+          "sha256": "585149aadffc232b2574deaeed1c0612cb5e15ab2cdcb6df4d310d916060a865"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt00625\\summary.json",
+          "bytes": 909,
+          "sha256": "acd63335464e45bd77bcc78399b80108e0129e08ca9bb6f116a9ed84fe8b7704"
+        }
+      ]
+    },
+    {
+      "name": "u20_dt003125",
+      "parameters": {
+        "name": "u20_dt003125",
+        "mode": "uniform",
+        "dx_um": 20,
+        "N": 144,
+        "dt_us": 0.03125,
+        "T_us": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 40,
+        "refine_start_um": 200,
+        "observer": true,
+        "timeout_s": 600
+      },
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_motion_20261113\\bin\\tf_retained_face_bench.exe",
+        "uniform",
+        "20",
+        "0.03125",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_reference_20261113\\u20_dt003125",
+        "6",
+        "variational",
+        "40",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_s": 57.04700000002049,
+      "terminal_utc": "2026-11-13T23:35:16.808539+00:00",
+      "completed": true,
+      "native_gate": true,
+      "log": "results\\logs\\retained_reference_20261113\\u20_dt003125.log",
+      "log_sha256": "d49e701d7b30ad0d15e9499c06028c584aa8b31b33bd7cc6e59480178a56c613",
+      "monitor_log": "results\\logs\\retained_reference_20261113\\monitor_u20_dt003125.jsonl",
+      "monitor_log_sha256": "09ed8eee85e1c8870bea9b2d7f72f6bf7b4353b7b9fce92bcdcf07c7c3f14a9e",
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 40,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 144,
+        "interior": 136,
+        "steps": 320,
+        "requested_steps": 320,
+        "failures": 0,
+        "local": false,
+        "dx_m": 1.9999999999999998e-05,
+        "dt_s": 3.125e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.532518920806525e-12,
+        "V0_m3": 3.530924236316567e-13,
+        "S0_mol": 1.7890738034541587e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.3188084935900909e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 3.319761485344148e-16,
+        "max_regionS_res": 1.0453452160489471e-16,
+        "max_displacement_m": 8.059089830992606e-08,
+        "wall_s": 56.159117
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 2.7187835009193692e-14,
+        "free_volume_m3": 1.130847572362178e-13,
+        "S_mol": 1.7890738034541587e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 1.9999999999999998e-05,
+        "actual_background_x_m": 2e-05,
+        "actual_background_y_m": 2e-05,
+        "fine_m": 1.9999999999999998e-05,
+        "physical_cut_m": 0.00024
+      },
+      "maximum_force_target_ratio": 0.023249851736515014,
+      "files": [
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\faces.csv",
+          "bytes": 434151,
+          "sha256": "f8529420805ae43dbc1b04a89646ee6a49a3f29624513ba890036bd374fbdd96"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\history.csv",
+          "bytes": 111269,
+          "sha256": "7f04da54039ea65c57b05d236f5f9e8c6cd3e0e235d9f8bf80c05d2ca444bccb"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\initial_faces.csv",
+          "bytes": 12831,
+          "sha256": "75f67ea9b6081ca5666fe4e91d8c0a2f08cf58553424512f90f7bda5cc94087a"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\initial_states.csv",
+          "bytes": 36110,
+          "sha256": "2966d95e101e727e427acf396805e8590d1c02dd4aba605340f4bbad781b6498"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\mechanical_nodes.csv",
+          "bytes": 633195,
+          "sha256": "26fa739c7689409a55ab9411cc8ca26dd616004320118e106cbb9e827bf0c0b6"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\mechanics.csv",
+          "bytes": 84526,
+          "sha256": "fecf930ba96a2c734c9a62c4f335279d7a2ab376c2e54dbcbc4b17427ebe0c2b"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\mesh.json",
+          "bytes": 250,
+          "sha256": "66c2ac0807adadc8d7876787921939e26b68b4ed1e75e02a86d69050b19bedce"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\preparation.json",
+          "bytes": 226,
+          "sha256": "719025bbba47ba0a07fac7c96ecf93a32bd03dca80a4f1801157e82724b519e8"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\regional_mechanics.csv",
+          "bytes": 8310,
+          "sha256": "b3ada609bd3b49b354e413b475de689dc2ae9b083f290b5e4a7a4f5dbb3e123e"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\states.csv",
+          "bytes": 1170465,
+          "sha256": "12bcbc649af77f610dcec20d232ba7ebad41a9edaa5ed7e8354d18f20896fb68"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u20_dt003125\\summary.json",
+          "bytes": 917,
+          "sha256": "a30012e7df37cf9af6fbf4fe3ee9c49cb441f0dfaba5139ad98210ac9bfa1494"
+        }
+      ]
+    },
+    {
+      "name": "u10_dt00625",
+      "parameters": {
+        "name": "u10_dt00625",
+        "mode": "uniform",
+        "dx_um": 10,
+        "N": 544,
+        "dt_us": 0.0625,
+        "T_us": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 20,
+        "refine_start_um": 200,
+        "observer": true,
+        "timeout_s": 1200
+      },
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_motion_20261113\\bin\\tf_retained_face_bench.exe",
+        "uniform",
+        "10",
+        "0.0625",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_reference_20261113\\u10_dt00625",
+        "6",
+        "variational",
+        "20",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_s": 364.17199999978766,
+      "terminal_utc": "2026-11-13T23:41:20.992206+00:00",
+      "completed": true,
+      "native_gate": true,
+      "log": "results\\logs\\retained_reference_20261113\\u10_dt00625.log",
+      "log_sha256": "d409604982583231415b89fa23e4ee72d65158ff306a89d4afeb21c1d90a6552",
+      "monitor_log": "results\\logs\\retained_reference_20261113\\monitor_u10_dt00625.jsonl",
+      "monitor_log_sha256": "03ac45ab9adbe8f909f3b638a872a9edf750cf93bf0e8484eedff28ce1cd4f1c",
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 20,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 544,
+        "interior": 528,
+        "steps": 160,
+        "requested_steps": 160,
+        "failures": 0,
+        "local": false,
+        "dx_m": 9.999999999999999e-06,
+        "dt_s": 6.25e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.799336249094897e-12,
+        "V0_m3": 3.5726588493588687e-13,
+        "S0_mol": 1.789091527932089e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 2.118029243152813e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 4.893636176477738e-16,
+        "max_regionS_res": 1.798648895882629e-16,
+        "max_displacement_m": 5.6408992605488343e-08,
+        "wall_s": 363.4366661
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 1.400945210080723e-13,
+        "free_volume_m3": 1.220713703029213e-13,
+        "S_mol": 1.789091527932089e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 9.999999999999999e-06,
+        "actual_background_x_m": 1e-05,
+        "actual_background_y_m": 1e-05,
+        "fine_m": 9.999999999999999e-06,
+        "physical_cut_m": 0.00024
+      },
+      "maximum_force_target_ratio": 0.13988028981912268,
+      "files": [
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\faces.csv",
+          "bytes": 1790358,
+          "sha256": "7508b7cfd6da116e4255963a072e42639f64ea0463b88b59ccb1f9c0aa8cace2"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\history.csv",
+          "bytes": 55598,
+          "sha256": "5f699da7751baef5146b911a0cad06fa8c2713c9965ee6216eda2b4efee3dbdf"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\initial_faces.csv",
+          "bytes": 53446,
+          "sha256": "2b3674fac8b0b6e2ce2d6984a009a8a31d29e212871f805834a876b76f4cef36"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\initial_states.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\mechanical_nodes.csv",
+          "bytes": 2390275,
+          "sha256": "f1cedda09f126c9b287a2c436703d56f86a4ba8e242f672249e90b7666a8daf8"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\mechanics.csv",
+          "bytes": 42266,
+          "sha256": "f3119ee66edc0865f3b6c572ecd4c991b89a446a0083a91463a9c07f909c2ce9"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\mesh.json",
+          "bytes": 250,
+          "sha256": "4793683264828f86e9c4f16d776de8a0452862755000948fb91a54328013a0a7"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\preparation.json",
+          "bytes": 225,
+          "sha256": "e9bba3597acb5ba55577be4ed649ed79b4b62a05712fb91c3592b5afa7ffd533"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\regional_mechanics.csv",
+          "bytes": 8337,
+          "sha256": "f03a9918265f7d23858ff5aa5fe249993434797cf54d05cdd757952a2d0ebd59"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\states.csv",
+          "bytes": 4424445,
+          "sha256": "e1edce3b8c42347c105061949facb545f63c93625091559057e5de67a0c56c4d"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt00625\\summary.json",
+          "bytes": 917,
+          "sha256": "63519402e37b34816f8a108c72d276b3ecdbd1fcff93d21fb4e9433f74d759ee"
+        }
+      ]
+    },
+    {
+      "name": "u10_dt003125",
+      "parameters": {
+        "name": "u10_dt003125",
+        "mode": "uniform",
+        "dx_um": 10,
+        "N": 544,
+        "dt_us": 0.03125,
+        "T_us": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 40,
+        "refine_start_um": 200,
+        "observer": true,
+        "timeout_s": 3600
+      },
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_motion_20261113\\bin\\tf_retained_face_bench.exe",
+        "uniform",
+        "10",
+        "0.03125",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_reference_20261113\\u10_dt003125",
+        "6",
+        "variational",
+        "40",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_s": 726.3120000001509,
+      "terminal_utc": "2026-11-13T23:53:27.316317+00:00",
+      "completed": true,
+      "native_gate": true,
+      "log": "results\\logs\\retained_reference_20261113\\u10_dt003125.log",
+      "log_sha256": "b98b264eb27f18084a980b9ed63c524ae9df8aa50556d87925b5a93666b29cc9",
+      "monitor_log": "results\\logs\\retained_reference_20261113\\monitor_u10_dt003125.jsonl",
+      "monitor_log_sha256": "ad4223135870fd606d6d4f9c85c2d3f0c13d5adb27070596e2b75428203f298a",
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 40,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 544,
+        "interior": 528,
+        "steps": 320,
+        "requested_steps": 320,
+        "failures": 0,
+        "local": false,
+        "dx_m": 9.999999999999999e-06,
+        "dt_s": 3.125e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.799336249094897e-12,
+        "V0_m3": 3.5726588493588687e-13,
+        "S0_mol": 1.789091527932089e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 1.955103916756443e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 5.095111331575361e-16,
+        "max_regionS_res": 1.5646344658962767e-16,
+        "max_displacement_m": 5.640442748235463e-08,
+        "wall_s": 726.0141739
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 1.400945210080723e-13,
+        "free_volume_m3": 1.220713703029213e-13,
+        "S_mol": 1.789091527932089e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 9.999999999999999e-06,
+        "actual_background_x_m": 1e-05,
+        "actual_background_y_m": 1e-05,
+        "fine_m": 9.999999999999999e-06,
+        "physical_cut_m": 0.00024
+      },
+      "maximum_force_target_ratio": 0.008218296716237495,
+      "files": [
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\faces.csv",
+          "bytes": 1798467,
+          "sha256": "ca86ebebfef392cfb2e2369e3730cd98f7cdcc4292bd477476ff7bf5aea04e9b"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\history.csv",
+          "bytes": 111439,
+          "sha256": "16fef5f2968e194956642277577729038624ed740d914a98379ee829df0155cb"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\initial_faces.csv",
+          "bytes": 53446,
+          "sha256": "2b3674fac8b0b6e2ce2d6984a009a8a31d29e212871f805834a876b76f4cef36"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\initial_states.csv",
+          "bytes": 135733,
+          "sha256": "f53c649f5f180f7fb3ed22725674d0e55c3e7e5d1232297011c3f7ba26163308"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\mechanical_nodes.csv",
+          "bytes": 2391659,
+          "sha256": "bd4c3e498e237a6364efefa56160020cbbea2c727853aa7f9f9fa544807083c5"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\mechanics.csv",
+          "bytes": 84552,
+          "sha256": "4accaa48d74109811d683d13bc63367e532720ba1402b13a67a1f47267d1845c"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\mesh.json",
+          "bytes": 250,
+          "sha256": "4793683264828f86e9c4f16d776de8a0452862755000948fb91a54328013a0a7"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\preparation.json",
+          "bytes": 225,
+          "sha256": "e9bba3597acb5ba55577be4ed649ed79b4b62a05712fb91c3592b5afa7ffd533"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\regional_mechanics.csv",
+          "bytes": 8252,
+          "sha256": "a0e78fedc7b4111868d0da9beac231470807beeef250e99c7e59e907b65200e9"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\states.csv",
+          "bytes": 4419707,
+          "sha256": "53de133f101d192949a044552da367312da4919011b452ddaee4b4cbb405d0ce"
+        },
+        {
+          "path": "results\\local-runs\\retained_reference_20261113\\u10_dt003125\\summary.json",
+          "bytes": 917,
+          "sha256": "5733c5ae9ccd6833c443ee2a7f0d150e8f2bda86f63998de4b1417bc8d266245"
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "full_C1_complete": false,
+  "started_utc": "2026-11-13T23:33:49.727535+00:00",
+  "parent_pid": 104940,
+  "terminal_utc": "2026-11-13T23:53:27.343510+00:00",
+  "compute_wall_s": 1177.6089999999385
+}

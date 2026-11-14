@@ -1,0 +1,63 @@
+{
+  "new_native_runs": 4,
+  "accepted_steps": 960,
+  "native_failures": 0,
+  "scalar_saved_audits": 36,
+  "mechanical_saved_audits": 36,
+  "all_native_gates_passed": true,
+  "native_batch_wall_s": 1177.6089999999385,
+  "maximum_native_VS_residual": 2.118029243152813e-15,
+  "maximum_force_target_ratio": 0.1975721455973565,
+  "maximum_energy_budget_excess": 0,
+  "original_source_binary_unchanged": true,
+  "same_candidate_all_resolutions": true,
+  "comparisons": [
+    {
+      "candidate": "u20_dt00625",
+      "reference": "u20_dt003125",
+      "kind": "time",
+      "t_s": 1e-05,
+      "dh": 0.0033905686447261783,
+      "displacement": 0.004940373542948566,
+      "passed": true
+    },
+    {
+      "candidate": "u10_dt00625",
+      "reference": "u10_dt003125",
+      "kind": "time",
+      "t_s": 1e-05,
+      "dh": 0.0050789855655782095,
+      "displacement": 0.005004200206952428,
+      "passed": true
+    },
+    {
+      "candidate": "u20_dt00625",
+      "reference": "u10_dt00625",
+      "kind": "space",
+      "t_s": 1e-05,
+      "dh": 0.49432715527265114,
+      "displacement": 0.7585022301256815,
+      "passed": false
+    },
+    {
+      "candidate": "u20_dt003125",
+      "reference": "u10_dt003125",
+      "kind": "space",
+      "t_s": 1e-05,
+      "dh": 0.4956209418622521,
+      "displacement": 0.7611838143352796,
+      "passed": false
+    }
+  ],
+  "first_checkpoint_time_pairs_passed": true,
+  "first_checkpoint_space_rows_passed": false,
+  "first_checkpoint_space_qualified": false,
+  "missing_original_checkpoints_us": [
+    50,
+    200
+  ],
+  "new_candidate5um_pair_completed": false,
+  "physical_normal_flux_traction_validated": false,
+  "full_C1_complete": false,
+  "scope": "Same-candidate20/10um at10us only; original overlap norms and failed rows retained"
+}
