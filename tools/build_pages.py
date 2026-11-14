@@ -88,7 +88,7 @@ def build(source, output, repository, commit):
         # This report retains many small scientific assets. Keep its HTML in
         # Pages and serve its original data/figures immutably, without relaxing
         # the shared site's size guard or changing unrelated project resources.
-        physical_report_asset = name.startswith('VariDrainage/edge-physics/') and path.suffix.lower() != '.html'
+        physical_report_asset = name.startswith(('VariDrainage/edge-physics/', 'VariDrainage/retained-five/')) and path.suffix.lower() != '.html'
         # Scientific JSON ledgers are original downloadable datasets, too.
         # Reuse the existing anchor/fetch/XHR router and retain byte-exact Git
         # originals rather than letting adjacent reports exhaust the site.
@@ -111,15 +111,15 @@ def build(source, output, repository, commit):
             continue
         raw = path.read_bytes()
         text = raw.decode('utf-8')
-        if path.relative_to(output).as_posix().startswith('VariDrainage/edge-physics/'):
-            # img src is resolved before the anchor/fetch router runs. Rewrite
-            # these report-local image URLs at build time as well.
-            import posixpath
-            parent = path.relative_to(output).parent.as_posix()
-            def image_resource(match):
-                name = posixpath.normpath(posixpath.join(parent, match.group(2)))
-                return match.group(1) + resources.get(name, match.group(2)) + match.group(3)
-            text = re.sub(r'(<img\b[^>]*\bsrc=["\x27])([^"\x27]+)(["\x27])', image_resource, text, flags=re.I)
+        # Rewrite only image sources that match the explicit immutable map.
+        # The new five-micron figures also appear on the root/summary pages.
+        import posixpath
+        parent = path.relative_to(output).parent.as_posix()
+        def image_resource(match):
+            src = match.group(2)
+            name = src.lstrip('/') if src.startswith('/') else posixpath.normpath(posixpath.join(parent, src))
+            return match.group(1) + resources.get(name, src) + match.group(3)
+        text = re.sub(r'(<img\b[^>]*\bsrc=["\x27])([^"\x27]+)(["\x27])', image_resource, text, flags=re.I)
         # Preserve exact source bytes apart from this routing tag.
         if re.search(r'<head\b[^>]*>', text, flags=re.I):
             text = re.sub(r'(<head\b[^>]*>)', lambda m: m.group(1) + tag, text, count=1, flags=re.I)
