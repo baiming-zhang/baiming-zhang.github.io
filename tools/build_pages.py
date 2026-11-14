@@ -96,7 +96,7 @@ def build(source, output, repository, commit):
         # Keep the latest reference report and its inline PNGs in Pages. Its
         # downloadable evidence (sources, logs, audit ledgers and vector PDFs)
         # uses the same commit-pinned router, preserving all original bytes.
-        reference_download = name.startswith('VariDrainage/retained-reference/') and path.suffix.lower() not in {'.html', '.png'}
+        reference_download = name.startswith(('VariDrainage/retained-reference/', 'VariDrainage/retained-five/')) and path.suffix.lower() not in {'.html', '.png'}
         if physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))
             continue

@@ -1,0 +1,45 @@
+{
+  "native_pair_passed": true,
+  "new_native_cases": 2,
+  "skipped": [],
+  "accepted_steps": 480,
+  "native_failures": 0,
+  "native_batch_wall_s": 22391.45299999998,
+  "scalar_saved_audits": 18,
+  "mechanical_saved_audits": 18,
+  "comparisons_available": true,
+  "comparisons": [
+    {
+      "candidate": "u5_dt00625",
+      "reference": "u5_dt003125",
+      "kind": "time",
+      "t_s": 1e-05,
+      "dh": 0.003093365970425949,
+      "displacement": 0.004185767709536182,
+      "passed": true
+    },
+    {
+      "candidate": "u10_dt00625",
+      "reference": "u5_dt00625",
+      "kind": "space",
+      "t_s": 1e-05,
+      "dh": 0.29550071723815813,
+      "displacement": 0.2696926202932684,
+      "passed": false
+    },
+    {
+      "candidate": "u10_dt003125",
+      "reference": "u5_dt003125",
+      "kind": "space",
+      "t_s": 1e-05,
+      "dh": 0.296338521060061,
+      "displacement": 0.2692423794130021,
+      "passed": false
+    }
+  ],
+  "original50_200us_complete": false,
+  "continuous_physics_validated": false,
+  "full_C1_complete": false,
+  "missing_native_summaries": [],
+  "accepted_steps_scope": "Counts proven by available native terminal summaries only; missing summary prevents a full accepted-step claim"
+}

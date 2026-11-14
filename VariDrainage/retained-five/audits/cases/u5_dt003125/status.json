@@ -1,0 +1,167 @@
+{
+  "state": "completed",
+  "tests": [],
+  "cases": [
+    {
+      "name": "u5_dt003125",
+      "parameters": {
+        "name": "u5_dt003125",
+        "mode": "uniform",
+        "dx_um": 5,
+        "N": 2112,
+        "dt_us": 0.03125,
+        "T_us": 10,
+        "radius_um": 500,
+        "amplitude": 0,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "save_stride": 40,
+        "refine_start_um": 200,
+        "observer": true,
+        "timeout_s": 28000
+      },
+      "command": [
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_motion_20261113\\bin\\tf_retained_face_bench.exe",
+        "uniform",
+        "5",
+        "0.03125",
+        "10",
+        "500",
+        "0",
+        "C:\\Users\\\u5f20\u67cf\u94ed\\Desktop\\SPH\\03_DRIFT\\project\\results\\local-runs\\retained_five_20261113\\u5_dt003125",
+        "6",
+        "variational",
+        "40",
+        "200",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_s": 14826.17200000002,
+      "terminal_utc": "2026-11-14T06:36:23.859620+00:00",
+      "completed": true,
+      "native_gate": true,
+      "log": "results\\logs\\retained_five_20261113\\u5_dt003125.log",
+      "log_sha256": "3d9e9ff73cb9ef6769c9beb547b99b43d5cc059ef0c0edc6898bcda96f6db928",
+      "monitor_log": "results\\logs\\retained_five_20261113\\monitor_u5_dt003125.jsonl",
+      "monitor_log_sha256": "d13a957b3a27b6751ca8c87832bfeb42308c2decbedc71f79cd09bb2fc25e753",
+      "summary": {
+        "refine_start_m": 0,
+        "save_stride": 40,
+        "signed_bath_counter": true,
+        "c_bulk_mM": 6,
+        "preparation": "variational",
+        "N": 2112,
+        "interior": 2080,
+        "steps": 320,
+        "requested_steps": 320,
+        "failures": 0,
+        "local": false,
+        "dx_m": 4.9999999999999996e-06,
+        "dt_s": 3.125e-08,
+        "T_s": 9.999999999999999e-06,
+        "radius_m": 0.0005,
+        "far_height_m": 1.888298565975473e-05,
+        "bath_pressure_Pa": -91.32109909274597,
+        "amplitude": 0,
+        "Gamma_inf_mol_m2": 3.7e-06,
+        "theta0": 0.9433962264150942,
+        "clean_tension_N_m": 0.072,
+        "RT_J_mol": 2478.957029602388,
+        "rho_kg_m3": 1045,
+        "viscosity_Pa_s": 0.0015,
+        "initial_energy_J": 4.922305519543647e-12,
+        "V0_m3": 3.5955746505722703e-13,
+        "S0_mol": 1.7890965910041554e-13,
+        "max_budget_excess": 0,
+        "max_V_res": 5.018495410824794e-15,
+        "max_S_res": 0,
+        "max_regionV_res": 9.44023062286361e-16,
+        "max_regionS_res": 2.1931814618375064e-16,
+        "max_displacement_m": 5.62986695243481e-08,
+        "wall_s": 14823.6832607
+      },
+      "preparation": {
+        "iterations": 3,
+        "pressure_residual": 4.697915420584255e-13,
+        "free_volume_m3": 1.2675964789107875e-13,
+        "S_mol": 1.7890965910041554e-13,
+        "trace_x_m": 0.00024,
+        "trace_released": true,
+        "constant_activity_initial_only": true
+      },
+      "mesh": {
+        "local": false,
+        "background_ratio": 2,
+        "nominal_background_m": 4.9999999999999996e-06,
+        "actual_background_x_m": 5e-06,
+        "actual_background_y_m": 5e-06,
+        "fine_m": 4.9999999999999996e-06,
+        "physical_cut_m": 0.00024
+      },
+      "maximum_force_target_ratio": 0.9969844191338559,
+      "files": [
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\faces.csv",
+          "bytes": 7436407,
+          "sha256": "30e9087727f7a8b9ed5805b86e361d0f8842192d57409979a8ea64712687be72"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\history.csv",
+          "bytes": 112023,
+          "sha256": "351e89970a8ef119751279580283c6bf80afbf1912900f1067c45477ff3743cb"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\initial_faces.csv",
+          "bytes": 222292,
+          "sha256": "58f884bd6f25de7f8984a0c5bd6279ae0004985f038c865204eaf405c3ccd89c"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\initial_states.csv",
+          "bytes": 527317,
+          "sha256": "50214861a6c1036fe614d10bf50f84bcf6438eb8da25bf2e89e3d37540c5ce1a"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\mechanical_nodes.csv",
+          "bytes": 9299731,
+          "sha256": "bed8a8f731d3bc182df36eb9c2b95a5db0b27e15acad86524c23439618d16491"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\mechanics.csv",
+          "bytes": 84528,
+          "sha256": "531d329699f93fa6ce77f9827ef6ff0954e72f074f43d49ed7dd355a0fce2d1a"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\mesh.json",
+          "bytes": 250,
+          "sha256": "cc95cf53cb934f7cc03476728b3e7af43454b993beeda9808c0a5c2ffed5ef4b"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\preparation.json",
+          "bytes": 227,
+          "sha256": "fcc8fb83a2a47ba8e8928896b3989439bd546ec03aa92269a10012e02ec1a038"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\regional_mechanics.csv",
+          "bytes": 8365,
+          "sha256": "e97545c1ee210d3858371fd80c5d5bb5bcb95448cb13547b0772e6d816df0dec"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\states.csv",
+          "bytes": 17274971,
+          "sha256": "41097c743103dfb221f16a903e72307c75b9cb304296927f1e067990e3d58c60"
+        },
+        {
+          "path": "results\\local-runs\\retained_five_20261113\\u5_dt003125\\summary.json",
+          "bytes": 913,
+          "sha256": "c836f1023acbf46eba1d8a9280bae22bcf4c60871fa5fd1ad8c7636a7229af7b"
+        }
+      ]
+    }
+  ],
+  "reused_native_checks": 24,
+  "audited_subset_only": true,
+  "native_checks_scope": "24candidate fixture checks verified via frozen hashes; not rerun by this auditor",
+  "sampled_steps": true,
+  "native_checks": 24
+}
