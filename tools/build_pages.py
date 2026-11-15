@@ -37,6 +37,13 @@ ROUTER = r'''(() => {
     return nativeOpen.call(this, method, route(url), ...rest);
   };
   function rewriteLinks(root) {
+    const images = root.querySelectorAll ? Array.from(root.querySelectorAll('img[src]')) : [];
+    if (root.matches && root.matches('img[src]')) images.push(root);
+    for (const image of images) {
+      const old = image.getAttribute('src'), target = route(old);
+      if (target !== old) image.setAttribute('src', target);
+    }
+
     const links = root.querySelectorAll ? root.querySelectorAll('a[href]') : [];
     for (const anchor of links) {
       const target = route(anchor.getAttribute('href'));
@@ -54,7 +61,7 @@ ROUTER = r'''(() => {
         if (record.type === 'attributes') rewriteLinks(record.target);
         else for (const node of record.addedNodes) if (node.nodeType === 1) rewriteLinks(node);
       }
-    }).observe(document.documentElement, {subtree:true, childList:true, attributes:true, attributeFilter:['href']});
+    }).observe(document.documentElement, {subtree:true, childList:true, attributes:true, attributeFilter:['href','src']});
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once:true});
   else start();
@@ -97,7 +104,8 @@ def build(source, output, repository, commit):
         # downloadable evidence (sources, logs, audit ledgers and vector PDFs)
         # uses the same commit-pinned router, preserving all original bytes.
         reference_download = name.startswith(('VariDrainage/retained-reference/', 'VariDrainage/retained-five/')) and path.suffix.lower() not in {'.html', '.png'}
-        if physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
+        plate_report_asset = name.startswith(('GeoBC-show/assets/plate-p06-v1/', 'GeoBC-show/assets/plate-p07-v1/')) and path.suffix.lower() in {'.png', '.json', '.csv', '.u8'}
+        if plate_report_asset or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))
             continue
         target = output / relative
