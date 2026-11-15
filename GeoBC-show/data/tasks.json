@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-15",
   "tasks": [
     {
       "id": "R01",
@@ -872,6 +872,30 @@
         {
           "label": "逐case加载曲线",
           "url": "P06.html#loading-curves"
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "phase": "Plate",
+      "title": "Plate · GINOT全5例拟合",
+      "due": "2026-11-15",
+      "start": "2026-11-15",
+      "completed": "2026-11-15",
+      "status": "已完成",
+      "deliverables": "GINOT纯新初值；全5例TRAIN；每步全网格20帧；40000更新，与P02 GNOT对照",
+      "review": "同P02输入/目标/归一化/seed/优化器/LR/更新顺序/预算；无validation/test，无泛化结论",
+      "dependencies": "P02",
+      "issues": "GINOT官方边界点云编码，24输入20输出，无GRU；参数与FLOPs不完全相同；保留P01-P06",
+      "page": "P07.html",
+      "results": [
+        {
+          "label": "拟合结果与交互场",
+          "url": "P07.html"
+        },
+        {
+          "label": "逐case曲线",
+          "url": "P07.html#loading-curves"
         }
       ]
     }
