@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>③ DRIFT｜从排液到黑膜：研究规划 · 2026-11-11</title>
 <style>
 :root{--bg:#f4f6f8;--paper:#fff;--ink:#202b39;--muted:#59697b;--line:#d7dfe8;--blue:#30628b;--blue-soft:#eaf0f6;--red:#b4544f;--red-soft:#f8edeb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.9 "Microsoft YaHei","PingFang SC",system-ui,sans-serif}main{max-width:1110px;margin:auto;padding:45px 28px 75px}h1{font:700 35px/1.45 "SimSun",serif;margin:14px 0}h2{font-size:23px;line-height:1.5;margin:0 0 18px;color:var(--blue)}h3{font-size:18px;line-height:1.6;margin:24px 0 8px}p{margin:10px 0}a{color:var(--blue);text-underline-offset:3px}.eyebrow,.meta{font-size:13px;color:var(--muted)}.en{font-size:18px;line-height:1.65}.lead{font-size:19px}.box,section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:26px 29px;margin:23px 0}.box{border-left:5px solid var(--blue)}.caution{background:var(--red-soft);border-left:4px solid var(--red);padding:13px 18px}.note{border-left:3px solid var(--blue);padding-left:15px}.sub,small{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{background:white;border:1px solid var(--line);padding:17px;border-radius:8px}.metric b{display:block;font-size:25px;color:var(--blue)}nav{display:flex;flex-wrap:wrap;gap:8px 19px;margin:24px 0}li{margin:7px 0}ul,ol{padding-left:23px}.scroll{overflow:auto}table{width:100%;min-width:690px;border-collapse:collapse;font-size:14px;line-height:1.8}th,td{text-align:left;vertical-align:top;padding:12px 11px;border-bottom:1px solid var(--line)}th{background:var(--blue-soft)}.tag{display:inline-block;border-radius:4px;background:var(--blue-soft);color:var(--blue);font-size:12px;padding:2px 7px}.pending{background:var(--red-soft);color:#95413d}.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.flow span{padding:8px 12px;background:var(--blue-soft);border-radius:5px}.equation{font-family:Consolas,"Microsoft YaHei",monospace;background:#f3f6f9;padding:14px 17px;overflow-wrap:anywhere;font-size:14px}code{font:0.9em Consolas,monospace;background:var(--blue-soft);padding:2px 4px}.refs{font-size:14px;overflow-wrap:anywhere}.refs li{margin-bottom:11px}footer{font-size:13px;color:var(--muted)}section{scroll-margin-top:16px}@media(max-width:680px){main{padding:24px 14px 45px}h1{font-size:27px}.box,section{padding:21px 17px}.grid{grid-template-columns:1fr}.lead{font-size:17px}.en{font-size:16px}h2{font-size:21px}}@media print{body{background:white;font-size:10.5pt}main{padding:0;max-width:none}nav{display:none}section,.box{border-radius:0;break-inside:auto}h2,h3{break-after:avoid}table{min-width:0;font-size:9pt}.scroll{overflow:visible}tr,.grid,.caution{break-inside:avoid}a{color:inherit}}
 </style></head>
-<body><section style="max-width:1100px;margin:24px auto;padding:22px;background:white;border:1px solid #d9dfe2"><h2>2026-11-13｜非线性局部接口推进</h2><p>已完成一维非线性过渡条带与显式区域的液量、压力功和毛细形变功对照；3组合格脉冲，21/58后续尝试通过全部严格门槛，失败完整保留。下一步接入已有运动粒子膜与表活输运，不以状态数减少替代真实成本优势。<a href="nonlinear-edge/">结果与完整限制</a></p></section><section style="max-width:1100px;margin:24px auto;padding:22px;background:white;border:1px solid #d9dfe2"><h2>2026-11-13｜Stateful Edge Exchange 方法探索</h2><p>已查阅动态弯月面、表活弛豫和保持耗散降阶的已有研究，完成带状态边界的线性数值诊断。创新候选仍是局部—整体守恒耦合及其适用域，尚未完成C1。下一步优先测试非均匀、非线性边缘，再接入整体运动膜。<a href="edge-memory/">文献、计算与未达标检查</a></p></section><main><p><a href="./">← VariDrainage 研究主页</a></p>
+<body><section id="method-review-20261118"><h2>2026-11-18｜统一方法与创新综述</h2><p>已将原始C1主线、状态化局部边缘候选、方法演变与文献边界统一整理，包含最新空间未收敛结果。研究计算仍暂停。<a href="method-review/">阅读完整综述与架构图</a></p></section><section style="max-width:1100px;margin:24px auto;padding:22px;background:white;border:1px solid #d9dfe2"><h2>2026-11-13｜非线性局部接口推进</h2><p>已完成一维非线性过渡条带与显式区域的液量、压力功和毛细形变功对照；3组合格脉冲，21/58后续尝试通过全部严格门槛，失败完整保留。下一步接入已有运动粒子膜与表活输运，不以状态数减少替代真实成本优势。<a href="nonlinear-edge/">结果与完整限制</a></p></section><section style="max-width:1100px;margin:24px auto;padding:22px;background:white;border:1px solid #d9dfe2"><h2>2026-11-13｜Stateful Edge Exchange 方法探索</h2><p>已查阅动态弯月面、表活弛豫和保持耗散降阶的已有研究，完成带状态边界的线性数值诊断。创新候选仍是局部—整体守恒耦合及其适用域，尚未完成C1。下一步优先测试非均匀、非线性边缘，再接入整体运动膜。<a href="edge-memory/">文献、计算与未达标检查</a></p></section><main><p><a href="./">← VariDrainage 研究主页</a></p>
 <header><div class="eyebrow">VARIATIONAL FILMS · ③ DRIFT · 修订版 2026-11-11</div>
-<h1>从排液到黑膜：<br>边缘再生与可溶表面活性剂的守恒粒子模拟</h1>
+<h1>从排液到黑膜：<br/>边缘再生与可溶表面活性剂的守恒粒子模拟</h1>
 <p class="en">From Drainage to Black Films: Conservative Particle Simulation of Marginal Regeneration and Soluble Surfactant Dynamics</p>
 <p class="sub">SIGGRAPH 2027 研究规划 · 依据原始 bubble_siggraph_plan.html 的③主线展开 · 研究提案，尚非已完成贡献</p></header>
 <div class="box"><p class="lead"><strong>核心问题：</strong>为什么侧边生成的薄膜元能够改变整张皂膜的排液规律？能否从边缘夹缩、表面活性剂响应和液体交换出发，在不预设经验排液律的条件下，预测条纹下降、边缘再生以及随后黑膜的形成？</p>
@@ -15,7 +16,6 @@
 <p class="caution">创新不建立在“变分”这个名字或一次指数吻合上，而建立在新的边缘处理及其可检验预测上。边缘交换和吸附动力学已有先例；下面三项贡献均是待验证候选，不能写成首创或已实现。</p></div>
 <div class="grid"><div class="metric"><b>78 天</b>从 2026-11-11 到 2027-01-28 论文截止</div><div class="metric"><b>60 天</b>到 2027-01-10 内部主要结果冻结</div><div class="metric"><b>1.6–1.8 → ?</b>既有加密指数仍与实验不符；不把 0.70 写入求解器</div></div>
 <nav><a href="#original">原始 idea</a><a href="#novelty">候选创新</a><a href="#baseline">已有基础</a><a href="#hypotheses">关键预测</a><a href="#method">方法路线</a><a href="#validation">实验包</a><a href="#figures">论文图表</a><a href="#schedule">时间表</a><a href="#gates">检查点</a><a href="#execution">执行规范</a><a href="#sources">文献</a></nav>
-
 <section id="original"><h2>01｜保留原始项目的研究对象和目标</h2>
 <p>原始总体规划将③定义为<strong>“从排液到黑膜”</strong>：从第一性原理模拟排液、marginal regeneration 和黑斑，不编码经验排液律，并与实验定量对照；列出的缺口是 Monier 指数、计算成本和黑膜开洞。本修订沿这条链展开，不将项目缩成一个通用“变分求解器”。</p>
 <div class="scroll"><table><thead><tr><th>原始要求</th><th>本规划的具体展开</th><th>如何判断完成</th></tr></thead><tbody>
@@ -25,7 +25,6 @@
 <tr><td>降成本、黑膜开洞</td><td>局部解析避免整膜均匀加密；独立列出开孔触发与 CODA 接口</td><td>同精度全成本比较；开孔未完成时不宣称破裂，形成黑膜仍须验证</td></tr>
 </tbody></table></div>
 <p>原文中“高精度粒子”是方法方向；当前 Brookshaw/SPH 算子仍有已知误差，不把“高精度”当作既有定理。高阶算子属于 PUMA，GPU 后端属于 HASTE；它们的成果不自动成为③的创新。</p></section>
-
 <section id="novelty"><h2>02｜将创新落实为三个可以被否证的贡献</h2>
 <h3>C1．从局部边缘解析得到整体排液的边界交换</h3>
 <p><span class="tag pending">优先主攻 · 待实现</span> 针对整膜无法承担的边缘分辨率，建立含切向自由度的局部膜—弯月面算例，解析夹缩、薄膜元生成和交换。以保守接口把局部液量/表活通量接入整体粒子膜；只有在局部时间尺度与整膜演化可分离、误差可控时，才把局部模型缩减为较便宜的边界算子。</p>
@@ -40,7 +39,6 @@
 <p><span class="tag pending">最终验证贡献 · 待形成</span> 在明确的适用范围内，以同一套能量/耗散及材料输入预测条纹、再生通量和分离压控制的黑膜状态。黑膜形成不能依靠把粒子直接标黑；若需要成核触发，则必须区分确定性失稳、异质缺陷与热涨落，按机制选择噪声和统计检验。</p>
 <p><strong>候选新意：</strong>验证整条因果链并在保留工况中预测多种观测量，而非为不同现象配置彼此无关的参数。不同材料的黑膜实验应使用各自独立测得的物性，不承诺一个参数组能跨溶液通用。[R2、R11–R12]</p>
 <p class="note">最低可成稿组合是 C1 的独立方法贡献，加一组主实验和一组保留工况；C2 是否进入论文由证据决定。只有 C3 的动态黑膜也通过时，最终题目才保留 Black-Film Formation。目标仍覆盖原始完整链条，投稿范围随实际证据收缩。</p></section>
-
 <section id="baseline"><h2>03｜已有基础与新增工作必须分开</h2>
 <p class="meta">源码核对基点：<code>afcdf5a3e8618dd9df89cf4c842e3edab640c49e</code>。下表是继承文档与代码状态，本次修订没有运行新模拟。</p>
 <div class="scroll"><table><thead><tr><th>当前基础</th><th>已有证据</th><th>不能据此宣称</th></tr></thead><tbody>
@@ -51,7 +49,6 @@
 <tr><td>无量纲黑斑/羽流；SI分离压入口</td><td>有定性场景与材料参数入口</td><td>已验证SI动态黑膜，或黑膜形成等于真正开孔</td></tr>
 </tbody></table></div>
 <p>现有排液使用<strong>步内冻结迁移率的隐式能量更新</strong>；整体采用力学—排液—输运/再分配等分裂。弯月面是固定化学势储库，可溶表活局部再分配是平衡处理。新规划不把它们改称“全物理单体无条件耗散”或“有限速率模型”。</p></section>
-
 <section id="hypotheses"><h2>04｜在写大模型前，先区分三个解释</h2>
 <div class="scroll"><table><thead><tr><th>假设</th><th>最小可区分试验</th><th>预期判据与否证方式</th></tr></thead><tbody>
 <tr><td>H0：装置、初态或分析口径造成差距</td><td>合成条纹验证；核对实验几何、拉膜时间原点、材料张力和拟合区间</td><td>仅修正比较方式即可解释差距时，先修正验证链，不把差异包装为新机制</td></tr>
@@ -63,12 +60,11 @@
 <li><strong>准备历程预测：</strong>若有限速率机制成立，在相同h和r下，不同拉膜/停留历程导致可测的张力、表活分配与早期通量差异；充分弛豫后差异应减弱。没有配套实验数据时只能作为数值预测，不能称为已实验验证。</li>
 <li><strong>黑膜预测：</strong>在匹配化学条件下改变外压或边界吸力，比较稳定厚度及动态前沿；薄膜压力平衡与黑斑成核是两项不同检验。</li></ul>
 <p>先估计交换、跨膜扩散、边缘流动和整膜排液的时间尺度。可用 τ<sub>exchange</sub>/τ<sub>edge</sub> 等比值组织结果，但不提前宣布存在通用塌缩曲线，也不凭一次消融宣布因果成立。</p></section>
-
 <section id="method"><h2>05｜方法展开：局部解析、守恒耦合、物理黑膜</h2>
 <div class="flow"><span>已冻结的物理基线</span> → <span>一维夹缩检验</span> → <span>二维局部边缘</span> → <span>整体守恒交换</span> → <span>条纹与黑膜验证</span></div>
 <h3>A．明确两种液体输运，避免重复计数</h3>
 <p>把膜表面材料运动携带的液体与相对表面的排液通量分别记账。示意连续式如下；它只是变量组织，既有润滑理论是起点，不能把这条质量方程称为新方程。</p>
-<div class="equation">∂<sub>t</sub>h + ∇<sub>s</sub>·(h u<sub>s</sub> + q) = 0<br>相对运动接口 Γ：J<sub>V</sub> = [h(u<sub>s</sub> − v<sub>Γ</sub>) + q]·n<sub>Γ</sub></div>
+<div class="equation">∂<sub>t</sub>h + ∇<sub>s</sub>·(h u<sub>s</sub> + q) = 0<br/>相对运动接口 Γ：J<sub>V</sub> = [h(u<sub>s</sub> − v<sub>Γ</sub>) + q]·n<sub>Γ</sub></div>
 <p>其中u<sub>s</sub>、q及迁移率须从同一速度分解推导，核对与Chomaz自由膜近似的阶次，不能把面内流动和Poiseuille通量重复加入。实际表活流量还需分别包含两侧表面输运、体相随液体对流和适用的扩散项。</p>
 <h3>B．先解析一个边缘，再决定是否降阶</h3>
 <p>一维横截面用于检查压力、夹缩、通量与边界条件；<strong>它不能产生或验证二维羽流</strong>。随后建立具有沿边方向自由度的局部区域，使用一致材料模型和有几何来源的弯月面条件。局部域尺寸、沿边边界、扰动幅度均做敏感性检查；扰动不用于调出指定羽流形状。</p>
@@ -79,7 +75,6 @@
 <h3>D．从分离压到黑膜，而非把粒子涂黑</h3>
 <p>按相同溶液的表面张力、盐、温度与外压选择分离压及短程作用；逐项注明测量来源和建模选择。先验证压力—厚度，再检验排液到稳定薄膜、前沿和液量重分布。黑膜过渡区域需要解析或单独论证正则化尺度；不能把任意加宽的前沿当作材料预测。</p>
 <p>如确需热涨落，噪声协方差应与离散迁移率及温度相容，状态依赖噪声的随机解释/漂移也需核对。不得把加在粗层的任意噪声幅度称为实温涨落；多个种子只在热成核场景必要，确定性平衡检查不靠随机种子增加工作量。</p></section>
-
 <section id="validation"><h2>06｜最小实验包：每个新主张对应独立证据</h2>
 <div class="scroll"><table><thead><tr><th>编号</th><th>问题与对照</th><th>必须交付 / 验收</th></tr></thead><tbody>
 <tr><td>E0 分析与装置</td><td>合成轨迹恢复已知指数；核对同装置、初态、张力、z方向与时间原点</td><td>冻结分析协议、参数表和不确定性；不适用t<sub>max</sub>时不强拟合</td></tr>
@@ -92,7 +87,6 @@
 </tbody></table></div>
 <p>本表百分比是拟定的内部数值检查目标，不是已达到的误差，也不是实验吻合的替代标准。实验接受范围由实际测量误差、初态/参数不确定性和拟合稳定性决定，不能只要求某次n落进一个区间。</p>
 <p>对比范围必须更新：Ishida2020、Huang2020、thin-film SPH2021、MELP2022、涡粒子—网格2024、Lalli–Giusti2024，以及2025–2026交换研究。能复现的相同算例做直接对照；不能复现或物理范围不一致时，明确写模型层面对比，不虚构性能结论。[R7–R14]</p></section>
-
 <section id="figures"><h2>07｜六组论文图：先证明机制，再制作主视觉</h2>
 <ol><li><strong>从排液到黑膜的主视觉：</strong>真实计算状态和物理时间；标明哪些是实参预测、哪些只是定性演示。</li>
 <li><strong>局部—整体方法：</strong>交界解析区域、材料运动与相对通量、接口液量/表活/功的收支。</li>
@@ -101,7 +95,6 @@
 <li><strong>黑膜：</strong>匹配材料的压力—厚度图、SI动态形成与前沿；有统计主张才展示多种子区间。</li>
 <li><strong>数值和成本：</strong>局部/整体收敛、时间步、收支、整体耗时与峰值内存。</li></ol>
 <p>新增科学图用学术红蓝配色，输出PNG并同时输出可行的矢量PDF；粒子场按圆盘绘制，观看页可离线打开。图形学视觉表达服务于已验证的物理过程。</p></section>
-
 <section id="schedule"><h2>08｜78天推进表：按证据逐步增加复杂度</h2>
 <p>2026-11-11核对官方日期：提交表单及冲突信息2027-01-21、论文01-28、上传01-29，均22:00 UTC；投稿细则仍待公布。内部主要结果冻结01-10、正文定稿01-25。[R1]</p>
 <div class="scroll"><table><thead><tr><th>日期</th><th>主任务</th><th>交付和决策</th></tr></thead><tbody>
@@ -116,14 +109,12 @@
 <tr><td>01/21–01/28</td><td>按正式细则登记；正文修订与上传核对</td><td>01/25内部定稿，留三天上传检查</td></tr>
 </tbody></table></div>
 <p>阶段日期是研究组织安排，不是对运行速度和机制成立的保证；不同时开展全套边界、胶束、三维几何、GPU和破裂拓扑重写。</p></section>
-
 <section id="gates"><h2>09｜什么结果值得继续，什么结果应当收缩</h2>
 <ul><li><strong>11/22：</strong>H0成立则先修验证；H1成立则集中边缘处理；H2有独立响应证据才加入交换动力学。均无证据时用局部守恒/量纲和边界输入审计定位，不直接扩大参数扫描。</li>
 <li><strong>12/06：</strong>若新边界只改变n但局部通量不收敛，不进入大装置长跑；若降阶误差不可控，使用在线局部解析或缩小场景。没有独立方法增量时重新审视论文定位。</li>
 <li><strong>12/20：</strong>至少需要一个可验证的方法贡献、主实验和保留条件。只有漂亮羽流或一个指数吻合，不能视为SIGGRAPH证据完成。</li>
 <li><strong>01/10：</strong>排液与方法成立、动态黑膜未闭环，则采用不含黑膜的题目；核心实验和独立贡献仍不成立，则保留研究记录并调整投稿节奏。</li></ul>
 <p><strong>题目随证据确定：</strong>当前用“从排液到黑膜”作为研究范围；若C1与全链验证成立，可用 <em>Conservative Particle Simulation of Soap-Film Drainage and Black-Film Formation with Resolved Border Exchange</em>。若只完成排液，使用 <em>Conservative Particle Simulation of Soap-Film Drainage with Resolved Border Exchange</em>。尚不使用First、Parameter-Free或已验证的Predictive作为结论性标签。</p></section>
-
 <section id="execution"><h2>10｜范围、资源和复现纪律</h2>
 <p><strong>③负责：</strong>单膜热力学、局部膜—弯月面物理、排液与实验条纹、物理黑膜；代码进入<code>thin_film/</code>。局部有限储库可作为单膜边界诊断，但不另写⑥的Plateau网络。<strong>⑥负责：</strong>网络液量、运动耦合和泡沫事件；真正开孔后的液环/液滴归CODA，空气动力学归GUST，高阶算子归PUMA，GPU后端归HASTE。跨项目依赖由所属分支实现再审查合入。</p>
 <p><strong>黑膜开洞仍列为扩展目标：</strong>在形成黑膜与临界厚度证据之后，记录可能的失稳/成核判据、事件前液量与动量，并与CODA协商接口；没有物理破裂验证时不加任意厚度阈值宣称预测。不会为了保留原文“开洞”一词把液环和碎裂并入③核心时间表。</p>
@@ -132,8 +123,7 @@
 <p><strong>长运行：</strong>记录提交、完整环境、参数、日志、帧位置、墙钟、内存及未收敛步；日志进<code>results/logs/</code>，超过5MB帧不入Git。用户要求：每次训练预计超过2小时，启动时设置每30分钟监视任务；本项目若启动超过2小时的模拟也采用同样监视频率，检查进度、收支、求解失败与输出增长。没有启动长任务时不创建空监视任务。</p>
 <p><strong>分支：</strong>继续使用<code>p3-codex-development</code>的独立工作树；不切换其他会话分支，不重建归档分支，只显式暂存本项目路径。结果变化时同步README、RESULTS和结果页。每次运行清理本次VF_*环境变量。</p>
 <p class="caution">这份规划只修订研究问题、方法候选和验收标准。本轮未实现C1/C2/C3、未运行新实验，也未把此前的定性黑斑或数值检查升级为实验验证。</p></section>
-
-<section id="sources" class="refs"><h2>11｜文献依据与本地入口</h2>
+<section class="refs" id="sources"><h2>11｜文献依据与本地入口</h2>
 <p>本规划依据原始总体HTML、当前③交接/源码，以及本地26条定向查新记录（22篇PDF，4条全文未取得）。不是穷尽所有文献的首创性证明。可溶薄膜梯度动力学、Onsager时间离散、曲面Rayleighian、边缘交换均已有先例；区别须落到自由皂膜的具体离散、边界预测及验证范围。</p>
 <ol>
 <li id="r1">[R1] <a href="https://s2027.siggraph.org/program/technical-papers/">SIGGRAPH 2027 Technical Papers</a>，2026-11-11核对日期；正式细则待公布。</li>

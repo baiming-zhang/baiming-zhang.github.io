@@ -95,7 +95,7 @@ def build(source, output, repository, commit):
         # This report retains many small scientific assets. Keep its HTML in
         # Pages and serve its original data/figures immutably, without relaxing
         # the shared site's size guard or changing unrelated project resources.
-        physical_report_asset = name.startswith(('VariDrainage/edge-physics/', 'VariDrainage/retained-five/')) and path.suffix.lower() != '.html'
+        physical_report_asset = name.startswith(('VariDrainage/edge-physics/', 'VariDrainage/retained-five/', 'VariDrainage/method-review/')) and path.suffix.lower() != '.html'
         # Scientific JSON ledgers are original downloadable datasets, too.
         # Reuse the existing anchor/fetch/XHR router and retain byte-exact Git
         # originals rather than letting adjacent reports exhaust the site.
