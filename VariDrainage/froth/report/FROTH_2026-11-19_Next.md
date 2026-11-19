@@ -13,7 +13,7 @@ Read `README.md` and its Working rules, `results/RESULTS.md`,
 The human overview is `results/froth-report/FROTH_2026-11-19_Report.html`; detailed
 saved-state evidence remains in `results/spatial-recipient/`.
 
-Active branch: `p6-froth-20261119-handoff`. Retired branch: `archive/p6-codex-development-20261119`; do not recreate or push the old name.
+Active branch: `p6-froth-20261119-handoff`. The temporary archive branch `archive/p6-codex-development-20261119` was deleted at the user's request on 2026-11-19. Its old tip `39c8f74` remains an ancestor of the active branch. Do not recreate either retired name.
 Handoff record: `foam/docs/FROTH_2026-11-19_Handoff.md`.
 
 ## The goal
