@@ -37,7 +37,7 @@
   <p class="meta">方法与初步结果 · 2026-11-19</p>
   <h1 lang="en">VOF with Lagrangian Thin Films</h1>
   <p class="lede">倒啤酒时，射流和液面可以用网格计算，泡沫里把气泡隔开的液膜却只有微米厚。现有求解器用两个网格场追踪网格看不清的气泡，已经能计算含气液体的输运、上浮和排液。VEIL 提案进一步研究怎样把单张薄膜作为拉格朗日元素嵌入网格。</p>
-  <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#limits">复现范围</a></nav>
+  <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#rising-bubble">气泡上浮</a><a href="#limits">复现范围</a></nav>
 </header>
 <div class="hero">
   <figure>
@@ -100,6 +100,15 @@
     <figure><video class="media" controls preload="none" poster="a1-oscillation.png" src="a1-oscillation.mp4" aria-label="A1 真空泡重算的振荡动画"></video><figcaption class="caption">A1 真空泡 · 原代码重算，330 帧，11 秒。</figcaption></figure>
   </div>
   <p class="sources">核对资料 Cirrus-VOF 进展报告（2026-11-17）、P05 v2.3 的 F4 贴壁记录、本机 A1 频率日志与渲染日志</p>
+</section>
+<section id="rising-bubble">
+  <h2>静水中的气泡上浮</h2>
+  <p>用 Cirrus-VOF v1.0 的原始静水气泡算例，从初始气泡求解到 3.00 秒。网格为 32 × 64 × 32，重力沿负 <i>y</i> 方向，气泡密度为周围液体的 1/10。由七帧三维相分数字段重算的气泡质心逐帧上升，<i>y</i> 从 <strong>0.5000 升到 1.4476</strong>，与 C++ 诊断一致。整个算例的最大相对气泡体积漂移为 1.04 × 10⁻¹¹。</p>
+  <figure style="max-width:780px;margin-top:15px">
+    <video class="media" controls preload="none" poster="rising-bubble.png" src="rising-bubble.mp4" aria-label="静水气泡由 Cirrus-VOF 求解得到的切片和质心轨迹"></video>
+    <figcaption class="caption">蓝色轮廓为真实相分数字段的 α = 0.5 界面，红点为当前帧质心。<a href="rising-bubble.pdf">矢量 PDF</a></figcaption>
+  </figure>
+  <p class="sources">静水基准核查了浮力方向。倒啤酒时，射流携带气泡向下和气泡相对液体向上漂移可以同时发生，需从完整倒入与停流后的流场判断泡沫何时到达液面。</p>
 </section>
 <section id="limits">
   <h2>复现范围与缺口</h2>
