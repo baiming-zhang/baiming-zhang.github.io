@@ -105,7 +105,8 @@ def build(source, output, repository, commit):
         # uses the same commit-pinned router, preserving all original bytes.
         reference_download = name.startswith(('VariDrainage/retained-reference/', 'VariDrainage/retained-five/')) and path.suffix.lower() not in {'.html', '.png'}
         plate_report_asset = name.startswith(('GeoBC-show/assets/plate-p06-v1/', 'GeoBC-show/assets/plate-p07-v1/')) and path.suffix.lower() in {'.png', '.json', '.csv', '.u8'}
-        if plate_report_asset or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
+        vof_film_media = name.startswith('vof-lagrangian-films/') and path.suffix.lower() in {'.png', '.mp4', '.pdf'}
+        if vof_film_media or plate_report_asset or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))
             continue
         target = output / relative
@@ -123,11 +124,15 @@ def build(source, output, repository, commit):
         # The new five-micron figures also appear on the root/summary pages.
         import posixpath
         parent = path.relative_to(output).parent.as_posix()
-        def image_resource(match):
+        def media_resource(match):
             src = match.group(2)
             name = src.lstrip('/') if src.startswith('/') else posixpath.normpath(posixpath.join(parent, src))
             return match.group(1) + resources.get(name, src) + match.group(3)
-        text = re.sub(r'(<img\b[^>]*\bsrc=["\x27])([^"\x27]+)(["\x27])', image_resource, text, flags=re.I)
+        text = re.sub(r'(<img\b[^>]*\bsrc=["\x27])([^"\x27]+)(["\x27])', media_resource, text, flags=re.I)
+        if parent == 'vof-lagrangian-films':
+            def route_video(match):
+                return re.sub(r'(\s(?:src|poster)=["\x27])([^"\x27]+)(["\x27])', media_resource, match.group(), flags=re.I)
+            text = re.sub(r'<video\b[^>]*>', route_video, text, flags=re.I)
         # Preserve exact source bytes apart from this routing tag.
         if re.search(r'<head\b[^>]*>', text, flags=re.I):
             text = re.sub(r'(<head\b[^>]*>)', lambda m: m.group(1) + tag, text, count=1, flags=re.I)

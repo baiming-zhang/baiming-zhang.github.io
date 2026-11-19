@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VOF with Lagrangian Thin Films · Baiming Zhang</title>
+<style>
+  :root {color-scheme:light;--ink:#182636;--muted:#4d6073;--blue:#2166ac;--red:#a91d30;--line:#d8e3ee;--soft:#f2f7fc}
+  *{box-sizing:border-box} body{margin:0;background:#fff;color:var(--ink);font:16px/1.78 "Microsoft YaHei","Noto Sans SC",system-ui,sans-serif}
+  main,footer{max-width:1100px;margin:auto;padding:0 30px} header{padding:58px 0 28px;border-top:6px solid var(--blue)}
+  h1,h2,h3,p,figure{margin:0} h1{font-size:clamp(34px,5.6vw,60px);line-height:1.14;letter-spacing:-.045em;margin:.18em 0 .3em}
+  h2{font-size:clamp(24px,3.5vw,34px);line-height:1.3;margin:0 0 15px;letter-spacing:-.022em} h3{font-size:18px;margin-bottom:5px}
+  a{color:#18558f;text-underline-offset:.19em} a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+  .meta,.caption,.sources{color:var(--muted);font-size:14px} .meta{letter-spacing:.05em;font-weight:650}
+  .lede{font-size:18px;max-width:850px} nav{display:flex;gap:12px 24px;flex-wrap:wrap;margin-top:20px;font-size:14px}
+  section{border-top:1px solid var(--line);padding:30px 0} p+p{margin-top:10px} .sources{margin-top:12px}
+  .hero{display:grid;grid-template-columns:1.35fr 1fr;gap:24px;align-items:center;padding:0 0 30px}
+  .media{border-radius:10px;overflow:hidden;background:#131a24} img,video{width:100%;height:auto;display:block}
+  figcaption{margin-top:8px} .facts{display:grid;gap:9px}.fact{background:var(--soft);padding:13px 16px;border-left:3px solid var(--blue)}
+  .fact.pending{background:#fff4f3;border-color:var(--red)} .fact strong{display:block;line-height:1.4;color:#183b62}
+  .fact.pending strong{color:var(--red)} .fact span{font-size:14px;color:var(--muted)}
+  .diagram{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:17px 0 6px}
+  .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:16px 0}
+  .step{border-top:3px solid var(--blue);padding-top:10px}.formula{margin:12px 0;background:var(--soft);padding:10px 16px;font:17px/1.7 system-ui,sans-serif}
+  .formula span{display:inline-block;margin-right:1.1em} .table{overflow:auto;border:1px solid var(--line);border-radius:8px}
+  table{width:100%;border-collapse:collapse;text-align:left} th,td{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:var(--soft);white-space:nowrap}td:first-child{font-weight:650;min-width:115px}td:nth-child(2){min-width:175px}tr:last-child td{border:0}
+  .clips{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px}.clips video{aspect-ratio:16/9}
+  code{font-family:Consolas,monospace;overflow-wrap:anywhere;font-size:.9em} footer{border-top:1px solid var(--line);padding-top:18px;padding-bottom:30px}
+  @media(max-width:700px){main,footer{padding-left:18px;padding-right:18px}header{padding-top:34px}.hero,.steps,.clips{grid-template-columns:1fr}section{padding:24px 0}.table{font-size:14px}}
+  @media print{body{font-size:11pt}header{padding:12px 0}nav,video{display:none}section,figure,tr{break-inside:avoid}main,footer{padding:0}.hero{gap:12px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <p class="meta">方法与初步结果 · 2026-11-19</p>
+  <h1 lang="en">VOF with Lagrangian Thin Films</h1>
+  <p class="lede">倒啤酒时，射流和液面可以用网格计算，但泡沫里把气泡隔开的液膜只有微米厚。VEIL 的想法是让网格算大尺度流动，用嵌在网格里的薄膜元素表示这些细结构。目前已有两相流求解器和泡沫渲染器，嵌入式液膜耦合仍处在提案阶段。</p>
+  <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#limits">复现范围</a></nav>
+</header>
+<div class="hero">
+  <figure>
+    <img class="media" src="foam-preview.png" alt="解析输入驱动的泡沫杯关键帧，透明杯中有金色液体、细气泡和白色泡沫层" width="960" height="540">
+    <figcaption class="caption">本地泡沫杯第 14 帧。原版 P05 渲染器读取解析测试字段生成的画面。</figcaption>
+  </figure>
+  <div class="facts">
+    <div class="fact"><strong>团队 · 约 93% 的壁层气量显式成泡</strong><span>F4 第 78 帧，5,512 个贴壁气泡承载 1.76 / 1.89 mL。</span></div>
+    <div class="fact"><strong>本机 · 74 项测试通过，24 帧泡沫渲染完成</strong><span>薄膜侧从源码重算。泡沫杯用解析输入验证渲染链路。</span></div>
+    <div class="fact pending"><strong>待验证 · VEIL 的网格—液膜耦合</strong><span>原始 F4 求解和正式重渲染仍等求解器及流场数据。</span></div>
+  </div>
+</div>
+<section id="method">
+  <h2>物理方法</h2>
+  <p><strong>网格处理看得清的结构。</strong> VOF（流体体积法）给每格一个相分数 <i>α</i>。直观上，<i>α</i> 从 0 到 1 记录该格被液体一侧占据的比例，界面穿过混合单元。Cirrus-VOF 用 GPU 自适应八叉树在需要的区域加密，速度存在单元面上，通过压力投影约束不可压缩流动。</p>
+  <p><strong>薄膜元素处理网格看不清的结构。</strong> 当液膜远薄于网格间距，两侧气液界面可能落在同一格里，单个相分数无法描述膜的位置和两侧关系。VEIL 拟用随流动移动的拉格朗日元素记录膜。提案的首要问题是确定膜怎样占据单元，以及怎么在网格与膜之间分配体积、质量和表面张力，随后用 GOLD 的小区域高分辨率两相流作参照。</p>
+  <figure>
+    <img class="diagram" src="method.png" alt="上排是 VEIL 提案的 VOF 与嵌入式液膜双向耦合，下排是已有的从逐帧流场经几何和光学转换到 Blender Cycles 的渲染链路" width="2508" height="858">
+    <figcaption class="caption">图 1　VEIL 的物理目标与 P05 的渲染流程。[<a href="method.pdf">矢量 PDF</a>]</figcaption>
+  </figure>
+  <p class="sources">原始资料 泡泡模拟中文提案（2026-11-18）与 GUST 技术交接</p>
+</section>
+<section id="render">
+  <h2>泡沫怎么画</h2>
+  <div class="steps">
+    <div class="step"><h3>液面和杯子</h3><p>从 <i>α</i> 场提取三角网格。杯子的内外半径、杯底和杯口来自算例配置，速度场用于更新气泡位置和运动模糊。</p></div>
+    <div class="step"><h3>细泡沫的白色</h3><p>密集泡沫写成 OpenVDB 散射场。Cycles 追踪光在泡沫中的散射和液体对光的吸收。</p></div>
+    <div class="step"><h3>可见的单个泡</h3><p>较稀的含气液体用折射小球。贴杯壁的第一层用经邻居平面和杯壁裁切的气泡网格，再调整体积补回裁切损失。</p></div>
+  </div>
+  <div class="formula" aria-label="R 等于 phi 除以 alpha。散射系数约等于一点五乘 R 除以 D。"><span><i>R</i> = <i>φ</i> / <i>α</i></span><span><i>σ</i><sub>s</sub> ≈ 1.5 <i>R</i> / <i>D</i>　[m⁻¹]</span></div>
+  <p><i>φ</i> 是分散气体占整格的体积分数，<i>D</i> 是渲染网格上的代表泡径。泡越小，相同气量能分成越多颗泡，总迎光截面积随之增大，所以泡沫更容易发白。系数 1.5 来自该版对极窄前向衍射峰的近似处理。显式气泡和散射体积按每格气量分配，贴壁层放不下的余量交还给后方体积。</p>
+  <p class="sources">原始资料 P05 v2.3 渲染技术说明</p>
+</section>
+<section id="results">
+  <h2>初步结果</h2>
+  <div class="table" role="region" aria-label="初步结果汇总" tabindex="0">
+    <table>
+      <thead><tr><th scope="col">证据来源</th><th scope="col">初步结果</th><th scope="col">怎么理解</th></tr></thead>
+      <tbody>
+        <tr><td>团队 · Cirrus-VOF</td><td>三档 AMR 对照 <strong>1,464 / 1,464</strong> 通过。完整 N64 轨迹为 <strong>214 / 488</strong> 通过。</td><td>与 Aphros 的逐帧、逐字段结果。三档 AMR 通过指定的 10⁻⁶ 相对误差门槛，N64 完整三秒验收仍未通过。</td></tr>
+        <tr><td>团队 · F3/F4</td><td>F4 第 78 帧贴壁层为 <strong>1.76 / 1.89 mL（约 93%）</strong>。F3 记录到 1.0 秒、31 帧，随后标记失败。</td><td>F4 的 93% 是显式网格承载的壁层气量比例，剩余气量用于体积散射。F3 的泡沫场是被动输运，缺少泡的上浮机制。</td></tr>
+        <tr><td>本机 · A1 重算</td><td><strong>74 项通过，0 失败</strong>。2,000 粒子下，ℓ = 2 和 ℓ = 3 模态的频率误差为 <strong>0.624% / 0.201%</strong>。</td><td>对照真空泡的解析振荡频率。Backward Euler 与 BDF2 轨迹均由原 C++ 代码计算，再由原脚本生成 11 秒视频。</td></tr>
+        <tr><td>本机 · P05 渲染</td><td><strong>24 帧</strong> CUDA 渲染。画面气量为解析输入的 <strong>99.64%–105.71%</strong>。</td><td>验证从字段读取、网格与散射体积生成到 PNG 和 MP4 的流程。气量上限表明该测试里有约 5.7% 的渲染表示偏差。</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="clips">
+    <figure><video class="media" controls preload="none" poster="foam-preview.png" src="foam-preview.mp4" aria-label="本机泡沫杯渲染测试"></video><figcaption class="caption">泡沫杯 · 解析输入，24 帧，2 秒。</figcaption></figure>
+    <figure><video class="media" controls preload="none" poster="a1-oscillation.png" src="a1-oscillation.mp4" aria-label="A1 真空泡重算的振荡动画"></video><figcaption class="caption">A1 真空泡 · 原代码重算，330 帧，11 秒。</figcaption></figure>
+  </div>
+  <p class="sources">核对资料 Cirrus-VOF 进展报告（2026-11-17）、P05 v2.3 的 F4 贴壁记录、本机 A1 频率日志与渲染日志</p>
+</section>
+<section id="limits">
+  <h2>复现范围与缺口</h2>
+  <p>本机已重算独立的薄膜振荡，并验证了现有 P05 渲染程序能从相同格式的输入成片。原始 F4 的 <code>beer_glass_pour96_foam_buoyant</code> 流场尚未取得。原始倒啤酒从头重算需要冻结版本和算例配置。若先取得逐帧相分数、速度、含气率和泡径，就可以单独重做正式渲染。</p>
+</section>
+</main>
+</body>
+</html>
