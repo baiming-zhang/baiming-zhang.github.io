@@ -36,7 +36,7 @@
 <header>
   <p class="meta">方法与初步结果 · 2026-11-19</p>
   <h1 lang="en">VOF with Lagrangian Thin Films</h1>
-  <p class="lede">倒啤酒时，射流和液面可以用网格计算，但泡沫里把气泡隔开的液膜只有微米厚。VEIL 的想法是让网格算大尺度流动，用嵌在网格里的薄膜元素表示这些细结构。目前已有两相流求解器和泡沫渲染器，嵌入式液膜耦合仍处在提案阶段。</p>
+  <p class="lede">倒啤酒时，射流和液面可以用网格计算，泡沫里把气泡隔开的液膜却只有微米厚。现有求解器用两个网格场追踪网格看不清的气泡，已经能计算含气液体的输运、上浮和排液。VEIL 提案进一步研究怎样把单张薄膜作为拉格朗日元素嵌入网格。</p>
   <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#limits">复现范围</a></nav>
 </header>
 <div class="hero">
@@ -47,18 +47,28 @@
   <div class="facts">
     <div class="fact"><strong>团队 · 约 93% 的壁层气量显式成泡</strong><span>F4 第 78 帧，5,512 个贴壁气泡承载 1.76 / 1.89 mL。</span></div>
     <div class="fact"><strong>本机 · 74 项测试通过，24 帧泡沫渲染完成</strong><span>薄膜侧从源码重算。泡沫杯用解析输入验证渲染链路。</span></div>
-    <div class="fact pending"><strong>待验证 · VEIL 的网格—液膜耦合</strong><span>原始 F4 求解和正式重渲染仍等求解器及流场数据。</span></div>
+    <div class="fact pending"><strong>待验证 · VEIL 的网格—液膜耦合</strong><span>已有实现采用分散气体连续场。原始 F4 的完整成片另需核对求解与渲染版本。</span></div>
   </div>
 </div>
 <section id="method">
   <h2>物理方法</h2>
-  <p><strong>网格处理看得清的结构。</strong> VOF（流体体积法）给每格一个相分数 <i>α</i>。直观上，<i>α</i> 从 0 到 1 记录该格被液体一侧占据的比例，界面穿过混合单元。Cirrus-VOF 用 GPU 自适应八叉树在需要的区域加密，速度存在单元面上，通过压力投影约束不可压缩流动。</p>
-  <p><strong>薄膜元素处理网格看不清的结构。</strong> 当液膜远薄于网格间距，两侧气液界面可能落在同一格里，单个相分数无法描述膜的位置和两侧关系。VEIL 拟用随流动移动的拉格朗日元素记录膜。提案的首要问题是确定膜怎样占据单元，以及怎么在网格与膜之间分配体积、质量和表面张力，随后用 GOLD 的小区域高分辨率两相流作参照。</p>
+  <p><strong>VOF 从相分数重建液面。</strong> Cirrus-VOF 在每个混合单元里用一张平面近似气液界面（PLIC），按穿过网格面的几何体积更新相分数 <i>α</i>。速度存在网格面上（MAC 布局），求解器用变密度压力投影约束不可压缩流动，用高度函数估计曲率并施加表面张力。基础求解器支持自适应八叉树，下面的倒啤酒泡沫模型运行在等间距的最细网格上。</p>
+  <h3>现有泡沫求解器怎样表示小气泡</h3>
+  <p>v2.3 在 VOF 的液体一侧再存两个量。<i>φ</i> 是分散气体占整格的体积分数，<i>n</i> 是每立方米的气泡数。这样纯液体占 <i>α</i> − <i>φ</i>，由 VOF 显式分辨的自由气体占 1 − <i>α</i>。等效泡径由这两个量算出。</p>
+  <div class="formula" aria-label="等效泡径等于六 phi 除以 pi n 的三次方根"><span><i>d</i> = (6<i>φ</i> / (π<i>n</i>))<sup>1/3</sup></span><span><i>c</i> = <i>φ</i> / <i>α</i></span></div>
+  <div class="steps">
+    <div class="step"><h3>卷气</h3><p>检测网格上与大气隔离的小气团，把符合条件的气团体积和泡数记进 <i>φ</i> 与 <i>n</i>。达到阈值的大气团继续由 VOF 分辨。</p></div>
+    <div class="step"><h3>输运与上浮</h3><p>两个场与液相共用 PLIC 面通量。模型用 F4 的 <i>c</i> = 0.64 作为拥挤阈值。低于阈值时小泡相对液体上浮，拥挤会减慢上浮。</p></div>
+    <div class="step"><h3>湿泡沫排液</h3><p>达到拥挤阈值后，液体按 Darcy 模型向下排出，气体按等体积向上换位。每步追踪卷入、流出和截断的气量与泡数，用独立账本检查收支。</p></div>
+  </div>
+  <p>F4 v2.3 让分散气体降低混合物受重力的有效密度。v2.3.1 加了两个默认关闭的开关，可让压力投影等环节也使用混合密度，并为杯壁加入湿泡沫滑动摩擦。现有模型还省略了自由表面的泡沫破裂释气。</p>
+  <h3>VEIL 拟加入显式薄膜的位置</h3>
+  <p>当液膜远薄于网格间距，两侧气液界面可能落在同一格里。VEIL 拟用随流动移动的拉格朗日元素记录膜，并研究网格与膜如何分配体积、质量和表面张力。提案计划用 GOLD 的小区域高分辨率两相流作参照。</p>
   <figure>
     <img class="diagram" src="method.png" alt="上排是 VEIL 提案的 VOF 与嵌入式液膜双向耦合，下排是已有的从逐帧流场经几何和光学转换到 Blender Cycles 的渲染链路" width="2508" height="858">
     <figcaption class="caption">图 1　VEIL 的物理目标与 P05 的渲染流程。[<a href="method.pdf">矢量 PDF</a>]</figcaption>
   </figure>
-  <p class="sources">原始资料 泡泡模拟中文提案（2026-11-18）与 GUST 技术交接</p>
+  <p class="sources">原始资料 泡泡模拟中文提案（2026-11-18）、Cirrus-VOF v1.0、v2.3 泡沫模型与 v2.3.1 的贴壁摩擦说明</p>
 </section>
 <section id="render">
   <h2>泡沫怎么画</h2>
@@ -92,7 +102,7 @@
 </section>
 <section id="limits">
   <h2>复现范围与缺口</h2>
-  <p>本机已重算独立的薄膜振荡，并验证了现有 P05 渲染程序能从相同格式的输入成片。原始 F4 的 <code>beer_glass_pour96_foam_buoyant</code> 流场尚未取得。原始倒啤酒从头重算需要冻结版本和算例配置。若先取得逐帧相分数、速度、含气率和泡径，就可以单独重做正式渲染。</p>
+  <p>本机已重算独立的薄膜振荡，并验证了现有 P05 渲染程序能从相同格式的输入成片。现已取得 Cirrus-VOF 源码和 <code>beer_glass_pour96_foam_buoyant</code> 算例配置。团队原始 F4 发布帧对应的运行目录和续算检查点尚未取得，原成片的同帧对照仍待验证。</p>
 </section>
 </main>
 </body>
