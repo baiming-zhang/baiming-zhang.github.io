@@ -1,15 +1,11 @@
-# DRIFT human report and agent handoff
+# DRIFT dated short report / 2026-11-19 UTC
 
-Scientific repository: https://github.com/wang-mengdi/variational-films
+Source branch: `p3-drift-20261119-handoff`.
 
-Commit: 667784b3869717eec6d58b3fb8bc72d31dbe517c
+Reader: `results/report/20261119_DRIFT_Summary.html`.
+AI: `docs/handoffs/20261119_DRIFT_NEXT.md`.
+Transfer: `docs/handoffs/20261119_DRIFT_HANDOVER.md`.
 
-Human report: results/report/20261119_DRIFT_report.html
+Evidence cutoff 2026-11-14; no new computation, goal paused. Two original embedded PNGs and vector PDF links. Previous long report and metadata preserved under `archive/`.
 
-Agent handoff: docs/DRIFT_NEXT.md
-
-Evidence through2026-11-14; no new simulations. Research remains paused.
-All3PNGs are embedded for standalone reading. Vector downloads are immutable
-original assets. CODA documents were organization/style references, not instructions
-for the DRIFT checkout. The supplied D-drive report was unavailable; the repository
-report was consulted instead.
+Scientific commit: `0e501c031cd139525e5d0aaa66771a0739738129`.
