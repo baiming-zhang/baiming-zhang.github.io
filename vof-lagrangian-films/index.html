@@ -41,8 +41,8 @@
 </header>
 <div class="hero">
   <figure>
-    <img class="media" src="foam-preview.png" alt="解析输入驱动的泡沫杯关键帧，透明杯中有金色液体、细气泡和白色泡沫层" width="960" height="540">
-    <figcaption class="caption">本地泡沫杯第 14 帧。原版 P05 渲染器读取解析测试字段生成的画面。</figcaption>
+    <img class="media" src="cirrus-f4-short.png" alt="Cirrus-VOF 求解后渲染的倒啤酒缩尺算例，射流冲击杯中液面" width="960" height="540">
+    <figcaption class="caption">本机 Cirrus-VOF 缩尺 F4，0.10 秒末帧。P05 渲染器读取求解器输出的液面、速度及含气字段。</figcaption>
   </figure>
   <div class="facts">
     <div class="fact"><strong>团队 · 约 93% 的壁层气量显式成泡</strong><span>F4 第 78 帧，5,512 个贴壁气泡承载 1.76 / 1.89 mL。</span></div>
@@ -78,7 +78,7 @@
     <div class="step"><h3>可见的单个泡</h3><p>较稀的含气液体用折射小球。贴杯壁的第一层用经邻居平面和杯壁裁切的气泡网格，再调整体积补回裁切损失。</p></div>
   </div>
   <div class="formula" aria-label="R 等于 phi 除以 alpha。散射系数约等于一点五乘 R 除以 D。"><span><i>R</i> = <i>φ</i> / <i>α</i></span><span><i>σ</i><sub>s</sub> ≈ 1.5 <i>R</i> / <i>D</i>　[m⁻¹]</span></div>
-  <p><i>φ</i> 是分散气体占整格的体积分数，<i>D</i> 是渲染网格上的代表泡径。泡越小，相同气量能分成越多颗泡，总迎光截面积随之增大，所以泡沫更容易发白。系数 1.5 来自该版对极窄前向衍射峰的近似处理。显式气泡和散射体积按每格气量分配，贴壁层放不下的余量交还给后方体积。</p>
+  <p><i>φ</i> 是分散气体占整格的体积分数，<i>D</i> 是渲染网格上的代表泡径。泡越小，相同气量能分成越多颗泡，总迎光截面积随之增大，所以泡沫更容易发白。系数 1.5 来自该版对极窄前向衍射峰的近似处理。显式气泡和散射体积按每格气量分配，贴壁层放不下的余量交还给后方体积。射流可以将气泡随液体带向下方，气泡同时相对液体向上漂移，两者的叠加决定实际轨迹。</p>
   <p class="sources">原始资料 P05 v2.3 渲染技术说明</p>
 </section>
 <section id="results">
@@ -91,12 +91,12 @@
         <tr><td>团队 · F3/F4</td><td>F4 第 78 帧贴壁层为 <strong>1.76 / 1.89 mL（约 93%）</strong>。F3 记录到 1.0 秒、31 帧，随后标记失败。</td><td>F4 的 93% 是显式网格承载的壁层气量比例，剩余气量用于体积散射。F3 的泡沫场是被动输运，缺少泡的上浮机制。</td></tr>
         <tr><td>本机 · Cirrus 泡沫回归</td><td>v2.3.1 GPU 构建的 <code>--foam</code> <strong>8 项通过</strong>。稀泡上浮速度 0.0430 m/s，模型参考值 0.04255 m/s。湿泡沫排液速度约 0.685 mm/s。</td><td>验证了代码实现与本模型参考值的一致性。小气团转化和重启也通过了气量平衡与逐位一致性检查。</td></tr>
         <tr><td>本机 · A1 重算</td><td><strong>74 项通过，0 失败</strong>。2,000 粒子下，ℓ = 2 和 ℓ = 3 模态的频率误差为 <strong>0.624% / 0.201%</strong>。</td><td>对照真空泡的解析振荡频率。Backward Euler 与 BDF2 轨迹均由原 C++ 代码计算，再由原脚本生成 11 秒视频。</td></tr>
-        <tr><td>本机 · P05 渲染</td><td><strong>24 帧</strong> CUDA 渲染。画面气量为解析输入的 <strong>99.64%–105.71%</strong>。</td><td>验证从字段读取、网格与散射体积生成到 PNG 和 MP4 的流程。气量上限表明该测试里有约 5.7% 的渲染表示偏差。</td></tr>
+        <tr><td>本机 · 缩尺 F4</td><td>Cirrus-VOF 求解至 <strong>0.10 秒，653 步</strong>，末态分散气体 <strong>0.184 mL</strong>。</td><td>杯体约为原算例一半，网格间距保持 1 mm。用六帧真实求解输出渲染，视频放慢播放。原尺寸的完整倒入和沉降需要更长的模拟时间。</td></tr>
       </tbody>
     </table>
   </div>
   <div class="clips">
-    <figure><video class="media" controls preload="none" poster="foam-preview.png" src="foam-preview.mp4" aria-label="本机泡沫杯渲染测试"></video><figcaption class="caption">泡沫杯 · 解析输入，24 帧，2 秒。</figcaption></figure>
+    <figure><video class="media" controls preload="none" poster="cirrus-f4-short.png" src="cirrus-f4-short.mp4" aria-label="真实 Cirrus-VOF 缩尺倒啤酒求解与渲染"></video><figcaption class="caption">缩尺 F4 · Cirrus-VOF 真正求解的六帧，物理时间 0–0.10 秒。</figcaption></figure>
     <figure><video class="media" controls preload="none" poster="a1-oscillation.png" src="a1-oscillation.mp4" aria-label="A1 真空泡重算的振荡动画"></video><figcaption class="caption">A1 真空泡 · 原代码重算，330 帧，11 秒。</figcaption></figure>
   </div>
   <p class="sources">核对资料 Cirrus-VOF 进展报告（2026-11-17）、P05 v2.3 的 F4 贴壁记录、本机 A1 频率日志与渲染日志</p>
