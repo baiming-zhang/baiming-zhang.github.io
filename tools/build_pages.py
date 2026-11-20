@@ -129,7 +129,7 @@ def build(source, output, repository, commit):
             name = src.lstrip('/') if src.startswith('/') else posixpath.normpath(posixpath.join(parent, src))
             return match.group(1) + resources.get(name, src) + match.group(3)
         text = re.sub(r'(<img\b[^>]*\bsrc=["\x27])([^"\x27]+)(["\x27])', media_resource, text, flags=re.I)
-        if parent == 'vof-lagrangian-films':
+        if parent in {'vof-lagrangian-films', 'VariDrainage/froth/report'}:
             def route_video(match):
                 return re.sub(r'(\s(?:src|poster)=["\x27])([^"\x27]+)(["\x27])', media_resource, match.group(), flags=re.I)
             text = re.sub(r'<video\b[^>]*>', route_video, text, flags=re.I)
