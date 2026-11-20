@@ -59,10 +59,12 @@
   <p>在粗网格上，纯液体记为 <i>L</i>，分散泡气体记为 <i>B</i>，由 VOF 解析的气体记为 <i>G</i>。在 Cirrus 变量中，<i>α</i> 是液体与分散泡合占的体积分数，<i>φ</i> 是分散泡占整格的体积分数。</p>
   <div class="formula" id="three-component-update" aria-label="三组分体积分数及守恒转换"><span><i>L</i> = <i>α</i> − <i>φ</i></span><span><i>B</i> = <i>φ</i></span><span><i>G</i> = 1 − <i>α</i></span><span>Δ<i>α</i> = Δ<i>φ</i> = (<i>e<sub>C</sub></i> − <i>r<sub>C</sub></i>)/<i>V<sub>C</sub></i></span></div>
   <p><i>e<sub>C</sub></i> 和 <i>r<sub>C</sub></i> 是一步内转入和转出分散泡的气体体积，<i>V<sub>C</sub></i> 是单元体积。受控开孔验收中，从微观界面识别与外部气体连通的原泡，再将同一笔气量从 <i>B</i> 转入 <i>G</i>。转换保持纯液体和总气量守恒。单泡膜何时自行开孔，以及原泡气体穿过孔口的输运量，仍需从微观求解和守恒示踪得到。</p>
-  <p id="vof-only-full-status">半尺寸纯 VOF 对照已完成。70 ms 关阀，推进至 85 ms，关阀后新增进液为零。原尺寸纯 VOF 对照仍在求解，计划在 3.00 秒关阀并推进至 5.01 秒。</p>
+  <p id="vof-only-full-status"><strong>原尺寸纯 VOF 对照已完成。</strong> 沿用 96 × 160 × 96 的 1 mm 网格，关闭原有泡沫模块，从 0 秒算到 5.01 秒，共 29,435 步、102 帧。3.00 秒关阀后累计新增进液为零，全程液量账最大相对误差为 5.05 × 10⁻¹⁴。</p>
+  <figure><a href="beer-vof-only-full-sections.png"><img class="diagram" src="beer-vof-only-full-sections.png" width="1892" height="913" loading="lazy" alt="关闭泡沫模块的原尺寸液体体积分数切片，分别为初态、3 秒关阀和 5.01 秒末态"></a><figcaption class="caption">原尺寸纯 VOF · 初态、关阀和末态。杯上方的取值块属于进液边界。<a href="beer-vof-only-full-sections.pdf">切片 PDF</a></figcaption></figure>
+  <p>末态动能约为关阀时的 0.83%，液面高度的均方根波动约 2.08 mm，尚未达到回稳判据。这是关闭旧泡沫模型的整杯基线。DNS 双向转换闭合仍待整杯验证。</p>
   <div class="clips">
-    <figure><a href="beer-vof-only-pilot.png"><img class="media" src="beer-vof-only-pilot.png" width="640" height="360" loading="lazy" alt="关闭旧泡沫模型后，半尺寸杯在关阀后 15 毫秒的单帧渲染"></a><figcaption class="caption">纯 VOF 单帧 · 85 ms</figcaption></figure>
-    <figure><a href="beer-vof-only-sections.png"><img class="diagram" src="beer-vof-only-sections.png" loading="lazy" alt="纯 VOF 液量截面，比较初态、关阀时刻和关阀后 15 毫秒"></a><figcaption class="caption">液体体积分数切片 · <a href="beer-vof-only-sections.pdf">PDF</a></figcaption></figure>
+    <figure><a href="beer-vof-only-pilot.png"><img class="media" src="beer-vof-only-pilot.png" width="640" height="360" loading="lazy" alt="关闭旧泡沫模型后，半尺寸杯在关阀后 15 毫秒的单帧渲染"></a><figcaption class="caption">半尺寸纯 VOF 单帧 · 85 ms</figcaption></figure>
+    <figure><a href="beer-vof-only-sections.png"><img class="diagram" src="beer-vof-only-sections.png" loading="lazy" alt="半尺寸纯 VOF 液量截面，比较初态、关阀时刻和关阀后 15 毫秒"></a><figcaption class="caption">半尺寸液体体积分数切片 · <a href="beer-vof-only-sections.pdf">PDF</a></figcaption></figure>
   </div>
   <p class="sources"><a href="conservative-closure.html">读完整守恒推导</a> · <a href="conservative-closure.html#micro-event-update">查阅受控开孔的公式和数值结果</a></p>
 </section>
