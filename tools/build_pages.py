@@ -104,7 +104,7 @@ def build(source, output, repository, commit):
         # downloadable evidence (sources, logs, audit ledgers and vector PDFs)
         # uses the same commit-pinned router, preserving all original bytes.
         reference_download = name.startswith(('VariDrainage/retained-reference/', 'VariDrainage/retained-five/')) and path.suffix.lower() not in {'.html', '.png'}
-        plate_report_asset = name.startswith(('GeoBC-show/assets/plate-p06-v1/', 'GeoBC-show/assets/plate-p07-v1/')) and path.suffix.lower() in {'.png', '.json', '.csv', '.u8'}
+        plate_report_asset = name.startswith(('GeoBC-show/assets/plate-p06-v1/', 'GeoBC-show/assets/plate-p07-v1/', 'GeoBC-show/assets/plate-p08-v1/')) and path.suffix.lower() in {'.png', '.json', '.csv', '.u8'}
         vof_film_media = name.startswith('vof-lagrangian-films/') and path.suffix.lower() in {'.png', '.mp4', '.pdf'}
         if vof_film_media or plate_report_asset or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))

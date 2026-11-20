@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-20",
   "tasks": [
     {
       "id": "R01",
@@ -896,6 +896,30 @@
         {
           "label": "逐case曲线",
           "url": "P07.html#loading-curves"
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "phase": "Plate",
+      "title": "Plate · GINOT载荷几何融合",
+      "due": "2026-11-20",
+      "start": "2026-11-20",
+      "completed": "2026-11-20",
+      "status": "已完成",
+      "deliverables": "GINOT纯新初值；全5例TRAIN；每步全网格20帧；40000更新，与P02 GNOT对照",
+      "review": "同P02输入/目标/归一化/seed/优化器/LR/更新顺序/预算；无validation/test，无泛化结论",
+      "dependencies": "P07",
+      "issues": "GINOT坐标/载荷分离，几何与载荷token融合；996029参数；同P07全5例40000步；保留P01-P07",
+      "page": "P08.html",
+      "results": [
+        {
+          "label": "拟合结果与交互场",
+          "url": "P08.html"
+        },
+        {
+          "label": "逐case曲线",
+          "url": "P08.html#loading-curves"
         }
       ]
     }
