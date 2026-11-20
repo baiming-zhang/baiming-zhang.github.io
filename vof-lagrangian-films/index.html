@@ -34,20 +34,20 @@
 <body>
 <main>
 <header>
-  <p class="meta">方法与初步结果 · 2026-11-19</p>
+  <p class="meta">方法与初步结果 · 2026-11-20</p>
   <h1 lang="en">VOF with Lagrangian Thin Films</h1>
   <p class="lede">倒啤酒时，射流和液面可以用网格计算，泡沫里把气泡隔开的液膜却只有微米厚。现有求解器用两个网格场追踪网格看不清的气泡，已经能计算含气液体的输运、上浮和排液。VEIL 提案进一步研究怎样把单张薄膜作为拉格朗日元素嵌入网格。</p>
-  <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#rising-bubble">气泡上浮</a><a href="#limits">复现范围</a></nav>
+  <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#f4-full">原尺寸 F4 视频</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#rising-bubble">气泡上浮</a><a href="#limits">复现范围</a></nav>
 </header>
-<div class="hero">
+<div class="hero" id="f4-full">
   <figure>
-    <img class="media" src="cirrus-f4-short.png" alt="Cirrus-VOF 求解后渲染的倒啤酒缩尺算例，射流冲击杯中液面" width="960" height="540">
-    <figcaption class="caption">本机 Cirrus-VOF 缩尺 F4，0.10 秒末帧。P05 渲染器读取求解器输出的液面、速度及含气字段。</figcaption>
+    <video class="media" controls playsinline preload="none" poster="cirrus-f4-frame78-poster.png" src="cirrus-f4-full.mp4" width="960" height="540" aria-label="Cirrus-VOF 原尺寸 F4 倒啤酒，完整三秒求解与渲染"></video>
+    <figcaption class="caption">原尺寸 F4 · 0–3.00 秒，91 帧，30 fps。<a href="cirrus-f4-frame78-4k.png">第 78 帧 4K 原图</a></figcaption>
   </figure>
   <div class="facts">
-    <div class="fact"><strong>团队 · 约 93% 的壁层气量显式成泡</strong><span>F4 第 78 帧，5,512 个贴壁气泡承载 1.76 / 1.89 mL。</span></div>
+    <div class="fact"><strong>本机 · 原尺寸 F4 已完成</strong><span>1 mm 网格，17,452 步。3 秒时分散气体约 58.61 mL。</span></div>
     <div class="fact"><strong>本机 · Cirrus 泡沫模块 8 项回归通过</strong><span>覆盖输运、上浮、排液、卷气、续算、浮力和气量账。</span></div>
-    <div class="fact pending"><strong>待验证 · VEIL 的网格—液膜耦合</strong><span>已有实现采用分散气体连续场。原始 F4 的完整成片另需核对求解与渲染版本。</span></div>
+    <div class="fact pending"><strong>待验证 · VEIL 的网格—液膜耦合</strong><span>这段 F4 成片使用现有的分散气体连续场模型。显式液膜耦合仍在提案阶段。</span></div>
   </div>
 </div>
 <section id="method">
@@ -72,6 +72,7 @@
 </section>
 <section id="render">
   <h2>泡沫怎么画</h2>
+  <p><strong>原尺寸 F4 的制作过程。</strong> Cirrus-VOF v2.3.1 从仓库的初始条件出发，在 96 × 160 × 96 的 1 mm 网格上推进 17,452 步，保存每帧的相分数、三分量速度、含气率和泡径。P05 渲染器逐帧重建画面用的液面网格，从含气量生成散射体积和显式气泡，再用 Blender Cycles 渲染并编码 MP4。这个过程允许相邻帧重建出不同的液面连通关系。显式薄膜网格的动力学拓扑变换属于后续验证。</p>
   <div class="steps">
     <div class="step"><h3>液面和杯子</h3><p>从 <i>α</i> 场提取三角网格。杯子的内外半径、杯底和杯口来自算例配置，速度场用于更新气泡位置和运动模糊。</p></div>
     <div class="step"><h3>细泡沫的白色</h3><p>密集泡沫写成 OpenVDB 散射场。Cycles 追踪光在泡沫中的散射和液体对光的吸收。</p></div>
@@ -92,6 +93,7 @@
         <tr><td>本机 · Cirrus 泡沫回归</td><td>v2.3.1 GPU 构建的 <code>--foam</code> <strong>8 项通过</strong>。稀泡上浮速度 0.0430 m/s，模型参考值 0.04255 m/s。湿泡沫排液速度约 0.685 mm/s。</td><td>验证了代码实现与本模型参考值的一致性。小气团转化和重启也通过了气量平衡与逐位一致性检查。</td></tr>
         <tr><td>本机 · A1 重算</td><td><strong>74 项通过，0 失败</strong>。2,000 粒子下，ℓ = 2 和 ℓ = 3 模态的频率误差为 <strong>0.624% / 0.201%</strong>。</td><td>对照真空泡的解析振荡频率。Backward Euler 与 BDF2 轨迹均由原 C++ 代码计算，再由原脚本生成 11 秒视频。</td></tr>
         <tr><td>本机 · 缩尺 F4</td><td>Cirrus-VOF 求解至 <strong>0.10 秒，653 步</strong>，末态分散气体 <strong>0.184 mL</strong>。</td><td>杯体约为原算例一半，网格间距保持 1 mm。用六帧真实求解输出渲染，视频放慢播放。原尺寸的完整倒入和沉降需要更长的模拟时间。</td></tr>
+        <tr><td>本机 · 原尺寸 F4</td><td>求解 <strong>3.00 秒，17,452 步</strong>，末态分散气体约 <strong>58.61 mL</strong>。完整视频 91 帧，另保存一张 4K 关键帧。</td><td>采用仓库所附倒入配置。视频覆盖这次求解的三秒，沉降及与团队成片的逐帧对照仍待验证。</td></tr>
       </tbody>
     </table>
   </div>
@@ -112,7 +114,7 @@
 </section>
 <section id="limits">
   <h2>复现范围与缺口</h2>
-  <p>本机已从源码跑通 Cirrus-VOF 泡沫模块回归，并启动仓库所附的 <code>beer_glass_pour96_foam_buoyant</code> 算例。该配置为 96 × 160 × 96 格，网格间距 1 mm，目标物理时间 3 秒。团队原始 F4 发布帧对应的运行目录和续算检查点尚未取得，原成片的同帧对照仍待验证。</p>
+  <p>本机已从源码跑通 Cirrus-VOF 泡沫模块回归，完成仓库所附 <code>beer_glass_pour96_foam_buoyant</code> 配置的三秒求解和整段渲染。该次运行使用 Cirrus-VOF <code>e49ad3a</code> 和 P05 渲染器 <code>46be115</code>。团队原始发布帧对应的运行目录和续算检查点尚未取得，原成片的同帧对照仍待验证。</p>
 </section>
 </main>
 </body>
