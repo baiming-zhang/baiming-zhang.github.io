@@ -37,7 +37,7 @@
   <p class="meta">方法与初步结果 · 2026-11-20</p>
   <h1 lang="en">VOF with Lagrangian Thin Films</h1>
   <p class="lede">倒啤酒时，射流和液面可以用网格计算，泡沫里把气泡隔开的液膜却只有微米厚。现有求解器用两个网格场追踪网格看不清的气泡，已经能计算含气液体的输运、上浮和排液。VEIL 提案进一步研究怎样把单张薄膜作为拉格朗日元素嵌入网格。</p>
-  <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#f4-full">原尺寸 F4 视频</a><a href="#f4-interface-only">关闭白色散射的单帧</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#rising-bubble">气泡上浮</a><a href="#limits">复现范围</a></nav>
+  <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#conservative-closure">守恒推导与纯 VOF 对照</a><a href="#f4-full">原尺寸 F4 视频</a><a href="#f4-interface-only">关闭白色散射的单帧</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#rising-bubble">气泡上浮</a><a href="#limits">复现范围</a></nav>
 </header>
 <div class="hero" id="f4-full">
   <figure>
@@ -54,6 +54,16 @@
     <div class="fact pending"><strong>待验证 · VEIL 的网格—液膜耦合</strong><span>这段 F4 成片使用现有的分散气体连续场模型。显式液膜耦合仍在提案阶段。</span></div>
   </div>
 </div>
+<section id="conservative-closure">
+  <h2>水、气与泡沫的守恒转换</h2>
+  <p>从两相方程得到转换的精确守恒式。气体在 VOF 气相和分散泡表示之间转移时，<i>α</i> 与 <i>φ</i> 增减同一笔气量，液体体积 <i>α</i> − <i>φ</i> 不变。推导还给出一对精确的平移球泡解，证明相同的粗网格状态可以产生不同的跨面气量，因此单凭当前粗变量无法唯一决定演化。</p>
+  <p id="vof-only-full-status">半尺寸纯 VOF 对照已完成。70 ms 关阀，推进至 85 ms，关阀后新增进液为零。原尺寸纯 VOF 对照仍在求解，计划在 3.00 秒关阀并推进至 5.01 秒。</p>
+  <div class="clips">
+    <figure><a href="beer-vof-only-pilot.png"><img class="media" src="beer-vof-only-pilot.png" width="640" height="360" loading="lazy" alt="关闭旧泡沫模型后，半尺寸杯在关阀后 15 毫秒的单帧渲染"></a><figcaption class="caption">纯 VOF 单帧 · 85 ms</figcaption></figure>
+    <figure><a href="beer-vof-only-sections.png"><img class="diagram" src="beer-vof-only-sections.png" loading="lazy" alt="纯 VOF 液量截面，比较初态、关阀时刻和关阀后 15 毫秒"></a><figcaption class="caption">液体体积分数切片 · <a href="beer-vof-only-sections.pdf">PDF</a></figcaption></figure>
+  </div>
+  <p class="sources"><a href="conservative-closure.html">读完整推导、精确反例和验证边界</a></p>
+</section>
 <section id="method">
   <h2>物理方法</h2>
   <p><strong>VOF 从相分数重建液面。</strong> Cirrus-VOF 在每个混合单元里用一张平面近似气液界面（PLIC），按穿过网格面的几何体积更新相分数 <i>α</i>。速度存在网格面上（MAC 布局），求解器用变密度压力投影约束不可压缩流动，用高度函数估计曲率并施加表面张力。基础求解器支持自适应八叉树，下面的倒啤酒泡沫模型运行在等间距的最细网格上。</p>
