@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f8f5">
+<title>Harness 数值求解基准 · Agent Climate</title><meta name="description" content="比较七个模型在十道解析方程题上的数值误差、token 和计时，查看逐题、逐时及逐点明细。"><link rel="stylesheet" href="page.css"><script src="app.js" defer></script></head>
+<body><header><div class="frame top"><nav aria-label="项目路径"><a href="/">Baiming Zhang</a><span>/</span><a href="/project/">Projects</a><span>/</span><a href="/Agent_climate/">Agent Climate</a></nav><a class="download" href="benchmark-results.xlsx" download>下载完整 Excel</a></div></header>
+<main class="frame">
+<section class="intro"><div class="kicker">AGENT CLIMATE · 数值实验</div><h1>Harness 与数值求解精度</h1><p>7 个模型分别在基础提示和增加 14 条建模约束的条件下，独立完成相同的 10 道解析方程题。每组运行一次。</p><p class="scope">覆盖一维、二维和三维理想问题。WRF 天气预报需另行评测。</p></section>
+<section class="findings" aria-label="主要结果"><div><span>平均误差降低的模型</span><strong>3 <small>/ 6</small></strong><p>按有共同有效题的模型统计</p></div><div><span>总 token 增幅</span><strong>+134.3<small>%</small></strong><p>基础 393 万 · 加约束 922 万</p></div><div><span>端到端耗时增加的模型</span><strong>7 <small>/ 7</small></strong><p>增幅 18.5% 至 164.9%</p></div></section>
+<section class="panel" id="overview"><div class="panel-head"><div><h2>七个模型，两种提示</h2><p>选择指标对照两组结果，点模型名查看明细。</p></div><label>汇总指标<select id="measure"></select></label></div>
+<div class="scroll"><table id="summary"><thead><tr><th>模型</th><th>基础提示</th><th>加 14 条约束</th><th>变化率</th><th>有效题数<br><small>基础 / 加约束</small></th></tr></thead><tbody></tbody></table></div><p id="scale" class="caption"></p></section>
+<section class="panel" id="detail"><div class="panel-head"><div><h2>指标明细</h2><p id="detailnote">按模型、题目或运行条件筛选。</p></div></div>
+<div class="controls"><label>数据层级<select id="dataset"></select></label><label>指标<select id="field"></select></label><label>模型<select id="model"></select></label><label>提示条件<select id="arm"></select></label><label id="casebox">题目<select id="case"></select></label><label id="kindbox">结果类型<select id="kind"></select></label><label id="searchbox">检索计时记录<input id="search" type="search" placeholder="阶段、范围或文件名"></label></div>
+<div class="scroll" aria-live="polite" aria-busy="false" id="grid"><table id="detailtable"><thead></thead><tbody></tbody></table></div><div class="pager"><span id="count" role="status"></span><div><button id="previous" type="button">上一页</button><button id="next" type="button">下一页</button></div></div></section>
+<details class="methods"><summary>读数口径与实验范围</summary><ul><li>相对 L2 误差＝误差场的二范数除以参考场的二范数。每题合并所有指定时空点，总表对有效题等权取均值。单组的中位数和其他误差可在汇总指标中切换。</li><li>Luna 基础组十题均提交了嵌套数组，正式评分无效。其格式补算可在辅助评分中查看。横线表示缺测、无效或不适用。</li><li>缓存输入包含在输入 token 内，推理 token 包含在输出内。时间以秒计。回合遥测中列出的内部推理秒数无可用测量。</li><li>客户端事件时间取同类区间的并集。数值计算、验证和其他工作按各组原始范围计时，可能重叠。旧版快照、事件和汇总请勿跨记录相加。</li><li>第 09、10 题的积分误差覆盖固定采样窗口。逐点偏差是预测减参考。逐点、梯度、边界和物理检查均来自冻结的提交及其评分。</li></ul></details>
+<noscript><p>请启用 JavaScript 查看互动表格，或下载完整 Excel。</p></noscript></main>
+<footer><div class="frame foot"><span>Agent Climate · 解析方程基准</span><a href="/project/">返回 Projects</a></div></footer></body></html>
