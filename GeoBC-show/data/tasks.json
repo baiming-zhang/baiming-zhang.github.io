@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "tasks": [
     {
       "id": "R01",
@@ -920,6 +920,30 @@
         {
           "label": "逐case曲线",
           "url": "P08.html#loading-curves"
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "phase": "Plate",
+      "title": "Plate · 高梯度五路线对照",
+      "due": "2026-11-21",
+      "start": "2026-11-21",
+      "completed": "2026-11-21",
+      "status": "已完成",
+      "deliverables": "五路线各40000步；全5例TRAIN；每步全网格20帧；对照P08与GNOT；全场与局部指标",
+      "review": "同P08数据/归一化/seed/优化器/LR/更新顺序/预算；损失/计算不同，非等FLOPs；无泛化结论",
+      "dependencies": "P08",
+      "issues": "四组996029参数，局部细化996277；五组全5例40000步；保留P01-P08",
+      "page": "P09.html",
+      "results": [
+        {
+          "label": "拟合结果与交互场",
+          "url": "P09.html"
+        },
+        {
+          "label": "逐case曲线",
+          "url": "P09.html#loading-curves"
         }
       ]
     }
