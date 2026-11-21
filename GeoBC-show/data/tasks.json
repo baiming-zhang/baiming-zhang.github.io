@@ -946,6 +946,30 @@
           "url": "P09.html#loading-curves"
         }
       ]
+    },
+    {
+      "id": "P10",
+      "phase": "Plate",
+      "title": "Plate · GNOT高梯度五路线对照",
+      "due": "2026-11-21",
+      "start": "2026-11-21",
+      "completed": "2026-11-21",
+      "status": "已完成",
+      "deliverables": "五路线各40000步；全5例TRAIN；每步全网格20帧；对照原GNOT与GINOT；全场与局部指标",
+      "review": "同GNOT基准数据/归一化/seed/优化器/LR/更新顺序/预算；损失/计算不同，非等FLOPs；无泛化结论",
+      "dependencies": "P09",
+      "issues": "三组980964参数，局部990520，多尺度984932；五组全5例40000步；保留P01-P09",
+      "page": "P10.html",
+      "results": [
+        {
+          "label": "拟合结果与交互场",
+          "url": "P10.html"
+        },
+        {
+          "label": "逐case曲线",
+          "url": "P10.html#loading-curves"
+        }
+      ]
     }
   ]
 }
