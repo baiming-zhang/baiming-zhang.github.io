@@ -56,6 +56,8 @@
 </div>
 <section id="conservative-closure">
   <h2>水、气与泡沫的守恒转换</h2>
+  <p id="unified-free-energy"><strong>统一自由能推导与二维算例。</strong> 从两相自由能出发，统一描述竖直壁面三相接触、杯底液隙及接触、气泡浮升和顶部泡帽连通，并给出过孔释气与 VOF 气量换账的公式。</p>
+  <p class="sources"><a href="unified-free-energy.html">阅读全部公式与推导</a> · <a href="unified-free-energy.html#wall-contact">竖壁附着、接触角与受力</a> · <a href="unified-free-energy.html#films-and-release">排液、浮升与顶部释气</a></p>
   <p>在粗网格上，纯液体记为 <i>L</i>，分散泡气体记为 <i>B</i>，由 VOF 解析的气体记为 <i>G</i>。在 Cirrus 变量中，<i>α</i> 是液体与分散泡合占的体积分数，<i>φ</i> 是分散泡占整格的体积分数。</p>
   <div class="formula" id="three-component-update" aria-label="三组分体积分数及守恒转换"><span><i>L</i> = <i>α</i> − <i>φ</i></span><span><i>B</i> = <i>φ</i></span><span><i>G</i> = 1 − <i>α</i></span><span>Δ<i>α</i> = Δ<i>φ</i> = (<i>e<sub>C</sub></i> − <i>r<sub>C</sub></i>)/<i>V<sub>C</sub></i></span></div>
   <p><i>e<sub>C</sub></i> 和 <i>r<sub>C</sub></i> 是一步内转入和转出分散泡的气体体积，<i>V<sub>C</sub></i> 是单元体积。受控开孔验收中，从微观界面识别与外部气体连通的原泡，再将同一笔气量从 <i>B</i> 转入 <i>G</i>。转换保持纯液体和总气量守恒。单泡膜何时自行开孔，以及原泡气体穿过孔口的输运量，仍需从微观求解和守恒示踪得到。</p>
