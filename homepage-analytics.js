@@ -7,7 +7,7 @@
   const recordView = () => {
     if (document.visibilityState !== 'visible') return;
     document.removeEventListener('visibilitychange', recordView);
-    fetch('https://baiming-orbit-workspace-counters.zhangbaiming3918.chatgpt.site/api/homepage-view', {
+    fetch('https://baiming-orbit-workspace-counters.zhangbaiming3918.chatgpt.site/api/homepage-view?geo=net', {
       method: 'POST',
       mode: 'cors',
       credentials: 'omit',
