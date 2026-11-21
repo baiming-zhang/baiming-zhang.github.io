@@ -59,6 +59,7 @@
     }
 
     function flush() {
+      measureScroll();
       const visibleMs = visibleSince === null ? 0 : performance.now() - visibleSince;
       const duration = Math.min(maxElapsedMs, Math.round(activeMs + visibleMs));
       if (!queue.length && !locationChanged && duration === lastSentMs && scrollPercent === lastSentScroll) return;
