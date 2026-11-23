@@ -49,7 +49,7 @@
 
 - [全部网格、平面与弱曲率的可读精度表](tables/all-accuracy.html)
 - [单步推理计时汇总](tables/final-timing-latency_summary.csv)
-- [等时与等精度比较例子](#cost)
+- [等时与等精度比较例子](index.html#cost)
 - [独立CPU传统算子参考](tables/cpu-reference-accuracy_time_reference.csv)
 - [最终训练验证诊断](tables/final-validation-validation_summary.csv)
 
