@@ -111,7 +111,8 @@ def build(source, output, repository, commit):
         vof_film_media = name.startswith('vof-lagrangian-films/') and path.suffix.lower() in {'.png', '.mp4', '.pdf'}
         harness_download = name.startswith('project/agent-climate/harness/data/') or name == 'project/agent-climate/harness/benchmark-results.xlsx'
         operator_report_asset = name.startswith('PLIC-VOF/operator-ablation/') and path.suffix.lower() not in {'.html', '.js', '.css'}
-        if operator_report_asset or p10_science_asset or p09_science_asset or vof_film_media or harness_download or plate_report_asset or plate_p08_vector or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
+        plic_plot_asset = name.startswith(('PLIC-VOF/assets/', 'PLIC-VOF/supplement-20261105/figures/')) and path.suffix.lower() == '.png'
+        if plic_plot_asset or operator_report_asset or p10_science_asset or p09_science_asset or vof_film_media or harness_download or plate_report_asset or plate_p08_vector or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))
             continue
         target = output / relative
