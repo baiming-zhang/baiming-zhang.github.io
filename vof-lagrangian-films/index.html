@@ -13,6 +13,8 @@
   a{color:#18558f;text-underline-offset:.19em} a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
   .meta,.caption,.sources{color:var(--muted);font-size:14px} .meta{letter-spacing:.05em;font-weight:650}
   .lede{font-size:18px;max-width:850px} nav{display:flex;gap:12px 24px;flex-wrap:wrap;margin-top:20px;font-size:14px}
+  .research-link{max-width:850px;margin-top:19px;padding:13px 16px;background:var(--soft);border-left:3px solid var(--blue)}
+  .research-link p+p{margin-top:3px}
   section{border-top:1px solid var(--line);padding:30px 0} p+p{margin-top:10px} .sources{margin-top:12px}
   .hero{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;padding:0 0 30px}
   .media{border-radius:10px;overflow:hidden;background:#131a24} img,video{width:100%;height:auto;display:block}
@@ -37,6 +39,11 @@
   <p class="meta">方法与初步结果 · 2026-11-20</p>
   <h1 lang="en">VOF with Lagrangian Thin Films</h1>
   <p class="lede">倒啤酒时，射流和液面可以用网格计算，泡沫里把气泡隔开的液膜却只有微米厚。现有求解器用两个网格场追踪网格看不清的气泡，已经能计算含气液体的输运、上浮和排液。VEIL 提案进一步研究怎样把单张薄膜作为拉格朗日元素嵌入网格。</p>
+  <aside class="research-link" aria-labelledby="quadtree-study">
+    <p id="quadtree-study"><strong>自适应 VOF 气泡与液膜研究</strong></p>
+    <p>按气域连通性配对界面，在排液区局部加密，并用受控算例区分气泡变形、横移与贴壁。三泡计算已推进至 110 ms。</p>
+    <p><a href="quadtree-bubbles.html" hreflang="zh-CN">中文报告</a> · <a href="quadtree-bubbles-en.html" hreflang="en" lang="en">English report</a></p>
+  </aside>
   <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#conservative-closure">守恒推导与纯 VOF 对照</a><a href="#f4-full">原尺寸 F4 视频</a><a href="#f4-interface-only">关闭白色散射的单帧</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#rising-bubble">气泡上浮</a><a href="#limits">复现范围</a></nav>
 </header>
 <div class="hero" id="f4-full">
