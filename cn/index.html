@@ -1,0 +1,1150 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LTHBZJCJWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LTHBZJCJWX');
+  </script>
+
+  <meta charset="UTF-8">
+  <link rel="alternate" hreflang="en" href="https://baiming-zhang.github.io/">
+  <link rel="alternate" hreflang="zh-CN" href="https://baiming-zhang.github.io/cn/">
+  <title>张柏铭</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheet.css">
+  <link rel="icon" type="image/png" href="/images/cat.jpg">
+  <script defer src="/homepage-analytics.js?v=5"></script>
+
+  <style>
+    html {
+      background: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    h2 {
+      font-weight: 800;
+    }
+
+    body {
+      background: #ffffff;
+      zoom: 1.15;
+    }
+
+    .site-shell {
+      display: flex;
+      align-items: stretch;
+      gap: 34px;
+      width: calc(100% - 28px);
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .site-content {
+      flex: 1 1 auto;
+      width: 100%;
+      min-width: 0;
+      max-width: 1000px;
+    }
+
+    .section-anchor {
+      scroll-margin-top: 28px;
+    }
+
+    .side-nav {
+      position: sticky;
+      top: 0;
+      flex: 0 0 189px;
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      height: 86vh;
+      min-height: 620px;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 28px 18px 28px 24px;
+      overflow: hidden;
+      border-right: 0;
+      background: #ffffff;
+      box-shadow: none;
+      transform: translateX(-16px);
+    }
+
+    .side-nav-links {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(17px, 2.8vh, 30px);
+      transform: translateY(-3px);
+    }
+
+    .side-nav a {
+      position: relative;
+      isolation: isolate;
+      display: block;
+      padding: 9px 10px 9px 24px;
+      border-radius: 9px;
+      color: #686864;
+      font-size: 12.5px;
+      line-height: 1.3;
+      transform: scale(1);
+      transform-origin: left center;
+      transition: color 350ms ease, background-color 350ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .side-nav a::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(232, 232, 227, 0.96) 0%, rgba(242, 242, 238, 0.65) 58%, rgba(255, 255, 255, 0) 100%);
+      box-shadow: 0 3px 10px rgba(20, 20, 18, 0.035);
+      content: "";
+      pointer-events: none;
+      opacity: 0;
+      transform: scaleX(0.35);
+      transform-origin: left center;
+      transition: opacity 900ms ease, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .side-nav a::before {
+      position: absolute;
+      top: 50%;
+      left: 9px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #bebeb8;
+      content: "";
+      transform: translateY(-50%);
+      transition: background-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+    }
+
+    .side-nav a:hover,
+    .side-nav a:focus {
+      color: #20201e;
+      background: rgba(239, 239, 235, 0.9);
+      transform: translateX(3px) scale(1.035);
+    }
+
+    .side-nav a.active {
+      color: #171715;
+      font-weight: 800;
+      background: transparent;
+      transform: translateX(4px) scale(1.13);
+    }
+
+    .side-nav a.active::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+
+    .side-nav a.active::before {
+      background: #2f2f2c;
+      box-shadow: 0 0 0 3px rgba(47, 47, 44, 0.10);
+      transform: translateY(-50%) scale(1.16);
+    }
+
+    .page-wrap {
+      width: 100%;
+      max-width:1000px;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .inner-table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .header-table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: -6px;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-info {
+      padding: 2.5%;
+      width: 65%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .profile-cell {
+      padding: 2.5%;
+      width: 35%;
+      max-width: 35%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .profile-photo {
+      width: 80%;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    .name-title {
+      text-align: left;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+
+    .chinese-name {
+      font-size: 20px;
+      color: #888;
+    }
+
+    .name-title a {
+      font: inherit;
+      color: inherit;
+    }
+
+    .name-title a:hover,
+    .name-title a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .contact-links {
+      text-align: center;
+      margin-top: 18px;
+      line-height: 1.8;
+    }
+
+    .contact-links img {
+      height: 15px;
+      vertical-align: -2px;
+      margin-right: 0;
+    }
+
+    .section-cell {
+      padding: 16px;
+      width: 100%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .inner-table.section-anchor h2::before {
+      content: "";
+      display: block;
+      border-top: 1px solid #e1e5e9;
+      margin-bottom: 14px;
+    }
+
+    .news-list {
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .news-list li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .news-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .news-date {
+      margin-right: 6px;
+      color: #66717f;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .awards-list li,
+    #other-experience li {
+      margin-bottom: 12px;
+    }
+
+    .awards-list li:last-child,
+    #other-experience li:last-child {
+      margin-bottom: 0;
+    }
+
+    .projects-table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0 10px;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .projects-table.compact-note-gap {
+      margin-top: -12px;
+    }
+
+    .projects-table.funding-projects {
+      margin-top: -12px;
+      margin-bottom: -12px;
+    }
+
+    #awards .section-cell {
+      padding-bottom: 4px;
+    }
+
+    #awards .section-cell h2 {
+      margin-bottom: 0;
+    }
+
+    .projects-table.awards-projects {
+      border-spacing: 0 2px;
+      margin-top: -4px;
+    }
+
+    .awards-list-table {
+      margin-top: -12px;
+    }
+
+    .awards-projects .project-image-cell,
+    .awards-projects .project-text-cell {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .experience-projects .project-image-cell {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .experience-projects .project-text-cell {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .project-row {
+      display: flex;
+      align-items: center;
+    }
+
+    .project-image-cell {
+      padding: 16px;
+      width: 20%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .project-image {
+      width: 160px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .experience-fluid-video {
+      filter: brightness(1.18);
+    }
+
+    .climate-video {
+      -webkit-clip-path: ellipse(33.9% 41.6% at 49.4% 50.5%);
+      clip-path: ellipse(33.9% 41.6% at 49.4% 50.5%);
+    }
+
+    .project-text-cell {
+      padding: 20px;
+      width: 80%;
+      vertical-align: middle;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .publication-status {
+      color: #000;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .funding-note {
+      margin: 7px 0 0;
+      color: #555;
+      font-size: 0.95em;
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    .footer-text {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+
+    @media screen and (max-width: 1100px) {
+      .site-shell {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .site-content {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .section-anchor {
+        scroll-margin-top: 66px;
+      }
+
+      .side-nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: block;
+        width: 100%;
+        margin: 0 0 8px;
+        padding: 8px 10px;
+        border: 0;
+        border-bottom: 0;
+        border-radius: 0;
+        background: #ffffff;
+        box-shadow: none;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transform: none;
+        min-height: 0;
+        height: auto;
+      }
+
+      .side-nav-links {
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        gap: 3px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        transform: none;
+      }
+
+      .side-nav-links::-webkit-scrollbar {
+        display: none;
+      }
+
+      .side-nav a {
+        flex: 0 0 auto;
+        padding: 7px 10px 7px 19px;
+        white-space: nowrap;
+      }
+
+      .side-nav a:hover,
+      .side-nav a:focus {
+        transform: none;
+      }
+
+      .side-nav a.active {
+        transform: scale(1.07);
+      }
+    }
+
+    @media screen and (max-width: 760px) {
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        zoom: 1;
+        margin: 0;
+        padding: 0 14px;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .page-wrap {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .side-nav {
+        width: calc(100% + 28px);
+        margin-left: -14px;
+        padding-right: 14px;
+        padding-left: 14px;
+      }
+
+      .header-table {
+        margin-left: 0;
+      }
+
+      .header-row {
+        display: block;
+      }
+
+      .header-info,
+      .profile-cell {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 18px 4px 8px 4px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .profile-cell {
+        display: block;
+        padding-top: 22px;
+        padding-bottom: 4px;
+      }
+
+      .profile-photo {
+        width: 46%;
+        max-width: 190px;
+        min-width: 130px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .name-title {
+        text-align: center;
+        font-size: 28px;
+        line-height: 1.15;
+        margin-top: 4px;
+        margin-bottom: 16px;
+      }
+
+      .chinese-name {
+        display: block;
+        font-size: 18px;
+        margin-top: 6px;
+      }
+
+      .header-info p:not(.name-title):not(.contact-links) {
+        text-align: left !important;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+
+      .header-info .name-title {
+        text-align: center !important;
+      }
+
+      .header-info .contact-links {
+        display: block;
+        width: 100%;
+        text-align: center !important;
+        margin: 16px auto 0 auto;
+        line-height: 2.0;
+      }
+
+      .header-info .contact-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2px 3px;
+        white-space: nowrap;
+      }
+
+      .section-cell {
+        padding: 14px 4px;
+      }
+
+      .section-cell h2 {
+        font-size: 22px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .projects-table,
+      .projects-table tbody,
+      .project-row {
+        display: block;
+        width: 100% !important;
+      }
+
+      .projects-table {
+        border-spacing: 0;
+      }
+
+      .project-row {
+        padding: 10px 0 18px 0;
+        margin-bottom: 18px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .project-image-cell,
+      .project-text-cell {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 8px 4px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .project-image-cell {
+        display: block !important;
+        padding: 8px 4px 12px;
+        text-align: center;
+      }
+
+      .project-image {
+        display: block !important;
+        width: auto;
+        max-width: min(100%, 280px);
+        max-height: 220px;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+
+      .project-text-cell {
+        text-align: left;
+      }
+
+      .awards-projects .project-row {
+        padding-top: 4px;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+      }
+
+      .awards-projects .project-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .awards-projects .project-image-cell {
+        padding-bottom: 4px;
+      }
+
+      .awards-projects .project-text-cell {
+        padding-top: 2px;
+      }
+
+      .experience-projects .project-row {
+        padding-top: 5px;
+        padding-bottom: 9px;
+        margin-bottom: 9px;
+      }
+
+      .experience-projects .project-image-cell {
+        padding-top: 4px;
+        padding-bottom: 6px;
+      }
+
+      .experience-projects .project-text-cell {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+
+      .project-text-cell .papertitle,
+      .project-text-cell em {
+        display: block;
+        text-align: left;
+      }
+
+      .project-text-cell p {
+        display: block;
+        text-align: left !important;
+      }
+
+      ul {
+        padding-left: 20px !important;
+      }
+
+      li {
+        margin-bottom: 12px;
+      }
+
+      .footer-text {
+        font-size: 12px;
+        line-height: 1.5;
+        padding-bottom: 18px;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      body {
+        padding: 0 12px;
+        font-size: 14.5px;
+      }
+
+      .name-title {
+        font-size: 25px;
+      }
+
+      .chinese-name {
+        font-size: 17px;
+      }
+
+      .profile-photo {
+        width: 52%;
+      }
+
+      .contact-links {
+        font-size: 14px;
+      }
+
+      .project-image {
+        max-width: min(88vw, 260px);
+        max-height: 210px;
+      }
+
+      .side-nav {
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        padding-right: 12px;
+        padding-left: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .side-nav a,
+      .side-nav a::before,
+      .side-nav a::after {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-shell">
+    <nav class="side-nav" aria-label="页面导航">
+      <div class="side-nav-links">
+        <a href="#about" class="active" aria-current="true">个人简介</a>
+        <a href="#news">动态</a>
+        <a href="#publications">学术论文</a>
+        
+        <a href="#education">教育经历</a>
+        
+        <a href="#awards">荣誉与奖项</a>
+        <a href="#collaboration">学术合作</a>
+
+      </div>
+    </nav>
+
+    <main class="site-content">
+  <table class="page-wrap">
+    <tbody>
+      <tr>
+        <td style="padding:0px">
+
+          <table class="header-table section-anchor" id="about">
+            <tbody>
+              <tr class="header-row">
+                <td class="header-info">
+                  <p class="name-title">
+                    <span><a href="/" lang="en" aria-label="Baiming Zhang (English version)">Baiming Zhang</a></span>
+                    <span class="chinese-name">张柏铭</span>
+                  </p>
+
+                  <p style="text-align:left;">
+                    我是 <a href="https://www.zju.edu.cn/english/">浙江大学</a>工程力学专业的本科四年级学生，师从
+                    <a href="https://shiyingxiong.github.io/">Shiying Xiong 教授</a>。我的研究方向是科学机器学习与科学计算，重点关注神经算子与偏微分方程的计算方法，以及它们在流体系统、薛定谔型模型和降阶建模中的应用。
+                  </p>
+
+                  <p style="text-align:left;">
+                    我有幸与<a href="https://www.ubc.ca/">英属哥伦比亚大学</a><a href="https://peterchencyc.com/">PhysAI 实验室</a>的博士后<a href="https://wang-mengdi.github.io/">Mengdi Wang</a>及实验室负责人<a href="https://peterchencyc.com/">Peter Yichen Chen 教授</a>合作。我已注册为该校的<a href="https://global.ubc.ca/visiting-international-research-students">国际访问研究学生（VIRS）</a>，将在那里开展为期四个月的研究。
+                    
+                  </p>
+
+                  <p style="text-align:left;">
+                    此前，我曾在 <a href="http://qulab.zju.edu.cn/">浙江省微纳量子芯片与量子控制重点实验室</a> 开展量子物理与原子物理研究，涉及里德堡原子、拉曼效应、电磁感应透明、激光稳频及相关理论建模。指导老师为 <a href="https://scholar.google.com/citations?user=D7t-HiMAAAAJ&amp;hl=en">Dawei Wang 教授</a>
+                    和<a href="https://scholar.google.com/citations?user=osoObSwAAAAJ&amp;hl=zh-CN&amp;oi=ao">Xingqi Xu 教授</a>。
+                  </p>
+
+                  <p class="contact-links">
+                    <a href="mailto:baimingzhang@zju.edu.cn">
+                      <img src="/images/gmail.svg"
+                           style="filter: invert(34%) sepia(94%) saturate(2273%) hue-rotate(342deg) brightness(94%) contrast(98%);"
+                           alt="电子邮箱图标">
+                      电子邮箱</a>
+                    &nbsp;/&nbsp;
+
+                    <a href="/data/CV_Baiming_Zhang.pdf">
+                      <img src="/images/readdotcv.svg"
+                           style="filter: invert(49%) sepia(63%) saturate(441%) hue-rotate(130deg) brightness(92%) contrast(90%);"
+                           alt="简历图标">
+                      简历</a>
+                    &nbsp;/&nbsp;
+
+                    <a href="https://github.com/baiming-zhang">
+                      <img src="/images/github.svg"
+                           style="filter: invert(9%) sepia(6%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(95%);"
+                           alt="GitHub 图标">
+                      GitHub</a>
+                    &nbsp;/&nbsp;
+
+                    <a href="https://orcid.org/0009-0006-9003-781X">
+                      <img src="/images/orcid.svg"
+                           style="filter: invert(73%) sepia(38%) saturate(747%) hue-rotate(36deg) brightness(95%) contrast(90%);"
+                           alt="ORCID 图标">
+                      ORCID
+                    </a>
+                  </p>
+                </td>
+
+                <td class="profile-cell">
+                  <img src="/images/my-pic.jpg"
+                       alt="张柏铭的个人照片"
+                       class="profile-photo">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="inner-table section-anchor" id="news">
+            <tbody>
+              <tr>
+                <td class="section-cell">
+                  <h2 style="text-align:left;">动态</h2>
+                  <ul class="news-list" style="text-align:left;">
+                    <li><span class="news-date">[2026 年 10 月]</span><a href="https://arxiv.org/abs/2610.33925">NEB</a> 已在 arXiv 发布。</li>
+                    <li><span class="news-date">[2026 年 10 月]</span><a href="https://baiming-zhang.github.io/Orbit-Workspace/">Orbit Workspace</a> 现已开源，欢迎试用！😊</li>
+                    <li><span class="news-date">[2026 年 9 月]</span>2025–2026 学年，我在浙江大学本专业的绩点排名为第 1 名（共 55 人）。</li>
+                    
+                    <li><span class="news-date">[2026 年 9 月]</span><a href="https://arxiv.org/abs/2609.07752">LGNO</a> 已在 arXiv 发布。</li>
+                    <li><span class="news-date">[2026 年 9 月]</span><a href="https://arxiv.org/abs/2609.03069">LatentDDM</a> 已在 arXiv 发布。</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="inner-table section-anchor" id="publications">
+            <tbody>
+              <tr>
+                <td class="section-cell">
+                  <h2 style="text-align:left;">学术论文</h2>
+                  <span style="font-size: 0.85em;">
+                    带 * 的作者为通讯作者。
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="projects-table compact-note-gap">
+            <tbody>
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="/images/neb.png" class="project-image" alt="神经流体本征基示意图">
+                </td>
+                <td class="project-text-cell">
+                  <a href="https://arxiv.org/abs/2610.33925" class="papertitle"><strong>神经流体本征基：谱目标、规范与拓扑</strong></a>
+                  <br>
+                  <em><b>Baiming Zhang</b>, <a href="https://shiyingxiong.github.io/">Shiying Xiong</a>, <a href="https://dgp.toronto.edu/~zhecheng/">Zhecheng Wang</a>*</em>
+                  <br>
+                  <span class="publication-status">arXiv，2026 年</span>
+                  <p style="text-align:left;">
+                    神经流体本征基为降阶流体模拟提供连续且满足物理约束的表示，将谱目标、规范固定与拓扑联系起来。
+                  </p>
+                </td>
+              </tr>
+
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="/images/lgno.png" class="project-image" alt="局部梯度神经算子示意图">
+                </td>
+                <td class="project-text-cell">
+                  <a href="https://arxiv.org/abs/2609.07752" class="papertitle"><strong>局部梯度神经算子</strong></a>
+                  <br>
+                  <em><b>Baiming Zhang</b>, <a href="https://scholar.google.com/citations?user=0QsuwaAAAAAJ&amp;hl=en">Jinsong Tang</a>*, Ying Xu*, Lihua Chen, <a href="https://shiyingxiong.github.io/">Shiying Xiong</a></em>
+                  <br>
+                  <span class="publication-status">arXiv，2026 年</span>
+                  <p style="text-align:left;">
+                    这一轻量级的局部到全局框架从紧凑的局部表示中学习偏微分方程的解算子，旨在实现高效预测，并提高稳定性和可解释性。
+                  </p>
+                </td>
+              </tr>
+
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="/images/learnable-composition.png" class="project-image" alt="神经算子的可学习组合示意图">
+                </td>
+                <td class="project-text-cell">
+                  <a href="https://arxiv.org/abs/2609.03069" class="papertitle"><strong>神经算子的可学习组合</strong></a>
+                  <br>
+                  <em><a href="https://scholar.google.com/citations?user=ML80AjoAAAAJ&amp;hl=en">Zituo Chen</a>, <b>Baiming Zhang</b>, <a href="https://deng.mit.edu/people.html">Sili Deng</a>*</em>
+                  <br>
+                  <span class="publication-status">NeurIPS 2026 人工智能助力科学研究研讨会</span>
+                  <p style="text-align:left;">
+                    LatentDDM 将预训练的局部神经算子与轻量级可学习组合模块结合，可高效迁移到更大的计算域及训练中未见过的工况。
+                  </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <table class="inner-table section-anchor" id="education">
+            <tbody>
+              <tr>
+                <td class="section-cell">
+                  <h2 style="text-align:left;">教育经历</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="projects-table education-table">
+            <tbody>
+              <tr class="project-row">
+                <td class="project-image-cell" style="text-align:center;">
+                  <img src="/images/zju-emblem.png" style="width:110px;max-width:100%;height:auto;" alt="浙江大学校徽">
+                </td>
+                <td class="project-text-cell">
+                  <a href="https://www.zju.edu.cn/english/"><strong>浙江大学</strong></a><br>
+                  2023 年 9 月至 2027 年 6 月（预计）<br>
+                  工程力学专业，学士学位
+                </td>
+              </tr>
+              <tr class="project-row">
+                <td class="project-image-cell" style="text-align:center;">
+                  <span role="img" aria-label="英属哥伦比亚大学校徽" style="display:inline-block;width:52px;height:80px;background:url('/images/ubc-brand-sprite.png') no-repeat 0 0;"></span>
+                </td>
+                <td class="project-text-cell">
+                  <a href="https://www.ubc.ca/"><strong>英属哥伦比亚大学</strong></a><br>
+                  2026 年 10 月至 2027 年 1 月（预计）<br>
+                  国际访问研究学生
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div hidden>
+          <table class="inner-table section-anchor" id="ongoing-research">
+            <tbody>
+              <tr>
+                <td class="section-cell">
+                  <h2 style="text-align:left;">在研项目</h2>
+                    <span style="font-size: 0.85em;">
+                      说明：以下项目仍在研究中，可能处于投稿、撰稿或构思阶段，最终内容以正式发表版本为准。 
+                      <br>
+                      动画仅用于说明，与稿件中的图示有所区别。
+                      带 * 的作者为通讯作者。
+                    </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="projects-table compact-note-gap">
+            <tbody>
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <a href="https://zbming.tailc06670.ts.net">
+                    <img src="/images/eigenfluid.png?v=508ff6a" class="project-image" alt="规范标准化流体本征模态界面">
+                  </a>
+                </td>
+                <td class="project-text-cell">
+                  <span class="papertitle"><strong>规范标准化流体本征模态：以几何为条件的不可压缩流动神经谱</strong></span>
+                  <br>
+                  <em><b>Baiming Zhang</b>, <a href="https://shiyingxiong.github.io/">Shiying Xiong</a>, <a href="https://dgp.toronto.edu/~zhecheng/">Zhecheng Wang</a>*</em>
+                  <p style="text-align:left;">
+                    探索复杂流动系统的学习表示，着重保留整体物理结构，并支持在不同几何条件下进行高效预测。
+                  </p>
+                </td>
+              </tr>
+
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <video class="project-image climate-video" autoplay muted loop playsinline preload="metadata"
+                    poster="/images/climate-vortex-poster.png?v=20260929d"
+                    aria-label="全球涡旋与气候动力学示意动画">
+                    <source src="/images/climate-vortex.mp4?v=20260929d" type="video/mp4">
+                  </video>
+                </td>
+                <td class="project-text-cell">
+                  <span class="papertitle"><strong>涡旋引导的局地气候异常动力学</strong></span>
+                  <br>
+                  <em><b>Baiming Zhang</b>, <a href="https://scholar.google.com/citations?user=ML80AjoAAAAJ&amp;hl=en">Zituo Chen</a>, <a href="https://shiyingxiong.github.io/">Shiying Xiong</a></em>
+                  <p style="text-align:left;">
+                    通过理想化计算实验研究有组织流动结构与局地气候行为的联系，重点分析定性机制。
+                  </p>
+                </td>
+              </tr>
+
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="/images/isf.png" class="project-image" alt="数据驱动的哈密顿连续介质动力学示意图">
+                </td>
+                <td class="project-text-cell">
+                  <span class="papertitle"><strong>数据驱动的哈密顿连续介质动力学</strong></span>
+                  <br>
+                  <em><a href="https://scholar.google.com/citations?user=0QsuwaAAAAAJ&amp;hl=en">Jinsong Tang</a>, <b>Baiming Zhang</b>, Ziteng Wang, Jia Xiong, Yanru Wang, <a href="https://scholar.google.com/citations?user=M_7HIwsAAAAJ&amp;hl=en">Yekang Jie</a>, Yunlong Qiu, <a href="https://yanjundream.github.io/author/shengze-cai-%E8%94%A1%E5%A3%B0%E6%B3%BD/">Shengze Cai</a>, <a href="https://shiyingxiong.github.io/">Shiying Xiong</a>*</em>
+                  <p></p>
+                  <p style="text-align:left;">
+                    研究结构化连续介质系统的数据驱动描述，着重将普适物理原理、紧凑表示与可靠计算联系起来。
+                  </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          </div>
+
+          <table class="inner-table section-anchor" id="awards">
+            <tbody>
+              <tr>
+                <td class="section-cell">
+                  <h2 style="text-align:left;">荣誉与奖项</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="projects-table awards-projects">
+            <tbody>
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="/images/award-101.png" class="project-image" alt="力学“101 计划”本科生学术论坛优秀口头报告" loading="lazy">
+                </td>
+                <td class="project-text-cell">
+                  <strong>优秀口头报告奖</strong>，力学“101 计划”本科生学术论坛，2026 年 5 月
+                </td>
+              </tr>
+              <tr class="project-row">
+                <td class="project-image-cell">
+                  <img src="/images/award-gold.jpg" class="project-image" alt="世界金奖颁奖现场" loading="lazy">
+                </td>
+                <td class="project-text-cell">
+                  <strong>世界金奖</strong>（前 0.1%），国际大学生工程力学竞赛，2025 年 4 月
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="inner-table awards-list-table">
+            <tbody>
+              <tr>
+                <td class="section-cell">
+                  <ul class="awards-list" style="text-align:left; padding-left:18px; margin-top:10px;">
+                    <li>全国周培源大学生力学竞赛一等奖，2025 年 11 月</li>
+                    <li>浙江省政府奖学金，2023–2024 和 2024–2025 学年</li>
+                    <li>中国航天奖学金，2024–2025 学年</li>
+                    <li>竺可桢学院优秀学生奖学金，2024–2025 学年</li>
+                    <li>大学生数学竞赛一等奖，2023 年 11 月</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="inner-table section-anchor" id="collaboration">
+            <tbody>
+              <tr>
+                <td class="section-cell">
+                  <h2 style="text-align:left;">学术合作</h2>
+                  <p style="text-align:left;">
+                    欢迎就流体动力学、科学机器学习、神经算子和物理建模开展学术合作，欢迎联系我交流！
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="inner-table">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p class="footer-text">
+                    最近更新于 2026 年 11 月 2 日｜感谢 <a href="https://jonbarron.info">Jon Barron</a> 提供网站模板。
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var navLinks = Array.from(document.querySelectorAll('.side-nav a')).filter(function (link) { return link.getAttribute('href').startsWith('#'); });
+      var navScroller = document.querySelector('.side-nav-links');
+      var sections = navLinks
+        .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+        .filter(Boolean);
+
+      function setActiveSection(id) {
+        var activeLink = null;
+        navLinks.forEach(function (link) {
+          var isActive = link.getAttribute('href') === '#' + id;
+          link.classList.toggle('active', isActive);
+          if (isActive) {
+            activeLink = link;
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+
+        if (activeLink && window.innerWidth <= 1100) {
+          var targetLeft = activeLink.offsetLeft - (navScroller.clientWidth - activeLink.offsetWidth) / 2;
+          navScroller.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+        }
+      }
+
+      var ticking = false;
+
+      function updateActiveSection() {
+        var readingLine = window.innerHeight * (window.innerWidth <= 1100 ? 0.22 : 0.34);
+        var current = sections[0];
+
+        sections.forEach(function (section) {
+          if (section.getBoundingClientRect().top <= readingLine) {
+            current = section;
+          }
+        });
+
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+          current = sections[sections.length - 1];
+        }
+
+        if (current) {
+          setActiveSection(current.id);
+        }
+        ticking = false;
+      }
+
+      function requestActiveSectionUpdate() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateActiveSection);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', requestActiveSectionUpdate, { passive: true });
+      window.addEventListener('resize', requestActiveSectionUpdate);
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          setActiveSection(link.getAttribute('href').slice(1));
+        });
+      });
+      updateActiveSection();
+    });
+  </script>
+</body>
+</html>
+
