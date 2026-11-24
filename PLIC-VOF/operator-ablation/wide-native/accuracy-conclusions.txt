@@ -1,0 +1,160 @@
+最终结果
+新24个9×9/11×11模型，2算子×2数据政策×3种子，同12000更新/数据/参数目标/样本与增强RNG序列/piecewise日程。原3/5/7和成熟原模型均冻结。31,360固定几何重新真实积分11×11，中央7及全部中心真值逐位不变，没有新增筛选。
+
+APHROS与SimLiquid是两份真实原生实现；原始数值并非逐位相同，valid/NaN位置相同且本核心表六位有效数字相同，主文仅按同显示精度合并一条参考，不把它们作为两次独立算法证据，计时仍各自报告。HF是另一个算子，不等于particle曲率。
+完整任务覆盖必须单列：
+aphros_native_flux_f64 physical_graph flux N128：原固定集合3100，失败0，成功率100.0000%；不是用NaN补0得到的成功率。
+aphros_native_particles_f64 physical_graph curvature N128：原固定集合3100，失败20，成功率99.3548%；不是用NaN补0得到的成功率。
+aphros_native_flux_f64 independent_noncubic flux N128：原固定集合2312，失败0，成功率100.0000%；不是用NaN补0得到的成功率。
+aphros_native_particles_f64 independent_noncubic curvature N128：原固定集合2312，失败0，成功率100.0000%；不是用NaN补0得到的成功率。
+所有方法共同finite且跨N交集（补充条件误差，不能冒称全任务达标）：
+physical_graph flux：3100→3100，少0，保留100.0000%。
+physical_graph curvature：3100→3080，少20，保留99.3548%。
+independent_noncubic flux：2312→2312，少0，保留100.0000%。
+independent_noncubic curvature：2312→2312，少0，保留100.0000%。
+
+N128共同finite支持上的核心对照；±为3训练seed样本SD。κ单位1/L；flux是CFL=.5的ratio，不乘h或h²。GPU FP32 NN与CPU native F64是不同资源，以下仅比较误差，不据此比较速度。
+方法 | graph物理κ | 独立几何物理κ | graph flux ratio | 独立几何flux ratio
+--- | --- | --- | --- | ---
+original_frozen | 0.124812 | 0.0721966 | 0.00280532 | 0.00280459
+APHROS / SimLiquid native | 0.110112 | 0.0616697 | 0.00346768 | 0.00213127
+HF_Youngs_reference | 0.0178749 | 0.000211464 | 0.00346768 | 0.00213127
+GPU_FP32:control_3x3 | 0.692705 ± 0.077 | 0.528877 ± 0.065 | 0.00180821 ± 0.00011 | 0.00239348 ± 9.2e-05
+GPU_FP32:control_5x5 | 0.30364 ± 0.018 | 0.233725 ± 0.034 | 0.00142629 ± 6.8e-05 | 0.00208776 ± 9.9e-05
+GPU_FP32:control_7x7 | 0.216985 ± 0.014 | 0.176782 ± 0.012 | 0.00151445 ± 0.00018 | 0.0022132 ± 6.7e-05
+GPU_FP32:control_9x9 | 0.239836 ± 0.012 | 0.183549 ± 0.0058 | 0.0016472 ± 0.00013 | 0.00231214 ± 0.00013
+GPU_FP32:control_11x11 | 0.180221 ± 0.0057 | 0.120343 ± 0.011 | 0.00164426 ± 6.6e-05 | 0.00220728 ± 8.7e-05
+GPU_FP32:enhanced_3x3 | 0.870178 ± 0.1 | 0.548136 ± 0.082 | 0.00381331 ± 0.00044 | 0.00324912 ± 0.00033
+GPU_FP32:enhanced_5x5 | 0.465399 ± 0.0061 | 0.32415 ± 0.0023 | 0.00442817 ± 0.00012 | 0.00337144 ± 0.00016
+GPU_FP32:enhanced_7x7 | 0.199868 ± 0.0041 | 0.146301 ± 0.0018 | 0.00382944 ± 0.0002 | 0.00324734 ± 0.00017
+GPU_FP32:enhanced_9x9 | 0.121918 ± 0.0083 | 0.100443 ± 0.014 | 0.00395784 ± 0.00041 | 0.00302074 ± 0.00046
+GPU_FP32:enhanced_11x11 | 0.131354 ± 0.0053 | 0.0885495 ± 0.0053 | 0.00408021 ± 0.00017 | 0.0028948 ± 0.00016
+
+扩大stencil相对旧matched7×7的配对贡献：以下使用原固定all_methods_common支持（graph3100/N，独立2312/N），与上面共同finite条件表的样本范围明确分开；负Δ改善。
+N128 independent_noncubic curvature control 7→9: Δ0.00676629±0.0093，0/3seed改善。
+N128 independent_noncubic curvature control 7→11: Δ-0.0564398±0.017，3/3seed改善。
+N128 independent_noncubic curvature enhanced 7→9: Δ-0.045858±0.015，3/3seed改善。
+N128 independent_noncubic curvature enhanced 7→11: Δ-0.0577517±0.007，3/3seed改善。
+N128 independent_noncubic flux control 7→9: Δ9.89426e-05±7.3e-05，0/3seed改善。
+N128 independent_noncubic flux control 7→11: Δ-5.91484e-06±0.00011，2/3seed改善。
+N128 independent_noncubic flux enhanced 7→9: Δ-0.000226591±0.0003，2/3seed改善。
+N128 independent_noncubic flux enhanced 7→11: Δ-0.000352532±0.0003，3/3seed改善。
+N128 physical_graph curvature control 7→9: Δ0.0227125±0.018，0/3seed改善。
+N128 physical_graph curvature control 7→11: Δ-0.036664±0.017，3/3seed改善。
+N128 physical_graph curvature enhanced 7→9: Δ-0.0775071±0.012，3/3seed改善。
+N128 physical_graph curvature enhanced 7→11: Δ-0.0682149±0.0071，3/3seed改善。
+N128 physical_graph flux control 7→9: Δ0.00013275±0.00016，0/3seed改善。
+N128 physical_graph flux control 7→11: Δ0.000129812±0.00022，1/3seed改善。
+N128 physical_graph flux enhanced 7→9: Δ0.000128403±0.00054，2/3seed改善。
+N128 physical_graph flux enhanced 7→11: Δ0.000250769±0.00035，1/3seed改善。
+N512 independent_noncubic curvature control 7→9: Δ0.037643±0.033，0/3seed改善。
+N512 independent_noncubic curvature control 7→11: Δ-0.215156±0.066，3/3seed改善。
+N512 independent_noncubic curvature enhanced 7→9: Δ-0.161873±0.063，3/3seed改善。
+N512 independent_noncubic curvature enhanced 7→11: Δ-0.208562±0.026，3/3seed改善。
+N512 independent_noncubic flux control 7→9: Δ9.69086e-05±5.9e-05，0/3seed改善。
+N512 independent_noncubic flux control 7→11: Δ1.77223e-05±0.0001，1/3seed改善。
+N512 independent_noncubic flux enhanced 7→9: Δ-0.000240658±0.00027，3/3seed改善。
+N512 independent_noncubic flux enhanced 7→11: Δ-0.000395355±0.0003，3/3seed改善。
+N512 physical_graph curvature control 7→9: Δ0.044928±0.069，1/3seed改善。
+N512 physical_graph curvature control 7→11: Δ-0.237288±0.062，3/3seed改善。
+N512 physical_graph curvature enhanced 7→9: Δ-0.224999±0.038，3/3seed改善。
+N512 physical_graph curvature enhanced 7→11: Δ-0.24921±0.014，3/3seed改善。
+N512 physical_graph flux control 7→9: Δ0.000131878±0.00014，0/3seed改善。
+N512 physical_graph flux control 7→11: Δ0.000100425±0.00021，1/3seed改善。
+N512 physical_graph flux enhanced 7→9: Δ-0.000225816±0.00058，2/3seed改善。
+N512 physical_graph flux enhanced 7→11: Δ-0.000494468±0.00042，3/3seed改善。
+
+不能作出“越宽总越好”的结论。N128 control9曲率在两suite比control7均变差，control11均改善；enhanced9/11曲率在两suite均改善。Flux则随几何/政策/N不同，许多control9/11点不如旧5/7；所有负结果保留，不从测试挑权重。
+相对新matched3/5/7改善，与是否超过成熟原模型/真实APHROS/传统HF是不同问题。N128 graph enhanced9在共同finite集的κ均值略低于成熟原网络，但波动区间重叠且仍高于真实particles；独立几何9/11 κ均不及成熟原网络和实际particles。
+原网络平面q固定偏置3.87444e-4仍是独立收敛性证据：固定平面使各N输入相同，故物理q/h偏置随N增长。新wide在细网格也出现物理κ误差上升和无h缩放flux误差平台，不能用q或h²输运量下降伪称物理收敛。
+同CPU/同精度需另读CPU_FP32/CPU_FP64误差和02真实调用时间，不能借用GPU误差。正式速度、资源、单线程/affinity、原算子normal/reconstruction/particle迭代边界、覆盖率及等精度/等时间由02-native-bench提供。原始模型/实际native数据与所有种子均保留。
+
+同CPU算术N128误差（CPU64需与native F64同资源比较；±为3seed SD，单成熟模型不虚构±0）：
+independent_noncubic curvature CPU_FP32:control_11x11: 0.120343 ± 0.011
+independent_noncubic curvature CPU_FP32:control_3x3: 0.528876 ± 0.065
+independent_noncubic curvature CPU_FP32:control_5x5: 0.233725 ± 0.034
+independent_noncubic curvature CPU_FP32:control_7x7: 0.176782 ± 0.012
+independent_noncubic curvature CPU_FP32:control_9x9: 0.183549 ± 0.0058
+independent_noncubic curvature CPU_FP32:enhanced_11x11: 0.0885492 ± 0.0053
+independent_noncubic curvature CPU_FP32:enhanced_3x3: 0.548137 ± 0.082
+independent_noncubic curvature CPU_FP32:enhanced_5x5: 0.32415 ± 0.0023
+independent_noncubic curvature CPU_FP32:enhanced_7x7: 0.146301 ± 0.0018
+independent_noncubic curvature CPU_FP32:enhanced_9x9: 0.100443 ± 0.014
+independent_noncubic curvature CPU_FP32:original_frozen: 0.0721965
+independent_noncubic curvature CPU_FP64:control_11x11: 0.120343 ± 0.011
+independent_noncubic curvature CPU_FP64:control_3x3: 0.528877 ± 0.065
+independent_noncubic curvature CPU_FP64:control_5x5: 0.233725 ± 0.034
+independent_noncubic curvature CPU_FP64:control_7x7: 0.176783 ± 0.012
+independent_noncubic curvature CPU_FP64:control_9x9: 0.183549 ± 0.0058
+independent_noncubic curvature CPU_FP64:enhanced_11x11: 0.0885495 ± 0.0053
+independent_noncubic curvature CPU_FP64:enhanced_3x3: 0.548136 ± 0.082
+independent_noncubic curvature CPU_FP64:enhanced_5x5: 0.32415 ± 0.0023
+independent_noncubic curvature CPU_FP64:enhanced_7x7: 0.146301 ± 0.0018
+independent_noncubic curvature CPU_FP64:enhanced_9x9: 0.100443 ± 0.014
+independent_noncubic curvature CPU_FP64:original_frozen: 0.0721966
+independent_noncubic flux CPU_FP32:control_11x11: 0.0022073 ± 8.7e-05
+independent_noncubic flux CPU_FP32:control_3x3: 0.00239347 ± 9.2e-05
+independent_noncubic flux CPU_FP32:control_5x5: 0.00208776 ± 9.9e-05
+independent_noncubic flux CPU_FP32:control_7x7: 0.0022132 ± 6.7e-05
+independent_noncubic flux CPU_FP32:control_9x9: 0.00231215 ± 0.00013
+independent_noncubic flux CPU_FP32:enhanced_11x11: 0.0028948 ± 0.00016
+independent_noncubic flux CPU_FP32:enhanced_3x3: 0.00324913 ± 0.00033
+independent_noncubic flux CPU_FP32:enhanced_5x5: 0.00337144 ± 0.00016
+independent_noncubic flux CPU_FP32:enhanced_7x7: 0.00324734 ± 0.00017
+independent_noncubic flux CPU_FP32:enhanced_9x9: 0.00302075 ± 0.00046
+independent_noncubic flux CPU_FP32:original_frozen: 0.00280458
+independent_noncubic flux CPU_FP64:control_11x11: 0.0022073 ± 8.7e-05
+independent_noncubic flux CPU_FP64:control_3x3: 0.00239347 ± 9.2e-05
+independent_noncubic flux CPU_FP64:control_5x5: 0.00208775 ± 9.9e-05
+independent_noncubic flux CPU_FP64:control_7x7: 0.0022132 ± 6.7e-05
+independent_noncubic flux CPU_FP64:control_9x9: 0.00231215 ± 0.00013
+independent_noncubic flux CPU_FP64:enhanced_11x11: 0.0028948 ± 0.00016
+independent_noncubic flux CPU_FP64:enhanced_3x3: 0.00324912 ± 0.00033
+independent_noncubic flux CPU_FP64:enhanced_5x5: 0.00337143 ± 0.00016
+independent_noncubic flux CPU_FP64:enhanced_7x7: 0.00324733 ± 0.00017
+independent_noncubic flux CPU_FP64:enhanced_9x9: 0.00302074 ± 0.00046
+independent_noncubic flux CPU_FP64:original_frozen: 0.00280459
+physical_graph curvature CPU_FP32:control_11x11: 0.180221 ± 0.0057
+physical_graph curvature CPU_FP32:control_3x3: 0.692705 ± 0.077
+physical_graph curvature CPU_FP32:control_5x5: 0.30364 ± 0.018
+physical_graph curvature CPU_FP32:control_7x7: 0.216985 ± 0.014
+physical_graph curvature CPU_FP32:control_9x9: 0.239836 ± 0.012
+physical_graph curvature CPU_FP32:enhanced_11x11: 0.131354 ± 0.0053
+physical_graph curvature CPU_FP32:enhanced_3x3: 0.870179 ± 0.1
+physical_graph curvature CPU_FP32:enhanced_5x5: 0.465399 ± 0.0061
+physical_graph curvature CPU_FP32:enhanced_7x7: 0.199868 ± 0.0041
+physical_graph curvature CPU_FP32:enhanced_9x9: 0.121918 ± 0.0083
+physical_graph curvature CPU_FP32:original_frozen: 0.124812
+physical_graph curvature CPU_FP64:control_11x11: 0.180221 ± 0.0057
+physical_graph curvature CPU_FP64:control_3x3: 0.692705 ± 0.077
+physical_graph curvature CPU_FP64:control_5x5: 0.30364 ± 0.018
+physical_graph curvature CPU_FP64:control_7x7: 0.216985 ± 0.014
+physical_graph curvature CPU_FP64:control_9x9: 0.239836 ± 0.012
+physical_graph curvature CPU_FP64:enhanced_11x11: 0.131354 ± 0.0053
+physical_graph curvature CPU_FP64:enhanced_3x3: 0.870179 ± 0.1
+physical_graph curvature CPU_FP64:enhanced_5x5: 0.465399 ± 0.0061
+physical_graph curvature CPU_FP64:enhanced_7x7: 0.199868 ± 0.0041
+physical_graph curvature CPU_FP64:enhanced_9x9: 0.121918 ± 0.0083
+physical_graph curvature CPU_FP64:original_frozen: 0.124812
+physical_graph flux CPU_FP32:control_11x11: 0.00164427 ± 6.6e-05
+physical_graph flux CPU_FP32:control_3x3: 0.00180821 ± 0.00011
+physical_graph flux CPU_FP32:control_5x5: 0.00142629 ± 6.8e-05
+physical_graph flux CPU_FP32:control_7x7: 0.00151445 ± 0.00018
+physical_graph flux CPU_FP32:control_9x9: 0.00164721 ± 0.00013
+physical_graph flux CPU_FP32:enhanced_11x11: 0.00408021 ± 0.00017
+physical_graph flux CPU_FP32:enhanced_3x3: 0.00381331 ± 0.00044
+physical_graph flux CPU_FP32:enhanced_5x5: 0.00442817 ± 0.00012
+physical_graph flux CPU_FP32:enhanced_7x7: 0.00382944 ± 0.0002
+physical_graph flux CPU_FP32:enhanced_9x9: 0.00395785 ± 0.00041
+physical_graph flux CPU_FP32:original_frozen: 0.00280532
+physical_graph flux CPU_FP64:control_11x11: 0.00164427 ± 6.6e-05
+physical_graph flux CPU_FP64:control_3x3: 0.00180821 ± 0.00011
+physical_graph flux CPU_FP64:control_5x5: 0.00142629 ± 6.8e-05
+physical_graph flux CPU_FP64:control_7x7: 0.00151445 ± 0.00018
+physical_graph flux CPU_FP64:control_9x9: 0.0016472 ± 0.00013
+physical_graph flux CPU_FP64:enhanced_11x11: 0.00408021 ± 0.00017
+physical_graph flux CPU_FP64:enhanced_3x3: 0.00381331 ± 0.00044
+physical_graph flux CPU_FP64:enhanced_5x5: 0.00442817 ± 0.00012
+physical_graph flux CPU_FP64:enhanced_7x7: 0.00382944 ± 0.0002
+physical_graph flux CPU_FP64:enhanced_9x9: 0.00395784 ± 0.00041
+physical_graph flux CPU_FP64:original_frozen: 0.00280532
