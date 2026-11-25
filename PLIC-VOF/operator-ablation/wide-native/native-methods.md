@@ -1,15 +1,27 @@
-# Native local-operator comparison
+图表里比较的是哪些方法？
 
-The primary comparison uses the original compiled Aphros and SimLiquid local operators versus the fixed neural weights compiled with TorchScript, all in float64 on the same pinned CPU core and one thread. The raw input is the identical float32-quantized VOF promoted to double. Normal estimation, PLIC reconstruction, fragment construction and particle fitting are inside the native operator boundary. This measures regular-interior local dependency slices, not complete simulators.
 
-All 2,560 shuffled exclusive cases passed: 396,800 measured invocations and 51,200 warmups across N128/N512, two physical suites and five batch sizes. The 199 preliminary native-first CPU cases are excluded. No significant-preemption case needed retry. The three fixed anchor medians were 1.496236, 1.641562 and 1.822417 ms: 21.8% drift. Small timing differences are not a robust ordering; no normalization was invented.
+SimLiquid／APHROS的传统数值算法：这两个名称指流体求解软件。通量由软件中的PLIC算法计算：先估计界面方向、重建直线，再计算穿过网格面的液体量；曲率由粒子串拟合算法计算。本轮直接调用相应C++代码，只测局部算子。
 
-The measured CPU64 neural implementation does not demonstrate speedup over these native local operators. For independent N512, batch4096, Aphros/SimLiquid flux cost 0.04276/0.1088 ms with flux-density MAE 0.00120311. The fastest three-seed group reaching that native error is control 11x11, 27.05 +/- 2.26 ms and MAE 0.00106158 +/- 0.0000418 (between-seed sample SD).
 
-For independent N512 curvature, Aphros/SimLiquid cost 7.693/6.428 ms with physical curvature MAE 0.218996. None of the ten new three-seed groups meets that error. The mature original single fixed reference does meet it: MAE 0.187899263, batch4096 median 53.612645 ms, p05/p95 49.8781873/56.3643823 ms. Its batch1 median is 0.040958 ms. This single fixed reference has no between-seed SD. At N128 its MAE 0.07219657 does not reach the native 0.0616697 target.
+此前训练的3×3联合网络：本项目此前训练并用于模拟的网络，输入3×3邻域的体积分数，通过共享编码预测通量和曲率。本轮固定其权重，作为已有模型的参考。这不是“论文作者发布的原始权重”的意思。
 
-These statements concern these measured implementations and hardware. They do not establish a universal ordering of neural and numerical algorithms. CPU32 and CUDA32 are separate deployment layers, and the mature ONNX retains native double intermediate arithmetic despite float32 inputs. No CPU/GPU ratio is presented as an algorithmic speedup.
 
-The graph suite preserves 20 native particle failures per 3,100 original queries at each N. Full-task frontiers exclude incomplete outputs; conditional common-finite frontiers are separately labelled. No missing output is replaced by zero and no unreachable target is extrapolated. The independent suite has full native coverage.
+本次重训的3×3至11×11网络：为比较邻域和训练数据而训练的通量网络、曲率网络。每组都训练12000步，使用三个配对随机种子，参数量基本相同。报告中的31.9%、26.4%等改善比例，来自这些同预算重训组的比较；此前3×3联合网络的结构和训练经历不同，单独列作参考。
 
-Review `comparison/cpu64_key_scenes.csv` for the compact N128/N512, batch1/4096 table; `comparison/readable_native_iso_examples.json` for exact model/fixture/subset/N/batch keys and both historical-inclusive and three-seed-only comparisons; and `comparison/qualification_summary.json` for measurement qualification. The two compact figures and their captions are in `comparison/figures/`. All three seed values, call quantiles and adjacent stencil-width changes are retained in the CSV/JSON indices.
+
+两种训练数据：“基准训练数据”采用常规局部三次曲线采样；“调整后的训练数据”增加近水平或竖直、弱曲率以及接近纯液体或纯气体的样本。名称只说明采样不同，不预先认定哪种数据更好。
+
+
+高度函数曲率参考：另一种传统曲率算法，通过相邻液柱的高度变化估计曲率。它单独参加比较，没有作为任何神经网络的输入或修正项。
+
+
+图中“Earlier joint NN (3×3)”对应此前训练的3×3联合网络；“New 3×3 NN”等标记对应本次重训的相应邻域网络；“Baseline data / Adjusted data”对应上述两种训练数据。“MAE”是平均绝对误差，越小越好；每个随机种子对应一次独立训练。
+
+
+
+计时条件：同一个CPU核心、双精度，分别测试1、32、256、1024、4096个邻域的批量。输入体积分数已经准备好，计入数值方法必需的法线估计、PLIC重构和粒子拟合，不计数据提取、压力求解和模拟推进。
+
+每项先预热20次，再测量155次。新训练组先计算每个模型的推理时间中位数，再给出三个训练重复的平均值和标准差。此前3×3联合网络只有一个固定版本，单独给出其测量值。
+
+正式计时的固定检查点首尾漂移21.8%，因此几个百分点的时间差不足以确定稳定排序；报告保留了这种波动。GPU部署时间另外统计。
