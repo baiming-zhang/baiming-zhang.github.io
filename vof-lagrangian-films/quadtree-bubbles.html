@@ -132,19 +132,22 @@ footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-
 <section id="aphros-rise" class="single-bubble-results">
 <h2>Aphros 清水单泡上浮</h2>
 <p>同一个 15 × 15 mm 二维域内，3 mm 泡从 2 mm 高度释放，液深 12 mm。物性、初场、壁面与清水 VEIL 对照一致。</p>
-<figure><video class="single-video" controls playsinline preload="metadata" width="1440" height="810" poster="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.png" src="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.mp4"></video><figcaption>目前通过核验的时段 0–72.00 ms。蓝色液体，白色气体。 · <a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.mp4">MP4</a></figcaption></figure>
-<div class="table"><table><thead><tr><th scope="col">网格</th><th scope="col">格距</th><th scope="col">通过检查到</th><th scope="col">液面积最大相对漂移</th><th scope="col">气域数值连通区间</th><th scope="col">运行状态</th></tr></thead><tbody>
-<tr><th scope="row">64²</th><td>234.4 µm</td><td>72.00 ms</td><td>2.72e-10</td><td>70.00–72.00 ms</td><td>运行中</td></tr>
-<tr><th scope="row">128²</th><td>117.2 µm</td><td>19.98 ms</td><td>3.11e-10</td><td>—</td><td>运行中</td></tr>
-<tr><th scope="row">256²</th><td>58.6 µm</td><td>0.00 ms</td><td>0.00e+00</td><td>—</td><td>运行中</td></tr>
+<figure><video class="single-video" controls playsinline preload="metadata" width="1440" height="810" poster="quadtree-bubbles/aphros-rise/aphros-clean-rise-128-screened-zh.png" src="quadtree-bubbles/aphros-rise/aphros-clean-rise-128-screened-zh.mp4"></video><figcaption>目前通过核验的时段 0–83.99 ms。蓝色液体，白色气体。 · <a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-128-screened-zh.mp4">MP4</a></figcaption></figure>
+<div class="table"><table><thead><tr><th scope="col">网格 / 压力迭代上限</th><th scope="col">格距</th><th scope="col">步长上限 / 对流 CFL</th><th scope="col">最后保存</th><th scope="col">筛查通过至</th><th scope="col">审计液面积最大相对漂移</th><th scope="col">气域数值连通区间</th><th scope="col">运行状态</th></tr></thead><tbody>
+<tr><th scope="row">128² / 500</th><td>117.2 µm</td><td>12.5 µs / 0.175</td><td>105.00 ms</td><td>83.99 ms</td><td>1.97e-02</td><td>74.00–76.00 ms</td><td>算至 105 ms，后段未通过</td></tr>
+<tr><th scope="row">128² / 500</th><td>117.2 µm</td><td>50 µs / 0.35</td><td>105.00 ms</td><td>21.98 ms</td><td>2.16e-04</td><td>—</td><td>算至 105 ms，后段未通过</td></tr>
+<tr><th scope="row">64² / 250</th><td>234.4 µm</td><td>50 µs / 0.35</td><td>75.61 ms</td><td>72.00 ms</td><td>2.72e-10</td><td>70.00–72.00 ms</td><td>速度超限停止</td></tr>
+<tr><th scope="row">64² / 100</th><td>234.4 µm</td><td>50 µs / 0.35</td><td>75.20 ms</td><td>72.00 ms</td><td>2.74e-10</td><td>70.00–72.00 ms</td><td>速度超限停止</td></tr>
+<tr><th scope="row">256² / 1200</th><td>58.6 µm</td><td>50 µs / 0.35</td><td>6.00 ms</td><td>2.00 ms</td><td>5.35e-05</td><td>—</td><td>运行中，已有帧未通过</td></tr>
 </tbody></table></div>
-<figure><a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.png"><img src="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.png" loading="lazy" alt="Aphros 上浮顺序图与泡质心、两界面最短间距对照"></a><figcaption>比较图按实际物理时间作图。3.5 格线只用于标识薄膜进入分辨率敏感区间。 · <a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.pdf">PDF</a></figcaption></figure>
+<figure><a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-128-screened-zh.png"><img src="quadtree-bubbles/aphros-rise/aphros-clean-rise-128-screened-zh.png" loading="lazy" alt="Aphros 上浮顺序图与泡质心、两界面最短间距对照"></a><figcaption>连续筛查要求 VOF 有界、PLIC 输出完整、峰速不超过 5 m/s、液面积相对漂移不超过 0.5%。3.5 格参考线标识分辨率敏感区间，后段气域连通仅供数值诊断。 · <a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-128-screened-zh.pdf">PDF</a></figcaption></figure>
 <p>Aphros 用均匀网格、单层 PLIC 和粒子曲率。早期普通 PCG 的细档出现压力误差和异常速度。加上 SMG 预条件后，修补了每步预条件器未释放的问题，再按网格提高压力迭代上限。物理参数沿用清水设置。审计以实际写出的 VOF 和 PLIC 计液量、气泡质心、最短间距和气体连通。</p>
-<p>在 68 ms，所示 Aphros 档的泡质心约 11.38 mm，VEIL 清水为 10.61 mm。 当前结果为阶段性对照，105 ms 窗口待验收。</p>
+<p>在 68 ms，所示 Aphros 档的泡质心约 10.90 mm，VEIL 清水为 10.61 mm。</p>
+<p>两组 128² 都写到了 105 ms。步长上限 12.5 µs、对流 CFL 0.175 的组在 86 ms 首次超过筛查速度，局部峰速 10.15 m/s，全程峰值 14.84 m/s，液面积最大相对漂移 1.97%，末帧 213/367 个混合格缺 PLIC 面片。</p><p>步长上限 50 µs、对流 CFL 0.35 的组早在 24 ms 已出现 10.63 m/s 的局部峰速，末帧 137/299 个混合格缺 PLIC 面片。小步长组延后了这一筛查失败，两个设置都未通过 105 ms 全段核验。</p><p>小步长 128² 的两气域在 74–76 ms 之间于网格上连通。最后分开的一帧最短间距为 194 µm，跨 1.66 格。256² 在约 4 ms 已记录 6.67 m/s 的局部峰速，尚未提供连贯的细网格对照。</p>
 <p>均匀网格是上浮轨迹和形状的独立对照。256² 的格距为 58.6 µm。要让约 20.8 µm 的薄膜跨 3.5 格，15 mm 全宽需约 2,500 格。要直接解后段排液，局部加密更实用。该 Aphros 版本使用固定大小的结构网格块。 · <a href="https://cselab.github.io/aphros/doc/">Aphros</a></p>
 <p>三维准静态参考用 Young–Laplace 平衡。直径 3 mm、半径定义的 Bond 数约 0.30 时，<a href="quadtree-bubbles/single-bubble/floating-bubbles.pdf">已有轴对称解</a>给出泡帽高出远场液面约 0.55 mm、下部深入液面约 2.12 mm。原 VEIL 表活二维 85 ms 帧的截面峰值高出两侧液面约 3.32 mm。快速接近液面的泡会变形或反弹，这两个高度对应不同的几何、时间和表面条件，静态参考只约束近静止形状。表里的连通区间描述网格尺度拓扑。 · <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/direct-numerical-simulations-of-noncoalescing-floating-bubbles-geometry-and-selforganisation/B381687A66B8F340AF390C49216B41B2">Young–Laplace / MVOF</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7304069/">高速实验</a></p>
 <details class="comparison-details"><summary>轴对称静态参考图</summary><figure><img src="quadtree-bubbles/single-bubble/floating-bubbles.png" loading="lazy" alt="直径 3 mm 浅泡帽和浸没气腔的等比例截面"></figure></details>
-<p class="small"><a href="quadtree-bubbles/aphros-rise/aphros-rise-audit.json">审计数据 (JSON)</a></p>
+<p class="small"><a href="quadtree-bubbles/aphros-rise/aphros-rise-105ms-audit.json">审计数据 (JSON)</a> · <a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.mp4">原 64² 回放</a> · <a href="quadtree-bubbles/aphros-rise/aphros-rise-audit.json">原 64² 审计</a></p>
 </section>
 <!-- aphros-rise:end -->
 <section id="additional-controls"><h2>其他对照与基准</h2>
