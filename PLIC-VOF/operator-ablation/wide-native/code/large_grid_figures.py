@@ -27,6 +27,7 @@ def main():
     status=json.loads((R/'analysis/status.json').read_text())
     if status['state']!='complete':raise RuntimeError('Completed formal measurements required; no placeholder figures')
     groups=rows('gpu_three_seed_groups.csv');records=rows('all_measured_records.csv')
+    pinned=json.loads((R/'analysis/summary.json').read_text()).get('cpu_measurements')=='fixed_pool_shared_host_retest'
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':7,'axes.labelsize':7,
         'axes.linewidth':.65,'pdf.fonttype':42,'xtick.major.width':.6,'ytick.major.width':.6})
     folder=R/'figures';folder.mkdir(exist_ok=True)
@@ -63,6 +64,7 @@ def main():
     fig.legend(handles=handles,loc='center left',bbox_to_anchor=(.78,.52),frameon=False,fontsize=6.5,handlelength=1.1,labelspacing=.8)
     fig.savefig(folder/'large_grid_accuracy_time.png',dpi=300);fig.savefig(folder/'large_grid_accuracy_time.pdf');plt.close(fig)
     caption='4096×4096、多液滴真实体积分数场上的单步精度与时间，参与计算的界面格为127090个。a、b为通量，c、d为曲率；左列包含CPU到GPU传输、推理与结果回传，右列为输入和输出均驻留GPU。新网络展示三个种子的均值与标准差，此前3×3联合网络为单个固定参考；传统算法分别显示1、8、24线程的实测点，连线只连接同一算法的线程配置。8、24线程使用外部持久线程池适配器。误差越小、时间越短越好；GPU采用单精度输入及原模型算术，传统数值算子采用双精度。仅计局部算子，不含邻域提取和流体推进。'
+    if pinned:caption=caption.replace('1、8、24','1、4、8').replace('8、24线程使用外部持久线程池适配器。','4、8线程使用外部持久线程池适配器。CPU计算线程固定在0–7号逻辑核内，整机共享使用。')
     (folder/'large_grid_accuracy_time-caption.txt').write_text(caption,encoding='utf-8')
     fig,axes=plt.subplots(2,2,figsize=(7.2,4.7))
     fig.subplots_adjust(left=.10,right=.76,bottom=.11,top=.95,wspace=.33,hspace=.40)
@@ -92,6 +94,7 @@ def main():
     fig.legend(handles=handles[:6]+handles[8:],loc='center left',bbox_to_anchor=(.78,.52),frameon=False,fontsize=6.5,handlelength=1.1,labelspacing=.8)
     fig.savefig(folder/'large_grid_time_scaling.png',dpi=300);fig.savefig(folder/'large_grid_time_scaling.pdf');plt.close(fig)
     caption='多液滴场景随网格加密的单步推理时间，GPU时间包含传入、推理和传回。a、b为通量，c、d为曲率；左列使用基准训练数据，右列使用调整后的训练数据。每条新网络曲线固定窗口和数据策略，展示全部三个种子的均值与标准差；此前3×3联合网络单列。CPU曲线在各网格分别取1、8、24线程中实测最快的完整覆盖配置。网格由512²增至4096²时，实际计算界面格由15894增至127090，未计算纯相格来人为增加批量。'
+    if pinned:caption=caption.replace('1、8、24','1、4、8')+'CPU计算线程使用固定8个逻辑核，宿主机可同时运行其他任务。'
     (folder/'large_grid_time_scaling-caption.txt').write_text(caption,encoding='utf-8')
     save(folder/'deployment_figure_manifest.json',dict(state='rendered_visual_check_pending',source='complete formal measured CSVs',files=[s+e for s in ['large_grid_accuracy_time','large_grid_time_scaling'] for e in ['.png','.pdf']],new_models='all three seeds',scene='many_drops',N=[512,1024,2048,4096]))
     print('Completed-data deployment figure rendered')

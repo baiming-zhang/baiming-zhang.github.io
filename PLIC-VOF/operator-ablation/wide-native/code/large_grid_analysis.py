@@ -11,10 +11,12 @@ def csvout(path,rows):
     with path.open('w',encoding='utf-8-sig',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
 
-def run(require_complete=False):
+def run(require_complete=False,cpu_retest=False,cpu_pinned_retest=False):
     out=R/'analysis';out.mkdir(exist_ok=True)
     cases=load(R/'fixture_manifest.json')['cases']
-    cpu=[load(p) for p in sorted((R/'cpu_timings').glob('*.json'))]
+    retest_folder='cpu-retest-pinned' if cpu_pinned_retest else 'cpu-retest'
+    cpu_folder=R/retest_folder/'cpu_timings' if cpu_retest or cpu_pinned_retest else R/'cpu_timings'
+    cpu=[load(p) for p in sorted(cpu_folder.glob('*.json'))]
     gpu=[load(p) for p in sorted((R/'gpu_timings').glob('*.json'))]
     complete=len(cpu)==96 and len(gpu)==992
     status=dict(state='complete' if complete else 'waiting_for_measurements',cpu_configurations=len(cpu),expected_cpu=96,gpu_configurations=len(gpu),expected_gpu=992)
@@ -29,6 +31,10 @@ def run(require_complete=False):
         if require_complete:raise RuntimeError('Formal measurements incomplete; no complete deployment conclusion may be drawn')
         print(json.dumps(status));return
     assert all(r['formal'] for r in cpu+gpu)
+    if cpu_retest or cpu_pinned_retest:
+        assert load(R/retest_folder/'completion.json')['state']=='complete'
+        assert all(r.get('retest') for r in cpu)
+    if cpu_pinned_retest:assert all(r.get('benchmark_affinity_verified') and r.get('cpu_pool')==list(range(8)) for r in cpu)
     by_case=collections.defaultdict(list)
     for rec in cpu+gpu:by_case[(rec['case']['scene'],rec['case']['N'],rec['operator'])].append(rec)
     records=[];coverage=[]
@@ -100,10 +106,10 @@ def run(require_complete=False):
     save(out/'summary.json',dict(state='complete',scope='actual local operators on complete static VOF fields;not DNS/PDE time',
         precision='GPU float32 input/native ONNX arithmetic;CPU numerical kernels float64',
         primary_mode='cpu_gpu_cpu includes H2D and D2H;resident mode separate',
-        fastest_cpu='Minimum measured time over1/8/24 fixed workers per backend;parallel variants are explicit adapters',
+        fastest_cpu=('Minimum measured time over1/4/8 workers within fixed8-vCPU pool per backend;shared host;parallel variants are explicit adapters' if cpu_pinned_retest else 'Minimum measured time over1/8/24 fixed workers per backend;parallel variants are explicit adapters'),
         operating_system='CPU thread/wall indicators and device telemetry retained;do not infer precision-normalized algorithmic speedup',
-        cases=cases,coverage=coverage,measured_record_count=len(records),gpu_group_count=len(groups),target_count=len(targets)))
+        cpu_measurements='fixed_pool_shared_host_retest' if cpu_pinned_retest else ('quiet_host_retest' if cpu_retest else 'initial'),cases=cases,coverage=coverage,measured_record_count=len(records),gpu_group_count=len(groups),target_count=len(targets)))
     print(json.dumps(status))
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--require-complete',action='store_true');run(parser.parse_args().require_complete)
+    parser=argparse.ArgumentParser();parser.add_argument('--require-complete',action='store_true');source=parser.add_mutually_exclusive_group();source.add_argument('--cpu-retest',action='store_true');source.add_argument('--cpu-pinned-retest',action='store_true');args=parser.parse_args();run(args.require_complete,args.cpu_retest,args.cpu_pinned_retest)

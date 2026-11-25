@@ -26,11 +26,17 @@ def figure(stem,caption):
 def main():
     summary=json.loads((R/'analysis/summary.json').read_text())
     assert summary['state']=='complete' and summary['measured_record_count']==1088
+    pinned_requested=(R/'cpu-retest-pinned/protocol.json').exists()
+    retest_requested=pinned_requested or (R/'cpu-retest/protocol.json').exists()
+    required='fixed_pool_shared_host_retest' if pinned_requested else 'quiet_host_retest'
+    if retest_requested and summary.get('cpu_measurements')!=required:
+        raise RuntimeError('CPU retest requested; rebuild analysis with matching retest option before publishing final conclusions')
+    workers_text='1、4、8' if pinned_requested else '1、8、24'
     groups=rows('gpu_three_seed_groups.csv');records=rows('all_measured_records.csv')
     targets=json.loads((R/'analysis/equal_time_equal_error.json').read_text())['records']
     body=['<!-- large-grid-results:start -->','<section id="gpu-deployment" class="hero latest-overview"><div class="eyebrow">最新补充 · 大网格 · GPU神经网络对CPU传统数值算法</div><h1>换成GPU、大网格以后，结果如何？</h1>',
         '<p class="lead">这里直接比较GPU上的纯神经网络和CPU上的SimLiquid、APHROS局部算法。主结果包含数据传到GPU、推理和结果传回CPU的时间。</p>']
-    conclusions=[];highlights=[]
+    conclusions=[];highlights=[];performance={}
     for op,cn in [('flux','通量'),('curvature','曲率')]:
         cpu=[r for r in records if r['scene']=='many_drops' and int(r['N'])==4096 and r['operator']==op and r['device']=='CPU' and num(r,'full_task_coverage')==1]
         if not cpu:
@@ -42,6 +48,7 @@ def main():
         equal=target['equal_error_gpu']
         if equal:
             ratio=target['cpu_ms']/equal['time_mean_ms']
+            performance[op]=ratio
             timing=f'快{ratio:.2f}倍' if ratio>=1 else f'耗时为CPU的{1/ratio:.2f}倍'
             seed='三个种子都达到该误差目标' if target['all_gpu_seeds_reach_error'] else '三个种子的平均误差达标，但并非每个种子都达标'
             base+=f'按平均误差达到同一目标的最快神经组为{name(equal)}，{fmt(equal["time_mean_ms"])}毫秒，{timing}；{seed}。'
@@ -58,7 +65,9 @@ def main():
             highlights.append(f'{cn}在达到CPU误差目标时，GPU{fmt(equal["time_mean_ms"])}毫秒，CPU{fmt(target["cpu_ms"])}毫秒，{comparison}。')
         else:highlights.append(f'{cn}：这批神经组尚未达到CPU的误差目标。')
     body.extend('<p class="reader-take">'+text+'</p>' for text in conclusions)
-    body.append('<p class="overview-context">以上重点数字来自4096×4096、256个液滴的场景，实际处理127090个界面格。CPU在每份传统实现的1、8、24线程中比较实测时间；8、24线程是持久线程池适配器，不是整模拟器计时。新网络用三个种子，旧联合网络单列。GPU使用单精度输入及原模型算术，传统数值算法使用双精度。</p>')
+    body.append('<p class="overview-context">以上重点数字来自4096×4096、256个液滴的场景，实际处理127090个界面格。CPU在每份传统实现的'+workers_text+'线程中比较实测时间；多线程使用持久线程池适配器，不是整模拟器计时。新网络用三个种子，旧联合网络单列。GPU使用单精度输入及原模型算术，传统数值算法使用双精度。</p>')
+    if pinned_requested:body.append('<p>CPU已按你的要求重测：计算线程固定在0–7号逻辑核内，分别使用1、4、8线程，整机可以继续运行其他任务。每次调用检查线程绑定，并记录宿主机负载、这些逻辑核的利用率和计时波动。这里报告的是固定8个逻辑核资源范围内的结果；WSL绑定不代表宿主物理核完全独占。原CPU记录和GPU记录均保留。</p>')
+    elif retest_requested:body.append('<p>CPU结果已按你的要求重新测试：开始前观察Windows宿主机和Linux后台CPU负载90秒，测试期间继续监测其他进程。受到外部负载干扰的尝试单独保留，完成配置重新计时；原来的CPU记录和GPU记录均保留。</p>')
     body.append(figure('actual_vof_fields',(R/'figures/actual_vof_fields-caption.txt').read_text(encoding='utf-8')))
     body.append(figure('large_grid_accuracy_time',(R/'figures/large_grid_accuracy_time-caption.txt').read_text(encoding='utf-8')))
     body.append(figure('large_grid_time_scaling',(R/'figures/large_grid_time_scaling-caption.txt').read_text(encoding='utf-8')))
@@ -77,7 +86,11 @@ def main():
             if mode=='resident':body.append('</details>')
     case_rows=[[f'{c["N"]}×{c["N"]}',('单液滴' if c['scene']=='single_drop' else '256个液滴'),f'{c["total_grid_cells"]:,}',f'{c["active_interface_cells"]:,}'] for c in summary['cases']]
     body.append('<details><summary>全部网格与实际工作量</summary>'+table(['网格','场景','网格总格数','参与计算的界面格'],case_rows)+'</details>')
-    body.append('<p>本轮所有方法都覆盖全部测试界面格，没有因失败输出删掉样本。CPU通量计时波动较大，因此表中同时给出5%–95%的测量范围；速度比是本机中位数的比较，不是与精度和硬件无关的算法常数。</p><p>只计单步局部算子：CPU从已准备的体积分数邻域到CPU输出；GPU主结果从已准备的锁页CPU缓冲区，经传输和推理，再回传CPU输出。邻域提取、模型加载、内存分配、压力求解和流体推进均在计时范围之外。每组先预热10次，再测量93次，表中单模型时间取中位数。本轮大网格场景均为圆形界面，其他界面类型的精度见后面的独立几何实验。</p><p>这轮固定已有模型，不重新训练。大窗口仍使用13万基础训练样本和12000步预算；这些结果不能证明训练数据已经足够，也不能作为大窗口充分训练后的性能上限。</p>')
+    if pinned_requested:
+        initial=json.loads((R/'cpu_timings/many_drops_N4096_aphros_flux_cpu8.json').read_text())['wall_ms']
+        new=next(r for r in records if r['scene']=='many_drops' and int(r['N'])==4096 and r['operator']=='flux' and r['device']=='CPU' and r['implementation']=='aphros' and int(r['workers'])==8)
+        body.append('<p>这次复测中，通量计时的波动明显缩小：同为4096²、APHROS、8线程，时间中位数由'+fmt(initial['median'])+'降到'+fmt(num(new,'time_median_ms'))+'毫秒；5%–95%测量范围由'+fmt(initial['p05'])+'–'+fmt(initial['p95'])+'变为'+fmt(num(new,'time_p05_ms'))+'–'+fmt(num(new,'time_p95_ms'))+'毫秒。表中保留其他配置的波动，速度比按各配置的中位数比较。</p>')
+    body.append('<p>本轮所有方法都覆盖全部测试界面格，没有因失败输出删掉样本。只计单步局部算子：CPU从已准备的体积分数邻域到CPU输出；GPU主结果从已准备的锁页CPU缓冲区，经传输和推理，再回传CPU输出。邻域提取、模型加载、内存分配、压力求解和流体推进均在计时范围之外。每组先预热10次，再测量93次，表中单模型时间取中位数。本轮大网格场景均为圆形界面，其他界面类型的精度见后面的独立几何实验。</p><p>这轮固定已有模型，不重新训练。大窗口仍使用13万基础训练样本和12000步预算；这些结果不能证明训练数据已经足够，也不能作为大窗口充分训练后的性能上限。</p>')
     export_names=['all_measured_records.csv','coverage.csv','gpu_three_seed_groups.csv','gpu_vs_fastest_tested_cpu.csv']
     links=[]
     labels=['全部模型、种子与CPU线程结果','各网格完整任务覆盖率','全部神经组均值与波动','对最快已测CPU配置的比较']
@@ -85,9 +98,10 @@ def main():
         target=SOURCE/'tables'/('large-grid-'+filename);target.parent.mkdir(exist_ok=True);shutil.copyfile(R/'analysis'/filename,target)
         links.append(f'<a class="button" href="tables/{target.name}">{label} · CSV</a>')
     code=SOURCE/'code';code.mkdir(exist_ok=True)
-    scripts=['large_grid_operator_fixtures.py','large_grid_gpu_cpu.py','large_grid_gpu_preflight.py','large_grid_analysis.py','large_grid_figures.py','large_grid_field_figure.py','large_grid_reader.py']
+    scripts=['large_grid_operator_fixtures.py','large_grid_gpu_cpu.py','large_grid_gpu_preflight.py','large_grid_analysis.py','large_grid_figures.py','large_grid_field_figure.py','large_grid_reader.py','large_grid_cpu_retest.py']
     for filename in scripts:shutil.copyfile(ROOT/'agent_experiments'/filename,code/filename)
     for filename in ['protocol.json','interpretation_notes.json']:shutil.copyfile(R/filename,code/filename)
+    if pinned_requested:shutil.copyfile(R/'cpu-retest-pinned/protocol.json',code/'cpu_retest_protocol.json')
     code_links=''.join(f'<a class="button" href="code/{filename}">{html.escape(filename)}</a>' for filename in scripts)
     body.append('<div class="download-row">'+''.join(links)+'</div><details><summary>计算、分析与绘图代码</summary><p>代码沿用本项目已选网络权重和原生C++算子；生成测试场不需要已有模拟输出。文件可单独保存，图表和CSV已直接内置于离线HTML。</p><div class="download-row">'+code_links+'</div></details></section><!-- large-grid-results:end -->')
     text=(SOURCE/'index.html').read_text(encoding='utf-8')
@@ -105,10 +119,12 @@ def main():
     home=ROOT/'project-web-single-html-download/PLIC-VOF/index.html'
     if home.exists():
         source=home.read_text(encoding='utf-8')
-        overview='<!-- OPERATOR_ABLATION_REPORT --><section id="operator-ablation" class="latest-overview" style="border-top:3px solid #155da5"><div class="eyebrow" style="color:#155da5">最新结果 · 大网格GPU对CPU与纯神经算子消融</div><h2>曲率用GPU有明显速度收益；通量仍是CPU更快。</h2><div class="overview">'
+        headline=('曲率用GPU有速度收益；通量仍是CPU更快。' if performance.get('curvature',0)>1 and performance.get('flux',0)<1 else '大网格GPU对CPU：重新比较精度与推理时间。')
+        overview='<!-- OPERATOR_ABLATION_REPORT --><section id="operator-ablation" class="latest-overview" style="border-top:3px solid #155da5"><div class="eyebrow" style="color:#155da5">最新结果 · 大网格GPU对CPU与纯神经算子消融</div><h2>'+headline+'</h2><div class="overview">'
         overview+='<div class="overview-row"><div><h3>网格加密，精度会一直提高吗？</h3><p>目前没有稳定收敛。此前独立几何测试中，通量停在约0.000914；3×3联合网络的物理曲率误差由N128的0.0722增至N512的0.1879。</p></div></div>'
         overview+='<div class="overview-row"><div><h3>GPU对CPU，精度与时间怎样？</h3><p>'+html.escape(' '.join(highlights))+'</p></div></div>'
-        overview+='<div class="overview-row"><div><h3>扩大窗口、改数据有用吗？</h3><p>有局部收益：此前N128测试中，基准数据7×7扩大至11×11，曲率误差低31.9%；固定11×11调整数据再低26.4%。但所有窗口仍使用同样约13万训练样本，尚未测出数据量是否足够。</p></div></div></div><p class="overview-context">GPU重点数字来自4096²、256个圆滴的单步算子测试，实际处理127090个界面格，包含数据传入和结果传回。新网络保留三个种子；计时不含完整流体模拟。</p><div class="downloads"><a class="download" href="operator-ablation/wide-native/#gpu-deployment">查看完整图表与结果</a><a class="download" href="operator-ablation/wide-native/download.html">下载单文件离线HTML</a></div></section><!-- /OPERATOR_ABLATION_REPORT -->'
+        cpu_scope='CPU限定固定8个逻辑核，比较1、4、8线程。' if pinned_requested else ''
+        overview+='<div class="overview-row"><div><h3>扩大窗口、改数据有用吗？</h3><p>有局部收益：此前N128测试中，基准数据7×7扩大至11×11，曲率误差低31.9%；固定11×11调整数据再低26.4%。但所有窗口仍使用同样约13万训练样本，尚未测出数据量是否足够。</p></div></div></div><p class="overview-context">GPU重点数字来自4096²、256个圆滴的单步算子测试，实际处理127090个界面格，包含数据传入和结果传回。'+cpu_scope+'新网络保留三个种子；计时不含完整流体模拟。</p><div class="downloads"><a class="download" href="operator-ablation/wide-native/#gpu-deployment">查看完整图表与结果</a><a class="download" href="operator-ablation/wide-native/download.html">下载单文件离线HTML</a></div></section><!-- /OPERATOR_ABLATION_REPORT -->'
         source=re.sub(r'<!-- OPERATOR_ABLATION_REPORT -->.*?<!-- /OPERATOR_ABLATION_REPORT -->',overview,source,flags=re.S)
         from humanize_operator_names import document
         home.write_text(document(source),encoding='utf-8',newline='\n')

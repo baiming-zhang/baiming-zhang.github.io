@@ -1,0 +1,12 @@
+{
+  "authorization": "User clarified that whole-host quietness is unnecessary;control the benchmark CPU cores and use sufficient available cores.",
+  "policy": "fixed_pool_shared_host",
+  "compute_vcpu_pool": [0,1,2,3,4,5,6,7],
+  "worker_counts": [1,4,8],
+  "whole_host_idle_required": false,
+  "matrix": "All8 fields,two original CPU implementations,two operators,three worker counts=96 configurations;float64,10 warmups,93 timed calls unchanged.",
+  "affinity": "Each compute worker is bound to one Linux logical-vCPU in0..7,checked on every call;does not modify other project processes or claim host physical core exclusivity under WSL.",
+  "monitoring": "Record Windows host/process activity,allocated Linux-vCPU utilization and per-worker CPU/wall ratios;shared host activity does not itself reject a measurement. Monitor failures retain attempts separately.",
+  "preserved": "Original96CPU,992GPU and prior whole-host idle-wait logs;no neural retraining or GPU rerun.",
+  "analysis": "large_grid_analysis.py --require-complete --cpu-pinned-retest;report fastest measured1/4/8-worker configuration within the explicit8-vCPU pool,with timing percentiles."
+}
