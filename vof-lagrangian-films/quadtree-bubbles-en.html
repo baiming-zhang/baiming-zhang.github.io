@@ -32,6 +32,15 @@ td,th{padding:8px 11px;border-bottom:1px solid var(--line);text-align:left}th{fo
 footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-bottom:29px}
 @media(max-width:650px){main,footer{padding-left:16px;padding-right:16px}header{padding-top:20px}section{padding:22px 0}.grid{grid-template-columns:1fr}.math{font-size:16px}}
 </style>
+<style>
+.single-bubble-results .single-video{aspect-ratio:16/9;background:#f5f8fb}
+.single-bubble-results .table{margin:16px 0}
+.comparison-details{margin:14px 0;border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.comparison-details summary{cursor:pointer;color:var(--blue);font-weight:650}
+.comparison-details[open] summary{margin-bottom:12px}
+.comparison-details .grid figure{min-width:0}
+.comparison-details table caption{font-size:14px;font-weight:650;text-align:left;margin:8px 0}
+</style>
 </head>
 <body>
 <main>
@@ -40,13 +49,37 @@ footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-
 <div class="language" role="group" aria-label="Language"><a href="quadtree-bubbles.html" hreflang="zh-CN" lang="zh-CN">中文</a><strong aria-current="page">English</strong></div></div>
 <h1>Adaptive VOF for bubble rise and film drainage</h1>
 <p class="lede">A 15 × 15 mm two-dimensional tank compares a free bubble, a wall bubble, and a bottom bubble. The calculation tracks the water film between a rising bubble and the atmosphere.</p>
-<nav aria-label="Sections"><a href="#results">Animation and results</a><a href="#equations">Governing equations</a><a href="#drainage">Drainage and refinement</a><a href="#wetting">Wall attachment</a><a href="#surfactant">Surfactants</a></nav>
+<nav aria-label="Sections"><a href="#latest-single-bubble">Latest single bubble</a><a href="#results">Animation and results</a><a href="#equations">Governing equations</a><a href="#drainage">Drainage and refinement</a><a href="#wetting">Wall attachment</a><a href="#surfactant">Surfactants</a><a href="#runtime">Runtime analysis</a><a href="#benchmarks">Benchmarks</a></nav>
 </header>
 <section class="contributions" id="contributions"><h2>Contributions</h2><ul>
 <li><strong>Pair interfaces by gas connectivity.</strong> Identify the trapped and atmospheric gas regions separately so a fold in one interface does not count as a film.</li>
 <li><strong>Move refinement with the draining film.</strong> Refine where the two interfaces approach, then compare gap and liquid area from a shared checkpoint at equal physical times. The finest local cell was 7.32 µm.</li>
 <li><strong>Isolate flattening, lateral drift, and wall attachment.</strong> Compare fixed-grid and adaptive single-bubble runs with the three-bubble run, and quantify the contact angles required for wall retention.</li>
 </ul><p>The contribution is the diagnostic workflow and its controlled comparisons. The flow solver uses Basilisk VOF, quadtrees, and surface-tension discretization.</p></section>
+<section id="latest-single-bubble" class="single-bubble-results">
+<h2>Latest single-bubble runs · 25 Nov 2026</h2>
+<p>A 3 mm bubble rises in a 15 × 15 mm planar tank. The clean-water and 20% initial surfactant cases each use L12 and L13. The 20% setting means that both gas–liquid interfaces start at one fifth of the model’s saturation surface concentration, equivalent to about 71.0 mN/m.</p>
+<figure>
+<video class="single-video" controls playsinline preload="metadata" width="1920" height="1080" poster="quadtree-bubbles/single-bubble/single-bubble-high-L12-85ms-en.png" src="quadtree-bubbles/single-bubble/single-bubble-VOF-85ms-en.mp4" aria-describedby="single-video-caption"></video>
+<figcaption id="single-video-caption">Saved high-L12 frames from 0 to 85 ms, followed by a four-case replay. Each panel holds at its last saved state. The labels show physical simulation time. · <a href="quadtree-bubbles/single-bubble/single-bubble-VOF-85ms-en.mp4">MP4</a></figcaption>
+</figure>
+<div class="table"><table aria-label="Last saved single-bubble states">
+<thead><tr><th scope="col">Case</th><th scope="col">Finest cell</th><th scope="col">Last saved</th><th scope="col">Shortest gap</th><th scope="col">Status</th></tr></thead>
+<tbody>
+<tr><th scope="row">Clean L12</th><td>3.66 µm</td><td>76.559 ms</td><td>12.8 µm</td><td>Film-resolution guard (~3.5 cells)</td></tr>
+<tr><th scope="row">Clean L13</th><td>1.83 µm</td><td>81 ms</td><td>88.3 µm</td><td>Running</td></tr>
+<tr><th scope="row">20% coverage L12</th><td>3.66 µm</td><td>85 ms</td><td>20.8 µm</td><td>Running</td></tr>
+<tr><th scope="row">20% coverage L13</th><td>1.83 µm</td><td>83 ms</td><td>108.0 µm</td><td>Running</td></tr>
+</tbody></table></div>
+<p>In the PLIC reconstruction, the bubble gas and the atmosphere are separate at all four listed times. At a matched time of 83 ms, the two 20% coverage runs give shortest gaps of 57.0 and 108.0 µm. Late film thickness remains unconverged. The 105 ms target and physical rupture timing are pending.</p>
+<figure><a href="quadtree-bubbles/single-bubble/single-bubble-high-L12-85ms-en.png"><img src="quadtree-bubbles/single-bubble/single-bubble-high-L12-85ms-en.png" width="1920" height="1080" loading="lazy" alt="Planar liquid and bubble at 85 ms with the cap's left shoulder magnified. The red segment measures a 20.8 micrometer shortest gap."></a><figcaption>high-L12 at 85 ms. The shortest interface separation at the left shoulder is 20.8 µm. · <a href="quadtree-bubbles/single-bubble/single-bubble-high-L12-85ms-en.pdf">Vector PDF</a></figcaption></figure>
+<h3 id="runtime">What makes the 2D runs slow</h3>
+<ul>
+<li><strong>A few fine cells govern the global time step.</strong> The explicit capillary stability limit scales as the minimum cell width to the 3/2 power. Recorded L12 and L13 time steps are about 0.328 and 0.116 µs, or 3,053 and 8,635 substeps per simulated millisecond.</li>
+<li><strong>Each step updates the flow on the full quadtree.</strong> high-L12 took <strong>1 hour 52 minutes</strong> to advance from 84 to 85 ms and ended with about 45,000 leaf cells. Each continuation uses one solver thread. In a separate short profile, implicit viscosity relaxation and residuals took about 23% of sampled CPU time, and momentum restriction and tree boundary updates together took about 36%.</li>
+<li><strong>Two acceleration paths have short-window results.</strong> Targeting about four cells across the film gave 6.8–11.6× speedups in two matched-restart tests. In a separate matched restart, four threads took 45.4 s and one thread took 96.2 s. · <a href="quadtree-bubbles/single-bubble/amr-mesh-budget-benchmark.json">Mesh benchmark data</a> · <a href="https://basilisk.fr/src/tension.h">Capillary time-step limit</a></li>
+</ul>
+</section>
 <section id="results"><h2>Animation and results</h2>
 <figure><video class="main-video" controls playsinline preload="metadata" aria-describedby="video-caption"
       width="1280" height="736" poster="quadtree-bubbles/initial-grid.png" src="quadtree-bubbles/three-bubble-rise.mp4"></video>
@@ -95,6 +128,61 @@ footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-
 <p>A surfactant extension would use the following equations. Γ is the surface concentration, Dₛ the surface diffusivity, J the bulk-to-interface exchange, and σ(Γ) a material relation.</p>
 <div class="math"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msubsup><mo>&#x02202;</mo><mi>t</mi><mi>&#x02022;</mi></msubsup><mi>&#x00393;</mi><mo>&#x0002B;</mo><mi>&#x00393;</mi><msub><mo>&#x02207;</mo><mi>s</mi></msub><mo>&#x000B7;</mo><mi>&#x1D42E;</mi><mo>&#x0003D;</mo><msub><mi>D</mi><mi>s</mi></msub><msub><mi>&#x00394;</mi><mi>s</mi></msub><mi>&#x00393;</mi><mo>&#x0002B;</mo><mi>J</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mrow><mi mathvariant="bold-italic">&#x003C4;</mi></mrow><mi>M</mi></msub><mo>&#x0003D;</mo><msub><mo>&#x02207;</mo><mi>s</mi></msub><mi>&#x003C3;</mi><mo stretchy="false">&#x00028;</mo><mi>&#x00393;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>E</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>&#x00393;</mi><mfrac><mrow><mi>d</mi><mi>&#x003C3;</mi></mrow><mrow><mi>d</mi><mi>&#x00393;</mi></mrow></mfrac><mo>&#x0002E;</mo></mrow></math></div>
 <p>Surface elasticity and Marangoni stress can retard drainage. A material-calibrated case can be compared with clean water by measuring the film thinning rate. The three-bubble calculation uses constant σ and does not solve these transport equations.</p></section>
+<section id="additional-controls"><h2>Additional controls and benchmarks</h2>
+<details class="comparison-details" id="single-bubble-shape"><summary>Single-bubble shape and crown drainage</summary>
+
+
+<p>At comparable centroid heights near 11.4 mm, the planar and axisymmetric bubbles are 5.11 and 3.87 mm wide. At 48 ms the axisymmetric film is 417 µm at the center, 210 µm at the shoulder and about 303 µm farther out. Liquid volume in the crown measurement region drops from 6.38 to 2.57 mm³ over 44–48 ms.</p>
+<figure><img alt="Equal-scale slices are matched at comparable centroid heights." height="1120" loading="lazy" src="quadtree-bubbles/single-bubble/bubble-shape-control-L8.png" width="2010"/><figcaption>Equal-scale slices are matched at comparable centroid heights. · <a href="quadtree-bubbles/single-bubble/bubble-shape-control-L8.pdf">PDF</a></figcaption></figure>
+<figure><img alt="The thin annular shoulder in the axisymmetric case and the earlier planar measurements." height="900" loading="lazy" src="quadtree-bubbles/single-bubble/bubble-shoulder-film.png" width="2120"/><figcaption>The thin annular shoulder in the axisymmetric case and the earlier planar measurements. · <a href="quadtree-bubbles/single-bubble/bubble-shoulder-film.pdf">PDF</a></figcaption></figure>
+<details><summary>Static floating-bubble shape</summary><div>
+<figure><img alt="Static reference shape for an intact 3 mm floating bubble." height="1008" loading="lazy" src="quadtree-bubbles/single-bubble/floating-bubbles.png" width="1056"/><figcaption>Static reference shape for an intact 3 mm floating bubble. · <a href="quadtree-bubbles/single-bubble/floating-bubbles.pdf">PDF</a></figcaption></figure>
+</div></details>
+
+</details>
+<details class="comparison-details" id="mesh-budget"><summary>Refinement targeting about four cells</summary>
+
+
+<p>Refinement follows the shortest gap between the two interfaces, and excess cells are coarsened as the film thickens. The explicit capillary time step scales with the smallest cell width to the power 3/2, so coarsening can relax the limit across the domain.</p>
+<figure><img alt="The same shoulder at 80.040 ms. The cell count across the film drops from 18.79 to 4.72. Arrows show the shortest gap." height="616" loading="lazy" src="quadtree-bubbles/single-bubble/amr-film-grid-80ms.png" width="1584"/><figcaption>The same shoulder at 80.040 ms. The cell count across the film drops from 18.79 to 4.72. Arrows show the shortest gap. · <a href="quadtree-bubbles/single-bubble/amr-film-grid-80ms.pdf">PDF</a></figcaption></figure>
+<div aria-label="短测 / Timing tests" class="tab table" tabindex="0"><table>
+<thead><tr><th scope="col">Matched restart tests</th><th scope="col">Original → revised</th><th scope="col">Speedup</th><th scope="col">Final gap difference</th></tr></thead>
+<tbody>
+<tr><th scope="row">Surfactant, about 138 µm</th><td>165.58 → 14.29 s</td><td>11.6×</td><td>0.42%</td></tr>
+<tr><th scope="row">Clean water, about 23 µm</th><td>221.84 → 32.70 s</td><td>6.8×</td><td>0.07%</td></tr>
+</tbody>
+</table></div>
+<p class="notes">The clean-water sample ends at 6.34 cells across the film. The next coarser level would give 3.17 cells, below the 3.5-cell guard. The longer surfactant test hits the L12 guard at 83.531 ms with a 12.80 µm film and a gas pocket still separate from the atmosphere.</p>
+
+</details>
+<details class="comparison-details" id="benchmarks"><summary>VEIL / Aphros curvature and capillary-wave benchmarks</summary>
+
+
+<p>A fixed triaxial bubble tests curvature. A damped two-dimensional capillary wave tests the coupling of surface tension, viscosity, and interface transport. VEIL uses the bubble-cap solver's height-function curvature. Aphros uses particle-based curvature.</p>
+<div class="grid">
+<figure><img alt="VEIL and Aphros ellipsoid facets on 64³ grids, colored by signed local curvature error." height="852" loading="lazy" src="quadtree-bubbles/single-bubble/ellipsoid-curvature-comparison.png" width="1440"/><figcaption>Reconstructed triaxial bubbles on the same 64³ grid, with semi-axes 0.29, 0.21, and 0.14. Blue underestimates curvature and red overestimates it. · <a href="quadtree-bubbles/single-bubble/ellipsoid-curvature-comparison.pdf">PDF</a></figcaption></figure>
+<figure><img alt="Capillary-wave amplitudes and instantaneous errors for VEIL and Aphros against the analytic reference." height="852" loading="lazy" src="quadtree-bubbles/single-bubble/capillary-wave-comparison.png" width="1440"/><figcaption>64 cells per wavelength. Amplitude against the analytic reference above and instantaneous error relative to the initial amplitude below. · <a href="quadtree-bubbles/single-bubble/capillary-wave-comparison.pdf">PDF</a></figcaption></figure>
+</div>
+<div class="tab table"><table>
+<caption>Relative errors on matched grids</caption>
+<thead><tr><th scope="col">Metric</th><th scope="col">Grid</th><th scope="col">VEIL</th><th scope="col">Aphros particles</th></tr></thead>
+<tbody>
+<tr><th scope="row">Ellipsoid curvature RMS</th><td>32<sup>3</sup></td><td>5.58%</td><td><strong>5.39%</strong></td></tr>
+<tr><th scope="row">Ellipsoid curvature RMS</th><td>64<sup>3</sup></td><td><strong>2.32%</strong></td><td>4.72%</td></tr>
+<tr><th scope="row">Wave amplitude RMS</th><td>16 cells / wavelength</td><td><strong>1.92%</strong></td><td>4.84%</td></tr>
+<tr><th scope="row">Wave amplitude RMS</th><td>32 cells / wavelength</td><td><strong>0.62%</strong></td><td>2.41%</td></tr>
+<tr><th scope="row">Wave amplitude RMS</th><td>64 cells / wavelength</td><td><strong>0.26%</strong></td><td>1.84%</td></tr>
+<tr><th scope="row">Wave period</th><td>64 cells / wavelength</td><td><strong>0.16%</strong></td><td>0.94%</td></tr>
+</tbody>
+</table></div>
+<p>On the 64³ ellipsoid, VEIL's area-weighted RMS is about half of Aphros's. The 95th percentile of local relative error is 8.01% for VEIL and 7.11% for Aphros. On the finest wave grid, Aphros's amplitude RMS is 7.1× VEIL's. Maximum relative liquid-area drift on that grid is 5.6 × 10⁻⁸ for VEIL and 1.4 × 10⁻¹⁵ for Aphros.</p>
+<details><summary>Error definitions and audit data</summary>
+<p>The wave uses matched densities and viscosities and constant surface tension, scored against Prosperetti's linear solution at the same 735 dimensionless times. Aphros hybrid curvature gives 16.39% RMS on the 64³ ellipsoid. The table lists particle curvature. Each solver uses its own initialization and time-step control. Cap drainage and film thickness require separate comparisons.</p>
+<p><a href="quadtree-bubbles/single-bubble/veil-validation-audit.json">VEIL run audit (JSON)</a> · <a href="quadtree-bubbles/single-bubble/aphros-validation.json">Aphros run audit (JSON)</a> · <a href="quadtree-bubbles/single-bubble/common-time-comparison.json">Common-window wave scores (JSON)</a> · <a href="https://basilisk.fr/src/test/capwave.c">Capillary-wave reference</a></p>
+</details>
+
+</details>
+</section>
 <section id="references"><h2>References and related results</h2>
 <ul>
 <li><a href="https://basilisk.fr/src/navier-stokes/centered.h">Basilisk incompressible variable-density solver</a> ·

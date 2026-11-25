@@ -1,0 +1,267 @@
+{
+  "aphros_commit": "d8d3976e2f48805097cab223bdb022eafa8c6534",
+  "ellipsoid": {
+    "axes": [
+      0.29,
+      0.21,
+      0.14
+    ],
+    "center": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "volume_estimator": "exact overlap",
+    "velocity_enabled": false,
+    "measure": "area-weighted RMS on Aphros PLIC facets; analytic curvature at the closest point on the exact ellipsoid",
+    "cases": [
+      {
+        "n": 32,
+        "curvature_method": "particles",
+        "dt": 0.0001,
+        "wall_s": 1.07,
+        "n_facets": 864,
+        "n_finite": 864,
+        "area_weighted_relative_l2": 0.053881843933787,
+        "relative_error_median": 0.024648185409872396,
+        "relative_error_p95": 0.06924673659394402,
+        "relative_error_max": 0.101657398431005,
+        "exact_curvature_range": [
+          4.865774367510454,
+          20.434966616504344
+        ],
+        "numerical_curvature_range": [
+          4.788717716865105,
+          19.0199118659274
+        ],
+        "volume": 0.03571362528600596,
+        "exact_volume": 0.03571362528600877,
+        "relative_volume_error": 7.87148124459236e-14,
+        "relative_volume_change": 0.0,
+        "max_vf_change": 0.0
+      },
+      {
+        "n": 64,
+        "curvature_method": "particles",
+        "dt": 0.0001,
+        "wall_s": 2.07,
+        "n_facets": 3360,
+        "n_finite": 3360,
+        "area_weighted_relative_l2": 0.04724944309649296,
+        "relative_error_median": 0.027982146132463283,
+        "relative_error_p95": 0.07106529731124936,
+        "relative_error_max": 0.09423492906575759,
+        "exact_curvature_range": [
+          4.845874468595067,
+          21.09116140660679
+        ],
+        "numerical_curvature_range": [
+          4.73006436394462,
+          20.08353018039321
+        ],
+        "volume": 0.03571362528599976,
+        "exact_volume": 0.03571362528600877,
+        "relative_volume_error": 2.523536934972981e-13,
+        "relative_volume_change": 0.0,
+        "max_vf_change": 0.0
+      },
+      {
+        "n": 96,
+        "curvature_method": "particles",
+        "dt": 0.0001,
+        "wall_s": 6.3,
+        "n_facets": 7592,
+        "n_finite": 7592,
+        "area_weighted_relative_l2": 0.047510104080396034,
+        "relative_error_median": 0.028583398455493868,
+        "relative_error_p95": 0.07229798431816226,
+        "relative_error_max": 0.11585589840959679,
+        "exact_curvature_range": [
+          4.842212486937903,
+          21.246603416018363
+        ],
+        "numerical_curvature_range": [
+          4.719692837515931,
+          20.48274865120709
+        ],
+        "volume": 0.03571362528597221,
+        "exact_volume": 0.03571362528600877,
+        "relative_volume_error": 1.0237366510068568e-12,
+        "relative_volume_change": 0.0,
+        "max_vf_change": 0.0
+      },
+      {
+        "n": 32,
+        "curvature_method": "hybrid",
+        "dt": 0.0001,
+        "wall_s": 0.74,
+        "n_facets": 864,
+        "n_finite": 864,
+        "area_weighted_relative_l2": 0.43633396315524164,
+        "relative_error_median": 0.03225687455094862,
+        "relative_error_p95": 0.97375074310835,
+        "relative_error_max": 3.7269268133342863,
+        "exact_curvature_range": [
+          4.865774367510454,
+          20.434966616504344
+        ],
+        "numerical_curvature_range": [
+          -4.83167823369595,
+          33.68287961910185
+        ],
+        "volume": 0.03571362528600596,
+        "exact_volume": 0.03571362528600877,
+        "relative_volume_error": 7.87148124459236e-14,
+        "relative_volume_change": 0.0,
+        "max_vf_change": 0.0
+      },
+      {
+        "n": 64,
+        "curvature_method": "hybrid",
+        "dt": 0.0001,
+        "wall_s": 1.8,
+        "n_facets": 3360,
+        "n_finite": 3360,
+        "area_weighted_relative_l2": 0.16388384077575177,
+        "relative_error_median": 0.015951993817184137,
+        "relative_error_p95": 0.11358370266427606,
+        "relative_error_max": 1.4562343117205045,
+        "exact_curvature_range": [
+          4.845874468595067,
+          21.09116140660679
+        ],
+        "numerical_curvature_range": [
+          -0.1698790854818334,
+          28.14684547103075
+        ],
+        "volume": 0.03571362528599976,
+        "exact_volume": 0.03571362528600877,
+        "relative_volume_error": 2.523536934972981e-13,
+        "relative_volume_change": 0.0,
+        "max_vf_change": 0.0
+      },
+      {
+        "n": 96,
+        "curvature_method": "hybrid",
+        "dt": 0.0001,
+        "wall_s": 4.71,
+        "n_facets": 7592,
+        "n_finite": 7592,
+        "area_weighted_relative_l2": 0.027597037710827756,
+        "relative_error_median": 0.009323913374264543,
+        "relative_error_p95": 0.053027196758841155,
+        "relative_error_max": 0.7310032476877755,
+        "exact_curvature_range": [
+          4.842212486937903,
+          21.246603416018363
+        ],
+        "numerical_curvature_range": [
+          4.847487426997558,
+          21.29636789734993
+        ],
+        "volume": 0.03571362528597221,
+        "exact_volume": 0.03571362528600877,
+        "relative_volume_error": 1.0237366510068568e-12,
+        "relative_volume_change": 0.0,
+        "max_vf_change": 0.0
+      }
+    ]
+  },
+  "capillary_wave": {
+    "length": 2,
+    "wavelength": 1,
+    "initial_amplitude": 0.01,
+    "initial_velocity": 0,
+    "phase_densities": [
+      1,
+      1
+    ],
+    "dynamic_viscosity": 0.0182571749236,
+    "surface_tension": 1,
+    "gravity": 0,
+    "x_bc": "periodic",
+    "y_bc": "symmetry",
+    "amplitude_measure": "first cosine Fourier coefficient of VOF column heights, corrected for cell averaging",
+    "reference_file_sha256": "5bd86a34b8bbd199dd417e69781db2e53831cbc82d6c0bc68bc5d64f4d68dbf9",
+    "reference_omega0": 11.136655993663416,
+    "reference_first_trough": [
+      3.398890853074995,
+      0.007299610036155504
+    ],
+    "reference_same_phase_period_tau": 6.912369594686204,
+    "reference_decay_ratio": 0.478059470018179,
+    "common_reference_tau_final": 24.8736,
+    "common_reference_samples": 735,
+    "cases": [
+      {
+        "n": 32,
+        "cells_per_wavelength": 16,
+        "t_final": 2.24505033,
+        "frames": 181,
+        "wall_s": 3.36,
+        "complete": true,
+        "initial_amplitude": 0.010064545427978867,
+        "max_relative_liquid_area_drift": 2.042810365310288e-14,
+        "max_sine_amplitude_normalized": 7.225522993565325e-06,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "relative_time_rms_amplitude_error": 0.04836049066998537,
+        "first_trough_tau": 3.4702650487835305,
+        "first_trough_amplitude": 0.007283196650294604,
+        "same_phase_period_tau": 7.148595379032639,
+        "period_signed_relative_error": 0.034174356725374055,
+        "first_trough_signed_relative_error": -0.002248529137803601,
+        "absolute_amplitude_ratio_after_one_period": 0.4629894126037199,
+        "decay_ratio_signed_relative_error": -0.03152339480668809
+      },
+      {
+        "n": 64,
+        "cells_per_wavelength": 32,
+        "t_final": 2.23571968,
+        "frames": 180,
+        "wall_s": 22.47,
+        "complete": true,
+        "initial_amplitude": 0.010016081890851885,
+        "max_relative_liquid_area_drift": 2.4424906541753444e-15,
+        "max_sine_amplitude_normalized": 1.972173419898629e-10,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "relative_time_rms_amplitude_error": 0.024092610097448282,
+        "first_trough_tau": 3.4416916451855446,
+        "first_trough_amplitude": 0.007295477380300065,
+        "same_phase_period_tau": 7.011732153789843,
+        "period_signed_relative_error": 0.014374601609847826,
+        "first_trough_signed_relative_error": -0.0005661474839024905,
+        "absolute_amplitude_ratio_after_one_period": 0.4716241822143266,
+        "decay_ratio_signed_relative_error": -0.01346127042229217
+      },
+      {
+        "n": 128,
+        "cells_per_wavelength": 64,
+        "t_final": 2.23725849,
+        "frames": 180,
+        "wall_s": 243.11,
+        "complete": true,
+        "initial_amplitude": 0.010004017081549436,
+        "max_relative_liquid_area_drift": 1.4432899320127035e-15,
+        "max_sine_amplitude_normalized": 1.9630545775288134e-10,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "relative_time_rms_amplitude_error": 0.018379836246435015,
+        "first_trough_tau": 3.4385299385669192,
+        "first_trough_amplitude": 0.0073032132846089755,
+        "same_phase_period_tau": 6.977589924999684,
+        "period_signed_relative_error": 0.009435307157710016,
+        "first_trough_signed_relative_error": 0.0004936220477018693,
+        "absolute_amplitude_ratio_after_one_period": 0.47704440819653715,
+        "decay_ratio_signed_relative_error": -0.0021232961279968876
+      }
+    ]
+  }
+}

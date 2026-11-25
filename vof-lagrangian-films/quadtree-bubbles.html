@@ -32,6 +32,15 @@ td,th{padding:8px 11px;border-bottom:1px solid var(--line);text-align:left}th{fo
 footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-bottom:29px}
 @media(max-width:650px){main,footer{padding-left:16px;padding-right:16px}header{padding-top:20px}section{padding:22px 0}.grid{grid-template-columns:1fr}.math{font-size:16px}}
 </style>
+<style>
+.single-bubble-results .single-video{aspect-ratio:16/9;background:#f5f8fb}
+.single-bubble-results .table{margin:16px 0}
+.comparison-details{margin:14px 0;border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.comparison-details summary{cursor:pointer;color:var(--blue);font-weight:650}
+.comparison-details[open] summary{margin-bottom:12px}
+.comparison-details .grid figure{min-width:0}
+.comparison-details table caption{font-size:14px;font-weight:650;text-align:left;margin:8px 0}
+</style>
 </head>
 <body>
 <main>
@@ -40,13 +49,37 @@ footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-
 <div class="language" role="group" aria-label="语言"><strong aria-current="page">中文</strong><a href="quadtree-bubbles-en.html" hreflang="en" lang="en">English</a></div></div>
 <h1>自适应 VOF 气泡上浮与液膜排液</h1>
 <p class="lede">在 15 × 15 mm 的二维水槽中，比较自由泡、贴壁泡和贴底泡的运动，追踪气泡接近自由液面时夹在两层气体之间的水膜。</p>
-<nav aria-label="目录"><a href="#results">动画与结果</a><a href="#equations">物理方程</a><a href="#drainage">排液与网格</a><a href="#wetting">贴壁平衡</a><a href="#surfactant">表面活性剂</a></nav>
+<nav aria-label="目录"><a href="#latest-single-bubble">最新单泡</a><a href="#results">动画与结果</a><a href="#equations">物理方程</a><a href="#drainage">排液与网格</a><a href="#wetting">贴壁平衡</a><a href="#surfactant">表面活性剂</a><a href="#runtime">耗时分析</a><a href="#benchmarks">基线测试</a></nav>
 </header>
 <section class="contributions" id="contributions"><h2>当前贡献</h2><ul>
 <li><strong>用气域连通性配对界面。</strong> 分别识别泡内气体和顶部大气，避免把同一界面的折角误算成薄膜。</li>
 <li><strong>把细网格跟着排液区移动。</strong> 只在两条界面接近处加密，用同一检查点、同一物理时刻对照膜厚和液量。实测局部网格边长达到 7.32 µm。</li>
 <li><strong>分开验证变形、偏移和贴壁。</strong> 用单泡固定网格、单泡自适应和三泡对照区分变扁与横移，用静力平衡量化原位附着所需的接触角。</li>
 </ul><p>这里的贡献是测量和验证流程。流体求解采用 Basilisk 的 VOF、四叉树和表面张力离散。</p></section>
+<section id="latest-single-bubble" class="single-bubble-results">
+<h2>最新单泡续算 · 2026-11-25</h2>
+<p>3 mm 单泡在 15 × 15 mm 二维水槽内上浮。清水与初始表面活性剂覆盖率 20% 的两组各用 L12、L13 对照。20% 表示气液界面单位面积的初始表面活性剂量为模型饱和值的 20%，对应约 71.0 mN/m。</p>
+<figure>
+<video class="single-video" controls playsinline preload="metadata" width="1920" height="1080" poster="quadtree-bubbles/single-bubble/single-bubble-high-L12-85ms.png" src="quadtree-bubbles/single-bubble/single-bubble-VOF-85ms-zh.mp4" aria-describedby="single-video-caption"></video>
+<figcaption id="single-video-caption">high-L12 从 0 到 85 ms 的已保存帧，随后并排回放四组。各组在最后一帧定格，图上时间为模拟时间。 · <a href="quadtree-bubbles/single-bubble/single-bubble-VOF-85ms-zh.mp4">MP4</a></figcaption>
+</figure>
+<div class="table"><table aria-label="单泡续算最后保存状态">
+<thead><tr><th scope="col">算例</th><th scope="col">最细格</th><th scope="col">最后保存</th><th scope="col">最短间距</th><th scope="col">状态</th></tr></thead>
+<tbody>
+<tr><th scope="row">清水 L12</th><td>3.66 µm</td><td>76.559 ms</td><td>12.8 µm</td><td>膜厚保护（约 3.5 格）</td></tr>
+<tr><th scope="row">清水 L13</th><td>1.83 µm</td><td>81 ms</td><td>88.3 µm</td><td>续算中</td></tr>
+<tr><th scope="row">20% 覆盖率 L12</th><td>3.66 µm</td><td>85 ms</td><td>20.8 µm</td><td>续算中</td></tr>
+<tr><th scope="row">20% 覆盖率 L13</th><td>1.83 µm</td><td>83 ms</td><td>108.0 µm</td><td>续算中</td></tr>
+</tbody></table></div>
+<p>用 PLIC 重建的泡内气体与上方空气在表中各帧仍分隔。20% 覆盖率两档在同一时刻 83 ms 的最短间距为 57.0 和 108.0 µm，后段膜厚尚未收敛。105 ms 目标和物理破膜时间仍待验证。</p>
+<figure><a href="quadtree-bubbles/single-bubble/single-bubble-high-L12-85ms.png"><img src="quadtree-bubbles/single-bubble/single-bubble-high-L12-85ms.png" width="2448" height="1284" loading="lazy" alt="85 ms 的二维蓝水白泡切面和泡帽左肩放大，红线标出 20.8 微米的最短间距。"></a><figcaption>high-L12，85 ms。左肩处的两界面最短间距为 20.8 µm。 · <a href="quadtree-bubbles/single-bubble/single-bubble-high-L12-85ms.pdf">矢量 PDF</a></figcaption></figure>
+<h3 id="runtime">为什么二维也算得慢</h3>
+<ul>
+<li><strong>少量细格约束全域时间步。</strong> 显式表面张力的稳定步长随最小格距的 3/2 次方缩放。L12、L13 的实测步长约 0.328 和 0.116 µs，每 1 ms 约需 3,053 和 8,635 个子步。</li>
+<li><strong>每一步都要更新整棵树上的流场。</strong> high-L12 从 84 到 85 ms 实测 <strong>1 小时 52 分</strong>，末帧约 4.5 万个叶格。续算每组用一个求解线程。独立短测中，隐式黏性迭代及残差约占 23% 的采样 CPU 时间，粗细层间的动量限制与树网格边界更新合计约 36%。</li>
+<li><strong>两条加速路径已短测。</strong> 同检查点小窗口按约 4 格保留液膜，两个算例提速 6.8–11.6 倍。另一同检查点短测，4 线程用时 45.4 s，单线程用时 96.2 s。两项都是短窗结果。 · <a href="quadtree-bubbles/single-bubble/amr-mesh-budget-benchmark.json">网格短测数据</a> · <a href="https://basilisk.fr/src/tension.h">毛细步长条件</a></li>
+</ul>
+</section>
 <section id="results"><h2>动画与结果</h2>
 <figure><video class="main-video" controls playsinline preload="metadata" aria-describedby="video-caption"
       width="1280" height="736" poster="quadtree-bubbles/initial-grid.png" src="quadtree-bubbles/three-bubble-rise.mp4"></video>
@@ -95,6 +128,61 @@ footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-
 <p>后续含活性剂对照的方程如下。Γ 为界面浓度，Dₛ 为表面扩散率，J 是体相与界面之间的交换，σ(Γ) 需要材料数据。</p>
 <div class="math"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msubsup><mo>&#x02202;</mo><mi>t</mi><mi>&#x02022;</mi></msubsup><mi>&#x00393;</mi><mo>&#x0002B;</mo><mi>&#x00393;</mi><msub><mo>&#x02207;</mo><mi>s</mi></msub><mo>&#x000B7;</mo><mi>&#x1D42E;</mi><mo>&#x0003D;</mo><msub><mi>D</mi><mi>s</mi></msub><msub><mi>&#x00394;</mi><mi>s</mi></msub><mi>&#x00393;</mi><mo>&#x0002B;</mo><mi>J</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mrow><mi mathvariant="bold-italic">&#x003C4;</mi></mrow><mi>M</mi></msub><mo>&#x0003D;</mo><msub><mo>&#x02207;</mo><mi>s</mi></msub><mi>&#x003C3;</mi><mo stretchy="false">&#x00028;</mo><mi>&#x00393;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>E</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>&#x00393;</mi><mfrac><mrow><mi>d</mi><mi>&#x003C3;</mi></mrow><mrow><mi>d</mi><mi>&#x00393;</mi></mrow></mfrac><mo>&#x0002E;</mo></mrow></math></div>
 <p>界面弹性和马兰戈尼应力可以减慢排液。接下来可用测得的浓度关系与清水对照比较水膜变薄速率。当前三泡结果使用恒定 σ，未包含这些输运方程。</p></section>
+<section id="additional-controls"><h2>其他对照与基准</h2>
+<details class="comparison-details" id="single-bubble-shape"><summary>单泡形状与顶部排液</summary>
+
+
+<p>在约 11.4 mm 的相同质心高度，平面泡宽 5.11 mm，轴对称泡宽 3.87 mm。48 ms 的轴对称切面上，膜从中心的 417 µm 减薄至肩部的 210 µm，向外又增至约 303 µm。44–48 ms 内，顶部测量区液量由 6.38 降到 2.57 mm³。</p>
+<figure><img alt="等比例切面按相近质心高度配对。" height="1120" loading="lazy" src="quadtree-bubbles/single-bubble/bubble-shape-control-L8.png" width="2010"/><figcaption>等比例切面按相近质心高度配对。 · <a href="quadtree-bubbles/single-bubble/bubble-shape-control-L8.pdf">PDF</a></figcaption></figure>
+<figure><img alt="轴对称泡肩的薄环与旧二维垂向测量。" height="900" loading="lazy" src="quadtree-bubbles/single-bubble/bubble-shoulder-film.png" width="2120"/><figcaption>轴对称泡肩的薄环与旧二维垂向测量。 · <a href="quadtree-bubbles/single-bubble/bubble-shoulder-film.pdf">PDF</a></figcaption></figure>
+<details><summary>静态浮泡形状</summary><div>
+<figure><img alt="完整 3 mm 浮泡的静态参考形状。" height="1008" loading="lazy" src="quadtree-bubbles/single-bubble/floating-bubbles.png" width="1056"/><figcaption>完整 3 mm 浮泡的静态参考形状。 · <a href="quadtree-bubbles/single-bubble/floating-bubbles.pdf">PDF</a></figcaption></figure>
+</div></details>
+
+</details>
+<details class="comparison-details" id="mesh-budget"><summary>约 4 格的加密策略</summary>
+
+
+<p>按内外界面最近距离加密，膜变厚后合并多余细格。显式毛细时间步随全域最小格距的 3/2 次方变化，回收细格能减轻全域的小步长限制。</p>
+<figure><img alt="80.040 ms 同一泡肩。液膜跨格数从 18.79 降至 4.72，箭头标出最短距离。" height="616" loading="lazy" src="quadtree-bubbles/single-bubble/amr-film-grid-80ms.png" width="1584"/><figcaption>80.040 ms 同一泡肩。液膜跨格数从 18.79 降至 4.72，箭头标出最短距离。 · <a href="quadtree-bubbles/single-bubble/amr-film-grid-80ms.pdf">PDF</a></figcaption></figure>
+<div aria-label="短测 / Timing tests" class="tab table" tabindex="0"><table>
+<thead><tr><th scope="col">同检查点短测</th><th scope="col">原版 → 改版</th><th scope="col">提速</th><th scope="col">末帧膜厚差</th></tr></thead>
+<tbody>
+<tr><th scope="row">表活，约 138 µm</th><td>165.58 → 14.29 s</td><td>11.6×</td><td>0.42%</td></tr>
+<tr><th scope="row">清水，约 23 µm</th><td>221.84 → 32.70 s</td><td>6.8×</td><td>0.07%</td></tr>
+</tbody>
+</table></div>
+<p class="notes">清水样本末帧跨 6.34 格，再粗一级只有 3.17 格，低于 3.5 格保护线。较长的表活试跑在 83.531 ms 达到 L12 保护，膜厚 12.80 µm，泡仍封闭。</p>
+
+</details>
+<details class="comparison-details" id="benchmarks"><summary>VEIL / Aphros 曲率与毛细驻波基准</summary>
+
+
+<p>用固定形状的三维椭球泡测曲率，用二维黏性毛细驻波测表面张力、黏性和界面输运的耦合。VEIL 使用泡帽求解器的高度函数曲率，Aphros 使用粒子曲率。</p>
+<div class="grid">
+<figure><img alt="VEIL 和 Aphros 的 64³ 三维椭球界面，按局部有符号曲率误差着色。" height="852" loading="lazy" src="quadtree-bubbles/single-bubble/ellipsoid-curvature-comparison.png" width="1440"/><figcaption>同一 64³ 网格重建的三维椭球泡，半轴为 0.29、0.21、0.14。蓝色低估曲率，红色高估曲率。 · <a href="quadtree-bubbles/single-bubble/ellipsoid-curvature-comparison.pdf">PDF</a></figcaption></figure>
+<figure><img alt="VEIL 和 Aphros 的毛细驻波振幅与解析解，以及两种方法的瞬时振幅误差。" height="852" loading="lazy" src="quadtree-bubbles/single-bubble/capillary-wave-comparison.png" width="1440"/><figcaption>每波长 64 格。上图为振幅和解析解，下图为相对初始振幅的瞬时误差。 · <a href="quadtree-bubbles/single-bubble/capillary-wave-comparison.pdf">PDF</a></figcaption></figure>
+</div>
+<div class="tab table"><table>
+<caption>同网格相对误差</caption>
+<thead><tr><th scope="col">指标</th><th scope="col">网格</th><th scope="col">VEIL</th><th scope="col">Aphros 粒子曲率</th></tr></thead>
+<tbody>
+<tr><th scope="row">椭球曲率 RMS</th><td>32<sup>3</sup></td><td>5.58%</td><td><strong>5.39%</strong></td></tr>
+<tr><th scope="row">椭球曲率 RMS</th><td>64<sup>3</sup></td><td><strong>2.32%</strong></td><td>4.72%</td></tr>
+<tr><th scope="row">驻波振幅 RMS</th><td>16 格／波长</td><td><strong>1.92%</strong></td><td>4.84%</td></tr>
+<tr><th scope="row">驻波振幅 RMS</th><td>32 格／波长</td><td><strong>0.62%</strong></td><td>2.41%</td></tr>
+<tr><th scope="row">驻波振幅 RMS</th><td>64 格／波长</td><td><strong>0.26%</strong></td><td>1.84%</td></tr>
+<tr><th scope="row">驻波周期</th><td>64 格／波长</td><td><strong>0.16%</strong></td><td>0.94%</td></tr>
+</tbody>
+</table></div>
+<p>在 64³ 椭球测试中，VEIL 的面积加权 RMS 约为 Aphros 的一半。局部相对误差的第 95 百分位为 8.01%（VEIL）和 7.11%（Aphros）。在最细驻波网格上，Aphros 的振幅 RMS 约为 VEIL 的 7.1 倍。该档液体面积最大相对漂移分别为 5.6 × 10⁻⁸（VEIL）和 1.4 × 10⁻¹⁵（Aphros）。</p>
+<details><summary>误差口径与审计数据</summary>
+<p>驻波使用等密度、等黏度和恒定表面张力，在相同的 735 个无量纲时刻与 Prosperetti 线性解比较。Aphros 的混合曲率在 64³ 椭球上的 RMS 为 16.39%，表中列粒子曲率。两套求解器沿用各自的初始化与时间步控制。泡帽排液和薄膜厚度需要单独对照。</p>
+<p><a href="quadtree-bubbles/single-bubble/veil-validation-audit.json">VEIL 原始审计 (JSON)</a> · <a href="quadtree-bubbles/single-bubble/aphros-validation.json">Aphros 原始审计 (JSON)</a> · <a href="quadtree-bubbles/single-bubble/common-time-comparison.json">驻波共同时段复算 (JSON)</a> · <a href="https://basilisk.fr/src/test/capwave.c">驻波解析基准</a></p>
+</details>
+
+</details>
+</section>
 <section id="references"><h2>参考与相关结果</h2>
 <ul>
 <li><a href="https://basilisk.fr/src/navier-stokes/centered.h">Basilisk 变密度不可压缩求解</a> ·

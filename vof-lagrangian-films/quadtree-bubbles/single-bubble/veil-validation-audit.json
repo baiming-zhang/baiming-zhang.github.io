@@ -1,0 +1,288 @@
+{
+  "implementation": {
+    "geometry": "cup_normal.c project Marangoni/height-function curvature",
+    "wave": "quadtree; conservative VOF momentum and the project's patched GCR pressure projection",
+    "marangoni_sha256": "80315f019afe25d9e0cf8f53c3911786c0b6bae1ee07475bb0a2c9bd7d9db0f4",
+    "pressure_module_sha256": "351442033cc909ea2fdd2c82a06ff6d55670f68c624666a4033f2682099878f1",
+    "wave_scope": "clean constant-sigma flat periodic wave on uniform leaves",
+    "ellipsoid_scope": "static 3D octree geometry on uniform leaves"
+  },
+  "ellipsoid": {
+    "radii": [
+      0.29,
+      0.21,
+      0.14
+    ],
+    "gas_volume": 0.03571362528600877,
+    "reference": "sum of principal curvatures on the exact ellipsoid at the closest point to each PLIC centroid",
+    "observed_refinement_order": [
+      1.2618445809338572,
+      1.0534112518336314
+    ],
+    "quadrature_test": [
+      {
+        "grid": 32,
+        "gauss_nodes_per_axis": 64,
+        "facets": 864,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "gas_volume": 0.035713570424768894,
+        "gas_volume_relative_error": -1.5361431229266032e-06,
+        "local_relative_error_p95": 0.16871904643297647,
+        "local_relative_error_max": 0.2176683239860639,
+        "area_weighted_relative_l2": 0.05573403713861514,
+        "direct_height_function_cells": 624,
+        "mixed_height_function_cells": 184,
+        "neighbor_averaging_cells": 56,
+        "centroid_fit_cells": 0
+      },
+      {
+        "grid": 64,
+        "gauss_nodes_per_axis": 64,
+        "facets": 3360,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "gas_volume": 0.03571358398192288,
+        "gas_volume_relative_error": -1.1565357914689045e-06,
+        "local_relative_error_p95": 0.08012722897968727,
+        "local_relative_error_max": 0.13601558622288845,
+        "area_weighted_relative_l2": 0.023223534805620966,
+        "direct_height_function_cells": 3326,
+        "mixed_height_function_cells": 34,
+        "neighbor_averaging_cells": 0,
+        "centroid_fit_cells": 0
+      },
+      {
+        "grid": 128,
+        "gauss_nodes_per_axis": 64,
+        "facets": 13440,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "gas_volume": 0.035713623431263095,
+        "gas_volume_relative_error": -5.193383934010143e-08,
+        "local_relative_error_p95": 0.04224516995674621,
+        "local_relative_error_max": 0.09685656677299789,
+        "area_weighted_relative_l2": 0.010747909105764616,
+        "direct_height_function_cells": 13438,
+        "mixed_height_function_cells": 2,
+        "neighbor_averaging_cells": 0,
+        "centroid_fit_cells": 0
+      }
+    ],
+    "results": [
+      {
+        "grid": 32,
+        "gauss_nodes_per_axis": 32,
+        "facets": 864,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "gas_volume": 0.035713597674583306,
+        "gas_volume_relative_error": -7.731342098749039e-07,
+        "local_relative_error_p95": 0.16872710966770035,
+        "local_relative_error_max": 0.2174508326116834,
+        "area_weighted_relative_l2": 0.05575268097574734,
+        "direct_height_function_cells": 624,
+        "mixed_height_function_cells": 184,
+        "neighbor_averaging_cells": 56,
+        "centroid_fit_cells": 0,
+        "wall_seconds": 0.15
+      },
+      {
+        "grid": 64,
+        "gauss_nodes_per_axis": 32,
+        "facets": 3360,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "gas_volume": 0.03571356126514384,
+        "gas_volume_relative_error": -1.7926173671023449e-06,
+        "local_relative_error_p95": 0.08011560293031862,
+        "local_relative_error_max": 0.13601685245729717,
+        "area_weighted_relative_l2": 0.023249450209624493,
+        "direct_height_function_cells": 3326,
+        "mixed_height_function_cells": 34,
+        "neighbor_averaging_cells": 0,
+        "centroid_fit_cells": 0,
+        "wall_seconds": 1.27
+      },
+      {
+        "grid": 128,
+        "gauss_nodes_per_axis": 32,
+        "facets": 13432,
+        "volume_fraction_range": [
+          0.0,
+          1.0
+        ],
+        "gas_volume": 0.03571364193501332,
+        "gas_volume_relative_error": 4.661807480044189e-07,
+        "local_relative_error_p95": 0.042254995611763796,
+        "local_relative_error_max": 0.0968574963195934,
+        "area_weighted_relative_l2": 0.011202225295653491,
+        "direct_height_function_cells": 13438,
+        "mixed_height_function_cells": 2,
+        "neighbor_averaging_cells": 0,
+        "centroid_fit_cells": 0,
+        "wall_seconds": 8.39
+      }
+    ]
+  },
+  "wave": {
+    "cells": [
+      32,
+      64,
+      128
+    ],
+    "domain": [
+      2,
+      2
+    ],
+    "wavelength": 1,
+    "initial_amplitude": 0.01,
+    "density_both": 1,
+    "dynamic_viscosity_both": 0.0182571749236,
+    "sigma": 1,
+    "gravity": 0,
+    "reference": "Prosperetti linearized small-amplitude solution in Basilisk test/prosperetti.h. Comparison uses magnitude of Fourier fundamental.",
+    "omega0": 11.136655993663416,
+    "reference_period_tau": 6.912369594686204,
+    "reference_decay_ratio": 0.478059470018179,
+    "reference_sample_count": 736,
+    "common_reference_last_tau": 24.9075,
+    "observed_refinement_order": [
+      1.632701620553337,
+      1.2529578342622414
+    ],
+    "results": {
+      "32": {
+        "grid": 32,
+        "cells_per_wavelength": 16,
+        "time_step_cap": 0.0125,
+        "samples": 180,
+        "last_output_time": 2.237499999999998,
+        "total_solver_steps": 363,
+        "wall_seconds": 0.37,
+        "normalized_rms_amplitude_error": 0.019191298523508583,
+        "period_tau": 6.999199778550054,
+        "period_relative_error": 0.012561565563652621,
+        "decay_ratio": 0.46328824561982695,
+        "decay_relative_error": -0.030898298903670574,
+        "first_trough_tau": 3.4227548355434947,
+        "first_trough_amplitude": 0.007280602149731146,
+        "volume_fraction_range": [
+          -1.0290433869603044e-16,
+          1.0000000000000002
+        ],
+        "max_relative_liquid_area_drift": 1.8660257838920558e-07,
+        "max_sine_to_initial_amplitude": 5.1514665534363414e-05,
+        "max_pressure_projection_scaled_residual": 9.98465661347615e-07,
+        "gcr_fallbacks": 0
+      },
+      "64": {
+        "grid": 64,
+        "cells_per_wavelength": 32,
+        "time_step_cap": 0.005,
+        "samples": 180,
+        "last_output_time": 2.237499999999998,
+        "total_solver_steps": 900,
+        "wall_seconds": 3.79,
+        "normalized_rms_amplitude_error": 0.00618888195626594,
+        "period_tau": 6.938101119009367,
+        "period_relative_error": 0.003722533057685995,
+        "decay_ratio": 0.47190333056934647,
+        "decay_relative_error": -0.012877350695716605,
+        "first_trough_tau": 3.4056336279324015,
+        "first_trough_amplitude": 0.007292351584667612,
+        "volume_fraction_range": [
+          -7.676151381197371e-17,
+          1.0000000000000027
+        ],
+        "max_relative_liquid_area_drift": 6.532102125866857e-08,
+        "max_sine_to_initial_amplitude": 6.022593791485495e-05,
+        "max_pressure_projection_scaled_residual": 9.99633584646081e-07,
+        "gcr_fallbacks": 0
+      },
+      "128": {
+        "grid": 128,
+        "cells_per_wavelength": 64,
+        "time_step_cap": 0.002,
+        "samples": 180,
+        "last_output_time": 2.237499999999998,
+        "total_solver_steps": 2152,
+        "wall_seconds": 56.39,
+        "normalized_rms_amplitude_error": 0.0025967749188409795,
+        "period_tau": 6.923090912680562,
+        "period_relative_error": 0.0015510336719553042,
+        "decay_ratio": 0.47818583462041997,
+        "decay_relative_error": 0.0002643282063550245,
+        "first_trough_tau": 3.4036694792846096,
+        "first_trough_amplitude": 0.007309653905850106,
+        "volume_fraction_range": [
+          -4.56520980068016e-20,
+          1.0000000000000064
+        ],
+        "max_relative_liquid_area_drift": 5.6045220686584685e-08,
+        "max_sine_to_initial_amplitude": 4.959152176546219e-05,
+        "max_pressure_projection_scaled_residual": 9.990678785260844e-07,
+        "gcr_fallbacks": 0
+      },
+      "128-dt-half": {
+        "grid": 128,
+        "cells_per_wavelength": 64,
+        "time_step_cap": 0.001,
+        "samples": 180,
+        "last_output_time": 2.237499999999998,
+        "total_solver_steps": 2338,
+        "wall_seconds": 72.47,
+        "normalized_rms_amplitude_error": 0.002657113957564789,
+        "period_tau": 6.923225943417377,
+        "period_relative_error": 0.001570568324286148,
+        "decay_ratio": 0.4781144433587636,
+        "decay_relative_error": 0.00011499268194081758,
+        "first_trough_tau": 3.4040085784899645,
+        "first_trough_amplitude": 0.007310547123178499,
+        "volume_fraction_range": [
+          -2.0111950299606107e-17,
+          1.0000000000000022
+        ],
+        "max_relative_liquid_area_drift": 1.90036358649337e-07,
+        "max_sine_to_initial_amplitude": 4.275531868667295e-05,
+        "max_pressure_projection_scaled_residual": 9.999479381044176e-07,
+        "gcr_fallbacks": 0
+      },
+      "128-dt-tight": {
+        "grid": 128,
+        "cells_per_wavelength": 64,
+        "time_step_cap": 0.0005,
+        "samples": 180,
+        "last_output_time": 2.237499999999998,
+        "total_solver_steps": 4496,
+        "wall_seconds": 115.25,
+        "normalized_rms_amplitude_error": 0.0030827460997608406,
+        "period_tau": 6.923145487999366,
+        "period_relative_error": 0.0015589289845621135,
+        "decay_ratio": 0.477738793150683,
+        "decay_relative_error": -0.0006707886520557205,
+        "first_trough_tau": 3.4062321484589573,
+        "first_trough_amplitude": 0.007307223223299217,
+        "volume_fraction_range": [
+          -4.840131549068284e-19,
+          1.0000000000000018
+        ],
+        "max_relative_liquid_area_drift": 2.0441902424117586e-06,
+        "max_sine_to_initial_amplitude": 1.7621872111505045e-05,
+        "max_pressure_projection_scaled_residual": 9.997973746518856e-07,
+        "gcr_fallbacks": 0
+      }
+    },
+    "normalized_same_grid_rms_amplitude_change_with_tighter_time_steps": 0.0008082077223832787
+  }
+}
