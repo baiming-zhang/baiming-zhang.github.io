@@ -1,8 +1,9 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+
+<html data-language="zh" lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>VOF with Lagrangian Thin Films · Baiming Zhang</title>
 <style>
   :root {color-scheme:light;--ink:#182636;--muted:#4d6073;--blue:#2166ac;--red:#a91d30;--line:#d8e3ee;--soft:#f2f7fc}
@@ -31,116 +32,168 @@
   code{font-family:Consolas,monospace;overflow-wrap:anywhere;font-size:.9em} footer{border-top:1px solid var(--line);padding-top:18px;padding-bottom:30px}
   @media(max-width:700px){main,footer{padding-left:18px;padding-right:18px}header{padding-top:34px}.hero,.facts,.steps,.clips{grid-template-columns:1fr}section{padding:24px 0}.table{font-size:14px}}
   @media print{body{font-size:11pt}header{padding:12px 0}nav,video{display:none}section,figure,tr{break-inside:avoid}main,footer{padding:0}.hero{gap:12px}}
+
+  .header-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 18px}
+  .language-switch{display:flex;flex-wrap:wrap;gap:4px;padding:3px;border:1px solid var(--line);border-radius:8px}
+  .language-switch[hidden]{display:none}
+  .language-switch button{background:#fff;color:var(--ink);font:inherit;font-size:14px;cursor:pointer;border:0;border-radius:5px;padding:4px 10px}
+  .language-switch button[aria-pressed=true]{background:var(--blue);color:#fff}
+  .language-switch button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+  html[data-language=zh] [data-copy=en],html[data-language=en] [data-copy=zh]{display:none}
+  html[data-language=both] [data-copy=en]{display:block;margin-top:.2em}
+  html[data-language=both] :is(p,figcaption,td) > [data-copy=en]{color:var(--muted)}
+  html[data-language=both] .meta [data-copy=en]{margin-top:0}
+  @media(max-width:700px){.header-meta{gap:10px}.language-switch button{padding:5px 8px}}
+  @media print{.language-switch{display:none}}
 </style>
 </head>
 <body>
 <main>
 <header>
-  <p class="meta">方法与初步结果 · 2026-11-20</p>
-  <h1 lang="en">VOF with Lagrangian Thin Films</h1>
-  <p class="lede">倒啤酒时，射流和液面可以用网格计算，泡沫里把气泡隔开的液膜却只有微米厚。现有求解器用两个网格场追踪网格看不清的气泡，已经能计算含气液体的输运、上浮和排液。VEIL 提案进一步研究怎样把单张薄膜作为拉格朗日元素嵌入网格。</p>
-  <aside class="research-link" aria-labelledby="quadtree-study">
-    <p id="quadtree-study"><strong>自适应 VOF 气泡与液膜研究</strong></p>
-    <p>按气域连通性配对界面，在排液区局部加密，并用受控算例区分气泡变形、横移与贴壁。三泡计算已推进至 110 ms。</p>
-    <p><a href="quadtree-bubbles.html" hreflang="zh-CN">中文报告</a> · <a href="quadtree-bubbles-en.html" hreflang="en" lang="en">English report</a></p>
-  </aside>
-  <nav aria-label="目录"><a href="/project/">项目目录</a><a href="#conservative-closure">守恒推导与纯 VOF 对照</a><a href="#f4-full">原尺寸 F4 视频</a><a href="#f4-interface-only">关闭白色散射的单帧</a><a href="#method">物理方法</a><a href="#render">泡沫怎么画</a><a href="#results">初步结果</a><a href="#rising-bubble">气泡上浮</a><a href="#limits">复现范围</a></nav>
+<div class="header-meta"><p class="meta"><span data-copy="zh" lang="zh-CN">方法与初步结果 · 2026-11-20</span><span data-copy="en" lang="en">Method and preliminary results · 20 November 2026</span></p>
+<div aria-label="语言 / Language" class="language-switch" hidden="" role="group">
+<button aria-pressed="true" data-language-choice="zh" lang="zh-CN" type="button">中文</button>
+<button aria-pressed="false" data-language-choice="en" lang="en" type="button">English</button>
+<button aria-pressed="false" data-language-choice="both" type="button"><span lang="zh-CN">中英对照</span> <span lang="en">/ Both</span></button>
+</div>
+</div>
+<h1 lang="en">VOF with Lagrangian Thin Films</h1>
+<p class="lede"><span data-copy="zh" lang="zh-CN">倒啤酒时，射流和液面可以用网格计算，泡沫里把气泡隔开的液膜却只有微米厚。现有求解器用两个网格场追踪网格看不清的气泡，已经能计算含气液体的输运、上浮和排液。VEIL 提案进一步研究怎样把单张薄膜作为拉格朗日元素嵌入网格。</span><span data-copy="en" lang="en">During a beer pour, a grid can resolve the jet and the free surface, while the liquid films separating bubbles in the foam can be only micrometres thick. The existing solver tracks unresolved bubbles with two grid fields and models transport, rise, and drainage in aerated liquid. VEIL explores how individual films can be embedded in the grid as Lagrangian elements.</span></p>
+<aside aria-labelledby="quadtree-study" class="research-link">
+<p id="quadtree-study"><span data-copy="zh" lang="zh-CN"><strong>自适应 VOF 气泡与液膜研究</strong></span><span data-copy="en" lang="en"><strong>Adaptive VOF for bubbles and liquid films</strong></span></p>
+<p><span data-copy="zh" lang="zh-CN">按气域连通性配对界面，在排液区局部加密，并用受控算例区分气泡变形、横移与贴壁。三泡计算已推进至 110 ms。</span><span data-copy="en" lang="en">Gas connectivity pairs the interfaces, and the drainage region is refined locally. Controlled cases distinguish bubble deformation, lateral motion, and wall attachment. The three-bubble run reaches 110 ms.</span></p>
+<p><a href="quadtree-bubbles.html" hreflang="zh-CN">中文报告</a> · <a href="quadtree-bubbles-en.html" hreflang="en" lang="en">English report</a></p>
+</aside>
+<nav aria-label="目录" data-label-en="Contents" data-label-zh="目录"><a href="/project/"><span data-copy="zh" lang="zh-CN">项目目录</span><span data-copy="en" lang="en">Project index</span></a><a href="#conservative-closure"><span data-copy="zh" lang="zh-CN">守恒推导与纯 VOF 对照</span><span data-copy="en" lang="en">Conservative closure and pure-VOF baseline</span></a><a href="#f4-full"><span data-copy="zh" lang="zh-CN">原尺寸 F4 视频</span><span data-copy="en" lang="en">Full-scale F4 video</span></a><a href="#f4-interface-only"><span data-copy="zh" lang="zh-CN">关闭白色散射的单帧</span><span data-copy="en" lang="en">Frame without white scattering</span></a><a href="#method"><span data-copy="zh" lang="zh-CN">物理方法</span><span data-copy="en" lang="en">Physical model</span></a><a href="#render"><span data-copy="zh" lang="zh-CN">泡沫怎么画</span><span data-copy="en" lang="en">Foam rendering</span></a><a href="#results"><span data-copy="zh" lang="zh-CN">初步结果</span><span data-copy="en" lang="en">Preliminary results</span></a><a href="#rising-bubble"><span data-copy="zh" lang="zh-CN">气泡上浮</span><span data-copy="en" lang="en">Bubble rise</span></a><a href="#limits"><span data-copy="zh" lang="zh-CN">复现范围</span><span data-copy="en" lang="en">Reproduction scope</span></a></nav>
 </header>
 <div class="hero" id="f4-full">
-  <figure>
-    <video class="media" controls playsinline preload="none" poster="cirrus-f4-frame78-poster.png" src="cirrus-f4-full.mp4" width="960" height="540" aria-label="Cirrus-VOF 原尺寸 F4 倒啤酒与停流后的回稳"></video>
-    <figcaption class="caption">原尺寸 F4 · 0–3.00 秒倒入，3.00 秒关阀，续算至 5.01 秒。152 帧，30 fps，使用 Cirrus-VOF 原有泡沫模型。<a href="cirrus-f4-frame78-4k.png">第 78 帧 4K 原图</a></figcaption>
-  </figure>
-  <figure id="f4-interface-only">
-    <a href="cirrus-f4-frame78-interface-only.png"><img class="media" src="cirrus-f4-frame78-interface-only.png" width="960" height="540" alt="F4 第 78 帧关闭白色体积散射后，杯中仍可见浅色的气泡区域"></a>
-    <figcaption class="caption"><strong>第 78 帧（2.60 秒）· 关闭白色体积散射</strong>。沿用 F4 视频的求解数据、灯光和相机，同时关闭泡沫凹凸纹理，保留啤酒吸收及重建气泡界面的反射和折射。点击查看原图。</figcaption>
-  </figure>
-  <div class="facts">
-    <div class="fact"><strong>本机 · 原尺寸 F4 倒入与停流已完成</strong><span>1 mm 网格，共 26,096 步。3.00 秒关阀后新增进液为零。</span></div>
-    <div class="fact"><strong>本机 · Cirrus 泡沫模块 8 项回归通过</strong><span>覆盖输运、上浮、排液、卷气、续算、浮力和气量账。</span></div>
-    <div class="fact pending"><strong>待验证 · VEIL 的网格—液膜耦合</strong><span>这段 F4 成片使用现有的分散气体连续场模型。显式液膜耦合仍在提案阶段。</span></div>
-  </div>
+<figure>
+<video aria-label="Cirrus-VOF 原尺寸 F4 倒啤酒与停流后的回稳" class="media" controls="" data-label-en="Cirrus-VOF full-scale F4 beer pour and evolution after inlet shutoff" data-label-zh="Cirrus-VOF 原尺寸 F4 倒啤酒与停流后的回稳" height="540" playsinline="" poster="cirrus-f4-frame78-poster.png" preload="none" src="cirrus-f4-full.mp4" width="960"></video>
+<figcaption class="caption"><span data-copy="zh" lang="zh-CN">原尺寸 F4 · 0–3.00 秒倒入，3.00 秒关阀，续算至 5.01 秒。152 帧，30 fps，使用 Cirrus-VOF 原有泡沫模型。<a href="cirrus-f4-frame78-4k.png">第 78 帧 4K 原图</a></span><span data-copy="en" lang="en">Full-scale F4 · Pour from 0 to 3.00 s, close the inlet at 3.00 s, and continue to 5.01 s. 152 frames at 30 fps, using the existing Cirrus-VOF foam model. <a href="cirrus-f4-frame78-4k.png">4K image of frame 78</a></span></figcaption>
+</figure>
+<figure id="f4-interface-only">
+<a href="cirrus-f4-frame78-interface-only.png"><img alt="F4 第 78 帧关闭白色体积散射后，杯中仍可见浅色的气泡区域" class="media" data-alt-en="In F4 frame 78 with white volume scattering switched off, pale bubble regions remain visible in the glass." data-alt-zh="F4 第 78 帧关闭白色体积散射后，杯中仍可见浅色的气泡区域" height="540" src="cirrus-f4-frame78-interface-only.png" width="960"/></a>
+<figcaption class="caption"><span data-copy="zh" lang="zh-CN"><strong>第 78 帧（2.60 秒）· 关闭白色体积散射</strong>。沿用 F4 视频的求解数据、灯光和相机，同时关闭泡沫凹凸纹理，保留啤酒吸收及重建气泡界面的反射和折射。点击查看原图。</span><span data-copy="en" lang="en"><strong>Frame 78 at 2.60 s · White volume scattering disabled</strong>. This frame uses the same simulation fields, lighting, and camera as the F4 video. Foam bump mapping is disabled, while beer absorption and reflection and refraction at the reconstructed bubble interfaces are retained. Select the image to open the full-resolution version.</span></figcaption>
+</figure>
+<div class="facts">
+<div class="fact"><strong><span data-copy="zh" lang="zh-CN">本机 · 原尺寸 F4 倒入与停流已完成</span><span data-copy="en" lang="en">Local run · Full-scale F4 pour and post-shutoff run complete</span></strong><span><span data-copy="zh" lang="zh-CN">1 mm 网格，共 26,096 步。3.00 秒关阀后新增进液为零。</span><span data-copy="en" lang="en">1 mm grid and 26,096 steps. No additional liquid enters after the inlet closes at 3.00 s.</span></span></div>
+<div class="fact"><strong><span data-copy="zh" lang="zh-CN">本机 · Cirrus 泡沫模块 8 项回归通过</span><span data-copy="en" lang="en">Local run · Eight Cirrus foam regression tests passed</span></strong><span><span data-copy="zh" lang="zh-CN">覆盖输运、上浮、排液、卷气、续算、浮力和气量账。</span><span data-copy="en" lang="en">The tests cover transport, rise, drainage, entrainment, restart, buoyancy, and the gas-volume ledger.</span></span></div>
+<div class="fact pending"><strong><span data-copy="zh" lang="zh-CN">待验证 · VEIL 的网格—液膜耦合</span><span data-copy="en" lang="en">Pending validation · VEIL grid–film coupling</span></strong><span><span data-copy="zh" lang="zh-CN">这段 F4 成片使用现有的分散气体连续场模型。显式液膜耦合仍在提案阶段。</span><span data-copy="en" lang="en">The F4 video uses the existing continuum fields for dispersed gas. Explicit film coupling is at the proposal stage.</span></span></div>
+</div>
 </div>
 <section id="conservative-closure">
-  <h2>水、气与泡沫的守恒转换</h2>
-  <p>在粗网格上，纯液体记为 <i>L</i>，分散泡气体记为 <i>B</i>，由 VOF 解析的气体记为 <i>G</i>。在 Cirrus 变量中，<i>α</i> 是液体与分散泡合占的体积分数，<i>φ</i> 是分散泡占整格的体积分数。</p>
-  <div class="formula" id="three-component-update" aria-label="三组分体积分数及守恒转换"><span><i>L</i> = <i>α</i> − <i>φ</i></span><span><i>B</i> = <i>φ</i></span><span><i>G</i> = 1 − <i>α</i></span><span>Δ<i>α</i> = Δ<i>φ</i> = (<i>e<sub>C</sub></i> − <i>r<sub>C</sub></i>)/<i>V<sub>C</sub></i></span></div>
-  <p><i>e<sub>C</sub></i> 和 <i>r<sub>C</sub></i> 是一步内转入和转出分散泡的气体体积，<i>V<sub>C</sub></i> 是单元体积。受控开孔验收中，从微观界面识别与外部气体连通的原泡，再将同一笔气量从 <i>B</i> 转入 <i>G</i>。转换保持纯液体和总气量守恒。单泡膜何时自行开孔，以及原泡气体穿过孔口的输运量，仍需从微观求解和守恒示踪得到。</p>
-  <p id="vof-only-full-status"><strong>原尺寸纯 VOF 对照已完成。</strong> 沿用 96 × 160 × 96 的 1 mm 网格，关闭原有泡沫模块，从 0 秒算到 5.01 秒，共 29,435 步、102 帧。3.00 秒关阀后累计新增进液为零，全程液量账最大相对误差为 5.05 × 10⁻¹⁴。</p>
-  <figure><a href="beer-vof-only-full-sections.png"><img class="diagram" src="beer-vof-only-full-sections.png" width="1892" height="913" loading="lazy" alt="关闭泡沫模块的原尺寸液体体积分数切片，分别为初态、3 秒关阀和 5.01 秒末态"></a><figcaption class="caption">原尺寸纯 VOF · 初态、关阀和末态。杯上方的取值块属于进液边界。<a href="beer-vof-only-full-sections.pdf">切片 PDF</a></figcaption></figure>
-  <p>末态动能约为关阀时的 0.83%，液面高度的均方根波动约 2.08 mm，尚未达到回稳判据。这是关闭旧泡沫模型的整杯基线。DNS 双向转换闭合仍待整杯验证。</p>
-  <div class="clips">
-    <figure><a href="beer-vof-only-pilot.png"><img class="media" src="beer-vof-only-pilot.png" width="640" height="360" loading="lazy" alt="关闭旧泡沫模型后，半尺寸杯在关阀后 15 毫秒的单帧渲染"></a><figcaption class="caption">半尺寸纯 VOF 单帧 · 85 ms</figcaption></figure>
-    <figure><a href="beer-vof-only-sections.png"><img class="diagram" src="beer-vof-only-sections.png" loading="lazy" alt="半尺寸纯 VOF 液量截面，比较初态、关阀时刻和关阀后 15 毫秒"></a><figcaption class="caption">半尺寸液体体积分数切片 · <a href="beer-vof-only-sections.pdf">PDF</a></figcaption></figure>
-  </div>
-  <p class="sources"><a href="conservative-closure.html">读完整守恒推导</a> · <a href="conservative-closure.html#micro-event-update">查阅受控开孔的公式和数值结果</a></p>
+<h2><span data-copy="zh" lang="zh-CN">水、气与泡沫的守恒转换</span><span data-copy="en" lang="en">Conservative exchange among liquid, resolved gas, and dispersed bubbles</span></h2>
+<p><span data-copy="zh" lang="zh-CN">在粗网格上，纯液体记为 <i>L</i>，分散泡气体记为 <i>B</i>，由 VOF 解析的气体记为 <i>G</i>。在 Cirrus 变量中，<i>α</i> 是液体与分散泡合占的体积分数，<i>φ</i> 是分散泡占整格的体积分数。</span><span data-copy="en" lang="en">On the coarse grid, <i>L</i> denotes pure liquid, <i>B</i> denotes gas in dispersed bubbles, and <i>G</i> denotes VOF-resolved gas. In Cirrus, <i>α</i> is the volume fraction occupied by liquid and dispersed bubbles together. <i>φ</i> is the fraction of the entire cell occupied by dispersed bubbles.</span></p>
+<div aria-label="三组分体积分数及守恒转换" class="formula" data-label-en="Volume fractions and conservative exchange among the three components" data-label-zh="三组分体积分数及守恒转换" id="three-component-update"><span><i>L</i> = <i>α</i> − <i>φ</i></span><span><i>B</i> = <i>φ</i></span><span><i>G</i> = 1 − <i>α</i></span><span>Δ<i>α</i> = Δ<i>φ</i> = (<i>e<sub>C</sub></i> − <i>r<sub>C</sub></i>)/<i>V<sub>C</sub></i></span></div>
+<p><span data-copy="zh" lang="zh-CN"><i>e<sub>C</sub></i> 和 <i>r<sub>C</sub></i> 是一步内转入和转出分散泡的气体体积，<i>V<sub>C</sub></i> 是单元体积。受控开孔验收中，从微观界面识别与外部气体连通的原泡，再将同一笔气量从 <i>B</i> 转入 <i>G</i>。转换保持纯液体和总气量守恒。单泡膜何时自行开孔，以及原泡气体穿过孔口的输运量，仍需从微观求解和守恒示踪得到。</span><span data-copy="en" lang="en"><i>e<sub>C</sub></i> and <i>r<sub>C</sub></i> are the gas volumes transferred into and out of the dispersed-bubble phase during one step. <i>V<sub>C</sub></i> is the cell volume. In the prescribed-opening test, the microscopic interface identifies the original bubble when it connects to the surrounding gas, and the same gas volume is transferred from <i>B</i> to <i>G</i>. The exchange conserves pure liquid and total gas. Predicting spontaneous opening and measuring the original bubble gas transported through the hole require a microscopic solve and conservative tracing.</span></p>
+<p id="vof-only-full-status"><span data-copy="zh" lang="zh-CN"><strong>原尺寸纯 VOF 对照已完成。</strong> 沿用 96 × 160 × 96 的 1 mm 网格，关闭原有泡沫模块，从 0 秒算到 5.01 秒，共 29,435 步、102 帧。3.00 秒关阀后累计新增进液为零，全程液量账最大相对误差为 5.05 × 10⁻¹⁴。</span><span data-copy="en" lang="en"><strong>The full-scale pure-VOF baseline is complete.</strong> With the existing foam module disabled, the run uses the same 96 × 160 × 96 grid at 1 mm spacing, advancing from 0 to 5.01 s in 29,435 steps with 102 frames. Cumulative liquid inflow stays constant after shutoff at 3.00 s. The liquid-volume ledger has a maximum relative error of 5.05 × 10⁻¹⁴.</span></p>
+<figure><a href="beer-vof-only-full-sections.png"><img alt="关闭泡沫模块的原尺寸液体体积分数切片，分别为初态、3 秒关阀和 5.01 秒末态" class="diagram" data-alt-en="Full-scale pure-VOF liquid-volume-fraction cross-sections at initialization, shutoff at 3 s, and the final state at 5.01 s." data-alt-zh="关闭泡沫模块的原尺寸液体体积分数切片，分别为初态、3 秒关阀和 5.01 秒末态" height="913" loading="lazy" src="beer-vof-only-full-sections.png" width="1892"/></a><figcaption class="caption"><span data-copy="zh" lang="zh-CN">原尺寸纯 VOF · 初态、关阀和末态。杯上方的取值块属于进液边界。<a href="beer-vof-only-full-sections.pdf">切片 PDF</a></span><span data-copy="en" lang="en">Full-scale pure VOF · Initial state, inlet shutoff, and final state. The block of values above the cup belongs to the inflow boundary. <a href="beer-vof-only-full-sections.pdf">Cross-sections PDF</a></span></figcaption></figure>
+<p><span data-copy="zh" lang="zh-CN">末态动能约为关阀时的 0.83%，液面高度的均方根波动约 2.08 mm，尚未达到回稳判据。这是关闭旧泡沫模型的整杯基线。DNS 双向转换闭合仍待整杯验证。</span><span data-copy="en" lang="en">Final kinetic energy is about 0.83% of its value at shutoff, and the root-mean-square free-surface height fluctuation is about 2.08 mm. The run has yet to meet the settling criterion. This full-cup baseline has the existing foam model disabled. The DNS-based two-way exchange closure still awaits full-cup validation.</span></p>
+<div class="clips">
+<figure><a href="beer-vof-only-pilot.png"><img alt="关闭旧泡沫模型后，半尺寸杯在关阀后 15 毫秒的单帧渲染" class="media" data-alt-en="Half-scale pure-VOF render 15 ms after inlet shutoff, with the existing foam model disabled." data-alt-zh="关闭旧泡沫模型后，半尺寸杯在关阀后 15 毫秒的单帧渲染" height="360" loading="lazy" src="beer-vof-only-pilot.png" width="640"/></a><figcaption class="caption"><span data-copy="zh" lang="zh-CN">半尺寸纯 VOF 单帧 · 85 ms</span><span data-copy="en" lang="en">Half-scale pure-VOF frame · 85 ms</span></figcaption></figure>
+<figure><a href="beer-vof-only-sections.png"><img alt="半尺寸纯 VOF 液量截面，比较初态、关阀时刻和关阀后 15 毫秒" class="diagram" data-alt-en="Half-scale pure-VOF cross-sections showing the initial state, inlet shutoff, and 15 ms after shutoff." data-alt-zh="半尺寸纯 VOF 液量截面，比较初态、关阀时刻和关阀后 15 毫秒" loading="lazy" src="beer-vof-only-sections.png"/></a><figcaption class="caption"><span data-copy="zh" lang="zh-CN">半尺寸液体体积分数切片 · <a href="beer-vof-only-sections.pdf">PDF</a></span><span data-copy="en" lang="en">Half-scale liquid-volume-fraction cross-sections · <a href="beer-vof-only-sections.pdf">PDF</a></span></figcaption></figure>
+</div>
+<p class="sources"><span data-copy="zh" lang="zh-CN"><a href="conservative-closure.html">读完整守恒推导</a> · <a href="conservative-closure.html#micro-event-update">查阅受控开孔的公式和数值结果</a></span><span data-copy="en" lang="en"><a href="conservative-closure.html" hreflang="zh-CN">Full conservation derivation</a> · <a href="conservative-closure.html#micro-event-update" hreflang="zh-CN">Equations and numerical results for the prescribed-opening test</a> (Chinese)</span></p>
 </section>
 <section id="method">
-  <h2>物理方法</h2>
-  <p><strong>VOF 从相分数重建液面。</strong> Cirrus-VOF 在每个混合单元里用一张平面近似气液界面（PLIC），按穿过网格面的几何体积更新相分数 <i>α</i>。速度存在网格面上（MAC 布局），求解器用变密度压力投影约束不可压缩流动，用高度函数估计曲率并施加表面张力。基础求解器支持自适应八叉树，下面的倒啤酒泡沫模型运行在等间距的最细网格上。</p>
-  <h3>现有泡沫求解器怎样表示小气泡</h3>
-  <p>v2.3 在 VOF 的液体一侧再存两个量。<i>φ</i> 是分散气体占整格的体积分数，<i>n</i> 是每立方米的气泡数。这样纯液体占 <i>α</i> − <i>φ</i>，由 VOF 显式分辨的自由气体占 1 − <i>α</i>。等效泡径由这两个量算出。</p>
-  <div class="formula" aria-label="等效泡径等于六 phi 除以 pi n 的三次方根"><span><i>d</i> = (6<i>φ</i> / (π<i>n</i>))<sup>1/3</sup></span><span><i>c</i> = <i>φ</i> / <i>α</i></span></div>
-  <div class="steps">
-    <div class="step"><h3>卷气</h3><p>检测网格上与大气隔离的小气团，把符合条件的气团体积和泡数记进 <i>φ</i> 与 <i>n</i>。达到阈值的大气团继续由 VOF 分辨。</p></div>
-    <div class="step"><h3>输运与上浮</h3><p>两个场与液相共用 PLIC 面通量，分方向推进时冻结用于体积修正的浓度，使修正项在不可压缩流中抵消。低于 F4 的拥挤阈值 <i>c</i> = 0.64 时，小泡相对液体上浮，拥挤会减慢上浮。</p></div>
-    <div class="step"><h3>湿泡沫排液</h3><p>达到拥挤阈值后，液体按 Darcy 模型下排，渗透率取 <i>k</i> = 8 × 10⁻⁴<i>d</i>²(1 − <i>c</i>)²。气体按等体积向上换位，含气比上限为 0.95。独立账本检查气量与泡数收支。</p></div>
-  </div>
-  <p>F4 v2.3 让分散气体降低混合物受重力的有效密度。v2.3.1 加了两个默认关闭的开关，可让压力投影等环节也使用混合密度，并在浓泡沫形成贴壁液膜时计算滑动摩擦。现有模型还省略了自由表面的泡沫破裂释气。</p>
-  <h3>VEIL 拟加入显式薄膜的位置</h3>
-  <p>当液膜远薄于网格间距，两侧气液界面可能落在同一格里。VEIL 拟用随流动移动的拉格朗日元素记录膜，并研究网格与膜如何分配体积、质量和表面张力。提案计划用 GOLD 的小区域高分辨率两相流作参照。</p>
-  <figure>
-    <img class="diagram" src="method.png" alt="上排是 VEIL 提案的 VOF 与嵌入式液膜双向耦合，下排是已有的从逐帧流场经几何和光学转换到 Blender Cycles 的渲染链路" width="2508" height="858">
-    <figcaption class="caption">图 1　VEIL 的物理目标与 P05 的渲染流程。[<a href="method.pdf">矢量 PDF</a>]</figcaption>
-  </figure>
-  <p class="sources">原始资料 泡泡模拟中文提案（2026-11-18）、Cirrus-VOF v1.0、v2.3 泡沫模型与 v2.3.1 的贴壁摩擦说明</p>
+<h2><span data-copy="zh" lang="zh-CN">物理方法</span><span data-copy="en" lang="en">Physical model</span></h2>
+<p><span data-copy="zh" lang="zh-CN"><strong>VOF 从相分数重建液面。</strong> Cirrus-VOF 在每个混合单元里用一张平面近似气液界面（PLIC），按穿过网格面的几何体积更新相分数 <i>α</i>。速度存在网格面上（MAC 布局），求解器用变密度压力投影约束不可压缩流动，用高度函数估计曲率并施加表面张力。基础求解器支持自适应八叉树，下面的倒啤酒泡沫模型运行在等间距的最细网格上。</span><span data-copy="en" lang="en"><strong>VOF reconstructs the surface from phase fractions.</strong> Cirrus-VOF represents the gas–liquid interface in each mixed cell by a plane (PLIC) and updates the phase fraction <i>α</i> from geometric volumes moving through the cell faces. Velocities are stored on faces in a MAC layout. A variable-density pressure projection enforces incompressibility. Height functions estimate curvature for the surface-tension force. The underlying solver supports adaptive octrees. The beer-pour foam calculation below uses the finest uniform grid spacing.</span></p>
+<h3><span data-copy="zh" lang="zh-CN">现有泡沫求解器怎样表示小气泡</span><span data-copy="en" lang="en">How the existing foam solver represents small bubbles</span></h3>
+<p><span data-copy="zh" lang="zh-CN">v2.3 在 VOF 的液体一侧再存两个量。<i>φ</i> 是分散气体占整格的体积分数，<i>n</i> 是每立方米的气泡数。这样纯液体占 <i>α</i> − <i>φ</i>，由 VOF 显式分辨的自由气体占 1 − <i>α</i>。等效泡径由这两个量算出。</span><span data-copy="en" lang="en">Version 2.3 stores two quantities on the liquid side of the VOF interface. <i>φ</i> is the fraction of the entire cell occupied by dispersed gas and <i>n</i> is the number of bubbles per cubic metre. Pure liquid therefore occupies <i>α</i> − <i>φ</i>, and the free gas resolved by VOF occupies 1 − <i>α</i>. The equivalent bubble diameter is obtained from <i>φ</i> and <i>n</i>.</span></p>
+<div aria-label="等效泡径等于六 phi 除以 pi n 的三次方根" class="formula" data-label-en="Equivalent bubble diameter is the cube root of six phi divided by pi times n" data-label-zh="等效泡径等于六 phi 除以 pi n 的三次方根"><span><i>d</i> = (6<i>φ</i> / (π<i>n</i>))<sup>1/3</sup></span><span><i>c</i> = <i>φ</i> / <i>α</i></span></div>
+<div class="steps">
+<div class="step"><h3><span data-copy="zh" lang="zh-CN">卷气</span><span data-copy="en" lang="en">Air entrainment</span></h3><p><span data-copy="zh" lang="zh-CN">检测网格上与大气隔离的小气团，把符合条件的气团体积和泡数记进 <i>φ</i> 与 <i>n</i>。达到阈值的大气团继续由 VOF 分辨。</span><span data-copy="en" lang="en">The solver identifies small gas pockets disconnected from the atmosphere on the grid and transfers the gas volume and bubble count of qualifying pockets into <i>φ</i> and <i>n</i>. Larger gas pockets remain resolved by VOF.</span></p></div>
+<div class="step"><h3><span data-copy="zh" lang="zh-CN">输运与上浮</span><span data-copy="en" lang="en">Transport and buoyant rise</span></h3><p><span data-copy="zh" lang="zh-CN">两个场与液相共用 PLIC 面通量，分方向推进时冻结用于体积修正的浓度，使修正项在不可压缩流中抵消。低于 F4 的拥挤阈值 <i>c</i> = 0.64 时，小泡相对液体上浮，拥挤会减慢上浮。</span><span data-copy="en" lang="en">The two fields share the liquid PLIC face fluxes. In directionally split transport, the concentration used for the volume correction is held fixed so the correction cancels for incompressible flow. Below the F4 crowding threshold <i>c</i> = 0.64, small bubbles rise relative to the liquid. Crowding slows that rise.</span></p></div>
+<div class="step"><h3><span data-copy="zh" lang="zh-CN">湿泡沫排液</span><span data-copy="en" lang="en">Wet-foam drainage</span></h3><p><span data-copy="zh" lang="zh-CN">达到拥挤阈值后，液体按 Darcy 模型下排，渗透率取 <i>k</i> = 8 × 10⁻⁴<i>d</i>²(1 − <i>c</i>)²。气体按等体积向上换位，含气比上限为 0.95。独立账本检查气量与泡数收支。</span><span data-copy="en" lang="en">Above the crowding threshold, liquid drains down under a Darcy model with permeability <i>k</i> = 8 × 10⁻⁴<i>d</i>²(1 − <i>c</i>)². Gas moves upward by the same volume, and the gas fraction is capped at 0.95. Separate ledgers track gas volume and bubble count.</span></p></div>
+</div>
+<p><span data-copy="zh" lang="zh-CN">F4 v2.3 让分散气体降低混合物受重力的有效密度。v2.3.1 加了两个默认关闭的开关，可让压力投影等环节也使用混合密度，并在浓泡沫形成贴壁液膜时计算滑动摩擦。现有模型还省略了自由表面的泡沫破裂释气。</span><span data-copy="en" lang="en">In F4 v2.3, dispersed gas lowers the effective density used for gravity. Version 2.3.1 adds two options, both off by default, for using mixture density in operations including the pressure projection and applying wall-slip friction where dense foam forms a wall film. The existing model omits gas release from foam rupture at the free surface.</span></p>
+<h3><span data-copy="zh" lang="zh-CN">VEIL 拟加入显式薄膜的位置</span><span data-copy="en" lang="en">Where VEIL proposes to add explicit films</span></h3>
+<p><span data-copy="zh" lang="zh-CN">当液膜远薄于网格间距，两侧气液界面可能落在同一格里。VEIL 拟用随流动移动的拉格朗日元素记录膜，并研究网格与膜如何分配体积、质量和表面张力。提案计划用 GOLD 的小区域高分辨率两相流作参照。</span><span data-copy="en" lang="en">When a film is much thinner than the grid spacing, both gas–liquid interfaces can lie in a single cell. VEIL proposes advected Lagrangian elements for the film and studies how the grid and film share volume, mass, and surface tension. The proposal plans to use GOLD's high-resolution two-phase simulations in small subdomains as a reference.</span></p>
+<figure>
+<img alt="上排是 VEIL 提案的 VOF 与嵌入式液膜双向耦合，下排是已有的从逐帧流场经几何和光学转换到 Blender Cycles 的渲染链路" class="diagram" data-alt-en="Top row: the proposed VEIL coupling of VOF and embedded films. Bottom row: the existing workflow from simulation fields through geometry and optics to Blender Cycles." data-alt-zh="上排是 VEIL 提案的 VOF 与嵌入式液膜双向耦合，下排是已有的从逐帧流场经几何和光学转换到 Blender Cycles 的渲染链路" height="858" src="method.png" width="2508"/>
+<figcaption class="caption"><span data-copy="zh" lang="zh-CN">图 1　VEIL 的物理目标与 P05 的渲染流程。[<a href="method.pdf">矢量 PDF</a>]</span><span data-copy="en" lang="en">Figure 1. VEIL’s physical objective and the P05 rendering pipeline. [<a href="method.pdf">Vector PDF</a>]</span></figcaption>
+</figure>
+<p class="sources"><span data-copy="zh" lang="zh-CN">原始资料 泡泡模拟中文提案（2026-11-18）、Cirrus-VOF v1.0、v2.3 泡沫模型与 v2.3.1 的贴壁摩擦说明</span><span data-copy="en" lang="en">Sources · Chinese bubble simulation proposal (18 November 2026), Cirrus-VOF v1.0, the v2.3 foam model, and the v2.3.1 wall-friction notes.</span></p>
 </section>
 <section id="render">
-  <h2>泡沫怎么画</h2>
-  <p><strong>原尺寸 F4 的制作过程。</strong> Cirrus-VOF v2.3.1 在 96 × 160 × 96 的 1 mm 网格上推进到 3.00 秒并关闭进液，继续算到 5.01 秒，共 26,096 步。关阀帧的相分数、速度、压力和泡沫场与原三秒算例逐字节一致。P05 根据各帧场量重建液面、泡沫散射场和可见气泡，用 Blender Cycles 渲染，并在共同的关阀帧衔接两段。显式薄膜的破裂和释气仍待验证。</p>
-  <div class="steps">
-    <div class="step"><h3>液面和杯子</h3><p>从 <i>α</i> 场提取三角网格。杯子的内外半径、杯底和杯口来自算例配置，速度场用于更新气泡位置和运动模糊。</p></div>
-    <div class="step"><h3>细泡沫的白色</h3><p>密集泡沫写成 OpenVDB 散射场。F4 视频使用中性白体积散射，散射方向的平均余弦取 0.70。<a href="#f4-interface-only">关闭这项近似的同帧对照</a>。</p></div>
-    <div class="step"><h3>可见的单个泡</h3><p>较稀的含气液体用折射小球。贴杯壁的第一层用经邻居平面和杯壁裁切的气泡网格，再调整体积补回裁切损失。</p></div>
-  </div>
-  <div class="formula" aria-label="R 等于 phi 除以 alpha。散射系数约等于一点五乘 R 除以 D。"><span><i>R</i> = <i>φ</i> / <i>α</i></span><span><i>σ</i><sub>s</sub> ≈ 1.5 <i>R</i> / <i>D</i>　[m⁻¹]</span></div>
-  <p><i>φ</i> 是分散气体占整格的体积分数，<i>D</i> 是渲染网格上的代表泡径。泡越小，相同气量能分成越多颗泡，总迎光截面积随之增大，所以泡沫更容易发白。系数 1.5 来自该版对极窄前向衍射峰的近似处理。显式气泡和散射体积按每格气量分配，贴壁层放不下的余量交还给后方体积。射流可以将气泡随液体带向下方，气泡同时相对液体向上漂移，两者的叠加决定实际轨迹。</p>
-  <p class="sources">原始资料 P05 v2.3 渲染技术说明</p>
+<h2><span data-copy="zh" lang="zh-CN">泡沫怎么画</span><span data-copy="en" lang="en">How the foam is rendered</span></h2>
+<p><span data-copy="zh" lang="zh-CN"><strong>原尺寸 F4 的制作过程。</strong> Cirrus-VOF v2.3.1 在 96 × 160 × 96 的 1 mm 网格上推进到 3.00 秒并关闭进液，继续算到 5.01 秒，共 26,096 步。关阀帧的相分数、速度、压力和泡沫场与原三秒算例逐字节一致。P05 根据各帧场量重建液面、泡沫散射场和可见气泡，用 Blender Cycles 渲染，并在共同的关阀帧衔接两段。显式薄膜的破裂和释气仍待验证。</span><span data-copy="en" lang="en"><strong>Full-scale F4 rendering pipeline.</strong> Cirrus-VOF v2.3.1 advances on a 96 × 160 × 96 grid with 1 mm spacing. The inlet closes at 3.00 s and the simulation continues to 5.01 s, for 26,096 steps in total. The phase fraction, velocity, pressure, and foam fields at shutoff are byte-identical to the original three-second run. P05 reconstructs the liquid surface, the foam scattering field, and visible bubbles from the saved fields. Blender Cycles renders the frames, and the two segments meet at the shared shutoff frame. Explicit film rupture and gas release still await validation.</span></p>
+<div class="steps">
+<div class="step"><h3><span data-copy="zh" lang="zh-CN">液面和杯子</span><span data-copy="en" lang="en">Liquid surface and glass</span></h3><p><span data-copy="zh" lang="zh-CN">从 <i>α</i> 场提取三角网格。杯子的内外半径、杯底和杯口来自算例配置，速度场用于更新气泡位置和运动模糊。</span><span data-copy="en" lang="en">The liquid surface is triangulated from the <i>α</i> field. The inner and outer radii, base, and rim come from the case configuration. The velocity field updates bubble positions and drives motion blur.</span></p></div>
+<div class="step"><h3><span data-copy="zh" lang="zh-CN">细泡沫的白色</span><span data-copy="en" lang="en">White scattering in dense foam</span></h3><p><span data-copy="zh" lang="zh-CN">密集泡沫写成 OpenVDB 散射场。F4 视频使用中性白体积散射，散射方向的平均余弦取 0.70。<a href="#f4-interface-only">关闭这项近似的同帧对照</a>。</span><span data-copy="en" lang="en">Dense foam is rendered as an OpenVDB scattering volume. The F4 video uses neutral white volume scattering with a mean scattering-angle cosine of 0.70. <a href="#f4-interface-only">Compare the same frame with volume scattering off</a>.</span></p></div>
+<div class="step"><h3><span data-copy="zh" lang="zh-CN">可见的单个泡</span><span data-copy="en" lang="en">Visible individual bubbles</span></h3><p><span data-copy="zh" lang="zh-CN">较稀的含气液体用折射小球。贴杯壁的第一层用经邻居平面和杯壁裁切的气泡网格，再调整体积补回裁切损失。</span><span data-copy="en" lang="en">Sparser aerated liquid is rendered with refractive spheres. The first wall-adjacent layer uses bubble meshes clipped by neighbouring bubble planes and the glass wall. Their volumes are then adjusted to make up for clipping losses.</span></p></div>
+</div>
+<div aria-label="R 等于 phi 除以 alpha。散射系数约等于一点五乘 R 除以 D。" class="formula" data-label-en="R equals phi over alpha. Scattering coefficient is approximately 1.5 times R over D." data-label-zh="R 等于 phi 除以 alpha。散射系数约等于一点五乘 R 除以 D。"><span><i>R</i> = <i>φ</i> / <i>α</i></span><span><i>σ</i><sub>s</sub> ≈ 1.5 <i>R</i> / <i>D</i>　[m⁻¹]</span></div>
+<p><span data-copy="zh" lang="zh-CN"><i>φ</i> 是分散气体占整格的体积分数，<i>D</i> 是渲染网格上的代表泡径。泡越小，相同气量能分成越多颗泡，总迎光截面积随之增大，所以泡沫更容易发白。系数 1.5 来自该版对极窄前向衍射峰的近似处理。显式气泡和散射体积按每格气量分配，贴壁层放不下的余量交还给后方体积。射流可以将气泡随液体带向下方，气泡同时相对液体向上漂移，两者的叠加决定实际轨迹。</span><span data-copy="en" lang="en"><i>φ</i> is the whole-cell dispersed-gas fraction, and <i>D</i> is the representative bubble diameter on the rendering grid. For a fixed gas volume, smaller bubbles give a larger total cross-section for light, making the foam appear whiter. The factor 1.5 comes from this version's approximation to the narrow forward diffraction peak. Per-cell gas volume is allocated between explicit bubbles and the scattering volume. Any remainder that cannot fit into the wall layer is returned to the volume behind it. The jet can carry bubbles downward with the liquid while they drift upward relative to it. Both contributions determine the actual trajectories.</span></p>
+<p class="sources"><span data-copy="zh" lang="zh-CN">原始资料 P05 v2.3 渲染技术说明</span><span data-copy="en" lang="en">Source · P05 v2.3 rendering notes.</span></p>
 </section>
 <section id="results">
-  <h2>初步结果</h2>
-  <div class="table" role="region" aria-label="初步结果汇总" tabindex="0">
-    <table>
-      <thead><tr><th scope="col">证据来源</th><th scope="col">初步结果</th><th scope="col">怎么理解</th></tr></thead>
-      <tbody>
-        <tr><td>团队 · Cirrus-VOF</td><td>三档 AMR 对照 <strong>1,464 / 1,464</strong> 通过。完整 N64 轨迹为 <strong>214 / 488</strong> 通过。</td><td>与 Aphros 的逐帧、逐字段结果。三档 AMR 通过指定的 10⁻⁶ 相对误差门槛，N64 完整三秒验收仍未通过。</td></tr>
-        <tr><td>团队 · F3/F4</td><td>F4 第 78 帧贴壁层为 <strong>1.76 / 1.89 mL（约 93%）</strong>。F3 记录到 1.0 秒、31 帧，随后标记失败。</td><td>F4 的 93% 是显式网格承载的壁层气量比例，剩余气量用于体积散射。F3 的泡沫场是被动输运，缺少泡的上浮机制。</td></tr>
-        <tr><td>本机 · Cirrus 泡沫回归</td><td>v2.3.1 GPU 构建的 <code>--foam</code> <strong>8 项通过</strong>。稀泡上浮速度 0.0430 m/s，模型参考值 0.04255 m/s。湿泡沫排液速度约 0.685 mm/s。</td><td>验证了代码实现与本模型参考值的一致性。小气团转化和重启也通过了气量平衡与逐位一致性检查。</td></tr>
-        <tr><td>本机 · A1 重算</td><td><strong>74 项通过，0 失败</strong>。2,000 粒子下，ℓ = 2 和 ℓ = 3 模态的频率误差为 <strong>0.624% / 0.201%</strong>。</td><td>对照真空泡的解析振荡频率。Backward Euler 与 BDF2 轨迹均由原 C++ 代码计算，再由原脚本生成 11 秒视频。</td></tr>
-        <tr><td>本机 · 缩尺 F4</td><td>Cirrus-VOF 求解至 <strong>0.10 秒，653 步</strong>，末态分散气体 <strong>0.184 mL</strong>。</td><td>杯体约为原算例一半，网格间距保持 1 mm。用六帧真实求解输出渲染，视频放慢播放。原尺寸的完整倒入和沉降需要更长的模拟时间。</td></tr>
-        <tr><td>本机 · 原尺寸 F4</td><td>求解 <strong>5.01 秒，26,096 步</strong>，分散气体从关阀时的 <strong>58.61 mL</strong> 变为末态的 <strong>59.57 mL</strong>。</td><td>3.00 秒关阀，新增进液为零，末态动能约为关阀时的 2.0%。旧泡沫模型未包含单泡破裂释气。</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="clips">
-    <figure><video class="media" controls preload="none" poster="cirrus-f4-short.png" src="cirrus-f4-short.mp4" aria-label="真实 Cirrus-VOF 缩尺倒啤酒求解与渲染"></video><figcaption class="caption">缩尺 F4 · Cirrus-VOF 真正求解的六帧，物理时间 0–0.10 秒。</figcaption></figure>
-    <figure><video class="media" controls preload="none" poster="a1-oscillation.png" src="a1-oscillation.mp4" aria-label="A1 真空泡重算的振荡动画"></video><figcaption class="caption">A1 真空泡 · 原代码重算，330 帧，11 秒。</figcaption></figure>
-  </div>
-  <p class="sources">核对资料 Cirrus-VOF 进展报告（2026-11-17）、P05 v2.3 的 F4 贴壁记录、本机 A1 频率日志与渲染日志</p>
+<h2><span data-copy="zh" lang="zh-CN">初步结果</span><span data-copy="en" lang="en">Preliminary results</span></h2>
+<div aria-label="初步结果汇总" class="table" data-label-en="Summary of preliminary results" data-label-zh="初步结果汇总" role="region" tabindex="0">
+<table>
+<thead><tr><th scope="col"><span data-copy="zh" lang="zh-CN">证据来源</span><span data-copy="en" lang="en">Evidence</span></th><th scope="col"><span data-copy="zh" lang="zh-CN">初步结果</span><span data-copy="en" lang="en">Preliminary result</span></th><th scope="col"><span data-copy="zh" lang="zh-CN">怎么理解</span><span data-copy="en" lang="en">Interpretation</span></th></tr></thead>
+<tbody>
+<tr><td><span data-copy="zh" lang="zh-CN">团队 · Cirrus-VOF</span><span data-copy="en" lang="en">Team · Cirrus-VOF</span></td><td><span data-copy="zh" lang="zh-CN">三档 AMR 对照 <strong>1,464 / 1,464</strong> 通过。完整 N64 轨迹为 <strong>214 / 488</strong> 通过。</span><span data-copy="en" lang="en">Three AMR resolutions pass <strong>1,464 / 1,464</strong> checks. The complete N64 trajectory passes <strong>214 / 488</strong>.</span></td><td><span data-copy="zh" lang="zh-CN">与 Aphros 的逐帧、逐字段结果。三档 AMR 通过指定的 10⁻⁶ 相对误差门槛，N64 完整三秒验收仍未通过。</span><span data-copy="en" lang="en">Frame-by-frame and field-by-field checks against Aphros. The three AMR resolutions meet the specified 10⁻⁶ relative error threshold. The complete three-second N64 trajectory has yet to pass acceptance.</span></td></tr>
+<tr><td><span data-copy="zh" lang="zh-CN">团队 · F3/F4</span><span data-copy="en" lang="en">Team · F3/F4</span></td><td><span data-copy="zh" lang="zh-CN">F4 第 78 帧贴壁层为 <strong>1.76 / 1.89 mL（约 93%）</strong>。F3 记录到 1.0 秒、31 帧，随后标记失败。</span><span data-copy="en" lang="en">At F4 frame 78, the wall layer contains <strong>1.76 / 1.89 mL (about 93%)</strong>. F3 records 31 frames through 1.0 s before being marked as failed.</span></td><td><span data-copy="zh" lang="zh-CN">F4 的 93% 是显式网格承载的壁层气量比例，剩余气量用于体积散射。F3 的泡沫场是被动输运，缺少泡的上浮机制。</span><span data-copy="en" lang="en">For F4, 93% is the fraction of the wall-layer gas represented by explicit meshes. The remainder is used for volume scattering. F3 transports its foam field passively with no bubble-rise mechanism.</span></td></tr>
+<tr><td><span data-copy="zh" lang="zh-CN">本机 · Cirrus 泡沫回归</span><span data-copy="en" lang="en">Local · Cirrus foam regressions</span></td><td><span data-copy="zh" lang="zh-CN">v2.3.1 GPU 构建的 <code>--foam</code> <strong>8 项通过</strong>。稀泡上浮速度 0.0430 m/s，模型参考值 0.04255 m/s。湿泡沫排液速度约 0.685 mm/s。</span><span data-copy="en" lang="en">The v2.3.1 GPU build passes <strong>all eight</strong> <code>--foam</code> tests. The dilute bubble rise speed is 0.0430 m/s, compared with the model reference of 0.04255 m/s. Wet-foam drainage speed is about 0.685 mm/s.</span></td><td><span data-copy="zh" lang="zh-CN">验证了代码实现与本模型参考值的一致性。小气团转化和重启也通过了气量平衡与逐位一致性检查。</span><span data-copy="en" lang="en">The tests check the implementation against its model references. Small-gas-pocket conversion and restart also pass gas-volume balance and bitwise consistency checks.</span></td></tr>
+<tr><td><span data-copy="zh" lang="zh-CN">本机 · A1 重算</span><span data-copy="en" lang="en">Local · A1 rerun</span></td><td><span data-copy="zh" lang="zh-CN"><strong>74 项通过，0 失败</strong>。2,000 粒子下，ℓ = 2 和 ℓ = 3 模态的频率误差为 <strong>0.624% / 0.201%</strong>。</span><span data-copy="en" lang="en"><strong>74 checks passed and none failed.</strong> With 2,000 particles, the frequency errors for the ℓ = 2 and ℓ = 3 modes are <strong>0.624% and 0.201%</strong>.</span></td><td><span data-copy="zh" lang="zh-CN">对照真空泡的解析振荡频率。Backward Euler 与 BDF2 轨迹均由原 C++ 代码计算，再由原脚本生成 11 秒视频。</span><span data-copy="en" lang="en">The reference is the analytic oscillation frequency of a vacuum bubble. The original C++ code computes the backward Euler and BDF2 trajectories. The original script produces the 11-second video.</span></td></tr>
+<tr><td><span data-copy="zh" lang="zh-CN">本机 · 缩尺 F4</span><span data-copy="en" lang="en">Local · Reduced-scale F4</span></td><td><span data-copy="zh" lang="zh-CN">Cirrus-VOF 求解至 <strong>0.10 秒，653 步</strong>，末态分散气体 <strong>0.184 mL</strong>。</span><span data-copy="en" lang="en">Cirrus-VOF advances to <strong>0.10 s in 653 steps</strong>. The final dispersed gas volume is <strong>0.184 mL</strong>.</span></td><td><span data-copy="zh" lang="zh-CN">杯体约为原算例一半，网格间距保持 1 mm。用六帧真实求解输出渲染，视频放慢播放。原尺寸的完整倒入和沉降需要更长的模拟时间。</span><span data-copy="en" lang="en">The cup is approximately half the size of the original at the same 1 mm grid spacing. Six simulation frames are rendered and played back slowly. A full-scale pour and subsequent settling require a longer physical simulation.</span></td></tr>
+<tr><td><span data-copy="zh" lang="zh-CN">本机 · 原尺寸 F4</span><span data-copy="en" lang="en">Local · Full-scale F4</span></td><td><span data-copy="zh" lang="zh-CN">求解 <strong>5.01 秒，26,096 步</strong>，分散气体从关阀时的 <strong>58.61 mL</strong> 变为末态的 <strong>59.57 mL</strong>。</span><span data-copy="en" lang="en">The run advances to <strong>5.01 s in 26,096 steps</strong>. Dispersed gas volume changes from <strong>58.61 mL</strong> at shutoff to <strong>59.57 mL</strong> at the end.</span></td><td><span data-copy="zh" lang="zh-CN">3.00 秒关阀，新增进液为零，末态动能约为关阀时的 2.0%。旧泡沫模型未包含单泡破裂释气。</span><span data-copy="en" lang="en">The inlet closes at 3.00 s and no additional liquid enters. Final kinetic energy is about 2.0% of its value at shutoff. The existing foam model omits gas release from individual bubble rupture.</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="clips">
+<figure><video aria-label="真实 Cirrus-VOF 缩尺倒啤酒求解与渲染" class="media" controls="" data-label-en="Reduced-scale beer pour computed and rendered from Cirrus-VOF" data-label-zh="真实 Cirrus-VOF 缩尺倒啤酒求解与渲染" poster="cirrus-f4-short.png" preload="none" src="cirrus-f4-short.mp4"></video><figcaption class="caption"><span data-copy="zh" lang="zh-CN">缩尺 F4 · Cirrus-VOF 真正求解的六帧，物理时间 0–0.10 秒。</span><span data-copy="en" lang="en">Reduced-scale F4 · Six frames from the Cirrus-VOF solution, spanning 0–0.10 s of physical time.</span></figcaption></figure>
+<figure><video aria-label="A1 真空泡重算的振荡动画" class="media" controls="" data-label-en="A1 vacuum bubble oscillation from the rerun" data-label-zh="A1 真空泡重算的振荡动画" poster="a1-oscillation.png" preload="none" src="a1-oscillation.mp4"></video><figcaption class="caption"><span data-copy="zh" lang="zh-CN">A1 真空泡 · 原代码重算，330 帧，11 秒。</span><span data-copy="en" lang="en">A1 vacuum bubble · Rerun with the original code. 330 frames over 11 s.</span></figcaption></figure>
+</div>
+<p class="sources"><span data-copy="zh" lang="zh-CN">核对资料 Cirrus-VOF 进展报告（2026-11-17）、P05 v2.3 的 F4 贴壁记录、本机 A1 频率日志与渲染日志</span><span data-copy="en" lang="en">Verification sources · Cirrus-VOF progress report (17 November 2026), P05 v2.3 F4 wall-layer records, and local A1 frequency and rendering logs.</span></p>
 </section>
 <section id="rising-bubble">
-  <h2>静水中的气泡上浮</h2>
-  <p>用 Cirrus-VOF v1.0 的原始静水气泡算例，从初始气泡求解到 3.00 秒。网格为 32 × 64 × 32，重力沿负 <i>y</i> 方向，气泡密度为周围液体的 1/10。由七帧三维相分数字段重算的气泡质心逐帧上升，<i>y</i> 从 <strong>0.5000 升到 1.4476</strong>，与 C++ 诊断一致。整个算例的最大相对气泡体积漂移为 1.04 × 10⁻¹¹。</p>
-  <figure style="max-width:780px;margin-top:15px">
-    <video class="media" controls preload="none" poster="rising-bubble.png" src="rising-bubble.mp4" aria-label="静水气泡由 Cirrus-VOF 求解得到的切片和质心轨迹"></video>
-    <figcaption class="caption">蓝色轮廓为真实相分数字段的 α = 0.5 界面，红点为当前帧质心。<a href="rising-bubble.pdf">矢量 PDF</a></figcaption>
-  </figure>
-  <p class="sources">静水基准核查了浮力方向。倒啤酒时，射流携带气泡向下和气泡相对液体向上漂移可以同时发生，需从完整倒入与停流后的流场判断泡沫何时到达液面。</p>
+<h2><span data-copy="zh" lang="zh-CN">静水中的气泡上浮</span><span data-copy="en" lang="en">Bubble rise in quiescent liquid</span></h2>
+<p><span data-copy="zh" lang="zh-CN">用 Cirrus-VOF v1.0 的原始静水气泡算例，从初始气泡求解到 3.00 秒。网格为 32 × 64 × 32，重力沿负 <i>y</i> 方向，气泡密度为周围液体的 1/10。由七帧三维相分数字段重算的气泡质心逐帧上升，<i>y</i> 从 <strong>0.5000 升到 1.4476</strong>，与 C++ 诊断一致。整个算例的最大相对气泡体积漂移为 1.04 × 10⁻¹¹。</span><span data-copy="en" lang="en">The original Cirrus-VOF v1.0 quiescent-liquid case is rerun from the initial bubble to 3.00 s. The grid is 32 × 64 × 32, gravity acts along negative <i>y</i>, and the bubble density is one tenth of the liquid density. The bubble centroid rises in all seven saved three-dimensional phase fields. Its <i>y</i> coordinate increases from <strong>0.5000 to 1.4476</strong>, consistent with the C++ diagnostics. The maximum relative bubble-volume drift is 1.04 × 10⁻¹¹.</span></p>
+<figure style="max-width:780px;margin-top:15px">
+<video aria-label="静水气泡由 Cirrus-VOF 求解得到的切片和质心轨迹" class="media" controls="" data-label-en="Computed slices and centroid trajectory for a bubble rising in quiescent liquid" data-label-zh="静水气泡由 Cirrus-VOF 求解得到的切片和质心轨迹" poster="rising-bubble.png" preload="none" src="rising-bubble.mp4"></video>
+<figcaption class="caption"><span data-copy="zh" lang="zh-CN">蓝色轮廓为真实相分数字段的 α = 0.5 界面，红点为当前帧质心。<a href="rising-bubble.pdf">矢量 PDF</a></span><span data-copy="en" lang="en">The blue outline is the α = 0.5 interface from the computed phase field. The red marker is the frame centroid. <a href="rising-bubble.pdf">Vector PDF</a></span></figcaption>
+</figure>
+<p class="sources"><span data-copy="zh" lang="zh-CN">静水基准核查了浮力方向。倒啤酒时，射流携带气泡向下和气泡相对液体向上漂移可以同时发生，需从完整倒入与停流后的流场判断泡沫何时到达液面。</span><span data-copy="en" lang="en">The quiescent-liquid benchmark checks the direction of buoyant rise. During the beer pour, bubbles can be carried downward by the jet while rising relative to the liquid. The flow during the pour and after shutoff determines when foam arrives at the surface.</span></p>
 </section>
 <section id="limits">
-  <h2>复现范围与缺口</h2>
-  <p>本机完成了仓库所附 <code>beer_glass_pour96_foam_buoyant</code> 的三秒倒入求解及关阀后的 2.01 秒续算。合并成片使用 Cirrus-VOF <code>e49ad3a</code> 和 P05 渲染器 <code>46be115</code>。团队原始发布帧对应的运行目录和续算检查点尚未取得，同帧对照仍待验证。</p>
+<h2><span data-copy="zh" lang="zh-CN">复现范围与缺口</span><span data-copy="en" lang="en">Reproduction scope and gaps</span></h2>
+<p><span data-copy="zh" lang="zh-CN">本机完成了仓库所附 <code>beer_glass_pour96_foam_buoyant</code> 的三秒倒入求解及关阀后的 2.01 秒续算。合并成片使用 Cirrus-VOF <code>e49ad3a</code> 和 P05 渲染器 <code>46be115</code>。团队原始发布帧对应的运行目录和续算检查点尚未取得，同帧对照仍待验证。</span><span data-copy="en" lang="en">The local run reproduced the repository's <code>beer_glass_pour96_foam_buoyant</code> case with a three-second pour and 2.01 s of continuation after shutoff. The combined video uses Cirrus-VOF <code>e49ad3a</code> and P05 renderer <code>46be115</code>. The run directory and restart checkpoint behind the team's original published frames have yet to be obtained, so the same-frame comparison remains open.</span></p>
 </section>
 </main>
-</body>
+<script>
+(() => {
+  const root = document.documentElement;
+  const switcher = document.querySelector('.language-switch');
+  const buttons = switcher.querySelectorAll('button[data-language-choice]');
+  function useLanguage(language) {
+    root.dataset.language = language;
+    root.lang = language === 'en' ? 'en' : 'zh-CN';
+    for (const button of buttons) {
+      button.setAttribute('aria-pressed', String(button.dataset.languageChoice === language));
+    }
+    for (const image of document.querySelectorAll('img[data-alt-en]')) {
+      image.alt = language === 'en' ? image.dataset.altEn : image.dataset.altZh;
+    }
+    for (const element of document.querySelectorAll('[data-label-en]')) {
+      element.setAttribute('aria-label', language === 'en' ? element.dataset.labelEn : element.dataset.labelZh);
+    }
+  }
+  const url = new URL(location.href);
+  const requested = url.searchParams.get('lang');
+  useLanguage(requested === 'en' || requested === 'both' ? requested : 'zh');
+  switcher.hidden = false;
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      const language = button.dataset.languageChoice;
+      useLanguage(language);
+      const next = new URL(location.href);
+      if (language === 'zh') next.searchParams.delete('lang');
+      else next.searchParams.set('lang', language);
+      history.replaceState(history.state, '', next);
+    });
+  }
+})();
+</script></body>
 </html>
