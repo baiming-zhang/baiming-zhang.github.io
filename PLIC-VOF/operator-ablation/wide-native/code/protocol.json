@@ -1,0 +1,77 @@
+{
+  "protocol": "actual_grid_gpu32_cpu64_operator_v1",
+  "objective": "GPU neural inference versus actual CPU SimLiquid/Aphros operators at large Cartesian grids;accuracy and time tradeoffs",
+  "resolutions": [
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "scenes": [
+    "single_drop",
+    "many_drops"
+  ],
+  "physical_domain": [
+    0,
+    1,
+    0,
+    1
+  ],
+  "scene_descriptions": {
+    "single_drop": "one fixed physical radius0.22 disk",
+    "many_drops": "256 disjoint disks,seeded positions and radii0.014..0.018;true full VOF fields"
+  },
+  "inputs": "True11x11 stencils from each complete VOF field;3/5/7/9/11 are central crops. Only center fraction in[.002,.998] is evaluated;actual active counts and total N^2 both reported",
+  "models": "All60 existing paired operator models and2 heads from the existing3x3 joint network;no retraining,geometry prior,geometric correction or fallback",
+  "native_cpu": {
+    "backends": [
+      "actual compiled SimLiquid C++",
+      "actual compiled Aphros C++"
+    ],
+    "workers": [
+      1,
+      8,
+      24
+    ],
+    "parallel_adapter": "persistent Python thread pool,one pinned thread per chunk;calls original thread-local C++ kernels;dispatch included;not a full simulator"
+  },
+  "neural_gpu": {
+    "device": "RTX5090",
+    "precision": "float32 inputs/output;original ONNX arithmetic preserved",
+    "TF32": false,
+    "modes": [
+      "GPU resident input to completed GPU output",
+      "pinned CPU input through H2D,inference,D2H to completed CPU output"
+    ],
+    "chunk_cap": 65536
+  },
+  "timing": {
+    "warmup": 10,
+    "repeats": 93,
+    "boundary": "local operator only;loading,compilation,full-grid initialization,interface detection,and neighborhood gathering excluded;PDE/pressure excluded",
+    "primary": "CPU-input/GPU-inference/CPU-output wall time compared with native CPU output",
+    "secondary": "GPU resident compute deployment time",
+    "formal_gate": "90s utilization<=5% and no foreign CUDA compute process;exclusive cooperative timing lock;foreign-process cases discarded and retained as attempts",
+    "CPU_conditions": "fixed affinity;OS scheduling and load recorded;parallel variants reported separately;do not claim stock full-simulator speedup"
+  },
+  "accuracy": {
+    "reference": "exact circle/rectangle swept area and signed circle curvature;independent quadrature checks",
+    "errors": [
+      "flux ratio",
+      "physical face-average flux density",
+      "q=kappa*h",
+      "physical curvature"
+    ],
+    "selection": "No dynamic-test model selection;all three seeds retained",
+    "invalid": "nonfinite outputs retained with original task coverage;conditional errors separately labelled"
+  },
+  "waiting": "Other GPU training is currently active;prepare fields and CPU accuracy first,formal timing waits without stopping other projects",
+  "remaining": [
+    "formal96 CPU configurations and992 GPU mode/case configurations",
+    "aggregate accuracy,time,coverage,per-seed results",
+    "update human report,figures,website and public single-HTML download"
+  ],
+  "analysis_script": "agent_experiments/large_grid_analysis.py --require-complete",
+  "analysis_status": "Prepared and partial mode checked;formal measurements pending",
+  "functional_gpu_preflight": "gpu_functional_preflight.json:6 representative heads,37 actual queries split17/17/3;CPU-ONNX vsCUDA maximum3.8743e-7;resident andCPU-GPU-CPU outputs identical. Shared-load correctness only,not speed evidence."
+}
