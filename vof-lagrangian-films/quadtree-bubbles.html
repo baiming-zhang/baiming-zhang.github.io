@@ -49,7 +49,7 @@ footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-
 <div class="language" role="group" aria-label="语言"><strong aria-current="page">中文</strong><a href="quadtree-bubbles-en.html" hreflang="en" lang="en">English</a></div></div>
 <h1>自适应 VOF 气泡上浮与液膜排液</h1>
 <p class="lede">在 15 × 15 mm 的二维水槽中，比较自由泡、贴壁泡和贴底泡的运动，追踪气泡接近自由液面时夹在两层气体之间的水膜。</p>
-<nav aria-label="目录"><a href="#latest-single-bubble">最新单泡</a><a href="#results">动画与结果</a><a href="#equations">物理方程</a><a href="#drainage">排液与网格</a><a href="#wetting">贴壁平衡</a><a href="#surfactant">表面活性剂</a><a href="#runtime">耗时分析</a><a href="#benchmarks">基线测试</a></nav>
+<nav aria-label="目录"><a href="#latest-single-bubble">最新单泡</a><a href="#results">动画与结果</a><a href="#equations">物理方程</a><a href="#drainage">排液与网格</a><a href="#wetting">贴壁平衡</a><a href="#surfactant">表面活性剂</a><a href="#runtime">耗时分析</a><a href="#benchmarks">基线测试</a><a href="#aphros-rise">Aphros 上浮</a></nav>
 </header>
 <section class="contributions" id="contributions"><h2>当前贡献</h2><ul>
 <li><strong>用气域连通性配对界面。</strong> 分别识别泡内气体和顶部大气，避免把同一界面的折角误算成薄膜。</li>
@@ -128,6 +128,25 @@ footer{font-size:14px;border-top:1px solid var(--line);padding-top:15px;padding-
 <p>后续含活性剂对照的方程如下。Γ 为界面浓度，Dₛ 为表面扩散率，J 是体相与界面之间的交换，σ(Γ) 需要材料数据。</p>
 <div class="math"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msubsup><mo>&#x02202;</mo><mi>t</mi><mi>&#x02022;</mi></msubsup><mi>&#x00393;</mi><mo>&#x0002B;</mo><mi>&#x00393;</mi><msub><mo>&#x02207;</mo><mi>s</mi></msub><mo>&#x000B7;</mo><mi>&#x1D42E;</mi><mo>&#x0003D;</mo><msub><mi>D</mi><mi>s</mi></msub><msub><mi>&#x00394;</mi><mi>s</mi></msub><mi>&#x00393;</mi><mo>&#x0002B;</mo><mi>J</mi><mo>&#x0002C;</mo><mspace width="2em" /><msub><mrow><mi mathvariant="bold-italic">&#x003C4;</mi></mrow><mi>M</mi></msub><mo>&#x0003D;</mo><msub><mo>&#x02207;</mo><mi>s</mi></msub><mi>&#x003C3;</mi><mo stretchy="false">&#x00028;</mo><mi>&#x00393;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>E</mi><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>&#x00393;</mi><mfrac><mrow><mi>d</mi><mi>&#x003C3;</mi></mrow><mrow><mi>d</mi><mi>&#x00393;</mi></mrow></mfrac><mo>&#x0002E;</mo></mrow></math></div>
 <p>界面弹性和马兰戈尼应力可以减慢排液。接下来可用测得的浓度关系与清水对照比较水膜变薄速率。当前三泡结果使用恒定 σ，未包含这些输运方程。</p></section>
+<!-- aphros-rise:begin -->
+<section id="aphros-rise" class="single-bubble-results">
+<h2>Aphros 清水单泡上浮</h2>
+<p>同一个 15 × 15 mm 二维域内，3 mm 泡从 2 mm 高度释放，液深 12 mm。物性、初场、壁面与清水 VEIL 对照一致。</p>
+<figure><video class="single-video" controls playsinline preload="metadata" width="1440" height="810" poster="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.png" src="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.mp4"></video><figcaption>目前通过核验的时段 0–72.00 ms。蓝色液体，白色气体。 · <a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.mp4">MP4</a></figcaption></figure>
+<div class="table"><table><thead><tr><th scope="col">网格</th><th scope="col">格距</th><th scope="col">通过检查到</th><th scope="col">液面积最大相对漂移</th><th scope="col">气域数值连通区间</th><th scope="col">运行状态</th></tr></thead><tbody>
+<tr><th scope="row">64²</th><td>234.4 µm</td><td>72.00 ms</td><td>2.72e-10</td><td>70.00–72.00 ms</td><td>运行中</td></tr>
+<tr><th scope="row">128²</th><td>117.2 µm</td><td>19.98 ms</td><td>3.11e-10</td><td>—</td><td>运行中</td></tr>
+<tr><th scope="row">256²</th><td>58.6 µm</td><td>0.00 ms</td><td>0.00e+00</td><td>—</td><td>运行中</td></tr>
+</tbody></table></div>
+<figure><a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.png"><img src="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.png" loading="lazy" alt="Aphros 上浮顺序图与泡质心、两界面最短间距对照"></a><figcaption>比较图按实际物理时间作图。3.5 格线只用于标识薄膜进入分辨率敏感区间。 · <a href="quadtree-bubbles/aphros-rise/aphros-clean-rise-zh.pdf">PDF</a></figcaption></figure>
+<p>Aphros 用均匀网格、单层 PLIC 和粒子曲率。早期普通 PCG 的细档出现压力误差和异常速度。加上 SMG 预条件后，修补了每步预条件器未释放的问题，再按网格提高压力迭代上限。物理参数沿用清水设置。审计以实际写出的 VOF 和 PLIC 计液量、气泡质心、最短间距和气体连通。</p>
+<p>在 68 ms，所示 Aphros 档的泡质心约 11.38 mm，VEIL 清水为 10.61 mm。 当前结果为阶段性对照，105 ms 窗口待验收。</p>
+<p>均匀网格是上浮轨迹和形状的独立对照。256² 的格距为 58.6 µm。要让约 20.8 µm 的薄膜跨 3.5 格，15 mm 全宽需约 2,500 格。要直接解后段排液，局部加密更实用。该 Aphros 版本使用固定大小的结构网格块。 · <a href="https://cselab.github.io/aphros/doc/">Aphros</a></p>
+<p>三维准静态参考用 Young–Laplace 平衡。直径 3 mm、半径定义的 Bond 数约 0.30 时，<a href="quadtree-bubbles/single-bubble/floating-bubbles.pdf">已有轴对称解</a>给出泡帽高出远场液面约 0.55 mm、下部深入液面约 2.12 mm。原 VEIL 表活二维 85 ms 帧的截面峰值高出两侧液面约 3.32 mm。快速接近液面的泡会变形或反弹，这两个高度对应不同的几何、时间和表面条件，静态参考只约束近静止形状。表里的连通区间描述网格尺度拓扑。 · <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/direct-numerical-simulations-of-noncoalescing-floating-bubbles-geometry-and-selforganisation/B381687A66B8F340AF390C49216B41B2">Young–Laplace / MVOF</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7304069/">高速实验</a></p>
+<details class="comparison-details"><summary>轴对称静态参考图</summary><figure><img src="quadtree-bubbles/single-bubble/floating-bubbles.png" loading="lazy" alt="直径 3 mm 浅泡帽和浸没气腔的等比例截面"></figure></details>
+<p class="small"><a href="quadtree-bubbles/aphros-rise/aphros-rise-audit.json">审计数据 (JSON)</a></p>
+</section>
+<!-- aphros-rise:end -->
 <section id="additional-controls"><h2>其他对照与基准</h2>
 <details class="comparison-details" id="single-bubble-shape"><summary>单泡形状与顶部排液</summary>
 
