@@ -113,7 +113,8 @@ def build(source, output, repository, commit):
         operator_report_asset = name.startswith('PLIC-VOF/operator-ablation/') and path.suffix.lower() not in {'.html', '.js', '.css'}
         plic_plot_asset = name.startswith(('PLIC-VOF/assets/', 'PLIC-VOF/supplement-20261105/figures/')) and path.suffix.lower() == '.png'
         operator_single_html = name == 'PLIC-VOF/operator-ablation/wide-native/downloads/NeuralVOF-results-offline-readable.html'
-        if operator_single_html or plic_plot_asset or operator_report_asset or p10_science_asset or p09_science_asset or vof_film_media or harness_download or plate_report_asset or plate_p08_vector or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
+        lug_benchmark_asset = name.startswith('GeoBC-show/assets/lug-benchmark-v1/') and path.suffix.lower() not in {'.html', '.js', '.css'}
+        if lug_benchmark_asset or operator_single_html or plic_plot_asset or operator_report_asset or p10_science_asset or p09_science_asset or vof_film_media or harness_download or plate_report_asset or plate_p08_vector or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))
             continue
         target = output / relative

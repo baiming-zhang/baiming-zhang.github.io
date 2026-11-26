@@ -1,6 +1,23 @@
 {
   "updates": [
     {
+      "task": "L01",
+      "date": "2026-11-25",
+      "title": "Bracket Lug benchmark：GNOT改进与真实网格切片",
+      "summary": "边界描述、真实材料连接局部读出、梯度匹配监督；同主干对照与GINOT比较分开展示，峰值退步如实报告。",
+      "review": "2160 TRAIN /240 validation /600 TEST；train-only归一化；验证集与测试集分开；近等参数、非等算力；如实展示峰幅退步",
+      "links": [
+        {
+          "label": "改进原理与结果",
+          "url": "BracketLug.html"
+        },
+        {
+          "label": "六案例交互切片",
+          "url": "BracketLug.html#cases"
+        }
+      ]
+    },
+    {
       "task": "M03",
       "date": "2026-11-06",
       "title": "局部训练：20×100原节点，从头完成20000步",
@@ -1016,5 +1033,6 @@
         }
       ]
     }
-  ]
+  ],
+  "updated": "2026-11-25"
 }

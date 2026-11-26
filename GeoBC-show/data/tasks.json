@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-25",
   "tasks": [
     {
       "id": "R01",
@@ -968,6 +968,29 @@
         {
           "label": "逐case曲线",
           "url": "P10.html#loading-curves"
+        }
+      ]
+    },
+    {
+      "id": "L01",
+      "phase": "Benchmark",
+      "title": "Bracket Lug · GNOT局部变化改进",
+      "start": "2026-11-24",
+      "due": "2026-11-25",
+      "status": "进行中",
+      "deliverables": "GINOT与改进GNOT各2种子500轮；原始GNOT同主干补充对照；六案例交互切片、LaTeX原理与误差图",
+      "review": "2160 TRAIN /240 validation /600 TEST；train-only归一化；验证集与测试集分开；近等参数、非等算力；如实展示峰幅退步",
+      "dependencies": "P10",
+      "issues": "原始GNOT第1种子训练完成，第2种子续训中；第1种子验证集全场改善13.3%、高梯度改善23.3%、峰幅误差增大41.7%；原始GNOT测试待补",
+      "page": "BracketLug.html",
+      "results": [
+        {
+          "label": "改进原理与实验结果",
+          "url": "BracketLug.html"
+        },
+        {
+          "label": "真实节点交互切片",
+          "url": "BracketLug.html#cases"
         }
       ]
     }
