@@ -9,6 +9,15 @@ import argparse, json, os, re, shutil, urllib.parse
 THRESHOLD = 1_000_000
 MAX_SITE_BYTES = 900_000_000
 LARGE_EXTENSIONS = {'.gz', '.pt', '.npz', '.zip', '.bin', '.ply'}
+# Keep research data in Git and serve it through the immutable resource router.
+PROJECT_DATA_EXTENSIONS = {
+    '.json', '.jsonl', '.csv', '.tsv', '.txt', '.log', '.dat',
+    '.npy', '.npz', '.pt', '.pth', '.ckpt', '.onnx', '.bin', '.u8', '.f32', '.f64',
+    '.h5', '.hdf5', '.parquet', '.arrow', '.feather', '.xlsx', '.xls', '.mat',
+    '.vtk', '.vtu', '.vtp', '.vti', '.pvd', '.xmf', '.xdmf', '.nrrd',
+    '.ply', '.stl', '.obj', '.msh', '.mesh', '.fe', '.brep', '.inp', '.sha256',
+    '.zip', '.gz', '.tgz', '.tar', '.7z', '.rar',
+}
 
 ROUTER = r'''(() => {
   'use strict';
@@ -78,6 +87,7 @@ def build(source, output, repository, commit):
         raise ValueError('A full immutable source commit is required')
     output.mkdir(parents=True)
     resources, copied, total_source = {}, [], 0
+    data_file_count, data_file_bytes, data_projects = 0, 0, {}
     for path in sorted(source.rglob('*')):
         relative = path.relative_to(source)
         if any(part in {'.git', '.github', '__pycache__'} for part in relative.parts):
@@ -89,6 +99,15 @@ def build(source, output, repository, commit):
         size = path.stat().st_size
         total_source += size
         name = relative.as_posix()
+        project_data = path.suffix.lower() in PROJECT_DATA_EXTENSIONS and name != 'robots.txt'
+        if project_data:
+            data_file_count += 1
+            data_file_bytes += size
+            project = relative.parts[0] if len(relative.parts) > 1 else '(root)'
+            stats = data_projects.setdefault(project, dict(files=0, bytes=0))
+            stats['files'] += 1
+            stats['bytes'] += size
+        resolved_report_resource = name.startswith(('PLIC-VOF/resolved-plic/assets/', 'PLIC-VOF/resolved-plic/downloads/'))
         # Archive chunks must remain bounded individually for scientific Git
         # provenance; many sub-MB chunks can still exhaust Pages together.
         # Route ALL ZIPs by the same immutable, byte-preserving mechanism.
@@ -114,7 +133,7 @@ def build(source, output, repository, commit):
         plic_plot_asset = name.startswith(('PLIC-VOF/assets/', 'PLIC-VOF/supplement-20261105/figures/')) and path.suffix.lower() == '.png'
         operator_single_html = name == 'PLIC-VOF/operator-ablation/wide-native/downloads/NeuralVOF-results-offline-readable.html' or name.startswith('PLIC-VOF/resolved-plic/downloads/')
         lug_benchmark_asset = name.startswith('GeoBC-show/assets/lug-benchmark-v1/') and path.suffix.lower() not in {'.html', '.js', '.css'}
-        if lug_benchmark_asset or operator_single_html or plic_plot_asset or operator_report_asset or p10_science_asset or p09_science_asset or vof_film_media or harness_download or plate_report_asset or plate_p08_vector or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
+        if project_data or resolved_report_resource or lug_benchmark_asset or operator_single_html or plic_plot_asset or operator_report_asset or p10_science_asset or p09_science_asset or vof_film_media or harness_download or plate_report_asset or plate_p08_vector or physical_report_asset or scientific_ledger or reference_download or path.suffix.lower() == '.zip' or (size >= THRESHOLD and path.suffix.lower() in LARGE_EXTENSIONS):
             resources[name] = ('https://raw.githubusercontent.com/' + repository + '/' + commit + '/' + urllib.parse.quote(name, safe='/'))
             continue
         target = output / relative
@@ -154,6 +173,9 @@ def build(source, output, repository, commit):
     report = dict(source_commit=commit, repository=repository, source_bytes=total_source,
                   external_resource_count=len(resources), html_pages=html_count,
                   resource_policy='Public original files remain in Git; immutable raw URLs; no numerical changes',
+                  project_data_files_outside_pages=data_file_count,
+                  project_data_source_bytes=data_file_bytes,
+                  project_data_by_directory=data_projects,
                   max_site_bytes=MAX_SITE_BYTES)
     report['site_bytes_before_report'] = sum(p.stat().st_size for p in output.rglob('*') if p.is_file())
     (output / 'pages-build-report.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
