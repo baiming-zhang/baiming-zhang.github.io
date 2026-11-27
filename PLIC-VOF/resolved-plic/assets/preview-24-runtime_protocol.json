@@ -1,0 +1,26 @@
+{
+  "stage": "stage3_runtime_symmetry",
+  "registered_before_execution": true,
+  "objective": "One bounded mathematically equivalent GPU deployment optimization for frozen stage2 compact flux operators;no retraining or final test.",
+  "source_manifest": "plic-pareto-resolved-20261126/stage2_courant_objective/inference/model_manifest.json",
+  "frozen_groups": ["flux_compact_s3_w64_b16__sixteen_courants", "flux_compact_s5_w64_b16__sixteen_courants"],
+  "seeds": [4101,4102,4103],
+  "runtime_attempt": "TorchScript CUDA Graph at fixed batch,including actual H2D/model/D2H nodes for the primary roundtrip;resident graph separate. Compare same frozen TorchScript eager launch baseline in this run.",
+  "unchanged": ["selected source checkpoint and weights", "float32", "TF32 disabled", "full original model including learned reflection average/CDF/capacity", "validation transported-volume L1", "primary pinned-CPU input to completed CPU output boundary"],
+  "validation_gate": "Every model/runtime must pass full16384 unique validation rows,finite-mask/parity and endpoint/monotonicity/capacity checks before its timing. Graph input-update probe verifies outputs are recomputed rather than frozen.",
+  "parity_max_abs": 0.00002,
+  "capacity_tolerance": 0.000002,
+  "development_workload": {
+    "fixture": "gpu-cpu-large-grid-20261125/fixtures/many_drops_N4096.npz",
+    "role": "Already-observed development fixture only;not independent final evidence",
+    "batches": [65536,127090],
+    "queries": "B65536 is the first65536 unique real interface queries;B127090 is every actual interface cell. No repeated validation rows are called a real-grid workload.",
+    "CFL": 0.5,
+    "radius_convention": "All source circles resolved with R/h>=4;same raw quantized VOF for every method."
+  },
+  "native_CPU": "Actual Aphros fixed-dt production PLIC and actual SimLiquid PLIC;7x7rawf32 promotedfloat64,original local reconstruction and persistent dispatch included,1/4/8 pinned workers within logical0..7.",
+  "timing": {"warmup":10,"repeats":31,"GPU_modes":["resident","cpu_gpu_cpu"],"synchronization":"explicit nonzero CUDA stream completed every call;host wall timer","exclude":"loading,capture/compilation,input gathering/crop/dtype conversion/external buffer allocation,IO,PDE"},
+  "resource_policy": "GPU shared lease formal_timing=False,per-process allocation cap0.10,record foreign load and raw times;all results scout and ineligible as final formal speed evidence.",
+  "stop_rules": "Only this CUDA Graph attempt,no unbounded compile/runtime search. Stop if capture unsupported,parity/constraints fail,capture takes>30seconds,or run compute budget>300seconds. If it cannot improve/report target,save explicit negative result.",
+  "final_evidence": "Any promising deployment still requires root-controlled formal measurements and a new independent-seed true grid after selection. No blind data,weights or selection lock changed here."
+}

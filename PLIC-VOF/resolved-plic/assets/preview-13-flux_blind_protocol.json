@@ -1,0 +1,51 @@
+{
+  "registered_utc": "2026-11-27T00:07:44.636941+00:00",
+  "stage": "independent_flux_only_fixed_deployment",
+  "group": "flux_compact_s5_w64_b16__sixteen_courants",
+  "seeds": [
+    4101,
+    4102,
+    4103
+  ],
+  "runtime": "cuda_graph",
+  "precision": "FP32,TF32off;noAMP",
+  "gate": "Root deployment_selection_locked.json;all3 model_ids and adapter SHA locked before generation",
+  "circle": {
+    "count": 32768,
+    "seed": 202611270398,
+    "radius_cells": [
+      4,
+      512
+    ]
+  },
+  "physical": {
+    "seed": 202611270399,
+    "N": [
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192
+    ],
+    "shapes": [
+      "circle",
+      "ellipse",
+      "weak_sine"
+    ],
+    "parents_per_shape": 16,
+    "offsets": 9,
+    "phase_transpose_variants": 4
+  },
+  "support": "Preserve every physical query and fixed physical geometry across N. Publish local R/h>=4 mask, conservative structure resolution mask, perN coverage and allN common resolved support. Unresolved lowN cases are descriptive only, not main accuracy/convergence evidence. No radius filtering or resampling of stored geometry.",
+  "structure_resolution": "circle R/h; ellipse wholecurve min radius min(a,b)^2/max(a,b)/h; sine conservative global curvature-radius lower bound 1/(abs(amplitude)*frequency^2*h). Primary requires both local and structure radius>=4.",
+  "comparisons": "Only frozen three-seed GPU flux and actual Aphros production PLIC/SimLiquid native flux. Curvature failed validation and is excluded from this test;no HF or particles relabelled as PLIC flux.",
+  "truth": "Full closed-shape cell/strip integral, sine adaptive independent quadrature;transpose maps right strip to original top strip. Input raw VOF+Courant only.",
+  "primary_error": "mean(abs(rawF32center*pred-exact swept normalized area));also retain canonical-volume MAE matching selection and exact flux-ratio MAE. h^2 physical volume is secondary, never evidence of operator convergence by itself.",
+  "failures": "Retain NaN/Inf, report all planned coverage/failure count. Full-support MAE undefined if any prediction fails;common finite error is explicitly conditional.",
+  "decision": "No checkpoint/runtime changes or additional training after any test result;allthree seeds retained. Accuracy test contains no speed evidence. Formal timing separately requires idle90s and exclusive lease.",
+  "large_grid": "Root-owned independent seed202611270400 full scenes live in flux_blind_test/large_grid;not created or changed by this accuracy script. Kept separate from circle/physical tests."
+}

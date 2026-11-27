@@ -1,0 +1,17 @@
+{
+  "registered_before_execution": true,
+  "authorization": "Root authorized exactly one complete measurement-method correction after read-only diagnosis;no model,precision,data,runtime optimization or search.",
+  "reason": "Original monitor synchronously queried nvidia-smi after warmup,leaving an unmeasured pre-measurement gap and variable GPU frequency. This amendment fixes timing preparation uniformly rather than selecting favorable points.",
+  "unchanged": ["immutable deployment selection and all3 seeds", "locked CUDAgraph adapter/core", "FP32 and TF32off", "all10 new-seed true-grid fixtures and actual query counts", "CPU Aphros/SimLiquid PLIC1/4/8 workers", "primary transfer-inclusive boundary and resident secondary", "exact-cell-transport metric", "31 measured calls", "predefined all-seed accuracy/time gate"],
+  "old_round": {"path":"runtime_formal_results","role":"preliminary measurement-method diagnostic only","original_joint_pass_count":"2/10","policy":"Preserve all120 old raw points and original report bytes. Never choose the lower time across rounds."},
+  "corrected_round": {"script":"runtime_stable_waiter.py","output":"runtime_stable_results","role":"Sole primary timing basis after this correction,no matter better or worse","matrix":"All10 fields x(CPU2backends*3worker-counts+GPU3seeds*2boundaries)=120 cases,complete one round"},
+  "monitor": {"before":"synchronous GPU/process snapshot BEFORE warmup","during":"asynchronous thread pinned logical9,outside computeCPU0..7 andGPU-host8;fixed0.25-second polling with phase/time stamps","after":"synchronous snapshot AFTER measured calls","claim":"Record hardware state;do not claim locked frequency or exclusive physical cores"},
+  "preparation": {"CPU_and_GPU_identical_rule":true,"minimum_calls":10,"minimum_continuous_seconds":0.5,"order":"enter monitor ->continuous completed warmup calls ->immediate31 timed completed calls ->exit monitor","between_last_warmup_and_measurement":"No synchronous hardware query,IO,status write or model preparation;record observed gap nanoseconds","warmup_count":"Variable only to satisfy fixed minimum call and elapsed-duration rule;record actual count/duration"},
+  "formal_gate": "Same continuous90s GPUutil<=5%,no foreign compute,exclusive cooperative lease,record before/during/after. Preserve any failed/contaminated attempts without calling them formal.",
+  "order_seed": 202611270452,
+  "resource": "Compute workers0..7,GPU host8,telemetry thread9. Shared host,not physical-core exclusivity. No frequency settings or other-process controls.",
+  "bounds": "Each launch waits at most300s for hardware. This is the only complete correction round. Once complete,stop even if variation remains;do not rerun to improve outcomes.",
+  "no_blind_data_regeneration": true,
+  "no_weight_change": true,
+  "no_automatic_replot": true
+}

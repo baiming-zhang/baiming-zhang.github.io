@@ -1,0 +1,18 @@
+{
+  "operator": "flux",
+  "purpose": "Final frozen deployment evaluation only;no runtime/model/seed/batch selection",
+  "authoritative_protocol": "plic-pareto-resolved-20261126/flux_final_protocol.json",
+  "candidate_lock": "plic-pareto-resolved-20261126/deployment_selection_locked.json",
+  "fixture_manifest": "plic-pareto-resolved-20261126/flux_blind_test/large_grid/manifest.json",
+  "fixture_seed": 202611270400,
+  "only_candidate": "Frozen stage2 compact5x5 width64 bins16 sixteenCourants,all3 seeds,lockedCUDAgraph adapter",
+  "actual_shapes": "All10 registered single/many N512..8192 fields,all actual unique interface queries,no padding,copying or chosen batch",
+  "timing": {"warmup":10,"repeats":31,"main":"pinnedCPU croppedfloat32 input->capturedH2D+frozenmodel+D2H->completedCPU output","secondary":"GPUresident->completedGPU output","cold_capture_seconds":"reported separately;excluded from hot run","CPU":"actual Aphros production/SimLiquid PLIC,1/4/8 pinned workers0..7,original normal/plane reconstruction and persistent dispatch included"},
+  "order_seed": 202611270452,
+  "formal_gate": "Independent90s GPUutil<=5% and no foreign compute process,then cooperativeexclusive lease. Before/during/after telemetry. Any missing telemetry/foreign process retains formalfalse attempt and stops;resume skips only qualified matching points.",
+  "bounded_wait": "Default maximum300s per invocation. Exit waiting state if idle unavailable;--once only checks readiness. Never stop other workloads or occupy a chat indefinitely.",
+  "CPU_resource": "Fixed logical0..7 worker pool on shared host;do not claim exclusive physical cores or whole-host quietness. Record load,affinity and call quantiles.",
+  "statistics": "Every model seed retained,group mean/sampleSD of individual call medians;individual p05/p95 separate. Compare against fastest actually measured native among both backends and1/4/8 workers.",
+  "no_search": true,
+  "no_data_generation": true
+}

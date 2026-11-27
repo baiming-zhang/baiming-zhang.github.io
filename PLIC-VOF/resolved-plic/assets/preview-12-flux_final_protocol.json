@@ -1,0 +1,18 @@
+{
+  "state": "registered_before_deployment_lock_and_test_generation",
+  "operator": "flux",
+  "candidate": "stage2_compact_s5_w64_b16_sixteen_courants",
+  "seeds": [4101,4102,4103],
+  "selection_basis": "Validation accuracy plus promising CUDA Graph scout on already observed true-grid development data. Not final evidence of a win.",
+  "runtime": "Same frozen FP32 TorchScript CUDA Graph for all three seeds;TF32off;shape determined from actual query count,not tuned after results. Main timing includes pinned CPU VOF/Courant to completed CPU output,including transfers and synchronization;resident separate.",
+  "tests": {
+    "independent_circle": {"seed":202611270398,"geometries":32768,"radius_cells":[4,512]},
+    "independent_physical_refinement": {"seed":202611270399,"families":["circle","ellipse","sine"],"resolutions":[32,64,128,256,512,1024,2048,4096,8192],"policy":"Preserve all raw predefined queries. Report local curvature and conservative whole-structure resolution masks,per-N coverage and fixed cross-N support;unresolved low-N cases do not support primary claims."},
+    "independent_true_grids": {"seed":202611270400,"scenes":["single_drop","many_drops"],"resolutions":[512,1024,2048,4096,8192],"generator":"new_large_grid.py","policy":"Full VOF fields,all actual interface queries,all R/h>=4,no copied samples;fixed scenes across refinements,Courant0.5."}
+  },
+  "baselines": "Actual Aphros production PLIC and actual SimLiquid PLIC on identical raw float32 VOF promoted as required. CPU pinned1/4/8 workers;retain all native timings and compare against fastest tested native,not a deliberately slow configuration.",
+  "timing": "Warmup10;31 synchronized real repetitions per case,all raw values and quantiles retained;GPU formal only after90s with no foreign compute and with telemetry clean during measurement. Shared measurements are explicitly provisional. Hardware waiting separate from inference cost.",
+  "accuracy": "Transported-volume MAE without h^2 as primary;retain every seed and output failure. Report physical refinement and radius bins as well as aggregate. No changed weights,architecture,runtime or precision after test results.",
+  "curvature": "Does not enter final independent test: bounded qMSE and symmetry diagnostics still miss native particles accuracy. Preserve full negative validation results;do not claim solved convergence or beating HF.",
+  "stop": "This is final frozen evaluation of the promising flux candidate,not a new search. Deliver honest outcomes even if independent data do not confirm development gains."
+}

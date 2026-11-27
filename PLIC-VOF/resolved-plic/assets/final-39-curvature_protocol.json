@@ -1,0 +1,16 @@
+{
+  "registered_utc": "2026-11-26T23:57:00Z",
+  "stage": "stage3_runtime_symmetry",
+  "purpose": "Bounded validation-only diagnosis of exact network spatial/phase symmetry projection; not training or independent test evidence.",
+  "source": "stage2_courant_objective/groups/curvature__unweighted_q_MSE/seed{4101,4102,4103}/best.pt",
+  "candidates": ["raw", "d4", "phase_odd", "d4_phase_odd"],
+  "d4": "Eight square rotations/reflections, signed q invariant under spatial orthogonal transforms.",
+  "phase_odd": "(q(F)-q(1-F))/2, signed q reverses under phase complement.",
+  "data": "Exactly existing circle validation 16384 and old enhanced resolved validation abs(q)<=.25; no new data or geometry metadata in network.",
+  "guard": "Original enhanced7 reference, overall and weak(abs(q)<.001) and plane(q==0) MAE <=1.1*reference+1e-7; full coverage required.",
+  "native_target": "Existing actual native particles validation q MAE, not HF or flux PLIC.",
+  "decision": "Retain all three seeds and raw. Candidate advances only if all seeds meet native MAE and guard. No extra variants, training, blind generation or parameter tuning; stop after four-method matrix.",
+  "timing": "Accuracy only here. If eligible, actual runtime measured by agent02; no multiplication/division of old runtime by view count.",
+  "parameters": "Exactly source weights unchanged; projections have zero learned parameters.",
+  "forbidden": ["geometry module", "normal/height/curvature formula", "fallback", "frozen plane features", "training", "blind data"]
+}
